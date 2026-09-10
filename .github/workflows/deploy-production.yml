@@ -1,0 +1,82 @@
+﻿name: Deploy production to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: vms-energy-web-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy static website
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    environment:
+      name: production
+      url: https://d34jb94w5ivknd.cloudfront.net/
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v6.2.4
+        with:
+          role-to-assume: arn:aws:iam::787140332697:role/VMSWebGitHubProductionDeploy
+          role-session-name: VMSWebProduction-${{ github.run_id }}
+          role-duration-seconds: 3600
+          aws-region: us-east-1
+          audience: sts.amazonaws.com
+          mask-aws-account-id: true
+
+      - name: Verify AWS identity
+        shell: pwsh
+        run: |
+          $Identity = aws sts get-caller-identity --output json |
+              ConvertFrom-Json
+
+          if ($Identity.Account -ne "787140332697") {
+              throw "Unexpected AWS account: $($Identity.Account)"
+          }
+
+          if (
+              $Identity.Arn -notmatch
+              "assumed-role/VMSWebGitHubProductionDeploy/"
+          ) {
+              throw "Unexpected AWS role: $($Identity.Arn)"
+          }
+
+          Write-Host "AWS OIDC identity verified."
+
+      - name: Deploy website
+        shell: pwsh
+        run: |
+          & ./scripts/deploy-aws-production.ps1 -Apply
+
+          if ($LASTEXITCODE -ne 0) {
+              throw "Production deployment failed."
+          }
+
+      - name: Verify CloudFront
+        shell: pwsh
+        run: |
+          $Response = Invoke-WebRequest `
+              -Uri "https://d34jb94w5ivknd.cloudfront.net/" `
+              -Method Head
+
+          if ($Response.StatusCode -ne 200) {
+              throw "CloudFront returned HTTP $($Response.StatusCode)"
+          }
+
+          Write-Host "CloudFront returned HTTP 200."
