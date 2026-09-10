@@ -153,6 +153,30 @@ try {
             -LiteralPath $SourcePath `
             -Destination $DestinationPath
 
+        $CommitTimestampOutput = @(
+            & git -C $RepoRoot log -1 --format=%ct -- $RelativePath
+        )
+
+        if (
+            $LASTEXITCODE -ne 0 -or
+            $CommitTimestampOutput.Count -ne 1
+        ) {
+            throw "No fue posible obtener la fecha Git de: $RelativePath"
+        }
+
+        [long]$CommitTimestamp = $CommitTimestampOutput[0]
+
+        $CommitTimeUtc = (
+            [DateTimeOffset]::FromUnixTimeSeconds(
+                $CommitTimestamp
+            )
+        ).UtcDateTime
+
+        [System.IO.File]::SetLastWriteTimeUtc(
+            $DestinationPath,
+            $CommitTimeUtc
+        )
+
         $TotalBytes += (
             Get-Item -LiteralPath $SourcePath
         ).Length
