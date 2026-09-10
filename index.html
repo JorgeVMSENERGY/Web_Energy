@@ -4579,29 +4579,32 @@ document.addEventListener('click', function(e){
 </div>
 <script id="quicklead-runtime">
 (function(){
-  var modal=document.getElementById('quickLeadModal');
-  var trigger=document.querySelector('.sticky-actions__btn--right[data-cta="sticky-more-info"]');
-  var closeNodes=modal?modal.querySelectorAll('[data-close-modal="quickLeadModal"]'):[];
-  var form=document.getElementById('quickLeadForm');
-  var feedback=document.getElementById('quickLeadFeedback');
-  if(!modal||!trigger||!form) return;
-  function openModal(e){ if(e) e.preventDefault(); modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-  function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-  trigger.addEventListener('click',openModal);
-  Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
-  form.addEventListener('submit',function(e){
-    e.preventDefault(); feedback.textContent='';
+  function openModal(modal){ if(!modal) return; modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal(modal){ if(!modal) return; modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+
+  document.addEventListener('click', function(e){
+    var openBtn = e.target.closest('[data-cta="sticky-more-info"]');
+    if(openBtn){ e.preventDefault(); openModal(document.getElementById('quickLeadModal')); return; }
+    var closeBtn = e.target.closest('[data-close-modal="quickLeadModal"]');
+    if(closeBtn){ e.preventDefault(); closeModal(document.getElementById('quickLeadModal')); }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape') closeModal(document.getElementById('quickLeadModal'));
+  });
+
+  var form = document.getElementById('quickLeadForm');
+  var feedback = document.getElementById('quickLeadFeedback');
+  if(form) form.addEventListener('submit', function(e){
+    e.preventDefault(); if(feedback) feedback.textContent='';
     var name=(document.getElementById('qlName').value||'').trim();
     var email=(document.getElementById('qlEmail').value||'').trim();
     var empresa=(document.getElementById('qlEmpresa').value||'').trim();
     var message=(document.getElementById('qlMessage').value||'').trim();
-    if(!name||!email||!empresa){ feedback.textContent='Completa nombre, correo y empresa.'; return; }
+    if(!name||!email||!empresa){ if(feedback) feedback.textContent='Completa nombre, correo y empresa.'; return; }
     var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-    var subject='Lead web - Formulario basico';
-    var body=encodeURIComponent(bodyLines.join('\n'));
-    window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-    closeModal(); form.reset();
+    window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent('Lead web - Formulario basico')+'&body='+encodeURIComponent(bodyLines.join('\n'));
+    closeModal(document.getElementById('quickLeadModal')); form.reset();
   });
 })();
 </script>
