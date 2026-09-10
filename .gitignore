@@ -1,0 +1,25 @@
+# Terraform: directorios y estados locales
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Variables que pueden contener información sensible
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+
+# Archivos locales de sustitución
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
