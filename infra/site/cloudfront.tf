@@ -26,6 +26,11 @@ resource "aws_cloudfront_distribution" "site" {
   http_version        = "http2and3"
   web_acl_id          = aws_wafv2_web_acl.site.arn
 
+  aliases = [
+    "vmsenergy.com",
+    "www.vmsenergy.com"
+  ]
+
   origin {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
     origin_id                = local.s3_origin_id
@@ -61,7 +66,9 @@ resource "aws_cloudfront_distribution" "site" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = aws_acm_certificate_validation.site.certificate_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 
   tags = {
