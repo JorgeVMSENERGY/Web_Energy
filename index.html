@@ -2456,6 +2456,81 @@ label{font-size:14px}
 
   <!-- ===== /Campaña RIM Zacatecas 2026 ===== -->
 
+  <!-- ===== Campaña ATAM (cintillo + pop-up) ===== -->
+  <style>
+    .atam-cintillo{display:block;line-height:0;position:relative;background:#0b1b33}
+    .atam-cintillo img{width:100%;height:auto;display:block}
+    .atam-cintillo__close{position:absolute;top:50%;right:12px;transform:translateY(-50%);
+      width:28px;height:28px;border:0;border-radius:50%;background:rgba(0,0,0,.45);color:#fff;
+      font-size:16px;line-height:28px;cursor:pointer}
+    .atam-cintillo__close:hover{background:rgba(0,0,0,.7)}
+
+    .atam-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;
+      justify-content:center;background:rgba(6,14,28,.78);padding:24px}
+    .atam-modal[open],.atam-modal.is-open{display:flex}
+    .atam-modal__box{position:relative;max-width:min(900px,92vw);max-height:90vh}
+    .atam-modal__box img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain;
+      border-radius:10px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+    .atam-modal__close{position:absolute;top:-14px;right:-14px;width:40px;height:40px;border:0;
+      border-radius:50%;background:#fff;color:#0b1b33;font-size:22px;line-height:40px;cursor:pointer;
+      box-shadow:0 4px 14px rgba(0,0,0,.35)}
+    .atam-modal__close:hover{background:#e8eef7}
+    @media (max-width:600px){.atam-modal__close{top:6px;right:6px}}
+  </style>
+
+  <div class="atam-cintillo" id="atamCintillo">
+    <img src="assets/img/campanas/atam-banner.jpg"
+         alt="Invitación ATAM — VMS Energy" width="1920" height="250" loading="eager" decoding="async">
+    <button class="atam-cintillo__close" type="button" id="atamCintilloClose"
+            aria-label="Cerrar aviso">&times;</button>
+  </div>
+
+  <div class="atam-modal" id="atamModal" role="dialog" aria-modal="true"
+       aria-label="Invitación ATAM">
+    <div class="atam-modal__box">
+      <img src="assets/img/campanas/atam-popup.jpg"
+           alt="Invitación ATAM — VMS Energy" width="2160" height="1350" decoding="async">
+      <button class="atam-modal__close" type="button" id="atamModalClose"
+              aria-label="Cerrar">&times;</button>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    var KEY = 'atam-popup-visto';
+    var modal = document.getElementById('atamModal');
+    var cintillo = document.getElementById('atamCintillo');
+    var lastFocus = null;
+
+    function abrir() {
+      lastFocus = document.activeElement;
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('atamModalClose').focus();
+    }
+    function cerrar() {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.getElementById('atamModalClose').addEventListener('click', cerrar);
+    modal.addEventListener('click', function (e) { if (e.target === modal) cerrar(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) cerrar();
+    });
+    document.getElementById('atamCintilloClose').addEventListener('click', function () {
+      cintillo.style.display = 'none';
+    });
+
+    var visto = false;
+    try { visto = sessionStorage.getItem(KEY) === '1'; } catch (e) {}
+    if (!visto) window.setTimeout(abrir, 600);
+  })();
+  </script>
+  <!-- ===== /Campaña ATAM ===== -->
+
   <div class="toast-stack" id="toasts" aria-live="polite"></div>
   <!-- ===== Header ===== -->
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
