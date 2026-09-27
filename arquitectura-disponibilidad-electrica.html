@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="es-MX" data-concept="servicios-especializados">
+<head>
+<meta charset="UTF-8">
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="vms-core.css">
+  <link rel="stylesheet" href="vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy</title>
+<meta name="description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="VMS Energy">
+<meta property="og:title" content="Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy">
+<meta property="og:description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<meta property="og:url" content="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
+<meta property="og:image" content="https://vmsenergy.com/assets/img/services/infraestructura_electrica.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy">
+<meta name="twitter:description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/infraestructura_electrica.webp">
+<link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
+<link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
+<link rel="stylesheet" href="servicios-base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Arquitectura de disponibilidad eléctrica industrial",
+ "provider": {
+  "@type": "Organization",
+  "name": "VMS Energy",
+  "url": "https://vmsenergy.com"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "México"
+ },
+ "description": "Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.",
+ "serviceType": "Industrial Power Reliability Engineering"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "¿El BESS reemplaza al generador?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Depende de la autonomía requerida. Para respaldos de minutos a pocas horas, un BESS puede cubrir las cargas esenciales sin combustible. Para autonomías largas o inciertas, el generador sigue siendo necesario; en ese caso el BESS reduce arranques, horas de operación y consumo del motor, y cubre los segundos que el generador tarda en tomar carga."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Si ya tengo UPS, necesito BESS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No necesariamente. El UPS protege cargas críticas específicas con autonomía corta. Un BESS se justifica cuando necesita respaldo para cargas más grandes, autonomía mayor o cuando su tarifa y perfil de demanda permiten recuperar la inversión con recorte de picos."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Mis paneles solares me respaldan en un apagón?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No por sí solos. Un sistema fotovoltaico interconectado se desconecta cuando falla la red por seguridad. Para que la solar siga aportando durante una interrupción se requiere almacenamiento y un sistema capaz de formar red en isla, con las protecciones correspondientes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué marcas integran?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Somos integradores multimarca. En control de generación trabajamos con plataformas de DEIF, Woodward y Schneider Electric; en almacenamiento nuestra plataforma de referencia es Sigenergy. La selección final depende del diagnóstico, la escala y la infraestructura existente."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Necesito permiso para instalar un BESS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bajo la Ley del Sector Eléctrico, el almacenamiento de 0.7 MW o más que no esté asociado a una central o a un centro de carga requiere permiso de la CNE. Un BESS instalado detrás del medidor se trata como parte del centro de carga; revisamos en cada proyecto qué trámites y normas técnicas aplican."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "VMS Energy",
+   "item": "https://vmsenergy.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Soluciones",
+   "item": "https://vmsenergy.com/soluciones.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Arquitectura de disponibilidad eléctrica",
+   "item": "https://vmsenergy.com/arquitectura-disponibilidad-electrica.html"
+  }
+ ]
+}
+</script>
+<style>
+  /* Componentes de las paginas de generacion y disponibilidad (sep 2026) */
+  .av-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640px}
+  .av-table th,.av-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  .av-table thead th{background:var(--concept-darker);color:#fff;font-weight:700}
+  .av-table tbody th{color:var(--concept-darker);font-weight:700;white-space:nowrap}
+  .av-table tbody td,.av-table tbody th{background:#fff}
+  .av-table tbody tr:nth-child(even) td,.av-table tbody tr:nth-child(even) th{background:#f4f8fd}
+  .av-table a{font-weight:700;color:var(--concept-primary);text-decoration:underline;text-underline-offset:2px}
+  .av-note a{color:var(--concept-primary);font-weight:700}
+  .av-note{margin-top:20px;max-width:78ch;color:var(--text-muted);font-size:.95rem}
+  .av-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;margin-top:20px}
+  .av-cols p{max-width:62ch;margin:0 0 12px}
+  .av-h3{font-size:1.2rem;margin:0 0 12px;color:var(--concept-darker)}
+  .av-list{margin:0;padding-left:1.2rem}
+  .av-list li{margin:0 0 8px;max-width:62ch}
+  .svc-grid.av-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:600px){.av-table tbody th{white-space:normal}}
+  @media (max-width:820px){.av-cols{grid-template-columns:1fr;gap:24px}.svc-grid.av-grid-2{grid-template-columns:1fr}}
+
+  /* Diagrama de arquitectura: el elemento protagonista del hub */
+  .arch{margin:28px 0 0}
+  .arch__scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px}
+  .arch__svg{display:block;width:100%;min-width:760px;height:auto}
+  .arch__box{fill:#fff;stroke:var(--concept-darker);stroke-width:1.6}
+  .arch__ems{fill:var(--concept-darker)}
+  .arch__load{fill:var(--concept-accent-light);stroke:var(--concept-darker);stroke-width:1.6}
+  .arch__load--c{fill:#fff;stroke-dasharray:6 4}
+  .arch__pwr{stroke:var(--concept-darker);stroke-width:2.6}
+  .arch__bus{stroke:var(--concept-darker);stroke-width:6;stroke-linecap:round}
+  .arch__ctl{stroke:var(--concept-primary);stroke-width:1.6;stroke-dasharray:5 5;fill:none}
+  .arch__t{font:700 14px/1 'Roboto Condensed',system-ui,sans-serif;fill:var(--concept-darker)}
+  .arch__s{font:400 11.5px/1 'Roboto Condensed',system-ui,sans-serif;fill:#475569}
+  .arch__t--inv,.arch__s--inv{fill:#fff}
+  .arch__cap{margin-top:10px;font-size:.9rem;color:var(--text-muted);display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+  .arch__key{display:inline-block;width:26px;height:0;border-top:3px solid var(--concept-darker);vertical-align:middle}
+  .arch__key--ctl{border-top:2px dashed var(--concept-primary)}
+  /* Secuencia de falla: es una secuencia real, por eso lleva orden */
+  .seq{list-style:none;margin:28px 0 0;padding:0;border-left:3px solid var(--concept-darker);max-width:860px}
+  .seq__step{display:grid;grid-template-columns:110px 1fr;gap:18px;padding:0 0 22px 22px;position:relative}
+  .seq__step::before{content:"";position:absolute;left:-8px;top:4px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--concept-darker)}
+  .seq__time{font-weight:900;color:var(--concept-primary);font-variant-numeric:tabular-nums}
+  .seq__title{margin:0 0 4px;font-weight:700;color:var(--concept-darker)}
+  .seq__desc{margin:0;max-width:64ch}
+  @media (max-width:600px){.seq__step{grid-template-columns:1fr;gap:4px}}
+  /* Datos BESS verificables */
+  .bess-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:24px;border-top:3px solid var(--concept-darker)}
+  .bess-fact{padding:18px 18px 0 0}
+  .bess-fact__v{margin:0 0 6px;font-size:1.35rem;font-weight:900;color:var(--concept-darker)}
+  .bess-fact__l{margin:0;font-size:.93rem;color:var(--text-muted)}
+  @media (max-width:900px){.bess-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media (max-width:520px){.bess-facts{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+<header class="site-header" aria-label="Encabezado del sitio">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; inicio">
+      <img src="assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Men&uacute;</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Soluciones</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Soluciones por industria">
+            <div class="submenu__col">
+              <p class="submenu__title">Industria y proceso</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Alimentos &amp; Bebidas</a></li>
+                <li><a href="soluciones_agroindustria.html">Agroindustria</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energ&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneraci&oacute;n y Generaci&oacute;n en Sitio</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Plantas de Emergencia</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Arquitectura de Disponibilidad</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Instalaciones</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipamiento</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipamiento por familia">
+            <div class="submenu__col">
+              <p class="submenu__title">Potencia y distribuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">Subestaciones El&eacute;ctricas MT/AT</a></li>
+                <li><a href="lp-celdas-media-tension.html">Celdas de Media Tensi&oacute;n</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformadores</a></li>
+                <li><a href="soluciones-ccm-industrial.html">CCM Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Correcci&oacute;n Factor de Potencia</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Control de motores</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Variadores de Frecuencia</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Motores El&eacute;ctricos</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Control de Turbogeneradores</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Referencia</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Checklist Anual de Subestaciones</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">Calculadora de Ahorro BESS</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Servicios</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Servicios por fase">
+            <div class="submenu__col">
+              <p class="submenu__title">Ingenier&iacute;a</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Estudios El&eacute;ctricos</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infraestructura y Acondicionamiento</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procura y suministro</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+                <li><a href="procura.html#representaciones">Representaciones y marcas</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Ejecuci&oacute;n</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_servicios.html">Comisionamiento y Puesta en Marcha</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tendido y Cableado</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Retrofit El&eacute;ctrico</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Detecci&oacute;n y Supresi&oacute;n de Fuego</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operaci&oacute;n y mantenimiento</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+                <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Mantenimiento Predictivo</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Calidad de Energ&iacute;a</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">An&aacute;lisis Aceite Diel&eacute;ctrico</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transferencia</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+                <li><a href="lp-industria-40.html">Industria 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Proyectos</a>
+          <div class="submenu" role="group" aria-label="Proyectos">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Proyectos ejecutados</a></li>
+              <li><a href="catalogo-proyectos.html">Cat&aacute;logo de proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
+              
+              <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
+              <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
+              <li><a href="lp-triol-variadores.html">Variadores Triol</a></li>
+              <li><a href="glosario-cable-electrico.html">Glosario t&eacute;cnico de cable</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">Nosotros</a>
+          <div class="submenu" role="group" aria-label="Nosotros">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">Sobre VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certificaciones</a></li>
+              <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+              <li><a href="carreras.html">Carreras</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO — sin fotografía a propósito: el protagonista de esta página es el diagrama -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">Confiabilidad el&eacute;ctrica industrial</div>
+      <h1 id="heroTitle">Arquitectura de disponibilidad el&eacute;ctrica</h1>
+      <p class="hero__sub">Red, generaci&oacute;n en sitio, UPS, BESS, solar y control en un solo sistema</p>
+      <p>Una planta no se queda sin energ&iacute;a por falta de equipos, sino porque cada equipo se compr&oacute; por separado. Dise&ntilde;amos las capas de respaldo como un sistema: qu&eacute; carga protege cada una, en qu&eacute; orden act&uacute;an cuando falla la red y qui&eacute;n las coordina.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=arquitectura-disponibilidad#ctaForm">Solicitar evaluaci&oacute;n de arquitectura</a>
+        <a class="btn btn--ghost" href="#diagrama">Ver la arquitectura</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">Integraci&oacute;n multimarca</span>
+        <span class="hero-stat">Ingenier&iacute;a, suministro y comisionamiento</span>
+        <span class="hero-stat">Oil &amp; Gas, ingenios, CFE e industria</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGRAMA — el elemento central de la página -->
+  <section class="section" id="diagrama" aria-labelledby="diagTitle">
+    <div class="container">
+      <span class="sec-label">La arquitectura completa</span>
+      <h2 class="sec-h2" id="diagTitle">Seis capas, una sola l&oacute;gica de operaci&oacute;n</h2>
+      <p class="sec-lead">Cada capa resuelve un problema distinto. La red suministra, la generaci&oacute;n en sitio da autonom&iacute;a, el UPS cubre los primeros milisegundos, el BESS cubre minutos u horas y reduce la factura, la solar baja el costo de la energ&iacute;a y el EMS/PMS decide qu&eacute; entra, qu&eacute; sale y en qu&eacute; orden.</p>
+
+      <figure class="arch" aria-labelledby="archCap">
+        <div class="arch__scroll">
+          <svg class="arch__svg" viewBox="0 50 960 385" role="img" aria-labelledby="archTitle archDesc">
+            <title id="archTitle">Diagrama unifilar simplificado de una arquitectura de disponibilidad industrial</title>
+            <desc id="archDesc">La red CFE alimenta la subestaci&oacute;n y la barra principal. Un generador entra a la barra a trav&eacute;s de una transferencia autom&aacute;tica o tablero de sincron&iacute;a. El BESS y la generaci&oacute;n solar se conectan a la barra. De la barra salen las cargas cr&iacute;ticas a trav&eacute;s de un UPS, las cargas esenciales y las cargas no esenciales, que pueden desconectarse. Un EMS o PMS supervisa y controla todas las fuentes.</desc>
+            <!-- bus de control -->
+            <line class="arch__ctl" x1="170" y1="90" x2="865" y2="90"/>
+            <line class="arch__ctl" x1="170" y1="90" x2="170" y2="315"/>
+            <line class="arch__ctl" x1="330" y1="90" x2="330" y2="110"/>
+            <line class="arch__ctl" x1="525" y1="90" x2="525" y2="130"/>
+            <line class="arch__ctl" x1="685" y1="90" x2="685" y2="130"/>
+            <line class="arch__ctl" x1="865" y1="90" x2="865" y2="290"/>
+            <rect class="arch__ems" x="400" y="66" width="200" height="48" rx="8"/>
+            <text class="arch__t arch__t--inv" x="500" y="88" text-anchor="middle">EMS / PMS</text>
+            <text class="arch__s arch__s--inv" x="500" y="104" text-anchor="middle">supervisa y coordina</text>
+            <!-- red y subestación -->
+            <rect class="arch__box" x="20" y="110" width="140" height="50" rx="6"/>
+            <text class="arch__t" x="90" y="132" text-anchor="middle">Red CFE</text>
+            <text class="arch__s" x="90" y="149" text-anchor="middle">suministro principal</text>
+            <line class="arch__pwr" x1="160" y1="135" x2="260" y2="135"/>
+            <rect class="arch__box" x="260" y="110" width="140" height="50" rx="6"/>
+            <text class="arch__t" x="330" y="132" text-anchor="middle">Subestaci&oacute;n</text>
+            <text class="arch__s" x="330" y="149" text-anchor="middle">MT / BT</text>
+            <line class="arch__pwr" x1="330" y1="160" x2="330" y2="230"/>
+            <!-- fuentes sobre la barra -->
+            <rect class="arch__box" x="460" y="130" width="130" height="50" rx="6"/>
+            <text class="arch__t" x="525" y="152" text-anchor="middle">BESS + PCS</text>
+            <text class="arch__s" x="525" y="169" text-anchor="middle">minutos a horas</text>
+            <line class="arch__pwr" x1="525" y1="180" x2="525" y2="230"/>
+            <rect class="arch__box" x="620" y="130" width="130" height="50" rx="6"/>
+            <text class="arch__t" x="685" y="152" text-anchor="middle">Solar FV</text>
+            <text class="arch__s" x="685" y="169" text-anchor="middle">energ&iacute;a de d&iacute;a</text>
+            <line class="arch__pwr" x1="685" y1="180" x2="685" y2="230"/>
+            <!-- barra principal -->
+            <line class="arch__bus" x1="240" y1="230" x2="940" y2="230"/>
+            <text class="arch__s" x="345" y="250" text-anchor="start">barra principal</text>
+            <!-- generación en sitio -->
+            <rect class="arch__box" x="20" y="290" width="130" height="50" rx="6"/>
+            <text class="arch__t" x="85" y="312" text-anchor="middle">Generador(es)</text>
+            <text class="arch__s" x="85" y="329" text-anchor="middle">di&eacute;sel, gas o vapor</text>
+            <line class="arch__pwr" x1="150" y1="315" x2="182" y2="315"/>
+            <rect class="arch__box" x="182" y="290" width="136" height="50" rx="6"/>
+            <text class="arch__t" x="250" y="312" text-anchor="middle">ATS / sincron&iacute;a</text>
+            <text class="arch__s" x="250" y="329" text-anchor="middle">transferencia</text>
+            <line class="arch__pwr" x1="250" y1="290" x2="250" y2="230"/>
+            <!-- cargas -->
+            <line class="arch__pwr" x1="525" y1="230" x2="525" y2="290"/>
+            <rect class="arch__box" x="460" y="290" width="130" height="44" rx="6"/>
+            <text class="arch__t" x="525" y="317" text-anchor="middle">UPS</text>
+            <line class="arch__pwr" x1="525" y1="334" x2="525" y2="370"/>
+            <rect class="arch__load arch__load--a" x="445" y="370" width="160" height="54" rx="6"/>
+            <text class="arch__t" x="525" y="393" text-anchor="middle">Cargas cr&iacute;ticas</text>
+            <text class="arch__s" x="525" y="410" text-anchor="middle">no toleran interrupci&oacute;n</text>
+            <line class="arch__pwr" x1="690" y1="230" x2="690" y2="290"/>
+            <rect class="arch__load arch__load--b" x="612" y="290" width="156" height="54" rx="6"/>
+            <text class="arch__t" x="690" y="313" text-anchor="middle">Cargas esenciales</text>
+            <text class="arch__s" x="690" y="330" text-anchor="middle">toleran segundos</text>
+            <line class="arch__pwr" x1="865" y1="230" x2="865" y2="290"/>
+            <rect class="arch__load arch__load--c" x="790" y="290" width="150" height="54" rx="6"/>
+            <text class="arch__t" x="865" y="313" text-anchor="middle">No esenciales</text>
+            <text class="arch__s" x="865" y="330" text-anchor="middle">se deslastran</text>
+          </svg>
+        </div>
+        <figcaption id="archCap" class="arch__cap"><span class="arch__key arch__key--pwr"></span>Potencia <span class="arch__key arch__key--ctl"></span>Control y comunicaci&oacute;n. Diagrama conceptual: cada proyecto define su topolog&iacute;a en la ingenier&iacute;a de detalle.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CAPAS -->
+  <section class="section section--alt" id="capas" aria-labelledby="capasTitle">
+    <div class="container">
+      <span class="sec-label">Qu&eacute; hace cada capa</span>
+      <h2 class="sec-h2" id="capasTitle">Ninguna tecnolog&iacute;a cubre todo. Por eso se combinan.</h2>
+      <p class="sec-lead">La pregunta correcta no es &laquo;&iquest;UPS, BESS o generador?&raquo;, sino qu&eacute; carga necesita qu&eacute; capa. Esta tabla resume el papel de cada una y d&oacute;nde profundizamos en el sitio.</p>
+      <div class="tabla-scroll">
+        <table class="av-table">
+          <thead>
+            <tr><th scope="col">Capa</th><th scope="col">Qu&eacute; resuelve</th><th scope="col">Respuesta t&iacute;pica</th><th scope="col">L&iacute;mite</th><th scope="col">Detalle</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Red y subestaci&oacute;n</th><td>Suministro principal, calidad y protecci&oacute;n de la instalaci&oacute;n</td><td>&mdash;</td><td>Microcortes, huecos de tensi&oacute;n e interrupciones fuera de su control</td><td><a href="lp-subestaciones-electricas.html">Subestaciones MT/AT</a></td></tr>
+            <tr><th scope="row">Generaci&oacute;n en sitio</th><td>Autonom&iacute;a prolongada; en cogeneraci&oacute;n, adem&aacute;s, energ&iacute;a y calor de proceso</td><td>Segundos (arranque, estabilizaci&oacute;n y transferencia)</td><td>No cubre los primeros segundos; requiere combustible, pruebas y mantenimiento</td><td><a href="lp-plantas-de-emergencia-industriales.html">Plantas de emergencia</a> &middot; <a href="generacion-en-sitio-cogeneracion.html">Cogeneraci&oacute;n</a></td></tr>
+            <tr><th scope="row">UPS</th><td>Continuidad sin interrupci&oacute;n para control, instrumentaci&oacute;n y sistemas de seguridad</td><td>Sin transferencia perceptible (doble conversi&oacute;n)</td><td>Autonom&iacute;a limitada; no reduce la factura</td><td><a href="confiabilidad-electrica-industrial.html">UPS y BESS</a></td></tr>
+            <tr><th scope="row">BESS</th><td>Respaldo de minutos a horas, recorte de picos de demanda y desplazamiento de consumo</td><td>Milisegundos a segundos, seg&uacute;n equipo y configuraci&oacute;n</td><td>Energ&iacute;a finita; su valor econ&oacute;mico depende del perfil de carga y la tarifa</td><td><a href="confiabilidad-electrica-industrial.html">UPS y BESS</a></td></tr>
+            <tr><th scope="row">Solar fotovoltaica</th><td>Energ&iacute;a de menor costo durante el d&iacute;a</td><td>No es respaldo por s&iacute; sola</td><td>Intermitente; sin almacenamiento se apaga cuando falla la red</td><td><a href="soluciones_solar_industrial.html">Solar industrial</a></td></tr>
+            <tr><th scope="row">Control / EMS / PMS</th><td>Coordina fuentes, transferencias, reparto de carga y deslastre</td><td>Continuo</td><td>Solo es tan bueno como la ingenier&iacute;a de sus l&oacute;gicas y pruebas</td><td><a href="#ems">Ver secci&oacute;n EMS/PMS</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECUENCIA DE FALLA -->
+  <section class="section" id="secuencia" aria-labelledby="secTitle">
+    <div class="container">
+      <span class="sec-label">Cuando la red falla</span>
+      <h2 class="sec-h2" id="secTitle">La secuencia que dise&ntilde;amos y probamos</h2>
+      <p class="sec-lead">Una arquitectura bien integrada responde en un orden predecible. Los tiempos indicados son rangos t&iacute;picos; los valores reales se fijan en la ingenier&iacute;a y se verifican en las pruebas de aceptaci&oacute;n en sitio.</p>
+      <ol class="seq">
+        <li class="seq__step"><span class="seq__time">t = 0</span><div><p class="seq__title">Falla la red</p><p class="seq__desc">Los relevadores detectan p&eacute;rdida de tensi&oacute;n o frecuencia fuera de rango y la instalaci&oacute;n se separa de la red para no alimentar la falla.</p></div></li>
+        <li class="seq__step"><span class="seq__time">0 ms</span><div><p class="seq__title">El UPS sostiene lo cr&iacute;tico</p><p class="seq__desc">Control, instrumentaci&oacute;n, sistemas de paro de emergencia y TI siguen alimentados sin interrupci&oacute;n desde el banco de bater&iacute;as del UPS.</p></div></li>
+        <li class="seq__step"><span class="seq__time">ms a s</span><div><p class="seq__title">El BESS toma las cargas esenciales</p><p class="seq__desc">Si el sistema est&aacute; configurado para operar en isla, el BESS forma la red interna y alimenta las cargas esenciales mientras arranca la generaci&oacute;n.</p></div></li>
+        <li class="seq__step"><span class="seq__time">&asymp; 10&ndash;30 s</span><div><p class="seq__title">Arranca el generador y se transfiere</p><p class="seq__desc">El grupo arranca, estabiliza tensi&oacute;n y frecuencia y la transferencia lo conecta. Con varios grupos, el controlador los sincroniza y reparte la carga.</p></div></li>
+        <li class="seq__step"><span class="seq__time">continuo</span><div><p class="seq__title">El EMS/PMS deslastra y administra</p><p class="seq__desc">Si la capacidad disponible no alcanza, el sistema desconecta cargas no esenciales por prioridad y las reconecta cuando hay margen.</p></div></li>
+        <li class="seq__step"><span class="seq__time">retorno</span><div><p class="seq__title">Regreso ordenado a la red</p><p class="seq__desc">Al normalizarse la red, la transferencia regresa la carga (abierta, cerrada o suave, seg&uacute;n dise&ntilde;o), el generador se enfr&iacute;a y el BESS se recarga.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CLASIFICACIÓN DE CARGAS -->
+  <section class="section section--alt" id="cargas" aria-labelledby="cargasTitle">
+    <div class="container">
+      <span class="sec-label">Antes de comprar equipo</span>
+      <h2 class="sec-h2" id="cargasTitle">Clasificar las cargas define el tama&ntilde;o de todo lo dem&aacute;s</h2>
+      <p class="sec-lead">Respaldar toda la planta con la misma tecnolog&iacute;a encarece el proyecto. Clasificar las cargas por la interrupci&oacute;n que toleran permite dimensionar cada capa con lo que realmente necesita.</p>
+      <div class="tabla-scroll">
+        <table class="av-table">
+          <thead>
+            <tr><th scope="col">Clase</th><th scope="col">Tolera</th><th scope="col">Ejemplos t&iacute;picos</th><th scope="col">Capa que la protege</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Cr&iacute;tica</th><td>Ninguna interrupci&oacute;n</td><td>PLC, DCS, instrumentaci&oacute;n, sistemas de paro de emergencia, gas y fuego, TI y comunicaciones</td><td>UPS, con respaldo de generador o BESS para autonom&iacute;a</td></tr>
+            <tr><th scope="row">Esencial</th><td>Segundos</td><td>Bombas de proceso, refrigeraci&oacute;n, aire de instrumentos, alumbrado de emergencia, cargas de seguridad</td><td>BESS y/o generaci&oacute;n en sitio con transferencia autom&aacute;tica</td></tr>
+            <tr><th scope="row">No esencial</th><td>Minutos u horas</td><td>Climatizaci&oacute;n de oficinas, servicios generales, cargas que pueden reprogramarse</td><td>Deslastre autom&aacute;tico por prioridad desde el EMS/PMS</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="av-note">Las cargas de seguridad humana (por ejemplo, sistemas contra incendio o alumbrado de evacuaci&oacute;n) tienen requisitos normativos propios: se definen con la NOM-001-SEDE vigente y las normas aplicables al sitio, no solo con criterios de costo.</p>
+    </div>
+  </section>
+
+  <!-- EMS / PMS -->
+  <section class="section" id="ems" aria-labelledby="emsTitle">
+    <div class="container">
+      <span class="sec-label">Control / EMS / PMS</span>
+      <h2 class="sec-h2" id="emsTitle">La capa que convierte equipos sueltos en un sistema</h2>
+      <p class="sec-lead">Un sistema de gesti&oacute;n de energ&iacute;a (EMS) o de potencia (PMS) decide en tiempo real qu&eacute; fuente alimenta qu&eacute; carga. Lo especificamos, programamos e integramos con plataformas de DEIF, Woodward y Schneider Electric, seg&uacute;n la escala y la infraestructura existente del sitio.</p>
+      <div class="svc-grid av-grid-2">
+        <div class="svc-card">
+          <p class="svc-card__title">Arranque, sincron&iacute;a y reparto de carga</p>
+          <p class="svc-card__desc">Arranque y paro autom&aacute;tico de grupos, sincronizaci&oacute;n entre m&aacute;quinas y con la red, reparto de carga activa y reactiva y redundancia N+1.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__title">Deslastre de cargas</p>
+          <p class="svc-card__desc">Desconexi&oacute;n por prioridad ante falta de capacidad, baja frecuencia o p&eacute;rdida de una fuente, con reconexi&oacute;n escalonada para no provocar un segundo disparo.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__title">Gesti&oacute;n de demanda</p>
+          <p class="svc-card__desc">Recorte de picos con BESS, desplazamiento de consumo fuera de horario punta y control de inyecci&oacute;n cero cuando la interconexi&oacute;n no admite exportaci&oacute;n.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__title">Integraci&oacute;n al SCADA</p>
+          <p class="svc-card__desc">Comunicaci&oacute;n con el SCADA o DCS de planta por protocolos industriales (Modbus, Profibus, Ethernet industrial), alarmas y registro de eventos para an&aacute;lisis posterior.</p>
+        </div>
+      </div>
+      <p class="av-note">Experiencia aplicable: ingenier&iacute;a del sistema de segregaci&oacute;n de cargas del centro de proceso Akal-J (Diavaz), sincronizaci&oacute;n de cinco motogeneradores Wärtsilä de 3,000&nbsp;kW en el P.S.S. Chemul y tableros de transferencia autom&aacute;tica integrados a SCADA en la plataforma Nohoch-A2.</p>
+    </div>
+  </section>
+
+  <!-- BESS: plataforma de referencia -->
+  <section class="section section--alt" id="bess" aria-labelledby="bessTitle">
+    <div class="container">
+      <span class="sec-label">Almacenamiento</span>
+      <h2 class="sec-h2" id="bessTitle">BESS modular a escala industrial</h2>
+      <p class="sec-lead">Nuestra plataforma de almacenamiento de referencia es Sigenergy SigenStack; como integrador multimarca, la selecci&oacute;n final se hace despu&eacute;s del diagn&oacute;stico. Una duda frecuente es si un sistema modular tiene capacidad industrial. La respuesta est&aacute; en c&oacute;mo escala y en c&oacute;mo se protege.</p>
+      <div class="bess-facts">
+        <div class="bess-fact"><p class="bess-fact__v">12&nbsp;kWh</p><p class="bess-fact__l">por m&oacute;dulo apilable; la capacidad se ajusta al proyecto en lugar de comprar contenedores completos</p></div>
+        <div class="bess-fact"><p class="bess-fact__v">UL&nbsp;9540A &middot; IEC&nbsp;62619</p><p class="bess-fact__l">ensayos de propagaci&oacute;n t&eacute;rmica y seguridad de bater&iacute;as industriales documentados con Intertek</p></div>
+        <div class="bess-fact"><p class="bess-fact__v">20&nbsp;MWh</p><p class="bess-fact__l">proyecto comercial e industrial en Bulgaria con 90 inversores de 110&nbsp;kW, instalado en 10 d&iacute;as</p></div>
+        <div class="bess-fact"><p class="bess-fact__v">Por m&oacute;dulo</p><p class="bess-fact__l">gesti&oacute;n de seguridad a nivel de pack, dise&ntilde;ada para confinar un evento en la unidad que falla</p></div>
+      </div>
+      <p class="av-note">Lo que VMS Energy agrega: el Balance of System que un fabricante no entrega &mdash; transformaci&oacute;n y tableros de media tensi&oacute;n, protecciones coordinadas, puesta a tierra, obra civil, integraci&oacute;n con generaci&oacute;n existente y comisionamiento con protocolos firmados. Fuente de los datos del fabricante: <a href="https://www.sigenergy.com/en/news/info/1756" rel="noopener" target="_blank">Sigenergy, junio 2025</a>.</p>
+    </div>
+  </section>
+
+  <!-- ECONOMÍA Y REGULACIÓN -->
+  <section class="section" id="economia" aria-labelledby="ecoTitle">
+    <div class="container">
+      <span class="sec-label">Econom&iacute;a y marco regulatorio</span>
+      <h2 class="sec-h2" id="ecoTitle">Lo que cambia la factura y lo que exige la ley</h2>
+      <div class="av-cols">
+        <div>
+          <h3 class="av-h3">Factura GDMTH</h3>
+          <p>En la tarifa GDMTH (media tensi&oacute;n, 100&nbsp;kW o m&aacute;s) los cargos por demanda &mdash;capacidad y distribuci&oacute;n&mdash; representan una parte importante del recibo, y el precio de la energ&iacute;a en punta puede ser varias veces el de horario base. En septiembre de 2026 el cargo de distribuci&oacute;n var&iacute;a de forma considerable entre divisiones de CFE.</p>
+          <p>Un BESS bien dimensionado ataca ambos componentes. Con perfiles favorables, el retorno se ubica t&iacute;picamente por debajo de cuatro a&ntilde;os. Lo confirmamos con el recibo y la curva de carga medida de cada planta, nunca con un promedio.</p>
+          <p><a href="calculadora-ahorro-bess-gdmth.html">Estimar ahorro con la calculadora BESS</a></p>
+        </div>
+        <div>
+          <h3 class="av-h3">Marco vigente (Ley del Sector El&eacute;ctrico, 2025)</h3>
+          <ul class="av-list">
+            <li>La Comisi&oacute;n Nacional de Energ&iacute;a (CNE) sustituy&oacute; a la CRE como regulador.</li>
+            <li>Generaci&oacute;n menor a 0.7&nbsp;MW: generaci&oacute;n distribuida, con contrato de interconexi&oacute;n y sin permiso de la CNE.</li>
+            <li>Autoconsumo de 0.7&nbsp;MW o m&aacute;s: requiere permiso de generaci&oacute;n; entre 0.7 y 20&nbsp;MW aplica un tr&aacute;mite simplificado.</li>
+            <li>Almacenamiento de 0.7&nbsp;MW o m&aacute;s no asociado a una central o centro de carga requiere permiso de almacenamiento.</li>
+            <li>La maquinaria para generaci&oacute;n renovable o cogeneraci&oacute;n eficiente puede deducirse al 100&nbsp;% (art.&nbsp;34, fr.&nbsp;XIII, LISR), con condiciones. Valide su caso con su asesor fiscal.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section section--alt" id="proceso" aria-labelledby="procTitle">
+    <div class="container">
+      <span class="sec-label">C&oacute;mo trabajamos</span>
+      <h2 class="sec-h2" id="procTitle">Del diagn&oacute;stico a la prueba de falla real</h2>
+      <div class="process-steps">
+        <div class="step"><p class="step__title">1. Levantamiento y medici&oacute;n</p><p class="step__desc">Curva de demanda en intervalos de 15 minutos, historial de interrupciones, inventario de cargas y estado de protecciones, tableros y puesta a tierra.</p></div>
+        <div class="step"><p class="step__title">2. Arquitectura y dimensionamiento</p><p class="step__desc">Clasificaci&oacute;n de cargas, selecci&oacute;n de capas, unifilar, estudios de cortocircuito y coordinaci&oacute;n, y filosof&iacute;a de control del EMS/PMS.</p></div>
+        <div class="step"><p class="step__title">3. Suministro e instalaci&oacute;n</p><p class="step__desc">Procura multimarca, obra el&eacute;ctrica y civil, montaje e integraci&oacute;n con la infraestructura existente en ventanas de paro planeadas.</p></div>
+        <div class="step"><p class="step__title">4. Pruebas de aceptaci&oacute;n</p><p class="step__desc">Simulaci&oacute;n de falla de red, tiempos de transferencia, deslastre, retorno a red y alarmas, con protocolos firmados por el cliente.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <h2 class="sec-h2" id="faqTitle">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq"><summary>&iquest;El BESS reemplaza al generador?</summary>
+          <div class="faq-body">Depende de la autonom&iacute;a requerida. Para respaldos de minutos a pocas horas, un BESS puede cubrir las cargas esenciales sin combustible. Para autonom&iacute;as largas o inciertas, el generador sigue siendo necesario; en ese caso el BESS reduce arranques, horas de operaci&oacute;n y consumo del motor, y cubre los segundos que el generador tarda en tomar carga.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Si ya tengo UPS, necesito BESS?</summary>
+          <div class="faq-body">No necesariamente. El UPS protege cargas cr&iacute;ticas espec&iacute;ficas con autonom&iacute;a corta. Un BESS se justifica cuando necesita respaldo para cargas m&aacute;s grandes, autonom&iacute;a mayor o cuando su tarifa y perfil de demanda permiten recuperar la inversi&oacute;n con recorte de picos.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Mis paneles solares me respaldan en un apag&oacute;n?</summary>
+          <div class="faq-body">No por s&iacute; solos. Un sistema fotovoltaico interconectado se desconecta cuando falla la red por seguridad. Para que la solar siga aportando durante una interrupci&oacute;n se requiere almacenamiento y un sistema capaz de formar red en isla, con las protecciones correspondientes.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Qu&eacute; marcas integran?</summary>
+          <div class="faq-body">Somos integradores multimarca. En control de generaci&oacute;n trabajamos con plataformas de DEIF, Woodward y Schneider Electric; en almacenamiento nuestra plataforma de referencia es Sigenergy. La selecci&oacute;n final depende del diagn&oacute;stico, la escala y la infraestructura que ya existe en su planta.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Necesito permiso para instalar un BESS?</summary>
+          <div class="faq-body">Bajo la Ley del Sector El&eacute;ctrico, el almacenamiento de 0.7&nbsp;MW o m&aacute;s que no est&eacute; asociado a una central o a un centro de carga requiere permiso de la CNE. Un BESS instalado detr&aacute;s del medidor de su planta se trata como parte de su centro de carga; revisamos en cada proyecto qu&eacute; tr&aacute;mites y normas t&eacute;cnicas aplican.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-final" aria-labelledby="ctaTitle">
+    <div class="container center">
+      <h2 class="sec-h2 sec-h2--white" id="ctaTitle">&iquest;Cu&aacute;nto le cuesta una hora de paro?</h2>
+      <p class="sec-lead sec-lead--light">Medimos su instalaci&oacute;n, clasificamos sus cargas y le proponemos la combinaci&oacute;n de capas que cubre el riesgo con la menor inversi&oacute;n.</p>
+      <div class="hero__actions on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=arquitectura-disponibilidad#ctaForm">Solicitar evaluaci&oacute;n de arquitectura</a>
+        <a class="btn btn--ghost" href="confiabilidad-electrica-industrial.html">Ver UPS y BESS</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer site-footer--compact">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Ingenier&iacute;a, procura y construcci&oacute;n el&eacute;ctrica
+          para industria en M&eacute;xico y Am&eacute;rica.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Soluciones</h3>
+        <ul>
+          <li><a href="soluciones_oil_gas.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Miner&iacute;a</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automatizaci&oacute;n y Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Soluciones Electromec&aacute;nicas</a></li>
+          <li><a href="soluciones_solar_industrial.html">Energ&iacute;a Solar Industrial</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Generaci&oacute;n Verde No Solar</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneraci&oacute;n y Generaci&oacute;n en Sitio</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Plantas de Emergencia</a></li>
+          <li><a href="soluciones_hvac_industrial.html">HVAC Industrial</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Iluminaci&oacute;n Industrial</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Arquitectura de Disponibilidad</a></li>
+          <li><a href="soluciones.html">Todas las soluciones</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Servicios</h3>
+        <ul>
+          <li><a href="especialidades.html">Entrega de Proyectos</a></li>
+          <li><a href="especialidad_ingenieria.html">Ingenier&iacute;a</a></li>
+          <li><a href="especialidad_mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="especialidad_capacitacion.html">Capacitaci&oacute;n</a></li>
+          <li><a href="procura.html">Suministro T&eacute;cnico</a></li>
+          <li><a href="lp-mantenimiento-oil-gas.html">Mantenimiento Oil &amp; Gas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="certificaciones.html">Certificaciones</a></li>
+          <li><a href="sostenibilidad.html">Sostenibilidad</a></li>
+          <li><a href="proyectos-vms.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Bolsa de trabajo</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Avisos legales">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="codigo-conducta.html">C&oacute;digo de &Eacute;tica y Conducta</a>
+        <a href="politica-antisoborno.html">Pol&iacute;tica Antisoborno</a>
+        <a href="politica-interna_antilavado.html">Pol&iacute;tica Interna Antilavado</a>
+        <a href="buzon-sugerencias.html">Buz&oacute;n de sugerencias</a>
+        <a href="directorio.html">Directorio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+<div class="sticky-wa"><a href="https://wa.me/523332582234?text=Hola%2C%20me%20interesa%20una%20evaluaci%C3%B3n%20de%20arquitectura%20de%20disponibilidad%20el%C3%A9ctrica" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
+<div class="sticky-cta"><a href="contacto_cta.html?producto=arquitectura-disponibilidad#ctaForm">Solicitar evaluación</a></div>
+
+</body>
+</html>
