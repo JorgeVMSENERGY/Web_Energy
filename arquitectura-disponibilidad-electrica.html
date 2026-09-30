@@ -13,20 +13,20 @@
 <!-- VMS-NUCLEO:FIN -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy</title>
-<meta name="description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<title>Microrredes Industriales y Disponibilidad Eléctrica: Red, Generador, BESS y EMS | VMS Energy</title>
+<meta name="description" content="Microrredes industriales: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados, conectados a la red o en isla. Ingeniería, suministro y comisionamiento multimarca en México.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="VMS Energy">
-<meta property="og:title" content="Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy">
-<meta property="og:description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<meta property="og:title" content="Microrredes Industriales y Disponibilidad Eléctrica: Red, Generador, BESS y EMS | VMS Energy">
+<meta property="og:description" content="Microrredes industriales: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados, conectados a la red o en isla. Ingeniería, suministro y comisionamiento multimarca en México.">
 <meta property="og:url" content="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
 <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_arquitectura_disponibilidad.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Arquitectura de Disponibilidad Eléctrica: Red, Generador, UPS, BESS y EMS | VMS Energy">
-<meta name="twitter:description" content="Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.">
+<meta name="twitter:title" content="Microrredes Industriales y Disponibilidad Eléctrica: Red, Generador, BESS y EMS | VMS Energy">
+<meta name="twitter:description" content="Microrredes industriales: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados, conectados a la red o en isla. Ingeniería, suministro y comisionamiento multimarca en México.">
 <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_arquitectura_disponibilidad.webp">
 <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
 <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/arquitectura-disponibilidad-electrica.html">
@@ -37,6 +37,7 @@
  "@context": "https://schema.org",
  "@type": "Service",
  "name": "Arquitectura de disponibilidad eléctrica industrial",
+ "alternateName": "Microrredes industriales",
  "provider": {
   "@type": "Organization",
   "name": "VMS Energy",
@@ -46,7 +47,7 @@
   "@type": "Country",
   "name": "México"
  },
- "description": "Diseñamos la continuidad eléctrica industrial como un sistema: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados. Ingeniería, suministro y comisionamiento multimarca en México.",
+ "description": "Microrredes industriales: red, generación en sitio, UPS, BESS, solar y EMS/PMS coordinados, conectados a la red o en isla. Ingeniería, suministro y comisionamiento multimarca en México.",
  "serviceType": "Industrial Power Reliability Engineering"
 }
 </script>
@@ -93,6 +94,30 @@
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Bajo la Ley del Sector Eléctrico, el almacenamiento de 0.7 MW o más que no esté asociado a una central o a un centro de carga requiere permiso de la CNE. Un BESS instalado detrás del medidor se trata como parte del centro de carga; revisamos en cada proyecto qué trámites y normas técnicas aplican."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Qué es una microrred industrial y en qué se diferencia de un respaldo tradicional?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una microrred es un conjunto de fuentes locales (generadores, BESS, solar) y cargas bajo un control común, capaz de operar conectada a la red o separada de ella de forma controlada. Un respaldo tradicional solo arranca cuando la red falla; en una microrred el EMS/PMS administra las fuentes todo el tiempo, también para reducir la factura."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Puedo convertir mi instalación actual en una microrred?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "En muchos casos sí. Generadores, UPS y sistemas solares existentes pueden integrarse agregando el control EMS/PMS y, cuando se justifica, un BESS. Antes revisamos si los inversores y controladores admiten operación en isla y recalculamos protecciones, porque en isla la corriente de cortocircuito disponible es menor que con la red."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Una microrred necesita permiso de la CNE?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "La microrred no es una figura regulatoria aparte: cuentan la capacidad de generación y almacenamiento y si está interconectada. Con 0.7 MW o más de generación se requiere permiso de la CNE, también en autoconsumo aislado, que no requiere estudios de interconexión. Revisamos el trámite aplicable en cada proyecto."
    }
   }
  ]
@@ -176,6 +201,11 @@
   .bess-fact__l{margin:0;font-size:.93rem;color:var(--text-muted)}
   @media (max-width:900px){.bess-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media (max-width:520px){.bess-facts{grid-template-columns:1fr}}
+  /* Microrredes: bloque dentro de #diagrama */
+  .mg{margin-top:48px;scroll-margin-top:90px}
+  .mg__h{font-size:1.35rem;margin:0 0 10px;color:var(--concept-darker)}
+  .mg__lead{max-width:78ch;margin:0 0 22px;color:var(--text-muted)}
+  .mg .svc-card__desc a{display:inline-block;margin-top:8px;font-weight:700;color:var(--concept-primary);text-decoration:underline;text-underline-offset:2px}
 </style>
 </head>
 <body>
@@ -222,6 +252,7 @@
                 <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
                 <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
                 <li><a href="arquitectura-disponibilidad-electrica.html">Arquitectura de Disponibilidad</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microrredes para Sitios Remotos</a></li>
               </ul>
             </div>
             <div class="submenu__col">
@@ -380,11 +411,11 @@
     <div class="container">
       <div class="hero-eyebrow">Confiabilidad el&eacute;ctrica industrial</div>
       <h1 id="heroTitle">Arquitectura de disponibilidad el&eacute;ctrica</h1>
-      <p class="hero__sub">Red, generaci&oacute;n en sitio, UPS, BESS, solar y control en un solo sistema</p>
+      <p class="hero__sub">Microrredes industriales: red, generaci&oacute;n en sitio, UPS, BESS, solar y control en un solo sistema</p>
       <p>Una planta no se queda sin energ&iacute;a por falta de equipos, sino porque cada equipo se compr&oacute; por separado. Dise&ntilde;amos las capas de respaldo como un sistema: qu&eacute; carga protege cada una, en qu&eacute; orden act&uacute;an cuando falla la red y qui&eacute;n las coordina.</p>
       <div class="hero-btns on-dark">
         <a class="btn btn--primary" href="contacto_cta.html?producto=arquitectura-disponibilidad#ctaForm">Solicitar evaluaci&oacute;n de arquitectura</a>
-        <a class="btn btn--ghost" href="#diagrama">Ver la arquitectura</a>
+        <a class="btn btn--ghost" href="#microrredes">Ver c&oacute;mo opera la microrred</a>
       </div>
       <div class="hero-stats">
         <span class="hero-stat">Integraci&oacute;n multimarca</span>
@@ -466,6 +497,29 @@
         </div>
         <figcaption id="archCap" class="arch__cap"><span class="arch__key arch__key--pwr"></span>Potencia <span class="arch__key arch__key--ctl"></span>Control y comunicaci&oacute;n. Diagrama conceptual: cada proyecto define su topolog&iacute;a en la ingenier&iacute;a de detalle.</figcaption>
       </figure>
+
+      <!-- MICRORREDES: pedido de Direccion Comercial (sep 2026). Va dentro de #diagrama para no romper la alternancia de fondos. -->
+      <div class="mg" id="microrredes">
+        <h3 class="mg__h">Cuando las capas se controlan juntas, la planta opera como una microrred</h3>
+        <p class="mg__lead">Una microrred industrial es este mismo sistema con una condici&oacute;n adicional: puede separarse de la red de forma controlada y seguir operando con sus propias fuentes. Tres elementos la definen: generaci&oacute;n y almacenamiento locales, un control com&uacute;n (EMS/PMS) y un punto de interconexi&oacute;n que se abre y se cierra con sincron&iacute;a y protecciones dise&ntilde;adas para ambos estados.</p>
+        <div class="svc-grid">
+          <div class="svc-card">
+            <p class="svc-card__norm">Modo 1</p>
+            <p class="svc-card__title">Conectada a la red</p>
+            <p class="svc-card__desc">Opera en paralelo con CFE. El BESS recorta picos de demanda, la solar reduce el consumo de la red y el EMS limita la inyecci&oacute;n cuando la interconexi&oacute;n no admite exportaci&oacute;n. El generador queda en reserva.</p>
+          </div>
+          <div class="svc-card">
+            <p class="svc-card__norm">Modo 2</p>
+            <p class="svc-card__title">En isla</p>
+            <p class="svc-card__desc">Ante una falla, o de forma programada durante un mantenimiento de la acometida, la microrred se separa de la red. El BESS o el generador forman la red interna, el EMS deslastra por prioridad y el regreso se hace sincronizado, sin segundo paro.</p>
+          </div>
+          <div class="svc-card">
+            <p class="svc-card__norm">Modo 3</p>
+            <p class="svc-card__title">Aislada, sin red</p>
+            <p class="svc-card__desc">En minas, campamentos, bombeo o plataformas donde la red no llega o es inestable, la microrred es el sistema el&eacute;ctrico completo: generaci&oacute;n t&eacute;rmica, solar y BESS coordinados para reducir combustible. <a href="lp-microrredes-sitios-remotos.html">Microrredes para sitios remotos</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -595,6 +649,7 @@
             <li>Generaci&oacute;n menor a 0.7&nbsp;MW: generaci&oacute;n distribuida, con contrato de interconexi&oacute;n y sin permiso de la CNE.</li>
             <li>Autoconsumo de 0.7&nbsp;MW o m&aacute;s: requiere permiso de generaci&oacute;n; entre 0.7 y 20&nbsp;MW aplica un tr&aacute;mite simplificado.</li>
             <li>Almacenamiento de 0.7&nbsp;MW o m&aacute;s no asociado a una central o centro de carga requiere permiso de almacenamiento.</li>
+            <li>Autoconsumo aislado (microrred sin conexi&oacute;n a la red) de 0.7&nbsp;MW o m&aacute;s: requiere permiso de generaci&oacute;n, sin estudios de interconexi&oacute;n ni registro en el mercado (DACG de autoconsumo, 2025).</li>
             <li>La maquinaria para generaci&oacute;n renovable o cogeneraci&oacute;n eficiente puede deducirse al 100&nbsp;% (art.&nbsp;34, fr.&nbsp;XIII, LISR), con condiciones. Valide su caso con su asesor fiscal.</li>
           </ul>
         </div>
@@ -621,6 +676,12 @@
     <div class="container">
       <h2 class="sec-h2" id="faqTitle">Preguntas frecuentes</h2>
       <div class="faq-list">
+        <details class="faq"><summary>&iquest;Qu&eacute; es una microrred industrial y en qu&eacute; se diferencia de un respaldo tradicional?</summary>
+          <div class="faq-body">Una microrred es un conjunto de fuentes locales (generadores, BESS, solar) y cargas bajo un control com&uacute;n, capaz de operar conectada a la red o separada de ella de forma controlada. Un respaldo tradicional solo arranca cuando la red falla; en una microrred el EMS/PMS administra las fuentes todo el tiempo, tambi&eacute;n para reducir la factura.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Puedo convertir mi instalaci&oacute;n actual en una microrred?</summary>
+          <div class="faq-body">En muchos casos s&iacute;. Generadores, UPS y sistemas solares existentes pueden integrarse agregando el control EMS/PMS y, cuando se justifica, un BESS. Antes revisamos si los inversores y controladores admiten operaci&oacute;n en isla y recalculamos protecciones, porque en isla la corriente de cortocircuito disponible es menor que con la red.</div>
+        </details>
         <details class="faq"><summary>&iquest;El BESS reemplaza al generador?</summary>
           <div class="faq-body">Depende de la autonom&iacute;a requerida. Para respaldos de minutos a pocas horas, un BESS puede cubrir las cargas esenciales sin combustible. Para autonom&iacute;as largas o inciertas, el generador sigue siendo necesario; en ese caso el BESS reduce arranques, horas de operaci&oacute;n y consumo del motor, y cubre los segundos que el generador tarda en tomar carga.</div>
         </details>
@@ -635,6 +696,9 @@
         </details>
         <details class="faq"><summary>&iquest;Necesito permiso para instalar un BESS?</summary>
           <div class="faq-body">Bajo la Ley del Sector El&eacute;ctrico, el almacenamiento de 0.7&nbsp;MW o m&aacute;s que no est&eacute; asociado a una central o a un centro de carga requiere permiso de la CNE. Un BESS instalado detr&aacute;s del medidor de su planta se trata como parte de su centro de carga; revisamos en cada proyecto qu&eacute; tr&aacute;mites y normas t&eacute;cnicas aplican.</div>
+        </details>
+        <details class="faq"><summary>&iquest;Una microrred necesita permiso de la CNE?</summary>
+          <div class="faq-body">La microrred no es una figura regulatoria aparte: cuentan la capacidad de generaci&oacute;n y almacenamiento y si est&aacute; interconectada. Con 0.7&nbsp;MW o m&aacute;s de generaci&oacute;n se requiere permiso de la CNE, tambi&eacute;n en autoconsumo aislado, que no requiere estudios de interconexi&oacute;n. Revisamos el tr&aacute;mite aplicable en cada proyecto.</div>
         </details>
       </div>
     </div>
@@ -701,6 +765,7 @@
           <li><a href="soluciones_infraestructura_energetica.html">Infraestructura Energ&eacute;tica</a></li>
           <li><a href="confiabilidad-electrica-industrial.html">Confiabilidad El&eacute;ctrica (UPS/BESS)</a></li>
           <li><a href="arquitectura-disponibilidad-electrica.html">Arquitectura de Disponibilidad</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microrredes para Sitios Remotos</a></li>
           <li><a href="soluciones.html">Todas las soluciones</a></li>
         </ul>
       </div>
