@@ -23,3 +23,6 @@ override.tf.json
 .DS_Store
 Thumbs.db
 desktop.ini
+# Respaldos locales: nunca al repo (se publicarían en el sitio)
+*.bak
+*.bak_*
