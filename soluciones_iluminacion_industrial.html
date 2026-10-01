@@ -2,6 +2,10 @@
 <html lang="es-MX" data-concept="sectorial" data-sector="iluminacion">
 <head>
   <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
@@ -509,6 +513,7 @@
   </script>
 </head>
 <body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <header class="site-header" aria-label="Encabezado del sitio">
@@ -1416,7 +1421,7 @@
       <p class="quicklead-form__feedback" id="quickLeadFeedback" aria-live="polite"></p>
                 <div class="form-consent">
             <input type="checkbox" id="privacidad-1" name="privacidad" required>
-            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
+            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
           </div>
           <button class="quicklead-form__send" type="submit">Enviar</button>
     </form>
@@ -1429,10 +1434,10 @@
   var closeNodes=modal?modal.querySelectorAll('[data-close-modal="quickLeadModal"]'):[];
   var form=document.getElementById('quickLeadForm');
   var feedback=document.getElementById('quickLeadFeedback');
-  if(!modal||!trigger||!form) return;
+  if(!modal||!form) return; /* el boton sticky va despues de este script: lo abre el manejador delegado */
   function openModal(e){ if(e) e.preventDefault(); modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
   function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-  trigger.addEventListener('click',openModal);
+  if(trigger) trigger.addEventListener('click',openModal);
   Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
   form.addEventListener('submit',function(e){
@@ -1445,7 +1450,7 @@
     var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
     var subject='Lead web - Formulario basico';
     var body=encodeURIComponent(bodyLines.join('\n'));
-    window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
+    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
     closeModal(); form.reset();
   });
 })();

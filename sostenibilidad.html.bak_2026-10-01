@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
-<script src="vms-medicion.js"></script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<script>
+window.dataLayer=window.dataLayer||[];
+/* Conversiones: recuerda el ultimo formulario enviado y empuja generate_lead
+   justo antes de abrir el correo (los formularios terminan en mailto:). */
+document.addEventListener('submit',function(e){window.__vmsLastForm=e.target;},true);
+window.vmsLead=function(tipo){try{var f=window.__vmsLastForm||{};
+window.dataLayer.push({event:'generate_lead',form_id:f.id||'',lead_channel:tipo||'mailto',page_path:location.pathname});}catch(x){}};
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');
+</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
@@ -19,7 +26,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sostenibilidad y Compromiso ESG | VMS Energy</title>
-  <meta name="description" content="VMS Energy: 5 certificaciones ISO, EcoVadis Committed, CDP Cambio Climático B, Pacto Global Red México, Pro-Integridad Jalisco e Informe de Sostenibilidad 2025." />
+  <meta name="description" content="VMS Energy: 5 certificaciones ISO activas (14001, 50001, 45001, 37001, 9001), informe ESG 2025 y proyectos de energía limpia en México. Descarga nuestro informe de sostenibilidad." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/sostenibilidad.html" />
   <meta property="og:type" content="website" />
@@ -70,7 +77,7 @@
     .sust-hero h1 span{color:var(--vms-green-400)}
     .sust-hero p{margin:0 0 24px;max-width:780px;font-size:clamp(16px,2vw,20px);color:var(--vms-green-100);opacity:.95}
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn--green{background:var(--vms-green-500);color:#fff;border-color:var(--vms-green-500)}
+    .btn--green{background:var(--vms-green-600);color:#fff;border-color:var(--vms-green-600)}
     .btn--outline-w{background:transparent;border-color:rgba(255,255,255,.4);color:#fff}
     .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
     .hero-badge{display:inline-flex;align-items:center;gap:6px;padding:.3rem .8rem;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-size:.8rem;color:var(--vms-green-100);font-weight:700}
@@ -86,14 +93,14 @@
 
     /* ===== PILARES ISO ===== */
     .section{padding:60px 0}
-    .section-label{display:inline-block;color:var(--vms-green-500);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px}
+    .section-label{display:inline-block;color:var(--vms-green-600);font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin:0 0 10px}
     .section h2{margin:0 0 8px;font-size:clamp(24px,3.2vw,38px);line-height:1.1;color:#0f172a}
     .section p.lead{margin:0 0 32px;font-size:clamp(15px,1.6vw,18px);color:#374151;max-width:700px}
     .iso-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:14px;margin-top:8px}
     .iso-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;box-shadow:0 4px 16px rgba(8,28,54,.06);transition:box-shadow .2s,transform .2s;position:relative;overflow:hidden}
     .iso-card:hover{box-shadow:0 10px 28px rgba(8,28,54,.12);transform:translateY(-2px)}
     .iso-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
-    .iso-card--14001::before{background:linear-gradient(90deg,var(--vms-green-500),var(--vms-green-400))}
+    .iso-card--14001::before{background:linear-gradient(90deg,var(--vms-green-600),var(--vms-green-400))}
     .iso-card--50001::before{background:linear-gradient(90deg,var(--concept-primary),#3b82f6)}
     .iso-card--45001::before{background:linear-gradient(90deg,#d97706,#fbbf24)}
     .iso-card--37001::before{background:linear-gradient(90deg,#7c3aed,#a78bfa)}
@@ -117,36 +124,27 @@
     .esg-card--s{background:linear-gradient(160deg,#eff6ff,#dbeafe);border:1px solid rgba(59,130,246,.2)}
     .esg-card--g{background:linear-gradient(160deg,#f5f3ff,#ede9fe);border:1px solid rgba(124,58,237,.2)}
     .esg-card__letter{font-size:clamp(52px,7vw,80px);font-weight:800;line-height:1;margin:0 0 8px;opacity:.14;position:absolute;top:14px;right:20px}
-    .esg-card--e .esg-card__letter{color:var(--vms-green-500)}
+    .esg-card--e .esg-card__letter{color:var(--vms-green-600)}
     .esg-card--s .esg-card__letter{color:#1d4ed8}
     .esg-card--g .esg-card__letter{color:#7c3aed}
     .esg-card__title{font-size:1.1rem;font-weight:800;color:#0f172a;margin:0 0 6px}
     .esg-card__subtitle{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 14px}
-    .esg-card--e .esg-card__subtitle{color:var(--vms-green-500)}
+    .esg-card--e .esg-card__subtitle{color:var(--vms-green-600)}
     .esg-card--s .esg-card__subtitle{color:#1d4ed8}
     .esg-card--g .esg-card__subtitle{color:#7c3aed}
     .esg-list{list-style:none;margin:0;padding:0}
     .esg-list li{display:flex;align-items:flex-start;gap:8px;font-size:.9rem;color:#1f2937;margin-bottom:9px;line-height:1.4}
     .esg-list li::before{content:"✓";font-weight:800;font-size:.8rem;flex-shrink:0;margin-top:1px}
-    .esg-card--e .esg-list li::before{color:var(--vms-green-500)}
+    .esg-card--e .esg-list li::before{color:var(--vms-green-600)}
     .esg-card--s .esg-list li::before{color:#2563eb}
     .esg-card--g .esg-list li::before{color:#7c3aed}
 
     /* ===== PROYECTOS VERDES ===== */
     .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-    .projects-grid--2{grid-template-columns:repeat(2,1fr)}
-    .projects-grid--4{grid-template-columns:repeat(4,1fr)}
-    .timeline-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px;list-style:none;padding:0}
-    .timeline-strip li{border-left:3px solid var(--vms-green-500);padding:6px 0 6px 14px;color:#374151;line-height:1.45}
-    .timeline-strip strong{display:block;color:var(--vms-green-700);font-size:1.15rem}
-    .check-list{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 28px}
-    .check-list li{position:relative;padding-left:26px;line-height:1.45;color:#374151}
-    .check-list li::before{content:"";position:absolute;left:0;top:.35em;width:14px;height:8px;border-left:2px solid var(--vms-green-500);border-bottom:2px solid var(--vms-green-500);transform:rotate(-45deg)}
-    .policy-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:22px;font-size:.95rem}
     .proj-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(8,28,54,.07)}
     .proj-card__head{height:7px}
     .proj-card__head--solar{background:linear-gradient(90deg,#f59e0b,#fde68a)}
-    .proj-card__head--verde{background:linear-gradient(90deg,var(--vms-green-500),var(--vms-green-400))}
+    .proj-card__head--verde{background:linear-gradient(90deg,var(--vms-green-600),var(--vms-green-400))}
     .proj-card__head--efic{background:linear-gradient(90deg,var(--concept-primary),#60a5fa)}
     .proj-card__body{padding:20px 18px}
     .proj-card__icon{font-size:1.6rem;margin-bottom:10px}
@@ -164,7 +162,7 @@
     .informe-features{list-style:none;margin:0 0 28px;padding:0}
     .informe-features li{display:flex;align-items:flex-start;gap:10px;color:#cbd5e1;font-size:.92rem;margin-bottom:10px;line-height:1.4}
     .informe-features li::before{content:"✓";color:var(--vms-green-400);font-weight:800;flex-shrink:0}
-    .btn--dl{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:var(--vms-green-500);color:#fff;border-radius:14px;font-weight:700;text-decoration:none;font-size:1rem;border:none}
+    .btn--dl{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;background:var(--vms-green-600);color:#fff;border-radius:14px;font-weight:700;text-decoration:none;font-size:1rem;border:none}
     .btn--dl svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
     .btn--dl-outline{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
 
@@ -174,7 +172,7 @@
     details.faq-item[open]{border-color:rgba(21,128,61,.3)}
     details.faq-item summary{cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;font-weight:700;font-size:.97rem;color:#12365f;list-style:none;gap:12px}
     details.faq-item summary::-webkit-details-marker{display:none}
-    details.faq-item summary::after{content:"+";font-size:1.3rem;font-weight:400;color:var(--vms-green-500);flex-shrink:0;transition:transform .2s}
+    details.faq-item summary::after{content:"+";font-size:1.3rem;font-weight:400;color:var(--vms-green-600);flex-shrink:0;transition:transform .2s}
     details.faq-item[open] summary::after{content:"−"}
     .faq-body{padding:0 20px 18px;color:#374151;font-size:.93rem;line-height:1.6}
 
@@ -199,8 +197,8 @@
     /* ===== RESPONSIVE ===== */
     @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding:34px 0}}
     @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr))}nav ul{gap:14px}.submenu{min-width:280px}}
-    @media (max-width:900px){.projects-grid--2,.timeline-strip,.check-list{grid-template-columns:1fr}.projects-grid--4{grid-template-columns:repeat(2,1fr)}.iso-grid{grid-template-columns:repeat(2,1fr)}.esg-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.informe-inner{grid-template-columns:1fr}.informe-cover{max-width:420px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric-item + .metric-item::before{display:none}}
-    @media (max-width:700px){.projects-grid--4{grid-template-columns:1fr}#footer .container{grid-template-columns:1fr;gap:16px;padding:24px 0}.iso-grid{grid-template-columns:1fr}.sust-hero .container{padding:72px 20px 64px}}
+    @media (max-width:900px){.iso-grid{grid-template-columns:repeat(2,1fr)}.esg-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.informe-inner{grid-template-columns:1fr}.informe-cover{max-width:420px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric-item + .metric-item::before{display:none}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr;gap:16px;padding:24px 0}.iso-grid{grid-template-columns:1fr}.sust-hero .container{padding:72px 20px 64px}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
   </style>
   <script type="application/ld+json">
@@ -525,12 +523,12 @@
           <span class="metric-label">Años de trayectoria<br>responsable</span>
         </div>
         <div class="metric-item">
-          <span class="metric-val">9,970</span>
-          <span class="metric-label">kWh de energía solar<br>generados en 2025</span>
+          <span class="metric-val">SGA</span>
+          <span class="metric-label">Proyectos auditados<br>bajo ISO 14001</span>
         </div>
         <div class="metric-item">
-          <span class="metric-val">14</span>
-          <span class="metric-label">ODS a los que<br>contribuimos (35 indicadores)</span>
+          <span class="metric-val">ESG</span>
+          <span class="metric-label">Informe anual<br>documentado y público</span>
         </div>
       </div>
     </div>
@@ -631,17 +629,24 @@
   </section>
 
   
-  <!-- ===== EVALUACIONES Y DISTINTIVOS (QHSE+, propuesta 3.7, seccion 3) =====
-       Integrado 01-oct-2026: EcoVadis + Pro-Integridad Jalisco.
-       Pacto Global Red Mexico: estado "Active" confirmado por Hugo el 01-oct-2026; publicado.
-       CDP Cambio climatico D (2023) / B (2024) / B (2025): confirmado por QHSE+ el 01-oct-2026; publicado.
-       Pacto Global: ID de participante 215039 confirmado por QHSE+. -->
+  <!-- ===== EVALUACIONES EXTERNAS (QHSE+, propuesta 3.7, seccion 3) =====
+       PENDIENTE DE VERIFICAR antes de publicar, decision de Hugo 26-ago-2026:
+       · Pacto Global Red Mexico. El .docx aporta el perfil
+         https://unglobalcompact.org/what-is-gc/participants/215039-VMS-ENERGY-DE-MEXICO
+         No se ha podido comprobar el estado de participacion (un perfil puede
+         figurar como "Non-Communicating" o dado de baja). No publicar la
+         adhesion sin verlo.
+       · CDP D (2023) / B (2024) / B (2025). Aparece SOLO en la imagen de la
+         propuesta, no en su texto. Falta confirmarlo con QHSE+.
+       · ODS. La propuesta trae solo una imagen, sin texto ni vinculacion de
+         programas a metas concretas.
+       Cuando se confirmen, entran en esta misma rejilla. -->
   <section class="section" id="evaluaciones" aria-labelledby="evalTitle">
     <div class="container">
-      <span class="section-label">Evaluaciones y distintivos</span>
+      <span class="section-label">Evaluaciones externas</span>
       <h2 id="evalTitle">Nos evalúan desde fuera</h2>
-      <p class="lead">Las certificaciones acreditan que nuestros sistemas de gestión funcionan. Las evaluaciones y distintivos externos miden además cómo nos comparamos con el resto del mercado.</p>
-      <div class="projects-grid projects-grid--2">
+      <p class="lead">Las certificaciones acreditan que nuestros sistemas de gestión funcionan. Las evaluaciones externas miden además cómo nos comparamos con el resto del mercado.</p>
+      <div style="max-width:760px;margin-top:28px">
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--verde"></div>
           <div class="proj-card__body">
@@ -650,42 +655,7 @@
             <p class="proj-card__text">En 2025 VMS Energy obtuvo el distintivo <strong>Committed</strong> en la evaluación de sostenibilidad de EcoVadis, conforme a su metodología. La evaluación considera cuatro áreas: medio ambiente, trabajo y derechos humanos, ética y compras sostenibles.</p>
           </div>
         </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--efic"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.6 4 6v5.4c0 4.6 3.4 8.4 8 9.9 4.6-1.5 8-5.3 8-9.9V6l-8-3.4Z"/><path d="m8.8 12.2 2.3 2.3 4.3-4.5"/></svg></div>
-            <p class="proj-card__title">Pro-Integridad Jalisco</p>
-            <p class="proj-card__text">Contamos con el distintivo <strong>Pro-Integridad Jalisco</strong>, que acredita una cultura organizacional basada en la ética, la integridad, la transparencia y las buenas prácticas empresariales, y fortalece la confianza de colaboradores, clientes y grupos de interés.</p>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--solar"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></div>
-            <p class="proj-card__title">Pacto Global de las Naciones Unidas · Red México</p>
-            <span class="iso-badge" style="margin-bottom:10px">Participante ID 215039</span>
-            <p class="proj-card__text">Nuestra adhesión a Pacto Global Red México reafirma nuestro compromiso con sus principios universales en derechos humanos, trabajo, medio ambiente y anticorrupción. <a href="https://unglobalcompact.org/what-is-gc/participants/215039-VMS-ENERGY-DE-MEXICO" target="_blank" rel="noopener">Ver perfil de participante</a></p>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--verde"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-            <p class="proj-card__title">CDP · Cambio climático</p>
-            <p class="proj-card__text">Divulgamos nuestro desempeño ambiental ante <strong>CDP</strong>, la plataforma global de divulgación ambiental. En el cuestionario de <strong>cambio climático</strong>, nuestra calificación pasó de <strong>D</strong> en 2023 a <strong>B</strong> en 2024, y se mantuvo en <strong>B</strong> en 2025.</p>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== ODS (propuesta 3.7, seccion 5). Falta la lista de los 14 ODS para
-       poner sus iconos oficiales; hasta entonces, solo texto. ===== -->
-  <section class="section section--alt" id="ods" aria-labelledby="odsTitle">
-    <div class="container">
-      <span class="section-label">Agenda 2030</span>
-      <h2 id="odsTitle">Objetivos de Desarrollo Sostenible</h2>
-      <p class="lead">Alineamos nuestras acciones con los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas, enfocándonos en aquellos donde podemos generar un impacto más significativo por la naturaleza de nuestra operación y de nuestros servicios. Hoy contribuimos con <strong>35 indicadores de 14 Objetivos</strong>, y trabajamos para vincular cada programa interno con los ODS que le corresponden.</p>
     </div>
   </section>
 
@@ -717,9 +687,10 @@
           <p class="esg-card__subtitle">Social</p>
           <ul class="esg-list">
             <li>Gestión de seguridad certificada ISO 45001, con investigación formal de accidentes y acciones correctivas</li>
-            <li>VMS School: formación, crecimiento interno y reconocimiento a la permanencia</li>
+            <li>Programa de capacitación técnica continua</li>
             <li>Equidad e inclusión en el desarrollo de talento</li>
             <li>Desarrollo de comunidades en zonas de proyecto</li>
+            <li>Bolsa de trabajo y crecimiento interno</li>
             <li>Bienestar integral de colaboradores y familias</li>
           </ul>
         </div>
@@ -731,11 +702,9 @@
           <ul class="esg-list">
             <li>Política antisoborno ISO 37001 verificada</li>
             <li>Código de Ética y Conducta de aplicación general</li>
-            <li>Comité de Ética y canales de denuncia confidenciales, libres de represalias</li>
-            <li>Distintivo Pro-Integridad Jalisco</li>
+            <li>Buzón de sugerencias y canal de denuncias</li>
             <li>Política interna antilavado de activos</li>
             <li>Transparencia en la cadena de suministro</li>
-            <li>Protección de datos personales y confidencialidad</li>
             <li>Auditorías externas anuales a todos los SGC</li>
           </ul>
         </div>
@@ -752,14 +721,14 @@
     <div class="container">
       <span class="section-label">Nuestra propia operación</span>
       <h2 id="projTitle">Lo que hacemos puertas adentro</h2>
-      <p class="lead">Antes de hablar de lo que reducimos en instalaciones ajenas, esto es lo que medimos y gestionamos en la nuestra. Los datos de 2025 de esta sección provienen del <a href="assets/data/Informe-de-sostentabilidad26_comprimido_compressed.pdf">Informe de Sostenibilidad 2025</a>, que puede descargar en esta misma página.</p>
+      <p class="lead">Antes de hablar de lo que reducimos en instalaciones ajenas, esto es lo que medimos y gestionamos en la nuestra. Cada dato de esta sección está en el <a href="assets/data/Informe-de-sostentabilidad26_comprimido_compressed.pdf">Informe de Sostenibilidad 2025</a> que puede descargar en esta misma página.</p>
       <div class="projects-grid">
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--solar"></div>
           <div class="proj-card__body">
             <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.2M12 19.8V22M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2 12h2.2M19.8 12H22M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></div>
             <p class="proj-card__title">Gestión energética certificada</p>
-            <p class="proj-card__text">Sistema de gestión en eficiencia energética <strong>ISO 50001 desde 2023</strong>, con política propia de monitoreo y reducción del consumo. En 2025 los paneles solares de la instalación generaron <strong>9,970&nbsp;kWh</strong>. Iniciativas del año: mantenimiento a esos paneles, sustitución por lámparas de mayor ahorro y automatización del encendido y apagado de climas. El consumo eléctrico se sigue por periodo y se compara contra el año anterior.</p>
+            <p class="proj-card__text">Sistema de gestión en eficiencia energética <strong>ISO 50001 desde 2023</strong>, con política propia de monitoreo y reducción del consumo. Iniciativas de 2025: mantenimiento a los paneles solares de la instalación, sustitución por lámparas de mayor ahorro y automatización del encendido y apagado de climas. El consumo eléctrico se sigue por periodo y se compara contra el año anterior.</p>
           </div>
         </div>
         <div class="proj-card">
@@ -767,7 +736,7 @@
           <div class="proj-card__body">
             <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 21.6h2l-.6-8.4h-.8L11 21.6Z"/><circle cx="12" cy="12.2" r="1.4"/><path d="M12 10.8V3.4M13.4 13 20 16.6M10.6 13 4 16.6"/></svg></div>
             <p class="proj-card__title">Trayecto Verde y gestión de flota</p>
-            <p class="proj-card__text">La modalidad de teletrabajo compensa la huella del trayecto casa&ndash;trabajo, con medición mensual de CO&#8322; y un <strong>objetivo mínimo del 30&nbsp;%</strong>; en 2025 el resultado fue del <strong>40&nbsp;%</strong>. En la flota, el recorrido bajó de 60,933 a 46,188&nbsp;km y el consumo de 4,301 a 4,125&nbsp;litros. El indicador por kilómetro empeoró, y por eso las siguientes medidas fijadas son optimización de rutas, mantenimiento preventivo y, en 2026, la incorporación de nuestra <strong>primera flotilla de vehículos híbridos</strong>.</p>
+            <p class="proj-card__text">La modalidad de teletrabajo compensa la huella del trayecto casa&ndash;trabajo, con medición mensual de CO&#8322; y un <strong>objetivo mínimo del 30&nbsp;%</strong>; en 2025 el resultado fue del <strong>40&nbsp;%</strong>. En la flota, el recorrido bajó de 60,933 a 46,188&nbsp;km y el consumo de 4,301 a 4,125&nbsp;litros. El indicador por kilómetro empeoró, y por eso las siguientes medidas fijadas son optimización de rutas y mantenimiento preventivo de vehículos.</p>
           </div>
         </div>
         <div class="proj-card">
@@ -779,81 +748,7 @@
           </div>
         </div>
       </div>
-      <ol class="timeline-strip" aria-label="Hitos ambientales de nuestra operación">
-        <li><strong>2021</strong>Incorporamos paneles solares para aprovechar energía renovable y avanzar hacia una operación más eficiente.</li>
-        <li><strong>2025</strong>Implementamos arbolado en un camellón cercano a nuestras instalaciones y mantenemos su cuidado y mantenimiento.</li>
-        <li><strong>2026</strong>Incorporamos nuestra primera flotilla de vehículos híbridos, hacia una movilidad más eficiente.</li>
-      </ol>
       <p class="lead" style="margin-top:22px">Los proyectos de generación y eficiencia que ejecutamos <strong>para nuestros clientes</strong> &mdash; solar industrial, generación verde no solar y eficiencia energética &mdash; reducen emisiones en la instalación de cada cliente, no en la nuestra. Se explican en <a href="soluciones.html">soluciones</a>.</p>
-    </div>
-  </section>
-
-  <!-- ===== VMS SCHOOL (propuesta 3.7, seccion 8). Pendiente: fotografias de colaboradores. ===== -->
-  <section class="section section--alt" id="vms-school" aria-labelledby="schoolTitle">
-    <div class="container">
-      <span class="section-label">VMS School · Crecemos contigo</span>
-      <h2 id="schoolTitle">El desarrollo de las personas impulsa a la organización</h2>
-      <p class="lead">VMS School es nuestro programa integral de desarrollo, profesionalización y crecimiento interno, diseñado para acompañar a las personas en las distintas etapas de su trayectoria dentro de la empresa.</p>
-      <div class="projects-grid projects-grid--4">
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--verde"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5 4 5c0 4 3 7 8 7Z"/><path d="M12 12c0-3 2.4-5.6 7-5.6 0 3.4-2.6 5.6-7 5.6Z"/></svg></div>
-            <p class="proj-card__title">Primeras oportunidades</p>
-            <p class="proj-card__text">Brindamos a estudiantes la oportunidad de desarrollar experiencia profesional en proyectos y áreas estratégicas de la organización.</p>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--efic"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15Z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20"/></svg></div>
-            <p class="proj-card__title">Formación y desarrollo</p>
-            <p class="proj-card__text">Apoyamos el crecimiento profesional mediante capacitación y formación alineadas con las necesidades de cada persona y de VMS.</p>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--solar"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
-            <p class="proj-card__title">Crecimiento interno</p>
-            <p class="proj-card__text">Promovemos la movilidad y el desarrollo de talento, priorizando las oportunidades internas y el crecimiento basado en competencias.</p>
-          </div>
-        </div>
-        <div class="proj-card">
-          <div class="proj-card__head proj-card__head--verde"></div>
-          <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="5.4"/><path d="m8.4 13.6-1.6 7 5.2-2.8 5.2 2.8-1.6-7"/></svg></div>
-            <p class="proj-card__title">Reconocimiento a la permanencia</p>
-            <p class="proj-card__text">Reconocemos la trayectoria y contribución de nuestros colaboradores mediante beneficios progresivos asociados a su antigüedad.</p>
-          </div>
-        </div>
-      </div>
-      <p class="lead" style="margin-top:22px">¿Quieres crecer con nosotros? Consulta nuestra <a href="carreras.html">bolsa de trabajo</a>.</p>
-    </div>
-  </section>
-
-  <!-- ===== ETICA, INTEGRIDAD Y GOBERNANZA (propuesta 3.7, seccion 9) ===== -->
-  <section class="section" id="etica" aria-labelledby="eticaTitle">
-    <div class="container">
-      <span class="section-label">Ética, integridad y gobernanza</span>
-      <h2 id="eticaTitle">La sostenibilidad comienza con una cultura de integridad</h2>
-      <p class="lead">Nuestro Código de Ética y Conducta establece los principios que guían nuestras decisiones y relaciones con colaboradores, clientes, proveedores y demás grupos de interés. Lo respaldan mecanismos de denuncia confidenciales, una política de cero tolerancia al soborno y un Comité de Ética encargado de fortalecer una cultura de cumplimiento y confianza.</p>
-      <ul class="check-list">
-        <li>Cero tolerancia al soborno y la corrupción</li>
-        <li>Prevención del lavado de dinero y financiamiento ilícito</li>
-        <li>Protección de datos personales y confidencialidad de la información</li>
-        <li>Gestión transparente y responsable de nuestras operaciones</li>
-        <li>Canales de denuncia accesibles y libres de represalias</li>
-        <li>Cumplimiento normativo y rendición de cuentas</li>
-      </ul>
-      <p class="lead" style="margin-top:22px">Nuestro compromiso va más allá del cumplimiento legal: promovemos un entorno laboral seguro, inclusivo y libre de discriminación, y respetamos los derechos humanos en toda nuestra operación.</p>
-      <div class="policy-links">
-        <a href="codigo-conducta.html">Código de Ética y Conducta</a>
-        <a href="politica-antisoborno.html">Política Antisoborno</a>
-        <a href="politica-interna_antilavado.html">Política Interna Antilavado</a>
-        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
-        <a href="buzon-sugerencias.html">Buzón de sugerencias y denuncias</a>
-      </div>
     </div>
   </section>
 
@@ -918,7 +813,7 @@
         </details>
         <details class="faq-item">
           <summary>¿Puedo solicitar una auditoría de eficiencia energética?</summary>
-          <div class="faq-body">Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco <strong>ISO 50001</strong>. El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctanos a través de <a href="contacto.html#inicio" style="color:var(--vms-green-500);font-weight:700">contacto@vmsenergy.com</a> o llámanos al +52 33 3813 0739.</div>
+          <div class="faq-body">Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco <strong>ISO 50001</strong>. El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctanos a través de <a href="contacto.html#inicio" style="color:var(--vms-green-600);font-weight:700">contacto@vmsenergy.com</a> o llámanos al +52 33 3813 0739.</div>
         </details>
       </div>
     </div>

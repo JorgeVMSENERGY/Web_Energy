@@ -2,6 +2,10 @@
 <html lang="es-MX" data-concept="corporativo">
 <head>
   <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="512x512" href="assets/brand/icon-512.png">
@@ -2441,6 +2445,7 @@ label{font-size:14px}
   </script>
 </head>
 <body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ===== Campaña RIM Zacatecas 2026 (cintillo + pop-up) ===== -->
 
   <!-- Cintillo "RIM Zacatecas 2026" retirado (instruccion de Hugo, 24-ago-2026):
@@ -4431,16 +4436,7 @@ label{font-size:14px}
 })();
 </script>
 
-<script>
-window.dataLayer = window.dataLayer || [];
-function track(event, params){ try{ window.dataLayer.push(Object.assign({event}, params||{})); }catch(e){} }
-
-// Track CTA clicks by data-cta
-document.addEventListener('click', function(e){
-  var a = e.target.closest('[data-cta]');
-  if(a){ track('cta_click', {cta: a.getAttribute('data-cta'), href: a.getAttribute('href')}); }
-});
-</script>
+<!-- cta_click: lo mide vms-medicion.js -->
 
 <style>
 .sticky-actions{
@@ -4577,7 +4573,7 @@ document.addEventListener('click', function(e){
       <p class="quicklead-form__feedback" id="quickLeadFeedback" aria-live="polite"></p>
                 <div class="form-consent">
             <input type="checkbox" id="privacidad-1" name="privacidad" required>
-            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
+            <label for="privacidad-1">He le&iacute;do y acepto el <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
           </div>
           <button class="quicklead-form__send" type="submit">Enviar</button>
     </form>
@@ -4609,7 +4605,7 @@ document.addEventListener('click', function(e){
     var message=(document.getElementById('qlMessage').value||'').trim();
     if(!name||!email||!empresa){ if(feedback) feedback.textContent='Completa nombre, correo y empresa.'; return; }
     var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-    window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent('Lead web - Formulario basico')+'&body='+encodeURIComponent(bodyLines.join('\n'));
+    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent('Lead web - Formulario basico')+'&body='+encodeURIComponent(bodyLines.join('\n'));
     closeModal(document.getElementById('quickLeadModal')); form.reset();
   });
 })();
