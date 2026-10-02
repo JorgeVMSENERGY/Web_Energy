@@ -1,5 +1,6 @@
 // CloudFront Function (viewer-request) — redirecciones 301 de vmsenergy.com
 // Fuente: auditoría redirecciones-301.xlsx (Search Console + GA4, 2026-07-01 a 2026-09-29)
+// + exports de Search Console del 2 oct 2026 (cobertura 403/404)
 // Incluye filas "Directa", "Sugerida" y "Decidir", todas resueltas por Marketing
 // el 1 oct 2026. Sigue fuera a propósito: todo /en/ (pendiente de decidir).
 // Las claves van sin diagonal final y en minúsculas; la función normaliza la URI.
@@ -41,7 +42,15 @@ var REDIRECTS = {
   // Sin cartas para usar logotipos: los aliados viven en la sección de la home.
   '/aliados': '/#clientesPorSectorAliados',
   // El PDF viejo de WordPress va a la sección del informe, que tiene la descarga.
-  '/wp-content/uploads/2026/01/informe-de-sostentabilidad26_comprimido_compressed.pdf': '/sostenibilidad.html#informe'
+  '/wp-content/uploads/2026/01/informe-de-sostentabilidad26_comprimido_compressed.pdf': '/sostenibilidad.html#informe',
+
+  // Search Console 2 oct 2026 (403/404/sin indexar que faltaban)
+  '/mantenimiento': '/especialidad_mantenimiento.html',
+  '/politica-antilavado': '/politica-interna_antilavado.html',
+  '/oil&gas': '/soluciones_oil_gas.html',
+  '/oil%26gas': '/soluciones_oil_gas.html',
+  '/wp-content/uploads/2026/02/codigo-de-etica-y-conducta2026.pdf': '/codigo-conducta.html',
+  '/wp-content/uploads/2025/04/informe-de-sostenibilidad_comprimido.pdf': '/sostenibilidad.html#informe'
 };
 
 // Páginas de autor, etiqueta y categoría de WordPress → blog.html
@@ -84,6 +93,11 @@ function handler(event) {
   // Un solo salto: www + URL vieja va directo al destino final sin www.
   if (target) return redirect('https://' + CANONICAL_HOST + target + qs(request.querystring));
   if (host !== CANONICAL_HOST) return redirect('https://' + CANONICAL_HOST + uri + qs(request.querystring));
+
+  // /en/ existe como en/index.html, pero CloudFront solo resuelve index.html en la raíz
+  // (S3 devolvía 403). /en → /en/ y /en/ se sirve desde /en/index.html.
+  if (uri === '/en') return redirect('https://' + CANONICAL_HOST + '/en/' + qs(request.querystring));
+  if (uri === '/en/') request.uri = '/en/index.html';
 
   return request;
 }
