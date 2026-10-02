@@ -45,6 +45,125 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Celdas de Media Tensión","item":"https://vmsenergy.com/lp-celdas-media-tension.html"}]}
   </script>
+<style>
+/* ── lp-celdas-media-tension · componentes visuales de página (oct-2026) ── */
+.mt-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px }
+.mt-card, .mt-app { background:#fff; border:1px solid var(--border-line); border-radius:var(--radius-card);
+  padding:22px; transition:box-shadow .2s, transform .2s }
+.mt-card:hover { box-shadow:0 8px 24px rgba(9,32,58,.1); transform:translateY(-2px) }
+.mt-card__icon { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
+  border-radius:12px; background:var(--concept-accent-light); color:var(--concept-primary); margin-bottom:12px }
+.mt-card__title { font-size:1.02rem; font-weight:800; color:var(--concept-dark); margin:0 0 6px }
+.mt-card__desc { font-size:.9rem; color:var(--text-muted); line-height:1.55; margin:0 }
+
+.mt-h3 { display:flex; align-items:center; gap:10px; margin:36px 0 16px; font-size:clamp(18px,2.2vw,23px);
+  font-weight:900; color:var(--concept-dark); line-height:1.25 }
+.mt-h3__n { flex:none; display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px;
+  border-radius:50%; background:var(--concept-primary); color:#fff; font-size:.9rem }
+
+/* figuras */
+.mt-figs { display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+.mt-figcard { margin:0; background:#fff; border:1px solid var(--border-line); border-radius:var(--radius-card);
+  padding:18px 18px 20px; display:flex; flex-direction:column; gap:14px }
+.mt-figcard figcaption { font-size:.88rem; color:var(--text-muted); line-height:1.55 }
+.mt-figcard figcaption strong { color:var(--concept-dark) }
+.mt-fig { width:100%; height:auto; display:block }
+.mt-fig text { font-family:var(--font-body); text-anchor:middle }
+.d-box { fill:none; stroke:var(--concept-dark); stroke-width:3 }
+.d-zone { fill:var(--vms-blue-50,#F0F6FF) }
+.d-zone--bt { fill:var(--vms-slate-100,#F2F4F7) }
+.d-zone--bus { fill:#E3EEFB }
+.d-zone--cab { fill:#EAF2FC }
+.d-wall { fill:none; stroke:var(--concept-dark); stroke-width:3 }
+.d-part { fill:#fff; stroke:var(--concept-primary); stroke-width:2 }
+.d-line, .d-busline, .d-blade { fill:none; stroke:var(--concept-dark); stroke-width:2; stroke-linecap:round }
+.d-busline { stroke-width:5 }
+.d-bar { fill:#B87333 }
+.d-ct { fill:none; stroke:var(--concept-primary); stroke-width:2 }
+.d-dot { fill:var(--concept-dark) }
+.d-fuse { fill:#fff; stroke:var(--concept-dark); stroke-width:2 }
+.d-cb { fill:#fff; stroke:var(--concept-dark); stroke-width:2.5 }
+.d-relay { fill:var(--concept-accent-light); stroke:var(--concept-primary); stroke-width:1.5 }
+.d-signal { fill:none; stroke:var(--concept-primary); stroke-width:1.5; stroke-dasharray:5 4 }
+.d-interlock { fill:none; stroke:var(--warning-fill,#D97706); stroke-width:1.5; stroke-dasharray:2 4; stroke-linecap:round }
+.d-shutter { stroke:var(--warning-fill,#D97706); stroke-width:4; stroke-linecap:round }
+.d-term { fill:var(--concept-dark) }
+.d-arrow { fill:none; stroke:var(--concept-dark); stroke-width:2; stroke-linejoin:round }
+.d-lbl { font-size:13px; font-weight:800; fill:var(--concept-dark) }
+.d-lbl--muted { font-weight:700; fill:var(--text-muted) }
+.d-sub { font-size:11px; fill:var(--text-muted) }
+.d-axis { font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; fill:var(--text-muted); text-anchor:start !important }
+.d-axis[text-anchor="end"] { text-anchor:end !important }
+.d-badge circle { fill:var(--concept-primary) }
+.d-badge text { font-size:11px; font-weight:800; fill:#fff }
+.mt-key { display:inline-block; width:14px; height:4px; border-radius:2px; vertical-align:middle }
+.mt-key--shutter { background:var(--warning-fill,#D97706) }
+
+/* medio aislante */
+.mt-medios { display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+.mt-medio { background:#fff; border:1px solid var(--border-line); border-radius:var(--radius-card); padding:22px }
+.mt-medio__name { margin:0 0 4px; font-size:1.05rem; font-weight:900; color:var(--concept-dark) }
+.mt-medio__sub { margin:0 0 16px; font-size:.86rem; color:var(--text-muted); line-height:1.5 }
+.mt-foot { height:14px; border-radius:4px; background:var(--vms-slate-100,#F2F4F7); overflow:hidden }
+.mt-foot span { display:block; height:100%; border-radius:4px;
+  background:repeating-linear-gradient(90deg,var(--concept-primary) 0 18px,var(--vms-blue-400,#3A6FA5) 18px 20px) }
+.mt-foot__lbl { margin:6px 0 14px; font-size:.74rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-muted) }
+.mt-rate { list-style:none; margin:0 0 14px; padding:0; display:grid; gap:8px }
+.mt-rate li { display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:.85rem; color:#374151;
+  padding-bottom:8px; border-bottom:1px solid var(--border-line) }
+.mt-dots { display:inline-flex; gap:4px; flex:none }
+.mt-dots i { width:10px; height:10px; border-radius:50%; background:var(--vms-slate-200,#E2E8F0) }
+.mt-dots i.on { background:var(--concept-primary) }
+.mt-medio__uso { margin:0; font-size:.86rem; color:var(--text-muted); line-height:1.55 }
+.mt-medio__uso strong { color:var(--concept-dark) }
+.mt-note { margin:12px 0 0; font-size:.78rem; color:var(--text-muted) }
+
+/* unifilar + lista */
+.mt-uni { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:24px; align-items:start }
+.mt-figcard--uni { position:sticky; top:96px }
+.mt-comp { list-style:none; margin:0; padding:0; display:grid; gap:12px }
+.mt-comp li { display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--border-line);
+  border-radius:12px; padding:14px 16px; font-size:.9rem; color:var(--text-muted); line-height:1.55 }
+.mt-comp strong { color:var(--concept-dark) }
+.mt-num { flex:none; display:inline-flex; align-items:center; justify-content:center; width:26px; height:26px;
+  border-radius:50%; background:var(--concept-primary); color:#fff; font-size:.8rem; font-weight:800; margin-top:1px }
+
+/* aplicaciones */
+.mt-apps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px }
+.mt-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px }
+.mt-chips span { padding:.18rem .6rem; border-radius:999px; background:var(--concept-accent-light);
+  color:var(--concept-accent-text); font-size:.76rem; font-weight:700 }
+
+/* proceso */
+.mt-steps { list-style:none; margin:28px 0 0; padding:0; display:grid; grid-template-columns:repeat(6,1fr); gap:14px; position:relative }
+.mt-steps::before { content:""; position:absolute; top:26px; left:8%; right:8%; height:2px; background:var(--vms-blue-200,#A9C6E2) }
+.mt-step { position:relative; text-align:center; padding:0 4px }
+.mt-step__dot { position:relative; z-index:1; display:inline-flex; align-items:center; justify-content:center;
+  width:54px; height:54px; border-radius:50%; background:#fff; color:var(--concept-primary);
+  border:2px solid var(--concept-primary); box-shadow:0 0 0 6px var(--concept-section-alt) }
+.mt-step__n { display:block; margin:12px 0 2px; font-size:.72rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--concept-primary) }
+.mt-step__t { margin:0 0 6px; font-size:.98rem; font-weight:900; color:var(--concept-dark) }
+.mt-step__d { margin:0; font-size:.84rem; color:var(--text-muted); line-height:1.5 }
+
+@media (max-width:1000px) {
+  .mt-steps { grid-template-columns:repeat(3,1fr); row-gap:28px }
+  .mt-steps::before { display:none }
+}
+@media (max-width:900px) {
+  .mt-cards, .mt-figs, .mt-medios, .mt-apps { grid-template-columns:1fr 1fr }
+  .mt-uni { grid-template-columns:1fr }
+  .mt-figcard--uni { position:static; max-width:460px }
+}
+@media (max-width:600px) {
+  .mt-cards, .mt-figs, .mt-medios, .mt-apps { grid-template-columns:1fr }
+  .mt-steps { grid-template-columns:1fr; gap:0 }
+  .mt-steps::before { display:block; top:20px; bottom:60px; left:26px; right:auto; width:2px; height:auto }
+  .mt-step { display:grid; grid-template-columns:54px 1fr; column-gap:16px; text-align:left; padding:0 0 22px }
+  .mt-step__dot { grid-row:1 / span 3 }
+  .mt-step__n { margin:4px 0 2px }
+}
+</style>
+
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -266,10 +385,10 @@
         <a class="btn btn--ghost" href="#proceso">Ver el proceso</a>
       </div>
       <div class="hero-stats">
-        <span class="hero-stat">4.16 &ndash; 34.5 kV</span>
-        <span class="hero-stat">Metal-clad y metal-enclosed</span>
-        <span class="hero-stat">IEC 62271</span>
-        <span class="hero-stat">CFE Transmisi&oacute;n &middot; ingenios &middot; miner&iacute;a</span>
+        <span class="hero-stat"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="un rayo"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg> 4.16 &ndash; 34.5 kV</span>
+        <span class="hero-stat"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="una celda compartimentada"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 9h16M12 9v12"/></svg> Metal-clad y metal-enclosed</span>
+        <span class="hero-stat"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="un escudo con palomita"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg> IEC 62271</span>
+        <span class="hero-stat"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="una planta industrial"><path d="M3 21V10l6 4v-4l6 4V6l6 3v12z"/></svg> CFE Transmisi&oacute;n &middot; ingenios &middot; miner&iacute;a</span>
       </div>
     </div>
   </section>
@@ -279,32 +398,39 @@
       <span class="sec-label">Alcance</span>
       <h2 class="sec-h2" id="alcTitle">Qu&eacute; hacemos con una celda de media tensi&oacute;n</h2>
       <p class="sec-lead">No vendemos un gabinete: entregamos la secci&oacute;n funcionando y probada,
-         con la documentaci&oacute;n que el &aacute;rea de mantenimiento va a necesitar dentro de diez a&ntilde;os.</p>
-
-      <div class="notes-panel">
-        <div class="notes-panel__head">
-          <span class="notes-panel__tag">Seis frentes</span>
-          <h3 class="notes-panel__title">De la especificaci&oacute;n a la puesta en servicio</h3>
-        </div>
-        <p class="notes-panel__sub">Cada frente se puede contratar suelto o como parte de un alcance EPC completo.</p>
-        <ul class="note-list">
-          <li><strong>Especificaci&oacute;n y selecci&oacute;n.</strong> Nivel de tensi&oacute;n, corriente nominal,
-              capacidad de interrupci&oacute;n, grado de compartimentaci&oacute;n y esquema de protecciones,
-              a partir del estudio de cortocircuito y de la coordinaci&oacute;n de la instalaci&oacute;n.</li>
-          <li><strong>Suministro.</strong> Celda, aparamenta, transformadores de instrumento y accesorios,
-              con seguimiento del cronograma de f&aacute;brica hasta sitio.</li>
-          <li><strong>Montaje y conexionado.</strong> Nivelaci&oacute;n, anclaje, acoplamiento de barras,
-              conexionado de potencia y control, y aterrizamiento.</li>
-          <li><strong>Rehabilitaci&oacute;n de secciones existentes.</strong> Cuando la celda est&aacute; sana y
-              lo que fall&oacute; es el interruptor o una secci&oacute;n concreta, se repone esa parte en vez de
-              reemplazar el tablero completo. Es lo que hicimos en dos tableros metal-clad de CFE Transmisi&oacute;n.</li>
-          <li><strong>Pruebas de aceptaci&oacute;n y puesta en servicio.</strong> Resistencia de aislamiento,
-              resistencia de contactos, tiempos de operaci&oacute;n, verificaci&oacute;n de enclavamientos y
-              comprobaci&oacute;n punto a punto del control antes de energizar.</li>
-          <li><strong>Celdas de sincron&iacute;a y enclavamientos.</strong> Para cogeneraci&oacute;n y plantas de
-              generaci&oacute;n: l&oacute;gica de sincronizaci&oacute;n, interbloqueos mec&aacute;nicos y el&eacute;ctricos,
-              y protecci&oacute;n de interconexi&oacute;n.</li>
-        </ul>
+         con la documentaci&oacute;n que el &aacute;rea de mantenimiento va a necesitar dentro de diez a&ntilde;os.
+         Cada frente se contrata suelto o dentro de un alcance EPC completo.</p>
+      <div class="mt-cards">
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
+          <h3 class="mt-card__title">Especificaci&oacute;n y selecci&oacute;n</h3>
+          <p class="mt-card__desc">Tensi&oacute;n, corriente nominal, capacidad de interrupci&oacute;n, compartimentaci&oacute;n y esquema de protecciones, a partir del estudio de cortocircuito y la coordinaci&oacute;n de la instalaci&oacute;n.</p>
+        </article>
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <h3 class="mt-card__title">Suministro</h3>
+          <p class="mt-card__desc">Celda, aparamenta, transformadores de instrumento y accesorios, con seguimiento del cronograma de f&aacute;brica hasta sitio.</p>
+        </article>
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span>
+          <h3 class="mt-card__title">Montaje y conexionado</h3>
+          <p class="mt-card__desc">Nivelaci&oacute;n, anclaje, acoplamiento de barras, conexionado de potencia y control, y aterrizamiento.</p>
+        </article>
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span>
+          <h3 class="mt-card__title">Rehabilitaci&oacute;n de secciones</h3>
+          <p class="mt-card__desc">Si la celda est&aacute; sana y fall&oacute; el interruptor o una secci&oacute;n, se repone esa parte en vez del tablero completo. Lo hicimos en dos tableros metal-clad de CFE Transmisi&oacute;n.</p>
+        </article>
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3 class="mt-card__title">Pruebas y puesta en servicio</h3>
+          <p class="mt-card__desc">Resistencia de aislamiento y de contactos, tiempos de operaci&oacute;n, enclavamientos y comprobaci&oacute;n punto a punto del control antes de energizar.</p>
+        </article>
+        <article class="mt-card">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.5-6 5-6 7.5 0s5 6 7.5 0 3.5-4 5-3"/><path d="M2 20h20"/></svg></span>
+          <h3 class="mt-card__title">Celdas de sincron&iacute;a</h3>
+          <p class="mt-card__desc">Para cogeneraci&oacute;n y generaci&oacute;n: l&oacute;gica de sincronizaci&oacute;n, interbloqueos mec&aacute;nicos y el&eacute;ctricos, y protecci&oacute;n de interconexi&oacute;n.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -316,48 +442,116 @@
       <p class="sec-lead">Una celda de media tensi&oacute;n es el conjunto de aparamenta &mdash;interruptor,
          seccionadores, fusibles, protecciones y medici&oacute;n&mdash; alojado en una envolvente met&aacute;lica
          para controlar y proteger circuitos de m&aacute;s de 1 kV y hasta 36 kV (clasificaci&oacute;n IEC).
-         Se clasifican por dos ejes: cu&aacute;nto se puede maniobrar y mantener con la instalaci&oacute;n
-         energizada, y con qu&eacute; medio se a&iacute;slan las partes activas.</p>
+         Se eligen por dos ejes.</p>
 
-      <div class="notes-panel">
-        <div class="notes-panel__head">
-          <span class="notes-panel__tag">Eje de decisi&oacute;n</span>
-          <h3 class="notes-panel__title">El grado de compartimentaci&oacute;n manda</h3>
-        </div>
-        <ul class="note-list">
-          <li><strong>Metal-clad.</strong> Compartimentos met&aacute;licos aterrizados separando barras,
-              interruptor, cables y control, con interruptor extra&iacute;ble y obturadores. Es la
-              configuraci&oacute;n para instalaciones donde hay que maniobrar y dar mantenimiento sin
-              sacar de servicio el resto del tablero.</li>
-          <li><strong>Metal-enclosed.</strong> Envolvente met&aacute;lica sin la separaci&oacute;n
-              compartimentada completa. Menor costo e igual protecci&oacute;n contra contacto directo,
-              con menos capacidad de trabajo en caliente.</li>
-          <li><strong>Celda de seccionamiento y distribuci&oacute;n.</strong> Para maniobra y
-              seccionamiento en anillos y derivaciones, sin la funci&oacute;n de interrupci&oacute;n
-              bajo carga de un interruptor de potencia.</li>
-        </ul>
+      <h3 class="mt-h3"><span class="mt-h3__n">1</span> Grado de compartimentaci&oacute;n: cu&aacute;nto se puede maniobrar con el tablero energizado</h3>
+      <div class="mt-figs">
+        <figure class="mt-figcard">
+          <svg class="mt-fig" viewBox="0 0 280 330" role="img" aria-labelledby="figMcT">
+              <title id="figMcT">Corte lateral de una celda metal-clad con cuatro compartimentos: control, interruptor extra&iacute;ble, barras y cables</title>
+              <rect class="d-box" x="20" y="20" width="240" height="280" rx="4"/>
+              <rect class="d-zone d-zone--bt" x="22" y="22" width="117" height="67"/>
+              <rect class="d-zone" x="22" y="91" width="117" height="207"/>
+              <rect class="d-zone d-zone--bus" x="141" y="22" width="117" height="127"/>
+              <rect class="d-zone d-zone--cab" x="141" y="151" width="117" height="147"/>
+              <path class="d-wall" d="M20 90h120M140 20v280M140 150h120"/>
+              <text class="d-lbl" x="80" y="52">Control BT</text>
+              <text class="d-sub" x="80" y="68">relevadores</text>
+              <text class="d-lbl" x="80" y="118">Interruptor</text>
+              <text class="d-sub" x="80" y="133">extra&iacute;ble</text>
+              <rect class="d-part" x="42" y="150" width="76" height="105" rx="3"/>
+              <path class="d-line" d="M118 178h20M118 228h20"/>
+              <circle class="d-part" cx="56" cy="264" r="6"/><circle class="d-part" cx="104" cy="264" r="6"/>
+              <path class="d-shutter" d="M136 168v20M136 218v20"/>
+              <text class="d-lbl" x="200" y="52">Barras</text>
+              <rect class="d-bar" x="170" y="80" width="10" height="34"/><rect class="d-bar" x="195" y="80" width="10" height="34"/><rect class="d-bar" x="220" y="80" width="10" height="34"/>
+              <path class="d-line" d="M140 178h35v-64"/>
+              <text class="d-lbl" x="200" y="178">Cables</text>
+              <path class="d-line" d="M140 228h60v70"/>
+              <circle class="d-ct" cx="200" cy="250" r="9"/>
+              <text class="d-sub" x="230" y="254">TC</text>
+              <text class="d-axis" x="20" y="320">Frente</text>
+              <text class="d-axis" x="260" y="320" text-anchor="end">Posterior</text>
+            </svg>
+          <figcaption><strong>Metal-clad.</strong> Compartimentos met&aacute;licos aterrizados para barras, interruptor,
+            cables y control; interruptor extra&iacute;ble con obturadores <span class="mt-key mt-key--shutter"></span>.
+            Para maniobrar y dar mantenimiento sin sacar de servicio el resto del tablero.</figcaption>
+        </figure>
+        <figure class="mt-figcard">
+          <svg class="mt-fig" viewBox="0 0 280 330" role="img" aria-labelledby="figMeT">
+              <title id="figMeT">Corte lateral de una celda metal-enclosed: control separado y un solo espacio de media tensi&oacute;n para interruptor, barras y cables</title>
+              <rect class="d-box" x="20" y="20" width="240" height="280" rx="4"/>
+              <rect class="d-zone d-zone--bt" x="22" y="22" width="117" height="67"/>
+              <rect class="d-zone" x="22" y="91" width="236" height="207"/><rect class="d-zone" x="141" y="22" width="117" height="70"/>
+              <path class="d-wall" d="M20 90h120v-70"/>
+              <text class="d-lbl" x="80" y="52">Control BT</text>
+              <text class="d-sub" x="80" y="68">relevadores</text>
+              <rect class="d-bar" x="170" y="40" width="10" height="34"/><rect class="d-bar" x="195" y="40" width="10" height="34"/><rect class="d-bar" x="220" y="40" width="10" height="34"/>
+              <text class="d-sub" x="200" y="30">barras</text>
+              <rect class="d-part" x="58" y="140" width="66" height="80" rx="3"/>
+              <text class="d-sub" x="91" y="184">fijo</text>
+              <path class="d-line" d="M124 160h51V74M124 200h76v98"/>
+              <circle class="d-ct" cx="200" cy="245" r="9"/>
+              <text class="d-sub" x="230" y="249">TC</text>
+              <text class="d-lbl d-lbl--muted" x="95" y="270">Un solo espacio de MT</text>
+              <text class="d-axis" x="20" y="320">Frente</text>
+              <text class="d-axis" x="260" y="320" text-anchor="end">Posterior</text>
+            </svg>
+          <figcaption><strong>Metal-enclosed.</strong> Envolvente met&aacute;lica sin la separaci&oacute;n completa.
+            Menor costo e igual protecci&oacute;n contra contacto directo, con menos capacidad de trabajo en caliente.</figcaption>
+        </figure>
+        <figure class="mt-figcard">
+          <svg class="mt-fig" viewBox="0 0 280 330" role="img" aria-labelledby="figScT">
+              <title id="figScT">Celda de seccionamiento: seccionador con fusibles en la derivaci&oacute;n, sin interruptor de potencia</title>
+              <rect class="d-box" x="20" y="20" width="240" height="280" rx="4"/>
+              <rect class="d-zone" x="22" y="22" width="236" height="276"/>
+              <path class="d-line" d="M50 50h180"/>
+              <text class="d-sub" x="140" y="40">barras / anillo</text>
+              <path class="d-line" d="M140 50v40M140 130v30"/>
+              <path class="d-blade" d="M140 130l22-36"/>
+              <circle class="d-dot" cx="140" cy="90" r="3"/><circle class="d-dot" cx="140" cy="130" r="3"/>
+              <text class="d-lbl" x="215" y="116">Seccionador</text>
+              <rect class="d-fuse" x="130" y="160" width="20" height="46" rx="2"/>
+              <path class="d-line" d="M140 168v30"/>
+              <text class="d-lbl" x="205" y="188">Fusible</text>
+              <path class="d-line" d="M140 206v72"/>
+              <path class="d-arrow" d="M132 270l8 10 8-10"/>
+              <text class="d-sub" x="200" y="260">a transformador</text>
+              <text class="d-sub" x="200" y="274">o derivaci&oacute;n</text>
+            </svg>
+          <figcaption><strong>Seccionamiento y distribuci&oacute;n.</strong> Maniobra y seccionamiento en anillos y
+            derivaciones, sin la capacidad de interrupci&oacute;n de un interruptor de potencia.</figcaption>
+        </figure>
       </div>
 
-      <div class="notes-panel" style="margin-top:1.5rem">
-        <div class="notes-panel__head">
-          <span class="notes-panel__tag">Segundo eje</span>
-          <h3 class="notes-panel__title">El medio aislante: aire, gas o h&iacute;brida</h3>
-        </div>
-        <ul class="note-list">
-          <li><strong>Aislada en aire (AIS).</strong> El aire a presi&oacute;n atmosf&eacute;rica a&iacute;sla
-              las fases entre s&iacute; y respecto a tierra; el interruptor suele ser de vac&iacute;o. Es la
-              m&aacute;s com&uacute;n en industria: sencilla, con componentes accesibles para inspecci&oacute;n y
-              mantenimiento, a cambio de ocupar m&aacute;s superficie en el cuarto el&eacute;ctrico.</li>
-          <li><strong>Aislada en gas (GIS).</strong> Las partes activas van en un tanque sellado con
-              hexafluoruro de azufre (SF<sub>6</sub>) u otro gas aislante. Es mucho m&aacute;s compacta e
-              inmune a polvo, humedad y salinidad, por eso se usa en plataformas, zonas costeras, minas y
-              cuartos con poco espacio. Cuesta m&aacute;s, exige monitorear la presi&oacute;n del gas y un
-              manejo controlado del SF<sub>6</sub>, y una falla interna normalmente se repara en f&aacute;brica.</li>
-          <li><strong>H&iacute;brida o compacta.</strong> Combina partes aisladas en gas (t&iacute;picamente
-              barras o interruptor) con el resto en aire. Ocupa menos que una AIS sin llegar al costo de
-              una GIS completa.</li>
-        </ul>
+      <h3 class="mt-h3"><span class="mt-h3__n">2</span> Medio aislante: aire, gas o h&iacute;brida</h3>
+      <div class="mt-medios">
+        <article class="mt-medio">
+          <h4 class="mt-medio__name">Aislada en aire (AIS)</h4>
+          <p class="mt-medio__sub">Aire a presi&oacute;n atmosf&eacute;rica; interruptor normalmente de vac&iacute;o.</p>
+          <div class="mt-foot" aria-hidden="true"><span style="width:100%"></span></div>
+          <p class="mt-foot__lbl">Superficie en cuarto el&eacute;ctrico</p>
+          <ul class="mt-rate"><li><span>Costo inicial</span><span class="mt-dots" aria-label="1 de 3"><i class="on"></i><i class=""></i><i class=""></i></span></li><li><span>Tolerancia a polvo, humedad y salinidad</span><span class="mt-dots" aria-label="1 de 3"><i class="on"></i><i class=""></i><i class=""></i></span></li><li><span>Acceso para mantenimiento en sitio</span><span class="mt-dots" aria-label="3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></li></ul>
+          <p class="mt-medio__uso"><strong>La m&aacute;s com&uacute;n en industria.</strong> Sencilla y con componentes accesibles, a cambio de m&aacute;s superficie.</p>
+        </article>
+        <article class="mt-medio">
+          <h4 class="mt-medio__name">H&iacute;brida o compacta</h4>
+          <p class="mt-medio__sub">Barras o interruptor en gas; el resto en aire.</p>
+          <div class="mt-foot" aria-hidden="true"><span style="width:70%"></span></div>
+          <p class="mt-foot__lbl">Superficie en cuarto el&eacute;ctrico</p>
+          <ul class="mt-rate"><li><span>Costo inicial</span><span class="mt-dots" aria-label="2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></span></li><li><span>Tolerancia a polvo, humedad y salinidad</span><span class="mt-dots" aria-label="2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></span></li><li><span>Acceso para mantenimiento en sitio</span><span class="mt-dots" aria-label="2 de 3"><i class="on"></i><i class="on"></i><i class=""></i></span></li></ul>
+          <p class="mt-medio__uso"><strong>Punto medio.</strong> Ocupa menos que una AIS sin llegar al costo de una GIS completa.</p>
+        </article>
+        <article class="mt-medio">
+          <h4 class="mt-medio__name">Aislada en gas (GIS)</h4>
+          <p class="mt-medio__sub">Partes activas en tanque sellado con SF<sub>6</sub> u otro gas.</p>
+          <div class="mt-foot" aria-hidden="true"><span style="width:42%"></span></div>
+          <p class="mt-foot__lbl">Superficie en cuarto el&eacute;ctrico</p>
+          <ul class="mt-rate"><li><span>Costo inicial</span><span class="mt-dots" aria-label="3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></li><li><span>Tolerancia a polvo, humedad y salinidad</span><span class="mt-dots" aria-label="3 de 3"><i class="on"></i><i class="on"></i><i class="on"></i></span></li><li><span>Acceso para mantenimiento en sitio</span><span class="mt-dots" aria-label="1 de 3"><i class="on"></i><i class=""></i><i class=""></i></span></li></ul>
+          <p class="mt-medio__uso"><strong>Plataformas, costa, minas y cuartos reducidos.</strong> Exige monitorear la presi&oacute;n del gas; una falla interna se repara en f&aacute;brica.</p>
+        </article>
       </div>
+      <p class="mt-note">Comparaci&oacute;n relativa entre las tres opciones, no medida de un fabricante en particular.</p>
     </div>
   </section>
 
@@ -368,45 +562,71 @@
       <p class="sec-lead">Lo que se especifica en cada secci&oacute;n depende de su funci&oacute;n:
          acometida, enlace, alimentador, protecci&oacute;n de transformador o medici&oacute;n.</p>
 
-      <div class="notes-panel">
-        <div class="notes-panel__head">
-          <span class="notes-panel__tag">Componentes</span>
-          <h3 class="notes-panel__title">La aparamenta de una secci&oacute;n</h3>
-        </div>
-        <ul class="note-list">
-          <li><strong>Interruptor de potencia.</strong> Abre y cierra el circuito con carga e interrumpe
-              sobrecorrientes y cortocircuitos. En celdas actuales es de vac&iacute;o o de SF<sub>6</sub>,
-              fijo o extra&iacute;ble.</li>
-          <li><strong>Seccionadores y cuchilla de puesta a tierra.</strong> A&iacute;slan una parte del
-              sistema y la aterrizan para trabajar en ella con seguridad. No interrumpen corriente de falla.</li>
-          <li><strong>Fusibles limitadores.</strong> Protegen contra sobrecorriente, sobre todo en
-              derivaciones a transformadores de distribuci&oacute;n y en celdas de seccionamiento.</li>
-          <li><strong>Relevadores de protecci&oacute;n.</strong> Miden corriente y tensi&oacute;n y ordenan el
-              disparo del interruptor: sobrecorriente de fase y de tierra, diferencial, bajo y sobre voltaje.
-              Su ajuste sale del estudio de coordinaci&oacute;n de protecciones.</li>
-          <li><strong>Transformadores de instrumento (TC y TP).</strong> Reducen corriente y tensi&oacute;n a
-              valores que pueden leer los relevadores y los medidores.</li>
-          <li><strong>Barras, enclavamientos y compartimento de control.</strong> Las barras distribuyen la
-              energ&iacute;a entre secciones; los enclavamientos mec&aacute;nicos y el&eacute;ctricos impiden
-              maniobras en secuencia incorrecta.</li>
-        </ul>
+      <h3 class="mt-h3">La aparamenta de una secci&oacute;n alimentadora</h3>
+      <div class="mt-uni">
+        <figure class="mt-figcard mt-figcard--uni">
+          <svg class="mt-fig mt-fig--uni" viewBox="0 0 360 430" role="img" aria-labelledby="figUniT">
+          <title id="figUniT">Diagrama unifilar de una secci&oacute;n alimentadora con la aparamenta numerada</title>
+          <path class="d-busline" d="M30 40h300"/>
+          <text class="d-sub" x="330" y="30" text-anchor="end">barras MT</text>
+          <path class="d-line" d="M200 40v40M200 115v15"/>
+          <path class="d-blade" d="M200 115l20-32"/>
+          <circle class="d-dot" cx="200" cy="80" r="3"/><circle class="d-dot" cx="200" cy="115" r="3"/>
+          <rect class="d-cb" x="184" y="130" width="32" height="32"/>
+          <path class="d-line" d="M200 162v28M200 210v40"/>
+          <circle class="d-ct" cx="200" cy="200" r="10"/>
+          <path class="d-line" d="M200 250h50v18"/>
+          <path class="d-blade" d="M250 300l14-26"/><circle class="d-dot" cx="250" cy="268" r="3"/>
+          <path class="d-line" d="M250 300v10M238 310h24M242 316h16M246 322h8"/>
+          <path class="d-interlock" d="M222 92h54v176h-12"/>
+          <text class="d-sub" x="282" y="185" transform="rotate(90 282 185)">enclavamiento</text>
+          <path class="d-line" d="M200 250v90"/>
+          <path class="d-term" d="M190 340h20l-10 14z"/>
+          <path class="d-line" d="M200 354v34"/>
+          <path class="d-arrow" d="M192 380l8 10 8-10"/>
+          <text class="d-sub" x="200" y="412">a transformador, CCM o motor MT</text>
+          <path class="d-line" d="M80 40v20M80 92v12"/>
+          <rect class="d-fuse" x="71" y="60" width="18" height="32" rx="2"/>
+          <circle class="d-ct" cx="80" cy="114" r="10"/><circle class="d-ct" cx="80" cy="128" r="10"/>
+          <rect class="d-relay" x="28" y="190" width="104" height="44" rx="4"/>
+          <text class="d-lbl" x="80" y="210">Relevador</text>
+          <text class="d-sub" x="80" y="225">50/51 &middot; 87 &middot; 27/59</text>
+          <path class="d-signal" d="M80 138v52M190 200h-58M132 196c25 0 30-50 52-50"/>
+          <text class="d-sub" x="140" y="150">disparo</text>
+          <g class="d-badge"><circle cx="240" cy="146" r="10"/><text x="240" y="150">1</text></g><g class="d-badge"><circle cx="175" cy="98" r="10"/><text x="175" y="102">2</text></g><g class="d-badge"><circle cx="52" cy="76" r="10"/><text x="52" y="80">3</text></g><g class="d-badge"><circle cx="28" cy="250" r="10"/><text x="28" y="254">4</text></g><g class="d-badge"><circle cx="228" cy="206" r="10"/><text x="228" y="210">5</text></g><g class="d-badge"><circle cx="52" cy="121" r="10"/><text x="52" y="125">5</text></g><g class="d-badge"><circle cx="22" cy="58" r="10"/><text x="22" y="62">6</text></g>
+        </svg>
+          <figcaption>Unifilar simplificado. Los n&uacute;meros corresponden a la lista.</figcaption>
+        </figure>
+        <ol class="mt-comp">
+          <li><span class="mt-num">1</span><div><strong>Interruptor de potencia.</strong> Abre y cierra con carga e interrumpe sobrecorrientes y cortocircuitos. De vac&iacute;o o SF<sub>6</sub>, fijo o extra&iacute;ble.</div></li>
+          <li><span class="mt-num">2</span><div><strong>Seccionador y cuchilla de tierra.</strong> A&iacute;slan una parte del sistema y la aterrizan para trabajar con seguridad. No interrumpen corriente de falla.</div></li>
+          <li><span class="mt-num">3</span><div><strong>Fusibles limitadores.</strong> Protegen contra sobrecorriente, sobre todo en derivaciones a transformadores y en celdas de seccionamiento.</div></li>
+          <li><span class="mt-num">4</span><div><strong>Relevadores de protecci&oacute;n.</strong> Miden corriente y tensi&oacute;n y ordenan el disparo: sobrecorriente de fase y tierra, diferencial, bajo y sobre voltaje. Su ajuste sale del estudio de coordinaci&oacute;n.</div></li>
+          <li><span class="mt-num">5</span><div><strong>Transformadores de instrumento (TC y TP).</strong> Reducen corriente y tensi&oacute;n a valores que leen relevadores y medidores.</div></li>
+          <li><span class="mt-num">6</span><div><strong>Barras, enclavamientos y control.</strong> Las barras reparten la energ&iacute;a entre secciones; los enclavamientos impiden maniobras en secuencia incorrecta.</div></li>
+        </ol>
       </div>
 
-      <div class="notes-panel" style="margin-top:1.5rem">
-        <div class="notes-panel__head">
-          <span class="notes-panel__tag">Aplicaciones</span>
-          <h3 class="notes-panel__title">D&oacute;nde se instalan</h3>
-        </div>
-        <ul class="note-list">
-          <li><strong>Acometida y subestaci&oacute;n principal.</strong> Reciben la energ&iacute;a de la red
-              de CFE &mdash;en M&eacute;xico, habitualmente en 13.8, 23 o 34.5 kV&mdash; y la reparten dentro de la planta.</li>
-          <li><strong>Distribuci&oacute;n industrial.</strong> Alimentan transformadores, centros de control
-              de motores y motores de media tensi&oacute;n en miner&iacute;a, petr&oacute;leo y gas, alimentos
-              y bebidas e ingenios.</li>
-          <li><strong>Generaci&oacute;n e interconexi&oacute;n.</strong> Celdas de sincron&iacute;a para
-              cogeneraci&oacute;n y plantas de emergencia, e interconexi&oacute;n de generaci&oacute;n solar,
-              e&oacute;lica y almacenamiento con bater&iacute;as.</li>
-        </ul>
+      <h3 class="mt-h3">D&oacute;nde se instalan</h3>
+      <div class="mt-apps">
+        <article class="mt-app">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L7 22M12 2l5 20M8.5 9h7M6.8 16h10.4"/></svg></span>
+          <h4 class="mt-card__title">Acometida y subestaci&oacute;n principal</h4>
+          <p class="mt-card__desc">Reciben la energ&iacute;a de la red de CFE y la reparten dentro de la planta.</p>
+          <div class="mt-chips"><span>13.8 kV</span><span>23 kV</span><span>34.5 kV</span></div>
+        </article>
+        <article class="mt-app">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4v-4l6 4V6l6 3v12z"/></svg></span>
+          <h4 class="mt-card__title">Distribuci&oacute;n industrial</h4>
+          <p class="mt-card__desc">Alimentan transformadores, CCM y motores de media tensi&oacute;n.</p>
+          <div class="mt-chips"><span>Miner&iacute;a</span><span>Oil &amp; Gas</span><span>Alimentos y bebidas</span><span>Ingenios</span></div>
+        </article>
+        <article class="mt-app">
+          <span class="mt-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+          <h4 class="mt-card__title">Generaci&oacute;n e interconexi&oacute;n</h4>
+          <p class="mt-card__desc">Celdas de sincron&iacute;a e interconexi&oacute;n de generaci&oacute;n propia.</p>
+          <div class="mt-chips"><span>Cogeneraci&oacute;n</span><span>Emergencia</span><span>Solar &middot; e&oacute;lica</span><span>BESS</span></div>
+        </article>
       </div>
     </div>
   </section>
@@ -419,6 +639,7 @@
          consta de ese proyecto.</p>
       <div class="ref-grid">
         <div class="ref-card">
+          <span class="ref-card__sector">Rehabilitaci&oacute;n &middot; metal-clad</span>
           <p class="ref-card__cliente">CFE Transmisi&oacute;n</p>
           <p class="ref-card__lugar">Jalisco</p>
           <p class="ref-card__desc">Suministro e instalaci&oacute;n de refacciones para la rehabilitaci&oacute;n
@@ -426,6 +647,7 @@
              <strong>metal-clad</strong>.</p>
         </div>
         <div class="ref-card">
+          <span class="ref-card__sector">Rehabilitaci&oacute;n &middot; metal-clad</span>
           <p class="ref-card__cliente">CFE Transmisi&oacute;n</p>
           <p class="ref-card__lugar">Jalisco</p>
           <p class="ref-card__desc">Suministro e instalaci&oacute;n de refacciones para la rehabilitaci&oacute;n
@@ -433,6 +655,7 @@
              <strong>metal-clad</strong>.</p>
         </div>
         <div class="ref-card">
+          <span class="ref-card__sector">Celda de sincron&iacute;a &middot; cogeneraci&oacute;n</span>
           <p class="ref-card__cliente">Ingenio Adolfo L&oacute;pez Mateos</p>
           <p class="ref-card__lugar">Oaxaca</p>
           <p class="ref-card__desc">Ingenier&iacute;a, suministro y puesta en marcha de la
@@ -469,22 +692,44 @@
     <div class="container">
       <span class="sec-label">C&oacute;mo trabajamos</span>
       <h2 class="sec-h2" id="procTitle">De la solicitud a la celda energizada</h2>
-      <div class="notes-panel">
-        <ul class="note-list">
-          <li><strong>1 &middot; Levantamiento.</strong> Diagrama unifilar, estudio de cortocircuito
-              disponible y condiciones de sitio.</li>
-          <li><strong>2 &middot; Especificaci&oacute;n.</strong> Hoja de datos de la celda y de su
-              aparamenta, con el esquema de protecciones coordinado.</li>
-          <li><strong>3 &middot; Suministro.</strong> Cronograma de f&aacute;brica, seguimiento y
-              log&iacute;stica hasta sitio.</li>
-          <li><strong>4 &middot; Montaje.</strong> Anclaje, acoplamiento, conexionado de potencia y
-              control, aterrizamiento.</li>
-          <li><strong>5 &middot; Pruebas.</strong> Protocolo de aceptaci&oacute;n en sitio, con
-              resultados documentados.</li>
-          <li><strong>6 &middot; Puesta en servicio.</strong> Energizaci&oacute;n asistida y entrega del
-              expediente t&eacute;cnico.</li>
-        </ul>
-      </div>
+      <ol class="mt-steps">
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>
+          <span class="mt-step__n">Paso 1</span>
+          <h3 class="mt-step__t">Levantamiento</h3>
+          <p class="mt-step__d">Diagrama unifilar, estudio de cortocircuito disponible y condiciones de sitio.</p>
+        </li>
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></span>
+          <span class="mt-step__n">Paso 2</span>
+          <h3 class="mt-step__t">Especificaci&oacute;n</h3>
+          <p class="mt-step__d">Hoja de datos de la celda y su aparamenta, con protecciones coordinadas.</p>
+        </li>
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span>
+          <span class="mt-step__n">Paso 3</span>
+          <h3 class="mt-step__t">Suministro</h3>
+          <p class="mt-step__d">Cronograma de f&aacute;brica, seguimiento y log&iacute;stica hasta sitio.</p>
+        </li>
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span>
+          <span class="mt-step__n">Paso 4</span>
+          <h3 class="mt-step__t">Montaje</h3>
+          <p class="mt-step__d">Anclaje, acoplamiento, conexionado de potencia y control, aterrizamiento.</p>
+        </li>
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="mt-step__n">Paso 5</span>
+          <h3 class="mt-step__t">Pruebas</h3>
+          <p class="mt-step__d">Protocolo de aceptaci&oacute;n en sitio, con resultados documentados.</p>
+        </li>
+        <li class="mt-step">
+          <span class="mt-step__dot"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v8"/><path d="M6.3 7.3a8 8 0 1 0 11.4 0"/></svg></span>
+          <span class="mt-step__n">Paso 6</span>
+          <h3 class="mt-step__t">Puesta en servicio</h3>
+          <p class="mt-step__d">Energizaci&oacute;n asistida y entrega del expediente t&eacute;cnico.</p>
+        </li>
+      </ol>
     </div>
   </section>
 

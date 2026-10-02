@@ -151,6 +151,28 @@
     .proj-card__body{padding:20px 18px}
     .proj-card__icon{font-size:1.6rem;margin-bottom:10px}
     .proj-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .eval-logo{height:84px;display:flex;align-items:center;margin-bottom:14px}
+    .eval-logo img{max-height:84px;max-width:200px;width:auto;height:auto;object-fit:contain;display:block}
+    .ods-logo{margin-top:22px;display:inline-block;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 22px}
+    .ods-logo img{width:clamp(220px,32vw,300px);height:auto;display:block}
+    .ods-icons{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-wrap:wrap;gap:12px}
+    .ods-icons img{width:104px;height:104px;display:block;border-radius:4px}
+    .ods-sub,.ddhh-sub{font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#334155;margin:30px 0 12px}
+    .ods-dims{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .ods-dim{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+    .ods-dim__title{font-size:.92rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .ods-dim__text{font-size:.84rem;color:#4b5563;line-height:1.5;margin:0}
+    .ddhh-chips{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    .ddhh-chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.82rem;color:#334155}
+    .ddhh-list{margin:0;padding-left:1.4em;columns:3;column-gap:28px;font-size:.88rem;color:#334155;line-height:1.7}
+    .ddhh-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+    .ddhh-col{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 20px 8px;border-top:6px solid var(--vms-green-500)}
+    .ddhh-col--next{border-top-color:var(--concept-primary)}
+    .ddhh-col__title{font-weight:800;color:#0f172a;margin:0 0 10px}
+    .ddhh-col ul{margin:0;padding-left:1.1em;font-size:.88rem;color:#4b5563;line-height:1.55}
+    .ddhh-col li{margin-bottom:10px}
+    @media (max-width:900px){.ods-dims{grid-template-columns:1fr 1fr}.ddhh-list{columns:2}.ddhh-cols{grid-template-columns:1fr}}
+    @media (max-width:560px){.ods-dims{grid-template-columns:1fr}.ddhh-list{columns:1}.ods-icons img{width:84px;height:84px}}
     .proj-card__text{font-size:.88rem;color:#4b5563;line-height:1.5;margin:0}
 
     /* ===== INFORME SECTION ===== */
@@ -530,7 +552,7 @@
         </div>
         <div class="metric-item">
           <span class="metric-val">14</span>
-          <span class="metric-label">ODS a los que<br>contribuimos (35 indicadores)</span>
+          <span class="metric-label">ODS con metas<br>aplicables a VMS</span>
         </div>
       </div>
     </div>
@@ -634,7 +656,7 @@
   <!-- ===== EVALUACIONES Y DISTINTIVOS (QHSE+, propuesta 3.7, seccion 3) =====
        Integrado 01-oct-2026: EcoVadis + Pro-Integridad Jalisco.
        Pacto Global Red Mexico: estado "Active" confirmado por Hugo el 01-oct-2026; publicado.
-       CDP Cambio climatico D (2023) / B (2024) / B (2025): confirmado por QHSE+ el 01-oct-2026; publicado.
+       CDP Cambio climatico D (2023) / B (2024): confirmado por QHSE+ el 01-oct-2026. 2025: en evaluacion (Hugo, 02-oct-2026).
        Pacto Global: ID de participante 215039 confirmado por QHSE+. -->
   <section class="section" id="evaluaciones" aria-labelledby="evalTitle">
     <div class="container">
@@ -645,15 +667,15 @@
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--verde"></div>
           <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="5.4"/><path d="m8.4 13.6-1.6 7 5.2-2.8 5.2 2.8-1.6-7"/></svg></div>
+            <div class="eval-logo"><picture><source srcset="assets/img/ecovadis_committed_sep2026.webp" type="image/webp"><img src="assets/img/ecovadis_committed_sep2026.png" alt="Medalla EcoVadis Committed — Sustainability Rating" width="240" height="240" loading="lazy" decoding="async"></picture></div>
             <p class="proj-card__title">EcoVadis</p>
-            <p class="proj-card__text">En 2025 VMS Energy obtuvo el distintivo <strong>Committed</strong> en la evaluación de sostenibilidad de EcoVadis, conforme a su metodología. La evaluación considera cuatro áreas: medio ambiente, trabajo y derechos humanos, ética y compras sostenibles.</p>
+            <p class="proj-card__text">En 2026 VMS Energy obtuvo el distintivo <strong>Committed</strong> en la evaluación de sostenibilidad de EcoVadis, conforme a su metodología. La evaluación considera cuatro áreas: medio ambiente, trabajo y derechos humanos, ética y compras sostenibles.</p>
           </div>
         </div>
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--efic"></div>
           <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.6 4 6v5.4c0 4.6 3.4 8.4 8 9.9 4.6-1.5 8-5.3 8-9.9V6l-8-3.4Z"/><path d="m8.8 12.2 2.3 2.3 4.3-4.5"/></svg></div>
+            <div class="eval-logo"><picture><source srcset="assets/img/pro_integridad_empresas.webp" type="image/webp"><img src="assets/img/pro_integridad_empresas.png" alt="Distintivo Pro-Integridad Empresas" width="205" height="113" loading="lazy" decoding="async"></picture></div>
             <p class="proj-card__title">Pro-Integridad Jalisco</p>
             <p class="proj-card__text">Contamos con el distintivo <strong>Pro-Integridad Jalisco</strong>, que acredita una cultura organizacional basada en la ética, la integridad, la transparencia y las buenas prácticas empresariales, y fortalece la confianza de colaboradores, clientes y grupos de interés.</p>
           </div>
@@ -661,7 +683,7 @@
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--solar"></div>
           <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg></div>
+            <div class="eval-logo"><picture><source srcset="assets/img/pacto_global_red_mexico.webp" type="image/webp"><img src="assets/img/pacto_global_red_mexico.png" alt="UN Global Compact — Pacto Global Red México" width="440" height="160" loading="lazy" decoding="async"></picture></div>
             <p class="proj-card__title">Pacto Global de las Naciones Unidas · Red México</p>
             <span class="iso-badge" style="margin-bottom:10px">Participante ID 215039</span>
             <p class="proj-card__text">Nuestra adhesión a Pacto Global Red México reafirma nuestro compromiso con sus principios universales en derechos humanos, trabajo, medio ambiente y anticorrupción. <a href="https://unglobalcompact.org/what-is-gc/participants/215039-VMS-ENERGY-DE-MEXICO" target="_blank" rel="noopener">Ver perfil de participante</a></p>
@@ -670,22 +692,38 @@
         <div class="proj-card">
           <div class="proj-card__head proj-card__head--verde"></div>
           <div class="proj-card__body">
-            <div class="proj-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+            <div class="eval-logo"><picture><source srcset="assets/img/cdp_cambio_climatico.webp" type="image/webp"><img src="assets/img/cdp_cambio_climatico.png" alt="CDP — calificaciones de cambio climático" width="163" height="149" loading="lazy" decoding="async"></picture></div>
             <p class="proj-card__title">CDP · Cambio climático</p>
-            <p class="proj-card__text">Divulgamos nuestro desempeño ambiental ante <strong>CDP</strong>, la plataforma global de divulgación ambiental. En el cuestionario de <strong>cambio climático</strong>, nuestra calificación pasó de <strong>D</strong> en 2023 a <strong>B</strong> en 2024, y se mantuvo en <strong>B</strong> en 2025.</p>
+            <p class="proj-card__text">Divulgamos nuestro desempeño ambiental ante <strong>CDP</strong>, la plataforma global de divulgación ambiental. En el cuestionario de <strong>cambio climático</strong>, nuestra calificación pasó de <strong>D</strong> en 2023 a <strong>B</strong> en 2024. La calificación de 2025 está en proceso de evaluación.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ODS (propuesta 3.7, seccion 5). Falta la lista de los 14 ODS para
-       poner sus iconos oficiales; hasta entonces, solo texto. ===== -->
+  <!-- ===== ODS (propuesta 3.7, seccion 5). Fuente: QHSE+, "Alineación de VMS ENERGY y los ODS",
+       04-sep-2026 (Isis Gómez). El estudio identifica 14 ODS con metas aplicables y prioriza 5;
+       no lista los otros 9 ni respalda la cifra de "35 indicadores" (retirada 02-oct-2026). ===== -->
   <section class="section section--alt" id="ods" aria-labelledby="odsTitle">
     <div class="container">
       <span class="section-label">Agenda 2030</span>
       <h2 id="odsTitle">Objetivos de Desarrollo Sostenible</h2>
-      <p class="lead">Alineamos nuestras acciones con los Objetivos de Desarrollo Sostenible (ODS) de las Naciones Unidas, enfocándonos en aquellos donde podemos generar un impacto más significativo por la naturaleza de nuestra operación y de nuestros servicios. Hoy contribuimos con <strong>35 indicadores de 14 Objetivos</strong>, y trabajamos para vincular cada programa interno con los ODS que le corresponden.</p>
+      <p class="lead">Evaluamos las metas e indicadores oficiales de los Objetivos de Desarrollo Sostenible (ODS) para identificar dónde podemos generar una contribución directa y medible a través de nuestra operación, nuestros servicios y nuestras prácticas de gestión. Identificamos <strong>14 ODS con metas aplicables</strong> a VMS Energy; cinco concentran nuestro mayor potencial de contribución.</p>
+      <ul class="ods-icons" aria-label="ODS con mayor relevancia estratégica para VMS Energy">
+        <li><picture><source srcset="assets/img/ods_07_energia_asequible.webp" type="image/webp"><img src="assets/img/ods_07_energia_asequible.png" alt="ODS 7: Energía asequible y no contaminante" width="146" height="146" loading="lazy" decoding="async"></picture></li>
+        <li><picture><source srcset="assets/img/ods_08_trabajo_decente.webp" type="image/webp"><img src="assets/img/ods_08_trabajo_decente.png" alt="ODS 8: Trabajo decente y crecimiento económico" width="146" height="146" loading="lazy" decoding="async"></picture></li>
+        <li><picture><source srcset="assets/img/ods_12_produccion_consumo_responsables.webp" type="image/webp"><img src="assets/img/ods_12_produccion_consumo_responsables.png" alt="ODS 12: Producción y consumo responsables" width="146" height="146" loading="lazy" decoding="async"></picture></li>
+        <li><picture><source srcset="assets/img/ods_13_accion_por_el_clima.webp" type="image/webp"><img src="assets/img/ods_13_accion_por_el_clima.png" alt="ODS 13: Acción por el clima" width="146" height="146" loading="lazy" decoding="async"></picture></li>
+        <li><picture><source srcset="assets/img/ods_16_paz_justicia_instituciones.webp" type="image/webp"><img src="assets/img/ods_16_paz_justicia_instituciones.png" alt="ODS 16: Paz, justicia e instituciones sólidas" width="146" height="146" loading="lazy" decoding="async"></picture></li>
+      </ul>
+      <p class="ods-sub">Nuestra contribución se concentra en cuatro dimensiones:</p>
+      <div class="ods-dims">
+        <div class="ods-dim"><p class="ods-dim__title">Desarrollo y bienestar de las personas</p><p class="ods-dim__text">Salud y bienestar integral, capacitación continua, igualdad de género, diversidad e inclusión, y condiciones laborales justas.</p></div>
+        <div class="ods-dim"><p class="ods-dim__title">Desempeño ambiental y transición energética</p><p class="ods-dim__text">Energías renovables, medición y reducción de emisiones de GEI, eficiencia energética, economía circular y gestión de residuos.</p></div>
+        <div class="ods-dim"><p class="ods-dim__title">Gobernanza, ética e integridad</p><p class="ods-dim__text">Prevención de la corrupción, atención de denuncias, derechos humanos, prevención del acoso laboral y cumplimiento normativo.</p></div>
+        <div class="ods-dim"><p class="ods-dim__title">Innovación y digitalización</p><p class="ods-dim__text">Competencias digitales del personal, modernización de procesos y soluciones energéticas más sostenibles.</p></div>
+      </div>
+      <div class="ods-logo"><picture><source srcset="assets/img/ods_decada_de_accion.webp" type="image/webp"><img src="assets/img/ods_decada_de_accion.png" alt="Objetivos de Desarrollo Sostenible — Década de Acción" width="520" height="263" loading="lazy" decoding="async"></picture></div>
     </div>
   </section>
 
@@ -853,6 +891,67 @@
         <a href="politica-interna_antilavado.html">Política Interna Antilavado</a>
         <a href="aviso-privacidad.html">Aviso de Privacidad</a>
         <a href="buzon-sugerencias.html">Buzón de sugerencias y denuncias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DERECHOS HUMANOS. Fuente: QHSE+, "Nivel de alineación de VMS Energy con los Derechos Humanos".
+       Alcance aprobado por Hugo 02-oct-2026: marcos, 16 derechos, fortalezas y líneas de mejora.
+       Sin calificación numérica (línea base interna 3.68) ni nivel por derecho. ===== -->
+  <section class="section section--alt" id="derechos-humanos" aria-labelledby="ddhhTitle">
+    <div class="container">
+      <span class="section-label">Derechos humanos</span>
+      <h2 id="ddhhTitle">Evaluamos nuestra alineación con los derechos humanos</h2>
+      <p class="lead">Realizamos un diagnóstico de nuestras actividades, operaciones, relaciones comerciales y grupos de interés para identificar los derechos humanos con los que nos relacionamos, los mecanismos con los que prevenimos impactos adversos y las áreas que debemos fortalecer. El resultado es nuestra línea base para darle seguimiento año con año.</p>
+      <p class="ddhh-sub">Marcos de referencia</p>
+      <ul class="ddhh-chips">
+          <li>Principios Rectores de la ONU sobre Empresas y Derechos Humanos</li>
+          <li>Declaración Universal de Derechos Humanos</li>
+          <li>Principios y Derechos Fundamentales en el Trabajo (OIT)</li>
+          <li>Pacto Mundial de la ONU (Principios 1 a 6)</li>
+          <li>GRI Standards</li>
+          <li>Legislación mexicana aplicable</li>
+      </ul>
+      <p class="ddhh-sub">16 derechos humanos y temas evaluados</p>
+      <ol class="ddhh-list">
+          <li>Igualdad y no discriminación</li>
+          <li>Trabajo digno</li>
+          <li>Libertad de asociación y negociación colectiva</li>
+          <li>Prohibición del trabajo infantil</li>
+          <li>Prohibición del trabajo forzoso</li>
+          <li>Seguridad y salud en el trabajo</li>
+          <li>Privacidad y protección de datos</li>
+          <li>Libertad de expresión y participación</li>
+          <li>Derecho a un ambiente sano</li>
+          <li>Derecho al agua</li>
+          <li>Derechos de las comunidades</li>
+          <li>Derechos de pueblos indígenas</li>
+          <li>Trabajo seguro para contratistas</li>
+          <li>Derechos laborales en la cadena de suministro</li>
+          <li>Integridad y dignidad</li>
+          <li>Derecho a la reparación</li>
+      </ol>
+      <div class="ddhh-cols">
+        <div class="ddhh-col ddhh-col--ok">
+          <p class="ddhh-col__title">Donde nuestros mecanismos están más consolidados</p>
+          <ul>
+          <li><strong>Seguridad y salud en el trabajo.</strong> Sistema de Gestión Integrado, ISO 45001 y procedimientos de seguridad.</li>
+          <li><strong>Prohibición del trabajo infantil.</strong> Código de Ética y Conducta y controles de contratación conforme a la legislación laboral.</li>
+          <li><strong>Derecho a un ambiente sano.</strong> ISO 14001, ISO 50001 y matriz de impactos ambientales.</li>
+          <li><strong>Trabajo seguro para contratistas.</strong> ISO 45001 y procedimientos de seguridad aplicados también a personal de terceros.</li>
+          <li><strong>Integridad y dignidad.</strong> Código de Conducta y mecanismos internos contra el acoso, el hostigamiento y la violencia laboral.</li>
+          </ul>
+        </div>
+        <div class="ddhh-col ddhh-col--next">
+          <p class="ddhh-col__title">En qué estamos trabajando</p>
+          <ul>
+          <li><strong>Indicadores.</strong> Pasar de mecanismos existentes a indicadores trazables en igualdad y no discriminación, trabajo digno, privacidad y protección de datos, y reparación.</li>
+          <li><strong>Compromisos formales.</strong> Formalizar de manera expresa nuestro compromiso de respetar la libertad de asociación y la negociación colectiva.</li>
+          <li><strong>Cadena de suministro.</strong> Evaluar y clasificar proveedores por nivel de riesgo, con criterios de derechos humanos, seguimiento y mecanismos de remediación.</li>
+          <li><strong>Comunidades.</strong> Formalizar la evaluación de impactos en comunidades cercanas, agua y zonas con presencia de pueblos indígenas.</li>
+          <li><strong>Mecanismos de reparación.</strong> Medir el funcionamiento del canal de denuncia: casos recibidos, atendidos, tiempos y medidas adoptadas, con confidencialidad.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
