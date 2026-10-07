@@ -32,3 +32,20 @@ variable "ses_dkim_signing_hosted_zone" {
   type        = string
   default     = "dkim.amazonses.com"
 }
+variable "forms_sender_email" {
+  description = "Direccion verificada utilizada por SES como remitente."
+  type        = string
+  default     = "notificaciones@forms.vmsenergy.com"
+}
+
+variable "contact_recipient" {
+  description = "Destinatario de contacto, cotizaciones y carreras."
+  type        = string
+  default     = "contacto@vmsenergy.com"
+}
+
+variable "suggestions_recipient" {
+  description = "Buzon principal de quejas y sugerencias."
+  type        = string
+  default     = "quejasysugerencias@vmsenergy.com"
+}
