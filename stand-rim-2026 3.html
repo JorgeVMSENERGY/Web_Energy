@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -273,6 +274,9 @@
     color:var(--white);padding:11px 13px;font-family:'Inter',sans-serif;font-size:14px;
   }
   .form input:focus,.form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(227,169,43,.18)}
+  .form .privacy-consent{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:0;text-transform:none;line-height:1.5}
+  .form .privacy-consent input{width:auto;margin-right:7px;vertical-align:middle}
+  .form .privacy-consent a{color:var(--gold)}
   .form select option{background:var(--navy)}
   .submit{
     width:100%;background:var(--gold);color:var(--navy-deep);border:none;border-radius:9px;
@@ -630,13 +634,14 @@
       <h2>Antes de irte, <span class="amber">agendemos una visita técnica.</span></h2>
       <p>VMS Energy puede identificar dónde tu operación está perdiendo energía, disponibilidad o eficiencia. Déjanos tus datos y recibe el catálogo de minería, las fichas del stand y una evaluación EPC inicial.</p>
     </div>
-    <div class="form" id="leadForm">
+    <form class="form" id="leadForm" novalidate data-vms-form-type="stand_rim" data-vms-feedback="#formErr" data-vms-success="#formOk" data-vms-success-class="show" data-vms-hide-on-success="#formFields" data-vms-success-message="Recibimos tus datos. El equipo de VMS Energy se pondr&aacute; en contacto contigo.">
       <div class="form-fields" id="formFields">
-        <div class="row"><label for="f-name">Nombre</label><input id="f-name" type="text" placeholder="Tu nombre"></div>
-        <div class="row"><label for="f-comp">Empresa</label><input id="f-comp" type="text" placeholder="Operación / compañía"></div>
-        <div class="row"><label for="f-mail">Correo</label><input id="f-mail" type="email" placeholder="nombre@empresa.com"></div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+        <div class="row"><label for="f-name">Nombre</label><input id="f-name" name="nombre" type="text" placeholder="Tu nombre" required></div>
+        <div class="row"><label for="f-comp">Empresa</label><input id="f-comp" name="empresa" type="text" placeholder="Operaci&oacute;n / compa&ntilde;&iacute;a"></div>
+        <div class="row"><label for="f-mail">Correo</label><input id="f-mail" name="correo" type="email" placeholder="nombre@empresa.com" required></div>
         <div class="row"><label for="f-int">Interés principal</label>
-          <select id="f-int">
+          <select id="f-int" name="interes">
             <option>Almacenamiento BESS</option>
             <option>Generación solar / híbrido</option>
             <option>Monitoreo predictivo (Centinela)</option>
@@ -644,14 +649,15 @@
             <option>Eficiencia energética ISO 50001</option>
           </select>
         </div>
-        <button class="submit" id="submitBtn">Agendar visita técnica</button>
+        <div class="row"><label class="privacy-consent"><input type="checkbox" name="privacidad" required> He le&iacute;do y acepto el <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label></div>
+        <button class="submit" id="submitBtn" type="submit">Agendar visita t&eacute;cnica</button>
         <p class="note-small" id="formErr" style="display:none;color:#e98b7d"></p>
       </div>
       <div class="ok" id="formOk">
         <div class="big">¡Gracias!</div>
         <p style="color:#bcc8e6;margin-top:8px">Recibimos tus datos. El equipo de VMS Energy se pondrá en contacto contigo.</p>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -1074,31 +1080,6 @@ BRANDS.forEach(b=>{
   d.innerHTML=`<div class="blogo">${b[3]||''}</div><div class="bname">${b[0]}</div><div class="brole">${b[1]}</div><div class="bwhat">${b[2]}</div>`;
   brandGrid.appendChild(d);
 });
-
-// lead form (prototipo) — Conectar este formulario al CRM / correo de VMS antes de publicar
-// === Envío del formulario de lead (Google Apps Script) ===
-// Pega abajo la URL del Web App de Apps Script (Deploy -> Web app, termina en /exec).
-// El correo destino (contacto@vmsenergy.com) se define DENTRO del script, no aquí.
-const FORM_ENDPOINT='https://script.google.com/macros/s/TU_ID_AQUI/exec';
-const submitBtn=document.getElementById('submitBtn');
-if(submitBtn){
-  submitBtn.addEventListener('click',async()=>{
-    const err=document.getElementById('formErr');
-    const val=id=>(document.getElementById(id).value||'').trim();
-    const nombre=val('f-name'), empresa=val('f-comp'), correo=val('f-mail'), interes=document.getElementById('f-int').value;
-    const showErr=m=>{err.textContent=m;err.style.display='block';};
-    if(!nombre||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)){showErr('Ingresa tu nombre y un correo válido.');return;}
-    err.style.display='none'; submitBtn.disabled=true; const lbl=submitBtn.textContent; submitBtn.textContent='Enviando…';
-    try{
-      await fetch(FORM_ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams({nombre,empresa,correo,interes})});
-      document.getElementById('formFields').style.display='none';
-      document.getElementById('formOk').classList.add('show');
-    }catch(e){
-      submitBtn.disabled=false; submitBtn.textContent=lbl;
-      showErr('No se pudo enviar. Intenta de nuevo o escríbenos a contacto@vmsenergy.com.');
-    }
-  });
-}
 
 try{document.querySelectorAll('img[data-logo]').forEach(function(im){var k=im.getAttribute('data-logo'); if(L[k])im.src=L[k];});}catch(e){}
 </script>
