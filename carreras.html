@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -396,10 +397,11 @@
         <form
           id="careersForm"
           class="form-card"
-          action="https://formsubmit.co/contacto@vmsenergy.com"
-          method="POST"
-          enctype="multipart/form-data"
           novalidate
+          data-vms-form-type="careers"
+          data-vms-feedback="#formFeedback"
+          data-vms-success="#formSuccess"
+          data-vms-success-message="Recibimos tu candidatura y tu CV correctamente."
         >
           <div class="form-grid">
             <div>
@@ -459,18 +461,8 @@
             </div>
           </div>
 
-          <!-- FormSubmit.co config -->
-          <input type="hidden" name="_subject" value="Nueva candidatura - Carreras VMS Energy">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_autoresponse" value="Hola, recibimos tu candidatura en VMS Energy. Nuestro equipo de Talento Humano la revisará y te contactaremos si tu perfil encaja con alguna vacante actual o futura. Gracias por tu interés. — Equipo VMS Energy">
-          <!-- TI 25-ago-2026: _next es la pagina a la que formsubmit.co devuelve al candidato
-     despues de postularse. Lleva '.html'. Si WordPress publica esta pagina como
-     /carreras/ hay que cambiar el valor, o el candidato aterriza en un 404 justo
-     despues de enviar su CV. No se adivino la URL: la define el permalink que elija TI. -->
-        <input type="hidden" name="_next" value="https://vmsenergy.com/carreras.html?enviado=1#postulacion">
           <!-- Honeypot anti-spam -->
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="form-actions">
                       <div class="form-consent">
@@ -756,33 +748,7 @@
       }
     }
 
-    // Validación cliente mínima antes de enviar a FormSubmit
-    var form = document.getElementById('careersForm');
-    var feedback = document.getElementById('formFeedback');
-    if(!form) return;
-    form.addEventListener('submit', function(e){
-      var req = Array.prototype.slice.call(form.querySelectorAll('[required]'));
-      var ok = true;
-      req.forEach(function(el){
-        var val = el.type === 'file' ? (el.files && el.files.length) : String(el.value || '').trim();
-        if(!val){ ok = false; el.style.borderColor = '#ef4444'; }
-        else { el.style.borderColor = ''; }
-      });
-      if(!ok){
-        e.preventDefault();
-        if(feedback) feedback.textContent = 'Completa los campos obligatorios y adjunta tu CV.';
-        return;
-      }
-      // Validar tamaño del CV (máx 5 MB)
-      var cv = document.getElementById('cCV');
-      if(cv && cv.files && cv.files[0] && cv.files[0].size > 5 * 1024 * 1024){
-        e.preventDefault();
-        if(feedback) feedback.textContent = 'El CV excede 5 MB. Por favor reduce el tamaño del archivo.';
-        return;
-      }
-      if(window.vmsPostulacion) vmsPostulacion(form.id);
-      if(feedback) feedback.textContent = 'Enviando…';
-    });
+    // El envio y la validacion se administran en vms-formularios.js.
   })();
   </script>
 </body>
