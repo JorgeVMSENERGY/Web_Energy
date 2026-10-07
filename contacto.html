@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -538,7 +539,12 @@
   <section class="contact-wrap" id="ctaForm" aria-labelledby="formTitle"><div class="container">
     <h2 id="formTitle" class="section-title">Solicita evaluaci&oacute;n de tu proyecto</h2>
     <p class="section-lead">Cuéntanos el alcance de tu proyecto y un especialista EPC de VMS Energy te contactará en menos de 24 horas hábiles.</p>
-        <form id="contactLeadForm" class="form-card" novalidate>
+        <form id="contactLeadForm" class="form-card" novalidate
+          data-vms-form-type="contact"
+          data-vms-feedback="#contactFeedback"
+          data-vms-required-checkbox="projectMode"
+          data-vms-success-message="Recibimos tu solicitud. Un especialista de VMS Energy te contactará pronto.">
+      <input type="text" name="website" hidden tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="form-grid">
         <div><label for="contactNombre">Nombre y apellido*</label><input class="input" id="contactNombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido*" required></div>
         <div><label for="contactEmpresa">Empresa*</label><input class="input" id="contactEmpresa" name="empresa" autocomplete="organization" placeholder="Empresa*" required></div>
@@ -724,7 +730,11 @@
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Cerrar formulario" data-close-modal="quickLeadModal">&times;</button>
     <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate>
+    <form class="quicklead-form" id="quickLeadForm" novalidate
+      data-vms-form-type="quick_lead"
+      data-vms-feedback="#quickLeadFeedback"
+      data-vms-success-message="Recibimos tu consulta. Un especialista te contactará pronto.">
+      <input type="text" name="website" hidden tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
       <input type="text" id="qlEmpresa" name="empresa" placeholder="Empresa" autocomplete="organization" required>
@@ -751,19 +761,7 @@
   if(trigger) trigger.addEventListener('click',openModal);
   Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
-  form.addEventListener('submit',function(e){
-    e.preventDefault(); feedback.textContent='';
-    var name=(document.getElementById('qlName').value||'').trim();
-    var email=(document.getElementById('qlEmail').value||'').trim();
-    var empresa=(document.getElementById('qlEmpresa').value||'').trim();
-    var message=(document.getElementById('qlMessage').value||'').trim();
-    if(!name||!email||!empresa){ feedback.textContent='Completa nombre, correo y empresa.'; return; }
-    var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-    var subject='Lead web - Formulario basico';
-    var body=encodeURIComponent(bodyLines.join('\n'));
-    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-    closeModal(); form.reset();
-  });
+  /* El envio lo administra vms-formularios.js mediante la API serverless. */
 })();
 </script>
 <div class="sticky-actions" aria-label="Acciones r&aacute;pidas">
@@ -859,44 +857,7 @@
   updateDependentMenus();
   updateEpcOfferField();
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var required = Array.prototype.slice.call(form.querySelectorAll('[required]'));
-    var ok = true;
-    required.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
-    if(!getSelectedMode()){ ok = false; }
-    if(!ok){ feedback.textContent='Completa los campos requeridos.'; return; }
-    var mode = getSelectedMode();
-    var payload = {
-      nombre: form.nombre.value.trim(),
-      empresa: form.empresa.value.trim(),
-      correo: form.correo.value.trim(),
-      lada: form.lada.value.trim(),
-      telefono: ((form.lada.value || '').trim() ? (form.lada.value.trim() + ' ') : '') + form.telefono.value.trim(),
-      industria: form.industria.value.trim(),
-      interes: form.interes.value.trim(),
-      modalidad: mode ? MODES[mode].label : '',
-      categoriaTrabajo: form.categoriaTrabajo.value.trim(),
-      tipoTrabajo: form.tipoTrabajo.value.trim(),
-      epcOffer: form.epcOffer.value.trim(),
-      mensaje: form.mensaje.value.trim()
-    };
-    var body =
-      'Nombre: ' + encodeURIComponent(payload.nombre) + '%0D%0A' +
-      'Empresa: ' + encodeURIComponent(payload.empresa) + '%0D%0A' +
-      'Correo: ' + encodeURIComponent(payload.correo) + '%0D%0A' +
-      'Telefono: ' + encodeURIComponent(payload.telefono) + '%0D%0A' +
-      'Industria: ' + encodeURIComponent(payload.industria) + '%0D%0A' +
-      'Interes: ' + encodeURIComponent(payload.interes) + '%0D%0A' +
-      'Modalidad: ' + encodeURIComponent(payload.modalidad) + '%0D%0A' +
-      'Categoria: ' + encodeURIComponent(payload.categoriaTrabajo) + '%0D%0A' +
-      'Tipo de trabajo: ' + encodeURIComponent(payload.tipoTrabajo) + '%0D%0A' +
-      'Oferta Servicios EPC: ' + encodeURIComponent(payload.epcOffer) + '%0D%0A' +
-      'Mensaje:%0D%0A' + encodeURIComponent(payload.mensaje);
-    var subject = encodeURIComponent('Lead web - Contacto VMS Energy');
-    vmsLead('mailto'); window.location.href = 'mailto:contacto@vmsenergy.com?subject=' + subject + '&body=' + body;
-    feedback.textContent='Se abrio tu cliente de correo para finalizar el envio.';
-  });
+  /* El envio lo administra vms-formularios.js mediante la API serverless. */
 })();
   </script>
 
