@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="../vms-medicion.js"></script>
+<script src="../vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -63,7 +64,7 @@
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
-    
+
     .btn--secondary{background:#fff;border-color:var(--line);color:var(--cobalt)}
 
     .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
@@ -551,7 +552,7 @@
                   <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable</a></li>
                   <li><a href="../lp-cables-fotovoltaicos.html" hreflang="es">Photovoltaic Cables</a></li>
                   <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables</a></li>
-                  
+
                   <li><a href="../lp-cables-extra-alta-tension.html" hreflang="es">Extra High Voltage Cables</a></li>
                   <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives</a></li>
                 </ul>
@@ -1179,12 +1180,17 @@
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Close form" data-close-modal="quickLeadModal">&times;</button>
     <h2 class="quicklead-modal__title" id="quickLeadTitle">Talk to a specialist</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate>
+    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="We received your request. A specialist will contact you soon.">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input type="text" id="qlName" name="nombre" placeholder="Full name" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Email" autocomplete="email" required>
       <input type="text" id="qlEmpresa" name="empresa" placeholder="Company" autocomplete="organization" required>
       <textarea id="qlMessage" name="mensaje" placeholder="Brief description"></textarea>
       <p class="quicklead-form__feedback" id="quickLeadFeedback" aria-live="polite"></p>
+      <div class="form-consent">
+        <input type="checkbox" id="privacy-1" name="privacidad" required>
+        <label for="privacy-1">I have read and accept the <a href="../aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Privacy Notice</a>.</label>
+      </div>
       <button class="quicklead-form__send" type="submit">Send</button>
     </form>
   </section>
@@ -1202,19 +1208,7 @@
   if(trigger) trigger.addEventListener('click',openModal);
   Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
-  form.addEventListener('submit',function(e){
-    e.preventDefault(); feedback.textContent='';
-    var name=(document.getElementById('qlName').value||'').trim();
-    var email=(document.getElementById('qlEmail').value||'').trim();
-    var empresa=(document.getElementById('qlEmpresa').value||'').trim();
-    var message=(document.getElementById('qlMessage').value||'').trim();
-    if(!name||!email||!empresa){ feedback.textContent='Complete name, email, and company.'; return; }
-    var bodyLines=['Name: '+name,'Email: '+email,'Company: '+empresa,'Description: '+(message||'No description')];
-    var subject='Web lead - Basic form';
-    var body=encodeURIComponent(bodyLines.join('\n'));
-    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-    closeModal(); form.reset();
-  });
+
 })();
 </script>
 <div class="sticky-actions" aria-label="Quick actions">

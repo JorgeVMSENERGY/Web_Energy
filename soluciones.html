@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -495,7 +496,7 @@
     .pill{display:inline-block;border:1px solid rgba(23,44,81,.15);border-radius:999px;padding:.1rem .5rem;font-size:12px;color:#475569;margin-right:6px}
     @media (max-width:1024px){.about__grid{grid-template-columns:1fr 1fr}.personas{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:680px){.about__grid{grid-template-columns:1fr}.personas{grid-template-columns:1fr}}
-  
+
     /* ===== Hero -> Nosotros transition ===== */
     .hero-to-nos{
       position:relative;
@@ -1076,9 +1077,9 @@
 
   /* Buttons cleanup */
   .btn{border-radius:14px;padding:12px 18px;font-weight:700;letter-spacing:.2px}
-  
-  
-  
+
+
+
 
   /* Header nav and menu toggle */
   header nav a{padding:.3rem .2rem;border-radius:8px}
@@ -1287,8 +1288,8 @@ label{font-size:14px}
     border:1px solid rgba(8,53,92,.55);
     box-shadow:0 10px 24px rgba(8,29,56,.18);
   }
-  
-  
+
+
   .section-title{
     color:#113960;
     letter-spacing:.01em;
@@ -2219,7 +2220,7 @@ label{font-size:14px}
           <div class="submenu" role="group" aria-label="VMShop">
             <ul class="submenu__list">
               <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
-              
+
               <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
               <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
               <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
@@ -2266,7 +2267,7 @@ label{font-size:14px}
 
 
 
-  
+
 
   <!-- ===== Hero ===== -->
   <section id="inicio" class="hero">
@@ -4085,7 +4086,8 @@ label{font-size:14px}
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Cerrar formulario" data-close-modal="quickLeadModal">&times;</button>
     <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate>
+    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos tu consulta. Un especialista te contactar&aacute; pronto.">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
       <input type="text" id="qlEmpresa" name="empresa" placeholder="Empresa" autocomplete="organization" required>
@@ -4112,19 +4114,7 @@ label{font-size:14px}
   if(trigger) trigger.addEventListener('click',openModal);
   Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
-  form.addEventListener('submit',function(e){
-    e.preventDefault(); feedback.textContent='';
-    var name=(document.getElementById('qlName').value||'').trim();
-    var email=(document.getElementById('qlEmail').value||'').trim();
-    var empresa=(document.getElementById('qlEmpresa').value||'').trim();
-    var message=(document.getElementById('qlMessage').value||'').trim();
-    if(!name||!email||!empresa){ feedback.textContent='Completa nombre, correo y empresa.'; return; }
-    var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-    var subject='Lead web - Formulario basico';
-    var body=encodeURIComponent(bodyLines.join('\n'));
-    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-    closeModal(); form.reset();
-  });
+
 })();
 </script>
 <div class="sticky-actions" aria-label="Acciones r&aacute;pidas">
@@ -4150,7 +4140,8 @@ label{font-size:14px}
       <h3 id="moreInfoTitle" class="moreinfo-modal__title">M&aacute;s informaci&oacute;n</h3>
       <button class="moreinfo-modal__close" type="button" aria-label="Cerrar formulario" data-modal-close="true">&times;</button>
     </div>
-    <form id="moreInfoForm" class="moreinfo-form" novalidate>
+    <form id="moreInfoForm" class="moreinfo-form" novalidate data-vms-form-type="more_info" data-vms-feedback="#moreInfoFeedback" data-vms-success-message="Recibimos tu solicitud de informaci&oacute;n. Te contactaremos pronto.">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input class="input" id="miNombre" name="nombre" type="text" placeholder="Nombre" required>
       <input class="input" id="miEmpresa" name="empresa" type="text" placeholder="Empresa" autocomplete="organization" required>
       <input class="input" id="miCorreo" name="correo" type="email" placeholder="Correo electr&oacute;nico" required>
@@ -4204,25 +4195,7 @@ label{font-size:14px}
     if(e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    const required = Array.from(form.querySelectorAll('[required]'));
-    let ok = true;
-    required.forEach(function(el){
-      if(!el.value.trim()){
-        ok = false;
-        el.style.borderColor = '#ef4444';
-      } else {
-        el.style.borderColor = '';
-      }
-    });
-    if(!ok){
-      if (feedback) feedback.textContent = 'Completa todos los campos requeridos.';
-      return;
-    }
-    if (feedback) feedback.textContent = 'Gracias, recibimos tu informaci&oacute;n.';
-    form.reset();
-  });
+
 })();
 </script>
 

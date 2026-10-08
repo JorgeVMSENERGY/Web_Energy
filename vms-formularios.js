@@ -34,6 +34,7 @@
     if (!node) return;
     node.textContent = message || '';
     node.style.color = isError ? '#b91c1c' : '';
+    node.style.display = message ? '' : 'none';
   }
 
   function setBusy(form, busy) {
@@ -199,9 +200,12 @@
     var successSelector = form.getAttribute('data-vms-success');
     var successNode = successSelector ? d.querySelector(successSelector) : null;
     if (successNode) {
-      successNode.classList.add('is-visible');
+      successNode.classList.add(form.getAttribute('data-vms-success-class') || 'is-visible');
       successNode.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+    var hideSelector = form.getAttribute('data-vms-hide-on-success');
+    var hideNode = hideSelector ? d.querySelector(hideSelector) : null;
+    if (hideNode) hideNode.style.display = 'none';
     showFeedback(
       form,
       form.getAttribute('data-vms-success-message') ||
