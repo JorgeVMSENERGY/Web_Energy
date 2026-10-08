@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -57,7 +58,7 @@
     .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
     .submenu__title{display:block;color:var(--cobalt);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
-    
+
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
     section{padding:56px 0}
     .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
@@ -466,7 +467,7 @@
           <div class="submenu" role="group" aria-label="VMShop">
             <ul class="submenu__list">
               <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
-              
+
               <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
               <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
               <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
@@ -549,10 +550,11 @@
     <div class="container">
       <h2 id="solicitudTitle" class="section-title">Suministro de productos</h2>
       <p class="section-lead">Flujo r&aacute;pido de cotizaci&oacute;n: selecciona tu necesidad, marca y producto.</p>
-      <form id="supplyFormV9_20" class="form-card procura__form" novalidate>
+      <form id="supplyFormV9_20" class="form-card procura__form" novalidate data-vms-form-type="supplier" data-vms-feedback="#procuraFeedback" data-vms-success-message="Recibimos tu solicitud de suministro. Te contactaremos pronto.">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
         <div>
           <label for="supplyType">Suministro</label>
-          <select id="supplyType" required>
+          <select id="supplyType" name="suministro" required>
             <option value="">Selecciona...</option>
             <option value="Cable electrico">Cable el&eacute;ctrico</option>
             <option value="Equipo electrico">Equipo el&eacute;ctrico</option>
@@ -561,31 +563,31 @@
         </div>
         <div>
           <label for="category">Categor&iacute;a</label>
-          <select id="category" disabled required><option value="">Selecciona...</option></select>
+          <select id="category" name="categoria" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
           <label for="brand">Marca</label>
-          <select id="brand" disabled required><option value="">Selecciona...</option></select>
+          <select id="brand" name="marca" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
           <label for="family">Familia</label>
-          <select id="family" disabled required><option value="">Selecciona...</option></select>
+          <select id="family" name="familia" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
           <label for="description">Descripci&oacute;n</label>
-          <select id="description" disabled required><option value="">Selecciona...</option></select>
+          <select id="description" name="descripcion" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
           <label for="model">Modelo</label>
-          <select id="model" disabled required><option value="">Selecciona...</option></select>
+          <select id="model" name="modelo" disabled required><option value="">Selecciona...</option></select>
         </div>
         <div>
           <label for="contactName">Nombre</label>
-          <input class="input" id="contactName" type="text" placeholder="Nombre completo" required>
+          <input class="input" id="contactName" name="nombre" type="text" placeholder="Nombre completo" required>
         </div>
         <div>
           <label for="countryCode">Clave del pa&iacute;s</label>
-          <select id="countryCode" required>
+          <select id="countryCode" name="clave_pais" required>
             <option value="">Selecciona...</option>
             <option value="+1">Estados Unidos (+1)</option>
             <option value="+52">M&eacute;xico (+52)</option>
@@ -604,11 +606,11 @@
         </div>
         <div>
           <label for="phone">Tel&eacute;fono</label>
-          <input class="input" id="phone" type="tel" placeholder="Ej. 3338112233" required>
+          <input class="input" id="phone" name="telefono" type="tel" placeholder="Ej. 3338112233" required>
         </div>
         <div>
           <label for="workType">Tipo de trabajo</label>
-          <select id="workType" required>
+          <select id="workType" name="tipo_trabajo" required>
             <option value="">Selecciona...</option>
             <option value="Suministro inmediato">Suministro inmediato</option>
             <option value="Suministro programado">Suministro programado</option>
@@ -617,7 +619,7 @@
         </div>
         <div class="full">
           <label for="email">Correo</label>
-          <input class="input" id="email" type="email" placeholder="tu@empresa.com" required>
+          <input class="input" id="email" name="correo" type="email" placeholder="tu@empresa.com" required>
         </div>
         <div class="req-summary">
           <h4>Resumen de solicitud</h4>
@@ -1098,41 +1100,7 @@
   workType.addEventListener('change', updateSummary);
   email.addEventListener('input', updateSummary);
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var required = Array.prototype.slice.call(form.querySelectorAll('[required]'));
-    var ok = true;
-    required.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
-    if(!ok){ feedback.textContent='Completa los campos requeridos.'; return; }
-    var payload = {
-      nombre: String(contactName.value || '').trim(),
-      clavePais: String(countryCode.value || '').trim(),
-      telefono: String(phone.value || '').trim(),
-      tipoTrabajo: String(workType.value || '').trim(),
-      suministro: String(supplyType.value || '').trim(),
-      categoria: String(category.value || '').trim(),
-      marca: String(brand.value || '').trim(),
-      familia: String(family.value || '').trim(),
-      descripcion: String(description.value || '').trim(),
-      modelo: String(model.value || '').trim(),
-      correo: String(email.value || '').trim()
-    };
-    var body =
-      'Nombre: ' + encodeURIComponent(payload.nombre) + '%0D%0A' +
-      'Clave pais: ' + encodeURIComponent(payload.clavePais) + '%0D%0A' +
-      'Telefono: ' + encodeURIComponent(payload.telefono) + '%0D%0A' +
-      'Tipo de trabajo: ' + encodeURIComponent(payload.tipoTrabajo) + '%0D%0A' +
-      'Suministro: ' + encodeURIComponent(payload.suministro) + '%0D%0A' +
-      'Categoria: ' + encodeURIComponent(payload.categoria) + '%0D%0A' +
-      'Marca: ' + encodeURIComponent(payload.marca) + '%0D%0A' +
-      'Familia: ' + encodeURIComponent(payload.familia) + '%0D%0A' +
-      'Descripcion: ' + encodeURIComponent(payload.descripcion) + '%0D%0A' +
-      'Modelo: ' + encodeURIComponent(payload.modelo) + '%0D%0A' +
-      'Correo: ' + encodeURIComponent(payload.correo);
-    var subject = encodeURIComponent('Lead web - Suministro t&eacute;cnico VMS Energy');
-    vmsLead('mailto'); window.location.href = 'mailto:contacto@vmsenergy.com?subject=' + subject + '&body=' + body;
-    feedback.textContent='Se abrio tu cliente de correo para finalizar el envio.';
-  });
+
   updateSummary();
 })();
   </script>
@@ -1142,7 +1110,8 @@
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Cerrar formulario" data-close-modal="quickLeadModal">&times;</button>
     <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate>
+    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos tu consulta. Un especialista te contactar&aacute; pronto.">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
       <input type="text" id="qlEmpresa" name="empresa" placeholder="Empresa" autocomplete="organization" required>
@@ -1169,19 +1138,7 @@
   if(trigger) trigger.addEventListener('click',openModal);
   Array.prototype.forEach.call(closeNodes,function(node){ node.addEventListener('click',closeModal); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&modal.classList.contains('is-open')) closeModal(); });
-  form.addEventListener('submit',function(e){
-    e.preventDefault(); feedback.textContent='';
-    var name=(document.getElementById('qlName').value||'').trim();
-    var email=(document.getElementById('qlEmail').value||'').trim();
-    var empresa=(document.getElementById('qlEmpresa').value||'').trim();
-    var message=(document.getElementById('qlMessage').value||'').trim();
-    if(!name||!email||!empresa){ feedback.textContent='Completa nombre, correo y empresa.'; return; }
-    var bodyLines=['Nombre: '+name,'Correo: '+email,'Empresa: '+empresa,'Descripcion: '+(message||'Sin descripcion')];
-    var subject='Lead web - Formulario basico';
-    var body=encodeURIComponent(bodyLines.join('\n'));
-    vmsLead('mailto'); window.location.href='mailto:contacto@vmsenergy.com?subject='+encodeURIComponent(subject)+'&body='+body;
-    closeModal(); form.reset();
-  });
+
 })();
 </script>
 <div class="sticky-actions" aria-label="Acciones r&aacute;pidas">
