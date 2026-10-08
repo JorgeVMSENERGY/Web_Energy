@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -301,7 +302,7 @@
           <div class="submenu" role="group" aria-label="VMShop">
             <ul class="submenu__list">
               <li><a href="lp-cable-de-potencia-kei.html">Cable de potencia MT/AT</a></li>
-              
+
               <li><a href="lp-cables-extra-alta-tension.html">Cables extra alta tensi&oacute;n</a></li>
               <li><a href="lp-cables-fotovoltaicos.html">Cables fotovoltaicos</a></li>
               <li><a href="lp-cables-especiales.html">Cables ESP</a></li>
@@ -353,7 +354,8 @@
     </section>
 
     <div id="ctaForm"></div>
-    <form id="ctaLeadForm" class="form-card" novalidate>
+    <form id="ctaLeadForm" class="form-card" novalidate data-vms-form-type="cta" data-vms-feedback="#ctaFeedback" data-vms-success-message="Recibimos tu solicitud. Un especialista te contactar&aacute; pronto.">
+      <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <div class="form-grid">
         <div><label for="ctaNombre">Nombre completo*</label><input class="input" id="ctaNombre" name="nombre" autocomplete="name" required></div>
         <div><label for="ctaEmpresa">Empresa*</label><input class="input" id="ctaEmpresa" name="empresa" autocomplete="organization" required></div>
@@ -385,7 +387,7 @@
         </select></div>
         <div class="full"><label for="ctaProyectoDesc">Descripci&oacute;n breve del proyecto*</label><textarea class="input" id="ctaProyectoDesc" name="descripcion_proyecto" rows="4" placeholder="Cu&eacute;ntanos brevemente alcance, objetivo o necesidad t&eacute;cnica (m&aacute;x. 200 palabras)"></textarea></div>
 
-        <div class="full cta-extra" hidden><label for="ctaArchivos">Adjuntar archivos (PDF, Excel, Word, im&aacute;genes)</label><input class="input" type="file" id="ctaArchivos" name="archivos" accept=".pdf,.xlsx,.xls,.csv,.doc,.docx,.png,.jpg,.jpeg,.webp" multiple><p class="hint">Nota: se abrir&aacute; tu correo para finalizar el env&iacute;o. Los archivos seleccionados se listan y se adjuntan manualmente desde tu cliente de correo.</p></div>
+        <div class="full cta-extra" hidden><label for="ctaArchivos">Adjuntar archivos (PDF, Excel, Word, im&aacute;genes)</label><input class="input" type="file" id="ctaArchivos" name="archivos" accept=".pdf,.xlsx,.xls,.csv,.doc,.docx,.png,.jpg,.jpeg,.webp" multiple><p class="hint">Los archivos se cargan de forma segura junto con tu solicitud. M&aacute;ximo 3 archivos, 5 MiB por archivo y 10 MiB en total.</p></div>
 
         <input type="hidden" id="ctxCategoria" name="categoria">
         <input type="hidden" id="ctxEtapa" name="etapa">
@@ -566,45 +568,7 @@
 
       var form = document.getElementById('ctaLeadForm');
       var feedback = document.getElementById('ctaFeedback');
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        var req = Array.prototype.slice.call(form.querySelectorAll('[required]'));
-        var ok = true;
-        req.forEach(function(el){ if(!String(el.value || '').trim()){ ok=false; el.style.borderColor='#ef4444'; } else { el.style.borderColor=''; } });
-        if(!ok){ feedback.textContent = 'Completa los campos requeridos.'; return; }
 
-        var projectDesc = (document.getElementById('ctaProyectoDesc').value || '').trim();
-
-        var body =
-          'Nombre: ' + encodeURIComponent(form.nombre.value.trim()) + '%0D%0A' +
-          'Empresa: ' + encodeURIComponent(form.empresa.value.trim()) + '%0D%0A' +
-          'Correo: ' + encodeURIComponent(form.correo.value.trim());
-
-        if(isSemFlow){
-          var ladaVal = ((form.lada && form.lada.value) || '').trim();
-          var telVal = ((form.telefono && form.telefono.value) || '').trim();
-          var puestoVal = ((form.puesto && form.puesto.value) || '').trim();
-          body += '%0D%0A' + 'Telefono: ' + encodeURIComponent((ladaVal ? ladaVal + ' ' : '') + telVal);
-          if(puestoVal) body += '%0D%0A' + 'Puesto: ' + encodeURIComponent(puestoVal);
-        }
-
-        body += '%0D%0A%0D%0A' +
-          'Categoria: ' + encodeURIComponent(document.getElementById('ctxCategoria').value) + '%0D%0A' +
-          'Etapa de ejecucion: ' + encodeURIComponent(document.getElementById('ctxEtapa').value) + '%0D%0A' +
-          'Servicio catalogo: ' + encodeURIComponent(document.getElementById('ctxServicioCatalogo').value) + '%0D%0A' +
-          'Descripcion: ' + encodeURIComponent(projectDesc || 'No especificada');
-
-        if(isSemFlow){
-          var filesInput = document.getElementById('ctaArchivos');
-          var fileNames = [];
-          if(filesInput && filesInput.files && filesInput.files.length){ for(var i=0; i<filesInput.files.length; i+=1){ fileNames.push(filesInput.files[i].name); } }
-          body += '%0D%0A' + 'Archivos seleccionados: ' + encodeURIComponent(fileNames.length ? fileNames.join(', ') : 'Sin archivos');
-        }
-
-        var subject = encodeURIComponent('Lead web CTA - VMS Energy');
-        vmsLead('mailto'); window.location.href = 'mailto:contacto@vmsenergy.com?subject=' + subject + '&body=' + body;
-        feedback.textContent = 'Se abri&oacute; tu correo para finalizar el env&iacute;o.';
-      });
     })();
   </script>
 

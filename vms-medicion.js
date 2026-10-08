@@ -59,8 +59,8 @@
     var f = w.__vmsLastForm || {};
     push({ event: 'form_submit', form_id: f.id || '', form_metodo: metodo || 'mailto' });
   };
-  w.vmsPostulacion = function (formId) {
-    push({ event: 'postulacion', form_id: formId || '', form_metodo: 'formsubmit' });
+  w.vmsPostulacion = function (formId, metodo) {
+    push({ event: 'postulacion', form_id: formId || '', form_metodo: metodo || 'api' });
   };
 
   /* ---------- 4. Clics: CTA, contacto directo, descargas ---------- */
