@@ -224,6 +224,26 @@
     @media (max-width:900px){.projects-grid--2,.timeline-strip,.check-list{grid-template-columns:1fr}.projects-grid--4{grid-template-columns:repeat(2,1fr)}.iso-grid{grid-template-columns:repeat(2,1fr)}.esg-grid{grid-template-columns:1fr}.projects-grid{grid-template-columns:1fr}.informe-inner{grid-template-columns:1fr}.informe-cover{max-width:420px}.metrics-grid{grid-template-columns:repeat(2,1fr)}.metric-item + .metric-item::before{display:none}}
     @media (max-width:700px){.projects-grid--4{grid-template-columns:1fr}#footer .container{grid-template-columns:1fr;gap:16px;padding:24px 0}.iso-grid{grid-template-columns:1fr}.sust-hero .container{padding:72px 20px 64px}}
     @media (max-width:680px){nav ul{display:none;position:absolute;right:20px;top:92px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0;width:min(290px,calc(100vw - 40px));box-shadow:0 18px 30px rgba(9,32,58,.12)}nav ul.is-open{display:grid;gap:10px}.menu-toggle{display:inline-flex}.submenu{position:static;display:none;min-width:0;border:0;box-shadow:none;padding:8px 0 0 12px}.nav-item--has-submenu.is-open .submenu{display:block}}
+    /* ===== OBJETIVOS SGI 2025 ===== */
+    .obj-summary{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:-12px 0 24px}
+    .obj-summary__val{font-size:2rem;font-weight:800;color:var(--vms-green-500);line-height:1}
+    .obj-summary__txt{font-size:.95rem;color:#374151;font-weight:600}
+    .obj-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .obj-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:0 4px 16px rgba(8,28,54,.06);position:relative;overflow:hidden;display:flex;flex-direction:column}
+    .obj-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--obj-c,#64748b)}
+    .obj-card--14001{--obj-c:#15803D}.obj-card--50001{--obj-c:#1D5FA4}.obj-card--37001{--obj-c:#7c3aed}.obj-card--45001{--obj-c:#d97706}.obj-card--9001{--obj-c:#0F4C81}
+    .obj-card__iso{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--obj-c);margin:0 0 6px}
+    .obj-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 12px;line-height:1.3}
+    .obj-card__row{margin:0;display:flex;justify-content:space-between;gap:10px;font-size:.84rem;color:#4b5563;padding:6px 0;border-top:1px dashed rgba(71,85,105,.18)}
+    .obj-card__row strong{color:#0f172a;text-align:right}
+    .obj-card__foot{margin-top:auto;padding-top:12px}
+    .obj-bar{height:6px;border-radius:6px;background:#eef2f7;overflow:hidden}
+    .obj-bar span{display:block;height:100%;width:100%;background:var(--obj-c)}
+    .obj-status{display:inline-block;margin-top:8px;font-size:.74rem;font-weight:700;color:#15803D;background:#f0fdf4;border:1px solid rgba(21,128,61,.2);border-radius:999px;padding:.12rem .55rem}
+    .obj-card__esc{font-size:.76rem;color:#6b7280;line-height:1.45;margin:8px 0 0}
+    .obj-note{font-size:.85rem;color:#6b7280;margin:18px 0 0;max-width:760px}
+    @media (max-width:1100px){.obj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:560px){.obj-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -654,6 +674,70 @@
   </section>
 
   
+  <!-- ===== OBJETIVOS DEL SGI 2025. Fuente: Objetivos.xlsx (Hugo, 19-oct-2026), metas y resultados 2025 por sistema.
+       Confirmado por Hugo 20-oct-2026: satisfacción del cliente 22.29 %; salidas no conformes meta < $200,000 MXN
+       (200-500 mil: acción correctiva 30 días; > 500 mil: acción inmediata); papel por semestre;
+       IDEn 50001 comparado contra 2024 (0.9577), resultado 2025 0.7717. ===== -->
+  <section class="section section--alt" id="objetivos" aria-labelledby="objTitle">
+    <div class="container">
+      <span class="section-label">Objetivos y resultados 2025</span>
+      <h2 id="objTitle">Lo que medimos en cada sistema de gestión</h2>
+      <p class="lead">Cada sistema de nuestro Sistema de Gestión Integrado fija objetivos con metas medibles. Estos son los objetivos de 2025 y su resultado al cierre del año.</p>
+      <div class="obj-summary"><span class="obj-summary__val">8 de 8</span><span class="obj-summary__txt">objetivos cumplidos en 2025</span></div>
+      <div class="obj-grid">
+        <div class="obj-card obj-card--14001">
+          <p class="obj-card__iso">ISO 14001 &middot; Medio ambiente</p>
+          <p class="obj-card__title">Reducción del consumo de papel</p>
+          <p class="obj-card__row"><span>Meta</span><strong>1 caja carta + 1 caja oficio por semestre</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>Satisfactorio</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--50001">
+          <p class="obj-card__iso">ISO 50001 &middot; Energía y clima</p>
+          <p class="obj-card__title">Consumo eléctrico frente a la línea base energética</p>
+          <p class="obj-card__row"><span>Meta</span><strong>IDEn &le;&nbsp;0.958 (valor 2024)</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>0.772</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--37001">
+          <p class="obj-card__iso">ISO 37001 &middot; Integridad</p>
+          <p class="obj-card__title">Quejas por soborno</p>
+          <p class="obj-card__row"><span>Meta</span><strong>0 eventos repetitivos</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>0</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--45001">
+          <p class="obj-card__iso">ISO 45001 &middot; Seguridad y salud</p>
+          <p class="obj-card__title">Personal accidentado en el trabajo</p>
+          <p class="obj-card__row"><span>Meta</span><strong>0&nbsp;%</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>0</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--45001">
+          <p class="obj-card__iso">ISO 45001 &middot; Seguridad y salud</p>
+          <p class="obj-card__title">Enfermedades generadas por el trabajo</p>
+          <p class="obj-card__row"><span>Meta</span><strong>0&nbsp;%</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>0</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--9001">
+          <p class="obj-card__iso">ISO 9001 &middot; Calidad</p>
+          <p class="obj-card__title">Satisfacción del cliente</p>
+          <p class="obj-card__row"><span>Meta</span><strong>&gt;&nbsp;19&nbsp;%</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>22.29&nbsp;%</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--9001">
+          <p class="obj-card__iso">ISO 9001 &middot; Calidad</p>
+          <p class="obj-card__title">Satisfacción del personal</p>
+          <p class="obj-card__row"><span>Meta</span><strong>&ge;&nbsp;70&nbsp;%</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>73.7&nbsp;%</strong></p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+        <div class="obj-card obj-card--9001">
+          <p class="obj-card__iso">ISO 9001 &middot; Calidad</p>
+          <p class="obj-card__title">Costo de salidas no conformes</p>
+          <p class="obj-card__row"><span>Meta</span><strong>&lt;&nbsp;$200,000 MXN</strong></p><p class="obj-card__row"><span>Resultado 2025</span><strong>Satisfactorio</strong></p><p class="obj-card__esc">De $200,000 a $500,000: acción correctiva en 30 días. Más de $500,000: acción inmediata.</p>
+          <div class="obj-card__foot"><div class="obj-bar" role="img" aria-label="Avance 100 %"><span></span></div><span class="obj-status">Cumplido &middot; 100&nbsp;%</span></div>
+        </div>
+      </div>
+      <p class="obj-note">IDEn: indicador de desempeño energético de ISO 50001; un valor menor indica menor consumo. La meta de 2025 fue no superar el valor de 2024 (0.958). Los objetivos se revisan cada año y se auditan junto con cada certificación.</p>
+    </div>
+  </section>
+
   <!-- ===== EVALUACIONES Y DISTINTIVOS (QHSE+, propuesta 3.7, seccion 3) =====
        Integrado 01-oct-2026: EcoVadis + Pro-Integridad Jalisco.
        Pacto Global Red Mexico: estado "Active" confirmado por Hugo el 01-oct-2026; publicado.
