@@ -1108,6 +1108,12 @@
         "lugar":  "Durango",
         "cliente":  "Minero",
         "anio_inicio":  "2024"
+    },
+    {
+        "trabajos_realizados":  "Diagnóstico, reparación, mantenimiento, sustitución e instalación de componentes y puesta en operación de 7 elevadores de pasajeros (OTIS, KONE Sabiem y Alamex) en hospitales y oficinas centrales.",
+        "clasificacion":  "Servicio",
+        "lugar":  "Durango",
+        "cliente":  "Servicios de Salud del Estado de Durango"
     }
 ]
 
