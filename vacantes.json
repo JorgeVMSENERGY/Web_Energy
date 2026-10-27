@@ -2,106 +2,38 @@
   "_instrucciones_para_rrhh": "Edita este archivo para abrir/cerrar vacantes. Cada vacante es un objeto en el array 'vacantes'. Campos: id (texto único, sin espacios), titulo, tipo ('fija' o 'proyecto'), ubicacion, area, modalidad ('Presencial' | 'Híbrido' | 'Remoto'), descripcion, requisitos (array), duracion (solo proyecto, ej. '6 meses', null si fija), publicada (YYYY-MM-DD). Para retirar una vacante, bórrala del array o agrégale 'activa: false'. Guarda el archivo y refresca carreras.html.",
   "vacantes": [
     {
-      "id": "ing-electrico-proyecto-tampico",
-      "titulo": "Ingeniero Eléctrico de Proyecto",
-      "tipo": "fija",
-      "ubicacion": "Tampico, Tamaulipas",
-      "area": "Ingeniería",
-      "modalidad": "Presencial",
-      "descripcion": "Diseño, supervisión y ejecución de proyectos eléctricos EPC en industria crítica. Coordinación con cliente, contratistas y equipo técnico interno.",
-      "requisitos": [
-        "Cédula profesional vigente (Ing. Eléctrico, Mecatrónico o afín)",
-        "5+ años en proyectos EPC industriales",
-        "Conocimiento de NOM-001-SEDE y normativa eléctrica nacional",
-        "Inglés técnico intermedio"
-      ],
-      "duracion": null,
-      "publicada": "2026-04-15"
-    },
-    {
-      "id": "supervisor-mantenimiento-cdcarmen",
-      "titulo": "Supervisor de Mantenimiento Eléctrico",
-      "tipo": "fija",
-      "ubicacion": "Ciudad del Carmen, Campeche",
-      "area": "Mantenimiento",
-      "modalidad": "Presencial",
-      "descripcion": "Supervisión de cuadrillas de mantenimiento preventivo y correctivo en instalaciones de oil & gas. Reporta a Gerencia de Operaciones.",
-      "requisitos": [
-        "Ing. Eléctrico, Electromecánico o Técnico con experiencia equivalente",
-        "3+ años supervisando equipos en campo",
-        "Curso vigente de Seguridad para acceso a plataformas",
-        "Disponibilidad para rol 14x14 / 21x21"
-      ],
-      "duracion": null,
-      "publicada": "2026-04-10"
-    },
-    {
-      "id": "soldador-6g-proyecto-pemex",
-      "titulo": "Soldador 6G — Proyecto PEMEX Offshore",
-      "tipo": "proyecto",
-      "ubicacion": "Ciudad del Carmen, Campeche",
-      "area": "Operaciones / Campo",
-      "modalidad": "Presencial",
-      "descripcion": "Soldadura de tubería de proceso en plataforma offshore. Trabajo bajo procedimientos WPS calificados y supervisión QA/QC.",
-      "requisitos": [
-        "Certificación 6G vigente (API 1104 o ASME IX)",
-        "Examen médico para trabajo offshore al corriente",
-        "Curso de supervivencia en el agua (HUET) deseable",
-        "Disponibilidad inmediata"
-      ],
-      "duracion": "6 meses (con posibilidad de extensión)",
-      "publicada": "2026-04-22"
-    },
-    {
-      "id": "tecnico-automatizacion-gdl",
-      "titulo": "Técnico en Automatización y Control",
+      "id": "vendedor-tecnico-comercial-gdl-1",
+      "titulo": "Vendedor Técnico Comercial",
       "tipo": "fija",
       "ubicacion": "Guadalajara, Jalisco",
-      "area": "Automatización y Control",
-      "modalidad": "Presencial",
-      "descripcion": "Programación, puesta en marcha y soporte de sistemas SCADA, PLC y variadores de frecuencia para clientes industriales.",
+      "area": "Comercial Industrial",
+      "modalidad": "Presencial (campo + oficina, viajes frecuentes)",
+      "descripcion": "Venta consultiva de soluciones eléctricas integrales —transformadores, sistemas BESS, equipos de media y baja tensión, ingeniería y proyectos EPC— a clientes industriales. Prospección, desarrollo de cartera y presentación de propuestas técnico-comerciales con apoyo de Ingeniería. Reporta a Gerencia Comercial.",
       "requisitos": [
-        "Técnico o Ingeniería en Mecatrónica / Electrónica / Control",
-        "Experiencia con PLC Siemens, Allen-Bradley o Schneider",
-        "Manejo de protocolos Modbus, Profinet, Ethernet/IP",
-        "Disponibilidad para viajar a sitios de cliente"
+        "Ing. Eléctrica, Electromecánica o afín (o técnico superior con experiencia comercial comprobada)",
+        "3 a 5 años en venta técnica de equipos o soluciones eléctricas, idealmente industrial, EPC o distribuidor ABB / Siemens / Schneider / Eaton",
+        "Lectura de diagramas unifilares; conocimiento de MT/BT, transformadores, protección y control y sistemas BESS",
+        "Licencia de conducir vigente y disponibilidad para viajar"
       ],
       "duracion": null,
-      "publicada": "2026-04-18"
+      "publicada": "2026-10-27"
     },
     {
-      "id": "coordinador-hse-proyecto-mineria",
-      "titulo": "Coordinador HSE — Proyecto Minero",
-      "tipo": "proyecto",
-      "ubicacion": "Sonora",
-      "area": "Seguridad e Higiene (HSE)",
-      "modalidad": "Presencial",
-      "descripcion": "Implementación y supervisión del plan HSE en obra. Reportes de incidentes, capacitación al personal y enlace con seguridad del cliente.",
-      "requisitos": [
-        "Lic. en Seguridad Industrial, Ing. Industrial o afín",
-        "DC-3 vigente como instructor",
-        "ISO 45001 (deseable: implementador certificado)",
-        "3+ años en industria pesada"
-      ],
-      "duracion": "8 meses",
-      "publicada": "2026-04-12"
-    },
-    {
-      "id": "comprador-tecnico-gdl",
-      "titulo": "Comprador Técnico (Procura)",
+      "id": "vendedor-tecnico-comercial-gdl-2",
+      "titulo": "Vendedor Técnico Comercial",
       "tipo": "fija",
       "ubicacion": "Guadalajara, Jalisco",
-      "area": "Compras / Procura",
-      "modalidad": "Híbrido",
-      "descripcion": "Búsqueda, negociación y seguimiento de proveedores de material eléctrico, mecánico e instrumentación para proyectos EPC.",
+      "area": "Comercial Industrial",
+      "modalidad": "Presencial (campo + oficina, viajes frecuentes)",
+      "descripcion": "Venta consultiva de soluciones eléctricas integrales —transformadores, sistemas BESS, equipos de media y baja tensión, ingeniería y proyectos EPC— a clientes industriales. Prospección, desarrollo de cartera y presentación de propuestas técnico-comerciales con apoyo de Ingeniería. Reporta a Gerencia Comercial.",
       "requisitos": [
-        "Lic. en Comercio, Administración o Ingeniería",
-        "3+ años en compras técnicas industriales",
-        "Manejo de ERP (deseable SAP)",
-        "Inglés intermedio para tratos con proveedores extranjeros"
+        "Ing. Eléctrica, Electromecánica o afín (o técnico superior con experiencia comercial comprobada)",
+        "3 a 5 años en venta técnica de equipos o soluciones eléctricas, idealmente industrial, EPC o distribuidor ABB / Siemens / Schneider / Eaton",
+        "Lectura de diagramas unifilares; conocimiento de MT/BT, transformadores, protección y control y sistemas BESS",
+        "Licencia de conducir vigente y disponibilidad para viajar"
       ],
       "duracion": null,
-      "publicada": "2026-04-08"
+      "publicada": "2026-10-27"
     }
   ]
 }
