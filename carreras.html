@@ -79,6 +79,19 @@
     .vacante-card__foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px dashed var(--line)}
     .vacante-card__date{color:var(--muted);font-size:.82rem}
     .vacante-empty{padding:36px;text-align:center;background:#fff;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+    .vacantes-nota{margin:24px 0 0;padding:14px 18px;border-left:3px solid var(--cobalt);background:#f5f8fc;border-radius:0 10px 10px 0;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .vacantes-nota a{color:var(--cobalt)}
+    .vacante-card__detail{margin-top:4px;border-top:1px dashed var(--line);padding-top:10px}
+    .vacante-card__detail summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;color:var(--cobalt);font-weight:700;font-size:.9rem}
+    .vacante-card__detail summary::-webkit-details-marker{display:none}
+    .vacante-card__detail summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid currentColor;border-radius:50%;font-size:.8rem;line-height:1}
+    .vacante-card__detail[open] summary::before{content:"\2212"}
+    .vacante-card__detail[open] .vd-mas{display:none}
+    .vacante-card__detail:not([open]) .vd-menos{display:none}
+    .vacante-card__detail summary:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+    .vacante-card__detail h4{margin:14px 0 4px;color:#113960;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}
+    .vacante-card__detail ul{margin:0;padding-left:18px;color:#2c4f77;font-size:.9rem;line-height:1.5}
+    .vacante-card__detail li{margin:0 0 3px}
     @media (max-width:760px){.form-grid{grid-template-columns:1fr}}
 
     /* Honeypot (FormSubmit anti-spam) */
@@ -374,6 +387,8 @@
         <div id="vacantesEmpty" class="vacante-empty" hidden>
           No hay vacantes que coincidan con el filtro seleccionado en este momento. <a href="#postulacion">Envíanos tu CV</a> para nuestra base de talento.
         </div>
+
+        <p class="vacantes-nota">En VMS Energy no discriminamos a ninguna persona y promovemos la igualdad de oportunidades. Asimismo, no aceptamos ni ofrecemos sobornos o beneficios indebidos durante nuestros procesos de selección. Consulta nuestra <a href="politica-antisoborno.html">Política Antisoborno</a> y nuestro <a href="codigo-conducta.html">Código de Conducta</a>.</p>
       </div>
     </section>
 
@@ -639,6 +654,18 @@
         ? '<ul class="vacante-card__reqs">' + reqs.slice(0, 4).map(function(r){ return '<li>' + escapeHtml(r) + '</li>'; }).join('') + '</ul>'
         : '';
       var duracion = (tipo === 'proyecto' && v.duracion) ? '<span>⏱ ' + escapeHtml(v.duracion) + '</span>' : '';
+      // Detalle desplegable: responsabilidades, requisitos adicionales (del 5 en adelante) y competencias
+      function lista(titulo, arr){
+        return (Array.isArray(arr) && arr.length)
+          ? '<h4>' + titulo + '</h4><ul>' + arr.map(function(x){ return '<li>' + escapeHtml(x) + '</li>'; }).join('') + '</ul>'
+          : '';
+      }
+      var detalleBody = lista('Responsabilidades', v.responsabilidades) +
+        lista('Otros requisitos', reqs.slice(4)) +
+        lista('Competencias', v.competencias);
+      var detalleHtml = detalleBody
+        ? '<details class="vacante-card__detail"><summary><span class="vd-mas">Ver detalle del puesto</span><span class="vd-menos">Ocultar detalle</span></summary>' + detalleBody + '</details>'
+        : '';
       var ctaUrl = '#postulacion?puesto=' + encodeURIComponent(v.titulo || '');
       // Use real querystring on link click via JS
       return '' +
@@ -655,6 +682,7 @@
           '</div>' +
           (v.descripcion ? '<p class="vacante-card__desc">' + escapeHtml(v.descripcion) + '</p>' : '') +
           reqsHtml +
+          detalleHtml +
           '<div class="vacante-card__foot">' +
             '<span class="vacante-card__date">Publicada: ' + escapeHtml(fmtDate(v.publicada)) + '</span>' +
             '<a class="btn btn--primary aplicar-btn" href="#postulacion" data-puesto="' + escapeHtml(v.titulo || '') + '">Aplicar</a>' +

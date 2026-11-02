@@ -1,6 +1,46 @@
 {
-  "_instrucciones_para_rrhh": "Edita este archivo para abrir/cerrar vacantes. Cada vacante es un objeto en el array 'vacantes'. Campos: id (texto único, sin espacios), titulo, tipo ('fija' o 'proyecto'), ubicacion, area, modalidad ('Presencial' | 'Híbrido' | 'Remoto'), descripcion, requisitos (array), duracion (solo proyecto, ej. '6 meses', null si fija), publicada (YYYY-MM-DD). Para retirar una vacante, bórrala del array o agrégale 'activa: false'. Guarda el archivo y refresca carreras.html.",
+  "_instrucciones_para_rrhh": "Edita este archivo para abrir/cerrar vacantes. Cada vacante es un objeto en el array 'vacantes'. Campos: id (texto único, sin espacios), titulo, tipo ('fija' o 'proyecto'), ubicacion, area, modalidad ('Presencial' | 'Híbrido' | 'Remoto'), descripcion, requisitos (array; la tarjeta muestra los primeros 4 y el resto aparece en 'Ver detalle'), responsabilidades (array, opcional, en 'Ver detalle'), competencias (array, opcional, en 'Ver detalle'), duracion (solo proyecto, ej. '6 meses', null si fija), publicada (YYYY-MM-DD). Para retirar una vacante, bórrala del array o agrégale 'activa: false'. Guarda el archivo y refresca carreras.html.",
   "vacantes": [
+    {
+      "id": "comprador-jr-cdcarmen",
+      "titulo": "Comprador Jr.",
+      "tipo": "fija",
+      "ubicacion": "Ciudad del Carmen, Campeche",
+      "area": "Cadena de Suministros",
+      "modalidad": "Presencial",
+      "descripcion": "Adquisición de materiales y servicios para proyectos eléctricos: negociación con proveedores, desarrollo y evaluación de proveedores, logística nacional y control de inventario de almacén. Buscamos una persona analítica, organizada y con habilidades de negociación.",
+      "requisitos": [
+        "Ing. Eléctrica (preferente), Electromecánica, Industrial, Negocios Internacionales o afín",
+        "Mínimo 5 años en el área de compras",
+        "Conocimientos en sistemas eléctricos",
+        "Conocimiento en evaluación y desarrollo de proveedores",
+        "Experiencia en administración y gestión de compras",
+        "Manejo de inventarios y logística",
+        "Inglés deseable"
+      ],
+      "duracion": null,
+      "publicada": "2026-11-02",
+      "responsabilidades": [
+        "Gestionar y coordinar la adquisición de materiales y servicios.",
+        "Desarrollar y mantener relaciones comerciales con proveedores.",
+        "Identificar, evaluar y desarrollar nuevos proveedores.",
+        "Negociar precios, descuentos y condiciones comerciales.",
+        "Coordinar la logística nacional de materiales y equipos.",
+        "Realizar evaluaciones de desempeño a proveedores.",
+        "Administrar y controlar el inventario de almacén.",
+        "Analizar niveles máximos y mínimos de inventario.",
+        "Elaborar reportes mensuales de compras y almacén.",
+        "Asegurar el cumplimiento de las políticas y procedimientos internos."
+      ],
+      "competencias": [
+        "Capacidad de análisis",
+        "Habilidades de negociación",
+        "Enfoque al cliente interno y externo",
+        "Comunicación efectiva",
+        "Orientación a resultados",
+        "Organización y seguimiento"
+      ]
+    },
     {
       "id": "vendedor-tecnico-comercial-gdl-1",
       "titulo": "Vendedor Técnico Comercial",
@@ -13,10 +53,33 @@
         "Ing. Eléctrica, Electromecánica o afín (o técnico superior con experiencia comercial comprobada)",
         "3 a 5 años en venta técnica de equipos o soluciones eléctricas, idealmente industrial, EPC o distribuidor ABB / Siemens / Schneider / Eaton",
         "Lectura de diagramas unifilares; conocimiento de MT/BT, transformadores, protección y control y sistemas BESS",
-        "Licencia de conducir vigente y disponibilidad para viajar"
+        "Licencia de conducir vigente y disponibilidad para viajar",
+        "Experiencia con clientes industriales, de preferencia en procesos de licitación pública o privada",
+        "Familiaridad con normativa NOM/IEC aplicable a instalaciones eléctricas industriales",
+        "Conocimiento de tableros, automatización industrial y criterios básicos de dimensionamiento BESS",
+        "Venta consultiva: prospección, negociación, cierre y manejo de objeciones técnicas ante ingeniería y compras",
+        "Capacidad de presentar soluciones ante interlocutores técnicos y niveles directivos"
       ],
       "duracion": null,
-      "publicada": "2026-10-27"
+      "publicada": "2026-10-27",
+      "responsabilidades": [
+        "Prospectar activamente nuevos clientes industriales dentro del sector y zona asignada.",
+        "Desarrollar y administrar la cartera de clientes, identificando nuevas oportunidades en cuentas existentes.",
+        "Preparar y presentar soluciones técnicas integrales —no solo cotizar equipos— combinando transformadores, BESS, protección y control, y automatización.",
+        "Elaborar y presentar propuestas técnico-comerciales con apoyo de Ingeniería y de la Coordinación de Propuestas.",
+        "Sostener conversaciones técnicas con el cliente: diagramas unifilares, especificaciones de equipos y normativa aplicable.",
+        "Registrar y mantener actualizado el pipeline comercial en el CRM (Odoo).",
+        "Negociar condiciones comerciales dentro de la política de precios y márgenes autorizada.",
+        "Cumplir la meta de ventas mensual y anual asignada.",
+        "Representar a VMS en ferias y eventos del sector (RIM, EXPOATAM, etc.).",
+        "Reportar semanalmente su actividad comercial y el estatus de sus oportunidades al Gerente Comercial."
+      ],
+      "competencias": [
+        "Orientación a resultados y autogestión",
+        "Resiliencia comercial ante ciclos de venta largos, típicos de proyectos EPC",
+        "Aprendizaje técnico continuo",
+        "Trabajo bajo presión de metas, con organización y manejo de tiempo"
+      ]
     },
     {
       "id": "vendedor-tecnico-comercial-gdl-2",
@@ -30,10 +93,33 @@
         "Ing. Eléctrica, Electromecánica o afín (o técnico superior con experiencia comercial comprobada)",
         "3 a 5 años en venta técnica de equipos o soluciones eléctricas, idealmente industrial, EPC o distribuidor ABB / Siemens / Schneider / Eaton",
         "Lectura de diagramas unifilares; conocimiento de MT/BT, transformadores, protección y control y sistemas BESS",
-        "Licencia de conducir vigente y disponibilidad para viajar"
+        "Licencia de conducir vigente y disponibilidad para viajar",
+        "Experiencia con clientes industriales, de preferencia en procesos de licitación pública o privada",
+        "Familiaridad con normativa NOM/IEC aplicable a instalaciones eléctricas industriales",
+        "Conocimiento de tableros, automatización industrial y criterios básicos de dimensionamiento BESS",
+        "Venta consultiva: prospección, negociación, cierre y manejo de objeciones técnicas ante ingeniería y compras",
+        "Capacidad de presentar soluciones ante interlocutores técnicos y niveles directivos"
       ],
       "duracion": null,
-      "publicada": "2026-10-27"
+      "publicada": "2026-10-27",
+      "responsabilidades": [
+        "Prospectar activamente nuevos clientes industriales dentro del sector y zona asignada.",
+        "Desarrollar y administrar la cartera de clientes, identificando nuevas oportunidades en cuentas existentes.",
+        "Preparar y presentar soluciones técnicas integrales —no solo cotizar equipos— combinando transformadores, BESS, protección y control, y automatización.",
+        "Elaborar y presentar propuestas técnico-comerciales con apoyo de Ingeniería y de la Coordinación de Propuestas.",
+        "Sostener conversaciones técnicas con el cliente: diagramas unifilares, especificaciones de equipos y normativa aplicable.",
+        "Registrar y mantener actualizado el pipeline comercial en el CRM (Odoo).",
+        "Negociar condiciones comerciales dentro de la política de precios y márgenes autorizada.",
+        "Cumplir la meta de ventas mensual y anual asignada.",
+        "Representar a VMS en ferias y eventos del sector (RIM, EXPOATAM, etc.).",
+        "Reportar semanalmente su actividad comercial y el estatus de sus oportunidades al Gerente Comercial."
+      ],
+      "competencias": [
+        "Orientación a resultados y autogestión",
+        "Resiliencia comercial ante ciclos de venta largos, típicos de proyectos EPC",
+        "Aprendizaje técnico continuo",
+        "Trabajo bajo presión de metas, con organización y manejo de tiempo"
+      ]
     }
   ]
 }
