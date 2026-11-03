@@ -2,16 +2,16 @@
   "_instrucciones_para_rrhh": "Edita este archivo para abrir/cerrar vacantes. Cada vacante es un objeto en el array 'vacantes'. Campos: id (texto único, sin espacios), titulo, tipo ('fija' o 'proyecto'), ubicacion, area, modalidad ('Presencial' | 'Híbrido' | 'Remoto'), descripcion, requisitos (array; la tarjeta muestra los primeros 4 y el resto aparece en 'Ver detalle'), responsabilidades (array, opcional, en 'Ver detalle'), competencias (array, opcional, en 'Ver detalle'), duracion (solo proyecto, ej. '6 meses', null si fija), publicada (YYYY-MM-DD). Para retirar una vacante, bórrala del array o agrégale 'activa: false'. Guarda el archivo y refresca carreras.html.",
   "vacantes": [
     {
-      "id": "comprador-jr-cdcarmen",
+      "id": "comprador-jr-gdl",
       "titulo": "Comprador Jr.",
       "tipo": "fija",
-      "ubicacion": "Ciudad del Carmen, Campeche",
+      "ubicacion": "Guadalajara, Jalisco",
       "area": "Cadena de Suministros",
       "modalidad": "Presencial",
       "descripcion": "Adquisición de materiales y servicios para proyectos eléctricos: negociación con proveedores, desarrollo y evaluación de proveedores, logística nacional y control de inventario de almacén. Buscamos una persona analítica, organizada y con habilidades de negociación.",
       "requisitos": [
         "Ing. Eléctrica (preferente), Electromecánica, Industrial, Negocios Internacionales o afín",
-        "Mínimo 5 años en el área de compras",
+        "Mínimo 3 años en el área de compras",
         "Conocimientos en sistemas eléctricos",
         "Conocimiento en evaluación y desarrollo de proveedores",
         "Experiencia en administración y gestión de compras",
