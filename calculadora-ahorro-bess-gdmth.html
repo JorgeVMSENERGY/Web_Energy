@@ -18,7 +18,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora BESS Peak-Shaving GDMTH | VMS Energy</title>
-  <meta name="description" content="Calcula el ahorro real con un sistema BESS en tarifa GDMTH: dimensionamiento en kW y kWh, inversión estimada, payback y escenario de integración solar. Herramienta gratuita de VMS Energy.">
+  <meta name="description" content="Calcula el ahorro real con un sistema BESS en tarifa GDMTH: dimensionamiento en kW y kWh, ahorro mensual estimado y escenario de integración solar. Herramienta gratuita de VMS Energy.">
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://vmsenergy.com/calculadora-ahorro-bess-gdmth.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -456,7 +456,7 @@
     <div class="container">
       <span class="eyebrow">Herramienta gratuita · VMS Energy</span>
       <h1>Calculadora de Ahorro BESS<br><em style="font-style:normal;color:#8fd7ff">Peak-Shaving GDMTH</em></h1>
-      <p>Estima el dimensionamiento, la inversión y el retorno de tu sistema de almacenamiento de energía para reducir el cargo por demanda en tarifa media tensión horaria.</p>
+      <p>Estima el dimensionamiento y el ahorro mensual de tu sistema de almacenamiento de energía para reducir el cargo por demanda en tarifa media tensión horaria.</p>
       <div class="hero-badge">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
         Aplica a tarifas GDMTH · GDMTO · GDBT · PDBT
@@ -693,8 +693,8 @@
                 </div>
               </div>
               <div class="toggle-wrap" style="margin-top:6px;padding:12px 14px;background:#f0f7ff;border:1px solid rgba(14,90,168,.2);border-radius:12px;display:block">
-                <p style="margin:0;color:#0d2d52;font-size:.93rem;font-weight:700">Deducci&oacute;n fiscal &mdash; Art. 34-XI LISR</p>
-                <p style="margin:6px 0 0;color:var(--muted);font-size:.83rem;line-height:1.5">La inversi&oacute;n en equipo de almacenamiento de energ&iacute;a puede ser deducible. <strong>Es informaci&oacute;n de referencia, no asesor&iacute;a fiscal:</strong> el beneficio depende de la situaci&oacute;n de cada empresa y de la legislaci&oacute;n vigente. Conf&iacute;rmelo con su contador antes de considerarlo en la decisi&oacute;n de inversi&oacute;n.</p>
+                <p style="margin:0;color:#0d2d52;font-size:.93rem;font-weight:700">Beneficio fiscal</p>
+                <p style="margin:6px 0 0;color:var(--muted);font-size:.83rem;line-height:1.5">La maquinaria y equipo para generar energ&iacute;a con fuentes renovables puede deducirse al 100&nbsp;% (art. 34-XIII LISR). Para el almacenamiento no hay un criterio publicado de la autoridad: el tratamiento depende de cada proyecto, por ejemplo, de si el BESS se carga con energ&iacute;a solar. <strong>Es informaci&oacute;n de referencia, no asesor&iacute;a fiscal:</strong> el beneficio depende de la situaci&oacute;n de cada empresa y de la legislaci&oacute;n vigente. Conf&iacute;rmelo con su contador antes de considerarlo en la decisi&oacute;n de inversi&oacute;n.</p>
               </div>
 
               <div class="btn-row">
@@ -1099,6 +1099,7 @@
       let bessPot, bessEn, redDemanda, dMax, dObj;
       let ahorroMesDemanda = 0;
       let savingsBreakdown = [];
+      let enDescargaPunta = 0;
 
       if (avanzado) {
         const periods = [
@@ -1111,12 +1112,29 @@
         redDemanda = Math.max(0, punta.dMax - punta.dObj);
         bessPot    = redDemanda * 1.1;
         bessEn     = bessPot * punta.horas * 1.2;
-        periods.forEach(p => {
-          const red   = Math.max(0, p.dMax - p.dObj);
+        /* Corrección 4-nov-2026: el ahorro de intermedio y base se limita a lo que el BESS
+           puede sostener. El banco se carga en base (madrugada), así que en base no recorta
+           demanda; en intermedio solo usa la energía que sobra después de cubrir la punta. */
+        const cfgAdv     = encontrarConfigStandard(bessPot, bessEn);
+        const enUtil     = (cfgAdv ? cfgAdv.totKWh : bessEn) * 0.90;
+        const potUtil    = cfgAdv ? cfgAdv.totKW : bessPot;
+        let   enRestante = Math.max(0, enUtil - redDemanda * punta.horas);
+        periods.forEach((p, i) => {
+          const redCap = Math.max(0, p.dMax - p.dObj);
+          let red = redCap, nota = '';
+          if (i === 1) {
+            red = Math.min(redCap, potUtil, p.horas > 0 ? enRestante / p.horas : 0);
+            enRestante -= red * p.horas;
+            if (red < redCap) nota = 'limitado por la capacidad del BESS';
+          } else if (i === 2) {
+            red = 0;
+            if (redCap > 0) nota = 'periodo de recarga del BESS';
+          }
           const ahorro = red * p.cargo;
           ahorroMesDemanda += ahorro;
-          savingsBreakdown.push({ ...p, red, ahorro });
+          savingsBreakdown.push({ ...p, dObj: p.dMax - red, redCap, red, ahorro, nota });
         });
+        enDescargaPunta = Math.max(0, enRestante + redDemanda * punta.horas);
         /* Render breakdown table */
         const tbody = document.getElementById('breakdownBody');
         tbody.innerHTML = '';
@@ -1124,7 +1142,7 @@
         const clases = ['bd-punta','bd-intermedio','bd-base'];
         savingsBreakdown.forEach((p, i) => {
           const pct = total > 0 ? fmt(p.ahorro / total * 100, 1) : '0.0';
-          tbody.innerHTML += '<tr class="' + clases[i] + '"><td>' + p.name + '</td><td>' + fmt(p.red) + ' kW</td><td>' + fmtMXN(p.cargo) + '</td><td>' + fmtMXN(p.ahorro) + '</td><td>' + pct + '%</td></tr>';
+          tbody.innerHTML += '<tr class="' + clases[i] + '"><td>' + p.name + '</td><td>' + fmt(p.red) + ' kW' + (p.nota ? '<br><small style="color:#92400e">de ' + fmt(p.redCap) + ' kW: ' + p.nota + '</small>' : '') + '</td><td>' + fmtMXN(p.cargo) + '</td><td>' + fmtMXN(p.ahorro) + '</td><td>' + pct + '%</td></tr>';
         });
         tbody.innerHTML += '<tr class="bd-total"><td>Total</td><td>—</td><td>—</td><td>' + fmtMXN(total) + '</td><td>100%</td></tr>';
         document.getElementById('breakdownWrap').style.display = 'block';
@@ -1162,7 +1180,7 @@
       if (avanzado) {
         const diasPuntaVal   = parseFloat(document.getElementById('diasPunta').value) || 22;
         const diferencial    = Math.max(0, costoPuntaEn - costoBaseEn);
-        arbitrajeMes = bessEn * 0.90 * diferencial * diasPuntaVal;
+        arbitrajeMes = enDescargaPunta * diferencial * diasPuntaVal; /* energía útil que queda para la punta (ya con η=90 %) */
       }
 
       /* La inversion, el payback y el ROI se retiraron a peticion de VMS (26-ago-2026):
@@ -1175,7 +1193,7 @@
       if (avanzado && arbitrajeMes > 0) {
         const tbody = document.getElementById('breakdownBody');
         const diferencial = costoPuntaEn - costoBaseEn;
-        tbody.innerHTML += '<tr style="background:#faf5ff"><td style="color:#7c3aed;font-weight:700">Arbitraje</td><td>' + fmt(bessEn, 0) + ' kWh×0.9</td><td>$' + fmt(diferencial, 2) + '/kWh dif.</td><td>' + fmtMXN(arbitrajeMes) + '</td><td>—</td></tr>';
+        tbody.innerHTML += '<tr style="background:#faf5ff"><td style="color:#7c3aed;font-weight:700">Arbitraje</td><td>' + fmt(enDescargaPunta, 0) + ' kWh/día</td><td>$' + fmt(diferencial, 2) + '/kWh dif.</td><td>' + fmtMXN(arbitrajeMes) + '</td><td>—</td></tr>';
         /* Update total row */
         const rows = tbody.querySelectorAll('tr');
         const totalRow = rows[rows.length - 1];
@@ -1258,7 +1276,7 @@
           labels: breakdown.map(p => p.name),
           datasets: [
             { label: 'Demanda actual (kW)',   data: breakdown.map(p => p.dMax), backgroundColor: breakdown.map(p => p.color + 'bb'), borderColor: breakdown.map(p => p.color), borderWidth: 1.5, borderRadius: 5 },
-            { label: 'Demanda objetivo (kW)', data: breakdown.map(p => p.dObj), backgroundColor: 'rgba(14,90,168,.55)', borderColor: '#0E5AA8', borderWidth: 1.5, borderRadius: 5 }
+            { label: 'Demanda con BESS (kW)', data: breakdown.map(p => p.dObj), backgroundColor: 'rgba(14,90,168,.55)', borderColor: '#0E5AA8', borderWidth: 1.5, borderRadius: 5 }
           ]
         },
         options: {
