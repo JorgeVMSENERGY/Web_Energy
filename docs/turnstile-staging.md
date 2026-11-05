@@ -1,5 +1,10 @@
 # Turnstile: integración y activación gradual
 
+> Este documento conserva el plan inicial de staging. Para el estado de preparación
+> productiva, la boundary v2 y las siguientes fases, consultar
+> [turnstile-production.md](turnstile-production.md). Staging ya fue validado;
+> no repetir su aprovisionamiento ni sustituir su secreto.
+
 Preparado en `feature/forms-turnstile`, sin despliegues. No se encontró una suite
 de pruebas existente para formularios; se incorpora una suite offline del receptor.
 
@@ -31,8 +36,9 @@ cambios porque el token viaja dentro del JSON actual.
 
 ## Secreto e IAM
 
-Terraform crea solamente metadatos de Secrets Manager para staging:
-`vmsenergy/forms/staging/turnstile`. **No** crea versiones, consulta valores ni
+Terraform crea solamente metadatos de Secrets Manager para staging y producción:
+`vmsenergy/forms/staging/turnstile` y `vmsenergy/forms/prod/turnstile`.
+El aprovisionamiento es independiente de la activación. **No** crea versiones, consulta valores ni
 recibe la Secret Key como variable. El estado y la configuración Lambda contienen
 únicamente el ARN, hostname y flag. Se usa el cifrado administrado de Secrets
 Manager; no hace falta conceder `kms:Decrypt` de una CMK. El receptor obtiene el
@@ -43,13 +49,16 @@ Introducir el valor mediante la consola de Secrets Manager, con una identidad
 administrativa autorizada y sin copiarlo a comandos, archivos, Terraform, Git,
 variables Lambda o logs. No se necesita proporcionar la Secret Key en este chat.
 El receptor solo recibe `secretsmanager:GetSecretValue` sobre el ARN exacto de su
-ambiente; el notifier y producción no reciben este permiso.
+ambiente; el notifier no recibe este permiso. La policy del receptor productivo
+queda preparada, pero la boundary v2 todavía limita Secrets Manager a staging.
 
-### Boundary comprobada en AWS (solo lectura)
+### Historial de la boundary
 
 Se consultó `VMSWebFormsExecutionBoundary`, versión predeterminada `v1`, el
 2026-11-05. Su documento no permite ninguna operación de Secrets Manager:
-**la boundary actual es incompatible** con la lectura del secreto. No se modificó.
+En esa revisión, **la boundary v1 era incompatible** con la lectura del secreto.
+Según el estado comunicado para la fase productiva, v2 ya autoriza staging y
+todavía no autoriza producción. No se consultó ni modificó AWS en esta nueva fase.
 
 `infra/forms/turnstile-boundary-staging.statement.json` contiene la declaración
 mínima propuesta para añadir a la policy existente, conservando todas las demás
@@ -80,9 +89,10 @@ la boundary administrados por Terraform en este módulo.
    Confirmar el lead y notificación solo para validaciones correctas; revisar que
    DynamoDB, SQS y logs no contengan tokens ni secretos.
 6. Mantener producción desactivada. Su flag está en false en cliente y servidor,
-   y una validación Terraform impide activarlo accidentalmente. No hay widget,
-   hostname de validación ni secreto de producción configurados. Su habilitación
-   requerirá widget/secret propios, configuración explícita y autorización nueva.
+   y una validación Terraform impide activarlo accidentalmente. La preparación
+   posterior incorpora la sitekey y ambos hostnames productivos, así como metadatos
+   del futuro secreto, sin activación. Su Secret Key aún debe almacenarse en AWS;
+   la habilitación requiere autorización nueva y el plan productivo enlazado arriba.
 
 Si se revierte staging, mantener el rechazo seguro o restaurar la versión previa
 mediante un cambio autorizado y coordinado de ambos flags. Nunca introducir un

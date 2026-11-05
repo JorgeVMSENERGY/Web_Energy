@@ -12,11 +12,11 @@
   var MAX_TOTAL_FILE_BYTES = 10 * 1024 * 1024;
   var startedAt = new WeakMap();
   var turnstileScript;
-  // Independent client rollout flags. Production needs its own widget and approval.
+  // Independent rollout flags. Production activation requires explicit approval.
   var TURNSTILE = {
     'jorgevmsenergy.github.io': { enabled: true, sitekey: '0x4AAAAAAF1Ixp8IY8H5Laik' },
-    'vmsenergy.com': { enabled: false },
-    'www.vmsenergy.com': { enabled: false }
+    'vmsenergy.com': { enabled: false, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' },
+    'www.vmsenergy.com': { enabled: false, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' }
   };
 
   function loadTurnstile() {

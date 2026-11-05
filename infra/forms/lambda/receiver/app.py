@@ -26,6 +26,7 @@ UPLOAD_URL_TTL_SECONDS = int(os.environ.get("UPLOAD_URL_TTL_SECONDS", "900"))
 TURNSTILE_ENABLED = os.environ.get("TURNSTILE_ENABLED", "false").lower() != "false"
 TURNSTILE_SECRET_ARN = os.environ.get("TURNSTILE_SECRET_ARN", "")
 TURNSTILE_HOSTNAME = os.environ.get("TURNSTILE_HOSTNAME", "")
+TURNSTILE_HOSTNAMES = os.environ.get("TURNSTILE_HOSTNAMES")
 
 MAX_FILES = 3
 MAX_FILE_BYTES = 5 * 1024 * 1024
@@ -275,7 +276,13 @@ def verify_turnstile(payload, form_type):
     if not isinstance(token, str) or not token.strip() or len(token) > 2048:
         raise RequestError(400, "turnstile_required", "Completa la verificacion de seguridad.")
     try:
-        if not TURNSTILE_SECRET_ARN or not TURNSTILE_HOSTNAME:
+        # Legacy singular variable keeps the deployed staging configuration working
+        # while code and Terraform move to an explicit JSON list. Never broaden it.
+        hostnames = (json.loads(TURNSTILE_HOSTNAMES) if TURNSTILE_HOSTNAMES is not None
+                     else [TURNSTILE_HOSTNAME] if TURNSTILE_HOSTNAME else [])
+        if (not TURNSTILE_SECRET_ARN or not isinstance(hostnames, list) or not hostnames
+                or any(not isinstance(host, str) or not re.fullmatch(
+                    r"[a-z0-9]+(?:[a-z0-9.-]*[a-z0-9])?", host) for host in hostnames)):
             raise ValueError("Missing configuration")
         # Raw SecretString, provisioned outside Terraform; never log exceptions here.
         secret = SECRETS.get_secret_value(SecretId=TURNSTILE_SECRET_ARN)["SecretString"]
@@ -303,7 +310,7 @@ def verify_turnstile(payload, form_type):
     ):
         raise RequestError(503, "turnstile_unavailable", "Verificacion no disponible. Intenta nuevamente.")
     if (verification.get("success") is not True or errors
-            or verification.get("hostname") != TURNSTILE_HOSTNAME
+            or verification.get("hostname") not in hostnames
             or verification.get("action") != form_type):
         raise RequestError(400, "turnstile_invalid", "Verificacion no valida. Intenta nuevamente.")
 

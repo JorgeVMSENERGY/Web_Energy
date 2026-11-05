@@ -1,0 +1,6 @@
+{
+  "Sid": "ReadProdFormsTurnstileSecret",
+  "Effect": "Allow",
+  "Action": "secretsmanager:GetSecretValue",
+  "Resource": "REPLACE_WITH_EXACT_PROD_TURNSTILE_SECRET_ARN_AFTER_PROVISIONING"
+}
