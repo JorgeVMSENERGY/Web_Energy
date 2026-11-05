@@ -15,13 +15,17 @@ variable "turnstile_enabled" {
 }
 
 locals {
-  turnstile_hostname = { staging = "jorgevmsenergy.github.io", prod = "" }
+  turnstile_hostnames = {
+    staging = ["jorgevmsenergy.github.io"]
+    prod    = ["vmsenergy.com", "www.vmsenergy.com"]
+  }
 }
 
 # Metadata only. Populate raw SecretString through Secrets Manager, outside Terraform.
 # No secret version resource or secret value data source may be added here.
 resource "aws_secretsmanager_secret" "turnstile" {
-  for_each = { for environment in local.forms_environments : environment => environment if var.turnstile_enabled[environment] }
+  # Keep existing resource addresses; provisioning never enables verification.
+  for_each = local.forms_environments
 
   name                    = "vmsenergy/forms/${each.key}/turnstile"
   description             = "Cloudflare Turnstile secret for forms ${each.key}; value managed out of band."

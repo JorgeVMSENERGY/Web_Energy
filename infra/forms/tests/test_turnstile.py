@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import MagicMock, patch
 
 
-def load_receiver():
+def load_receiver(environment=None):
     boto = types.ModuleType("boto3")
     boto.resource = MagicMock()
     boto.client = MagicMock(side_effect=lambda *args, **kwargs: MagicMock())
@@ -21,7 +21,9 @@ def load_receiver():
     modules = {"boto3": boto, "botocore": types.ModuleType("botocore"),
                "botocore.exceptions": exceptions, "botocore.config": config}
     env = {"TABLE_NAME": "test", "ATTACHMENT_BUCKET": "test",
-           "NOTIFICATION_QUEUE_URL": "test", "TURNSTILE_ENABLED": "false"}
+           "NOTIFICATION_QUEUE_URL": "test", "TURNSTILE_ENABLED": "false",
+           "TURNSTILE_HOSTNAME": "", "TURNSTILE_HOSTNAMES": "[]"}
+    env.update(environment or {})
     spec = importlib.util.spec_from_file_location(
         "receiver_under_test", Path(__file__).parents[1] / "lambda/receiver/app.py")
     module = importlib.util.module_from_spec(spec)
@@ -38,6 +40,7 @@ class TurnstileTests(unittest.TestCase):
         for name, value in {
             "TURNSTILE_ENABLED": True, "TURNSTILE_SECRET_ARN": "arn:test:staging",
             "TURNSTILE_HOSTNAME": "jorgevmsenergy.github.io",
+            "TURNSTILE_HOSTNAMES": '["jorgevmsenergy.github.io"]',
             "TABLE": MagicMock(), "SQS": MagicMock(), "S3": MagicMock(),
             "SECRETS": MagicMock(),
         }.items():
@@ -159,12 +162,86 @@ class TurnstileTests(unittest.TestCase):
                 self.assert_no_writes()
 
     def test_disabled_preserves_production(self):
-        with patch.object(app, "TURNSTILE_ENABLED", False), patch.object(app.urllib.request, "urlopen") as request:
+        with patch.object(app, "TURNSTILE_ENABLED", False), patch.object(app, "ENVIRONMENT", "prod"), \
+                patch.object(app.urllib.request, "urlopen") as request:
             del self.payload["turnstile_token"]
             self.event["body"] = json.dumps(self.payload)
             self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 202)
             request.assert_not_called()
             app.SECRETS.get_secret_value.assert_not_called()
+
+    def test_legacy_staging_hostname_remains_supported(self):
+        with patch.object(app, "TURNSTILE_HOSTNAMES", None), self.verify_response(self.accepted()):
+            self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 202)
+
+    def test_explicit_hostnames_never_fall_back_to_legacy(self):
+        for config in ["[]", "null", '"vmsenergy.com"', "{}", "not-json",
+                       '["*.vmsenergy.com"]', '[""]', '[null]']:
+            with self.subTest(config=config), patch.object(app, "TURNSTILE_HOSTNAMES", config), \
+                    patch.object(app.urllib.request, "urlopen") as request:
+                self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 503)
+                request.assert_not_called()
+                self.assert_no_writes()
+
+    def test_staging_rejects_both_production_hosts(self):
+        for host in ["vmsenergy.com", "www.vmsenergy.com"]:
+            with self.subTest(host=host), self.verify_response(self.accepted(hostname=host)):
+                self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 400)
+                self.assert_no_writes()
+
+    def production_settings(self):
+        return patch.multiple(app, ENVIRONMENT="prod", TURNSTILE_ENABLED=True,
+                              TURNSTILE_SECRET_ARN="arn:test:prod",
+                              TURNSTILE_HOSTNAMES='["vmsenergy.com","www.vmsenergy.com"]')
+
+    def test_production_accepts_both_exact_hosts_when_enabled(self):
+        for host in ["vmsenergy.com", "www.vmsenergy.com"]:
+            with self.subTest(host=host), self.production_settings(), \
+                    self.verify_response(self.accepted(hostname=host)):
+                self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 202)
+                app.SECRETS.get_secret_value.assert_called_with(SecretId="arn:test:prod")
+
+    def test_production_rejects_other_hosts_and_actions(self):
+        cases = [self.accepted(hostname=host) for host in [
+            "jorgevmsenergy.github.io", "evil.vmsenergy.com", "vmsenergy.com.evil.com",
+            "evilvmsenergy.com", "www.www.vmsenergy.com", "vmsenergy.com.", "VMSENERGY.COM", ""]]
+        cases.append(self.accepted(hostname="vmsenergy.com", action="careers"))
+        for result in cases:
+            with self.subTest(result=result), self.production_settings(), self.verify_response(result):
+                self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 400)
+                self.assert_no_writes()
+
+    def test_production_invalid_and_reused_tokens(self):
+        for code in ["invalid-input-response", "timeout-or-duplicate"]:
+            with self.subTest(code=code), self.production_settings(), self.verify_response(
+                    {"success": False, "error-codes": [code]}):
+                self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 400)
+                self.assert_no_writes()
+
+    def test_production_requires_token_when_enabled(self):
+        del self.payload["turnstile_token"]
+        self.event["body"] = json.dumps(self.payload)
+        with self.production_settings(), patch.object(app.urllib.request, "urlopen") as request:
+            self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 400)
+            request.assert_not_called()
+            self.assert_no_writes()
+
+    def test_production_missing_secret_fails_closed_when_enabled(self):
+        app.SECRETS.get_secret_value.side_effect = Exception("Secret has no version")
+        with self.production_settings(), patch.object(app.urllib.request, "urlopen") as request:
+            self.assertEqual(app.lambda_handler(self.event, None)["statusCode"], 503)
+            request.assert_not_called()
+            self.assert_no_writes()
+
+    def test_provisioned_production_secret_does_not_enable_validation(self):
+        module = load_receiver({"ENVIRONMENT": "prod", "TURNSTILE_ENABLED": "false",
+                                "TURNSTILE_SECRET_ARN": "arn:test:prod",
+                                "TURNSTILE_HOSTNAMES": '["vmsenergy.com","www.vmsenergy.com"]'})
+        self.assertFalse(module.TURNSTILE_ENABLED)
+        with patch.object(module.urllib.request, "urlopen") as request:
+            module.verify_turnstile({}, "contact")
+            request.assert_not_called()
+            module.SECRETS.get_secret_value.assert_not_called()
 
     def test_presign_does_not_consume_token(self):
         payload = {"form_type": "careers", "files": [
