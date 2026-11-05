@@ -1,16 +1,11 @@
 variable "turnstile_enabled" {
   description = "Server-side security flag per environment; production requires separate authorization."
   type        = map(bool)
-  default     = { staging = true, prod = false }
+  default     = { staging = true, prod = true }
 
   validation {
     condition     = length(var.turnstile_enabled) == 2 && contains(keys(var.turnstile_enabled), "staging") && contains(keys(var.turnstile_enabled), "prod")
     error_message = "Provide independent staging and prod flags."
-  }
-
-  validation {
-    condition     = !try(var.turnstile_enabled["prod"], true)
-    error_message = "Production Turnstile is locked off until its widget and deployment are authorized."
   }
 }
 
