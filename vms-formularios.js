@@ -15,8 +15,8 @@
   // Independent rollout flags. Production activation requires explicit approval.
   var TURNSTILE = {
     'jorgevmsenergy.github.io': { enabled: true, sitekey: '0x4AAAAAAF1Ixp8IY8H5Laik' },
-    'vmsenergy.com': { enabled: false, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' },
-    'www.vmsenergy.com': { enabled: false, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' }
+    'vmsenergy.com': { enabled: true, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' },
+    'www.vmsenergy.com': { enabled: true, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' }
   };
 
   function loadTurnstile() {
