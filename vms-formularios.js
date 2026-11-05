@@ -11,6 +11,69 @@
   var MAX_FILE_BYTES = 5 * 1024 * 1024;
   var MAX_TOTAL_FILE_BYTES = 10 * 1024 * 1024;
   var startedAt = new WeakMap();
+  var turnstileScript;
+  // Independent rollout flags. Production activation requires explicit approval.
+  var TURNSTILE = {
+    'jorgevmsenergy.github.io': { enabled: true, sitekey: '0x4AAAAAAF1Ixp8IY8H5Laik' },
+    'vmsenergy.com': { enabled: true, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' },
+    'www.vmsenergy.com': { enabled: true, sitekey: '0x4AAAAAAF1Uw3YVAufKwYit' }
+  };
+
+  function loadTurnstile() {
+    if (!turnstileScript) {
+      turnstileScript = new Promise(function (resolve, reject) {
+        var script = d.createElement('script');
+        function fail() {
+          w.clearTimeout(timer);
+          script.remove();
+          reject(new Error('Verificacion no disponible. Intenta nuevamente.'));
+        }
+        var timer = w.setTimeout(fail, 15000);
+        w.vmsTurnstileReady = function () { w.clearTimeout(timer); resolve(); };
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=vmsTurnstileReady';
+        script.async = true;
+        script.onerror = fail;
+        d.head.appendChild(script);
+      }).catch(function (error) {
+        turnstileScript = null;
+        throw error;
+      });
+    }
+    return turnstileScript;
+  }
+
+  async function turnstileToken(form, formType) {
+    var config = TURNSTILE[String(w.location.hostname || '').toLowerCase()];
+    if (!config || !config.enabled) return null;
+    await loadTurnstile();
+    var container = d.createElement('div');
+    form.appendChild(container);
+    var widget;
+    try {
+      return await new Promise(function (resolve, reject) {
+        var timer = w.setTimeout(fail, 120000);
+        function fail() {
+          w.clearTimeout(timer);
+          reject(new Error('No fue posible verificar la solicitud. Intenta nuevamente.'));
+        }
+        try {
+          widget = w.turnstile.render(container, {
+            sitekey: config.sitekey,
+            action: formType,
+            appearance: 'interaction-only',
+            'response-field': false,
+            callback: function (token) { w.clearTimeout(timer); resolve(token); },
+            'error-callback': fail,
+            'expired-callback': fail,
+            'timeout-callback': fail
+          });
+        } catch (_error) { fail(); }
+      });
+    } finally {
+      if (widget !== undefined) w.turnstile.remove(widget);
+      container.remove();
+    }
+  }
 
   function apiBase() {
     var host = String(w.location.hostname || '').toLowerCase();
@@ -72,6 +135,7 @@
 
     data.forEach(function (value, key) {
       if (value instanceof File) return;
+      if (key.toLowerCase().indexOf('turnstile') !== -1) return;
       if (key === 'privacidad' || key === 'website' || key === '_honey') return;
       if (key.charAt(0) === '_') return;
 
@@ -229,7 +293,10 @@
     validateFiles(files);
 
     var uploads = await uploadAttachments(base, formType, honeypot, files);
+    // Obtain a fresh single-use token after potentially slow attachment uploads.
+    var token = await turnstileToken(form, formType);
     var result = await apiRequest(base, '/submissions', {
+      turnstile_token: token,
       form_type: formType,
       website: honeypot,
       elapsed_ms: Math.max(800, Date.now() - (startedAt.get(form) || Date.now() - 800)),
