@@ -82,6 +82,15 @@ resource "aws_iam_role" "notifier" {
 data "aws_iam_policy_document" "receiver" {
   for_each = local.forms_environments
 
+  dynamic "statement" {
+    for_each = var.turnstile_enabled[each.key] ? [1] : []
+    content {
+      sid       = "ReadTurnstileSecret"
+      actions   = ["secretsmanager:GetSecretValue"]
+      resources = [aws_secretsmanager_secret.turnstile[each.key].arn]
+    }
+  }
+
   statement {
     sid = "WriteLogs"
 
@@ -247,6 +256,9 @@ resource "aws_lambda_function" "receiver" {
       ATTACHMENT_BUCKET      = aws_s3_bucket.attachments[each.key].id
       NOTIFICATION_QUEUE_URL = aws_sqs_queue.notifications[each.key].url
       UPLOAD_URL_TTL_SECONDS = "900"
+      TURNSTILE_ENABLED      = tostring(var.turnstile_enabled[each.key])
+      TURNSTILE_HOSTNAME     = local.turnstile_hostname[each.key]
+      TURNSTILE_SECRET_ARN   = try(aws_secretsmanager_secret.turnstile[each.key].arn, "")
     }
   }
 
