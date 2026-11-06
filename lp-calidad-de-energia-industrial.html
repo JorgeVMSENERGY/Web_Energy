@@ -4,6 +4,7 @@
   <meta charset="utf-8"/>
 <!-- VMS-GTM:INICIO -->
 <script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
 <!-- VMS-GTM:FIN -->
   <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
@@ -17,8 +18,8 @@
 <!-- VMS-NUCLEO:FIN -->
 
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Calidad de Energía Eléctrica Industrial | THD · Armónicos · IEEE 519 | VMS Energy</title>
-  <meta name="description" content="Diagnóstico y corrección de calidad de energía industrial en México. Desde $500,000 MXN. Armónicos THD, flicker, huecos de tensión. Cumplimiento IEEE&nbsp;519-2022 e IEC&nbsp;61000."/>
+  <title>Calidad de Energía Industrial: Caída y Huecos de Tensión, Armónicos | VMS Energy</title>
+  <meta name="description" content="Diagnóstico de calidad de tensión con analizador de calidad de energía clase A: caída de tensión, huecos (voltage sags), armónicos y flicker. Mitigación con DVR, UPS, BESS y variadores."/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="https://vmsenergy.com/lp-calidad-de-energia-industrial.html"/>
 <link rel="stylesheet" href="servicios-base.css">
@@ -67,33 +68,189 @@
       color:var(--concept-primary);background:#eef4ff;border-radius:999px;padding:2px 8px}
     /* Los iconos toman el color por herencia, no por un hex escrito en el SVG. */
     .ent-card__icon{color:var(--concept-primary)}
+    /* ── Problemas de tensión, diagnóstico como oferta, mitigación y formulario (nov 2026) ── */
+    .tension-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .tension-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:20px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);display:flex;flex-direction:column}
+    .tension-card__tag{font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px}
+    .tension-card__sintoma{font-size:1.02rem;font-weight:800;color:#0f172a;margin:0 0 8px;line-height:1.3}
+    .tension-card__desc{font-size:.86rem;color:#4b5563;margin:0 0 14px;line-height:1.55;flex:1}
+    .tension-card__link{font-size:.86rem;font-weight:800;color:var(--concept-primary);text-decoration:none}
+    .tension-card__link:hover,.tension-card__link:focus-visible{text-decoration:underline}
+    .oferta{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;margin-top:22px;background:#fff;border:1px solid rgba(23,44,81,.14);border-top:4px solid var(--concept-primary);border-radius:16px;padding:26px 24px;box-shadow:0 3px 12px rgba(8,28,54,.06)}
+    .oferta__nombre{font-size:1.25rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .oferta__lead{font-size:.92rem;color:#4b5563;margin:0 0 14px;line-height:1.55}
+    .oferta__lista{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .oferta__lista li{position:relative;padding-left:24px;font-size:.9rem;color:#1f2937;line-height:1.5}
+    .oferta__lista li::before{content:"";position:absolute;left:0;top:.42em;width:12px;height:12px;border-radius:3px;background:var(--concept-primary)}
+    .oferta__lado{background:rgba(15,76,129,.05);border-radius:12px;padding:18px}
+    .oferta__dato{margin:0 0 12px;font-size:.88rem;color:#334155;line-height:1.45}
+    .oferta__dato strong{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--concept-primary)}
+    .sub-h3{font-size:1.05rem;font-weight:800;color:#0f172a;margin:30px 0 4px}
+    .mit-wrap{margin-top:18px;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden}
+    .mit-table th[scope="row"]{font-weight:800;color:#0f172a;min-width:170px}
+    .mit-table td,.mit-table th{vertical-align:top;line-height:1.45}
+    .mit-table a{color:var(--concept-primary);font-weight:700}
+    .mit-nota{font-size:.82rem;color:#64748b;margin:10px 0 0}
+    .mit-nota a{color:var(--concept-primary);font-weight:700}
+    .dx-layout{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:start}
+    .dx-pasos{margin:16px 0 18px;padding-left:20px;color:#334155;font-size:.92rem;line-height:1.55}
+    .dx-pasos li{margin-bottom:6px}
+    .dx-form{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:22px;box-shadow:0 3px 12px rgba(8,28,54,.06);display:grid;gap:12px}
+    .dx-form__fila{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .dx-form label,.dx-form legend{font-size:.82rem;font-weight:800;color:#0f172a;display:block;margin:0 0 4px}
+    .dx-form input[type="text"],.dx-form input[type="email"],.dx-form input[type="tel"],.dx-form select,.dx-form textarea{width:100%;box-sizing:border-box;border:1px solid rgba(23,44,81,.28);border-radius:10px;padding:.62rem .7rem;font:inherit;font-size:.92rem;background:#fff;color:#0f172a}
+    .dx-form textarea{min-height:84px;resize:vertical}
+    .dx-form input:focus-visible,.dx-form select:focus-visible,.dx-form textarea:focus-visible{outline:2px solid var(--concept-primary);outline-offset:1px}
+    .dx-form fieldset{border:0;margin:0;padding:0}
+    .dx-radios{display:flex;flex-wrap:wrap;gap:8px 16px}
+    .dx-radios label{font-weight:400;display:inline-flex;gap:6px;align-items:center;margin:0}
+    .dx-form__opc{font-weight:400;color:#64748b}
+    .dx-form .form-consent{display:flex;gap:8px;align-items:flex-start;font-size:.82rem;color:#334155}
+    .dx-form .form-consent label{font-weight:400;margin:0}
+    .dx-form__feedback{margin:0;font-size:.88rem;font-weight:700;color:var(--concept-primary)}
+    .dx-form__feedback:empty{display:none}
+    @media(max-width:1100px){.tension-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:980px){.oferta,.dx-layout{grid-template-columns:1fr}}
+    @media(max-width:700px){.tension-grid{grid-template-columns:1fr}.dx-form__fila{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"Service",
-     "name":"Calidad de Energía Eléctrica Industrial",
-     "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com"},
-     "description":"Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: armónicos THD, flicker, huecos de tensión y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000.",
-     "areaServed":{"@type":"Country","name":"México"},
-     "serviceType":"Power Quality Analysis & Correction"},
-    {"@type":"FAQPage",
-     "mainEntity":[
-       {"@type":"Question","name":"¿Qué miden en un diagnóstico de calidad de energía?",
-        "acceptedAnswer":{"@type":"Answer","text":"Medimos THDi y THDv (distorsión armónica de corriente y tensión), factor de potencia real y de desplazamiento, huecos de tensión (voltage dips), flicker (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos."}},
-       {"@type":"Question","name":"¿Qué norma aplica para armónicos en México?",
-        "acceptedAnswer":{"@type":"Answer","text":"La norma de referencia internacional más usada en proyectos industriales en México es IEEE 519-2022, que fija límites de THDi y THDv según el nivel de corto circuito en el punto de acoplamiento común (PCC). También aplican IEC 61000-3-2 e IEC 61000-3-12 según la potencia del equipo, y la NMX-J-098-ANCE para instalaciones en México."}},
-       {"@type":"Question","name":"¿Cuánto tiempo dura la campaña de medición?",
-        "acceptedAnswer":{"@type":"Answer","text":"La medición mínima recomendada es de 7 días continuos para capturar variaciones de carga entre turnos, días de semana y fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción) recomendamos 14 o 28 días de medición."}},
-       {"@type":"Question","name":"¿Qué equipos utilizan para la medición de calidad de energía?",
-        "acceptedAnswer":{"@type":"Answer","text":"Utilizamos analizadores clase A según IEC 61000-4-30: Fluke 435-II, Hioki PW8001 y Dranetz HDPQ. Estos equipos registran todos los parámetros normalizados con resolución de 10/12 ciclos y almacenamiento de formas de onda para análisis post-evento."}},
-       {"@type":"Question","name":"¿La corrección de armónicos mejora el factor de potencia?",
-        "acceptedAnswer":{"@type":"Answer","text":"Depende de la solución. Los filtros activos (APF) corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los filtros pasivos corrigen armónicos específicos pero pueden introducir resonancia si no se diseñan correctamente con el sistema."}},
-       {"@type":"Question","name":"¿Cuánto cuesta un proyecto de corrección de calidad de energía?",
-        "acceptedAnswer":{"@type":"Answer","text":"El costo varía según la potencia del sistema, el número de puntos de medición y la solución técnica seleccionada. Un diagnóstico completo de 7 días con informe IEEE 519 parte de una inversión accesible para plantas medianas; la corrección mediante filtros activos o pasivos se dimensiona después del diagnóstico para garantizar que la solución sea proporcional al ahorro y las penalizaciones evitadas."}},
-       {"@type":"Question","name":"¿Los variadores de frecuencia generan problemas de calidad de energía?",
-        "acceptedAnswer":{"@type":"Answer","text":"Sí. Los variadores de frecuencia (VFDs) con rectificadores de 6 pulsos generan principalmente armónicos de orden 5° y 7° (con THDi que puede superar el 40% sin mitigación). La solución más costo-eficiente es agregar reactancias de línea en la entrada del VFD, que reducen el THDi a niveles por debajo de IEEE 519. Para plantas con múltiples VFDs, un filtro activo centralizado es la opción más económica a escala."}}
-     ]}
-  ]}
+  {
+   "@context": "https://schema.org",
+   "@graph": [
+    {
+     "@type": "Service",
+     "name": "Calidad de Energía Eléctrica Industrial",
+     "provider": {
+      "@type": "Organization",
+      "name": "VMS Energy",
+      "url": "https://vmsenergy.com"
+     },
+     "description": "Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: caída de tensión, huecos de tensión (voltage sags), armónicos THD, flicker y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000.",
+     "areaServed": {
+      "@type": "Country",
+      "name": "México"
+     },
+     "serviceType": "Power Quality Analysis & Correction"
+    },
+    {
+     "@type": "Service",
+     "name": "Diagnóstico de calidad de tensión",
+     "serviceType": "Power quality and voltage sag assessment",
+     "provider": {
+      "@type": "Organization",
+      "name": "VMS Energy",
+      "url": "https://vmsenergy.com"
+     },
+     "areaServed": {
+      "@type": "Country",
+      "name": "México"
+     },
+     "description": "Medición con analizador de calidad de energía clase A (IEC 61000-4-30) durante 7 días continuos o más, registro de caídas de tensión, huecos, interrupciones y transitorios, cruce con la bitácora de paros e informe con causas y recomendaciones de mitigación.",
+     "url": "https://vmsenergy.com/lp-calidad-de-energia-industrial.html#diagnostico"
+    },
+    {
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "¿Qué es una caída de tensión y cuánta es aceptable?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La caída de tensión es la diferencia entre la tensión en el origen del circuito y la que llega a la carga, por la impedancia de conductores y transformadores. Es sostenida: dura mientras la carga está conectada. La NOM-001-SEDE-2012 recomienda no superar 3 % en circuitos derivados ni 5 % en el total del alimentador más el derivado. Por encima de eso los motores pierden par (al 90 % de tensión, cerca del 81 % del par), arrancan con dificultad y se calientan."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Qué es un hueco de tensión (voltage sag) y en qué se diferencia de una caída de tensión?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un hueco de tensión (voltage sag o voltage dip) es una reducción breve de la tensión, típicamente entre 10 % y 90 % del valor nominal, que dura de medio ciclo a un minuto (IEEE 1159). La caída de tensión es permanente mientras opera la carga; el hueco es un evento. Los huecos suelen venir de fallas en la red de CFE o de arranques de motores grandes dentro de la planta, y solo se detectan con un analizador que registre de forma continua."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Por qué se disparan los variadores de frecuencia sin falla aparente?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La causa más común es un hueco de tensión: el bus de CD del variador baja, el equipo se protege por baja tensión y se detiene, aunque la red se recupere en milisegundos. Otras causas son transitorios por maniobra de capacitores y armónicos que calientan el rectificador. Un diagnóstico con analizador de calidad de energía permite ligar cada disparo con su evento y decidir si basta un ajuste de ride-through o se necesita un UPS, DVR o BESS."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Qué es un analizador de calidad de energía y qué registra?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un equipo de medición que se instala en el tablero, sin interrumpir la operación, y registra de forma continua la tensión y la corriente. Los analizadores clase A (IEC 61000-4-30) capturan caídas y huecos de tensión, interrupciones, sobretensiones, transitorios, armónicos, flicker y factor de potencia, con la hora exacta y la forma de onda de cada evento. Esos registros son la base del diagnóstico de calidad de tensión."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Qué conviene para los huecos de tensión: UPS, DVR o BESS?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la profundidad y duración de los huecos y de cuánta carga hay que proteger. Para PLC, control e instrumentación suele bastar un UPS. Para una línea de proceso completa con huecos de fracciones de segundo, un DVR inyecta la tensión faltante sin cargar baterías de gran tamaño. Si además hay interrupciones de segundos a minutos o un caso económico por demanda, un BESS cubre ambos. Cuando el hueco lo provoca un arranque interno, un variador o arrancador suave lo elimina en el origen."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Qué miden en un diagnóstico de calidad de energía?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Medimos caída de tensión e interrupciones, huecos de tensión (voltage sags o dips), THDi y THDv (distorsión armónica de corriente y tensión), factor de potencia real y de desplazamiento, flicker (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Qué norma aplica para armónicos en México?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La norma de referencia internacional más usada en proyectos industriales en México es IEEE 519-2022, que fija límites de THDi y THDv según el nivel de cortocircuito en el punto de acoplamiento común (PCC). También aplican IEC 61000-3-2 e IEC 61000-3-12 según la potencia del equipo generador, y la NMX-J-098-ANCE para instalaciones en México. Para parques solares conectados a la red CFE aplica adicionalmente el Código de Red de CENACE."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Cuánto tiempo dura la campaña de medición?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La medición mínima recomendada es de 7 días continuos para capturar variaciones de carga entre turnos y días laborables vs. fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción estacional) recomendamos 14 o 28 días de medición para que el perfil sea representativo del peor caso operativo."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Los variadores de frecuencia son los únicos generadores de armónicos?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los principales generadores de armónicos en una planta industrial son: variadores de frecuencia (VFDs) con rectificadores de 6 y 12 pulsos, UPS de doble conversión, rectificadores de carga de baterías, hornos de arco, fuentes de alimentación conmutadas en equipos de automatización, inversores fotovoltaicos y soldadoras de frecuencia variable. La identificación de la fuente dominante es la base para dimensionar correctamente la solución."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿La corrección de armónicos mejora el factor de potencia?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la solución. Los filtros activos (APF) corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los filtros pasivos corrigen armónicos específicos pero no compensan reactiva fundamental. Los bancos de condensadores sin filtrado pueden empeorar el problema armónico si no se diseñan con reactancia de desintonización correcta."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿El diagnóstico requiere detener la producción?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La instalación de los analizadores de calidad de energía se realiza sobre los conductores en operación mediante pinzas de corriente de efecto Hall sin contacto directo con conductores energizados. El diagnóstico no interrumpe la operación de la planta. La instalación de la solución de corrección (filtros, bancos o APF) sí puede requerir una ventana de paro breve para la conexión al tablero principal."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "¿Cuánto tiempo tarda en ver resultados después de instalar los filtros?",
+       "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Los resultados son inmediatos tras la puesta en servicio. Un filtro activo (APF) entra en compensación en microsegundos; la reducción del THDi es medible en el primer ciclo de red. La validación final se hace con una segunda campaña de medición post-instalación de 7 días para confirmar el cumplimiento de los límites de IEEE 519 y la eliminación de penalizaciones de CFE."
+       }
+      }
+     ]
+    }
+   ]
+  }
   </script>
   <nav aria-label="Barra de navegación" style="display:none" id="breadcrumb-ld">
   </nav>
@@ -307,11 +464,11 @@
     <div class="container">
       <div class="hero-eyebrow">VMS Energy &middot; Calidad de Energ&iacute;a &middot; Proyectos desde $500,000 MXN</div>
       <h1 id="heroTitle">Calidad de Energía Eléctrica Industrial</h1>
-      <p class="hero__sub">THD · Armónicos · Flicker · IEEE&nbsp;519</p>
-      <p>Medición clase A (IEC 61000-4-30), análisis de armónicos, huecos de tensión y factor de potencia, y soluciones de corrección — filtros pasivos, activos y APF — para instalaciones industriales en México.</p>
+      <p class="hero__sub">Caída y huecos de tensión · Armónicos · Flicker · IEEE&nbsp;519</p>
+      <p>Medición clase A (IEC 61000-4-30) de caídas y huecos de tensión, armónicos y factor de potencia, y soluciones de mitigación y corrección — reguladores, UPS, DVR, BESS, filtros pasivos y activos — para instalaciones industriales en México.</p>
       <div class="hero-btns on-dark">
-        <a class="btn btn--primary" href="contacto_cta.html?producto=calidad-energia#ctaForm">Solicitar Diagn&oacute;stico T&eacute;cnico</a>
-        <a class="btn btn--ghost" href="#diagnostico">Ver metodología</a>
+        <a class="btn btn--primary" href="#solicitar-diagnostico">Solicitar diagn&oacute;stico de tensi&oacute;n</a>
+        <a class="btn btn--ghost" href="#problemas-tension">Ver problemas de tensi&oacute;n</a>
       </div>
       <div class="hero-stats">
         <span class="hero-stat">IEEE 519-2022</span>
@@ -342,8 +499,8 @@
         </div>
         <div class="param-card">
           <p class="param-card__norm">IEEE 1159 / IEC 61000-4-11</p>
-          <p class="param-card__title">Huecos de tensión y transitorios (Voltage Dips)</p>
-          <p class="param-card__desc">Un hueco de tensión de 100 ms al 70% puede reiniciar un PLC, disparar un VFD o detener una línea de embotellado. El origen puede ser externo (red CFE) o interno (arranques de motores de gran potencia) y solo se detecta con medición continua.</p>
+          <p class="param-card__title">Huecos de tensión y transitorios (voltage sags / dips)</p>
+          <p class="param-card__desc">Un hueco de tensión de 100 ms al 70% puede reiniciar un PLC, disparar un VFD o detener una línea de embotellado. El origen puede ser externo (red CFE) o interno (arranques de motores de gran potencia) y solo se detecta con medición continua. <a href="#problemas-tension" style="color:var(--concept-primary);font-weight:700">Ver problemas de tensión</a></p>
         </div>
         <div class="param-card">
           <p class="param-card__norm">IEEE 519 / NMX-J-098-ANCE</p>
@@ -364,12 +521,70 @@
     </div>
   </section>
 
+
+  <!-- ===== PROBLEMAS DE TENSIÓN =====
+       Cuatro bloques, uno por nota de la serie de tensión. Las ligas apuntan por ahora a
+       secciones de esta página; cuando cada nota esté publicada, cambiar su href
+       (marcado con data-nota). -->
+  <section class="section" id="problemas-tension" aria-labelledby="tensionTitle">
+    <div class="container">
+      <span class="sec-label">Problemas de tensión</span>
+      <h2 class="sec-h2" id="tensionTitle">Caída de tensión y huecos de tensión: lo que ve en planta y lo que hay detrás</h2>
+      <p class="sec-lead">La mayoría de los paros que se atribuyen a «fallas del equipo» empiezan en la tensión. Estos son los cuatro casos que más vemos y por dónde empezar con cada uno.</p>
+      <div class="tension-grid">
+        <article class="tension-card">
+          <p class="tension-card__tag">Caída de tensión</p>
+          <h3 class="tension-card__sintoma">«Los motores no arrancan o tardan en acelerar»</h3>
+          <p class="tension-card__desc">La tensión llega por debajo de la nominal al punto de carga: conductores largos o subdimensionados, transformador al límite, taps mal ajustados o arranques directos. El par del motor cae con el cuadrado de la tensión: al 90&nbsp;% de tensión queda cerca del 81&nbsp;% del par. La NOM-001-SEDE-2012 recomienda no pasar de 3&nbsp;% en circuitos derivados y 5&nbsp;% en total.</p>
+          <a class="tension-card__link" data-nota="caida-de-tension" href="#mitigacion">Cómo se corrige la caída de tensión &rarr;</a>
+        </article>
+        <article class="tension-card">
+          <p class="tension-card__tag">Huecos de tensión (voltage sags)</p>
+          <h3 class="tension-card__sintoma">«Se disparan los variadores»</h3>
+          <p class="tension-card__desc">Un hueco es una baja breve de la tensión, de medio ciclo a un minuto, casi siempre por una falla en la red o por el arranque de una carga grande. Dura menos que un parpadeo, pero basta para que un variador se proteja por baja tensión en el bus de CD, un contactor se abra o un PLC se reinicie.</p>
+          <a class="tension-card__link" data-nota="huecos-de-tension" href="#mitigacion">Qué hacer ante los huecos de tensión &rarr;</a>
+        </article>
+        <article class="tension-card">
+          <p class="tension-card__tag">Diagnóstico</p>
+          <h3 class="tension-card__sintoma">«Paros sin causa aparente»</h3>
+          <p class="tension-card__desc">Si nadie registró qué pasó con la tensión en el segundo del paro, la causa queda en opinión. Un analizador de calidad de energía registra cada evento con hora, profundidad y duración; al cruzarlo con la bitácora de paros se ve si el origen está en la red, en la planta o en el ajuste del equipo.</p>
+          <a class="tension-card__link" data-nota="diagnostico-de-tension" href="#diagnostico">Ver el diagnóstico de calidad de tensión &rarr;</a>
+        </article>
+        <article class="tension-card">
+          <p class="tension-card__tag">Mitigación</p>
+          <h3 class="tension-card__sintoma">«Ya cambiamos el equipo y sigue fallando»</h3>
+          <p class="tension-card__desc">Cambiar el variador o el PLC no resuelve un problema de tensión. La solución depende de la profundidad y la duración del evento y de qué cargas hay que proteger: desde un ajuste de parámetros hasta un regulador, un DVR, un UPS o un BESS.</p>
+          <a class="tension-card__link" data-nota="mitigacion-de-tension" href="#mitigacion">Ver la tabla problema &rarr; solución &rarr;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== PROCESO DE DIAGNÓSTICO ===== -->
   <section class="section" id="diagnostico" aria-labelledby="diagTitle">
     <div class="container">
-      <span class="sec-label">Metodología</span>
-      <h2 class="sec-h2" id="diagTitle">De la medición al informe — en cuatro pasos</h2>
-      <p class="sec-lead">Todo proyecto de calidad de energía comienza con datos reales. No dimensionamos ni proponemos soluciones sin medición instrumentada en campo.</p>
+      <span class="sec-label">Servicio · Punto de partida</span>
+      <h2 class="sec-h2" id="diagTitle">Diagnóstico de calidad de tensión con analizador de calidad de energía</h2>
+      <p class="sec-lead">Todo proyecto de calidad de energía comienza con datos reales. No dimensionamos ni proponemos soluciones sin medición instrumentada en campo, y por eso el diagnóstico es el primer paso.</p>
+      <div class="oferta">
+        <div>
+          <p class="oferta__nombre">Diagnóstico de calidad de tensión</p>
+          <p class="oferta__lead">Un servicio cerrado para saber por qué se para la planta: medimos, registramos los eventos y entregamos las causas con una recomendación de solución.</p>
+          <ul class="oferta__lista">
+            <li><strong>Medición con analizador clase A</strong> (IEC&nbsp;61000-4-30) en los puntos críticos durante 7 días continuos; 14 o 28 días en procesos variables.</li>
+            <li><strong>Registro de eventos</strong>: caídas de tensión, huecos, interrupciones, sobretensiones y transitorios, con fecha, hora, profundidad, duración y forma de onda.</li>
+            <li><strong>Cruce con su bitácora de paros</strong> para ligar cada paro con el evento eléctrico que lo provocó, o descartarlo.</li>
+            <li><strong>Informe con causas y recomendaciones</strong>: origen de cada evento (red o planta), sensibilidad de los equipos afectados y la solución de mitigación que conviene, dimensionada.</li>
+          </ul>
+        </div>
+        <div class="oferta__lado">
+          <p class="oferta__dato"><strong>Sin paro de producción</strong>Los analizadores se instalan con pinzas de corriente sobre la operación normal.</p>
+          <p class="oferta__dato"><strong>Informe en 10 días hábiles</strong>A partir del cierre de la campaña de medición.</p>
+          <p class="oferta__dato"><strong>Siguiente paso</strong>Con las causas medidas, la mitigación se cotiza sobre datos y no sobre supuestos.</p>
+          <a class="btn btn--primary" href="#solicitar-diagnostico">Solicitar diagn&oacute;stico de tensi&oacute;n</a>
+        </div>
+      </div>
+      <h3 class="sub-h3">Cómo lo ejecutamos</h3>
       <div class="proceso-steps">
         <div class="paso">
           <div class="paso__num">1</div>
@@ -379,7 +594,7 @@
         <div class="paso">
           <div class="paso__num">2</div>
           <p class="paso__title">Medición continua — mínimo 7 días</p>
-          <p class="paso__desc">Instalamos analizadores clase A (Fluke 435-II, Hioki PW8001 o Dranetz HDPQ) en los puntos definidos. Registramos THDi, THDv, PF, flicker Pst/Plt, dips y transitorios sin interrumpir operación.</p>
+          <p class="paso__desc">Instalamos analizadores clase A (Fluke 435-II, Hioki PW8001 o Dranetz HDPQ) en los puntos definidos. Registramos caídas y huecos de tensión, interrupciones, transitorios, THDi, THDv, PF y flicker Pst/Plt sin interrumpir operación.</p>
         </div>
         <div class="paso">
           <div class="paso__num">3</div>
@@ -401,6 +616,24 @@
       <span class="sec-label">Soluciones de corrección</span>
       <h2 class="sec-h2" id="solTitle">La solución depende del problema — no al revés</h2>
       <p class="sec-lead">Seleccionamos la tecnología de corrección después del diagnóstico. Ningún filtro activo o banco de condensadores se dimensiona sin los datos de medición que justifican la inversión.</p>
+      <h3 class="sub-h3" id="mitigacion">Mitigación de huecos y caídas de tensión: qué solución para qué problema</h3>
+      <p class="mit-nota" style="margin-top:2px">Referencia general; la selección final sale del diagnóstico, según la profundidad y duración de los eventos medidos y las cargas que hay que proteger.</p>
+      <div class="mit-wrap tabla-scroll">
+        <table class="spec-table mit-table">
+          <thead>
+            <tr><th scope="col">Problema medido</th><th scope="col">Síntoma típico</th><th scope="col">Solución</th><th scope="col">Cuándo conviene</th><th scope="col">Más información</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Caída de tensión sostenida</th><td>Motores que no arrancan o se calientan; contactores que no cierran</td><td>Regulador de tensión, ajuste de taps del transformador o redimensionamiento de conductores</td><td>La tensión se mantiene baja por minutos u horas, no solo en eventos</td><td><a href="lp-estudios-electricos-industriales.html">Estudios eléctricos</a> · <a href="soluciones-transformadores-industriales.html">Transformadores</a></td></tr>
+            <tr><th scope="row">Hueco provocado por arranques internos</th><td>La tensión baja cada vez que arranca un compresor, bomba o molino</td><td>Variador de frecuencia o arrancador suave en el motor grande</td><td>El origen está dentro de la planta y coincide con los arranques</td><td><a href="soluciones-variadores-frecuencia.html">Variadores de frecuencia</a></td></tr>
+            <tr><th scope="row">Huecos cortos en cargas de control</th><td>Reinicios de PLC, pérdida de la HMI, relevadores que se abren</td><td>UPS para control e instrumentación; ajuste de ride-through en los variadores</td><td>Las cargas sensibles son pocas y de baja potencia</td><td><a href="confiabilidad-electrica-industrial.html">UPS y BESS</a> · <a href="blog-dimensionamiento-ups-industrial.html">Dimensionar un UPS</a></td></tr>
+            <tr><th scope="row">Huecos frecuentes en toda una línea de proceso</th><td>Se para la línea completa varias veces al mes</td><td>DVR (restaurador dinámico de tensión): inyecta en serie la tensión faltante en milisegundos</td><td>Huecos de fracciones de segundo en cargas de cientos de kVA donde un UPS sería muy grande</td><td>Se dimensiona con los eventos medidos</td></tr>
+            <tr><th scope="row">Huecos e interrupciones de segundos a minutos</th><td>Paros completos y reinicio largo del proceso</td><td>BESS: respaldo de minutos a horas que además recorta los picos de demanda</td><td>Hay interrupciones reales además de huecos, o un caso económico por demanda</td><td><a href="calculadora-ahorro-bess-gdmth.html">Calculadora BESS</a> · <a href="confiabilidad-electrica-industrial.html">UPS y BESS</a></td></tr>
+            <tr><th scope="row">Armónicos, flicker o factor de potencia</th><td>Calentamiento, disparos de protecciones, penalización de CFE</td><td>Reactancias, filtros pasivos o activos, bancos desintonizados o STATCOM</td><td>La medición muestra distorsión o reactiva fuera de límites</td><td><a href="#soluciones-correccion">Ver soluciones de corrección</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-h3" id="soluciones-correccion">Corrección de armónicos, reactiva y flicker</h3>
       <div class="sol-grid">
         <div class="sol-card">
           <span class="sol-card__tag">Armónicos</span>
@@ -435,7 +668,7 @@
         <div class="sol-card">
           <span class="sol-card__tag">Protección integral</span>
           <h3 class="sol-card__title">UPS con filtrado activo y acondicionador de línea</h3>
-          <p class="sol-card__desc">Los UPS de doble conversión online generan tensión sinusoidal limpia a la salida con independencia total de los armónicos en la red de entrada. Para equipos de producción altamente sensibles — máquinas CNC, servidores de proceso, PLCs críticos — el acondicionador de tensión combinado con UPS ofrece inmunidad total a dips, flicker y armónicos de red.</p>
+          <p class="sol-card__desc">Los UPS de doble conversión online generan tensión sinusoidal limpia a la salida con independencia total de los armónicos en la red de entrada. Para equipos de producción altamente sensibles — máquinas CNC, servidores de proceso, PLCs críticos — el acondicionador de tensión combinado con UPS protege contra huecos, flicker y armónicos de red, dentro de la autonomía de su banco de baterías.</p>
           <p class="sol-card__ideal">Ideal para: cargas críticas de proceso, salas de control, equipos de medición de alta precisión.</p>
         </div>
       </div>
@@ -548,10 +781,10 @@
     <div class="container">
       <span class="sec-label">Entregables</span>
       <h2 class="sec-h2" id="entTitle">¿Qué recibe el cliente?</h2>
-      <p class="sec-lead">Cada diagnóstico se entrega con documentación completa lista para respaldo ante CFE, auditorías de calidad o decisiones de inversión en corrección.</p>
+      <p class="sec-lead">Cada diagnóstico se entrega con documentación completa lista para respaldo ante CFE, auditorías de calidad o decisiones de inversión en mitigación y corrección.</p>
       <div class="entregables-grid">
         <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/><path d="M14 2v5h5"/><path d="M8.5 17c1-1.6 2-1.6 3 0s2 1.6 3 0"/></svg></div><p class="ent-card__title">Informe técnico PDF firmado (clase A IEC 61000-4-30)</p></div>
-        <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.6"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M3 14.5h18"/></svg></div><p class="ent-card__title">Datos crudos de medición en formato CSV / Excel</p></div>
+        <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.6"/><path d="M3 9h18"/><path d="M9 9v11"/><path d="M3 14.5h18"/></svg></div><p class="ent-card__title">Datos crudos y registro de eventos de tensión (CSV / Excel)</p></div>
         <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="13" width="3" height="7" rx=".6"/><rect x="8" y="8" width="3" height="12" rx=".6"/><rect x="13" y="15" width="3" height="5" rx=".6"/><rect x="18" y="11" width="3" height="9" rx=".6"/><path d="M2 20h20"/></svg></div><p class="ent-card__title">Espectro armónico por punto y por fase (hasta 50°)</p></div>
         <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><p class="ent-card__title">Comparativa THDi / THDv vs. límites IEEE 519-2022</p></div>
         <div class="ent-card"><div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="2.2"/><circle cx="19" cy="6" r="2.2"/><circle cx="12" cy="18" r="2.2"/><path d="M7.2 6h9.6"/><path d="M6.2 8l4.6 8"/><path d="M17.8 8l-4.6 8"/></svg></div><p class="ent-card__title">Modelo ETAP del sistema eléctrico con cargas medidas</p></div>
@@ -569,8 +802,28 @@
       <h2 class="sec-h2" id="faqTitle">Dudas sobre calidad de energía eléctrica</h2>
       <div class="faq-list">
         <details class="faq">
+          <summary>¿Qué es una caída de tensión y cuánta es aceptable?</summary>
+          <div class="faq-body">La <strong>caída de tensión</strong> es la diferencia entre la tensión en el origen del circuito y la que llega a la carga, por la impedancia de conductores y transformadores. Es sostenida: dura mientras la carga está conectada. La NOM-001-SEDE-2012 recomienda no superar <strong>3&nbsp;%</strong> en circuitos derivados ni <strong>5&nbsp;%</strong> en el total del alimentador más el derivado. Por encima de eso los motores pierden par (al 90&nbsp;% de tensión, cerca del 81&nbsp;% del par), arrancan con dificultad y se calientan.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué es un hueco de tensión (voltage sag) y en qué se diferencia de una caída de tensión?</summary>
+          <div class="faq-body">Un <strong>hueco de tensión</strong> (<em>voltage sag</em> o <em>voltage dip</em>) es una reducción breve de la tensión, típicamente entre 10&nbsp;% y 90&nbsp;% del valor nominal, que dura de medio ciclo a un minuto (IEEE&nbsp;1159). La caída de tensión es permanente mientras opera la carga; el hueco es un evento. Los huecos suelen venir de fallas en la red de CFE o de arranques de motores grandes dentro de la planta, y solo se detectan con un analizador que registre de forma continua.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Por qué se disparan los variadores de frecuencia sin falla aparente?</summary>
+          <div class="faq-body">La causa más común es un <strong>hueco de tensión</strong>: el bus de CD del variador baja, el equipo se protege por baja tensión y se detiene, aunque la red se recupere en milisegundos. Otras causas son transitorios por maniobra de capacitores y armónicos que calientan el rectificador. Un diagnóstico con analizador de calidad de energía permite ligar cada disparo con su evento y decidir si basta un ajuste de <em>ride-through</em> o se necesita un UPS, DVR o BESS.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué es un analizador de calidad de energía y qué registra?</summary>
+          <div class="faq-body">Es un equipo de medición que se instala en el tablero, sin interrumpir la operación, y registra de forma continua la tensión y la corriente. Los <strong>analizadores clase A</strong> (IEC&nbsp;61000-4-30) capturan caídas y huecos de tensión, interrupciones, sobretensiones, transitorios, armónicos, flicker y factor de potencia, con la hora exacta y la forma de onda de cada evento. Esos registros son la base del diagnóstico de calidad de tensión.</div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué conviene para los huecos de tensión: UPS, DVR o BESS?</summary>
+          <div class="faq-body">Depende de la profundidad y duración de los huecos y de cuánta carga hay que proteger. Para PLC, control e instrumentación suele bastar un <strong>UPS</strong>. Para una línea de proceso completa con huecos de fracciones de segundo, un <strong>DVR</strong> inyecta la tensión faltante sin cargar baterías de gran tamaño. Si además hay interrupciones de segundos a minutos o un caso económico por demanda, un <strong>BESS</strong> cubre ambos. Cuando el hueco lo provoca un arranque interno, un variador o arrancador suave lo elimina en el origen.</div>
+        </details>
+        <details class="faq">
           <summary>¿Qué miden en un diagnóstico de calidad de energía?</summary>
-          <div class="faq-body">Medimos <strong>THDi y THDv</strong> (distorsión armónica de corriente y tensión), <strong>factor de potencia</strong> real y de desplazamiento, <strong>huecos de tensión</strong> (voltage dips), <strong>flicker</strong> (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A.</div>
+          <div class="faq-body">Medimos <strong>caída de tensión</strong> e interrupciones, <strong>huecos de tensión</strong> (voltage sags o dips), <strong>THDi y THDv</strong> (distorsión armónica de corriente y tensión), <strong>factor de potencia</strong> real y de desplazamiento, <strong>flicker</strong> (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A.</div>
         </details>
         <details class="faq">
           <summary>¿Qué norma aplica para armónicos en México?</summary>
@@ -600,19 +853,80 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  
-  <!-- ===== CTA ===== -->
-  <div class="cta-band">
-    <div class="container">
-      <h2>¿Su instalación cumple con IEEE 519-2022?</h2>
-      <p>La única forma de saberlo es medir. Solicite un diagnóstico de calidad de energía sin compromiso — entregamos el informe en 10 días hábiles a partir del fin de la campaña de medición.</p>
-      <div class="cta-band-btns on-dark">
-        <a class="btn btn--primary" href="contacto_cta.html?producto=calidad-energia#ctaForm">Solicitar Diagn&oacute;stico T&eacute;cnico</a>
-        <a class="btn btn--ghost" href="lp-estudios-electricos-industriales.html">Ver estudios eléctricos</a>
+  <!-- ===== SOLICITUD DE DIAGNÓSTICO ===== -->
+  <section class="section section--alt" id="solicitar-diagnostico" aria-labelledby="dxTitle">
+    <div class="container dx-layout">
+      <div>
+        <span class="sec-label">Diagnóstico de calidad de tensión</span>
+        <h2 class="sec-h2" id="dxTitle">Solicite un diagnóstico de tensión</h2>
+        <p class="sec-lead">Cuéntenos qué pasa en su planta. Con tres datos un especialista puede decirle si conviene medir, en qué puntos y por cuánto tiempo.</p>
+        <ol class="dx-pasos">
+          <li>Revisamos su solicitud y le llamamos para entender los paros.</li>
+          <li>Le pedimos el unifilar y, si existe, la bitácora de paros.</li>
+          <li>Le enviamos el alcance de la medición: puntos, duración y entregables.</li>
+        </ol>
+        <p class="mit-nota">¿Busca estudios de cortocircuito, coordinación de protecciones o arco eléctrico? Vea <a href="lp-estudios-electricos-industriales.html">estudios eléctricos industriales</a>.</p>
       </div>
+      <form class="dx-form" id="diagTensionForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#diagTensionFeedback" data-vms-success-message="Recibimos su solicitud de diagn&oacute;stico. Un especialista le contactar&aacute; pronto.">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+        <input type="hidden" name="servicio" value="Diagnóstico de calidad de tensión">
+        <input type="hidden" name="origen" value="lp-calidad-de-energia-industrial">
+        <div class="dx-form__fila">
+          <div><label for="dxNombre">Nombre</label><input type="text" id="dxNombre" name="nombre" autocomplete="name" required></div>
+          <div><label for="dxEmpresa">Empresa</label><input type="text" id="dxEmpresa" name="empresa" autocomplete="organization" required></div>
+        </div>
+        <div class="dx-form__fila">
+          <div><label for="dxEmail">Correo</label><input type="email" id="dxEmail" name="email" autocomplete="email" required></div>
+          <div><label for="dxTel">Teléfono <span class="dx-form__opc">(opcional)</span></label><input type="tel" id="dxTel" name="telefono" autocomplete="tel"></div>
+        </div>
+        <div class="dx-form__fila">
+          <div>
+            <label for="dxPlanta">Tipo de planta</label>
+            <select id="dxPlanta" name="tipo_planta" required>
+              <option value="">Seleccione…</option>
+              <option>Alimentos y bebidas</option>
+              <option>Minería</option>
+              <option>Oil &amp; Gas</option>
+              <option>Siderurgia y metalmecánica</option>
+              <option>Química y farmacéutica</option>
+              <option>Automotriz y manufactura</option>
+              <option>Agroindustria e ingenios</option>
+              <option>Edificios, hospitales e infraestructura</option>
+              <option>Otra</option>
+            </select>
+          </div>
+          <div>
+            <label for="dxSintoma">Síntoma principal</label>
+            <select id="dxSintoma" name="sintoma" required>
+              <option value="">Seleccione…</option>
+              <option>Se disparan los variadores</option>
+              <option>Los motores no arrancan o tardan en acelerar</option>
+              <option>Paros sin causa aparente</option>
+              <option>Reinicios de PLC o equipos de control</option>
+              <option>Parpadeo en iluminación (flicker)</option>
+              <option>Calentamiento o penalización por factor de potencia</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+        <fieldset>
+          <legend>¿Tienen registro de los paros?</legend>
+          <div class="dx-radios">
+            <label><input type="radio" name="registro_paros" value="Sí, con fecha y hora" required> Sí, con fecha y hora</label>
+            <label><input type="radio" name="registro_paros" value="Algunos, sin detalle"> Algunos, sin detalle</label>
+            <label><input type="radio" name="registro_paros" value="No"> No</label>
+          </div>
+        </fieldset>
+        <div><label for="dxMensaje">Detalle <span class="dx-form__opc">(opcional)</span></label><textarea id="dxMensaje" name="mensaje" placeholder="Equipos afectados, cada cuánto ocurre, ubicación de la planta…"></textarea></div>
+        <p class="dx-form__feedback" id="diagTensionFeedback" aria-live="polite"></p>
+        <div class="form-consent">
+          <input type="checkbox" id="dxPrivacidad" name="privacidad" required>
+          <label for="dxPrivacidad">He le&iacute;do y acepto el <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Aviso de Privacidad</a>.</label>
+        </div>
+        <button class="btn btn--primary" type="submit">Solicitar diagn&oacute;stico de tensi&oacute;n</button>
+      </form>
     </div>
-  </div>
+  </section>
 </main>
 
 <footer class="site-footer site-footer--compact">
