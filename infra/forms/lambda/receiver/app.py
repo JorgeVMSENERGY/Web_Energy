@@ -6,10 +6,13 @@ import os
 import re
 import time
 import uuid
+import urllib.request
+import urllib.parse
 from datetime import datetime, timezone
 
 import boto3
 from botocore.exceptions import ClientError
+from botocore.config import Config
 
 
 LOGGER = logging.getLogger()
@@ -20,6 +23,10 @@ TABLE_NAME = os.environ["TABLE_NAME"]
 ATTACHMENT_BUCKET = os.environ["ATTACHMENT_BUCKET"]
 NOTIFICATION_QUEUE_URL = os.environ["NOTIFICATION_QUEUE_URL"]
 UPLOAD_URL_TTL_SECONDS = int(os.environ.get("UPLOAD_URL_TTL_SECONDS", "900"))
+TURNSTILE_ENABLED = os.environ.get("TURNSTILE_ENABLED", "false").lower() != "false"
+TURNSTILE_SECRET_ARN = os.environ.get("TURNSTILE_SECRET_ARN", "")
+TURNSTILE_HOSTNAME = os.environ.get("TURNSTILE_HOSTNAME", "")
+TURNSTILE_HOSTNAMES = os.environ.get("TURNSTILE_HOSTNAMES")
 
 MAX_FILES = 3
 MAX_FILE_BYTES = 5 * 1024 * 1024
@@ -65,6 +72,9 @@ DYNAMODB = boto3.resource("dynamodb")
 TABLE = DYNAMODB.Table(TABLE_NAME)
 S3 = boto3.client("s3")
 SQS = boto3.client("sqs")
+SECRETS = boto3.client("secretsmanager", config=Config(
+    connect_timeout=2, read_timeout=2, retries={"total_max_attempts": 1}
+))
 
 
 class RequestError(Exception):
@@ -205,6 +215,8 @@ def create_submission(payload, event):
     if attachments and not is_uuid(upload_session_id):
         raise RequestError(400, "invalid_upload_session", "La sesion de archivos no es valida.")
 
+    verify_turnstile(payload, form_type)
+
     submission_id = str(uuid.uuid4())
     stored_attachments = finalize_attachments(
         attachments, upload_session_id, submission_id, form_type
@@ -255,6 +267,52 @@ def create_submission(payload, event):
         extra={"submission_id": submission_id, "environment": ENVIRONMENT, "form_type": form_type},
     )
     return {"status": "received", "submission_id": submission_id}
+
+
+def verify_turnstile(payload, form_type):
+    if not TURNSTILE_ENABLED:
+        return
+    token = payload.get("turnstile_token")
+    if not isinstance(token, str) or not token.strip() or len(token) > 2048:
+        raise RequestError(400, "turnstile_required", "Completa la verificacion de seguridad.")
+    try:
+        # Legacy singular variable keeps the deployed staging configuration working
+        # while code and Terraform move to an explicit JSON list. Never broaden it.
+        hostnames = (json.loads(TURNSTILE_HOSTNAMES) if TURNSTILE_HOSTNAMES is not None
+                     else [TURNSTILE_HOSTNAME] if TURNSTILE_HOSTNAME else [])
+        if (not TURNSTILE_SECRET_ARN or not isinstance(hostnames, list) or not hostnames
+                or any(not isinstance(host, str) or not re.fullmatch(
+                    r"[a-z0-9]+(?:[a-z0-9.-]*[a-z0-9])?", host) for host in hostnames)):
+            raise ValueError("Missing configuration")
+        # Raw SecretString, provisioned outside Terraform; never log exceptions here.
+        secret = SECRETS.get_secret_value(SecretId=TURNSTILE_SECRET_ARN)["SecretString"]
+        if not isinstance(secret, str) or not secret.strip():
+            raise ValueError("Missing secret")
+        request = urllib.request.Request(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            data=urllib.parse.urlencode({"secret": secret, "response": token}).encode("utf-8"),
+            headers={"Content-Type": "application/x-www-form-urlencoded"},
+            method="POST",
+        )
+        with urllib.request.urlopen(request, timeout=5) as result:
+            verification = json.loads(result.read(16384))
+        if not isinstance(verification, dict) or not isinstance(verification.get("success"), bool):
+            raise ValueError("Invalid verification response")
+        errors = verification.get("error-codes", [])
+        if not isinstance(errors, list) or any(not isinstance(code, str) for code in errors):
+            raise ValueError("Invalid verification errors")
+    except Exception:
+        # Do not include request, token, secret, AWS response or exception details.
+        raise RequestError(503, "turnstile_unavailable", "Verificacion no disponible. Intenta nuevamente.") from None
+    if any(
+        code in {"internal-error", "invalid-input-secret", "missing-input-secret"}
+        for code in errors
+    ):
+        raise RequestError(503, "turnstile_unavailable", "Verificacion no disponible. Intenta nuevamente.")
+    if (verification.get("success") is not True or errors
+            or verification.get("hostname") not in hostnames
+            or verification.get("action") != form_type):
+        raise RequestError(400, "turnstile_invalid", "Verificacion no valida. Intenta nuevamente.")
 
 
 def finalize_attachments(attachments, upload_session_id, submission_id, form_type):
@@ -343,6 +401,8 @@ def validate_fields(value):
     result = {}
     total_length = 0
     for key, raw_value in value.items():
+        if isinstance(key, str) and ("turnstile" in key.lower() or key.lower() in {"secret", "secret_key"}):
+            raise RequestError(400, "invalid_field_name", "Un nombre de campo no es valido.")
         if not isinstance(key, str) or not FIELD_KEY_PATTERN.fullmatch(key):
             raise RequestError(400, "invalid_field_name", "Un nombre de campo no es valido.")
         if isinstance(raw_value, bool):
