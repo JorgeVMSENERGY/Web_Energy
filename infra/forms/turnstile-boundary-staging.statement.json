@@ -1,0 +1,6 @@
+{
+  "Sid": "ReadStagingTurnstileSecret",
+  "Effect": "Allow",
+  "Action": "secretsmanager:GetSecretValue",
+  "Resource": "arn:aws:secretsmanager:us-east-1:787140332697:secret:vmsenergy/forms/staging/turnstile-??????"
+}
