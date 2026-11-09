@@ -1,106 +1,83 @@
-# Turnstile: integración y activación gradual
+# Turnstile: estado y operación de staging
 
-> Este documento conserva el plan inicial de staging. Para el estado de preparación
-> productiva, la boundary v2 y las siguientes fases, consultar
-> [turnstile-production.md](turnstile-production.md). Staging ya fue validado;
-> no repetir su aprovisionamiento ni sustituir su secreto.
+## Estado actual
 
-Preparado en `feature/forms-turnstile`, sin despliegues. No se encontró una suite
-de pruebas existente para formularios; se incorpora una suite offline del receptor.
+Turnstile está activo y validado en staging y producción. La preparación y la
+activación inicial ya terminaron. Consultar [el estado productivo y el procedimiento
+de rollback](turnstile-production.md) para los detalles de producción.
+Esta documentación usa el estado validado comunicado para el cierre del release;
+la actualización documental no consulta ni modifica AWS.
+
+| Ambiente | Sitekey pública | Hostnames exactos | Activo |
+| --- | --- | --- | --- |
+| staging | `0x4AAAAAAF1Ixp8IY8H5Laik` | `jorgevmsenergy.github.io` | Sí |
+| prod | `0x4AAAAAAF1Uw3YVAufKwYit` | `vmsenergy.com`, `www.vmsenergy.com` | Sí |
+
+Los formularios productivos se probaron en ambos hostnames y las notificaciones
+se recibieron correctamente. La API productiva rechaza solicitudes sin token con
+HTTP 400 `turnstile_required`. La Lambda `vmsenergy-forms-prod-receiver` tiene
+`TURNSTILE_ENABLED=true`, estado `Active` y `LastUpdateStatus=Successful`.
 
 ## Arquitectura
 
-`vms-formularios.js` cubre todos los `form[data-vms-form-type]`, incluidos los de
-la carpeta `en`. Inserta el widget de forma explícita al enviar, con apariencia
-`interaction-only`. En Cloudflare el widget debe estar configurado como **Managed**;
-ese modo se configura en el dashboard, no en JavaScript. Staging usa sitekey
-`0x4AAAAAAF1Ixp8IY8H5Laik` y hostname exacto `jorgevmsenergy.github.io`.
+El cliente obtiene un token nuevo por intento y lo envía como `turnstile_token`
+en `/submissions`, después de subir adjuntos. El widget Managed usa apariencia
+`interaction-only`; la acción corresponde al `form_type` validado por el servidor.
+No se incorporan tokens a `fields` ni a mensajes de analítica.
 
-Cada intento obtiene un token nuevo después de subir los adjuntos y lo envía como
-`turnstile_token` en `/submissions`. La acción es el `form_type` validado por el
-servidor: quick_lead, contact, cta, careers, suggestions, supplier, more_info o
-stand_rim. El widget se elimina al terminar; no hay reintentos automáticos del POST.
-Los tokens no se incorporan a `fields` ni a mensajes de analítica.
+El receptor consulta Siteverify por HTTPS con timeout de 5 segundos. Exige éxito
+estricto, hostname exacto permitido y acción igual al tipo de formulario. Staging
+solo admite `jorgevmsenergy.github.io`; producción admite sus dos hostnames.
+No se aceptan coincidencias por sufijo ni Origin o `page_url` como autenticidad.
+La variable plural `TURNSTILE_HOSTNAMES` usa una lista JSON; la singular heredada
+solo se usa si la plural está ausente, sin ampliar los hostnames permitidos.
 
-El receptor valida Siteverify por HTTPS con timeout de 5 segundos. Exige
-`success is True`, hostname exacto y acción igual al tipo de formulario. No acepta
-hostnames por sufijo, Origin ni `page_url` como prueba de autenticidad. Cloudflare
-rechaza tokens caducados y reutilizados; no se almacenan resultados ni tokens.
-La validación ocurre antes de finalizar adjuntos, crear el lead o enviar a SQS.
-Un token ausente o rechazado devuelve 400; fallo de red, secreto o proveedor,
-configuración incompleta o respuesta malformada devuelve 503 sin detalles sensibles.
+La verificación ocurre antes de finalizar adjuntos, crear el lead o enviar a SQS.
+Un token ausente devuelve 400 `turnstile_required` si las validaciones previas de
+la solicitud pasan; uno rechazado devuelve 400 `turnstile_invalid`. Fallos de red,
+secreto, configuración o proveedor devuelven 503 `turnstile_unavailable`, sin
+bypass ni detalles sensibles. Los tokens caducados o reutilizados se rechazan.
+`/uploads/presign` conserva el comportamiento previo y no consume tokens.
 
-`/uploads/presign`, límites de archivos y CORS permanecen como estaban. No consume
-el token que después necesita `/submissions`. `api.tf` fue revisado y no requiere
-cambios porque el token viaja dentro del JSON actual.
+## Secrets Manager e IAM
 
-## Secreto e IAM
+Secrets Manager e IAM están configurados para ambos ambientes. Terraform administra
+únicamente metadatos, independientemente de la activación. Los valores son
+SecretString crudos administrados fuera de Terraform; no hay versiones ni lecturas
+de valores como data sources. No copiar Secret Keys o tokens a Git, comandos,
+variables Lambda, logs o documentación.
 
-Terraform crea solamente metadatos de Secrets Manager para staging y producción:
-`vmsenergy/forms/staging/turnstile` y `vmsenergy/forms/prod/turnstile`.
-El aprovisionamiento es independiente de la activación. **No** crea versiones, consulta valores ni
-recibe la Secret Key como variable. El estado y la configuración Lambda contienen
-únicamente el ARN, hostname y flag. Se usa el cifrado administrado de Secrets
-Manager; no hace falta conceder `kms:Decrypt` de una CMK. El receptor obtiene el
-`SecretString` crudo en cada verificación, con timeouts AWS de 2 segundos y un solo
-intento. Rotar el valor no requiere publicar el código. No usar JSON como valor.
+| Ambiente | ARN del secreto |
+| --- | --- |
+| staging | `arn:aws:secretsmanager:us-east-1:787140332697:secret:vmsenergy/forms/staging/turnstile-kRofj2` |
+| prod | `arn:aws:secretsmanager:us-east-1:787140332697:secret:vmsenergy/forms/prod/turnstile-q8Vt0E` |
 
-Introducir el valor mediante la consola de Secrets Manager, con una identidad
-administrativa autorizada y sin copiarlo a comandos, archivos, Terraform, Git,
-variables Lambda o logs. No se necesita proporcionar la Secret Key en este chat.
-El receptor solo recibe `secretsmanager:GetSecretValue` sobre el ARN exacto de su
-ambiente; el notifier no recibe este permiso. La policy del receptor productivo
-queda preparada, pero la boundary v2 todavía limita Secrets Manager a staging.
+El receptor lee el secreto en cada verificación, con timeouts AWS de 2 segundos
+y un solo intento. Rotar el valor no requiere publicar código, pero debe
+coordinarse con Cloudflare. Se utiliza el cifrado administrado de Secrets Manager.
+Cada rol receptor concede únicamente `secretsmanager:GetSecretValue` sobre su
+propio secreto exacto; el notifier no recibe ese permiso.
 
-### Historial de la boundary
+La permissions boundary vigente es **VMSWebFormsExecutionBoundary v3**. Conserva
+las siete declaraciones previas y agrega `ReadProductionTurnstileSecret`, cuya
+única acción es GetSecretValue sobre el ARN productivo exacto terminado en
+`q8Vt0E`. `ReadStagingTurnstileSecret` conserva el Resource
+`arn:aws:secretsmanager:us-east-1:787140332697:secret:vmsenergy/forms/staging/turnstile-??????`.
+Los seis `?` corresponden al sufijo asignado por AWS; la policy del rol staging
+sigue limitada al ARN exacto terminado en `kRofj2`.
 
-Se consultó `VMSWebFormsExecutionBoundary`, versión predeterminada `v1`, el
-2026-11-05. Su documento no permite ninguna operación de Secrets Manager:
-En esa revisión, **la boundary v1 era incompatible** con la lectura del secreto.
-Según el estado comunicado para la fase productiva, v2 ya autoriza staging y
-todavía no autoriza producción. No se consultó ni modificó AWS en esta nueva fase.
+Los archivos `infra/forms/turnstile-boundary-staging.statement.json` y
+`infra/forms/turnstile-boundary-prod.statement.json` contienen **declaraciones de
+referencia, NO documentos de policy completos para aplicar**. No reemplazar la
+boundary con estos fragmentos; conservar sus demás declaraciones. La boundary
+limita permisos y no los concede; este módulo no administra su documento.
+La simulación del rol productivo mostró `allowed` para su secreto e `implicitDeny`
+para staging, confirmando el aislamiento de ese rol. No es una denegación al rol
+staging. Las antiguas versiones v1/v2 no representan la boundary vigente.
 
-`infra/forms/turnstile-boundary-staging.statement.json` contiene la declaración
-mínima propuesta para añadir a la policy existente, conservando todas las demás
-declaraciones. Los seis `?` cubren solo el sufijo que AWS asigna al ARN del secreto;
-al conocerse el ARN puede usarse su valor exacto. La boundary limita permisos, no
-los concede: la policy del receptor sigue limitada al ARN exacto. El administrador
-deberá revisar también SCP, resource policies y cualquier deny explícito; comprobar
-el permiso efectivo con IAM Policy Simulator para el rol staging y el ARN real.
-No desplegar el flag activo hasta resolver esta dependencia. No hay cambios a
-la boundary administrados por Terraform en este módulo.
+## Validación y operación
 
-## Plan gradual (pendiente de ejecución autorizada)
-
-1. Confirmar Managed y restringir el widget al hostname staging en Cloudflare.
-2. Revisar y autorizar la ampliación mínima de la boundary anterior. Crear solo
-   los metadatos del secreto staging y cargar el valor por el canal seguro descrito.
-3. Preparar un plan limitado a recursos de staging: secreto, policy del receptor
-   y Lambda receptora. Revisar que no incluya recursos `prod`, notifier ni sitio
-   productivo. **No ejecutar un apply general**: este módulo comparte los dos
-   ambientes y el paquete receptor; un plan general también actualizaría producción.
-4. Publicar el receptor staging con `turnstile_enabled.staging=true`, verificar
-   los permisos efectivos y después publicar el cliente en GitHub Pages staging.
-   Coordinar ambos pasos: un cliente viejo sin token será rechazado cuando el
-   receptor esté activo; programar una ventana de cambio para evitar rechazos.
-5. Probar cada tipo de formulario en navegador, incluidos formularios ocultos,
-   múltiples formularios por página y careers con CV. Probar también bloqueo del
-   script, token ausente, acción/hostname incorrectos y segundo uso del mismo token.
-   Confirmar el lead y notificación solo para validaciones correctas; revisar que
-   DynamoDB, SQS y logs no contengan tokens ni secretos.
-6. Mantener producción desactivada. Su flag está en false en cliente y servidor,
-   y una validación Terraform impide activarlo accidentalmente. La preparación
-   posterior incorpora la sitekey y ambos hostnames productivos, así como metadatos
-   del futuro secreto, sin activación. Su Secret Key aún debe almacenarse en AWS;
-   la habilitación requiere autorización nueva y el plan productivo enlazado arriba.
-
-Si se revierte staging, mantener el rechazo seguro o restaurar la versión previa
-mediante un cambio autorizado y coordinado de ambos flags. Nunca introducir un
-fallback que admita solicitudes mientras el flag servidor siga activo.
-
-## Validaciones y límites
-
-Ejecutar desde la raíz:
+Desde la raíz:
 
 ```powershell
 python -B -m unittest discover -s infra/forms/tests -v
@@ -109,19 +86,26 @@ terraform -chdir=infra/forms validate
 git diff --check
 ```
 
-Las pruebas simulan Siteverify y AWS sin acceso a red. Cubren éxito, token ausente,
-inválido, caducado, duplicado, timeout, hostname y acción incorrectos, las ocho
-acciones, errores de Secrets Manager/proveedor, ausencia de efectos persistentes,
-flujo de adjuntos y producción desactivada. No sustituyen la prueba real del widget
-y de los permisos efectivos una vez configurado el secreto. No hay Node.js local
-disponible para ejecutar pruebas del cliente; queda pendiente verificación en navegador.
+La suite offline simula AWS y Siteverify y cubre éxito, tokens ausentes, inválidos,
+caducados o duplicados, hostname/acción incorrectos, fallos del secreto/proveedor,
+configuración incorrecta y flujo de adjuntos. Sus casos con el flag desactivado
+son escenarios de regresión del código, no el estado actual de producción.
+No sustituye la comprobación real del widget, IAM y las notificaciones. Staging
+ya fue validado; no repetir el aprovisionamiento ni sustituir su secreto.
 
-Riesgos: dependencia de Cloudflare/Secrets Manager y latencia adicional; una caída
-rechaza envíos con 503. El script bloqueado muestra error y no envía el formulario.
-Si falla la validación después de subir archivos, permanecen pendientes bajo la
-política de expiración ya existente. Presign conserva su superficie pública previa
-y no queda protegido por Turnstile con este cambio. La infraestructura compartida
-exige revisar el alcance del futuro plan para evitar actualizar producción.
+Revisar errores 400/503, estado de Lambda y recepción de notificaciones sin
+registrar tokens ni secretos. Fallos de Cloudflare/Secrets Manager impiden envíos
+y agregan latencia. Un script bloqueado o cliente antiguo puede impedir obtener
+el token; verificar con una recarga y un envío controlado.
 
-Referencia: [validación server-side de Cloudflare](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/)
-y [renderizado del widget](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/).
+Presign conserva su superficie pública previa. Los archivos subidos antes de un
+rechazo siguen sujetos a la limpieza existente. El módulo comparte ambientes y
+paquete Lambda: revisar el alcance de cualquier plan futuro para evitar cambios
+involuntarios en producción. No ejecutar un apply general como reparación rutinaria.
+
+Para un rollback staging autorizado, priorizar restaurar una versión compatible
+con la protección activa. Si se autoriza desactivarla, coordinar primero el flag
+servidor y después el cliente, registrando la ventana sin protección. Conservar
+secreto y permisos, sin tocar producción. Para reactivar, verificar secreto/IAM,
+habilitar cliente antes del receptor y probar envíos y notificaciones. Mantener
+rechazo seguro ante fallos mientras el flag servidor esté activo.
