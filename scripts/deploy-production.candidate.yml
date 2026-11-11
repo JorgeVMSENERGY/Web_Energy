@@ -1,0 +1,135 @@
+# CANDIDATE ONLY — DO NOT PLACE UNDER .github/workflows WITHOUT SEPARATE APPROVAL.
+name: Deploy production to AWS (incremental candidate)
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+  id-token: write
+
+concurrency:
+  group: vms-energy-web-production
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    name: Plan website changes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      deploy_required: ${{ steps.plan.outputs.deploy_required }}
+    steps:
+      - name: Checkout full Git history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Resolve last successful production deployment
+        id: baseline
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $Api = "repos/$env:GITHUB_REPOSITORY/actions/workflows/deploy-production.yml/runs?branch=main&status=success&per_page=100"
+          $Raw = @(gh api $Api)
+          if ($LASTEXITCODE -ne 0) { throw 'CANNOT_READ_PREVIOUS_DEPLOYS' }
+          $Data = ConvertFrom-Json -InputObject ($Raw -join "`n")
+          $Candidates = @($Data.workflow_runs | Where-Object {
+            $_.conclusion -eq 'success' -and
+            $_.status -eq 'completed' -and
+            [string]$_.id -ne $env:GITHUB_RUN_ID -and
+            $_.head_branch -eq 'main'
+          })
+          $Previous = $null
+          foreach ($Item in $Candidates) {
+            if ($Item.head_sha -notmatch '^[0-9a-f]{40}$') { continue }
+            & git merge-base --is-ancestor $Item.head_sha $env:GITHUB_SHA
+            if ($LASTEXITCODE -eq 0) { $Previous = $Item; break }
+          }
+          if ($null -eq $Previous) { throw 'NO_CONFIRMED_ANCESTOR_DEPLOYMENT' }
+          "previous=$($Previous.head_sha)" >> $env:GITHUB_OUTPUT
+          Write-Host "Previous successful deployed commit: $($Previous.head_sha)"
+
+      - name: Plan offline SHA-256 changes
+        id: plan
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $Report = Join-Path $env:RUNNER_TEMP 'incremental-plan.json'
+          & python3 -B scripts/incremental_deploy.py plan `
+            --repo . --previous '${{ steps.baseline.outputs.previous }}' `
+            --current $env:GITHUB_SHA --output $Report
+          if ($LASTEXITCODE -ne 0) { throw 'INCREMENTAL_PLAN_FAILED' }
+          $P = ConvertFrom-Json -InputObject (Get-Content $Report -Raw)
+          if ($P.status -eq 'BLOCKED') { throw "PLAN_BLOCKED: $($P.blockers -join ',')" }
+          if ($P.status -eq 'NO-OP') {
+            "deploy_required=false" >> $env:GITHUB_OUTPUT
+            Write-Host 'NO-OP: No AWS credentials, transfers or invalidations needed.'
+          }
+          elseif ($P.status -eq 'PROPOSED') {
+            if ($P.counts.DELETE -ne 0) { throw 'DELETE_NOT_ALLOWED' }
+            "deploy_required=true" >> $env:GITHUB_OUTPUT
+          }
+          else { throw 'INVALID_PLAN_STATUS' }
+
+      - name: Upload validated plan for deploy job
+        if: steps.plan.outputs.deploy_required == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: incremental-plan
+          path: ${{ runner.temp }}/incremental-plan.json
+          retention-days: 1
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy changed website files
+    needs: plan
+    if: needs.plan.outputs.deploy_required == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: production
+      url: https://d34jb94w5ivknd.cloudfront.net/
+    steps:
+      - name: Checkout full Git history
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Download validated plan
+        uses: actions/download-artifact@v4
+        with:
+          name: incremental-plan
+          path: ${{ runner.temp }}
+
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v6.2.4
+        with:
+          role-to-assume: arn:aws:iam::787140332697:role/VMSWebGitHubProductionDeploy
+          role-session-name: VMSWebProduction-${{ github.run_id }}
+          role-duration-seconds: 3600
+          aws-region: us-east-1
+          audience: sts.amazonaws.com
+          mask-aws-account-id: true
+
+      - name: Upload and verify changed objects; invalidate cache
+        shell: pwsh
+        run: |
+          & python3 -B scripts/incremental_deploy.py apply `
+            --repo . `
+            --plan (Join-Path $env:RUNNER_TEMP 'incremental-plan.json')
+          if ($LASTEXITCODE -ne 0) { throw 'INCREMENTAL_DEPLOY_FAILED' }
+
+      - name: Verify CloudFront
+        shell: pwsh
+        run: |
+          $R = Invoke-WebRequest -Uri 'https://d34jb94w5ivknd.cloudfront.net/' -Method Head
+          if ($R.StatusCode -ne 200) { throw "CloudFront HTTP $($R.StatusCode)" }
