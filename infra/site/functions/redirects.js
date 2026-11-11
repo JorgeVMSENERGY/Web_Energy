@@ -56,7 +56,9 @@ var REDIRECTS = {
 // Sitio en inglés (11 nov 2026). Páginas que existen en /en/:
 var EN_PAGES = {
   '/en/index.html': 1, '/en/about.html': 1, '/en/contact.html': 1,
-  '/en/oil-gas-solutions.html': 1, '/en/oil-gas-maintenance.html': 1, '/en/testing-commissioning.html': 1
+  '/en/oil-gas-solutions.html': 1, '/en/oil-gas-maintenance.html': 1, '/en/testing-commissioning.html': 1,
+  '/en/triol-drives.html': 1, '/en/esp-cables.html': 1, '/en/turbine-generator-controls.html': 1,
+  '/en/electrical-substations.html': 1
 };
 // URLs viejas bajo /en/ que tienen equivalente en inglés (páginas de WordPress y
 // nombres en español que Google rastreó como /en/<página>.html).
@@ -75,6 +77,10 @@ var EN_REDIRECTS = {
   '/en/oil%26gas': '/en/oil-gas-solutions.html',
   '/en/lp-mantenimiento-oil-gas.html': '/en/oil-gas-maintenance.html',
   '/en/lp-pruebas-comisionamiento-puesta-en-servicio.html': '/en/testing-commissioning.html',
+  '/en/lp-triol-variadores.html': '/en/triol-drives.html',
+  '/en/lp-cables-especiales.html': '/en/esp-cables.html',
+  '/en/lp-turbogeneradores-woodward.html': '/en/turbine-generator-controls.html',
+  '/en/lp-subestaciones-electricas.html': '/en/electrical-substations.html',
   '/en/home': '/en/'
 };
 
