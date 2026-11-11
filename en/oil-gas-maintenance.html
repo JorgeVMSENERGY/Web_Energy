@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -199,7 +199,8 @@
       .foot__grid{grid-template-columns:1fr}
     }
       .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
-</style>
+    .lang-tag{display:inline-block;margin-left:.4rem;padding:0 .28rem;border:1px solid currentColor;border-radius:4px;font-size:.62em;font-weight:700;letter-spacing:.05em;line-height:1.45;opacity:.6;vertical-align:middle}
+  </style>
 <style id="nav-submenu-styles-vms">
   nav{position:relative}
   nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
@@ -239,69 +240,55 @@
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menu</button>
         <ul id="menuList">
           <li><a href="index.html#inicio">Home</a></li>
-          <li><a href="../nosotros.html" hreflang="es">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li class="nav-item--has-submenu">
-            <a href="../soluciones.html#soluciones" hreflang="es" aria-haspopup="true" aria-expanded="false">Solutions</a>
-            <div class="submenu" role="menu" aria-label="Solutions submenu">
+            <a href="oil-gas-solutions.html#inicio" aria-haspopup="true" aria-expanded="false">Oil &amp; Gas</a>
+            <div class="submenu" role="menu" aria-label="Oil &amp; Gas submenu">
               <div class="submenu__group">
-                <a class="submenu__title" href="../soluciones.html#soluciones" hreflang="es">EPC Solutions</a>
+                <span class="submenu__title">Oil &amp; Gas across the Americas</span>
                 <ul class="submenu__list">
-                  <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es">Electromechanical Solutions</a></li>
-                  <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es">Automation &amp; Control</a></li>
-                  <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es">Industrial Solar Energy</a></li>
-                  <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es">Non-Solar Green Generation</a></li>
-                  <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es">Cogeneration &amp; Onsite Generation</a></li>
-                  <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es">Emergency Generators</a></li>
-                  <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es">Power Availability Architecture</a></li>
-                  <li><a href="oil-gas-solutions.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es">Energy Infrastructure</a></li>
-                  <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es">Industrial Lighting</a></li>
-                  <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es">Industrial HVAC</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Sectors</span>
-                <ul class="submenu__list">
-                  <li><a href="../soluciones_mineria.html#inicio" hreflang="es">Mining</a></li>
-                  <li><a href="../soluciones_alimentos_bebidas.html#inicio" hreflang="es">Food &amp; Beverage</a></li>
+                  <li><a href="oil-gas-solutions.html#inicio">EPC Solutions</a></li>
+                  <li><a href="oil-gas-maintenance.html" aria-current="page">Maintenance</a></li>
+                  <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="nav-item--has-submenu">
-            <a href="../soluciones.html#servicios" hreflang="es" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="submenu" role="menu" aria-label="Services submenu">
+            <a href="testing-commissioning.html" aria-haspopup="true" aria-expanded="false">Capabilities</a>
+            <div class="submenu" role="menu" aria-label="Capabilities submenu">
               <div class="submenu__group">
-                <a class="submenu__title" href="../especialidades.html#inicio" hreflang="es">Specialties</a>
+                <span class="submenu__title">In English</span>
                 <ul class="submenu__list">
-                  <li><a href="../especialidad_ingenieria.html#inicio" hreflang="es">Engineering</a></li>
-                  <li><a href="../especialidad_servicios.html#inicio" hreflang="es">Services</a></li>
-                  <li><a href="../especialidad_mantenimiento.html#inicio" hreflang="es">Maintenance</a></li>
-                  <li><a href="oil-gas-maintenance.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Oil &amp; Gas Maintenance</a></li>
-                  <li><a href="../lp-deteccion-control-supresion-fuego.html" hreflang="es" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Fire Detection &amp; Suppression</a></li>
-                  <li><a href="../especialidad_capacitacion.html#inicio" hreflang="es">Training</a></li>
+                  <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
+                  <li><a href="oil-gas-maintenance.html" aria-current="page">Oil &amp; Gas Maintenance</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">On our Spanish site</span>
+                <ul class="submenu__list">
+                  <li><a href="../soluciones_infraestructura_energetica.html" hreflang="es">Electrical Infrastructure<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../arquitectura-disponibilidad-electrica.html" hreflang="es">Power Availability Architecture<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-plantas-de-emergencia-industriales.html" hreflang="es">Emergency Generators<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones-variadores-frecuencia.html" hreflang="es">Variable Frequency Drives<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones_automatizacion_control.html" hreflang="es">Automation &amp; Control<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../especialidad_ingenieria.html" hreflang="es">Engineering<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../procura.html" hreflang="es">Technical Supply<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones_mineria.html" hreflang="es">Mining<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Products</span>
+                <ul class="submenu__list">
+                  <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li><a href="../procura.html#inicio" hreflang="es">Technical Supply</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="../VMShop.html" hreflang="es" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="VMShop submenu">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable</a></li>
-                  <li><a href="../lp-cables-fotovoltaicos.html" hreflang="es">Photovoltaic Cables</a></li>
-                  <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables</a></li>
-                  
-                  <li><a href="../lp-cables-extra-alta-tension.html" hreflang="es">Extra High Voltage Cables</a></li>
-                  <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a class="lang-switch" href="../lp-mantenimiento-oil-gas.html" hreflang="es" aria-label="Ver el sitio en espa&ntilde;ol" title="Espa&ntilde;ol" style="font-size:.82rem;letter-spacing:.5px;border:1px solid rgba(23,44,81,.22);border-radius:999px;padding:.32rem .62rem;color:#0f4c81;font-weight:700">ES</a></li>
-          <li><a class="cta-header" href="../contacto.html#inicio" hreflang="es">Contact</a></li>
+          <li><a class="lang-switch" href="../lp-mantenimiento-oil-gas.html" hreflang="es" lang="es" aria-label="Ver esta p&aacute;gina en espa&ntilde;ol" title="Espa&ntilde;ol" style="font-size:.82rem;letter-spacing:.5px;border:1px solid rgba(23,44,81,.22);border-radius:999px;padding:.32rem .62rem;color:#0f4c81;font-weight:700">ES</a></li>
+          <li><a class="cta-header" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -318,7 +305,7 @@
               <h1 class="hero__title">Specialized Oil &amp; Gas maintenance.</h1>
               <p class="hero__lead">Mechanical, electrical, and instrumentation.</p>
               <div class="hero__actions">
-                <a class="btn btn--primary" data-preserve-query href="../contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">Request diagnostic</a>
+                <a class="btn btn--primary" data-preserve-query href="contact.html?svc=Oil%20%26%20Gas%20maintenance&amp;src=en-oil-gas-maintenance#form">Request diagnostic</a>
                 <a class="btn btn--ghost" href="#scope">View scope</a>
               </div>
               <div class="hero__stats">
@@ -361,7 +348,7 @@
           </article>
           <article class="card reveal delay-1">
             <h3>Electrical &amp; power</h3>
-            <p>Substations, MCCs, switchgear, VFDs, protection systems, insulation testing, and power quality.</p>
+            <p>Substations, MCCs, switchgear, VFDs, protection systems, insulation testing, and power quality. After repairs or retrofits, we re-test and recommission: <a href="testing-commissioning.html" style="color:inherit;font-weight:700;text-decoration:underline">testing &amp; commissioning</a>.</p>
           </article>
           <article class="card reveal delay-2">
             <h3>Instrumentation &amp; control</h3>
@@ -467,8 +454,8 @@
             <p class="band__copy">We prepare a proposal with scope, schedule, and KPIs by region. Fast response for critical operations.</p>
           </div>
           <div class="cta">
-            <a class="btn btn--primary" data-preserve-query href="../contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">I want a diagnostic</a>
-            <a class="btn btn--ghost" href="../contacto.html" hreflang="es">Talk to a specialist</a>
+            <a class="btn btn--primary" data-preserve-query href="contact.html?svc=Oil%20%26%20Gas%20maintenance&amp;src=en-oil-gas-maintenance#form">I want a diagnostic</a>
+            <a class="btn btn--ghost" href="contact.html">Talk to a specialist</a>
           </div>
         </div>
       </div>
@@ -514,12 +501,12 @@
     <div>
       <h4 style="color:#fff;margin:0 0 10px">About</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="../aviso-privacidad.html" hreflang="es" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Privacy Notice</a></li>
-        <li><a href="../codigo-conducta.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Code of Ethics &amp; Conduct</a></li>
-        <li><a href="../politica-interna_antilavado.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Money Laundering Policy</a></li>
-        <li><a href="../politica-antisoborno.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Bribery Policy</a></li>
-        <li><a href="../directorio.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Directory</a></li>
-        <li><a href="../buzon-sugerencias.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Suggestion Box</a></li>
+        <li><a href="../aviso-privacidad.html#sitio-web" hreflang="es" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Privacy Notice<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../codigo-conducta.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Code of Ethics &amp; Conduct<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../politica-interna_antilavado.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Money Laundering Policy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../politica-antisoborno.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Bribery Policy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../directorio.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Directory<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../buzon-sugerencias.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Suggestion Box<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
       </ul>
     </div>
 
@@ -527,32 +514,33 @@
       <h4 style="color:#fff;margin:0 0 10px">Navigation</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
         <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Home</a></li>
-        <li><a href="../nosotros.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">About</a></li>
-        <li><a href="../soluciones.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Solutions</a></li>
-        <li><a href="../procura.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Technical Supply</a></li>
-        <li><a href="../VMShop.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="../contacto.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Contact</a></li>
+        <li><a href="about.html" style="color:#cbd5e1;text-decoration:none">About</a></li>
+        <li><a href="../soluciones.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Solutions<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../procura.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Technical Supply<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../VMShop.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">VMShop<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="contact.html" style="color:#cbd5e1;text-decoration:none">Contact</a></li>
       </ul>
     </div>
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">EPC Services</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Electromechanical Solutions</a></li>
-        <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Automation &amp; Control</a></li>
-        <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Solar Energy</a></li>
-        <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Non-Solar Green Generation</a></li>
-        <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Cogeneration &amp; Onsite Generation</a></li>
-        <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Emergency Generators</a></li>
-        <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Power Availability Architecture</a></li>
+        <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Electromechanical Solutions<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Automation &amp; Control<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Solar Energy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Non-Solar Green Generation<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Cogeneration &amp; Onsite Generation<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Emergency Generators<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Power Availability Architecture<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
         <li><a href="oil-gas-solutions.html#inicio">Oil &amp; Gas</a></li>
-        <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Energy Infrastructure</a></li>
-        <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Lighting</a></li>
-        <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial HVAC</a></li>
+        <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Energy Infrastructure<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Lighting<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial HVAC<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
       </ul>
     </div>
   </div>
     <div class="foot-note">Developed by the VMS Energy digital team &middot; v10.1<br>All rights reserved 2026 VMS Energy</div>
+  </footer>
 
 
   <script>
@@ -561,7 +549,7 @@
       if(!links.length) return;
       var query = location.search;
       if(!query) return;
-      var clean = query.replace(/^?/, "");
+      var clean = query.replace(/^\?/, "");
       links.forEach(function(link){
         var href = link.getAttribute('href');
         if(!href) return;

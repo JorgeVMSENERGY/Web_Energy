@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -321,6 +321,7 @@
       .process-slide p{font-size:1rem}
       .foot .container{grid-template-columns:1fr;gap:18px;padding:28px 20px}
     }
+      .lang-tag{display:inline-block;margin-left:.4rem;padding:0 .28rem;border:1px solid currentColor;border-radius:4px;font-size:.62em;font-weight:700;letter-spacing:.05em;line-height:1.45;opacity:.6;vertical-align:middle}
   </style>
   <script type="application/ld+json">
     {
@@ -328,7 +329,7 @@
       "@type":"Service",
       "name":"Oil & Gas",
       "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-      "areaServed":"Latin America and the Caribbean",
+      "areaServed":["Mexico","United States","Central America","Caribbean"],
       "serviceType":"Oil & Gas process integration and EPC solutions",
       "inLanguage":"en"
     }
@@ -498,69 +499,55 @@
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuList">Menu</button>
         <ul id="menuList">
           <li><a href="index.html#inicio">Home</a></li>
-          <li><a href="../nosotros.html" hreflang="es">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li class="nav-item--has-submenu">
-            <a href="../soluciones.html#soluciones" hreflang="es" aria-haspopup="true" aria-expanded="false">Solutions</a>
-            <div class="submenu" role="menu" aria-label="Solutions submenu">
+            <a href="oil-gas-solutions.html#inicio" aria-haspopup="true" aria-expanded="false">Oil &amp; Gas</a>
+            <div class="submenu" role="menu" aria-label="Oil &amp; Gas submenu">
               <div class="submenu__group">
-                <a class="submenu__title" href="../soluciones.html#soluciones" hreflang="es">EPC Solutions</a>
+                <span class="submenu__title">Oil &amp; Gas across the Americas</span>
                 <ul class="submenu__list">
-                  <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es">Electromechanical Solutions</a></li>
-                  <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es">Automation &amp; Control</a></li>
-                  <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es">Industrial Solar Energy</a></li>
-                  <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es">Non-Solar Green Generation</a></li>
-                  <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es">Cogeneration &amp; Onsite Generation</a></li>
-                  <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es">Emergency Generators</a></li>
-                  <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es">Power Availability Architecture</a></li>
-                  <li><a href="oil-gas-solutions.html#inicio">Oil &amp; Gas</a></li>
-                  <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es">Energy Infrastructure</a></li>
-                  <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es">Industrial Lighting</a></li>
-                  <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es">Industrial HVAC</a></li>
-                </ul>
-              </div>
-              <div class="submenu__group">
-                <span class="submenu__title">Sectors</span>
-                <ul class="submenu__list">
-                  <li><a href="../soluciones_mineria.html#inicio" hreflang="es">Mining</a></li>
-                  <li><a href="../soluciones_alimentos_bebidas.html#inicio" hreflang="es">Food &amp; Beverage</a></li>
+                  <li><a href="oil-gas-solutions.html#inicio" aria-current="page">EPC Solutions</a></li>
+                  <li><a href="oil-gas-maintenance.html">Maintenance</a></li>
+                  <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="nav-item--has-submenu">
-            <a href="../soluciones.html#servicios" hreflang="es" aria-haspopup="true" aria-expanded="false">Services</a>
-            <div class="submenu" role="menu" aria-label="Services submenu">
+            <a href="testing-commissioning.html" aria-haspopup="true" aria-expanded="false">Capabilities</a>
+            <div class="submenu" role="menu" aria-label="Capabilities submenu">
               <div class="submenu__group">
-                <a class="submenu__title" href="../especialidades.html#inicio" hreflang="es">Specialties</a>
+                <span class="submenu__title">In English</span>
                 <ul class="submenu__list">
-                  <li><a href="../especialidad_ingenieria.html#inicio" hreflang="es">Engineering</a></li>
-                  <li><a href="../especialidad_servicios.html#inicio" hreflang="es">Services</a></li>
-                  <li><a href="../especialidad_mantenimiento.html#inicio" hreflang="es">Maintenance</a></li>
-                  <li><a href="oil-gas-maintenance.html" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Oil &amp; Gas Maintenance</a></li>
-                  <li><a href="../lp-deteccion-control-supresion-fuego.html" hreflang="es" style="background:#0f4c81;color:#fff;border-radius:999px;padding:.2rem .6rem;display:inline-block">Fire Detection &amp; Suppression</a></li>
-                  <li><a href="../especialidad_capacitacion.html#inicio" hreflang="es">Training</a></li>
+                  <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
+                  <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">On our Spanish site</span>
+                <ul class="submenu__list">
+                  <li><a href="../soluciones_infraestructura_energetica.html" hreflang="es">Electrical Infrastructure<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../arquitectura-disponibilidad-electrica.html" hreflang="es">Power Availability Architecture<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-plantas-de-emergencia-industriales.html" hreflang="es">Emergency Generators<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones-variadores-frecuencia.html" hreflang="es">Variable Frequency Drives<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones_automatizacion_control.html" hreflang="es">Automation &amp; Control<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../especialidad_ingenieria.html" hreflang="es">Engineering<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../procura.html" hreflang="es">Technical Supply<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../soluciones_mineria.html" hreflang="es">Mining<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                </ul>
+              </div>
+              <div class="submenu__group">
+                <span class="submenu__title">Products</span>
+                <ul class="submenu__list">
+                  <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                  <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
                 </ul>
               </div>
             </div>
           </li>
-          <li><a href="../procura.html#inicio" hreflang="es">Technical Supply</a></li>
-          <li class="nav-item--has-submenu">
-            <a href="../VMShop.html" hreflang="es" aria-haspopup="true" aria-expanded="false">VMShop</a>
-            <div class="submenu" role="menu" aria-label="VMShop submenu">
-              <div class="submenu__group">
-                <ul class="submenu__list">
-                  <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable</a></li>
-                  <li><a href="../lp-cables-fotovoltaicos.html" hreflang="es">Photovoltaic Cables</a></li>
-                  <li><a href="../lp-cables-especiales.html" hreflang="es">ESP Cables</a></li>
-
-                  <li><a href="../lp-cables-extra-alta-tension.html" hreflang="es">Extra High Voltage Cables</a></li>
-                  <li><a href="../lp-triol-variadores.html" hreflang="es">Triol Drives</a></li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li><a class="lang-switch" href="../soluciones_oil_gas.html#inicio" hreflang="es" aria-label="Ver el sitio en espa&ntilde;ol" title="Espa&ntilde;ol" style="font-size:.82rem;letter-spacing:.5px;border:1px solid rgba(23,44,81,.22);border-radius:999px;padding:.32rem .62rem;color:#0f4c81;font-weight:700">ES</a></li>
-          <li><a class="cta-header" href="../contacto.html#inicio" hreflang="es">Contact</a></li>
+          <li><a class="lang-switch" href="../soluciones_oil_gas.html" hreflang="es" lang="es" aria-label="Ver esta p&aacute;gina en espa&ntilde;ol" title="Espa&ntilde;ol" style="font-size:.82rem;letter-spacing:.5px;border:1px solid rgba(23,44,81,.22);border-radius:999px;padding:.32rem .62rem;color:#0f4c81;font-weight:700">ES</a></li>
+          <li><a class="cta-header" href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -576,7 +563,7 @@
         <h1 id="heroTitle">Oil &amp; Gas for Critical Operations</h1>
         <p>Electrical and control engineering and integration for Oil &amp; Gas with a focus on process safety, reliability, and regulatory compliance.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="../contacto_cta.html#ctaForm" data-cta="hero-cotizar">Request technical diagnostic</a>
+          <a class="btn btn--primary" href="contact.html?src=en-oil-gas-solutions#form" data-cta="hero-cotizar">Request technical diagnostic</a>
           <a class="btn btn--secondary" href="oil-gas-maintenance.html" data-cta="hero-mantenimiento">Oil &amp; Gas Maintenance</a>
           <a class="btn btn--secondary" href="tel:+523338130739" data-cta="hero-llamar">Call now</a>
         </div>
@@ -590,7 +577,7 @@
             <h2 id="valorTitle">What we solve</h2>
             <p>End-to-end Oil &amp; Gas solutions to improve operational continuity, reduce risk, and raise process reliability.</p>
           </div>
-          <a class="btn btn--secondary" href="../soluciones.html#inicio" hreflang="es">View other solutions</a>
+          <a class="btn btn--secondary" href="index.html#solutionsTitle">View all capabilities</a>
         </div>
         <div class="svc-grid">
           <article class="svc-card">
@@ -620,7 +607,7 @@
             <div class="svc-card__body">
               <span class="svc-card__tag">Commissioning</span>
               <h3>Process Commissioning</h3>
-              <p>Functional testing, process safety validation, and documented operational handover.</p>
+              <p>Functional testing, process safety validation, and documented operational handover. <a href="testing-commissioning.html" style="color:#0f4c81;font-weight:700">How we commission &rsaquo;</a></p>
             </div>
           </article>
         </div>
@@ -682,7 +669,7 @@
           </div>
           <div class="process-dots" id="processDots" aria-label="Stage indicators"></div>
           <div class="process-cta">
-            <a class="btn btn--primary" href="../contacto_cta.html#ctaForm">Request technical proposal</a>
+            <a class="btn btn--primary" href="contact.html?src=en-oil-gas-solutions#form">Request technical proposal</a>
           </div>
         </div>
       </div>
@@ -691,38 +678,71 @@
     <section class="cases" id="casos" aria-labelledby="casosTitle">
       <div class="container">
         <h2 id="casosTitle" class="section-title">Related cases</h2>
-        <p class="section-lead">Experience in electrical and control integration for high-criticality Oil &amp; Gas facilities.</p>
+        <p class="section-lead">Selected Oil &amp; Gas work from our project record: offshore platforms in the Campeche Sound and onshore fields in Tabasco.</p>
         <div class="case-grid">
           <article class="case">
-            <img src="../assets/img/Projects/infraestructura_electrica/Grupo_Dragon_Planta_Geotermica_Sistema_de_Generacion_y_Sincronia.webp" alt="Oil &amp; Gas infrastructure with control integration" loading="lazy" decoding="async">
+            <img src="../assets/img/Projects/oil-gas/balam_subestacion_y_seccionamiento.webp" alt="Pemex Balam platforms: 34.5 kV sectionalizers (illustration)" loading="lazy" decoding="async">
             <div class="case__body">
-              <span class="case__tag">Electrical Infrastructure</span>
-              <h3>Geothermal Plant</h3>
-              <p>Electrical and control integration for operational continuity in Oil &amp; Gas facilities.</p>
+              <span class="case__tag">34.5 kV switching and substation</span>
+              <h3>Pemex Balam platforms: 34.5 kV sectionalizers</h3>
+              <p><small>Offshore &middot; Campeche Sound</small><br>Supply, installation, VLF testing, and commissioning of 34.5 kV sectionalizers, plus primary testing and rehabilitation of 14 transformers on Balam-A.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="../contacto_cta.html#ctaForm">Request similar project</a>
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
               </div>
             </div>
           </article>
           <article class="case">
-            <img src="../assets/img/Projects/infraestructura_electrica/CH_Angostura_Sistemas_de_Cable_de_Potencia_400_kV.webp" alt="KEI 400 kV power cable systems" loading="lazy" decoding="async">
+            <img src="../assets/img/Projects/oil-gas/ek_a_sistema_de_energia_ininterrumpida.webp" alt="Pemex EK-A platform: 7.5 MVA transformer (illustration)" loading="lazy" decoding="async">
             <div class="case__body">
-              <span class="case__tag">Electrical EPC</span>
-              <h3>Angostura Hydro 400 kV</h3>
-              <p>KEI power cable systems delivered in critical environments.</p>
+              <span class="case__tag">Power systems</span>
+              <h3>Pemex EK-A platform: 7.5 MVA transformer</h3>
+              <p><small>Offshore &middot; Campeche Sound</small><br>Supply with FAT witnessing, installation, and performance testing of a 7.5 MVA transformer and a 9-way 34.5 kV sectionalizer.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="../contacto_cta.html#ctaForm">Request similar project</a>
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
               </div>
             </div>
           </article>
           <article class="case">
-            <img src="../assets/img/Projects/infraestructura_electrica/Ingenio_Tres_Valles_Incremento_de_Capacidad_en_Subestaciones_MT.webp" alt="MV substation capacity expansion" loading="lazy" decoding="async">
+            <img src="../assets/img/Projects/oil-gas/SLB_control_y_operacion_variadores.webp" alt="SLB: 1,000 HP medium-voltage VFDs (illustration)" loading="lazy" decoding="async">
             <div class="case__body">
-              <span class="case__tag">Food &amp; Beverage</span>
-              <h3>MV Substations</h3>
-              <p>Capacity expansion with operational continuity at the plant.</p>
+              <span class="case__tag">MV drives</span>
+              <h3>SLB: 1,000 HP medium-voltage VFDs</h3>
+              <p><small>Onshore &middot; Tabasco</small><br>Engineering, supply, installation, and startup of two 1,000 HP Triol medium-voltage VFDs (NEMA 4X) and 4.16 kV distribution switchgear.</p>
               <div class="case__cta">
-                <a class="btn btn--primary btn--tiny" href="../contacto_cta.html#ctaForm">Request similar project</a>
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
+              </div>
+            </div>
+          </article>
+          <article class="case">
+            <img src="../assets/img/Projects/oil-gas/Baker_hughes_control_y_operacion_variadores.webp" alt="Baker Hughes: 14 outdoor VFDs (illustration)" loading="lazy" decoding="async">
+            <div class="case__body">
+              <span class="case__tag">Artificial lift</span>
+              <h3>Baker Hughes: 14 outdoor VFDs</h3>
+              <p><small>Campeche</small><br>Supply, installation, and startup of 14 outdoor E-Cabinet variable frequency drives for electric submersible pumping.</p>
+              <div class="case__cta">
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
+              </div>
+            </div>
+          </article>
+          <article class="case">
+            <img src="../assets/img/Projects/oil-gas/ku_maloob_zaap_modernizacion_de_turbinas_de-gas.webp" alt="Pemex: gas turbine control upgrade (illustration)" loading="lazy" decoding="async">
+            <div class="case__body">
+              <span class="case__tag">Generation &amp; control</span>
+              <h3>Pemex: gas turbine control upgrade</h3>
+              <p><small>Offshore &middot; Campeche</small><br>Control system upgrade for two gas turbines, plus generator protection relay adaptation and wiring for turbogenerators TG-01 and TG-02 at Akal-J.</p>
+              <div class="case__cta">
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
+              </div>
+            </div>
+          </article>
+          <article class="case">
+            <img src="../assets/img/Projects/oil-gas/nohoch_a2_sistema_electrico_y_ccm.webp" alt="Pemex Ku-Maloob-Zaap: VFD commissioning (illustration)" loading="lazy" decoding="async">
+            <div class="case__body">
+              <span class="case__tag">Medium-voltage VFDs</span>
+              <h3>Pemex Ku-Maloob-Zaap: VFD commissioning</h3>
+              <p><small>Offshore &middot; Ku-Maloob-Zaap</small><br>Commissioning of a 900 HP, 4,160 V Robicon Perfect Harmony drive (Ku-H) and rehabilitation of a 10-drive ESP control room (Ayatsil-C).</p>
+              <div class="case__cta">
+                <a class="btn btn--primary btn--tiny" href="contact.html?src=en-oil-gas-solutions#form">Request a similar project</a>
               </div>
             </div>
           </article>
@@ -771,11 +791,11 @@
       <div class="container">
         <div class="box">
           <h2 id="ctaFinalTitle">Ready to advance your Oil &amp; Gas project?</h2>
-          <p>We define scope, risks, and execution strategy to deliver a technical proposal in less than 24 business hours.</p>
+          <p>Tell us about your asset and a specialist will contact you within 24 business hours to define scope, risks, and execution strategy.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="../contacto_cta.html#ctaForm" data-cta="final-cotizar">Request technical proposal</a>
+            <a class="btn btn--primary" href="contact.html?src=en-oil-gas-solutions#form" data-cta="final-cotizar">Request technical proposal</a>
             <a class="btn btn--secondary" href="oil-gas-maintenance.html" data-cta="final-mantenimiento">Go to Oil &amp; Gas maintenance</a>
-            <a class="btn btn--secondary" href="../soluciones.html#inicio" hreflang="es" data-cta="final-volver-soluciones">Back to solutions</a>
+            <a class="btn btn--secondary" href="testing-commissioning.html" data-cta="final-commissioning">Testing &amp; commissioning</a>
           </div>
         </div>
       </div>
@@ -821,12 +841,12 @@
     <div>
       <h4 style="color:#fff;margin:0 0 10px">About</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="../aviso-privacidad.html" hreflang="es" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Privacy Notice</a></li>
-        <li><a href="../codigo-conducta.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Code of Ethics &amp; Conduct</a></li>
-        <li><a href="../politica-interna_antilavado.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Money Laundering Policy</a></li>
-        <li><a href="../politica-antisoborno.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Bribery Policy</a></li>
-        <li><a href="../directorio.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Directory</a></li>
-        <li><a href="../buzon-sugerencias.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Suggestion Box</a></li>
+        <li><a href="../aviso-privacidad.html#sitio-web" hreflang="es" target="_blank" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Privacy Notice<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../codigo-conducta.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Code of Ethics &amp; Conduct<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../politica-interna_antilavado.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Money Laundering Policy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../politica-antisoborno.html" hreflang="es" rel="noopener noreferrer" style="color:#cbd5e1;text-decoration:none">Anti-Bribery Policy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../directorio.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Directory<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../buzon-sugerencias.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">Suggestion Box<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
       </ul>
     </div>
 
@@ -834,28 +854,28 @@
       <h4 style="color:#fff;margin:0 0 10px">Navigation</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
         <li><a href="index.html#inicio" style="color:#cbd5e1;text-decoration:none">Home</a></li>
-        <li><a href="../nosotros.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">About</a></li>
-        <li><a href="../soluciones.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Solutions</a></li>
-        <li><a href="../procura.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Technical Supply</a></li>
-        <li><a href="../VMShop.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">VMShop</a></li>
-        <li><a href="../contacto.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Contact</a></li>
+        <li><a href="about.html" style="color:#cbd5e1;text-decoration:none">About</a></li>
+        <li><a href="../soluciones.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Solutions<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../procura.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Technical Supply<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../VMShop.html" hreflang="es" style="color:#cbd5e1;text-decoration:none">VMShop<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="contact.html" style="color:#cbd5e1;text-decoration:none">Contact</a></li>
       </ul>
     </div>
 
     <div>
       <h4 style="color:#fff;margin:0 0 10px">EPC Services</h4>
       <ul style="list-style:none;margin:0;padding:0;color:#cbd5e1;font-size:14px;line-height:1.9">
-        <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Electromechanical Solutions</a></li>
-        <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Automation &amp; Control</a></li>
-        <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Solar Energy</a></li>
-        <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Non-Solar Green Generation</a></li>
-        <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Cogeneration &amp; Onsite Generation</a></li>
-        <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Emergency Generators</a></li>
-        <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Power Availability Architecture</a></li>
+        <li><a href="../soluciones_electromecanicas.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Electromechanical Solutions<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_automatizacion_control.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Automation &amp; Control<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_solar_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Solar Energy<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_verde_no_solar.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Non-Solar Green Generation<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../generacion-en-sitio-cogeneracion.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Cogeneration &amp; Onsite Generation<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../lp-plantas-de-emergencia-industriales.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Emergency Generators<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../arquitectura-disponibilidad-electrica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Power Availability Architecture<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
         <li><a href="oil-gas-solutions.html#inicio" style="color:#cbd5e1;text-decoration:none">Oil &amp; Gas</a></li>
-        <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Energy Infrastructure</a></li>
-        <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Lighting</a></li>
-        <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial HVAC</a></li>
+        <li><a href="../soluciones_infraestructura_energetica.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Energy Infrastructure<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_iluminacion_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial Lighting<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+        <li><a href="../soluciones_hvac_industrial.html#inicio" hreflang="es" style="color:#cbd5e1;text-decoration:none">Industrial HVAC<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
       </ul>
     </div>
   </div>
@@ -1004,7 +1024,7 @@
         + '<ul class="catalogx__tags">' + item.tags.map(function(t){ return '<li>' + t + '</li>'; }).join('') + '</ul>'
         + '<div class="catalogx__actions">'
         + '<a class="btn btn--secondary" href="#inicio">View detail</a>'
-        + '<a class="btn btn--primary" href="../contacto_cta.html#ctaForm">Request technical proposal</a>'
+        + '<a class="btn btn--primary" href="contact.html?src=en-oil-gas-solutions#form">Request technical proposal</a>'
         + '</div>'
         + '</article>';
     }).join('');
@@ -1013,102 +1033,6 @@
   }
   search.addEventListener('input', render);
   render();
-})();
-</script>
-<script id="cases-auto-runtime">
-(function(){
-  const casesRoot = document.getElementById("casos");
-  const grid = casesRoot ? casesRoot.querySelector(".case-grid") : null;
-  if(!grid) return;
-
-  const ctaLink = grid.querySelector(".case .case__cta a");
-  const ctaText = ctaLink ? (ctaLink.textContent || "").trim() : "Request project";
-  const ctaHref = ctaLink ? (ctaLink.getAttribute("href") || "../contacto_cta.html#ctaForm") : "../contacto_cta.html#ctaForm";
-  const fallbackTag = (grid.querySelector(".case .case__tag")?.textContent || "EPC Case").trim();
-
-  function escapeHTML(str){
-    return String(str || "").replace(/[&<>\"']/g, function(s){
-      return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s];
-    });
-  }
-
-  function normalizePath(path){
-    return String(path || "").replace(/\\/g, "/").replace(/^\.\//, "");
-  }
-
-  function inferSectorFromPath(path){
-    const p = normalizePath(path).toLowerCase();
-    if(p.indexOf("/oil-gas/") > -1 || p.indexOf("/oil&gas/") > -1) return "oilgas";
-    if(p.indexOf("/infraestructura_electrica/") > -1) return "energia";
-    if(p.indexOf("/soluciones_industriales/") > -1) return "industrial";
-    return "";
-  }
-
-  function inferSectorFromPage(){
-    const page = (location.pathname.split("/").pop() || "").toLowerCase();
-    if(page.indexOf("oil-gas") > -1 || page.indexOf("oil_gas") > -1) return "oilgas";
-    if(page.indexOf("infraestructura_energetica") > -1) return "energia";
-    if(page.indexOf("especialidad_") === 0) return "energia";
-    return "industrial";
-  }
-
-  function makeSummary(item, sector){
-    if(Array.isArray(item.bullets) && item.bullets.length){
-      return String(item.bullets[0]);
-    }
-    if(sector === "oilgas") return "Electrical and control integration for operational continuity.";
-    if(sector === "energia") return "Technical execution focused on reliability and operational safety.";
-    return "EPC implementation with on-site integration and commissioning.";
-  }
-
-  function sectorTag(sector){
-    if(sector === "oilgas") return "Oil & Gas";
-    if(sector === "energia") return "Electrical Infrastructure";
-    if(sector === "industrial") return "Industrial Solutions";
-    return fallbackTag;
-  }
-
-  fetch("../assets/data/landing-projects.json", { cache: "no-store" })
-    .then(function(res){
-      if(!res.ok) throw new Error("manifest-not-found");
-      return res.json();
-    })
-    .then(function(items){
-      const targetSector = inferSectorFromPage();
-      const normalized = (Array.isArray(items) ? items : []).map(function(item){
-        const img = normalizePath(item && item.img ? item.img : "");
-        const sector = item && item.sector ? String(item.sector) : inferSectorFromPath(img);
-        const title = item && item.title ? String(item.title) : "Reference case";
-        const bullets = Array.isArray(item && item.bullets) ? item.bullets : [];
-        if(!img || !sector) return null;
-        return { img: img, sector: sector, title: title, bullets: bullets };
-      }).filter(Boolean);
-
-      const selected = normalized.filter(function(p){ return p.sector === targetSector; }).slice(0, 3);
-      if(!selected.length) return;
-
-      const tag = sectorTag(targetSector);
-      grid.innerHTML = selected.map(function(p){
-        const summary = makeSummary(p, targetSector);
-        const imgPath = p.img.indexOf('http') === 0 ? p.img : '../' + p.img;
-        return (
-          '<article class="case">' +
-            '<img src="' + escapeHTML(imgPath) + '" alt="' + escapeHTML(p.title) + '" loading="lazy" decoding="async">' +
-            '<div class="case__body">' +
-              '<span class="case__tag">' + escapeHTML(tag) + '</span>' +
-              '<h3>' + escapeHTML(p.title) + '</h3>' +
-              '<p>' + escapeHTML(summary) + '</p>' +
-              '<div class="case__cta">' +
-                '<a class="btn btn--primary btn--tiny" href="' + escapeHTML(ctaHref) + '">' + escapeHTML(ctaText) + '</a>' +
-              '</div>' +
-            '</div>' +
-          '</article>'
-        );
-      }).join("");
-    })
-    .catch(function(){
-      // Keep original static cases as fallback.
-    });
 })();
 </script>
 <script id="ux-nav-enhancer">
