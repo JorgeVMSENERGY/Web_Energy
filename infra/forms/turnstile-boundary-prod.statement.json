@@ -1,6 +1,6 @@
 {
-  "Sid": "ReadProdFormsTurnstileSecret",
+  "Sid": "ReadProductionTurnstileSecret",
   "Effect": "Allow",
   "Action": "secretsmanager:GetSecretValue",
-  "Resource": "REPLACE_WITH_EXACT_PROD_TURNSTILE_SECRET_ARN_AFTER_PROVISIONING"
+  "Resource": "arn:aws:secretsmanager:us-east-1:787140332697:secret:vmsenergy/forms/prod/turnstile-q8Vt0E"
 }
