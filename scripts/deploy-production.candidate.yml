@@ -37,25 +37,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           $ErrorActionPreference = 'Stop'
-          $Api = "repos/$env:GITHUB_REPOSITORY/actions/workflows/deploy-production.yml/runs?branch=main&status=success&per_page=100"
-          $Raw = @(gh api $Api)
-          if ($LASTEXITCODE -ne 0) { throw 'CANNOT_READ_PREVIOUS_DEPLOYS' }
-          $Data = ConvertFrom-Json -InputObject ($Raw -join "`n")
-          $Candidates = @($Data.workflow_runs | Where-Object {
-            $_.conclusion -eq 'success' -and
-            $_.status -eq 'completed' -and
-            [string]$_.id -ne $env:GITHUB_RUN_ID -and
-            $_.head_branch -eq 'main'
-          })
-          $Previous = $null
-          foreach ($Item in $Candidates) {
-            if ($Item.head_sha -notmatch '^[0-9a-f]{40}$') { continue }
-            & git merge-base --is-ancestor $Item.head_sha $env:GITHUB_SHA
-            if ($LASTEXITCODE -eq 0) { $Previous = $Item; break }
+          $Result = @(& python3 -B scripts/incremental_baseline.py `
+            --repo . --current $env:GITHUB_SHA `
+            --current-run-id $env:GITHUB_RUN_ID)
+          if ($LASTEXITCODE -ne 0 -or $Result.Count -ne 1 -or
+              $Result[0] -cnotmatch '^[0-9a-f]{40}$') {
+            throw 'BASELINE_RESOLUTION_FAILED'
           }
-          if ($null -eq $Previous) { throw 'NO_CONFIRMED_ANCESTOR_DEPLOYMENT' }
-          "previous=$($Previous.head_sha)" >> $env:GITHUB_OUTPUT
-          Write-Host "Previous successful deployed commit: $($Previous.head_sha)"
+          "previous=$($Result[0])" >> $env:GITHUB_OUTPUT
+          Write-Host "Confirmed prior deployed commit: $($Result[0])"
 
       - name: Plan offline SHA-256 changes
         id: plan
