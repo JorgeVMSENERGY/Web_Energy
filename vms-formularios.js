@@ -86,6 +86,32 @@
     return '';
   }
 
+  // Mensajes en inglés para páginas con <html lang="en"> (/en/). Se traducen al mostrarse,
+  // así los textos en español del resto del archivo quedan como están.
+  var MESSAGES_EN = {
+    'Verificacion no disponible. Intenta nuevamente.': 'Verification unavailable. Please try again.',
+    'No fue posible verificar la solicitud. Intenta nuevamente.': 'We could not verify your request. Please try again.',
+    'Completa correctamente los campos obligatorios.': 'Please complete all required fields.',
+    'Selecciona una modalidad del proyecto.': 'Please select a project type.',
+    'Solo se permiten hasta 3 archivos.': 'You can attach up to 3 files.',
+    'Cada archivo debe pesar como máximo 5 MiB.': 'Each file must be 5 MiB or smaller.',
+    'Los archivos no pueden superar 10 MiB en total.': 'Attachments cannot exceed 10 MiB in total.',
+    'No fue posible enviar el formulario.': 'We could not send the form. Please try again or email contacto@vmsenergy.com.',
+    'El servidor no generó una sesión válida para los archivos.': 'The server could not prepare the file upload. Please try again.',
+    'El servidor no preparó todos los archivos seleccionados.': 'The server could not prepare all selected files. Please try again.',
+    'Recibimos correctamente tu información. Te contactaremos pronto.': 'We received your information. We will contact you soon.',
+    'El formulario solo está disponible desde el sitio oficial de VMS Energy.': 'This form only works on the official VMS Energy website.',
+    'El servidor no confirmó la recepción del formulario.': 'The server did not confirm receipt of the form. Please try again.',
+    'Enviando…': 'Sending…'
+  };
+
+  function localize(message) {
+    if (!message || !/^en\b/i.test(d.documentElement.getAttribute('lang') || '')) return message;
+    if (MESSAGES_EN[message]) return MESSAGES_EN[message];
+    var file = /^No fue posible cargar el archivo (.+)\.$/.exec(message);
+    return file ? 'We could not upload the file ' + file[1] + '.' : message;
+  }
+
   function feedbackNode(form) {
     var selector = form.getAttribute('data-vms-feedback');
     if (selector) return d.querySelector(selector);
@@ -95,7 +121,7 @@
   function showFeedback(form, message, isError) {
     var node = feedbackNode(form);
     if (!node) return;
-    node.textContent = message || '';
+    node.textContent = localize(message) || '';
     node.style.color = isError ? '#b91c1c' : '';
     node.style.display = message ? '' : 'none';
   }

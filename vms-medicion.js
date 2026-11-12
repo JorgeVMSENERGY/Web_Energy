@@ -119,28 +119,42 @@
     'font:600 14px system-ui,sans-serif;border:1px solid #0F4C81;background:#fff;color:#0F4C81}' +
     '.vms-ck button.vms-ck__ok{background:#0F4C81;color:#fff}.vms-ck-link{cursor:pointer;background:none;border:0;' +
     'padding:0;color:inherit;font:inherit;text-decoration:underline;opacity:.85}';
+  /* Textos del banner: español por defecto, inglés en páginas con <html lang="en"> (/en/). */
+  var EN = /^en\b/i.test(d.documentElement.getAttribute('lang') || '');
+  var T = EN ? {
+    aria: 'Cookie preferences', titulo: 'Cookies on vmsenergy.com',
+    texto: 'We use analytics cookies to understand how the site is used and, if you accept, marketing cookies ' +
+      '(Google Ads, Meta and LinkedIn) to measure our campaigns. Learn more in our <a href="' + AVISO_URL + '">privacy notice</a> (in Spanish).',
+    nec: 'Necessary (always on)', ana: 'Analytics (Google Analytics)', mkt: 'Marketing (Google Ads, Meta, LinkedIn)',
+    todas: 'Accept all', solo: 'Necessary only', config: 'Customize', guardar: 'Save selection', link: 'Cookie preferences'
+  } : {
+    aria: 'Preferencias de cookies', titulo: 'Cookies en vmsenergy.com',
+    texto: 'Usamos cookies de analítica para entender cómo se usa el sitio y, si lo aceptas, cookies de mercadotecnia ' +
+      '(Google Ads, Meta y LinkedIn) para medir nuestras campañas. Más información en el <a href="' + AVISO_URL + '">aviso de privacidad</a>.',
+    nec: 'Necesarias (siempre activas)', ana: 'Analítica (Google Analytics)', mkt: 'Mercadotecnia (Google Ads, Meta, LinkedIn)',
+    todas: 'Aceptar todas', solo: 'Solo necesarias', config: 'Configurar', guardar: 'Guardar selección', link: 'Preferencias de cookies'
+  };
   function banner() {
     if (d.getElementById('vmsCookies')) return;
     var actual = leer(KEY_CONSENT) || { analitica: ANALITICA_POR_DEFECTO === 'granted', mercadotecnia: false };
     var box = d.createElement('div');
     box.className = 'vms-ck'; box.id = 'vmsCookies';
-    box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', 'Preferencias de cookies');
-    box.innerHTML = '<h2>Cookies en vmsenergy.com</h2>' +
-      '<p>Usamos cookies de analítica para entender cómo se usa el sitio y, si lo aceptas, cookies de mercadotecnia ' +
-      '(Google Ads, Meta y LinkedIn) para medir nuestras campañas. Más información en el <a href="' + AVISO_URL + '">aviso de privacidad</a>.</p>' +
+    box.setAttribute('role', 'dialog'); box.setAttribute('aria-label', T.aria);
+    box.innerHTML = '<h2>' + T.titulo + '</h2>' +
+      '<p>' + T.texto + '</p>' +
       '<div class="vms-ck__opts">' +
-      '<label><input type="checkbox" checked disabled> Necesarias (siempre activas)</label>' +
-      '<label><input type="checkbox" id="vmsCkA"' + (actual.analitica ? ' checked' : '') + '> Analítica (Google Analytics)</label>' +
-      '<label><input type="checkbox" id="vmsCkM"' + (actual.mercadotecnia ? ' checked' : '') + '> Mercadotecnia (Google Ads, Meta, LinkedIn)</label></div>' +
-      '<div class="vms-ck__btns"><button type="button" class="vms-ck__ok" data-ck="todas">Aceptar todas</button>' +
-      '<button type="button" data-ck="necesarias">Solo necesarias</button>' +
-      '<button type="button" data-ck="config">Configurar</button></div>';
+      '<label><input type="checkbox" checked disabled> ' + T.nec + '</label>' +
+      '<label><input type="checkbox" id="vmsCkA"' + (actual.analitica ? ' checked' : '') + '> ' + T.ana + '</label>' +
+      '<label><input type="checkbox" id="vmsCkM"' + (actual.mercadotecnia ? ' checked' : '') + '> ' + T.mkt + '</label></div>' +
+      '<div class="vms-ck__btns"><button type="button" class="vms-ck__ok" data-ck="todas">' + T.todas + '</button>' +
+      '<button type="button" data-ck="necesarias">' + T.solo + '</button>' +
+      '<button type="button" data-ck="config">' + T.config + '</button></div>';
     box.addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return;
       var k = b.getAttribute('data-ck');
       if (k === 'todas') aplicar(true, true);
       else if (k === 'necesarias') aplicar(false, false);
-      else if (k === 'config') { box.classList.add('vms-ck--cfg'); b.textContent = 'Guardar selección'; b.setAttribute('data-ck', 'guardar'); return; }
+      else if (k === 'config') { box.classList.add('vms-ck--cfg'); b.textContent = T.guardar; b.setAttribute('data-ck', 'guardar'); return; }
       else if (k === 'guardar') aplicar(d.getElementById('vmsCkA').checked, d.getElementById('vmsCkM').checked);
       box.parentNode.removeChild(box);
     });
@@ -149,10 +163,10 @@
   w.vmsCookies = banner;   // reabrir desde cualquier enlace: onclick="vmsCookies()"
   d.addEventListener('DOMContentLoaded', function () {
     var st = d.createElement('style'); st.textContent = CSS; d.head.appendChild(st);
-    var pie = d.querySelector('.site-footer');
+    var pie = d.querySelector('.site-footer') || d.querySelector('footer.foot');
     if (pie) {
       var p = d.createElement('p'); p.style.cssText = 'text-align:center;margin:12px 0 0;font-size:13px';
-      p.innerHTML = '<button type="button" class="vms-ck-link">Preferencias de cookies</button>';
+      p.innerHTML = '<button type="button" class="vms-ck-link">' + T.link + '</button>';
       p.firstChild.addEventListener('click', banner);
       pie.appendChild(p);
     }
