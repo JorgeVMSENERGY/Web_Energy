@@ -28,6 +28,40 @@ class IncrementalBaselineTests(unittest.TestCase):
                                            19, SHA_NEW)
         self.assertEqual(result, {'sha': SHA_OLD, 'run_id': 17, 'page': 1})
 
+    def test_github_workflow_path_with_branch_reference(self):
+        valid_paths = (
+            candidate.WORKFLOW_PATH,
+            candidate.WORKFLOW_PATH + '@main',
+            candidate.WORKFLOW_PATH + '@refs/heads/main',
+        )
+        for path in valid_paths:
+            with self.subTest(path=path):
+                rows = [run_record(17, path=path)]
+                result = candidate.select_baseline(
+                    lambda page: rows,
+                    lambda old, new: True,
+                    19, SHA_NEW,
+                )
+                self.assertEqual(result['run_id'], 17)
+
+        invalid_paths = (
+            candidate.WORKFLOW_PATH + '@dev',
+            candidate.WORKFLOW_PATH + '@refs/heads/dev',
+            '.github/workflows/other.yml@main',
+        )
+        for path in invalid_paths:
+            with self.subTest(path=path):
+                rows = [
+                    run_record(17, path=path),
+                    run_record(16, path=candidate.WORKFLOW_PATH + '@main'),
+                ]
+                result = candidate.select_baseline(
+                    lambda page: rows,
+                    lambda old, new: True,
+                    19, SHA_NEW,
+                )
+                self.assertEqual(result['run_id'], 16)
+
     def test_self_failed_non_main_and_fork_ignored(self):
         rows = [run_record(99), run_record(98, conclusion='failure'),
                 run_record(97, head_branch='dev'), run_record(96, event='pull_request'),

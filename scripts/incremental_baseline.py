@@ -105,7 +105,12 @@ def select_baseline(get_page, ancestor, current_run, current_sha,
                     or row.get('event') not in ('push', 'workflow_dispatch')):
                 continue
             path = row.get('path')
-            if path is not None and path != WORKFLOW_PATH:
+            valid_paths = (
+                WORKFLOW_PATH,
+                WORKFLOW_PATH + '@main',
+                WORKFLOW_PATH + '@refs/heads/main',
+            )
+            if path is not None and path not in valid_paths:
                 continue
             source = row.get('head_repository')
             if isinstance(source, dict) and source.get('full_name') != REPO:
