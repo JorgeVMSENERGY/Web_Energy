@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en" data-concept="servicios-especializados">
+<head>
+<meta charset="UTF-8">
+<!-- VMS-GTM:INICIO -->
+<script src="../vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="../vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Turbine Generator Control: Governors, AVR & Multi-Brand Synchronization | VMS Energy</title>
+<meta name="description" content="Programming, commissioning, retrofit, and maintenance of steam and gas turbine generator controls: governors, voltage regulators, and synchronization. Multi-brand integration with Woodward, Basler Electric, and DEIF. Sugar mills, utilities, and Oil &amp; Gas.">
+<link rel="canonical" href="https://vmsenergy.com/en/turbine-generator-controls.html">
+<link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-turbogeneradores-woodward.html">
+<link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/turbine-generator-controls.html">
+<link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-turbogeneradores-woodward.html">
+<link rel="stylesheet" href="../servicios-base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- JSON-LD Service -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Service",
+ "name": "Turbine generator control: governors, excitation, and synchronization",
+ "provider": {
+  "@type": "Organization",
+  "name": "VMS Energy",
+  "url": "https://vmsenergy.com"
+ },
+ "areaServed": {
+  "@type": "Country",
+  "name": "Mexico"
+ },
+ "description": "Programming, commissioning, retrofit, and maintenance of governors, voltage regulators, and synchronization systems for steam and gas turbine generators at sugar mills, CFE, and Pemex. Multi-brand integration with Woodward, Basler Electric, and DEIF.",
+ "serviceType": "Turbogenerator Governor Service",
+ "inLanguage": "en"
+}
+</script>
+<!-- JSON-LD FAQPage -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is the difference between the Woodward 505 and 505-XT governors?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The 505 is Woodward's standard digital controller for industrial steam and gas turbines. The 505-XT expands I/O capacity and control functions for more complex extraction and admission turbines. The choice depends on the turbine, its valves, and the required integration with the plant control system."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can you upgrade a Woodward PGPL mechanical governor to an electronic system?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We have migrated mechanical PGPL and PG-EG governors to 2301D-ST or 505 Enhanced governors, keeping the original hydraulic actuators and adding digital control with SCADA communication. This eliminates speed drift, improves response time, and reduces mechanical maintenance."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long does commissioning a Woodward 505 governor at a sugar mill take?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A complete commissioning (configuration, PID loop tuning, trip test, and grid synchronization) takes 3 to 5 business days. Projects with actuator retrofits or SCADA integration can take 7 to 10 days."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you service governors on offshore platforms?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. We have worked on Pemex platforms in the Campeche Sound, such as PG-ZAAP-C, Akal-J, and Ku-Maloob-Zaap, following offshore safety procedures and coordinating access and permits with the operator. We also service generators and governors on support vessels."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What is the Woodward EGCP-3 and when is it needed?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "The EGCP-3 (Engine Generator Control Package) is an integrated generation controller that handles start, speed, paralleling (isochronous or droop), load sharing, and generator protection in a single module. It is needed when the turbine generator must synchronize automatically with another machine or with the grid, in island or parallel mode."
+   }
+  }
+ ],
+ "inLanguage": "en"
+}
+</script>
+
+<style>
+  /* ── TURBOGENERADORES WOODWARD — minimal page CSS ──────────── */
+  /* Governor table */
+  .gov-table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px}
+  .gov-table th{background:var(--concept-darker);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+  .gov-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.14);color:#334155}
+  .gov-table tr:nth-child(even) td{background:var(--concept-accent-light)}
+  .lang-tag{display:inline-block;margin-left:.4rem;padding:0 .28rem;border:1px solid currentColor;border-radius:4px;font-size:.62em;font-weight:700;letter-spacing:.05em;line-height:1.45;opacity:.6;vertical-align:middle}
+</style>
+
+  <script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "VMS Energy",
+   "item": "https://vmsenergy.com/en/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Specialized Services",
+   "item": "https://vmsenergy.com/especialidades.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Turbine generator control",
+   "item": "https://vmsenergy.com/en/turbine-generator-controls.html"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy &mdash; home">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item">
+          <a href="oil-gas-solutions.html" aria-haspopup="true" aria-expanded="false">Oil &amp; Gas</a>
+          <div class="submenu" role="group" aria-label="Oil &amp; Gas">
+            <ul class="submenu__list">
+              <li><a href="oil-gas-solutions.html">EPC Solutions</a></li>
+              <li><a href="oil-gas-maintenance.html">Maintenance</a></li>
+              <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
+              <li><a href="esp-cables.html">ESP Cables</a></li>
+              <li><a href="triol-drives.html">Triol Drives</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item nav-item--mega">
+          <a href="testing-commissioning.html" aria-haspopup="true" aria-expanded="false">Capabilities</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Capabilities">
+            <div class="submenu__col">
+              <p class="submenu__title">Services</p>
+              <ul class="submenu__list">
+                <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
+                <li><a href="electrical-substations.html">Electrical Substations</a></li>
+                <li><a href="turbine-generator-controls.html">Turbine Generator Controls</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Products</p>
+              <ul class="submenu__list">
+                <li><a href="triol-drives.html">Triol Drives</a></li>
+                <li><a href="esp-cables.html">ESP Cables</a></li>
+                <li><a href="../lp-cable-de-potencia-kei.html" hreflang="es">KEI Power Cable<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">On our Spanish site</p>
+              <ul class="submenu__list">
+                <li><a href="../soluciones_infraestructura_energetica.html" hreflang="es">Electrical Infrastructure<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                <li><a href="../arquitectura-disponibilidad-electrica.html" hreflang="es">Power Availability Architecture<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                <li><a href="../lp-plantas-de-emergencia-industriales.html" hreflang="es">Emergency Generators<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                <li><a href="../soluciones_automatizacion_control.html" hreflang="es">Automation &amp; Control<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                <li><a href="../procura.html" hreflang="es">Technical Supply<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+                <li><a href="../soluciones_mineria.html" hreflang="es">Mining<span class="lang-tag" title="Page in Spanish">ES</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="lang-switch" href="../lp-turbogeneradores-woodward.html" hreflang="es" lang="es" title="Espa&ntilde;ol" aria-label="Ver esta p&aacute;gina en espa&ntilde;ol">ES</a>
+      <a class="btn btn--concept site-header__cta" href="contact.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('../assets/img/hero_turbogeneradores.webp');--hero-overlay:.82" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy &middot; Specialized Services</div>
+      <h1 id="heroTitle">Turbine generator control: speed, excitation, and synchronization</h1>
+      <p class="hero__sub">Governors, voltage regulators, and genset controllers &middot; multi-brand integration</p>
+      <p>Programming, commissioning, retrofit, and maintenance of steam and gas turbine controls at sugar mills, CFE power plants, offshore platforms, and industrial plants in Mexico and Central America.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contact.html#form">Request service</a>
+        <a class="btn btn--ghost" href="#gobernadores">See governors</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">Woodward &middot; Basler Electric &middot; DEIF</span>
+        <span class="hero-stat">25+ turbines in harvest season</span>
+        <span class="hero-stat">Offshore: Gulf of Mexico</span>
+        <span class="hero-stat">Grid synchronization (CFE)</span>
+        <span class="hero-stat">24&nbsp;h response</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI STRIP -->
+  <div class="kpi-strip">
+    <div class="container">
+      <div class="kpi"><div class="kpi__val">25+</div><div class="kpi__lbl">turbines serviced</div></div>
+      <div class="kpi"><div class="kpi__val">12</div><div class="kpi__lbl">sugar mills</div></div>
+      <div class="kpi"><div class="kpi__val">4</div><div class="kpi__lbl">offshore platforms</div></div>
+      <div class="kpi"><div class="kpi__val">4</div><div class="kpi__lbl">countries served</div></div>
+      <div class="kpi"><div class="kpi__val">24&nbsp;h</div><div class="kpi__lbl">response time</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios" aria-labelledby="svcTitle">
+    <div class="container">
+      <span class="sec-label">Our services</span>
+      <h2 class="sec-h2" id="svcTitle">Turbine generator services</h2>
+      <p class="sec-lead">From parameter configuration to on-site commissioning, we provide complete technical support for governors, excitation, and the associated generation systems.</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a gear"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></div>
+          <p class="svc-card__title">Governor programming and tuning</p>
+          <p class="svc-card__desc">Configuration of speed and load PID parameters, droop, isochronous, and extraction control tuning on 505, 505-XT, 505E, and 2301D-ST governors. Woodward Toolkit used to download and upload configurations.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a plug"><path d="M8 3v6M16 3v6"/><path d="M6 9h12v3a6 6 0 0 1-12 0z"/><path d="M12 18v3"/></svg></div>
+          <p class="svc-card__title">Commissioning and startup</p>
+          <p class="svc-card__desc">Startup testing, overspeed trip verification, control loop tuning, and synchronization with the CFE grid. Includes load rejection testing and documentation of final parameters.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a rising line"><path d="M4 18l5-5 3 3 7-8"/><path d="M15 8h4v4"/></svg></div>
+          <p class="svc-card__title">Synchronization and load control</p>
+          <p class="svc-card__desc">Integration of EGCP-3 systems for automatic machine-to-grid and machine-to-machine paralleling. DSLC/MSLC configuration for isochronous load sharing without oscillation.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a star"><path d="M12 3l2.2 5.6L20 10l-4.4 3.4L16.8 19 12 16.1 7.2 19l1.2-5.6L4 10l5.8-1.4z"/></svg></div>
+          <p class="svc-card__title">Mechanical governor retrofit</p>
+          <p class="svc-card__desc">Upgrade of mechanical PGPL and PG-EG governors to 2301D or 505 electronic controllers, keeping the original hydraulic actuators. Eliminates speed drift and reduces maintenance.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a flame"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 1-6 1-8z"/></svg></div>
+          <p class="svc-card__title">Basler DECS voltage regulators (AVR)</p>
+          <p class="svc-card__desc">Configuration of Basler DECS-250 and DECS-300 regulators for generator voltage control, power factor, and VAR sharing in parallel with CFE or in island mode.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a pencil"><path d="M4 20h16"/><path d="M14.5 4.5l3 3L8 17H5v-3z"/></svg></div>
+          <p class="svc-card__title">Preventive maintenance and diagnostics</p>
+          <p class="svc-card__desc">Inspection of control boards, LVDT electro-hydraulic actuators, MPU speed sensors, and backup batteries. Fault diagnosis from Woodward error codes and module replacement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOBERNADORES TABLE -->
+  <section class="section section--alt" id="gobernadores" aria-labelledby="govTitle">
+    <div class="container">
+      <span class="sec-label">Control platforms</span>
+      <h2 class="sec-h2" id="govTitle">Control platforms we support</h2>
+      <p class="sec-lead">Our deepest experience is with the Woodward range, complemented by Basler Electric voltage regulators and DEIF genset controllers. We evaluate every migration from other manufacturers&rsquo; controls with the same criteria: the turbine, its actuators, and the plant control system.</p>
+      <div class="tabla-scroll"><table class="gov-table" style="min-width:520px">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Typical application</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Woodward 2301D-ST</strong></td><td>Small steam turbines, sugar mills, and cogeneration</td></tr>
+          <tr><td><strong>Woodward 2301E</strong></td><td>Single-valve steam turbines, proportional control</td></tr>
+          <tr><td><strong>Woodward 505 Enhanced</strong></td><td>Industrial steam and gas turbines, offshore platforms</td></tr>
+          <tr><td><strong>Woodward 505-XT</strong></td><td>Extraction/admission turbines, high complexity</td></tr>
+          <tr><td><strong>Woodward 505E</strong></td><td>Extraction and admission turbines (generation before the 505-XT)</td></tr>
+          <tr><td><strong>EGCP-3 LS/MFT</strong></td><td>Integrated generator control: paralleling, load sharing</td></tr>
+          <tr><td><strong>Basler DECS-250</strong></td><td>Voltage regulator for synchronous generators, power factor, and reactive load sharing</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS DE REFERENCIA -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Reference projects</span>
+      <h2 class="sec-h2" id="refTitle">Turbine generators we have serviced</h2>
+      <p class="sec-lead">Sugar mills, CFE hydroelectric plants, geothermal generation, and production platforms.</p>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Emiliano Zapata</p>
+          <p class="ref-card__lugar">Morelos, Mexico</p>
+          <p class="ref-card__desc">Commissioning of a 2301D-ST governor with a Valtek&nbsp;50 actuator on turbine generator 1, and speed control upgrade with a Woodward 505 electronic governor.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Plan de Ayala</p>
+          <p class="ref-card__lugar">San Luis Potos&iacute;, Mexico</p>
+          <p class="ref-card__desc">Commissioning of a 2301D-ST governor with a CPC-1 actuator on turbine generator 3.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Adolfo L&oacute;pez Mateos</p>
+          <p class="ref-card__lugar">Oaxaca, Mexico</p>
+          <p class="ref-card__desc">Replacement of the 2301D-ST with a Woodward 505 Enhanced governor on turbine generator 1.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Santa Rosal&iacute;a</p>
+          <p class="ref-card__lugar">Tabasco, Mexico</p>
+          <p class="ref-card__desc">Commissioning of a Woodward 505 governor on turbine generator 2, with supply and installation of a Valtek&nbsp;50 actuator.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Santa Clara</p>
+          <p class="ref-card__lugar">Michoac&aacute;n, Mexico</p>
+          <p class="ref-card__desc">Supply, installation, and commissioning of a Woodward 505 governor on turbine generator NEB&nbsp;TG1, with a new UG40 actuator.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Casasano</p>
+          <p class="ref-card__lugar">Morelos, Mexico</p>
+          <p class="ref-card__desc">Speed control upgrade of a steam turbine with a Woodward Peak&nbsp;150 and PG-PL actuator.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio La Joya</p>
+          <p class="ref-card__lugar">Campeche, Mexico</p>
+          <p class="ref-card__desc">Supply, calibration, and startup of Woodward 2301 and 505 electronic speed governors.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Ingenio Santa Ana</p>
+          <p class="ref-card__lugar">Escuintla, Guatemala</p>
+          <p class="ref-card__desc">Engineering, installation, and startup of Woodward DSLC-2 and MSLC units to synchronize four turbine generators.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Papeles Ultra</p>
+          <p class="ref-card__lugar">State of Mexico</p>
+          <p class="ref-card__desc">Power plant work: repair of two mechanical PGPL governors and commissioning of one on the 5&nbsp;MW TG1 turbine generator.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">CFE &mdash; Cecilio del Valle and Tamazulapan plants</p>
+          <p class="ref-card__lugar">Chiapas and Oaxaca, Mexico</p>
+          <p class="ref-card__desc">Upgrade of the Woodward speed control and hydraulic system at both hydroelectric plants.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Grupo Drag&oacute;n &mdash; geothermal plant</p>
+          <p class="ref-card__lugar">Nayarit, Mexico</p>
+          <p class="ref-card__desc">Generation control system with Woodward 505, DSLC, MSLC, and PROTECH, and Basler Electric DECS&nbsp;250 excitation.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">PG-ZAAP-C &mdash; Pemex</p>
+          <p class="ref-card__lugar">Campeche, Mexico (offshore)</p>
+          <p class="ref-card__desc">Installation of the 41.2&nbsp;MW Brush TG-704 turbine generator on a generation platform.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">P.S.S. Chemul</p>
+          <p class="ref-card__lugar">Campeche Sound, Mexico</p>
+          <p class="ref-card__desc">Supply, installation, configuration, and startup of a DSLC-2 for a generation system with five 3,000&nbsp;kW W&auml;rtsil&auml; engines.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Lufussa &mdash; Pavana</p>
+          <p class="ref-card__lugar">Honduras</p>
+          <p class="ref-card__desc">Supply of a DECS-250 excitation system and excitation upgrade of a W&auml;rtsil&auml; engine generator.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Macrobox</p>
+          <p class="ref-card__lugar">Minatitl&aacute;n, Veracruz, Mexico</p>
+          <p class="ref-card__desc">Supply and installation of seven Woodward speed control units (2025).</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Celanese</p>
+          <p class="ref-card__lugar">Jalisco, Mexico</p>
+          <p class="ref-card__desc">Overspeed protection for a Dresser turbine generator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section section--alt" id="proceso" aria-labelledby="procTitle">
+    <div class="container">
+      <span class="sec-label">How we work</span>
+      <h2 class="sec-h2" id="procTitle">Service process</h2>
+      <p class="sec-lead">A structured methodology to minimize downtime during the harvest season and ensure reliable turbine generator operation.</p>
+      <div class="process-steps">
+        <div class="step">
+          <p class="step__title">1. Diagnosis and parameter reading</p>
+          <p class="step__desc">Download of the current configuration with Woodward Toolkit. Review of fault history, active PID parameters, and actuator condition. Analysis of current dynamic response vs. factory specifications.</p>
+        </div>
+        <div class="step">
+          <p class="step__title">2. Tuning and programming</p>
+          <p class="step__desc">Configuration of rated speed, acceleration limits, trip thresholds, speed and load PID loops, and droop or isochronous values according to the operating mode.</p>
+        </div>
+        <div class="step">
+          <p class="step__title">3. Field testing</p>
+          <p class="step__desc">Electronic overspeed test (110%), load rejection test, response time to load steps, and grid synchronization validation. Oscillogram recording.</p>
+        </div>
+        <div class="step">
+          <p class="step__title">4. Documentation and handover</p>
+          <p class="step__desc">Report with final parameters, test oscillograms, and configuration backup. Training for operations staff on basic governor monitoring and alarms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOSISTEMA DE CONTROL — Basler + DEIF + Retrofit -->
+  <section class="section" id="ecosistema-control" aria-labelledby="ecoTitle">
+    <div class="container">
+      <span class="sec-label">Control and regulation ecosystem</span>
+      <h2 class="sec-h2" id="ecoTitle">Partner brands: Basler Electric &amp; DEIF</h2>
+      <p class="sec-intro">Complete control of a generator set requires three layers: speed governor, automatic voltage regulator, and genset controller. We integrate all three with platforms such as Woodward, Basler Electric, and DEIF.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;margin-top:32px">
+
+        <div style="background:#fff;border:1.5px solid #dbe6f4;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(15,47,113,.06)">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+            <div style="width:48px;height:48px;background:#eef4ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a lightning bolt"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+            <div>
+              <p style="font-size:11px;color:#6b7f97;margin:0;font-weight:600;text-transform:uppercase;letter-spacing:.05em">Basler Electric</p>
+              <strong style="font-size:1.05rem;color:#10233d">Automatic voltage regulators (AVR)</strong>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#425a72;margin:0 0 16px">DECS series for precise excitation control of synchronous generators. Supply, startup, and retrofit.</p>
+          <div class="tabla-scroll"><table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead><tr style="background:#f0f7ff"><th style="padding:7px 10px;text-align:left;color:#10233d">Model</th><th style="padding:7px 10px;text-align:left;color:#10233d">Key feature</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #dbe6f4"><td style="padding:7px 10px;color:#425a72">DECS-250E</td><td style="padding:7px 10px;color:#5b6f86">Advanced digital control, Modbus communication</td></tr>
+              <tr style="border-bottom:1px solid #dbe6f4;background:#f9fbff"><td style="padding:7px 10px;color:#425a72">DECS-250</td><td style="padding:7px 10px;color:#5b6f86">Multi-purpose digital AVR, low voltage</td></tr>
+              <tr><td style="padding:7px 10px;color:#425a72">DECS-200</td><td style="padding:7px 10px;color:#5b6f86">Compact, easy replacement for analog AVRs</td></tr>
+            </tbody>
+          </table></div>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px">
+            <span style="font-size:11px;font-weight:700;color:var(--vms-green-600);background:var(--success-bg);border-radius:999px;padding:2px 10px">Supply</span>
+            <span style="font-size:11px;font-weight:700;color:var(--concept-primary);background:#eef4ff;border-radius:999px;padding:2px 10px">Commissioning</span>
+            <span style="font-size:11px;font-weight:700;color:#92400e;background:#fffbeb;border-radius:999px;padding:2px 10px">AVR retrofit</span>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1.5px solid #dbe6f4;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(15,47,113,.06)">
+          <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+            <div style="width:48px;height:48px;background:#eef4ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a plug"><path d="M8 3v6M16 3v6"/><path d="M6 9h12v3a6 6 0 0 1-12 0z"/><path d="M12 18v3"/></svg></div>
+            <div>
+              <p style="font-size:11px;color:#6b7f97;margin:0;font-weight:600;text-transform:uppercase;letter-spacing:.05em">DEIF</p>
+              <strong style="font-size:1.05rem;color:#10233d">Genset controllers</strong>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#425a72;margin:0 0 16px">Management, synchronization, and protection of generator sets in industrial plants, hospitals, and offshore.</p>
+          <div class="tabla-scroll"><table style="width:100%;border-collapse:collapse;font-size:12px">
+            <thead><tr style="background:#f0f7ff"><th style="padding:7px 10px;text-align:left;color:#10233d">Model</th><th style="padding:7px 10px;text-align:left;color:#10233d">Function</th></tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #dbe6f4"><td style="padding:7px 10px;color:#425a72">AGI 204</td><td style="padding:7px 10px;color:#5b6f86">Engine display and control unit</td></tr>
+              <tr style="border-bottom:1px solid #dbe6f4;background:#f9fbff"><td style="padding:7px 10px;color:#425a72">GPC-3</td><td style="padding:7px 10px;color:#5b6f86">Generator controller and protection</td></tr>
+              <tr><td style="padding:7px 10px;color:#425a72">AGC-4</td><td style="padding:7px 10px;color:#5b6f86">Automatic control, synchronization, and load sharing</td></tr>
+            </tbody>
+          </table></div>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:6px">
+            <span style="font-size:11px;font-weight:700;color:var(--vms-green-600);background:var(--success-bg);border-radius:999px;padding:2px 10px">Supply</span>
+            <span style="font-size:11px;font-weight:700;color:var(--concept-primary);background:#eef4ff;border-radius:999px;padding:2px 10px">Programming</span>
+            <span style="font-size:11px;font-weight:700;color:#92400e;background:#fffbeb;border-radius:999px;padding:2px 10px">SCADA integration</span>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#1e3a5f 0%,#0f2040 100%);border-radius:16px;padding:24px;color:#fff">
+          <div style="font-size:1.5rem;margin-bottom:12px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="two arrows in a cycle"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+          <strong style="font-size:1.05rem;display:block;margin-bottom:10px">AVR and governor retrofit</strong>
+          <p style="font-size:13px;color:#a8c4e0;margin:0 0 16px">We replace obsolete analog regulators with DECS or Woodward digital units, keeping the existing wiring. Prior electrical diagnosis included.</p>
+          <ul style="font-size:12px;color:#7aabd4;padding-left:18px;margin:0 0 20px;line-height:2">
+            <li>Analog AVR &rarr; DECS-200 / DECS-250</li>
+            <li>Mechanical governor &rarr; Woodward EG / 2301E</li>
+            <li>Obsolete panel &rarr; HMI + DEIF AGC-4 controller</li>
+          </ul>
+          <a href="contact.html#form" style="display:inline-block;background:#4aa3ff;color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:10px;text-decoration:none">Request an assessment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOBERNADORES MECÁNICOS -->
+  <section class="section section--alt" id="gobernadores-mecanicos" aria-labelledby="mecTitle">
+    <div class="container">
+      <span class="sec-label">Speed governors &mdash; mechanical series</span>
+      <h2 class="sec-h2" id="mecTitle">Woodward mechanical and hydraulic governors</h2>
+      <p class="sec-lead">Most turbine generators operating in Mexico still use Woodward mechanical governors. VMS Energy supplies spare parts, performs maintenance, and offers an upgrade path to electronic control when the equipment needs it.</p>
+      <div style="overflow-x:auto;margin-top:28px">
+        <table style="width:100%;border-collapse:collapse;font-size:13.5px">
+          <thead>
+            <tr style="background:#10233d;color:#fff">
+              <th style="padding:12px 14px;text-align:left;font-weight:700">Model</th>
+              <th style="padding:12px 14px;text-align:left;font-weight:700">Type</th>
+              <th style="padding:12px 14px;text-align:left;font-weight:700">Typical application</th>
+              <th style="padding:12px 14px;text-align:left;font-weight:700">Status</th>
+              <th style="padding:12px 14px;text-align:left;font-weight:700">Upgrade path</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8fafc">
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><strong>UG-8</strong></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Mechanical-hydraulic</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Small steam/gas turbines, industrial diesel engines</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><span style="font-size:11px;background:#fef3c7;color:#92400e;border-radius:999px;padding:2px 8px;font-weight:700">Legacy</span></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Woodward 2301E + EG actuator</td>
+            </tr>
+            <tr style="background:#fff">
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><strong>UG-40</strong></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Mechanical-hydraulic</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Medium steam turbines, sugar and paper industry</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><span style="font-size:11px;background:#fef3c7;color:#92400e;border-radius:999px;padding:2px 8px;font-weight:700">Legacy</span></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Woodward 2301D-ST + EG-26P actuator</td>
+            </tr>
+            <tr style="background:#f8fafc">
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><strong>TG-13</strong></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Mechanical</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Industrial back-pressure steam turbines</td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0"><span style="font-size:11px;background:#fef3c7;color:#92400e;border-radius:999px;padding:2px 8px;font-weight:700">Legacy</span></td>
+              <td style="padding:11px 14px;border-bottom:1px solid #e2e8f0">Woodward 2301E or 505 Enhanced</td>
+            </tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Need to upgrade your turbine generator controls?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">Multi-brand governors, excitation, and synchronization: supply, startup, and support in Mexico and Central America. See also <a href="../generacion-en-sitio-cogeneracion.html" style="color:#fff;text-decoration:underline" hreflang="es">cogeneration and on-site generation<span class="lang-tag" title="Page in Spanish">ES</span></a>.</p>
+      <div class="cta-band__actions on-dark">
+        <a class="btn btn--primary" href="contact.html#form">Request a proposal</a>
+        <a class="btn btn--ghost" href="../especialidades.html" hreflang="es">See services<span class="lang-tag" title="Page in Spanish">ES</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer site-footer--compact">
+  <div class="container">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement, and construction (EPC) for industry in Mexico and the Americas.</p>
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824 &middot; Ciudad del Carmen</a>
+          <a href="tel:+523338130739">+52 33 3813 0739 &middot; Guadalajara</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Oil &amp; Gas</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">EPC Solutions</a></li>
+          <li><a href="oil-gas-maintenance.html">Maintenance</a></li>
+          <li><a href="testing-commissioning.html">Testing &amp; Commissioning</a></li>
+          <li><a href="esp-cables.html">ESP Cables</a></li>
+          <li><a href="triol-drives.html">Triol Drives</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="electrical-substations.html">Electrical Substations</a></li>
+          <li><a href="turbine-generator-controls.html">Turbine Generator Controls</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About VMS Energy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../index.html" hreflang="es" lang="es">Sitio en espa&ntilde;ol</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__legal">
+      <nav aria-label="Legal">
+        <a href="../aviso-privacidad.html#sitio-web" hreflang="es">Privacy Notice<span class="lang-tag" title="Page in Spanish">ES</span></a>
+        <a href="../codigo-conducta.html" hreflang="es">Code of Ethics &amp; Conduct<span class="lang-tag" title="Page in Spanish">ES</span></a>
+        <a href="../politica-antisoborno.html" hreflang="es">Anti-Bribery Policy<span class="lang-tag" title="Page in Spanish">ES</span></a>
+        <a href="../politica-interna_antilavado.html" hreflang="es">Anti-Money Laundering Policy<span class="lang-tag" title="Page in Spanish">ES</span></a>
+        <a href="../buzon-sugerencias.html" hreflang="es">Suggestion Box<span class="lang-tag" title="Page in Spanish">ES</span></a>
+      </nav>
+      <span class="site-footer__copy">&copy; 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+<div class="sticky-wa"><a href="https://wa.me/523332582234?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20control%20de%20turbogeneradores" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
+<div class="sticky-cta"><a href="contact.html#form">Request service</a></div>
+
+</body>
+</html>
