@@ -56,10 +56,17 @@ class CutoverBaselineTests(unittest.TestCase):
                           verify=lambda rid: jobs(deploy='success'))
         self.assertEqual((out['workflow'], out['run_id']), (sut.INCREMENTAL, 88))
 
-    def test_new_noop_is_valid_after_plan(self):
+    def test_new_noop_keeps_last_actual_deployment(self):
         out = self.choose(pages(old=[record(60, sut.LEGACY)],
                                 new=[record(80, sut.INCREMENTAL)]))
-        self.assertEqual(out['run_id'], 80)
+        self.assertEqual(
+            (out['workflow'], out['run_id']),
+            (sut.LEGACY, 60)
+        )
+
+    def test_only_noop_is_not_deployment_evidence(self):
+        with self.assertRaisesRegex(sut.BaselineError, 'No confirmed'):
+            self.choose(pages(new=[record(80, sut.INCREMENTAL)]))
 
     def test_disabled_gated_runs_cannot_be_baseline(self):
         out = self.choose(pages(old=[record(60, sut.LEGACY)],
@@ -69,7 +76,7 @@ class CutoverBaselineTests(unittest.TestCase):
 
     def test_missing_or_skipped_plan_step_rejected(self):
         for evidence in (jobs(step='skipped'), [], [{'name': sut.PLAN_JOB} ],
-                         jobs(deploy='failure')):
+                         jobs(deploy='failure'), jobs(deploy='skipped')):
             with self.subTest(evidence=evidence):
                 self.assertFalse(sut.verified_incremental_jobs(evidence))
 
@@ -94,7 +101,8 @@ class CutoverBaselineTests(unittest.TestCase):
         new = [record(95, sut.INCREMENTAL, sha=BAD),
                record(90, sut.INCREMENTAL, conclusion='failure'),
                record(85, sut.INCREMENTAL)]
-        out = self.choose(pages(old=[record(60, sut.LEGACY)], new=new))
+        out = self.choose(pages(old=[record(60, sut.LEGACY)], new=new),
+                          verify=lambda rid: jobs(deploy='success'))
         self.assertEqual(out['run_id'], 85)
 
     def test_second_page_and_limit(self):

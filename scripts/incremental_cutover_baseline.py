@@ -105,8 +105,10 @@ def verified_incremental_jobs(jobs):
         for step in steps
     ):
         return False
+    # Only an actually completed deploy job proves publication.
+    # NO-OP runs are safe but are not deployment baselines.
     return (d.get('status') == 'completed' and
-            d.get('conclusion') in ('success', 'skipped'))
+            d.get('conclusion') == 'success')
 
 
 def choose_baseline(get_page, get_jobs, ancestor, current_sha, current_run,

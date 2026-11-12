@@ -4,7 +4,7 @@ Status: **inactive until approved cutover**. The original `.github/workflows/dep
 
 The new workflow `.github/workflows/deploy-production-incremental.yml` has the **same concurrency group** as legacy; its `plan` job is disabled by default unless repository Actions variable `VMS_INCREMENTAL_DEPLOY_ENABLED` is the literal string `true`. Before the planned switch, do not create this variable or leave its value `false`. The new workflow uses the current `scripts/incremental_deploy.py` (V3 MIME parity), with the existing protected production OIDC role, website, region and distribution.
 
-The new resolver `scripts/incremental_cutover_baseline.py` reads completed-successful production runs of **both** workflow files. Runs of the new workflow with skipped plans do not count: it checks that the plan job and its offline SHA-256 step succeeded and that deploy succeeded or skipped (NO-OP). GitHub history checks require main, expected repo/workflow, valid Git ancestry, and newest trusted run. No AWS access during planning.
+The new resolver `scripts/incremental_cutover_baseline.py` reads completed-successful production runs of **both** workflow files. Runs of the new workflow with skipped plans do not count: it checks that the plan job and its offline SHA-256 step succeeded and that the deploy job completed successfully. NO-OP runs are not used as deployment baselines; the last actual successful deployment remains authoritative. GitHub history checks require main, expected repo/workflow, valid Git ancestry, and newest trusted run. No AWS access during planning.
 
 ## Before merge
 
