@@ -24,6 +24,24 @@ REPOSITORY = 'JorgeVMSENERGY/Web_Energy'
 ROLE = 'VMSWebGitHubProductionDeploy'
 REGION = 'us-east-1'
 CACHE_CONTROL = 'public,max-age=300,must-revalidate'
+# Explicitly preserve the 14 S3 Content-Type values sampled in production on
+# 2026-11-12; fail closed for an extension not yet reviewed.
+CONTENT_TYPES = {
+    '.css': 'text/css',
+    '.html': 'text/html',
+    '.ico': 'image/vnd.microsoft.icon',
+    '.ini': 'binary/octet-stream',
+    '.jpg': 'image/jpeg',
+    '.js': 'text/javascript',
+    '.json': 'application/json',
+    '.pdf': 'application/pdf',
+    '.png': 'image/png',
+    '.svg': 'image/svg+xml',
+    '.txt': 'text/plain',
+    '.webp': 'image/webp',
+    '.xml': 'application/xml',
+    '.zip': 'application/zip',
+}
 PROTECTED = frozenset(('catalogo-proyectos.html', 'proyectos-vms.html'))
 OID = re.compile(r'[0-9a-f]{40}')
 
@@ -55,6 +73,14 @@ def resolve(repo, ref):
 def fingerprint(document):
     return hashlib.sha256(json.dumps(document, sort_keys=True, separators=(',', ':'),
                                     ensure_ascii=True).encode('ascii')).hexdigest()
+
+
+def content_type_for(key):
+    suffix = Path(key).suffix.lower()
+    value = CONTENT_TYPES.get(suffix)
+    if value is None:
+        raise DeployError('Unapproved Content-Type for object: ' + key)
+    return value
 
 
 def invalidation_paths(operations):
@@ -104,6 +130,10 @@ def make_plan(repo, previous, current):
         action = 'CREATE' if before is None else 'DELETE' if after is None else 'UPDATE'
         operations.append({'action': action, 'key': key, 'previous': before, 'desired': after})
     blockers = []
+    if any(item['action'] in ('CREATE', 'UPDATE') and
+           Path(item['key']).suffix.lower() not in CONTENT_TYPES
+           for item in operations):
+        blockers.append('UNSUPPORTED_CONTENT_TYPE')
     if any(item['action'] == 'DELETE' for item in operations):
         blockers.append('DELETIONS_REQUIRE_SEPARATE_APPROVAL')
     if any(item['key'] in PROTECTED for item in operations):
@@ -218,7 +248,8 @@ def verify_s3_content(key, desired, tempdir):
     before = aws_json(*head_args)
     if (before.get('ContentLength') != desired['size']
             or before.get('ServerSideEncryption') != 'AES256'
-            or before.get('CacheControl') != CACHE_CONTROL):
+            or before.get('CacheControl') != CACHE_CONTROL
+            or before.get('ContentType') != content_type_for(key)):
         raise DeployError('Uploaded object metadata is not as expected: ' + key)
     version = before.get('VersionId')
     if not version or version == 'null':
@@ -256,15 +287,21 @@ def apply(repo, plan):
     # Verify both the plan content and its Git source have not changed.
     if plan != make_plan(repo, plan['previousSuccessfulCommit'], current):
         raise DeployError('Plan differs from fresh Git inventory')
+    # Verify every planned content type before any S3 object is written.
+    for operation in plan['operations']:
+        if operation['action'] in ('CREATE', 'UPDATE'):
+            content_type_for(operation['key'])
     verify_workflow_identity(current)
     with tempfile.TemporaryDirectory(prefix='vms-incremental-') as tempdir:
         for operation in plan['operations']:
             if operation['action'] not in ('CREATE', 'UPDATE'):
                 raise DeployError('Automatic deletes are disabled')
             key = operation['key']
+            content_type = content_type_for(key)
             staged = stage_blob(repo, current, operation, tempdir)
             aws('s3', 'cp', str(staged), 's3://' + BUCKET + '/' + key,
-                '--cache-control', CACHE_CONTROL, '--sse', 'AES256',
+                '--cache-control', CACHE_CONTROL, '--content-type', content_type,
+                '--sse', 'AES256',
                 '--checksum-algorithm', 'SHA256', '--only-show-errors', '--no-progress')
             verify_s3_content(key, operation['desired'], tempdir)
             print('Verified SHA-256: ' + key, flush=True)
