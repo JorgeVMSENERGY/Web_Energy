@@ -29,11 +29,11 @@
   <meta property="og:title" content="HVAC Industrial M&eacute;xico | VMS Energy" />
   <meta property="og:description" content="EPC de sistemas HVAC industrial en M&eacute;xico. Proyectos desde $1,000,000 MXN. Ingenier&iacute;a, suministro e instalaci&oacute;n para plantas con procesos cr&iacute;ticos. ISO 9001." />
   <meta property="og:url" content="https://vmsenergy.com/soluciones_hvac_industrial.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/landings/hvac/hero_hvac.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_hvac_industrial_planta.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="HVAC Industrial M&eacute;xico | VMS Energy" />
   <meta name="twitter:description" content="EPC de sistemas HVAC industrial en M&eacute;xico. Proyectos desde $1,000,000 MXN. Ingenier&iacute;a, suministro e instalaci&oacute;n para plantas con procesos cr&iacute;ticos. ISO 9001." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/hvac/hero_hvac.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_hvac_industrial_planta.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_hvac_industrial.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_hvac_industrial.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,9 +73,15 @@
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
 
 
-    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.74) 82%,rgba(8,35,70,.34)),url('assets/img/hero_hvac_industrial.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding-block: 80px 64px}
+    .hero{position:relative;isolation:isolate;min-height:clamp(440px,70vh,560px);padding:0;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero__content{padding-block: 64px 56px}
+    .hero__content > *{max-width:680px}
+    /* 13-nov-2026: velo reforzado solo en esta pagina. En esta imagen los ductos y la
+       manejadora (superficies claras) empiezan al ~25 % del ancho y quedan detras del
+       parrafo. Se retira si se cambia por una imagen con mas fundido a la izquierda. */
+    @media (min-width:981px){
+      #inicio.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.8) 40%,rgba(8,35,70,.42) 58%,rgba(8,35,70,.08) 80%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}
+    }
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
@@ -305,7 +311,7 @@
       .process-carousel{max-width:100%}
       .process-nav{max-width:100%}
       .process-slide{min-height:390px}
-      .hero__content{padding-block: 72px 58px}
+      .hero__content{padding-block: 56px 48px}
       .svc-grid{grid-template-columns:1fr}
     }
     @media (max-width:680px){
@@ -821,13 +827,13 @@
 
 
   <main id="contenido">
-    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_hvac_industrial_planta.webp');--hero-image-m:url('assets/img/services/hero_hvac_industrial_planta_m.webp')" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">EPC HVAC Industrial &middot; Proyectos desde $1,000,000 MXN</span>
-        <h1 id="heroTitle">Ingenier&iacute;a e instalaci&oacute;n de sistemas HVAC industrial para plantas con procesos cr&iacute;ticos.</h1>
-        <p>Ingenier&iacute;a, suministro t&eacute;cnico e implementaci&oacute;n de sistemas HVAC industrial (aire acondicionado y ventilaci&oacute;n) para control t&eacute;rmico, calidad de aire y continuidad operativa.</p>
+        <h1 id="heroTitle">HVAC industrial para plantas con procesos cr&iacute;ticos</h1>
+        <p>Ingenier&iacute;a, suministro t&eacute;cnico e instalaci&oacute;n de sistemas de aire acondicionado y ventilaci&oacute;n industrial para control t&eacute;rmico, calidad de aire y continuidad operativa.</p>
         <div class="hero__actions on-dark">
-          <a class="btn btn--primary" href="contacto_cta.html?producto=sector-hvac#ctaForm" data-cta="hero-cotizar">Solicitar Evaluaci&oacute;n de Proyecto HVAC</a>
+          <a class="btn btn--primary" href="contacto_cta.html?producto=sector-hvac#ctaForm" data-cta="hero-cotizar">Solicitar evaluaci&oacute;n de proyecto HVAC</a>
           <a class="btn btn--secondary" href="tel:+523338130739" data-cta="hero-llamar">Llamar ahora</a>
         </div>
       </div>
