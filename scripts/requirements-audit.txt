@@ -1,0 +1,2 @@
+# Optional backend; CLI backend has no third-party Python dependencies.
+boto3==1.37.38
