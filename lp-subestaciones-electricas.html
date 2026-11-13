@@ -31,13 +31,16 @@
   <meta property="og:title" content="Subestaciones El&eacute;ctricas MT/AT | VMS Energy"/>
   <meta property="og:description" content="Construcci&oacute;n, rehabilitaci&oacute;n y mantenimiento mayor de subestaciones el&eacute;ctricas de media y alta tensi&oacute;n en M&eacute;xico. Pruebas VLF, celdas de sincron&iacute;a, interruptores ALS."/>
   <meta property="og:url" content="https://vmsenergy.com/lp-subestaciones-electricas.html"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_subestaciones_mt_at.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_subestaciones_mt_at.webp"/>
 <link rel="stylesheet" href="equipamiento-base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* ── SUBESTACIONES ELÉCTRICAS — minimal page CSS ─────────── */
-    :root { --equip-hero-img: url('assets/img/hero_subestaciones.webp') }
+    /* 13-nov-2026: la imagen del hero ahora se fija en el <section> (.hero--fade-left de vms-core.css) */
     /* Service grid */
     .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
     .svc-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06)}
@@ -320,19 +323,16 @@
 </header>
 
 <main id="inicio">
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_subestaciones_mt_at.webp');--hero-image-m:url('assets/img/services/hero_subestaciones_mt_at_m.webp')" aria-labelledby="heroTitle">
     <div class="container">
       <div class="hero-eyebrow">EPC Subestaciones &middot; Proyectos desde $1,000,000 MXN</div>
-      <h1 id="heroTitle">Subestaciones El&eacute;ctricas MT/AT</h1>
-      <p class="hero__sub">Construcci&oacute;n, Rehabilitaci&oacute;n y Mantenimiento Mayor</p>
-      <p>Ingeniería EPC completa para subestaciones de media y alta tensión: diseño, suministro de equipos, montaje, pruebas de aceptación y puesta en servicio. Desde 13.8&nbsp;kV hasta 115&nbsp;kV en México.</p>
+      <h1 id="heroTitle">Subestaciones el&eacute;ctricas MT/AT</h1>
+      <p>Construcci&oacute;n, rehabilitaci&oacute;n y mantenimiento mayor con ingenier&iacute;a EPC completa: dise&ntilde;o, suministro de equipos, montaje, pruebas de aceptaci&oacute;n y puesta en servicio, de 13.8&nbsp;kV a 115&nbsp;kV en M&eacute;xico.</p>
       <div class="hero-btns on-dark">
-        <a class="btn btn--primary" href="contacto_cta.html?producto=subestaciones#ctaForm">Solicitar Evaluaci&oacute;n de Proyecto</a>
+        <a class="btn btn--primary" href="contacto_cta.html?producto=subestaciones#ctaForm">Solicitar evaluaci&oacute;n de proyecto</a>
         <a class="btn btn--ghost" href="#servicios">Ver servicios</a>
       </div>
       <div class="hero-stats">
-        <span class="hero-stat">13.8 kV &ndash; 115 kV</span>
-        <span class="hero-stat">Construcci&oacute;n y rehabilitaci&oacute;n EPC</span>
         <span class="hero-stat">Pruebas VLF &amp; eléctricas primarias</span>
         <span class="hero-stat">Industria · Oil&amp;Gas · CFE · Ingenios</span>
         <span class="hero-stat">IEC 62271 / NOM-001-SEDE</span>
