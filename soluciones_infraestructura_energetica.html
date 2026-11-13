@@ -29,11 +29,11 @@
   <meta property="og:title" content="Infraestructura El&eacute;ctrica Industrial | VMS Energy" />
   <meta property="og:description" content="EPC de subestaciones el&eacute;ctricas, tableros AT/MT/BT y redes de distribuci&oacute;n industrial en M&eacute;xico. Proyectos desde $1,000,000 MXN. ISO 9001 y 50001 activos." />
   <meta property="og:url" content="https://vmsenergy.com/soluciones_infraestructura_energetica.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/infraestructura_electrica.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_infraestructura_electrica.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Infraestructura El&eacute;ctrica Industrial | VMS Energy" />
   <meta name="twitter:description" content="EPC de subestaciones el&eacute;ctricas, tableros AT/MT/BT y redes de distribuci&oacute;n industrial en M&eacute;xico. Proyectos desde $1,000,000 MXN. ISO 9001 y 50001 activos." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/infraestructura_electrica.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_infraestructura_electrica.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_infraestructura_energetica.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_infraestructura_energetica.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,9 +73,9 @@
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
 
 
-    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.74) 82%,rgba(8,35,70,.34)),url('assets/img/services/infraestructura_electrica.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding-block: 80px 64px}
+    .hero{position:relative;isolation:isolate;min-height:clamp(440px,70vh,560px);padding:0;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero__content{padding-block: 64px 56px}
+    .hero__content > *{max-width:680px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
@@ -305,7 +305,7 @@
       .process-carousel{max-width:100%}
       .process-nav{max-width:100%}
       .process-slide{min-height:390px}
-      .hero__content{padding-block: 72px 58px}
+      .hero__content{padding-block: 56px 48px}
       .svc-grid{grid-template-columns:1fr}
     }
     @media (max-width:680px){
@@ -794,13 +794,13 @@
 
 
   <main id="contenido">
-    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_infraestructura_electrica.webp');--hero-image-m:url('assets/img/services/hero_infraestructura_electrica_m.webp')" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">EPC Infraestructura El&eacute;ctrica &middot; Proyectos desde $1,000,000 MXN</span>
-        <h1 id="heroTitle">Subestaciones, tableros AT/MT/BT y redes el&eacute;ctricas industriales llave en mano en M&eacute;xico.</h1>
-        <p>Ingenier&iacute;a, suministro t&eacute;cnico y ejecuci&oacute;n de infraestructura el&eacute;ctrica para generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n con foco en confiabilidad y cumplimiento.</p>
+        <h1 id="heroTitle">Subestaciones y redes el&eacute;ctricas llave en mano</h1>
+        <p>Ingenier&iacute;a, suministro t&eacute;cnico y ejecuci&oacute;n de subestaciones, tableros AT/MT/BT y redes industriales para generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n en M&eacute;xico, con foco en confiabilidad y cumplimiento.</p>
         <div class="hero__actions on-dark">
-          <a class="btn btn--primary" href="contacto_cta.html?producto=sector-infraestructura#ctaForm" data-cta="hero-cotizar">Solicitar Evaluaci&oacute;n de Proyecto</a>
+          <a class="btn btn--primary" href="contacto_cta.html?producto=sector-infraestructura#ctaForm" data-cta="hero-cotizar">Solicitar evaluaci&oacute;n de proyecto</a>
           <a class="btn btn--secondary" href="tel:+523338130739" data-cta="hero-llamar">Llamar ahora</a>
         </div>
       </div>
