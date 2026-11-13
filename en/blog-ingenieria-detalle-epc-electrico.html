@@ -1,0 +1,1240 @@
+<!doctype html>
+<html lang="en" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Engineering in Electrical EPC Projects: Calculation Reports, Unifilar and Construction Drawings | VMS Energy</title>
+  <meta name="description" content="Complete technical guide on detailed engineering in electrical EPC projects: single-line diagram, short-circuit and voltage drop calculation reports, conductor sizing, construction plans and IFC deliverables." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Electrical EPC Detail Engineering: Single-wire, Calculations and Construction Drawings | VMS Energy" />
+  <meta property="og:description" content="How electrical detail engineering is developed in EPC projects: from the one-line diagram and calculation memories to the complete IFC package." />
+  <meta property="og:url" content="https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/ingenieria-detalle/og-ingenieria-detalle-epc.webp" />
+  <meta property="article:published_time" content="2026-06-05" />
+  <meta property="article:modified_time" content="2026-06-05" />
+  <meta property="article:section" content="Ingenier&iacute;a EPC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Electrical EPC Detail Engineering: Single-wire, Calculations and IFC Drawings | VMS Energy" />
+  <meta name="twitter:description" content="From one-line diagram to construction plans: complete technical guide to electrical detail engineering in industrial EPC projects in Mexico." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/ingenieria-detalle/og-ingenieria-detalle-epc.webp" />
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('../assets/img/Especialidades_servicios.webp');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:680px){}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#991b1b;background:linear-gradient(135deg,rgba(153,27,27,.07),rgba(239,68,68,.07));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:580px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.92rem;letter-spacing:.02em}
+    .article-table td{color:#314a67;font-size:.97rem}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table .good{color:var(--vms-green-700)}
+    .article-table .mid{color:#92400e}
+    .article-table .na{color:#64748b;font-style:italic}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+
+    /* Lista de entregables de ingeniería */
+    .doc-list{margin:22px 0;border:1px solid rgba(23,44,81,.12);border-radius:18px;overflow:hidden}
+    .doc-list__header{padding:12px 18px;background:#12365f;color:#fff;font-weight:700;font-size:.9rem;display:grid;grid-template-columns:2.5rem 1fr auto;gap:12px;align-items:center}
+    .doc-row{display:grid;grid-template-columns:2.5rem 1fr auto;gap:12px;padding:11px 18px;align-items:center;border-bottom:1px solid rgba(23,44,81,.07)}
+    .doc-row:last-child{border-bottom:0}
+    .doc-row:nth-child(even){background:#f9fbfe}
+    .doc-row__num{font-size:.82rem;font-weight:800;color:var(--concept-primary);text-align:center;background:rgba(15,76,129,.09);border-radius:8px;padding:4px 6px;width:2rem;text-align:center}
+    .doc-row__info{min-width:0}
+    .doc-row__title{font-weight:700;font-size:.97rem;color:#12365f;display:block;margin-bottom:2px}
+    .doc-row__sub{font-size:.84rem;color:#4a5f79}
+    .doc-chip{display:inline-block;padding:.15rem .5rem;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+    .doc-chip--calc{background:rgba(15,76,129,.12);color:var(--concept-primary)}
+    .doc-chip--draw{background:rgba(15,94,45,.12);color:var(--vms-green-700)}
+    .doc-chip--data{background:rgba(109,40,217,.12);color:#6d28d9}
+    .doc-chip--sched{background:rgba(180,83,9,.12);color:#92400e}
+
+    /* Fórmula highlight */
+    .formula-box{margin:18px 0;padding:16px 20px;background:#f0f6ff;border:1px solid rgba(15,76,129,.18);border-radius:14px;font-family:monospace,monospace;font-size:1.02rem;color:#12365f;overflow-x:auto}
+    .formula-box .formula-label{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--concept-primary);margin-bottom:6px}
+    .formula-box .formula-note{display:block;font-family:"Roboto Condensed",sans-serif;font-size:.88rem;color:#4a5f79;margin-top:8px;font-style:italic}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding-block: 74px 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.doc-list__header,.doc-row{grid-template-columns:2.5rem 1fr}}
+
+    /* Desbordamiento en movil: `.blog-layout` ya baja a una columna en 980 px,
+       pero `1fr` es `minmax(auto,1fr)` y el minimo automatico del articulo es
+       su ancho de contenido minimo. Sin esto, el indice o una tabla ensanchan
+       la pista y la pagina se arrastra de lado. Medido: hasta 781 px en una
+       ventana de 390. */
+    .blog-article{min-width:0}
+    @media (max-width:980px){.blog-layout{grid-template-columns:minmax(0,1fr)}}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vmsenergy.com/en/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Electrical EPC detail engineering", "item": "https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html"}]}, {"@type": "BlogPosting", "headline": "Detail engineering in electrical EPC projects: calculation reports, one-line diagram and construction plans", "description": "Complete technical guide on detailed engineering in electrical EPC projects: single-line diagram, short-circuit and voltage drop calculation reports, conductor sizing, construction plans and IFC deliverables.", "image": "https://vmsenergy.com/assets/img/blog/ingenieria-detalle/og-ingenieria-detalle-epc.webp", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-06-05", "dateModified": "2026-06-05", "mainEntityOfPage": "https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html", "articleSection": "EPC Engineering", "keywords": "electrical detail engineering, unifillar diagram, short circuit calculation memory, voltage drop NOM-001, Conductor ion ionisation, EPC construction plans, IFC deliverables, ETAP, IEC 60909, basic protection coordination"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What documents do electrical detail engineering include in an EPC project?", "acceptedAnswer": {"@type": "Answer", "text": "Typical electrical detail engineering deliverables include: general and detailed single-line diagram per board, short-circuit calculation reports (IEC 60909), load flow and voltage drop, load balance (load schedule), conductor sizing (NOM-001-SEDE), list of materials, equipment data sheets, piping plans, grounding plan, lighting plan, control and signaling diagram, and coordination table protections. The complete package is issued in IFC (Issued for Construction) status before starting construction."}}, {"@type": "Question", "name": "What standard is used for short circuit calculation in industrial electrical projects in Mexico?", "acceptedAnswer": {"@type": "Answer", "text": "In Mexico, the calculation of short circuit current in industrial facilities is commonly carried out under IEC 60909 (Impedance method, international standard adopted in medium and high voltage projects) or ANSI/IEEE C37.010 (more common in projects with North American influence or NEC standard). Software tools such as ETAP, SKM PowerTools and DigSILENT implement both methods. The result determines the minimum breaking capacity (kA) required for the switches and the selection of bars and conductors for their thermal capacity in the event of short circuits."}}, {"@type": "Question", "name": "What is the maximum voltage drop allowed in electrical installations in Mexico?", "acceptedAnswer": {"@type": "Answer", "text": "NOM-001-SEDE-2012 establishes that the voltage drop in a branch circuit must not exceed 3%, and the accumulated drop from the connection to the farthest point must not exceed 5%. In industrial EPC engineering practice, many projects use more conservative criteria: 2% in critical control circuits and 3% in power sensitive load circuits (drives, UPS). The voltage drop is directly proportional to the length of the conductor and inversely proportional to the cross section, so in large installations with long feeders, sizing by voltage drop usually dominates sizing by thermal conduit capacity."}}, {"@type": "Question", "name": "What is a unify diagram and what is it used for in an EPC project?", "acceptedAnswer": {"@type": "Answer", "text": "The Single Line Diagram (SLD) is the master document of any electrical project. It represents the complete electrical system using a single line to symbolize the three phase conductors, with the standardized symbols (IEC 60617 or ANSI/IEEE 315) for transformers, switches, disconnectors, protective relays, current transformers (CT) and potential transformers (PT), buses, feeders and loads. In EPC projects, the single-line is the main reference document for the procurement of equipment, the coordination of protections, the obtaining of permits and the future operation of the facility. Any changes to the electrical system during or after construction must be reflected in the updated single line (As-Built)."}}, {"@type": "Question", "name": "What software is used for electrical detail engineering in EPC projects?", "acceptedAnswer": {"@type": "Answer", "text": "The most used tools are: ETAP for analysis of electrical systems (short circuit, load flow, protection coordination, electric arc), SKM PowerTools with capabilities similar to ETAP and greater use in projects with NEC standards, AutoCAD Electrical for plans and diagrams with automatic generation of lists of materials, DigSILENT PowerFactory for transmission and dynamic studies, and Revit MEP or Plant3D for BIM coordination in large projects. The choice of software depends on the project standard, client requirements and the scope of the study."}}, {"@type": "Question", "name": "What is the IFC state of engineering?", "acceptedAnswer": {"@type": "Answer", "text": "IFC (Issued for Construction) is the review status of an engineering document that indicates that it has completed all internal and client reviews, incorporated all comments, and is authorized to be executed in the field. Documents go through several previous states: IFR (Issued for Review), IFA (Issued for Approval) and IFC. Only documents in IFC status are valid for construction. Upon completion of the project, the documents are updated with the actual changes made and issued as As-Built, which is the definitive record of how the facility was built."}}, {"@type": "Question", "name": "How long does the engineering phase of detail in an electric EPC project last?", "acceptedAnswer": {"@type": "Answer", "text": "The duration varies depending on the complexity of the project. For a standard 1–5 MVA industrial substation, detailed engineering takes between 4 and 8 weeks. More complex projects (entire industrial plants, high voltage systems, multiple substations) may require 12 to 20 weeks. The detailed engineering phase is critical because the IFC documents are the input for the procurement of long-term equipment (transformers, MV switchgear, CCMs) whose manufacturing begins before construction begins. Delaying detailed engineering cascades the entire procurement and construction chain."}}]}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Detail Engineering in Electrical EPC Projects: Calculation Reports, Unifilar and Construction Drawings | VMS Energy", "description": "Complete technical guide on detailed engineering in electrical EPC projects: single-line diagram, short-circuit and voltage drop calculation reports, conductor sizing, construction plans and IFC deliverables.", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-02-20", "dateModified": "2026-02-20", "image": ["https://vmsenergy.com/assets/img/blog/ingenieria-detalle/og-ingenieria-detalle-epc.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html"}, "url": "https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html"}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-ingenieria-detalle-epc-electrico.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/blog-ingenieria-detalle-epc-electrico.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-ingenieria-detalle-epc-electrico.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+  <main id="contenido">
+
+
+  <!-- HERO -->
+  <section class="hero" style="--article-image:url('../assets/img/Especialidades_ingenieria.webp')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy · Blog · EPC Engineering</span>
+        <h1 id="hero-title">Detail engineering in electrical EPC projects: from the one-line diagram to the IFC package</h1>
+        <p>The phase where 80% of the project&#x27;s technical decisions are made — and where errors cost more if they are detected late.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" href="#articulo">Read article</a>
+          <a class="btn btn--secondary" href="especialidad_ingenieria.html#inicio">See speciality engineering</a>
+        </div>
+        <div class="hero__meta">
+          <span>June 5, 2026</span>
+          <span>14 min read</span>
+          <span>EPC Engineering · 15 documented deliverables</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <article class="blog-article" aria-label="Article: Electrical EPC detail engineering">
+
+          <nav class="article-toc" aria-label="Table of Contents">
+            <h3>Article content</h3>
+            <ol>
+              <li><a href="#contexto">The detailed engineering phase in the EPC cycle</a></li>
+              <li><a href="#unifilar">The one-line diagram: project master document</a></li>
+              <li><a href="#cortocircuito">Short circuit calculation memory (IEC 60909)</a></li>
+              <li><a href="#caida">Load flow and voltage drop</a></li>
+              <li><a href="#conductores">Conductor sizing</a></li>
+              <li><a href="#balance">Load Balance (Load Schedule)</a></li>
+              <li><a href="#planos">Construction plans: pipes, grounding and lighting</a></li>
+              <li><a href="#entregables">The 15 standard detail engineering deliverables</a></li>
+              <li><a href="#software">Software used in electrical engineering EPC</a></li>
+              <li><a href="#caso">Case: 5 MVA substation for industrial plant in Coahuila</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </nav>
+
+          <p class="article-lead">In an EPC project, the construction phase is visible: you see the trench, the cable, the substation being assembled. But 80% of the technical decisions that determine whether that facility will operate correctly, safely and efficiently are made weeks in advance — in the detailed engineering phase. An error in the short circuit calculation memory can result in a switch with insufficient breaking capacity. An incomplete one-line diagram can cause poorly coordinated protection that shuts down the entire plant in the event of a minor fault. This article documents how VMS Energy performs electrical detail engineering on industrial EPC projects.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Contexto -->
+          <h2 id="contexto">1. The detailed engineering phase in the EPC cycle</h2>
+
+          <p>Every EPC project (Engin Mapped, Procurement, and Construction) goes through three levels of engineering before it reaches the field. Understanding the difference between them is fundamental to understanding the role and weight of detail engineering:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Level 1</span>
+              <h3>Conceptual engineering</h3>
+              <p>Defines the scope, design bases, required power, voltage levels and general architecture of the system. Produces a concept one-line diagram and class C cost estimate (±30%). Lasts weeks.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Level 2</span>
+              <h3>Basic engineering</h3>
+              <p>Develops the design criteria, defines the main equipment (transformers, switchgear, CCMs), and produces the approved single-line to procure long-term equipment. Allows class B estimation (±15%).</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Level 3 — This item</span>
+              <h3>Detail engineering</h3>
+              <p>Transforms basic engineering definitions into IFC documents (Issued for Building): construction plans, verified computational memories, data sheets of all equipment, definitive material listings.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Result</span>
+              <h3>IFC Package</h3>
+              <p>The IFC package is the set of documents that the construction team needs to execute the project without interpreting or improvising. No document can be used in the field without the IFC seal issued by the technical person responsible for the project.</p>
+            </div>
+          </div>
+
+          <div class="article-callout">
+            <strong>The cost of corrections rule:</strong> An error detected in the detail engineering phase costs 1× to correct it. The same error detected during the search costs 10×. Detected during construction: 100×. detected in operation: 1000×. The quality of detail engineering is the highest return investment in any EPC project.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Unifilar -->
+          <h2 id="unifilar">2. The one-line diagram: project master document</h2>
+
+          <p>The Single Line Diagram (SLD) is the document that describes the complete architecture of the electrical system: power sources, transformers, bars, feeders, protection equipment, measurement and instrumentation, all represented with a single line per three-phase circuit. It is the first document to be prepared and the last to be updated (like As-Built).</p>
+
+          <h3>Information that an IFC single-wire line must contain</h3>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Required information</th>
+                  <th>Common mistake</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Transformers</strong></td>
+                  <td>kVA/MVA, voltages, vector group (e.g. Din11), Zcc (%), cooling type, TAPs available</td>
+                  <td>Skip vector group — critical for differential protection and grounding</td>
+                </tr>
+                <tr>
+                  <td><strong>Switches and disconnectors</strong></td>
+                  <td>Rated current (A), rated voltage (kV), breaking capacity (kA), type (vacuum, SF₆, air)</td>
+                  <td>Do not indicate the breaking capacity — prevents verification of sufficiency against short circuit</td>
+                </tr>
+                <tr>
+                  <td><strong>Current transformers (TC)</strong></td>
+                  <td>Transformation ratio, accuracy class (e.g. 5P20), rated load (VA)</td>
+                  <td>Skip the accuracy class — measuring CTs are not used for protection and vice versa</td>
+                </tr>
+                <tr>
+                  <td><strong>Protection relays</strong></td>
+                  <td>Type (51, 50, 87, 67), model, function number ANSI, configuration</td>
+                  <td>Only indicate the function without the model — prevents programming parameters in engineering</td>
+                </tr>
+                <tr>
+                  <td><strong>Bars and feeders</strong></td>
+                  <td>Conductor section (mm² or AWG), insulation type, installation method, run length</td>
+                  <td>Not indicating the length — prevents checking voltage drop without consulting plans</td>
+                </tr>
+                <tr>
+                  <td><strong>Grounding</strong></td>
+                  <td>Neutral type (solid, impedance, isolated), mesh system connection, target resistance (-)</td>
+                  <td>Failure to specify neutral grounding type — affects all ground fault coordination</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>The single line must reference the symbol standard used: <strong>IEC 60617</strong> for projects under European/international standard; or <strong>ANSI/IEEE Std 315</strong> For projects with North American influence or NEC. Both are accepted in Mexico, but within the same project a single standard of simbology should be used.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Cortocircuito -->
+          <h2 id="cortocircuito">3. Short circuit calculation memory (IEC 60909)</h2>
+
+          <p>The short-circuit current calculation is the most impactful memory in electrical engineering: it determines the minimum breaking capacity of all switches in the system, the required thermal resistance for conductors and bars, and the maximum settings of overcurrent relays. A switch with insufficient breaking capacity can explode upon failure, with catastrophic consequences.</p>
+
+          <h3>IEC 60909 method: equivalent impedances</h3>
+
+          <p>The IEC 60909 standard calculates the maximum initial symmetrical short-circuit current using the method of equivalent impedances referred to the fault bus. For a symmetrical three-phase fault, the short circuit current is:</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Three-phase short-circuit current (IEC 60909)</span>
+            I&rdquo;k3 = (c &times; V<sub>N</sub>) / (&radic;3 &times; |Z<sub>Total</sub>|)
+            <span class="formula-note">Where: c = voltage factor (1.0 minimum / 1.05 to 1.1 maximum) — V<sub>N</sub> = nominal bus voltage [kV] — Z<sub>Total</sub> = total circuit impedance referred to the fault bus [Ω]</span>
+          </div>
+
+          <p>In practice, the total impedance is constructed by adding the impedances of all elements in series between the source and the failure point: supply network (CFE), transformers, cables, buses. Each element refers to the same voltage level through the transformation ratio.</p>
+
+          <h3>Numerical example: 480 V industrial substation bus</h3>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Calculation example</span>
+              <h3>Bus short circuit current 480 V — transformer 2,000 kVA</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>System data:</strong> Transformer 2,000 kVA, 13.8 kV / 480 V, Dyn11, Zcc = 5.75%. Impedance of the CFE network referring to 13.8 k V: Z<sub>network</sub> = 0.08 + j0.42 Ω (MVAcc = 450 MVA at the connection point).</p>
+
+              <p><strong>Step 1 — Base impedance at 480 V:</strong></p>
+              <p>Z<sub>Base</sub> = V<sub>N</sub>² / S<sub>N</sub> = (0.480)&sup2; / 2.0 = 0.1152 &Omega;</p>
+
+              <p><strong>Step 2 — Transformer impedance referred to 480 V:</strong></p>
+              <p>Z<sub>T</sub> = Zcc% &times; Z<sub>Base</sub> = 0.0575 &times; 0.1152 = 0.00662 &Omega;</p>
+
+              <p><strong>Step 3 — Grid impedance referred to 480 V:</strong></p>
+              <p>Z<sub>net,480</sub> = Z<sub>net,13.8kV</sub> &times; (480/13,800)&sup2; &#8594; <strong>despicable</strong> (Z<sub>T</sub> dominates when the transformer is the only limiting element)</p>
+
+              <p><strong>Step 4 — Maximum short circuit current on 480 V bus:</strong></p>
+              <p>I&rdquo;k3 = (1.05 &times; 0.480) / (&radic;3 &times; 0.00662) = 0.504 / 0.01147 = <strong>43,940 A ≈ 44 kA</strong></p>
+
+              <p><strong>Conclusion:</strong> All switches on the bus of the bus of 480 V must have breaking capacity ≥ 44 kA. Standard low voltage switches of 18 kA or 22 kA are excluded. Frame switches with breaking capacity of 50 kA or 65 kA are required, or the installation of a short circuit limitation coil (reactor) must be evaluated.</p>
+            </div>
+          </div>
+
+          <div class="article-callout--warning article-callout">
+            <strong>The most expensive mistake in electrical procurement:</strong> Specify low voltage switches (NEMA/IEC) without checking the 480 V bus short circuit current. 1,000–3,000 kVA distribution transformers with Zcc of 5–6% generate secondary short circuit currents of 35 to 60 kA. A 22 kA breaker installed on that bus is a catastrophic arc flash risk.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Caída de tensión -->
+          <h2 id="caida">4. Load flow and voltage drop</h2>
+
+          <p>The load flow analysis verifies that under normal operating conditions and under contingency, the voltage on each bus in the system remains within the allowed range. In industrial facilities, the <strong>NOM-001-SEDE-2012</strong> sets the reference limits:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Criterion</th>
+                  <th>Limit NOM-001-SEDE</th>
+                  <th>Recommended EPC criterion</th>
+                  <th>Applies to</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Maximum branch circuit drop</td>
+                  <td class="mid">3%</td>
+                  <td class="mid">2% (sensitive loads)</td>
+                  <td>Motor, lighting, branched circuit</td>
+                </tr>
+                <tr>
+                  <td>Total cumulative drop</td>
+                  <td class="mid">5%</td>
+                  <td class="mid">4% (industrial projects)</td>
+                  <td>Connection + feeder + branch</td>
+                </tr>
+                <tr>
+                  <td>Drop in control circuits</td>
+                  <td class="na">Not specified</td>
+                  <td class="mid">2%</td>
+                  <td>PLC, instruments, 24 V DC circuits</td>
+                </tr>
+                <tr>
+                  <td>Transformer voltage regulation</td>
+                  <td class="na">Not specified</td>
+                  <td class="good">±5% with available TAPS</td>
+                  <td>Transformer MV/LV bus</td>
+                </tr>
+                <tr>
+                  <td>Drop in engine start</td>
+                  <td class="na">Not specified</td>
+                  <td class="mid">≤15% transitional</td>
+                  <td>Bus during direct start DOL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>The voltage drop formula for balanced three-phase circuits is:</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Three-phase voltage drop (%)</span>
+            &Delta;V% = (&radic;3 &times; I &times; L &times; (R &times; cos&phi; + X &times; sin&phi;)) / (10 &times; V<sub>N</sub>)
+            <span class="formula-note">I = load current [A] — L = conductor length [m] — R = conductor resistance [Ω/km] — X = conductor reactance [Ω/km] — V<sub>N</sub> = line voltage [V] — cosφ = load power factor</span>
+          </div>
+
+          <p>In the practice of EPC projects, the voltage drop calculation is carried out using ETAP or using standardized spreadsheets for each section of the system. The result determines the minimum section of the conductor that meets both thermal capacity and voltage drop.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Conductores -->
+          <h2 id="conductores">5. Sizing of conductors</h2>
+
+          <p>The electrical conductor is sized by <strong>two independent criteria</strong>, and the final section is the largest value that results from both:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Criterion 1</span>
+              <h3>Thermal capacity (ampacity)</h3>
+              <p>Determined by rated load current + ambient temperature correction factors, conductor grouping and conduit type. Regulatory basis: <strong>NOM-001-SEDE-2012 Table 310-16</strong> (equivalent to NEC 310.15).</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Criterion 2</span>
+              <h3>Voltage drop</h3>
+              <p>Determined by the length of the section and the maximum allowable fall. In installations with long feeders (&gt; 100 m), the thermal criterion usually dominates and results in larger section conductors.</p>
+            </div>
+          </div>
+
+          <p>Additionally, drivers must be verified for their <strong>short circuit support capacity</strong>: The maximum temperature reached by the conductor during the operating time of the upstream switch must not exceed the insulation limit (90°C for normal THHN/THHW, 150°C under short circuit).</p>
+
+          <div class="formula-box">
+            <span class="formula-label">Short circuit thermal verification</span>
+            S<sub>min</sub> = I<sub>CC</sub> &times; &radic;t / k
+            <span class="formula-note">S<sub>min</sub> = minimum section [mm²] — I<sub>CC</sub> = short circuit current [A] — t = switch operating time [s] — k = 143 for copper THW/THHN (initial temperature 75°C)</span>
+          </div>
+
+          <div class="article-callout">
+            <strong>Example:</strong> 480 V bus, I<sub>CC</sub> = 44,000 A, upstream switch operating time = 0.08 s (60 Hz cycles). Yes<sub>min</sub> = 44,000 &times; &radic;0.08 / 143 = 44,000 &times; 0.283 / 143 = <strong>87 mm²</strong>. A 2/0 AWG (67 mm²) conductor does not comply; 3/0 AWG (85 mm²) or 4/0 AWG (107 mm²) minimum is required for this criterion.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Balance de cargas -->
+          <h2 id="balance">6. Load Balance (Load Schedule)</h2>
+
+          <p>The load balance (or Load Schedule) is the complete inventory of all project loads, organized by panel and feeder. It is the document that allows sizing the transformers, emergency generators, main switches and the total installed capacity of the substation.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Column</th>
+                  <th>Description</th>
+                  <th>How to obtain</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Installed power (kW)</strong></td>
+                  <td>Nominal load power according to plate</td>
+                  <td>Technical sheet of the equipment or process</td>
+                </tr>
+                <tr>
+                  <td><strong>Demand factor (DF)</strong></td>
+                  <td>Fraction of time operating at full load. Pump motor: 0.80. Lighting: 1.0. Intermittent loads: 0.50–0.65</td>
+                  <td>Production process, customer specification</td>
+                </tr>
+                <tr>
+                  <td><strong>Maximum demand (kW)</strong></td>
+                  <td>Installed power × FD</td>
+                  <td>Calculation</td>
+                </tr>
+                <tr>
+                  <td><strong>Power factor (cosφ)</strong></td>
+                  <td>Induction motor: 0.80–0.85. VFD: ≥0.95. LED lighting: 0.90</td>
+                  <td>Technical data sheet / design standards</td>
+                </tr>
+                <tr>
+                  <td><strong>kVA demand</strong></td>
+                  <td>kW / cos</td>
+                  <td>Calculation</td>
+                </tr>
+                <tr>
+                  <td><strong>Matching factor (CF)</strong></td>
+                  <td>Probability that all loads operate simultaneously. For continuous processes: 0.90. For general use: 0.70–0.80</td>
+                  <td>Engineering criteria / process data</td>
+                </tr>
+                <tr>
+                  <td><strong>transformer design kVA</strong></td>
+                  <td>Suma de demandas kVA &times; FC &times; margen de crecimiento (typically 1.20&ndash;1.25)</td>
+                  <td>Calculation — basis for transformer selection</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout--warning article-callout">
+            <strong>The most common error in load balancing:</strong> Add all installed power without applying demand and match factors, and Shame the transformer for 100% of the sum. This results in oversized transformers between 30% and 60%, with higher initial cost and inefficient operation (processors operate more efficiently between 50% and 75% of charge). The correct application of the demand factor is not conservatism. excessive: it is engineering.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Planos constructivos -->
+          <h2 id="planos">7. Construction plans: pipes, grounding and lighting</h2>
+
+          <p>The calculation reports determine the requirements; The construction plans specify how to install them. Three plans are especially critical in any substation or industrial electrical infrastructure project:</p>
+
+          <h3>Conduit &amp; Cable Tray Plan</h3>
+          <p>Defines the routing of cable trays and conduits, the entry and exit points in equipment, the crossings with other disciplines (pipe, structure), and the conduit filling percentages. The <strong>NOM-001-SEDE-2012</strong> states that the area occupied by drivers should not exceed 40% of the interior area of the &quot;Hungry&quot; (one single driving: 53%). The channel plane should be coordinated with the BIM model or the plant plans of other disciplines to avoid interference.</p>
+
+          <h3>Grounding Plan</h3>
+          <p>The grounding mesh is the fundamental safety system of the substation. Its design follows the standard <strong>IEEE Std 80 (Guide for Safety in AC Substation Grounding)</strong> and must demonstrate that the tensions of passage and contact during a fault to earth do not exceed the limits tolerable by the human body.</p>
+
+          <p>The critical parameters of the mesh design are:</p>
+
+          <ul>
+            <li><strong>Soil resistivity (ρ):</strong> It is measured in the field with the Wenner method (IEEE Std 81). In Mexico, typical values ​​range from 30 Ω·m (wet clay soil) to &gt;1,000 Ω·m (rock). Resistivity directly determines step and contact voltages.</li>
+            <li><strong>Mesh resistance (R<sub>G</sub>):</strong> For industrial substations, the typical target is R<sub>G</sub> ≤ 1  For transmission substations or with high fault currents, the pass/contact or voltage criterion dominates the absolute resistance.</li>
+            <li><strong>Mesh conductor gauge:</strong> Minimum 2/0 AWG annealed bare copper (most common in Mexico) or 4/0 AWG in substations with high fault current (&gt; 10 kA for more than 1 second).</li>
+            <li><strong>Ground rods (ground-sands):</strong> Copperweld 5/8&quot; × 10 ft, peripheral mesh with rods in corners and every 6–9 m depending on soil resistivity.</li>
+          </ul>
+
+          <h3>Lighting Layout</h3>
+          <p>The design of industrial lighting must comply with the illuminance levels established by the <strong>NOM-025-STPS-2008</strong> (Lighting conditions in work centers). For substations and electrical rooms, the minimum level is 200 lux (moderate precision work). The lighting plan must indicate the type of luminaire, the power, the mounting height, the calculated illuminance level (DIALux or AGi32 software) and the emergency lighting circuits (minimum 10 lux for evacuation, NOM-001-SEDE-2012).</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. Entregables -->
+          <h2 id="entregables">8. The 15 standard electrical detail engineering deliverables</h2>
+
+          <p>The electrical engineering IFC package of an industrial substation project typically includes the following documents. The actual number varies depending on the complexity of the project, but these 15 are the minimum core for any power and distribution project:</p>
+
+          <div class="doc-list">
+            <div class="doc-list__header">
+              <span>#</span>
+              <span>Deliverable</span>
+              <span>Type</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">01</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">General Single Line Diagram of the System</span>
+                <span class="doc-row__sub">Complete architecture — connection, transformers, main bars, primary feeders. IEC 60617/ANSI 315</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">02</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Detail Single Line Diagram per Board / MCC</span>
+                <span class="doc-row__sub">One plane for each distribution board, MCC or charging center. Includes circuit numbering, caliber, retort and load</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">03</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Short Circuit Calculation Memory</span>
+                <span class="doc-row__sub">IEC 60909 / ANSI C37.010. Reports I”k3, I”k1 and I”k2 on each bus Defines minimum breaking capacity required by voltage level</span>
+              </div>
+              <span class="doc-chip doc-chip--calc">Calculation</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">04</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Load Flow and Voltage Drop Calculation Memory</span>
+                <span class="doc-row__sub">Checks voltage profile on each bar in normal condition and contingency. Base NOM-001-SEDE (3%/5%)</span>
+              </div>
+              <span class="doc-chip doc-chip--calc">Calculation</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">05</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Load Balance (Load Schedule)</span>
+                <span class="doc-row__sub">Complete inventory of loads with FD, FC, cosφ and design kVA. Basis for sizing transformers and feeders</span>
+              </div>
+              <span class="doc-chip doc-chip--calc">Calculation</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">06</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Conductor Sizing Report</span>
+                <span class="doc-row__sub">Final section by thermal criteria, voltage drop and short circuit support for each section. NOM-001-HEADQUARTERS Table 310-16</span>
+              </div>
+              <span class="doc-chip doc-chip--calc">Calculation</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">07</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">List of Equipment and Materials (BOM)</span>
+                <span class="doc-row__sub">Bill of Materials complete with technical specification, quantity and unit. Basis for procurement of materials and final cost estimate</span>
+              </div>
+              <span class="doc-chip doc-chip--data">Data</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">08</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Major Equipment Data Sheets</span>
+                <span class="doc-row__sub">Technical data sheet for transformers, MV switchgear, CCMs, main switches. Basis for issuing requests for quotations to manufacturers</span>
+              </div>
+              <span class="doc-chip doc-chip--data">Data</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">09</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Physical Distribution Plan of Equipment</span>
+                <span class="doc-row__sub">Layout of electrical equipment in control room, substation or outdoors. Safety distances NOM-001-SEDE and NRF (where applicable)</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">10</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Channel Plan (Conduit &amp; Cable Tray)</span>
+                <span class="doc-row__sub">Plan and profile routing of trays and conduits. Filling percentage, materials, supports. Coordination with MEP disciplines</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">11</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Grounding Plan</span>
+                <span class="doc-row__sub">Mesh design: IEEE Std 80 method, field measured resistivity, resistance target (R ≤ 1 Ω typical), conductor size and bearings</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">12</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Lighting Plan and Photometric Computing</span>
+                <span class="doc-row__sub">DIALux or equivalent. Verify illuminance levels (lux) according to NOM-025-STPS-2008. Includes emergency lighting for evacuation</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">13</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Control and Signaling Diagram</span>
+                <span class="doc-row__sub">Control diagrams for each control circuit, interlocks, alarm signaling and protection activation. Base for control board wiring</span>
+              </div>
+              <span class="doc-chip doc-chip--draw">Plan</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">14</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">Protection Coordination Report</span>
+                <span class="doc-row__sub">Time-current curves (TCC) in ETAP. Pickup and time-dial settings for 50/51/50G/51G relays. Verify selectivity in at least three zones</span>
+              </div>
+              <span class="doc-chip doc-chip--calc">Calculation</span>
+            </div>
+
+            <div class="doc-row">
+              <span class="doc-row__num">15</span>
+              <div class="doc-row__info">
+                <span class="doc-row__title">List of Instruments and I/O Points</span>
+                <span class="doc-row__sub">Instrument Index with tag, measured variable, range, signal (4–20 mA, Modbus, Profibus). Basis for PLC/DCS programming and control room layout</span>
+              </div>
+              <span class="doc-chip doc-chip--sched">List</span>
+            </div>
+
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Software -->
+          <h2 id="software">9. Software used in electrical engineering EPC</h2>
+
+          <p>Modern electrical detail engineering is not performed with manual calculations beyond the verification level. Specialized software allows you to analyze complex systems, generate automatic lists of materials and guarantee traceability between the system model and construction plans.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Software</th>
+                  <th>Main use</th>
+                  <th>Strength in EPC projects</th>
+                  <th>Supported standards</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>ETAP</strong></td>
+                  <td>Analysis of electrical systems: short circuit, charge flow, protection coordination, electric arc (Arc Flash)</td>
+                  <td>Single data model that powers all studies. Engineering reports directly exportable to IFC</td>
+                  <td>IEC 60909, ANSI C37, IEEE 1584 (Arc Flash), IEC 60909</td>
+                </tr>
+                <tr>
+                  <td><strong>SKM PowerTools</strong></td>
+                  <td>Short circuit, load flow, coordination, NEC conductor sizing</td>
+                  <td>Greater penetration in NEC projects (USA/North American Mexico). Familiar interface for NEC-trained engineers</td>
+                  <td>NEC, ANSI/IEEE C37, IEEE 1584</td>
+                </tr>
+                <tr>
+                  <td><strong>AutoCAD Electrical</strong></td>
+                  <td>Electrical plans and diagrams with automatic generation of bills of materials (BOM), I/O reports and cable numbering</td>
+                  <td>Integration with AutoCAD Plant3D and Revit. Collaborative editing with external references (XRef)</td>
+                  <td>IEC 60617, ANSI/IEEE 315</td>
+                </tr>
+                <tr>
+                  <td><strong>DigSILENT PowerFactory</strong></td>
+                  <td>Dynamic studies, transient stability, transmission and distributed generation. Standard in utilities and generation projects</td>
+                  <td>Maximum precision in transmission studies, grid interconnections and microgrids with renewable generation</td>
+                  <td>IEC 60909, IEC 60068, International Grid Codes</td>
+                </tr>
+                <tr>
+                  <td><strong>Revit MEP / BIM 360</strong></td>
+                  <td>Multidisciplinary coordination in 3D. Interference detection (clash detection) between electrical, HVAC, structure and process</td>
+                  <td>Eliminates pre-field installation interference. In large projects it reduces pipeline rework by up to 30%</td>
+                  <td>ISO 19650 (BIM)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>The relationship between ETAP and AutoCAD Electrical:</strong> At VMS Energy, the ETAP model is built first and is the source of truth for all electrical parameters: breaking capacities, conductor sizes, protection settings. The plans in AutoCAD Electrical extract these parameters and reflect them in the diagrams. If the ETAP model changes (for example, because the customer modified a load), the drawings are updated from the source, not manually. This guarantees consistency between calculation reports and construction plans.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 10. Caso de estudio -->
+          <h2 id="caso">10. Case: 5 MVA substation for industrial plant in Coahuila</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">Engineering case — Steel processing plant, Coahuila</span>
+              <h3>Detail engineering for 115 kV / 13.8 kV, 5 MVA substation, with 8 distribution feeders</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Project context:</strong> Expansion of a steel processing plant in Coahuila. The newly built substation would power three resistance furnaces, oil cooling system, compressors, industrial lighting and control system. The complexity of the project was in the high non-linear demand of the furnaces (high harmonic content) and the need to guarantee continuity of service for the critical process.</p>
+
+              <p><strong>Scope of detailed engineering:</strong></p>
+              <ul>
+                <li>47 IFC documents issued in 7 weeks of engineering</li>
+                <li>ETAP model with 3 MV buses (13.8 kV), 12 LV buses (480 V) and 86 modeled electrical elements</li>
+                <li>Harmonic analysis (IEEE 519): furnaces inject up to 18% 5th harmonic — passive filters were specified on 13.8 kV bus and line reactors on furnace feeders</li>
+                <li>Grounding mesh design: field measured resistivity 68 Ω·m, 850 m² mesh, 4/0 AWG Cu conductor, result: R<sub>G</sub> = 0.6 &Omega;</li>
+              </ul>
+
+              <p><strong>Short circuit calculation result:</strong></p>
+              <ul>
+                <li>Bus 13.8 kV: I<sub>DC3</sub> = 3.8 kA (transformer dominates — MV switchgear selected 12.5 kA breakdown: ample reserve)</li>
+                <li>Bus 480 V: I<sub>DC3</sub> = 31.4 kA (Zcc 5.5% of 5 MVA transformer). Frame switches of 42 kA breaking capacity were required on the entire LV bus</li>
+                <li>Three power supply units with 800 A rated current and 31.4 kA short circuit: the minimum conductor by thermal criterion was 350 MCM, but the voltage drop criterion at 120 m required 500 MCM. 500 MCM THHN/90°C was installed on EGC tray.</li>
+              </ul>
+
+              <p><strong>Critical design decision — detected in ETAP, not in the field:</strong> During the coordination analysis, the model showed that the definite-time overcurrent relay (51) in the main furnace feeder operated before the ground fault relay (51G) of the transformer upon an interphase fault at the furnace terminal. This would have disconnected the furnace due to a fault that had to be contained by the feeder. The time-dial of relay 51 on the feeder was adjusted from 0.1 to 0.2 s to ensure selectivity. The adjustment took 2 hours in engineering and would have taken weeks of field diagnosis if it had been omitted from the study.</p>
+
+              <p><strong>Learning:</strong> In installations with non-linear loads (furnaces, rectifiers, high-power VFDs), harmonic analysis is not optional: it is an integral part of the detailed engineering. Harmonics cause heating in transformers, failure of power factor correction capacitors and destabilization of overcurrent relays that are not robust to asymmetric peak values.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Frequently asked questions about electrical detail engineering</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>What documents do electrical detail engineering include in an EPC project?</summary>
+              <p>The minimum package includes a general and detailed single-line diagram per board, short-circuit calculation reports (IEC 60909), load flow and voltage drop, load balance, conductor sizing, list of materials, equipment data sheets, piping plans, grounding, lighting, control diagram and protection coordination table. The complete package is issued in IFC state before starting construction.</p>
+            </details>
+
+            <details>
+              <summary>What standard is used for short circuit calculation in Mexico?</summary>
+              <p>In industrial projects in Mexico it is mainly used <strong>IEC 60909</strong> (impedance method, adopted in medium and high voltage projects) or <strong>ANSI/IEEE C37.010</strong> For NEC-standard projects. Tools such as ETAP and SKM PowerTools implement both methods. The result determines the minimum breakability (kA) of all switches and the selection of conductors by thermal resistance to short circuit.</p>
+            </details>
+
+            <details>
+              <summary>What is the maximum voltage drop allowed in industrial facilities in Mexico?</summary>
+              <p>The <strong>NOM-001-SEDE-2012</strong> It establishes 3% in derivative circuit and 5% accumulated total (acometida + feeder + derivative).In industrial EPC practice, more conservative criteria are used: 2% in control circuits and sensitive loads, 3% in force circuits. In installations with long feeders (&gt; 100 m), the voltage drop criterion usually results in conductors of greater section than the thermal criterion.</p>
+            </details>
+
+            <details>
+              <summary>What is the unify diagram and why is the master document?</summary>
+              <p>The Single Line Diagram represents the complete electrical system using a single line per three-phase circuit, with standardized symbols (IEC 60617 or ANSI/IEEE 315). It is the main reference document for procurement of equipment, coordination of protections, permits and operation. Any changes made during or after construction must be reflected in the single-line, which ends the project as As-Built.</p>
+            </details>
+
+            <details>
+              <summary>What software is used for EPC electrical engineering?</summary>
+              <p>The most used tools are: <strong>ETAP</strong> for short circuit, load flow, protection coordination and the arc flash; <strong>SKM PowerTools</strong> with similar capacities under NEC standard; <strong>AutoCAD Electrical</strong> for plans and schematics with automatic BOM; <strong>DigSILENT PowerFactory</strong> for transmission and dynamic static studies; and <strong>Revit MEP</strong> For multidisciplinary BIM coordination. In VMS Energy, ETAP is the primary data source and AutoCAD Electrical reflects that data in the construction plans.</p>
+            </details>
+
+            <details>
+              <summary>What is the IFC state of detail engineering?</summary>
+              <p>IFC (Issued for Construction) indicates that the document has completed all internal and client reviews, incorporated all comments, and is authorized to be executed in the field. The previous statuses are IFR (Issued for Review) and IFA (Issued for Approval). Upon completion of the project, the documents are updated with the actual changes executed and issued as <strong>As-Built</strong>, which is the definitive record of how the facility was built.</p>
+            </details>
+
+            <details>
+              <summary>How long does the electrical detail engineering phase last?</summary>
+              <p>For a standard 1–5 MVA industrial substation: 4 to 8 weeks. Complex projects (entire plants, HV, multiple substations) require 12 to 20 weeks. The phase is critical because the IFC documents are the input for the procurement of long-term delivery equipment (transformers, MV switchgear, CCMs) whose manufacturing begins while engineering is still active. Delaying detailed engineering cascades the entire procurement and construction chain.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>Do you need electrical detail engineering for your EPC project?</h3>
+            <p>VMS Energy develops the complete IFC package: proven computational memories in ETAP, construction plans in AutoCAD Electrical, protection coordination and grounding design. Deliverables ready for procurement and construction without intermediaries.</p>
+            <div class="article-actions on-dark">
+              <a class="btn btn--primary" href="especialidad_ingenieria.html#inicio">See speciality engineering</a>
+              <a class="btn btn--secondary" href="contacto_cta.html?servicio=ingenieria-detalle-electrica">Request proposal</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar" aria-label="Related resources">
+
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>Electrical engineering EPC</h3>
+            <p>From calculation memory to IFC package. ETAP, AutoCAD Electrical and multidisciplinary coordination in a single team.</p>
+            <a class="btn" href="especialidad_ingenieria.html#inicio">See speciality</a>
+          </div>
+
+          <!-- Entregables clave -->
+          <div class="sidebar-card">
+            <h3>Key IFC Deliverables</h3>
+            <ul>
+              <li><strong>General unifilar</strong> — complete system architecture</li>
+              <li><strong>Short circuit memory</strong> — bus break-up capacity</li>
+              <li><strong>Load balance</strong> — base for Transformers</li>
+              <li><strong>Grounding plane</strong> — IEEE 80 ≤ 1</li>
+              <li><strong>Coordination of protections</strong> — TCC in ETAP</li>
+            </ul>
+          </div>
+
+          <!-- Normas de referencia -->
+          <div class="sidebar-card">
+            <h3>Reference standards</h3>
+            <ul>
+              <li><strong>IEC 60909</strong> — short circuit calculation</li>
+              <li><strong>IEC 60617</strong> — symbols for electrical diagrams</li>
+              <li><strong>IEEE Std 80</strong> — grounding of substations</li>
+              <li><strong>IEEE 519</strong> — limits of amonics</li>
+              <li><strong>NOM-001-SEDE-2012</strong> — electrical installations (voltage fall, conductors)</li>
+              <li><strong>NOM-025-STPS-2008</strong> — industrial lighting</li>
+            </ul>
+          </div>
+
+          <!-- Serie blogs -->
+          <div class="sidebar-card">
+            <h3>VMS Energy Technical Blog</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">→ #1 Selection of transformers</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">→ #2 Tests FAT and SAT</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-transformadores-operacion.html">→ #3 Predictive maintenance</a></li>
+              <li><a class="sidebar-link" href="blog-instalacion-comisionamiento-transformadores-epc.html">→ #4 EPC installation</a></li>
+              <li><a class="sidebar-link" href="blog-guia-fabricantes-transformadores-industriales.html">→ #5 Manufacturers&#x27; Guide</a></li>
+              <li><strong>→ #6 Detailed Engineering (this article)</strong></li>
+            </ul>
+          </div>
+
+          <!-- Servicios -->
+          <div class="sidebar-card">
+            <h3>Related services</h3>
+            <a class="sidebar-link" href="especialidad_ingenieria.html#inicio">→ Electrical engineering EPC</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">→ Technical supply</a><br><br>
+            <a class="sidebar-link" href="lp-pruebas-comisionamiento-puesta-en-servicio.html">&#8594; Comisionamiento</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Technical contact</h3>
+            <p>Talk to an EPC electrical engineering specialist.</p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3h4l2 5-2.6 1.6a12.5 12.5 0 0 0 6.5 6.5L16 13.5l5 2v4a1.5 1.5 0 0 1-1.7 1.5A17.5 17.5 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3Z"/></svg></strong> <a href="tel:+523338130739">+52 33 3813 0739</a></p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></strong> <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
+          </div>
+
+        </aside>
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- FOOTER -->
+    </main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+  <div class="mobile-phone-sticky">
+    <a href="tel:+523338130739" aria-label="Call VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+
+
+</body>
+</html>

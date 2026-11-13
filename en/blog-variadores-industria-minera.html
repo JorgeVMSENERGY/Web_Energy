@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>variable frequency drives in the Mining Industry, VMS Energy</title>
+  <meta name="description" content="Technical guide on drives in mining: applications, challenges, selection criteria and recommendations to improve efficiency and operational continuity." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="variable frequency drives in the Mining Industry, VMS Energy" />
+  <meta property="og:description" content="Applications of frequency converters for efficient motor control in the mining industry." />
+  <meta property="og:url" content="https://vmsenergy.com/en/blog-variadores-industria-minera.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/casos/og-variadores-mineria.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="variable frequency drives in the Mining Industry, VMS Energy" />
+  <meta name="twitter:description" content="Applications of frequency converters for efficient motor control in the mining industry." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/casos/og-variadores-mineria.webp" />
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('../assets/img/hero_blog_aplicaciones_mineras.webp');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    .privacy-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .privacy-wrap{padding:40px 0 56px;background:linear-gradient(180deg,#f7f9fc,#fff)}
+    .privacy-card{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 24px rgba(8,28,54,.08);padding:18px 20px;margin-bottom:18px}
+    .privacy-card h2{margin:0 0 12px;color:#12365f;font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+    .privacy-card p{margin:0 0 12px;color:#203754}
+    .privacy-card ol,.privacy-card ul{margin:0 0 12px 20px;padding:0;color:#203754}
+    .privacy-card li{margin:0 0 8px}
+    .privacy-note{margin:0 0 14px;color:#4a5f79;font-size:.95rem}
+    .ethics-showcase{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:18px;align-items:center}
+    .ethics-media{margin:0;border:1px solid rgba(23,44,81,.14);border-radius:14px;overflow:hidden;box-shadow:0 10px 24px rgba(8,28,54,.1)}
+    .ethics-media img{display:block;width:100%;height:auto;max-height:min(68vh,840px);object-fit:contain;background:#f1f5f9}
+    .ethics-tab{background:#fff;border:1px solid rgba(15,76,129,.24);border-radius:16px;padding:22px 20px;box-shadow:0 14px 28px rgba(8,28,54,.12);max-width:390px}
+    .ethics-tab h3{margin:0 0 12px;font-size:clamp(26px,3.2vw,44px);line-height:1.05;color:var(--concept-primary)}
+    .ethics-tab p{margin:0 0 16px;font-size:clamp(15px,1.4vw,18px);line-height:1.6;color:#203754}
+    .privacy-doc__btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:11px 14px;border-radius:12px;border:1px solid rgba(23,44,81,.16);font-weight:700;background:#fff;color:#12365f}
+    .privacy-doc__btn--primary{background:var(--concept-primary);border-color:var(--concept-primary);color:#fff}
+    .privacy-doc__btn--outline{background:#fff;border:2px solid #0ea5e9;color:#0284c7;padding:12px 24px;border-radius:12px;letter-spacing:.02em}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    #footer .foot-link--accent{color:var(--acento-oscuro);font-weight:700}
+    #footer .foot-link--accent:hover,#footer .foot-link--accent:focus-visible{color:var(--acento-oscuro)}
+    #footer .foot-link--strong{color:#fff;font-weight:700}
+    .foot-social__link{
+      display:inline-flex;
+      width:26px;
+      height:26px;
+    }
+    .foot-social__link svg{
+      fill:#fff;
+      transition:fill .3s ease;
+    }
+    .foot-social__link:hover svg,
+    .foot-social__link:focus-visible svg{
+      fill:var(--concept-primary);
+    }
+    @media (max-width:1300px){
+      #footer .container{
+        grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+        gap:20px !important;
+        padding:34px 0 !important;
+      }
+    }
+    @media (max-width:980px){
+      #footer .container{
+        grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+      }
+    }
+    @media (max-width:700px){
+      #footer .container{
+        grid-template-columns:1fr !important;
+        gap:16px !important;
+        padding:24px 0 !important;
+      }
+      #footer ul{
+        line-height:1.6;
+      }
+    }\n.foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:900px){.ethics-showcase{grid-template-columns:1fr}.ethics-tab{max-width:100%}.ethics-tab h3{font-size:clamp(30px,6vw,40px)}}
+    @media (max-width:680px){.privacy-card{padding:16px 14px}.privacy-hero .container{padding:74px 20px 64px}}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-intro{margin:0 0 26px;color:#4a5f79;font-size:1.08rem;max-width:950px}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .blog-card{display:flex;flex-direction:column;background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(9,32,58,.06)}
+    .blog-card__media{height:190px;overflow:hidden;background:#0d2448}
+    .blog-card__media img{width:100%;height:100%;object-fit:cover;display:block}
+    .blog-card__body{padding:16px}
+    .blog-card h3{margin:0 0 10px;font-size:1.1rem;line-height:1.25;color:#103961}
+    .blog-card p{margin:0 0 14px;color:#4b647f}
+    .blog-card a{text-decoration:none;color:var(--concept-primary);font-weight:700}
+    .blog-card a:hover{text-decoration:underline}
+    .blog-card a.btn--primary{color:#fff}
+    .blog-card a.btn--secondary{color:#fff}
+    .blog-card a.btn--primary:hover,
+    .blog-card a.btn--secondary:hover{text-decoration:none}
+    .section-title{font-size:clamp(24px,2.8vw,34px);line-height:1.1;margin:0 0 12px;color:#103961}
+    .section-title::after{content:"";display:block;width:76px;height:3px;margin-top:10px;border-radius:999px;background:linear-gradient(90deg,var(--concept-primary),rgba(142,215,255,.35))}
+    .article-section{padding:22px 0}
+    .article-section p{margin:0 0 12px;color:#4b647f}
+    .section-figure{margin:10px 0 14px;border:1px solid rgba(23,44,81,.14);border-radius:12px;overflow:hidden;background:#fff}
+    .section-figure img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+    .section-figure figcaption{padding:8px 10px;font-size:.9rem;color:#5a718d;background:#f8fbff}
+    .article-list{margin:0 0 10px 20px;color:#4b647f}
+    .article-list li{margin:0 0 8px}
+    .breadcrumbs{margin:0 0 14px;font-size:.92rem;color:#5a718d}
+    .breadcrumbs a{color:var(--concept-primary);text-decoration:none}
+    .toc{background:#f8fbff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;margin:0 0 12px}
+    .toc h2{margin:0 0 8px;color:#103961;font-size:1.06rem}
+    .toc ol{margin:0;padding-left:20px}
+    .toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .toc a:hover{text-decoration:underline}
+    .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px}
+    .kpi-card{background:#f4f9ff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:12px}
+    .kpi-card strong{display:block;color:var(--concept-primary);font-size:1.3rem;line-height:1}
+    .kpi-card span{color:#36526f;font-size:.94rem}
+    .architecture-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:8px}
+    .architecture-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:10px}
+    .architecture-card h3{margin:0 0 6px;color:#103961;font-size:.98rem}
+    .architecture-card p{margin:0;color:#4b647f;font-size:.92rem}
+    .mid-cta{margin-top:14px;background:#e8f4ff;border:1px solid rgba(15,76,129,.22);border-radius:12px;padding:14px}
+    .mid-cta p{margin:0 0 8px}
+    .selection-matrix{margin:12px 0 6px;border:1px solid rgba(23,44,81,.14);border-radius:12px;overflow:auto;background:#fff}
+    .selection-matrix table{width:100%;border-collapse:collapse;min-width:680px}
+    .selection-matrix th,.selection-matrix td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(23,44,81,.1);font-size:.94rem}
+    .selection-matrix th{background:#f4f9ff;color:#103961;font-weight:700}
+    .selection-matrix tr:last-child td{border-bottom:0}
+    .audit-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .audit-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:14px;padding:14px}
+    .audit-card h3{margin:0 0 8px;color:#103961;font-size:1.12rem}
+    .faq{margin-top:14px}
+    .faq details{border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:12px;background:#fff}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:700;color:#103961}
+    .cta-panel{margin-top:16px;background:linear-gradient(140deg,var(--concept-primary),#123f69);border-radius:14px;padding:18px;color:#fff}
+    .cta-panel p{color:#dbeafe;margin:0 0 12px}
+    .cta-panel .btn--secondary{border-color:rgba(255,255,255,.5);color:#fff}
+    @media (max-width:980px){.blog-grid{grid-template-columns:1fr 1fr}.kpi-grid{grid-template-columns:1fr}.audit-grid{grid-template-columns:1fr}.architecture-grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding-block: 74px 62px}.blog-grid{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png", "description": "VMS Energy — EPC for electrical infrastructure, automation and control, Oil & Gas, industrial solar energy, non-solar renewable generation, services at CFE hydroelectric plants, industrial lighting and electromechanical solutions.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "Electrical EPC", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Engineering, technical supply and construction in generation, transmission and distribution"}, {"@type": "Service", "name": "Industrial Lighting EPC", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Lighting design, multi-brand selection, installation and commissioning"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are there any other cross-brand integrations?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We integrate ABB, Siemens, Schneider, Woodward, KEI Cables and other brands."}}, {"@type": "Question", "name": "Do you have ISO certifications?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: ISO 9001, 14001, 45001, 37001 and 50001, with publicly available registration numbers."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Variations in the Mining Industry", "description": "Technical guide on drives in mining: applications, challenges, selection criteria and recommendations to improve efficiency and operational continuity.", "author": {"@type": "Organization", "name": "VMS Energy"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-03-04", "dateModified": "2026-03-04", "image": ["https://vmsenergy.com/assets/img/blog/casos/og-variadores-mineria.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vmsenergy.com/en/blog-variadores-industria-minera.html"}}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/blog-variadores-industria-minera.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-variadores-industria-minera.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/blog-variadores-industria-minera.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-variadores-industria-minera.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+  <main id="contenido">
+    <section id="inicio" class="hero" aria-labelledby="articleTitle" style="--article-image:url('../assets/img/hero_blog_aplicaciones_mineras.webp')">
+      <div class="container hero__content">
+        <span class="eyebrow">VMS Energy · Technical Blog</span>
+        <h1 id="articleTitle">Variations in the Mining Industry</h1>
+        <p>Technical guide to select, size and operate variable frequency drives in mining with a focus on continuity, safety and energy efficiency.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Request technical evaluation</a>
+          <a class="btn btn--secondary" href="https://vmsenergy.com/variadores-industria-minera/" target="_blank" rel="noopener noreferrer">See original article</a>
+        </div>
+        <div class="hero__meta">
+          <span>March 4, 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-wrap" aria-labelledby="resumenTitle">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / <a href="blog.html">Blog</a> / <span>Variations in the Mining Industry</span>
+        </nav>
+        <article class="blog-card" style="max-width:980px;margin:0 auto;">
+          <a class="blog-card__media" href="https://vmsenergy.com/variadores-industria-minera/" target="_blank" rel="noopener noreferrer" style="height:360px;">
+            <img src="../assets/img/ingenieria_basada_evidencia_blog_aplicaciones_mineras.webp" alt="Evidence-based engineering for drives in mining" loading="lazy" decoding="async">
+          </a>
+          <div class="blog-card__body">
+            <section class="toc" aria-labelledby="tocTitle">
+              <h2 id="tocTitle">Article Contents</h2>
+              <ol>
+                <li><a href="#resumenTitle">Executive Summary</a></li>
+                <li><a href="#aplicacionesTitle">Mining Applications Where VFD Generates Greater Value</a></li>
+                <li><a href="#criteriosTitle">Drive Selection Criteria for Mining</a></li>
+                <li><a href="#seleccionTitle">How to select a drive for mining</a></li>
+                <li><a href="#arquitecturaTitle">Typical Drive Architecture in Mining</a></li>
+                <li><a href="#desafiosTitle">Key Technical Challenges</a></li>
+                <li><a href="#erroresTitle">Common Mistakes and How to Avoid Them</a></li>
+                <li><a href="#casoTitle">Mini Reference Case</a></li>
+                <li><a href="#auditTitle">SEO and Conversion Findings</a></li>
+                <li><a href="#faqTitle">Technical FAQ</a></li>
+              </ol>
+            </section>
+
+            <section class="article-section" aria-labelledby="resumenTitle">
+              <h2 id="resumenTitle" class="section-title">Executive Summary</h2>
+              <p>The <strong>Frequency changers in mining</strong> (VFD mining or mining drives) have become one of the technical levers with the greatest impact on operational continuity, energy efficiency and process control. In extraction, crushing, grinding, pumping and venting operations, controlling speed, torque and starting ramp can mean the difference between a stable line and a plant with frequent shutdowns.</p>
+              <p>When evaluating a project <strong>motor control in mining</strong>, the drive should not be seen as an isolated piece of equipment. It must be analyzed as part of a complete electrical architecture: motor, mechanical load, network, protections, environment, control and maintenance strategy. This comprehensive vision is key to avoiding costly oversizing or undersizing that compromises reliability.</p>
+              <p>In mining, the operational demand is particularly high: constant torque loads, overload peaks, demanding electrical networks, dust, vibration and high altitude locations. Therefore, the <strong>variable frequency drives for conveyor belts</strong>, pumps, fans and mills require much more robust technical specification criteria than in conventional industrial applications.</p>
+              <p>This article summarizes how to select and apply <strong>VFD in mining</strong> with a practical approach: where they generate the most value, what criteria to use to choose them, what typical architecture is right, what are the most common errors and how to structure an implementation route that improves availability and reduces total cost of operation.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="aplicacionesTitle">
+              <h2 id="aplicacionesTitle" class="section-title">Mining Applications Where VFD Generates Greater Value</h2>
+              <figure class="section-figure">
+                <img src="../assets/img/aplicaciones_mineras_blog_VMS.webp" alt="Mining applications where variable frequency drives generate value">
+                <figcaption>VFD applications in belts, pumping, ventilation and mining process.</figcaption>
+              </figure>
+              <p>Frequency inverters have their greatest return when applied to loads with variability, controlled ramps and high availability requirements. In practice, the applications with the best technical and economic potential are usually:</p>
+              <ul class="article-list">
+                <li><strong>Conveyor belts:</strong> Transporter belt variable frequency drives reduce mechanical forces in start, minimize slips and improve section synchronization.</li>
+                <li><strong>Process and drain pumps:</strong> allow adjusting flow and pressure according to real demand, cutting consumption and hydraulic shocks.</li>
+                <li><strong>Main and auxiliary ventilation:</strong> enable fine air flow control, essential for safety and compliance with working conditions.</li>
+                <li><strong>Mills and crushing:</strong> improve low-speed torque control, especially in start-up and transient operation sequences.</li>
+                <li><strong>Critical auxiliary systems:</strong> like agitators, filtration or pumping tailings, where dynamic control protects equipment and maintains process quality.</li>
+              </ul>
+              <p>In all these cases, a correct approach to <strong>Mining drives</strong> helps reduce current peaks, stabilize the internal plant network and protect mechanical assets. The result is not only energy savings: also improved reliability, less cyclical maintenance and greater operational neurability.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="criteriosTitle">
+              <h2 id="criteriosTitle" class="section-title">Drive Selection Criteria for Mining</h2>
+              <p>Correctly choosing a drive in the mining industry requires a technical decision matrix and not just comparing nominal power. The recommended criteria are:</p>
+              <ul class="article-list">
+                <li><strong>Actual load profile:</strong> constant, variable or mixed torque; start/stop cycles; overload time.</li>
+                <li><strong>VFD Overload Capacity:</strong> especially critical in high inertia mills and conveyors.</li>
+                <li><strong>Control strategy:</strong> scale, vector or advanced control, according to required precision and dynamics.</li>
+                <li><strong>Environmental conditions:</strong> dust, temperature, humidity, vibration and level of contamination.</li>
+                <li><strong>Site altitude:</strong> consider derating, cooling and insulation for operations above 2000-4,000 msl.</li>
+                <li><strong>Power quality:</strong> Ironics, power factor, filters, network compatibility and transformer.</li>
+                <li><strong>Maintainability:</strong> access to spare parts, remote diagnosis, parameterization and field support.</li>
+              </ul>
+              <p>From a perspective of <strong>energy efficiency mining</strong>, the best projects are those that integrate equipment selection, control strategy and commissioning into a single roadmap. Without this integration, it is common for the expected performance not to materialize in real operation.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="seleccionTitle">
+              <h2 id="seleccionTitle" class="section-title">How to select a drive for mining</h2>
+              <p>To correctly select a variable frequency drive in mining, it is advisable to follow a technical sequence that reduces specification errors and speeds up start-up:</p>
+              <ol class="article-list">
+                <li><strong>Define the load and the process:</strong> engine power, load type (constant/variable torque), start per hour and actual transient conditions.</li>
+                <li><strong>Classify operational criticality:</strong> identify whether the equipment is bottleneck process to set levels of redundancy and availability.</li>
+                <li><strong>validate site environment:</strong> altitude, temperature, dust, vibration and cabinet class required (IP/NEMA) for field reliability.</li>
+                <li><strong>Sizing with technical margin:</strong> consider overload, derating by altitude/temperature, amonics, filters and compatibility with transformer/network.</li>
+                <li><strong>Select control strategy:</strong> Scaling or vectoring according to speed/pair accuracy, process stability and integration with PLC/SCADA.</li>
+                <li><strong>Plan commissioning and support:</strong> FAT/SAT tests, documented baseline parameters, critical spare parts and maintenance protocol.</li>
+              </ol>
+              <div class="selection-matrix" aria-label="Mining VFD Selection Matrix">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Application</th>
+                      <th>Load type</th>
+                      <th>Recommended control</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Main conveyor belt</td>
+                      <td>Constant torque, high inertia</td>
+                      <td>Vectorial with torque control and smooth ramps</td>
+                    </tr>
+                    <tr>
+                      <td>Process/drain pump</td>
+                      <td>Variable torque</td>
+                      <td>Scalar or light vector with pressure/flow PID</td>
+                    </tr>
+                    <tr>
+                      <td>Main mine fan</td>
+                      <td>Variable torque</td>
+                      <td>Scalar with PID control and energy efficiency management</td>
+                    </tr>
+                    <tr>
+                      <td>Mill (SAG / balls)</td>
+                      <td>Constant torque, overload peaks</td>
+                      <td>High performance vectorial with dynamic torque limits</td>
+                    </tr>
+                    <tr>
+                      <td>Shredding machine</td>
+                      <td>Mechanical impact, fluctuating load</td>
+                      <td>Robust vectorial with fast response and advanced protections</td>
+                    </tr>
+                    <tr>
+                      <td>Relay system</td>
+                      <td>Variable torque with critical continuity</td>
+                      <td>Scalar/vector with redundancy and remote monitoring</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>This approach helps make decisions with technical traceability and avoids choosing the drive only based on initial price, which is one of the most common causes of poor performance in mining.</p>
+              <div class="mid-cta">
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Request VFD Selection Matrix</a>
+              </div>
+            </section>
+
+            <section class="article-section" aria-labelledby="arquitecturaTitle">
+              <h2 id="arquitecturaTitle" class="section-title">Typical Drive Architecture in Mining</h2>
+              <figure class="section-figure">
+                <img src="../assets/img/Arquitectura_tecnica_sistema_VFD.webp" alt="Typical technical architecture of a VFD system in mining">
+                <figcaption>Reference view for electrical architecture, control and management of the mining industry.</figcaption>
+              </figure>
+              <p>A typical mining engine control architecture is usually organized into four technical layers:</p>
+              <div class="architecture-grid">
+                <article class="architecture-card">
+                  <h3>Power Layer</h3>
+                  <p>MV/LV power supply, transformation, protections and power quality.</p>
+                </article>
+                <article class="architecture-card">
+                  <h3>Drive Layer</h3>
+                  <p>VFD, control parameterization, motor protections and communications.</p>
+                </article>
+                <article class="architecture-card">
+                  <h3>Process Layer</h3>
+                  <p>Sensors, control loops, operating sequences and interlock logic.</p>
+                </article>
+                <article class="architecture-card">
+                  <h3>Management Layer</h3>
+                  <p>SCADA, history, alarms, efficiency and maintenance indicators.</p>
+                </article>
+              </div>
+              <p>This architecture allows scaling from one-off projects to staged modernizations, with technical traceability and lower risk of plant interruptions.</p>
+
+              <div class="mid-cta">
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Request architecture evaluation</a>
+              </div>
+            </section>
+
+            <section class="article-section" aria-labelledby="desafiosTitle">
+              <h2 id="desafiosTitle" class="section-title">Key Technical Challenges</h2>
+              <figure class="section-figure">
+                <img src="../assets/img/Desafios_tecnicos_mineria_blog_aplicaciones_mineras.webp" alt="Technical challenges in implementing mining frequency converters">
+                <figcaption>Critical design and operation factors for VFDs in demanding mining environments.</figcaption>
+              </figure>
+              <p>The mining industry presents operating conditions where technical margins are narrow. These are the most frequent challenges in mining variable frequency drive projects:</p>
+              <ul class="article-list">
+                <li><strong>High torque at low speed:</strong> requires stable control and power reserve during transitory periods.</li>
+                <li><strong>Demanding starts:</strong> torque and current peaks can destabilize the internal network if the ramp strategy is not well designed.</li>
+                <li><strong>Altitude and derating:</strong> Lower air density reduces cooling and affects system performance.</li>
+                <li><strong>Aggressive environment:</strong> conductive dust and vibration accelerate failures if there is no adequate protection and maintenance.</li>
+                <li><strong>Automation integration:</strong> without good coordination between mic, pccs and protections appear kerp and unwanted stoppages.</li>
+              </ul>
+              <p>The most effective way to mitigate these risks is to perform pre-application engineering, integration testing and commissioning with performance criteria defined from the beginning.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="erroresTitle">
+              <h2 id="erroresTitle" class="section-title">Common Mistakes and How to Avoid Them</h2>
+              <ul class="article-list">
+                <li><strong>Select by rated power and not by load profile:</strong> causes unstable performance and overheating.</li>
+                <li><strong>Ignore site altitude:</strong> leads to insufficient Threadings in cooling and insulation.</li>
+                <li><strong>Do not consider harmonics or power quality:</strong> affects protections and equipment upstream/downward.</li>
+                <li><strong>Surface commissioning:</strong> poorly adjusted parameters generate frequent dingh.</li>
+                <li><strong>No maintenance plan and spare parts:</strong> increases recovery times from failure.</li>
+              </ul>
+              <p>Avoiding these points in the design phase significantly reduces the cost of non-quality in the operational phase.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="casoTitle">
+              <h2 id="casoTitle" class="section-title">Mini Reference Case</h2>
+              <figure class="section-figure">
+                <img src="../assets/img/impacto_operativo_blog_aplicaciones_mineras.webp" alt="Operational impact of modernizing frequency converters in mining">
+                <figcaption>Expected operational impact when optimizing drives with an engineering approach.</figcaption>
+              </figure>
+              <p>Typical scenario for optimizing drives in the mining process, applying selection criteria and structured commissioning:</p>
+              <div class="kpi-grid">
+                <div class="kpi-card"><strong>12-18%</strong><span>Estimated reduction of energy consumption in variable loads.</span></div>
+                <div class="kpi-card"><strong>25-35%</strong><span>Reduction of mechanical events due to sudden starts.</span></div>
+                <div class="kpi-card"><strong>+Availability</strong><span>Greater continuity due to more stable process control.</span></div>
+              </div>
+              <p>These improvements are observed with greater consistency when the modernization of drives is accompanied by startup standards, coordinated protections, reliable instrumentation and support of specialists during start-up.</p>
+            </section>
+
+            <section class="article-section" aria-labelledby="faqTitle">
+              <span id="auditTitle" style="position:relative;left:-9999px"></span>
+              <h2 id="faqTitle" class="section-title">Technical FAQ</h2>
+              <div class="faq">
+                <details>
+                  <summary>How to select a variator for high demand mining?</summary>
+                  <p>Load profile, starting torque, environmental conditions, altitude, control strategy and overload margin of the complete system must be evaluated.</p>
+                </details>
+                <details>
+                  <summary>Does altitude affect the performance of the variator?</summary>
+                  <p>Yes. At higher altitude, air cooling capacity decreases and may require CARD, cabinet settings and insulation validation.</p>
+                </details>
+                <details>
+                  <summary>What main benefit does a well-implemented VFD deliver?</summary>
+                  <p>Improves operational stability, reduces energy consumption in variable applications and protects equipment through controlled starts/stops.</p>
+                </details>
+                <details>
+                  <summary>When should a prior technical evaluation be carried out?</summary>
+                  <p>Whenever there are critical loads, unemployment history, high consumption or plans for the modernisation of on-site drives.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="cta-panel" aria-label="Call to action">
+              <h2 style="margin:0 0 8px;">You want to evaluate your mining variable frequency drives?</h2>
+              <p>We help you define architecture, specification and implementation path to improve continuity and efficiency of your operation.</p>
+              <div class="hero__actions on-dark" style="margin-top:0;">
+                <a class="btn btn--primary" href="contacto_cta.html#ctaForm">Request technical diagnosis</a>
+                <a class="btn btn--secondary" href="blog.html">Back to Blog</a>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Do you need frequency changers for your mining project?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">VMS Energy supplies and installs variable frequency drives for pumping, ventilation and transportation applications in mining.</p>
+      <div class="cta-band__actions on-dark">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Request technical proposal</a>
+        <a class="btn btn--ghost" href="soluciones-variadores-frecuencia.html">View variable solutions</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+<div style="background:#0a1324;text-align:center;padding:8px 0;color:#94a3b8;font-size:13px;">
+  Developed by the VMS Energy digital team · v10.1<br>Copyright 2026 VMS Energy
+</div>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vmsenergy.com/en/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Variations in the Mining Industry", "item": "https://vmsenergy.com/en/blog-variadores-industria-minera.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How to select a variator for high demand mining?", "acceptedAnswer": {"@type": "Answer", "text": "Load profile, starting torque, environmental conditions, altitude, control strategy and overload margin of the complete system must be evaluated."}}, {"@type": "Question", "name": "Does altitude affect the performance of the variator?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. At higher altitude, air cooling capacity decreases and may require CARD, cabinet settings and insulation validation."}}, {"@type": "Question", "name": "What main benefit does a well-implemented VFD deliver?", "acceptedAnswer": {"@type": "Answer", "text": "Improves operational stability, reduces energy consumption in variable applications and protects equipment through controlled starts and stops."}}, {"@type": "Question", "name": "When should a prior technical evaluation be carried out?", "acceptedAnswer": {"@type": "Answer", "text": "Whenever there are critical loads, unemployment history, high consumption or plans for the modernisation of on-site drives."}}]}</script>
+</body>
+</html>

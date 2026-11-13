@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script src="vms-formularios.js" defer></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers and Job Board | VMS Energy</title>
+  <meta name="description" content="Join the VMS Energy team. Active and project-based vacancies in engineering, maintenance, automation, HSE and more. Send us your CV." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Careers and Job Board | VMS Energy" />
+  <meta property="og:description" content="Join the VMS Energy team. Active and project-based vacancies in engineering, maintenance, automation, HSE and more." />
+  <meta property="og:url" content="https://vmsenergy.com/en/carreras.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Careers and Job Board | VMS Energy" />
+  <meta name="twitter:description" content="Active and project vacancies in VMS Energy. Send us your CV." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --corp-hero-img: url('../assets/img/hero_nosotros_VMS_Energy.webp');
+    }
+
+    /* Hero */
+
+    /* Why VMS */
+    .why{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .why-card{padding:22px;background:#fafcff;border:1px solid var(--line);border-radius:14px}
+    .why-card__icon{width:44px;height:44px;border-radius:10px;background:#e8f0fa;display:grid;place-items:center;margin-bottom:12px;color:var(--cobalt)}
+    .why-card h3{margin:0 0 6px;color:#113960;font-size:1.05rem}
+    .why-card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+    @media (max-width:980px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+
+    /* Vacantes */
+    .vacantes-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+    .filter-chip{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font-weight:700;font-size:.85rem;cursor:pointer;transition:all .15s ease}
+    .filter-chip:hover{border-color:var(--cobalt);color:var(--cobalt)}
+    .filter-chip.is-active{background:var(--cobalt);color:#fff;border-color:var(--cobalt)}
+    .vacantes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    @media (max-width:820px){.vacantes-grid{grid-template-columns:1fr}}
+    .vacante-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 4px 14px rgba(9,32,58,.04)}
+    .vacante-card__head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .vacante-card__title{margin:0;color:#113960;font-size:1.1rem;line-height:1.25}
+    .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+    .badge--fija{background:var(--success-bg);color:var(--vms-green-700)}
+    .badge--proyecto{background:#dbeafe;color:#1e40af}
+    .badge--dot::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block}
+    .vacante-card__meta{display:flex;flex-wrap:wrap;gap:10px 16px;color:var(--muted);font-size:.88rem}
+    .vacante-card__meta span{display:inline-flex;align-items:center;gap:5px}
+    .vacante-card__desc{margin:4px 0 0;color:#2c4f77;font-size:.95rem;line-height:1.55}
+    .vacante-card__reqs{margin:8px 0 0;padding-left:18px;color:#2c4f77;font-size:.9rem;line-height:1.5}
+    .vacante-card__reqs li{margin:0 0 3px}
+    .vacante-card__foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px dashed var(--line)}
+    .vacante-card__date{color:var(--muted);font-size:.82rem}
+    .vacante-empty{padding:36px;text-align:center;background:#fff;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+    .vacantes-nota{margin:24px 0 0;padding:14px 18px;border-left:3px solid var(--cobalt);background:#f5f8fc;border-radius:0 10px 10px 0;color:var(--muted);font-size:.88rem;line-height:1.55}
+    .vacantes-nota a{color:var(--cobalt)}
+    .vacante-card__detail{margin-top:4px;border-top:1px dashed var(--line);padding-top:10px}
+    .vacante-card__detail summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;color:var(--cobalt);font-weight:700;font-size:.9rem}
+    .vacante-card__detail summary::-webkit-details-marker{display:none}
+    .vacante-card__detail summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1.5px solid currentColor;border-radius:50%;font-size:.8rem;line-height:1}
+    .vacante-card__detail[open] summary::before{content:"\2212"}
+    .vacante-card__detail[open] .vd-mas{display:none}
+    .vacante-card__detail:not([open]) .vd-menos{display:none}
+    .vacante-card__detail summary:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:4px}
+    .vacante-card__detail h4{margin:14px 0 4px;color:#113960;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em}
+    .vacante-card__detail ul{margin:0;padding-left:18px;color:#2c4f77;font-size:.9rem;line-height:1.5}
+    .vacante-card__detail li{margin:0 0 3px}
+    @media (max-width:760px){.form-grid{grid-template-columns:1fr}}
+
+    /* Honeypot (FormSubmit anti-spam) */
+
+    /* Footer */
+    #footer ul{line-height:1.6}
+
+  </style>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Company", "item": "https://vmsenergy.com/en/nosotros.html"}, {"@type": "ListItem", "position": 3, "name": "Careers and Job Board", "item": "https://vmsenergy.com/en/carreras.html"}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Careers and Employment — VMS Energy", "url": "https://vmsenergy.com/en/carreras.html", "isPartOf": {"@id": "https://vmsenergy.com/en/index.html"}, "description": "Join the VMS Energy team. Active and project-based vacancies in engineering, maintenance, automation, HSE and more. Send us your CV."}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/carreras.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/carreras.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/carreras.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/carreras.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow">Careers</span>
+          <h1 id="heroTitle">Build your career at VMS Energy</h1>
+          <p class="lead">We are a multidisciplinary team that executes EPC projects and technical services for critical industry in Mexico. If you are passionate about energy, field engineering and the job well done, we want to know you.</p>
+          <div class="hero-actions on-dark">
+            <a class="btn btn--primary" href="#vacantes">View available vacancies</a>
+            <a class="btn btn--secondary" href="#postulacion">Send my CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por qué VMS -->
+    <section class="why" aria-labelledby="whyTitle">
+      <div class="container">
+        <h2 id="whyTitle" class="section-title">Why work with us</h2>
+        <p class="section-intro">Beyond the position: a culture of execution, safety and professional growth supported by our QHSE+ Comprehensive Management System (ISO 9001, 14001, 37001, 45001 and 50001).</p>
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.8 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>
+            </div>
+            <h3>Impact projects</h3>
+            <p>We work in oil &amp; gas, mining, energy infrastructure and manufacturing. Each project is a real technical opportunity, not a desk.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Safety first</h3>
+            <p>We comply with ISO 45001 and strict HSE procedures. The safety of our team is non-negotiable, in the office and in the field.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <h3>Professional growth</h3>
+            <p>Continuing training plan, sponsored technical certifications, and clear career paths from operations to leadership.</p>
+          </article>
+          <article class="why-card">
+            <div class="why-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c.6-3.3 3.4-5.5 7-5.5s6.4 2.2 7 5.5"/><path d="M14.5 14.7c2.4.2 4.4 1.7 5 3.8"/></svg>
+            </div>
+            <h3>Multidisciplinary team</h3>
+            <p>Engineering, operations, automation, maintenance, HSE and administration working together. You learn from those who are next to you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vacantes -->
+    <section id="vacantes" aria-labelledby="vacantesTitle">
+      <div class="container">
+        <h2 id="vacantesTitle" class="section-title">Available vacancies</h2>
+        <p class="section-intro">Mix of permanent and vacant positions by project. If none fit your profile today, send us your CV and we will consider you for future openings.</p>
+
+        <div class="vacantes-toolbar" role="group" aria-label="Filter vacancies by type">
+          <button type="button" class="filter-chip is-active" data-filter="all">All</button>
+          <button type="button" class="filter-chip" data-filter="fija"><span class="badge badge--fija badge--dot" aria-hidden="true"></span>Fixed</button>
+          <button type="button" class="filter-chip" data-filter="proyecto"><span class="badge badge--proyecto badge--dot" aria-hidden="true"></span>By project</button>
+        </div>
+
+        <div id="vacantesList" class="vacantes-grid" aria-live="polite"></div>
+        <div id="vacantesEmpty" class="vacante-empty" hidden>
+          There are no vacancies matching the selected filter at this time. <a href="#postulacion">Send us your CV</a> for our talent base.
+        </div>
+
+        <p class="vacantes-nota">At VMS Energy we do not discriminate against any person and we promote equal opportunities. Likewise, we do not accept or offer bribes or improper benefits during our selection processes. Check our <a href="politica-antisoborno.html">Anti-Bribery Policy</a> and our <a href="codigo-conducta.html">Code of Conduct</a>.</p>
+      </div>
+    </section>
+
+    <!-- Bridge -->
+    <section class="bridge">
+      <div class="container">
+        <h2>You can&#x27;t find your job?</h2>
+        <p>We receive CVs on a continuous basis. If your technical profile fits our service lines, we will contact you when a aligned vacancy opens or when a project that requires your skills starts.</p>
+        <a class="btn btn--primary" href="#postulacion">Send my CV now</a>
+      </div>
+    </section>
+
+    <!-- Form de postulación -->
+    <section id="postulacion" class="section-alt" aria-labelledby="postulacionTitle">
+      <div class="container">
+        <h2 id="postulacionTitle" class="section-title">Send your application</h2>
+        <p class="section-intro">Share your details and CV. Our Human Talent team reviews all applications; If your profile matches a current or future vacancy, we will contact you.</p>
+
+        <div id="formSuccess" class="form-success" role="status">
+          Thank you! We receive your application. We will contact you if your profile fits a current or future vacancy.
+        </div>
+
+        <form
+          id="careersForm"
+          class="form-card"
+          novalidate
+          data-vms-form-type="careers"
+          data-vms-feedback="#formFeedback"
+          data-vms-success="#formSuccess"
+          data-vms-success-message="We received your application and your CV correctly."
+        >
+          <div class="form-grid">
+            <div>
+              <label for="cNombre">Full name*</label>
+              <input class="input" id="cNombre" name="nombre" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="cEmail">Email*</label>
+              <input class="input" id="cEmail" name="correo" type="email" autocomplete="email" required>
+            </div>
+
+            <div>
+              <label for="cTelefono">Telephone*</label>
+              <input class="input" id="cTelefono" name="telefono" type="tel" autocomplete="tel" placeholder="Ex. +52 33 1234 5678" required>
+            </div>
+            <div>
+              <label for="cCiudad">City of residence</label>
+              <input class="input" id="cCiudad" name="ciudad" autocomplete="address-level2">
+            </div>
+
+            <div>
+              <label for="cArea">Area of interest*</label>
+              <select class="input" id="cArea" name="area_interes" required>
+                <option value="">Select…</option>
+                <option value="Ingeniería">Engineering</option>
+                <option value="Operaciones / Campo">Operations / Field</option>
+                <option value="Mantenimiento">Maintenance</option>
+                <option value="Automatización y Control">Automation and Control</option>
+                <option value="Seguridad e Higiene (HSE)">Health and Safety (HSE)</option>
+                <option value="Calidad">Quality</option>
+                <option value="Compras / Procura">Purchases / Procurement</option>
+                <option value="Administración y Finanzas">Administration and Finance</option>
+                <option value="Recursos Humanos">Human Resources</option>
+                <option value="Comercial / Ventas">Commercial / Sales</option>
+                <option value="Otra">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="cPuesto">Position to which you apply (optional)</label>
+              <input class="input" id="cPuesto" name="puesto" placeholder="If you saw a specific vacancy, please indicate it here.">
+            </div>
+
+            <div class="full">
+              <label for="cLinkedin">LinkedIn or portfolio (optional)</label>
+              <input class="input" id="cLinkedin" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/tu-perfil">
+            </div>
+
+            <div class="full">
+              <label for="cCV">Curriculum (CV)*</label>
+              <input class="input" id="cCV" name="cv" type="file" accept=".pdf,.doc,.docx" required>
+              <p class="hint">Accepted formats: PDF, DOC, DOCX. Recommended maximum size: 5 MB.</p>
+            </div>
+
+            <div class="full">
+              <label for="cMensaje">Short message (optional)</label>
+              <textarea class="input" id="cMensaje" name="mensaje" rows="4" placeholder="Tell us what motivates you or any relevant information (availability, certifications, etc.)"></textarea>
+            </div>
+          </div>
+
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-actions">
+                      <div class="form-consent">
+            <input type="checkbox" id="privacidad-1" name="privacidad" required>
+            <label for="privacidad-1">I have read and accept the <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Privacy Notice</a>.</label>
+          </div>
+          <button type="submit" class="btn btn--primary">Send application</button>
+            <a class="btn btn--ghost" href="#vacantes">Return to vacancies</a>
+          </div>
+          <p id="formFeedback" class="hint" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Ready to grow with VMS Energy?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">Join an electrical engineering team with projects throughout the Republic and international presence.</p>
+      <div class="cta-band__actions on-dark">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Send my CV</a>
+        <a class="btn btn--ghost" href="nosotros.html">Get to know the company</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+  <div class="copyright">Developed by the VMS Energy digital team · v10.1 · Copyright 2026 VMS Energy</div>
+
+
+
+  <script>
+  // ===== Render de vacantes desde vacantes.json =====
+  (function(){
+    var listEl = document.getElementById('vacantesList');
+    var emptyEl = document.getElementById('vacantesEmpty');
+    var chips = document.querySelectorAll('.filter-chip');
+    var currentFilter = 'all';
+    var allVacantes = [];
+
+    function escapeHtml(s){
+      return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+        return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c];
+      });
+    }
+
+    function fmtDate(iso){
+      if(!iso) return '';
+      var d = new Date(iso + 'T00:00:00');
+      if(isNaN(d.getTime())) return '';
+      var meses = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function vacanteCard(v){
+      var tipo = (v.tipo || 'fija').toLowerCase();
+      var badgeClass = tipo === 'proyecto' ? 'badge--proyecto' : 'badge--fija';
+      var badgeLabel = tipo === 'proyecto' ? 'Por proyecto' : 'Fija';
+      var reqs = Array.isArray(v.requisitos) ? v.requisitos : [];
+      var reqsHtml = reqs.length
+        ? '<ul class="vacante-card__reqs">' + reqs.slice(0, 4).map(function(r){ return '<li>' + escapeHtml(r) + '</li>'; }).join('') + '</ul>'
+        : '';
+      var duracion = (tipo === 'proyecto' && v.duracion) ? '<span>⏱ ' + escapeHtml(v.duracion) + '</span>' : '';
+      // Detalle desplegable: responsabilidades, requisitos adicionales (del 5 en adelante) y competencias
+      function lista(titulo, arr){
+        return (Array.isArray(arr) && arr.length)
+          ? '<h4>' + titulo + '</h4><ul>' + arr.map(function(x){ return '<li>' + escapeHtml(x) + '</li>'; }).join('') + '</ul>'
+          : '';
+      }
+      var detalleBody = lista('Responsabilidades', v.responsabilidades) +
+        lista('Otros requisitos', reqs.slice(4)) +
+        lista('Competencias', v.competencias);
+      var detalleHtml = detalleBody
+        ? '<details class="vacante-card__detail"><summary><span class="vd-mas">Ver detalle del puesto</span><span class="vd-menos">Ocultar detalle</span></summary>' + detalleBody + '</details>'
+        : '';
+      var ctaUrl = '#postulacion?puesto=' + encodeURIComponent(v.titulo || '');
+      // Use real querystring on link click via JS
+      return '' +
+        '<article class="vacante-card" data-tipo="' + escapeHtml(tipo) + '">' +
+          '<div class="vacante-card__head">' +
+            '<h3 class="vacante-card__title">' + escapeHtml(v.titulo || 'Vacante') + '</h3>' +
+            '<span class="badge ' + badgeClass + ' badge--dot">' + badgeLabel + '</span>' +
+          '</div>' +
+          '<div class="vacante-card__meta">' +
+            (v.ubicacion ? '<span>📍 ' + escapeHtml(v.ubicacion) + '</span>' : '') +
+            (v.area ? '<span>🛠 ' + escapeHtml(v.area) + '</span>' : '') +
+            (v.modalidad ? '<span>💼 ' + escapeHtml(v.modalidad) + '</span>' : '') +
+            duracion +
+          '</div>' +
+          (v.descripcion ? '<p class="vacante-card__desc">' + escapeHtml(v.descripcion) + '</p>' : '') +
+          reqsHtml +
+          detalleHtml +
+          '<div class="vacante-card__foot">' +
+            '<span class="vacante-card__date">Publicada: ' + escapeHtml(fmtDate(v.publicada)) + '</span>' +
+            '<a class="btn btn--primary aplicar-btn" href="#postulacion" data-puesto="' + escapeHtml(v.titulo || '') + '">Aplicar</a>' +
+          '</div>' +
+        '</article>';
+    }
+
+    function render(){
+      if(!listEl) return;
+      var filtered = currentFilter === 'all'
+        ? allVacantes
+        : allVacantes.filter(function(v){ return (v.tipo || '').toLowerCase() === currentFilter; });
+
+      if(!filtered.length){
+        listEl.innerHTML = '';
+        if(emptyEl) emptyEl.hidden = false;
+        return;
+      }
+      if(emptyEl) emptyEl.hidden = true;
+      listEl.innerHTML = filtered.map(vacanteCard).join('');
+
+      // Bind "Aplicar" buttons → prellenar puesto en el form
+      var aplicarBtns = listEl.querySelectorAll('.aplicar-btn');
+      aplicarBtns.forEach(function(btn){
+        btn.addEventListener('click', function(){
+          var puesto = btn.getAttribute('data-puesto') || '';
+          var puestoInput = document.getElementById('cPuesto');
+          var areaInput = document.getElementById('cArea');
+          if(puestoInput) puestoInput.value = puesto;
+          // Autoenfoque al primer campo del form
+          setTimeout(function(){
+            var nombre = document.getElementById('cNombre');
+            if(nombre) nombre.focus({preventScroll:true});
+          }, 600);
+        });
+      });
+    }
+
+    chips.forEach(function(chip){
+      chip.addEventListener('click', function(){
+        chips.forEach(function(c){ c.classList.remove('is-active'); });
+        chip.classList.add('is-active');
+        currentFilter = chip.getAttribute('data-filter') || 'all';
+        render();
+      });
+    });
+
+    // Cargar vacantes.json
+    fetch('vacantes.json', {cache: 'no-cache'})
+      .then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(data){
+        var raw = (data && Array.isArray(data.vacantes)) ? data.vacantes : [];
+        // filtrar las marcadas como activa:false
+        allVacantes = raw.filter(function(v){ return v && v.activa !== false; });
+        // ordenar por fecha de publicación desc
+        allVacantes.sort(function(a, b){
+          return String(b.publicada || '').localeCompare(String(a.publicada || ''));
+        });
+        render();
+      })
+      .catch(function(){
+        if(listEl){
+          listEl.innerHTML = '';
+        }
+        if(emptyEl){
+          emptyEl.hidden = false;
+          emptyEl.innerHTML = 'No pudimos cargar las vacantes en este momento. <a href="#postulacion">Envíanos tu CV</a> y te consideraremos para futuras aperturas.';
+        }
+      });
+  })();
+  </script>
+
+  <script>
+  // ===== Querystring → prefill + success banner =====
+  (function(){
+    var params = new URLSearchParams(window.location.search || '');
+    var puesto = String(params.get('puesto') || '').trim();
+    var enviado = params.get('enviado');
+
+    if(puesto){
+      var puestoInput = document.getElementById('cPuesto');
+      if(puestoInput && !puestoInput.value){ puestoInput.value = puesto; }
+    }
+
+    if(enviado === '1'){
+      var success = document.getElementById('formSuccess');
+      if(success){
+        success.classList.add('is-visible');
+        // Limpiar el querystring sin recargar
+        if(history.replaceState){
+          history.replaceState({}, document.title, window.location.pathname + '#postulacion');
+        }
+        success.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }
+
+    // El envio y la validacion se administran en vms-formularios.js.
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "fuente": {
+    "fabricante": "KEI Industries Ltd.",
+    "documento": "Cables for Photovoltaics (Solar Cables), KEI/SCC/QCL/FEBRUARY/2023",
+    "nota": "La ampacidad es la del fabricante con conductor a 90 °C y ambiente a 40 °C. En cubierta, bandeja cerrada o agrupamiento hay que corregirla. La resistencia es el máximo del conductor a 20 °C; sube con la temperatura de operación, así que la caída real es mayor que la calculada a 20 °C."
+  },
+  "producto": {
+    "designacion": "PV1-F",
+    "tipo": "Cable para sistemas fotovoltaicos",
+    "normas": [
+      "2Pfg 1169/08.2007",
+      "BS EN 50618"
+    ],
+    "certificaciones": [
+      "TÜV",
+      "VDE",
+      "UTE",
+      "IMQ"
+    ],
+    "conductor": "Cobre estañado recocido, flexible, clase 5 según IEC 60228 / DIN VDE 0295",
+    "aislamiento": "Poliolefina reticulada libre de halógenos, termoestable",
+    "cubierta": "Poliolefina reticulada libre de halógenos, termoestable",
+    "marcado": "KEI, PV1-F, 0.6/1.0 kV, sección, año de fabricación, TÜV 2Pfg 1169/08.2007 o BS EN 50618",
+    "tensionNominal": "0.6/1.0 kV",
+    "tensionMaximaDC": 2000,
+    "ambienteMin": -40,
+    "ambienteMax": 90,
+    "conductorMax": {
+      "temperatura": 120,
+      "horas": 20000
+    },
+    "vidaUtil": 30,
+    "seccionesEstandar": "de 2.5 a 16 mm²; el resto, bajo requerimiento del cliente",
+    "radioCurvaturaMin": "4 veces el diámetro",
+    "fuerzaTiroMax": "50 N/mm²",
+    "resistencias": {
+      "ozono": "EN 50396 punto 8.1.3",
+      "uv": "HD 605/A1 o DIN 53367",
+      "aceiteMineral": "EN 60811-2-1",
+      "acidosYalcalis": "EN 60811-2-1 (ácido oxálico e hidróxido de sodio)",
+      "amoniaco": "30 días en atmósfera saturada (ensayo interno)"
+    },
+    "otras": [
+      "Libre de halógenos: baja emisión de humo y baja toxicidad en incendio",
+      "Retardante a la llama y al fuego",
+      "Resistente a impacto, desgarre y abrasión"
+    ]
+  },
+  "medidas": [
+    {
+      "seccion": 1.5,
+      "aislamiento": 0.6,
+      "cubierta": 0.8,
+      "diametro": 4.6,
+      "peso": 35,
+      "resistencia": 13.7,
+      "ampacidad": 22
+    },
+    {
+      "seccion": 2.5,
+      "aislamiento": 0.6,
+      "cubierta": 0.8,
+      "diametro": 4.9,
+      "peso": 45,
+      "resistencia": 8.21,
+      "ampacidad": 30
+    },
+    {
+      "seccion": 4,
+      "aislamiento": 0.6,
+      "cubierta": 0.8,
+      "diametro": 5.4,
+      "peso": 60,
+      "resistencia": 5.09,
+      "ampacidad": 42
+    },
+    {
+      "seccion": 6,
+      "aislamiento": 0.6,
+      "cubierta": 0.8,
+      "diametro": 5.9,
+      "peso": 80,
+      "resistencia": 3.39,
+      "ampacidad": 52
+    },
+    {
+      "seccion": 10,
+      "aislamiento": 0.7,
+      "cubierta": 0.8,
+      "diametro": 7.1,
+      "peso": 120,
+      "resistencia": 1.95,
+      "ampacidad": 76
+    },
+    {
+      "seccion": 16,
+      "aislamiento": 0.7,
+      "cubierta": 0.8,
+      "diametro": 8.6,
+      "peso": 180,
+      "resistencia": 1.24,
+      "ampacidad": 95
+    },
+    {
+      "seccion": 25,
+      "aislamiento": 0.8,
+      "cubierta": 0.9,
+      "diametro": 10.3,
+      "peso": 275,
+      "resistencia": 0.8,
+      "ampacidad": 125
+    },
+    {
+      "seccion": 35,
+      "aislamiento": 0.8,
+      "cubierta": 0.9,
+      "diametro": 11.7,
+      "peso": 370,
+      "resistencia": 0.57,
+      "ampacidad": 159
+    },
+    {
+      "seccion": 50,
+      "aislamiento": 0.9,
+      "cubierta": 1.0,
+      "diametro": 13.7,
+      "peso": 515,
+      "resistencia": 0.39,
+      "ampacidad": 185
+    },
+    {
+      "seccion": 70,
+      "aislamiento": 1.0,
+      "cubierta": 1.1,
+      "diametro": 16.0,
+      "peso": 710,
+      "resistencia": 0.28,
+      "ampacidad": 239
+    },
+    {
+      "seccion": 95,
+      "aislamiento": 1.0,
+      "cubierta": 1.1,
+      "diametro": 17.7,
+      "peso": 930,
+      "resistencia": 0.21,
+      "ampacidad": 290
+    },
+    {
+      "seccion": 120,
+      "aislamiento": 1.2,
+      "cubierta": 1.3,
+      "diametro": 20.2,
+      "peso": 1190,
+      "resistencia": 0.16,
+      "ampacidad": 335
+    },
+    {
+      "seccion": 150,
+      "aislamiento": 1.3,
+      "cubierta": 1.4,
+      "diametro": 22.2,
+      "peso": 1470,
+      "resistencia": 0.13,
+      "ampacidad": 385
+    },
+    {
+      "seccion": 185,
+      "aislamiento": 1.4,
+      "cubierta": 1.5,
+      "diametro": 24.6,
+      "peso": 1800,
+      "resistencia": 0.11,
+      "ampacidad": 440
+    },
+    {
+      "seccion": 240,
+      "aislamiento": 1.5,
+      "cubierta": 1.6,
+      "diametro": 27.7,
+      "peso": 2310,
+      "resistencia": 0.08,
+      "ampacidad": 520
+    }
+  ]
+}

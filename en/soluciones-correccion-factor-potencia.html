@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en" data-concept="equipamiento">
+<head>
+  <meta charset="utf-8"/>
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Power Factor Correction | Capacitor Banks | VMS Energy</title>
+  <meta name="description" content="Correction of industrial power factor in Mexico. From $500,000 MXN. Fixed and automatic capacitor banks, active filters. Eliminates CFE penalties."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="VMS Energy"/>
+  <meta property="og:title" content="Power Factor Correction | VMS Energy"/>
+  <meta property="og:description" content="Banks of fixed, automatic, detuned capacitors and active filters. Eliminates CFE penalties for cosφ &lt; 0.90. Regulations applied according to the project requirements. Mexico."/>
+  <meta property="og:url" content="https://vmsenergy.com/en/soluciones-correccion-factor-potencia.html"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-correccion-factor-potencia.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<link rel="stylesheet" href="../equipamiento-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Hero image ── */
+    :root { --equip-hero-img: url('../assets/img/hero_factor_potencia.webp'); }
+
+    /* ── Strip de penalización por bajo FP ── */
+    .pen-strip{background:linear-gradient(135deg,#7f1d1d 0%,#dc2626 100%);padding:36px 0;color:#fff}
+    .pen-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+    .pen-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .p-kpi{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:14px;text-align:center}
+    .p-kpi__val{font-size:1.7rem;font-weight:800;color:#fecaca}
+    .p-kpi__lbl{font-size:.78rem;color:#fca5a5;margin-top:2px}
+
+    /* ── Soluciones de corrección ── */
+    .sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+    .sol-card{background:#fff;border:1px solid var(--border-line);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);position:relative;overflow:hidden}
+    .sol-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--concept-primary)}
+    .sol-card.sol-card--active::before{background:var(--vms-green-500)}
+    .sol-card__badge{display:inline-block;padding:.15rem .5rem;border-radius:6px;font-size:.72rem;font-weight:800;background:#eff6ff;color:#1d4ed8;margin-bottom:8px}
+    .sol-card--active .sol-card__badge{background:var(--success-bg);color:var(--vms-green-700)}
+    .sol-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .sol-card__desc{font-size:.87rem;color:#4b5563;margin:0 0 12px;line-height:1.55}
+    .sol-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .sol-tag{display:inline-block;padding:.14rem .44rem;border-radius:6px;font-size:.72rem;font-weight:700;background:#f1f5f9;color:#334155;border:1px solid rgba(51,65,85,.15)}
+
+    /* ── ROI Box ── */
+    .roi-box{background:linear-gradient(135deg,var(--concept-darker),var(--concept-primary));border-radius:20px;padding:36px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin-top:20px}
+    .roi-kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .r-kpi{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px;text-align:center}
+    .r-kpi__val{font-size:1.5rem;font-weight:800;color:var(--concept-kpi-val)}
+    .r-kpi__lbl{font-size:.78rem;color:#bfdbfe;margin-top:2px}
+
+    /* ── Proceso de implementación ── */
+    .proceso-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px;counter-reset:step}
+    .paso{background:#fff;border:1px solid var(--border-line);border-radius:14px;padding:20px 16px;position:relative;counter-increment:step}
+    .paso::before{content:counter(step);position:absolute;top:-12px;left:16px;width:28px;height:28px;border-radius:999px;background:var(--concept-primary);color:#fff;font-size:.82rem;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+    .paso__title{font-size:.95rem;font-weight:800;color:#0f172a;margin:8px 0 6px}
+    .paso__desc{font-size:.84rem;color:#4b5563;margin:0;line-height:1.5}
+
+    /* ── Responsive ── */
+    @media(max-width:980px){
+      .sol-grid{grid-template-columns:1fr 1fr}
+      .proceso-steps{grid-template-columns:repeat(2,1fr)}
+      .pen-inner{grid-template-columns:1fr}
+      .roi-box{grid-template-columns:1fr}
+    }
+    @media(max-width:700px){
+      .sol-grid{grid-template-columns:1fr}
+      .proceso-steps{grid-template-columns:1fr}
+      .pen-kpis{grid-template-columns:1fr 1fr}
+      .roi-kpis{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Power Factor Correction", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "areaServed": "MX", "description": "Supply and installation of fixed, automatic, de-tonated banks and active filters for power factor correction under IEC 60831 and IEC 61921 in Mexico.", "serviceType": "Power factor correction EPC engineering", "url": "https://vmsenergy.com/en/soluciones-correccion-factor-potencia.html", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "FP Solutions", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fixed capacitor bank"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatic Capacitor Bank (APFC)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Detuned bank with reactors"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Active Harmonic Filter (APF)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "APFC hybrid system + active filter"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Study and measurement of power factor"}}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When does the CFE penalty apply for power factor?", "acceptedAnswer": {"@type": "Answer", "text": "CFE applies a penalty when the monthly average power factor falls below 0.90 in the medium voltage rates (HM, HS, H-SL). The additional charge can reach 3% for each percentage point below 0.90. For example, a PF of 0.80 can generate a surcharge of up to 30% on billable demand."}}, {"@type": "Question", "name": "What is the difference between a fixed bank and an automatic bank?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed bank injects a constant amount of MVAR into the network. It is suitable when the reactive charge is stable. An automatic bank (APFC) uses a controller that measures the FP in real time and connects or disconnects steps from the UM to keep the target FP (typically 0.95–0.98 inductive), even when the load varies during the day."}}, {"@type": "Question", "name": "Why is the bench needed dettonized in networks with harmonics?", "acceptedAnswer": {"@type": "Answer", "text": "In networks with variable frequency drives, UPS or switching power supplies, current harmonics can create resonance with standard capacitors, amplifying the harmonic voltages and destroying the capacitors. The detuned bank incorporates series reactors calibrated to shift the resonant frequency below the 5th harmonic (250 Hz in 50 Hz system; 300 Hz in 60 Hz), avoiding resonance."}}, {"@type": "Question", "name": "What advantage does an active harmonica filter have over a bank in the United States?", "acceptedAnswer": {"@type": "Answer", "text": "An active filter (APF) injects real-time compensation currents to cancel harmonics generated by non-linear loads, achieving THDi < 5% or even < 3%. In addition, it can correct the power factor simultaneously. The disadvantage is its higher cost. It is the preferred solution when the THDi exceeds 20% or when the IEEE 519 standard requires a very low THDi at the connection point."}}, {"@type": "Question", "name": "Does VMS Energy conduct the power factor study before Dapping the solution?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. VMS Energy performs a 7-day energy quality measurement (network analyzer) to record FP, THDi, THDv, maximum demand and load profile.With this data We decrypt the optimal bank or filter, calculate the savings on the CFE invoice and present the expected return on investment."}}]}]}</script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Critical Equipment", "item": "https://vmsenergy.com/en/soluciones.html#equipamiento"}, {"@type": "ListItem", "position": 3, "name": "Power Factor Correction | Capacitor Banks", "item": "https://vmsenergy.com/en/soluciones-correccion-factor-potencia.html"}]}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/soluciones-correccion-factor-potencia.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-correccion-factor-potencia.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/soluciones-correccion-factor-potencia.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-correccion-factor-potencia.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy · Electrical Equipment</div>
+      <h1 id="heroTitle">Power Factor Correction<br><em>Eliminate CFE penalties and reduce your bill</em></h1>
+      <p>Banks of fixed, automatic, detuned capacitors and active harmonic filters. Study, supply and installation in Mexico. Regulations applied according to the project requirements.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=factor-potencia#ctaForm">Request study of FP</a>
+        <a class="btn btn--ghost" href="#soluciones">View Solutions</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">cosa, target 0.95–0.98</span>
+        <span class="hero-stat">National and international regulations</span>
+        <span class="hero-stat">Banks up to 5 000 kVAr</span>
+        <span class="hero-stat">Active filters THDi &lt;5%</span>
+        <span class="hero-stat">ROI &lt;18 months</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENALIZACION CFE -->
+  <div class="pen-strip" aria-label="CFE Penalty">
+    <div class="container">
+      <div class="pen-inner">
+        <div>
+          <p style="margin:0 0 4px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fca5a5">Risk: active CFE penalty</p>
+          <h2 style="margin:0 0 10px;font-size:clamp(20px,2.8vw,30px);font-weight:800;color:#fff">HM, HS and H-SL rates include additional charge if cosφ &lt; 0.90</h2>
+          <p style="font-size:.9rem;color:#fca5a5;margin:0;max-width:460px">The low power factor charge can represent up to <strong style="color:#fff">30% extra</strong> With a bank in the correctly-defined country of the country, the penalty disappears in the first month of operation.</p>
+        </div>
+        <div class="pen-kpis">
+          <div class="p-kpi"><div class="p-kpi__val">0.90</div><div class="p-kpi__lbl">minimum CFE threshold</div></div>
+          <div class="p-kpi"><div class="p-kpi__val">3%</div><div class="p-kpi__lbl">point-under-threshold surcharge</div></div>
+          <div class="p-kpi"><div class="p-kpi__val">30%</div><div class="p-kpi__lbl">maximum surcharge at coss= 0.80</div></div>
+          <div class="p-kpi"><div class="p-kpi__val">0.95&ndash;0.98</div><div class="p-kpi__lbl">optimal target with bank</div></div>
+          <div class="p-kpi"><div class="p-kpi__val">&lt;18m</div><div class="p-kpi__lbl">Typical return on investment</div></div>
+          <div class="p-kpi"><div class="p-kpi__val">0</div><div class="p-kpi__lbl">penalty payments after installation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOLUCIONES -->
+  <section class="section" id="soluciones" aria-labelledby="solTitle">
+    <div class="container">
+      <span class="sec-label">Supply Portfolio</span>
+      <h2 class="sec-h2" id="solTitle">Power factor correction solutions</h2>
+      <p class="sec-lead">The correct solution depends on the load profile, the presence of harmonics, the voltage level and the target cosφ.</p>
+      <div class="sol-grid">
+        <div class="sol-card">
+          <span class="sol-card__badge">Basic</span>
+          <p class="sol-card__title">Fixed capacitor bank</p>
+          <p class="sol-card__desc">One or more stages of the bus permanently connected to the bus. Ideal for constant reactive loads (always on motors, furnaces, high power transformers). Easy installation and low maintenance cost.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">Stable charging</span><span class="sol-tag">Fixed MVAR</span><span class="sol-tag">IEC 60831</span><span class="sol-tag">Low cost</span>
+          </div>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__badge">Industry standard</span>
+          <p class="sol-card__title">APFC Automatic Bank</p>
+          <p class="sol-card__desc">Controller measures PF in real time and switches steps of capacitors (thyristors or contactors) to maintain target cosφ. Supports variable loads (production lines, machinery with cycles). From 50 to 5,000 kVAr in configurable steps.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">Variable load</span><span class="sol-tag">PFR Controller</span><span class="sol-tag">Thyristors/contactors</span><span class="sol-tag">IEC 60831</span>
+          </div>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__badge">Networks with harmonics</span>
+          <p class="sol-card__title">Detuned bank with reactors</p>
+          <p class="sol-card__desc">Reactor in series with each step of capacitors, tuned so that the resonance frequency is below the 5th harmonic. Prevents capacitors from amplifying harmonic distortion in networks with VFDs, UPS or rectifiers. Typical detuning: 7%, 5.67% or 14% depending on network.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">VFD/retifiers</span><span class="sol-tag">Series reactor</span><span class="sol-tag">IEC 61921</span><span class="sol-tag">Antiharmonic</span>
+          </div>
+        </div>
+        <div class="sol-card sol-card--active">
+          <span class="sol-card__badge">Power quality</span>
+          <p class="sol-card__title">Active Harmonic Filter (APF)</p>
+          <p class="sol-card__desc">Four-quadrant inverter that injects compensation currents in real time, canceling harmonics generated by non-linear loads. Achieves THDi &lt;5% (or &lt;3%) and corrects PF simultaneously. Optimal solution when analysis shows THDi &gt;20% or when IEEE 519 is contractual.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">THDi &lt;5%</span><span class="sol-tag">IEEE 519</span><span class="sol-tag">FP and harmonics</span><span class="sol-tag">Real time</span>
+          </div>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__badge">Hybrid</span>
+          <p class="sol-card__title">APFC + hybrid active filter</p>
+          <p class="sol-card__desc">The APFC bank provides most of the reactive MVAR at low cost, while the active filter handles the dynamic residual and harmonics. Best cost-benefit ratio for medium-large plants with mixed linear and non-linear loads.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">Mixed load</span><span class="sol-tag">APFC + APF</span><span class="sol-tag">Cost-effective</span>
+          </div>
+        </div>
+        <div class="sol-card">
+          <span class="sol-card__badge">Diagnosis</span>
+          <p class="sol-card__title">Study and measurement of energy quality</p>
+          <p class="sol-card__desc">Measurement with network analyzer (Fluke 435 / Hioki 3197) for 7 days. Registers FP, THDi, THDv, dem. maximum and load profile. Report with recommended sizing, required MVAR, proposed solution and ROI.</p>
+          <div class="sol-tags">
+            <span class="sol-tag">7 days measurement</span><span class="sol-tag">Network analyzer</span><span class="sol-tag">Technical report</span><span class="sol-tag">Calculated ROI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI -->
+  <section class="section section--alt" id="roi" aria-labelledby="roiTitle">
+    <div class="container">
+      <span class="sec-label">Return on investment</span>
+      <h2 class="sec-h2" id="roiTitle">How is the savings calculated on the CFE invoice?</h2>
+      <p class="sec-lead">The savings come from two sources: elimination of the penalty for low PF and reduction of the total current (less voltage drop, losses in conductors and heating of transformers).</p>
+      <div class="roi-box" aria-label="ROI example">
+        <div>
+          <p style="margin:0 0 6px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#93c5fd">Example — 500 kW industrial plant</p>
+          <h3 style="margin:0 0 10px;font-size:clamp(18px,2.2vw,24px);color:#fff">FP actual: 0.78 &rarr; FP objetivo: 0.95</h3>
+          <p style="font-size:.88rem;color:#bfdbfe;margin:0 0 16px">300 kVAr APFC bank (3 steps of 100 kVAr) with automatic controller and 7% detuned filters.</p>
+          <p style="font-size:.84rem;color:#7dd3fc;margin:0">* Indicative values. The exact calculation is made with the data from the CFE invoice and the on-site measurement.</p>
+        </div>
+        <div class="roi-kpis">
+          <div class="r-kpi"><div class="r-kpi__val">- &gt; 85K &lt; &lt; &gt;</div><div class="r-kpi__lbl">Current monthly penalty</div></div>
+          <div class="r-kpi"><div class="r-kpi__val">$0</div><div class="r-kpi__lbl">Penalty with installed bank</div></div>
+          <div class="r-kpi"><div class="r-kpi__val">-180K....</div><div class="r-kpi__lbl">Estimated cost of APFC bank 300 kVAr</div></div>
+          <div class="r-kpi"><div class="r-kpi__val">&lt;3 months</div><div class="r-kpi__lbl">Return on investment</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section" id="proceso" aria-labelledby="procTitle">
+    <div class="container">
+      <span class="sec-label">VMS Energy Methodology</span>
+      <h2 class="sec-h2" id="procTitle">Implementation process</h2>
+      <p class="sec-lead">From diagnosis to commissioning, we guarantee that the solution eliminates the penalty from the first invoice.</p>
+      <div class="proceso-steps">
+        <div class="paso">
+          <p class="paso__title">Measurement and diagnosis</p>
+          <p class="paso__desc">Installation of network analyzer for 7 days. Record of FP, THDi, THDv, maximum and minimum demand and hourly profile.</p>
+        </div>
+        <div class="paso">
+          <p class="paso__title">Design and engineering</p>
+          <p class="paso__desc">Calculation of required MVARs, topology selection (fixed/APFC/detuned/APF), short circuit check and protection coordination.</p>
+        </div>
+        <div class="paso">
+          <p class="paso__title">Supply and installation</p>
+          <p class="paso__desc">Delivery of the bank or active filter, installation in a dedicated panel or cabinet, connection to the bus and insulation tests.</p>
+        </div>
+        <div class="paso">
+          <p class="paso__title">Commissioning and verification</p>
+          <p class="paso__desc">APFC controller adjustment, real-time FP verification and delivery of acceptance report with post-installation measurement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARAMS TABLE -->
+  <section class="section section--alt" id="seleccion" aria-labelledby="selTitle">
+    <div class="container">
+      <span class="sec-label">Selection engineering</span>
+      <h2 class="sec-h2" id="selTitle">Data necessary to size the solution</h2>
+      <p class="sec-lead">With this data we calculate the required MVAR and select the optimal bank or filter.</p>
+      <div class="tabla-scroll"><table class="param-table" aria-label="Data for sizing capacitor bank" style="min-width:460px">
+        <thead><tr><th>Parameter</th><th>Source / How to get it</th><th>Why it is important</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Current power factor</strong></td><td>CFE invoice or measurement with analyzer</td><td>Determine the required correction MVARs</td></tr>
+          <tr><td><strong>Active power (kW) and reactive power (kVAr)</strong></td><td>CFE meter measurement or reading</td><td>Basis for calculating bank capacity</td></tr>
+          <tr><td><strong>Bus voltage (V)</strong></td><td>Electrical plan or measurement</td><td>Defines the rating of the capacitor (IEC 60831 Uc)</td></tr>
+          <tr><td><strong>THDi level (%)</strong></td><td>Power Quality Analyzer</td><td>Determines if detuned bank or active filter is required</td></tr>
+          <tr><td><strong>Short circuit level (Icc kA)</strong></td><td>Study of short circuit or transformer data</td><td>Sizes the interrupting capacity of the contactors/thyristors</td></tr>
+          <tr><td><strong>Load profile (variability)</strong></td><td>Measurement 7 days or production data</td><td>Defines whether a fixed or automatic bank is required in steps</td></tr>
+          <tr><td><strong>CFE rate and demand charge</strong></td><td>Last CFE invoice</td><td>Allows you to calculate monthly savings and ROI</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="section" id="marcas" aria-labelledby="marcasTitle">
+    <div class="container">
+      <span class="sec-label">Multi-brand supply</span>
+      <h2 class="sec-h2" id="marcasTitle">Manufacturers we work with</h2>
+      <p class="sec-lead">We select the brand and technology according to the voltage level, the required kVAr, the presence of harmonics and the project budget.</p>
+      <div class="marcas-grid">
+        <div class="marca-card">
+          <p class="marca-card__name">ABB</p>
+          <ul class="marca-card__series"><li>CLMD (LV capacitors)</li><li>LV CLMB Capacitors</li><li>PQFS (active filter)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Harmonic filtering</span></div>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Schneider</p>
+          <ul class="marca-card__series"><li>Varplusbox / Varplusbox H</li><li>VarplusH (de-intonated)</li><li>AccuSine (active filter)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Detuned</span><span class="marca-tag">Harmonic filtering</span></div>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">SIEMENS</p>
+          <ul class="marca-card__series"><li>SiCap (MV capacitors)</li><li>SIVAR (APFC bank)</li><li>SIPLINK (dynamic)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Medium voltage</span><span class="marca-tag">Automatic compensation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORMAS -->
+  <section class="section section--alt" id="normas" aria-labelledby="normasTitle">
+    <div class="container">
+      <span class="sec-label">Regulatory framework</span>
+      <h2 class="sec-h2" id="normasTitle">Reference regulatory framework</h2>
+      <p class="sec-lead">The standards presented are of a <strong>information</strong> and represent the most common technical framework for power factor correction projects. The regulations applicable to each project — including national standards, customer or competent authority requirements — are determined and agreed at the basic engineering stage in accordance with the specific requirements of the contracted scope.</p>
+      <div class="normas-grid">
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 60831-1/2</span>
+          <p class="norma-card__text"><strong>LV power capacitors.</strong> Defines rated voltage, admissible overvoltage, dielectric strength, temperature and type and routine tests for capacitors &lt; 1 kV.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 60871-1</span>
+          <p class="norma-card__text"><strong>MV power capacitors (≥ 1 kV).</strong> For medium voltage banks: 6–34.5 kV. Defines admissible overvoltage (1.10×Uc continuous), reactive current and protection coordination.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61921</span>
+          <p class="norma-card__text"><strong>Power capacitor banks.</strong> Applies to complete assemblies (bench + reactor + protections). Design requirements, protection coordination and verification for installation.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61000-3-12</span>
+          <p class="norma-card__text"><strong>Harmonics &gt; 16 A per phase.</strong> Limits of THDi and individual harmonic currents in the PCC. Applies when the bank or load exceeds 16 A per phase in LV.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEEE 519-2022</span>
+          <p class="norma-card__text"><strong>ANSI/IEEE harmonics standard.</strong> Reference for projects with NFPA/NEC codes. Defines THDv ≤ 5% and THDi limits according to the Icc/IL ratio in the PCC.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">CFE GDMTH-2022</span>
+          <p class="norma-card__text"><strong>Quality of CFE supply.</strong> Establishes the allowable voltage, frequency and form factor ranges. Basis for determining whether the customer&#x27;s network meets the required quality before installing the solution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">Common doubts about power factor</h2>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>When does the CFE penalty apply for power factor?</summary>
+          <div class="faq-body">CFE applies a penalty when the monthly average power factor falls below <strong>0.90</strong> in the medium voltage rates (HM, HS, H-Sh). The additional charge may reach <strong>3% for each percentage point</strong> below 0.90. For example, a 0.80 FP can generate a surcharge of up to 30% on billable demand. The penalty is shown in the &quot;Power Factor&quot; line of the invoice and applies to the maximum demand charge.</div>
+        </details>
+        <details class="faq">
+          <summary>What is the difference between a fixed bank and an automatic bank?</summary>
+          <div class="faq-body">A <strong>fixed bank</strong> injects a constant amount of MVAR into the network. It is suitable when reactive charge is stable (engines running at constant charge, furnaces). <strong>Automatic bench (APFC)</strong> uses a controller that measures the FP in real time and connects or disconnects steps from the TUNES to keep the FP target (typically 0.95–0.98 inductive), even when the load varies during the day or week. The cost of the automatic bank is higher, but eliminates the risk of overcompensation (training VET, which also penalizes CFE).</div>
+        </details>
+        <details class="faq">
+          <summary>Why is the bench needed dettonized in networks with harmonics?</summary>
+          <div class="faq-body">In networks with variable frequency drives, UPS or switching power supplies, current harmonics can create <strong>parallel resonance</strong> with standard UMENTS, amplifying harmonic stresses and destroying capacitors in a few weeks. <strong>detonated bench</strong> It incorporates calibrated serial reactors so that the resonance frequency is below the 5th harmonic (300 Hz in 60 Hz system). The most common de-intonation is 7% (p=7) or 5.67% (p =5.67), depending on the dominant Ironic order.</div>
+        </details>
+        <details class="faq">
+          <summary>What advantage does an active harmonica filter have over a bank in the United States?</summary>
+          <div class="faq-body">A <strong>active filter (APF)</strong> Injects real-time compensation currents to cancel harmonica generated by non-linear loads, achieving THDi &lt;5% or even &lt;3%. In addition, it can simultaneously correct the power factor and dynamically respond to charge changes in microsecond cycles. The disadvantage is its higher cost (2–4× compared to an equivalent APFC bank). It is the preferred solution when the THDi exceed 20% or when the IEEE 519 standard is contractual and the THD in the PCC should be less than 5%.</div>
+        </details>
+        <details class="faq">
+          <summary>Does VMS Energy conduct the power factor study before Dapping the solution?</summary>
+          <div class="faq-body">Yes. VMS Energy performs a <strong>energy quality measurement</strong> With a network analyzer (Fluke 435, Hioki PQ3198 or similar) for 7 days to register FP, THDi, THDv, maximum demand and time load profile.With this data We decode the optimal bank or filter, calculate the savings on the CFE invoice month by month and present the expected return on investment. The study can be done with or without purchase commitment.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Rejilla de referencias retirada. El expediente de VMS no registra un solo
+     trabajo de corrección de factor de potencia: «capacitor», «kVAR», «armónico»,
+     «reactivo», «desintonizado», «THD», «IEEE 519» y «penalización» dan cero en las
+     42 páginas del CV. «Factor de potencia» aparece una vez, y es una PRUEBA de
+     aislamiento a un transformador en Nohoch-A2, 2013 —no una compensación—.
+     La página conserva su prosa: ofrecer el servicio es legítimo; afirmar
+     proyectos que no constan, no. Mismo criterio que en la landing de fuego. -->
+
+  <!-- CTA BAND -->
+  <div class="cta-band" aria-label="Call to action">
+    <div class="container">
+      <h2>Stop paying CFE penalties from next month!</h2>
+      <p>Share your last CFE invoice with us and we will calculate the potential savings at no cost. Installation in 2–4 weeks with guaranteed return on investment.</p>
+      <div class="cta-band-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=factor-potencia#ctaForm">Request study of FP</a>
+        <a class="btn btn--ghost" href="especialidades.html#inicio">Learn about engineering services</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- STICKY -->
+<div class="sticky-wa" aria-label="WhatsApp">
+  <a href="https://wa.me/523332582234?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20correcci%C3%B3n%20de%20factor%20de%20potencia" aria-label="Contact by WhatsApp" rel="noopener noreferrer" target="_blank">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+<div class="sticky-cta" aria-label="FP study">
+  <a href="contacto_cta.html?producto=factor-potencia#ctaForm">Schedule your survey</a>
+</div>
+
+
+</body>
+</html>

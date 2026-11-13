@@ -2,7 +2,7 @@
 // Fuente: auditoría redirecciones-301.xlsx (Search Console + GA4, 2026-07-01 a 2026-09-29)
 // + exports de Search Console del 2 oct 2026 (cobertura 403/404)
 // Incluye filas "Directa", "Sugerida" y "Decidir", todas resueltas por Marketing
-// el 1 oct 2026. Sigue fuera a propósito: todo /en/ (pendiente de decidir).
+// el 1 oct 2026. Las páginas estáticas en /en/ conservan su propio idioma.
 // Las claves van sin diagonal final y en minúsculas; la función normaliza la URI.
 
 var CANONICAL_HOST = 'vmsenergy.com';
@@ -88,7 +88,7 @@ function handler(event) {
   if (key.length > 1 && key.charAt(key.length - 1) === '/') key = key.slice(0, -1);
 
   var target = REDIRECTS[key];
-  if (!target && WP_ARCHIVE.test(key)) target = '/blog.html';
+  if (!target && WP_ARCHIVE.test(key)) target = key.indexOf('/en/') === 0 ? '/en/blog.html' : '/blog.html';
 
   // Un solo salto: www + URL vieja va directo al destino final sin www.
   if (target) return redirect('https://' + CANONICAL_HOST + target + qs(request.querystring));

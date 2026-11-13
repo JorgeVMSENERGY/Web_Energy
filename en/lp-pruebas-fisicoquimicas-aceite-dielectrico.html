@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en" data-concept="servicios-especializados">
+<head>
+  <meta charset="utf-8"/>
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Physical-Chemical Analysis and DGA of Dielectric Oil | Transformers | VMS Energy</title>
+  <meta name="description" content="Physicochemical testing and dissolved gas analysis (DGA) of insulating oil for industrial transformers. BDV, moisture, acidity, interfacial voltage, tan δ and dissolved gases. NMX-J-169-ANCE, IEC 60422 and IEEE C57.104. Mexico."/>
+  <meta name="robots" content="index,follow"/>
+<link rel="stylesheet" href="../servicios-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── PRUEBAS FÍSICO-QUÍMICAS ACEITE DIELÉCTRICO — page CSS ─── */
+    .hero-eyebrow{display:inline-flex;gap:7px;padding:.28rem .72rem;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:.8rem;margin:0 0 16px}
+
+    /* Parámetros grid */
+    .param-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .param-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);border-left:4px solid var(--concept-primary)}
+    .param-card__norm{font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px}
+    .param-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .param-card__desc{font-size:.87rem;color:#4b5563;margin:0 0 8px;line-height:1.55}
+    .param-card__criterio{font-size:.8rem;color:#64748b;margin:0;padding:8px 10px;background:#f8fafc;border-radius:8px;line-height:1.45}
+    .param-card__criterio strong{color:#dc2626}
+
+    /* DGA métodos */
+    .dga-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+    .dga-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:16px;padding:24px 20px;box-shadow:0 3px 12px rgba(8,28,54,.06);text-align:center}
+    .dga-card__icon{font-size:2rem;margin-bottom:12px}
+    .dga-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .dga-card__norm{display:inline-block;font-size:.72rem;font-weight:800;color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;background:rgba(15,76,129,.08);padding:.2rem .6rem;border-radius:999px}
+    .dga-card__desc{font-size:.87rem;color:#4b5563;margin:0;line-height:1.55}
+
+    /* Gas table */
+    .gas-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:.88rem}
+    .gas-table th{background:var(--concept-primary);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+    .gas-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.1);color:#374151;vertical-align:top}
+    .gas-table tr:nth-child(even) td{background:#f8fafc}
+    .gas-tag{display:inline-block;font-size:.72rem;font-weight:800;padding:.15rem .5rem;border-radius:999px}
+    .gas-tag--rojo{background:#fee2e2;color:#dc2626}
+    .gas-tag--amarillo{background:#fef9c3;color:#92400e}
+    .gas-tag--verde{background:var(--success-bg);color:var(--vms-green-600)}
+
+    /* Proceso */
+    .proceso-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .paso{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:20px 16px;position:relative}
+    .paso__num{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;margin:0 0 12px}
+    .paso__title{font-size:.92rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .paso__desc{font-size:.82rem;color:#64748b;margin:0;line-height:1.5}
+
+    /* Entregables */
+    .entregables-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .ent-card{background:#fff;border:1px solid rgba(23,44,81,.14);border-radius:12px;padding:14px;text-align:center}
+    .ent-card__icon{font-size:1.4rem;margin-bottom:8px}
+    .ent-card__title{font-size:.88rem;font-weight:800;color:#0f172a;margin:0}
+    .ent-card__sub{font-size:.77rem;color:#64748b;margin:4px 0 0}
+
+    /* Ref cards */
+    .ref-card__cliente{color:var(--concept-primary);text-transform:uppercase;letter-spacing:.06em;font-size:.75rem;font-weight:800}
+
+    /* RAG badge */
+    .rag-strip{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+    .rag-badge{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;flex:1;min-width:180px}
+    .rag-badge--verde{background:var(--success-bg);border:1px solid var(--vms-green-300)}
+    .rag-badge--amarillo{background:#fef9c3;border:1px solid #fde047}
+    .rag-badge--rojo{background:#fee2e2;border:1px solid #fca5a5}
+    .rag-badge__dot{width:14px;height:14px;border-radius:50%;flex-shrink:0}
+    .rag-badge--verde .rag-badge__dot{background:var(--vms-green-400)}
+    .rag-badge--amarillo .rag-badge__dot{background:#eab308}
+    .rag-badge--rojo .rag-badge__dot{background:#ef4444}
+    .rag-badge__text{font-size:.85rem;color:#1e293b;line-height:1.35}
+    .rag-badge__text strong{display:block;font-weight:800}
+
+    /* Responsive */
+    @media(max-width:1100px){.param-grid{grid-template-columns:repeat(2,1fr)}.dga-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:980px){.proceso-steps{grid-template-columns:repeat(2,1fr)}.entregables-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){.param-grid{grid-template-columns:1fr}.dga-grid{grid-template-columns:1fr}.proceso-steps{grid-template-columns:1fr}.entregables-grid{grid-template-columns:1fr 1fr}.gas-table{font-size:.8rem}}
+
+    .ent-card__icon{color:var(--concept-primary)}
+
+    .dga-card__icon{color:var(--concept-primary)}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Physical-Chemical Analysis and DGA of Dielectric Oil for Transformers", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com"}, "description": "Complete physical-chemical analysis and dissolved gas diagnosis (DGA) of the dielectric oil of industrial transformers. Dielectric strength, humidity, acidity, interfacial voltage, tangent delta and gas chromatography. Complies with NMX-J-169-ANCE, IEC 60422 and IEEE C57.104.", "areaServed": {"@type": "Country", "name": "Mexico"}, "serviceType": "Dielectric Oil Analysis – Physical-Chemical & Dissolved Gas Analysis"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How often should a transformer's oil be analyzed?", "acceptedAnswer": {"@type": "Answer", "text": "According to IEC 60422: new transformers in the first 2 years — once a year. Equipment in continuous service without anomalies — every 12 to 24 months. With a history of problems, high load or aggressive environment — every 6 months. When the DGA shows an upward trend in any key gas — monthly frequency until stabilizing. VMS Energy recommends setting the first test within 90 days of operation as a baseline."}}, {"@type": "Question", "name": "What does the presence of acetylene (C2H2) indicate in the DGA?", "acceptedAnswer": {"@type": "Answer", "text": "Acetylene is generated exclusively at temperatures above 700°C, which directly associates it with internal electric arcs. Any detection of acetylene — even in amounts of 1 to 2 ppm — is a red flag that requires immediate trend analysis and investigation. Concentrations greater than 35 ppm (IEEE C57.104) classify the equipment as Condition 3 or 4, indicating possible active failure and the need to remove the transformer from service for internal inspection."}}, {"@type": "Question", "name": "When is oil/regenerate replaced?", "acceptedAnswer": {"@type": "Answer", "text": "Filtering (dehydration and degassing) recovers dielectric strength and reduces humidity, but does not eliminate the degradation products of the aged oil. If the acidity exceeds 0.5 mgKOH/g, the ASTM color exceeds 4.0 or the tan δ at 90°C exceeds 1%, the oil must be regenerated with bleaching earth or replaced. Replacement is mandatory if the insulating paper is degraded (DP < 200), since regenerating the oil in that scenario does not solve the underlying problem."}}, {"@type": "Question", "name": "Can the oil sample be taken with the energized transformer?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Hot oil sampling — with the energized and low-load equipment — is the preferred protocol because it represents the actual operating conditions and ensures that the dissolved gases have not been dispersed. It is done through the lower sampling valve with bubble-free water-glass syringe equipment, according to the IEC 60475 procedure. VMS Energy technician uses personal protective equipment suitable for the voltage level and executes sampling without interrupting the customer process."}}, {"@type": "Question", "name": "What is the Duval Triangle and how is it interpreted?", "acceptedAnswer": {"@type": "Answer", "text": "Duval's Triangle (IEC 60599) is a graphical method that uses the relative percentages of methane (CH₄), ethylene (C₂H₄) and acetylene (C₂H₂) to classify the type of failure: PD (partial discharge), T1/T2/T3 (mild/moderate/severe overheating), D1 (low energy arc) and D2 (high energy arc). The equipment coordinate in the triangle indicates the predominant fault zone. VMS Energy includes the Duval triangle plotted with the equipment coordinate in all its reports, along with the historical trend if previous measurements exist."}}, {"@type": "Question", "name": "What level of dielectric rigidity is unacceptable to continue operating?", "acceptedAnswer": {"@type": "Answer", "text": "According to IEC 60422: MV transformers (up to 36 kV) — minimum acceptable 30 kV/mm; target value ≥ 40 kV/mm. HV transformers (72.5 kV and above) — acceptable minimum 50 kV/mm. For new oil before filling, VMS Energy requires ≥ 60 kV/mm. A result below 20 kV/mm at any voltage level is an emergency requiring immediate action — the oil must be filtered or replaced before continuing operation."}}, {"@type": "Question", "name": "Do dry transformers (class F or H) require physical-chemical oil analysis?", "acceptedAnswer": {"@type": "Answer", "text": "No. Dry transformers (cast resin or VPI) do not contain dielectric oil and therefore the FQ analysis or DGA does not apply. For dry transformers, predictive diagnosis is performed using infrared thermography (hot spots on terminals and windings), Megger insulation resistance measurement, dielectric power factor of the resin, and partial discharge (PD) analysis. VMS Energy applies the correct protocol depending on the type of insulation of the equipment."}}, {"@type": "Question", "name": "Does VMS Energy also perform oil treatment or rehabilitation?", "acceptedAnswer": {"@type": "Answer", "text": "CF and DGA analysis is the diagnostic service that VMS Energy runs directly. If the report concludes that the oil requires treatment, VMS Energy coordinates with laboratories specialized in regeneration and filtration using mobile vacuum dehydration-degassing plants. We also manage the supply of new oil when the diagnosis indicates total replacement, ensuring that the oil supplied meets IEC 60296 class II specifications before filling."}}]}]}</script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Specialized Services", "item": "https://vmsenergy.com/en/especialidades.html"}, {"@type": "ListItem", "position": 3, "name": "Physical-Chemical Analysis and DGA of Dielectric Oil | Tra…", "item": "https://vmsenergy.com/en/lp-pruebas-fisicoquimicas-aceite-dielectrico.html"}]}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/lp-pruebas-fisicoquimicas-aceite-dielectrico.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-pruebas-fisicoquimicas-aceite-dielectrico.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/lp-pruebas-fisicoquimicas-aceite-dielectrico.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-pruebas-fisicoquimicas-aceite-dielectrico.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- ══ HERO ══════════════════════════════════════════════════════════ -->
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('../assets/img/hero_aceite_dielectrico.webp');--hero-overlay:.82" aria-labelledby="heroTitle">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero-eyebrow">
+          <span><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a pin"><path d="M8 3v6M16 3v6"/><path d="M6 9h12v3a6 6 0 0 1-12 0z"/><path d="M12 18v3"/></svg></span>
+          <span>Predictive Diagnosis · Dielectric Oil</span>
+        </span>
+        <h1 class="hero__title" id="heroTitle">Physical-Chemical Analysis <br>and DGA for Dielectric Oil</h1>
+        <p class="hero__lead">10 standardized parameters + dissolved gas diagnosis (DGA) by chromatography. We detect incipient failures before they become catastrophic failures. Compliant <strong>NMX-J-169-ANCE · IEC 60422 · IEEE C57.104</strong>.</p>
+        <div class="hero__actions on-dark">
+          <a href="contacto.html#inicio" class="btn btn--primary"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a clipboard"><path d="M9 3h6v3H9z"/><path d="M6 5h2m8 0h2v16H6V5z"/><path d="M9 11h6M9 15h4"/></svg> Request diagnostic</a>
+          <a href="#parametros" class="btn btn--ghost">See parameters →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KPI STRIP ═════════════════════════════════════════════════════ -->
+  <div class="kpi-strip" aria-label="Service indicators">
+    <div class="container" style="display:flex;gap:0;flex-wrap:wrap">
+      <div class="kpi">
+        <span class="kpi__val">10+</span>
+        <span class="kpi__lbl">CF and DGA parameters</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">7 gases</span>
+        <span class="kpi__lbl">GC-FID/TCD Chromatography</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">IEC 60156</span>
+        <span class="kpi__lbl">Cup stiffness test BDV</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">Duval</span>
+        <span class="kpi__lbl">Triangle + Rogers ratio</span>
+      </div>
+      <div class="kpi">
+        <span class="kpi__val">138 kV</span>
+        <span class="kpi__lbl">HV · MV · Distribution</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PARÁMETROS FÍSICO-QUÍMICOS ════════════════════════════════════ -->
+  <section class="section" id="parametros" aria-labelledby="paramTitle">
+    <div class="container">
+      <span class="sec-label">Technical scope</span>
+      <h2 class="sec-h2" id="paramTitle">10 parameters with standard and acceptance criteria</h2>
+      <p class="sec-lead">Each analysis includes comparison against IEC 60422 limit values, with RAG condition classification (green · yellow · red) by parameter and by equipment.</p>
+      <div class="param-grid">
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60156 ASTM D877/D1816</p>
+          <h3 class="param-card__title">Dielectric strength (BDV)</h3>
+          <p class="param-card__desc">Cup test with standardized electrode, 5–6 averaged measurements. Detects humidity and solid particles in suspension.</p>
+          <p class="param-card__criterio">MV ≥ 30 kV/mm | HV ≥ 50 kV/mm<br>New oil: ≥ 60 kV/mm<br><strong>&lt; 20 kV/mm → emergency</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60814 Karl Fischer</p>
+          <h3 class="param-card__title">Moisture content (H₂O)</h3>
+          <p class="param-card__desc">Karl Fischer coulometric titulation. Humidity reduces dielectric rigidity and accelerates the aging of insulating paper.</p>
+          <p class="param-card__criterio">MV &lt; 25 ppm | HV &lt; 10 ppm<br>New oil &lt; 5 ppm<br><strong>&gt; 35 ppm → immediate dehydration</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D974 · IEC 62021-1</p>
+          <h3 class="param-card__title">Acidity (neutralization index)</h3>
+          <p class="param-card__desc">Measures organic acids produced by oil oxidation. Corrosive acids degrade paper and internal metals.</p>
+          <p class="param-card__criterio">Normal &lt; 0.15 mgKOH/g<br>Caution 0.15–0.30 | Action &gt; 0.30<br><strong>&gt; 0.50 mgKOH/g → reemplazo</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D971 · IEC 60422</p>
+          <h3 class="param-card__title">Interfacial voltage</h3>
+          <p class="param-card__desc">Measurement of voltage at the oil-water interface. It decreases with the presence of oxidation products and sludge.</p>
+          <p class="param-card__criterio">Normal &gt; 28 mN/m<br>Caution 22–28 | Action &lt; 22 mN/m<br><strong>&lt; 18 mN/m → regeneration</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60247 ASTM D924</p>
+          <h3 class="param-card__title">Dielectric power factor (tan δ)</h3>
+          <p class="param-card__desc">Measured at 90 °C. Indicates dielectric losses; rises with pollution, aging and presence of water.</p>
+          <p class="param-card__criterio">Normal &lt; 0.05% (90 °C)<br>Caution 0.05–0.20%<br><strong>&gt; 0.50% → corrective action</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D1524</p>
+          <h3 class="param-card__title">ASTM Color</h3>
+          <p class="param-card__desc">Visual indicator of oil aging. Progressive darkening signals oxidation and sludge formation.</p>
+          <p class="param-card__criterio">New oil ≤ 0.5<br>In service: ≤ 3.5 acceptable<br><strong>&gt; 5.0 → very degraded oil</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D445</p>
+          <h3 class="param-card__title">Cinematic viscosity</h3>
+          <p class="param-card__desc">Measurement at 40 °C. It affects oil circulation and cooling efficiency. Rises by thermal polymerization.</p>
+          <p class="param-card__criterio">Mineral oil class II: ≤ 11 mm²/s (40 °C)<br>Manufacturer reference as baseline value</p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D92 ASTM D93</p>
+          <h3 class="param-card__title">Flash point</h3>
+          <p class="param-card__desc">Minimum temperature at which the vapors are inflamed. A significant decrease suggests contamination with solvents or fuels.</p>
+          <p class="param-card__criterio">New oil ≥ 135 °C<br>In service ≥ 125 °C<br><strong>Descenso &gt; 15 °C → investigar</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">ASTM D2668 · IEC 60666</p>
+          <h3 class="param-card__title">Oxidation inhibitor (DBPC)</h3>
+          <p class="param-card__desc">Concentration of 2,6-ditertbutylparacresol. Inhibited oils lose protection when DBPC is depleted and oxidation accelerates.</p>
+          <p class="param-card__criterio">Inhibited oil: 0.20–0.35% m/m<br><strong>&lt; 0.08% → reponer inhibidor</strong></p>
+        </div>
+
+        <div class="param-card">
+          <p class="param-card__norm">IEC 60450 · ASTM D4243</p>
+          <h3 class="param-card__title">Degree of paper polymerization (DP)</h3>
+          <p class="param-card__desc">Insulating paper sampling. DP indicates residual useful life of solid insulation — irreversible once degraded.</p>
+          <p class="param-card__criterio">New DP 1000–1200<br>DP &lt; 400 → 50% vida consumida<br><strong>DP &lt; 200 → risk of rupture</strong></p>
+        </div>
+
+      </div>
+
+      <!-- RAG legend -->
+      <div class="rag-strip" style="margin-top:28px">
+        <div class="rag-badge rag-badge--verde">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>GREEN — Normal</strong>Parameter within continuous operation range</div>
+        </div>
+        <div class="rag-badge rag-badge--amarillo">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>YELLOW — Caution</strong>More frequent monitoring; plan action</div>
+        </div>
+        <div class="rag-badge rag-badge--rojo">
+          <div class="rag-badge__dot"></div>
+          <div class="rag-badge__text"><strong>RED — Action required</strong>Intervention before the next operating cycle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ DGA — GASES DISUELTOS ══════════════════════════════════════════ -->
+  <section class="section section--alt" aria-labelledby="dgaTitle">
+    <div class="container">
+      <span class="sec-label">Advanced diagnosis</span>
+      <h2 class="sec-h2" id="dgaTitle">DGA: Dissolved Gas Analysis by Chromatography</h2>
+      <p class="sec-lead">DGA is the most powerful predictive technique for oil transformers. Detects incipient failures months in advance by quantifying 7 key gases.</p>
+
+      <div class="dga-grid">
+        <div class="dga-card">
+          <div class="dga-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3z"/><path d="M8.2 13.5h7.6"/><path d="M12 3.5v10"/></svg></div>
+          <h3 class="dga-card__title">Duval Triangle</h3>
+          <span class="dga-card__norm">IEC 60599</span>
+          <p class="dga-card__desc">It uses the relative percentages of CH4, C2H4 and C2H2 to classify the type of failure: partial discharges (PD), overheating T1/T2/T3 and D1/D2 arcs. Graphically included in each report.</p>
+        </div>
+        <div class="dga-card">
+          <div class="dga-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h6"/><path d="M8 5v6"/><path d="M13 12h6"/><path d="M5 16h6"/><path d="M13 19h6"/><path d="M13 16h6"/></svg></div>
+          <h3 class="dga-card__title">Rogers method</h3>
+          <span class="dga-card__norm">IEEE C57.104</span>
+          <p class="dga-card__desc">Gas ratios (CH₄/H₂, C₂H₄/C₂H₆, C₂H₂/C₂H₄) to classify failure by temperature and energy. It complements Duval&#x27;s triangle in cases in border areas.</p>
+        </div>
+        <div class="dga-card">
+          <div class="dga-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16.5a1.5 1.5 0 0 0 1.5 1.5H21"/><path d="m6.5 15 3.5-4 3 2.6 5-6.1"/><path d="M18 7.5h2.2v2.2"/></svg></div>
+          <h3 class="dga-card__title">Trend Analysis</h3>
+          <span class="dga-card__norm">IEC 60422</span>
+          <p class="dga-card__desc">The gas generation rate (ppm/month) is as important as the absolute value. An increasing trend in acetylene or hydrogen, although below the threshold, may indicate active failure.</p>
+        </div>
+      </div>
+
+      <!-- Gas table -->
+      <h3 style="margin:32px 0 0;font-size:1.05rem;color:#0f172a">The 7 gases of DGA: origin and diagnostic meaning</h3>
+      <div style="overflow-x:auto">
+        <table class="gas-table" aria-label="Gases dissolved in dielectric oil">
+          <thead>
+            <tr>
+              <th>Gas</th>
+              <th>Formula</th>
+              <th>Main origin</th>
+              <th>Threshold IEEE C57.104 (Cond. 2)</th>
+              <th>Indicator</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hydrogen</strong></td>
+              <td>H₂</td>
+              <td>Partial discharges, slight overheating</td>
+              <td>100ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">DP/overheat</span></td>
+            </tr>
+            <tr>
+              <td><strong>Methane</strong></td>
+              <td>CH₄</td>
+              <td>Oil overheating (&lt; 300 °C)</td>
+              <td>120ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Mild thermal</span></td>
+            </tr>
+            <tr>
+              <td><strong>Ethane</strong></td>
+              <td>C₂H₆</td>
+              <td>Oil overheating (150–300 °C)</td>
+              <td>65ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Moderate thermal</span></td>
+            </tr>
+            <tr>
+              <td><strong>Ethylene</strong></td>
+              <td>C₂H₄</td>
+              <td>Severe overheating oil (&gt; 300 °C)</td>
+              <td>50ppm</td>
+              <td><span class="gas-tag gas-tag--rojo">Severe thermal</span></td>
+            </tr>
+            <tr>
+              <td><strong>Acetylene</strong></td>
+              <td>C₂H₂</td>
+              <td>Electric arcs (&gt; 700 °C)</td>
+              <td>35ppm</td>
+              <td><span class="gas-tag gas-tag--rojo">Electric arc</span></td>
+            </tr>
+            <tr>
+              <td><strong>Carbon monoxide</strong></td>
+              <td>CO</td>
+              <td>Degradation of insulating paper (cellulose)</td>
+              <td>350ppm</td>
+              <td><span class="gas-tag gas-tag--amarillo">Gradient paper</span></td>
+            </tr>
+            <tr>
+              <td><strong>Carbon dioxide</strong></td>
+              <td>CO₂</td>
+              <td>Normal/accelerated paper degradation</td>
+              <td>2500ppm</td>
+              <td><span class="gas-tag gas-tag--verde">Paper reference</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.8rem;color:#64748b;margin-top:10px">* TDCG (Total Dissolved Fuel Gas) = ​​H₂ + CH₄ + C₂H₂ + C₂H₄ + C₂H₆ + CO. Condition 1: &lt; 720 ppm (normal). Condition 2: 720–1920 ppm (caution). Condition 3: 1920–4630 ppm (action). Condition 4: &gt; 4630 ppm (emergency). Source: IEEE C57.104.</p>
+    </div>
+  </section>
+
+  <!-- ══ PROCESO DEL SERVICIO ═══════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="procesoTitle">
+    <div class="container">
+      <span class="sec-label">Service flow</span>
+      <h2 class="sec-h2" id="procesoTitle">From the sample to the action plan in 6 stages</h2>
+      <p class="sec-lead">A structured process that guarantees sample traceability, analytical rigour and actionable recommendations for the customer maintenance team.</p>
+      <div class="proceso-steps">
+        <div class="paso">
+          <div class="paso__num">01</div>
+          <h3 class="paso__title">Fleet survey</h3>
+          <p class="paso__desc">Transformer inventory, kVA, voltage level, oil type, previous analysis history and load conditions. Defines sampling priority.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">02</div>
+          <h3 class="paso__title">Sampling according to IEC 60475</h3>
+          <p class="paso__desc">Sample under load (hot) with hermetic glass syringe. No bubbles, no air pollution. Documented chain of custody to the laboratory.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">03</div>
+          <h3 class="paso__title">Laboratory analysis</h3>
+          <p class="paso__desc">GC-FID/TCD chromatograph for the 7 gases. Cup test IEC 60156 (BDV rigidity). Karl Fischer (humidity). Coulometry and spectrophotometry for the rest of the parameters.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">04</div>
+          <h3 class="paso__title">Expert diagnosis</h3>
+          <p class="paso__desc">Duval + Rogers interpretation + historical trend analysis. RAG classification by parameter. Comparison with values from the previous campaign.</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">05</div>
+          <h3 class="paso__title">Technical report</h3>
+          <p class="paso__desc">PDF report by equipment with graphed Duval triangle, IEC 60422 comparative table, RAG condition and prioritized recommendations (immediate / 6 months / annual).</p>
+        </div>
+        <div class="paso">
+          <div class="paso__num">06</div>
+          <h3 class="paso__title">Monitoring program</h3>
+          <p class="paso__desc">Calendar of the next sampling campaign, individual threshold alerts by equipment and historical database in Excel for integration to the client&#x27;s CMMS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROYECTOS DE REFERENCIA ════════════════════════════════════════ -->
+
+
+  <!-- ══ ENTREGABLES ════════════════════════════════════════════════════ -->
+  <section class="section" aria-labelledby="entTitle">
+    <div class="container">
+      <span class="sec-label">Technical documentation</span>
+      <h2 class="sec-h2" id="entTitle">Analysis deliverables</h2>
+      <p class="sec-lead">Each diagnostic campaign generates a complete dossier that the maintenance team can integrate directly into its CMMS.</p>
+      <div class="entregables-grid">
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="1.8"/><path d="M9 3.5h6v2.5H9z"/><path d="M8 11h8"/><path d="M8 15h5"/></svg></div>
+          <p class="ent-card__title">CF report by team</p>
+          <p class="ent-card__sub">PDF with all parameters, measured values and IEC 60422 criteria</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 21 20H3z"/><path d="M8.2 13.5h7.6"/><path d="M12 3.5v10"/></svg></div>
+          <p class="ent-card__title">Duval Triangle</p>
+          <p class="ent-card__sub">Graph with equipment coordinate and identified failure zone</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16.5a1.5 1.5 0 0 0 1.5 1.5H21"/><path d="m6.5 15 3.5-4 3 2.6 5-6.1"/><path d="M18 7.5h2.2v2.2"/></svg></div>
+          <p class="ent-card__title">DGA trends</p>
+          <p class="ent-card__sub">Gas evolution graph (minimum 3 historical campaigns)</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/><circle cx="18" cy="12" r="2.6"/><path d="M6 17.6v2.4"/></svg></div>
+          <p class="ent-card__title">RAG classification</p>
+          <p class="ent-card__sub">Traffic light by parameter and by equipment for maintenance prioritization</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <p class="ent-card__title">Prioritized recommendations</p>
+          <p class="ent-card__sub">Immediate / 6 months / annual with technical justification and applicable standard</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h6"/><path d="M8 5v6"/><path d="M13 12h6"/><path d="M5 16h6"/><path d="M13 19h6"/><path d="M13 16h6"/></svg></div>
+          <p class="ent-card__title">Rogers quotients</p>
+          <p class="ent-card__sub">Calculation of CH₄/H₂, C₂H₄/C₂H₆ and C₂H₂/C₂H₄ ratios with interpretation</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1.8"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/><circle cx="8.5" cy="14.5" r="1.1"/><circle cx="15.5" cy="17.5" r="1.1"/></svg></div>
+          <p class="ent-card__title">Sampling program</p>
+          <p class="ent-card__sub">Calendar of next campaign by team according to RAG condition</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="10" width="4" height="10" rx="1"/><rect x="9" y="6" width="4" height="14" rx="1"/><rect x="16" y="2" width="4" height="18" rx="1"/></svg></div>
+          <p class="ent-card__title">Excel database</p>
+          <p class="ent-card__sub">Historical evolution of all parameters for integration into CMMS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CROSS-LINK: Mantenimiento Predictivo ════════════════════════════ -->
+  <div class="container" style="padding-top:0;padding-bottom:0">
+    <div style="margin:0 0 8px;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+      <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">FQ analysis as part of your predictive strategy?</p>
+      <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">VMS Energy integrates diaelectric oil diagnosis with IR, Megger, VLF and vibration in a unified predictive maintenance program.</p>
+      <a href="lp-mantenimiento-predictivo.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">See predictive maintenance service →</a>
+    </div>
+  </div>
+
+  <!-- ══ FAQ ════════════════════════════════════════════════════════════ -->
+  <section class="section section--alt" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">What maintenance teams ask us</h2>
+      <div class="faq-list">
+
+        <details class="faq" open>
+            <summary>How often should a transformer&#x27;s oil be analyzed?</summary>
+            <div class="faq-body">According to IEC 60422: new transformers in the first 2 years — once a year. Equipment in continuous service without anomalies — every 12 to 24 months. With a history of problems, high load or aggressive environment — every 6 months. When the DGA shows an upward trend in any key gas — monthly frequency until stabilizing. VMS Energy recommends setting the first test within 90 days of operation as a baseline.</div>
+          </details>
+
+        <details class="faq">
+            <summary>What does the presence of acetylene (C2H2) indicate in the DGA?</summary>
+            <div class="faq-body">Acetylene is generated exclusively at temperatures above 700 °C, directly associated with internal electric arcs. Any detection of acetylene — even 1 to 2 ppm — is a red flag requiring immediate trend analysis. Concentrations greater than 35 ppm (Condition 3, IEEE C57.104) indicate possible active failure and the need to remove the equipment for internal inspection before re-energizing.</div>
+          </details>
+
+        <details class="faq">
+            <summary>When is oil/regenerate replaced?</summary>
+            <div class="faq-body">Filtering (dehydration and degassing) recovers dielectric strength and reduces humidity, but does not eliminate the oxidation products of the aged oil. If the acidity exceeds 0.5 mgKOH/g, the ASTM color exceeds 4.0 or the tan δ at 90 °C exceeds 1%, the oil must be regenerated or replaced. Total replacement is the only option when the insulating paper is degraded (DP &lt; 200), since regenerating the oil in that scenario does not solve the underlying problem.</div>
+          </details>
+
+        <details class="faq">
+            <summary>Can the oil sample be taken with the energized transformer?</summary>
+            <div class="faq-body">Yes. Hot sampling — with the energized and low load equipment — is the preferred protocol because it represents the actual operating conditions and ensures that the dissolved gases have not been dispersed. It is done through the lower sampling valve with bubble-free water-glass syringe, according to IEC 60475. The VMS Energy technician uses personal protective equipment for the voltage level and executes the sampling without interrupting the customer process.</div>
+          </details>
+
+        <details class="faq">
+            <summary>What is the Duval Triangle and how is it interpreted?</summary>
+            <div class="faq-body">Duval&#x27;s Triangle (IEC 60599) uses the relative percentages of methane (CH₄), ethylene (C₂H₄) and acetylene (C₂H₂) to classify the type of failure: PD (partial discharge), T1/T2/T3 (mild/moderate/severe overheating at &lt;300°C / 300–700°C / &gt;700°C) and D1/D2 (low or high energy arc). The equipment coordinate in the triangle defines the predominant fault zone. VMS Energy includes the graphical triangle in all its reports, with the historical evolution of the coordinate when there are previous measurements.</div>
+          </details>
+
+        <details class="faq">
+            <summary>What level of dielectric stiffness (BDV) is unacceptable to continue operating?</summary>
+            <div class="faq-body">According to IEC 60422: MV transformers (up to 36 kV) — minimum acceptable 30 kV/mm; target value ≥ 40 kV/mm. HV transformers (72.5 kV and above) — acceptable minimum 50 kV/mm. For new oil before filling, VMS Energy requires ≥ 60 kV/mm. A result below 20 kV/mm at any voltage level is an emergency: the oil must be filtered or replaced before continuing operation.</div>
+          </details>
+
+        <details class="faq">
+            <summary>Do dry transformers (class F or H) require physical-chemical oil analysis?</summary>
+            <div class="faq-body">No. Dry transformers (cast resin or VPI) do not contain dielectric oil and therefore the FQ analysis or DGA does not apply. For dry transformers, predictive diagnosis is performed using infrared thermography, Megger and polarization index, resin dielectric power factor, and partial discharge (PD) analysis. VMS Energy applies the correct protocol depending on the type of insulation of the equipment.</div>
+          </details>
+
+        <details class="faq">
+            <summary>Does VMS Energy also perform oil treatment or rehabilitation?</summary>
+            <div class="faq-body">FQ and DGA analysis is the diagnostic service that VMS Energy runs directly. If the report concludes that the oil requires treatment, we coordinate with laboratories specialized in regeneration and filtration using mobile vacuum dehydration-degassing plants. We also manage the supply of new oil when the diagnosis indicates total replacement, ensuring that the oil meets IEC 60296 class II specifications before filling.</div>
+          </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CROSS-LINK: Subestaciones y Transformadores ═════════════════════ -->
+  <div class="container" style="padding-top:0;padding-bottom:0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-bottom:8px">
+      <div style="padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+        <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">Maintenance of full substation?</p>
+        <p style="margin:0 0 10px;font-size:.92rem;color:#172c51">We combine FQ/DGA analysis with electrical testing (TTR, Megger, VLF) in a larger maintenance EPC scope.</p>
+        <a href="lp-subestaciones-electricas.html" style="font-size:.88rem;font-weight:600;color:#0f4c81;text-decoration:none">See substation service →</a>
+      </div>
+      <div style="padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+        <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">New transformer diagnostic?</p>
+        <p style="margin:0 0 10px;font-size:.92rem;color:#172c51">Baseline FQ/DGA analysis is part of the industrial transformer commissioning protocol run by VMS Energy.</p>
+        <a href="soluciones-transformadores-industriales.html" style="font-size:.88rem;font-weight:600;color:#0f4c81;text-decoration:none">See industrial transformers →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CTA BAND ═══════════════════════════════════════════════════════ -->
+
+
+  <!-- PROYECTOS DE REFERENCIA -->
+  <section class="section section--alt" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Reference projects</span>
+      <h2 class="sec-h2" id="refTitle">Processors in oil</h2>
+      <p class="sec-lead">Oil change, rehabilitation, electrical tests and supply of transformers immersed in dielectric oil, on platforms in Campeche.</p>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">BALAM-TE Platform — Pemex</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Change of oil in the TRD-56 and TRE-76 transformers, with wiring, electrical tests, installation of a new drive and repair of leaks in the existing radiators.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">AKAL-C7 Platform — Pemex</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Rehabilitation and repair of 2,240 kVA TX-4900A oil-type power and distribution transformer.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">AKAL-B5 platform — Pemex</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Rehabilitation and repair of the TX-4910A and TX-4910C power transformers, 2,000 kVA each.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">LV-B platform</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Major corrective maintenance and electrical testing of the TR-27 and TR-28 distribution transformers, 3,500 kVA and 34.5/4.16 kV, with supply and installation of four tubular bench-type radiators.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Pemex</p>
+          <p class="ref-card__lugar">Campeche</p>
+          <p class="ref-card__desc">Supply of three-phase transformers with a DEEMSA power of 15 000 and 3 750 kVA, immersed in biodegradable dielectric oil liquid.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Maritime Services Campeche / Pemex</p>
+          <p class="ref-card__lugar">Campeche</p>
+          <p class="ref-card__desc">Commissioning of a 1,500 kVA power transformer with insulation resistance (Megger), ohmic winding resistance, power factor and TTR transformation ratio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="ctaTitle">
+    <div class="container cta-band__inner">
+      <div>
+        <h2 class="cta-band__title" id="ctaTitle">When was the last oil analysis of your transformers?</h2>
+        <p class="cta-band__sub">If you do not have a history of DGA as a baseline, the first analysis is urgent — regardless of whether the equipment operates normally. Internal arc failures signal in DGA up to 12 months before manifesting as a malfunction.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="contacto.html#inicio" class="btn btn--white"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a clipboard"><path d="M9 3h6v3H9z"/><path d="M6 5h2m8 0h2v16H6V5z"/><path d="M9 11h6M9 15h4"/></svg> Request diagnostic</a>
+        <a href="blog-mantenimiento-transformadores-operacion.html" class="btn btn--outline-white">Read technical guide →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer site-footer--compact">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+
+</body>
+</html>

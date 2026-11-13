@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en" data-concept="servicios-especializados">
+<head>
+<meta charset="UTF-8">
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Industrial Predictive Maintenance | IR thermography · VLF · Megger | VMS Energy</title>
+<meta name="description" content="Industrial electrical predictive maintenance in Mexico. Projects from $500,000 MXN. IR thermography, VLF 0.1 Hz, transformer diagnosis and power quality.">
+<link rel="stylesheet" href="../servicios-base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Industrial Predictive Maintenance", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com"}, "areaServed": {"@type": "Country", "name": "Mexico"}, "description": "Infrared Thermography, Very Low Frequency Tests (VLF) on MV cables, Transformer Diagnostics (TTR, Megger, Devan resistance) and Energy Quality Analysis for Industrial and Offshore Installations.", "serviceType": "Predictive Maintenance"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "When is it recommended to test a VLF on medium voltage cables?", "acceptedAnswer": {"@type": "Answer", "text": "VLF (Very Low Frequency, 0.1 Hz) testing is recommended every 3–5 years on MV cables in service, after any cable failure or repair, and as an acceptance test in new installations. It is especially critical in XLPE and EPR cables that accumulate waterlogging over time."}}, {"@type": "Question", "name": "What does infrared trimography detect in electrical installations?", "acceptedAnswer": {"@type": "Answer", "text": "IR thermography detects hot spots due to loose connections, deteriorated fuses, load imbalance, overloading of conductors, incipient failures in transformers and motors, and defective insulation in switchboards and substations. A hot spot of more than 30°C above the environment is a sign of urgent corrective action."}}, {"@type": "Question", "name": "What does the full diagnosis of a power transformer include?", "acceptedAnswer": {"@type": "Answer", "text": "Complete diagnosis includes: TTR (turns ratio), cold winding resistance, insulation resistance (megger at 1 kV or 5 kV) and polarization index (PI), dielectric power factor, oil DGA analysis and dielectric strength test. A report is delivered with a condition traffic light (green/yellow/red) and intervention recommendation."}}, {"@type": "Question", "name": "Can you run VLF tests on offshore platforms?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We have conducted VLF tests on MV 4 160 V cable systems on Pemex/Cotemar platforms in the Gulf of Mexico, under offshore safety protocols and coordinating stop windows with production equipment."}}, {"@type": "Question", "name": "How often should electrical predictive maintenance be performed?", "acceptedAnswer": {"@type": "Answer", "text": "The NETA MTS recommends annual electrical thermography for critical installations and transformer inspections every 1–3 years. In aggressive environments (heat, humidity, dust) or installations with high process criticality, a semiannual frequency is recommended. MV cables under load must undergo VLF every 3 years."}}, {"@type": "Question", "name": "What standards do they apply for predictive electrical maintenance in Mexico?", "acceptedAnswer": {"@type": "Answer", "text": "The main references are: NETA MTS (Maintenance Testing Specifications), IEEE C57.12.91 (transformer testing), IEC 60060-3 (high voltage in the field), NFPA 70B (preventive maintenance of electrical systems) and IEC 61010-1 (safety of measuring equipment). In installations under NOM, NOM-001-SEDE-2012 applies."}}, {"@type": "Question", "name": "What is DGA analysis (Dissolved Gas Analysis) and when is it required?", "acceptedAnswer": {"@type": "Answer", "text": "The DGA analyzes the gases dissolved in the transformer oil (H₂, CH₄, C₂H₂, CO, etc.) to detect partial electric discharges, internal arcs and overheating of oil and insulating paper. It is mandatory in power transformers greater than 1 MVA and is recommended annually in critical equipment."}}, {"@type": "Question", "name": "What is the difference between isolation resistance (megger) and polarization index (PI)?", "acceptedAnswer": {"@type": "Answer", "text": "Insulation resistance (RI) measures the point condition of the insulation at 1 min. The polarization index (PI) is the ratio RI at 10 min / RI at 1 min. A PI greater than 2.0 indicates insulation in good condition; between 1.0 and 2.0 is questionable; less than 1.0 indicates humidity or severe contamination. The PI eliminates the influence of temperature on the reading."}}]}</script>
+
+<style>
+  /* ── MANTENIMIENTO PREDICTIVO — minimal page CSS ────────────── */
+  /* Semaphore table */
+  .sem-table{width:100%;border-collapse:collapse;font-size:.88rem}
+  .sem-table th{background:var(--concept-darker);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+  .sem-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.14);color:#334155}
+  .sem-table tr:nth-child(even) td{background:var(--concept-accent-light)}
+  .badge-g{background:var(--success-bg);color:var(--vms-green-600);border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
+  .badge-y{background:#fef9c3;color:#b45309;border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
+  .badge-r{background:#fee2e2;color:#b91c1c;border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700}
+</style>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Specialized Services", "item": "https://vmsenergy.com/en/especialidades.html"}, {"@type": "ListItem", "position": 3, "name": "Industrial Predictive Maintenance | IR Thermography · VL…", "item": "https://vmsenergy.com/en/lp-mantenimiento-predictivo.html"}]}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/lp-mantenimiento-predictivo.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-mantenimiento-predictivo.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/lp-mantenimiento-predictivo.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-mantenimiento-predictivo.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('../assets/img/hero_mantenimiento_predictivo.webp');--hero-overlay:.82" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy · Specialized Services · Projects from 500,000 BDN</div>
+      <h1 id="heroTitle">Industrial Predictive Maintenance</h1>
+      <p class="hero__sub">Thermography IR · VLF · Diagnostic Transformers</p>
+      <p>Infrared thermography, VLF tests on medium voltage cables, complete transformer diagnosis and energy quality analysis. Detected failures before they occur and reduced costs of levant maintenance.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-predictivo#ctaForm">Request Technical Assessment</a>
+        <a class="btn btn--ghost" href="#servicios">View services</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">NETA MTS Thermography</span>
+        <span class="hero-stat">VLF 0.1 Hz MV cables</span>
+        <span class="hero-stat">TTR + Megger + DGA</span>
+        <span class="hero-stat">IEEE C57.12.91</span>
+        <span class="hero-stat">Offshore Pemex/Cotemar</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="kpi-strip">
+    <div class="container">
+      <div class="kpi"><div class="kpi__val">NET</div><div class="kpi__lbl">MTS certified</div></div>
+      <div class="kpi"><div class="kpi__val">0.1Hz</div><div class="kpi__lbl">VLF frequency</div></div>
+      <div class="kpi"><div class="kpi__val">100+</div><div class="kpi__lbl">diagnostic transformers</div></div>
+      <div class="kpi"><div class="kpi__val">24 hours</div><div class="kpi__lbl">report delivery</div></div>
+      <div class="kpi"><div class="kpi__val">Offshore</div><div class="kpi__lbl">Gulf of Mexico</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="section" id="servicios" aria-labelledby="svcTitle">
+    <div class="container">
+      <span class="sec-label">Our services</span>
+      <h2 class="sec-h2" id="svcTitle">Electrical predictive maintenance services</h2>
+      <p class="sec-lead">We use non-invasive diagnostic technology to assess the actual condition of your electrical assets without interrupting production.</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a flame"><path d="M12 2s5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3 1-6 1-8z"/></svg></div>
+          <p class="svc-card__norm">NETA MTS / ISO 18434</p>
+          <p class="svc-card__title">Infrared termography (IR)</p>
+          <p class="svc-card__desc">Inspection with thermal imaging camera on electrical panels, substations, motors, transformers and MCC under load. Detects loose connections, damaged fuses, phase imbalance and conductor overload. Report with IR/visible images and priority classification according to delta-T.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="an ascending line"><path d="M4 18l5-5 3 3 7-8"/><path d="M15 8h4v4"/></svg></div>
+          <p class="svc-card__norm">IEC 60060-3/IEEE 400.2</p>
+          <p class="svc-card__title">VLF test on MV cables</p>
+          <p class="svc-card__desc">Very low frequency test (0.1 Hz) on 5–35 kV XLPE/EPR cables. Detects water trees, voids and insulation degradation without damage to healthy cable. Includes leakage current monitoring (tan-delta) for quantitative evaluation of insulation status.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="lightning"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+          <p class="svc-card__norm">IEEE C57.12.91/NETA MTS</p>
+          <p class="svc-card__title">Transformer diagnosis</p>
+          <p class="svc-card__desc">Complete battery of tests: TTR (transformation ratio), winding resistance, insulation resistance and polarization index (PI), power factor of the dielectric and dielectric strength of the oil. Green/yellow/red traffic light evaluation and intervention recommendation.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="bar of a chart"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <p class="svc-card__norm">IEC 61000-4 / IEEE 519</p>
+          <p class="svc-card__title">Power quality and harmonics</p>
+          <p class="svc-card__desc">Measurement of THDi, THDv, power factor, flicker, voltage dips and transients with a power quality analyzer. Identifies sources of distortion, affected equipment and proposes solutions (passive filters, APF, capacitor bank).</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a pin"><path d="M8 3v6M16 3v6"/><path d="M6 9h12v3a6 6 0 0 1-12 0z"/><path d="M12 18v3"/></svg></div>
+          <p class="svc-card__norm">IEC 60599/ASTM D3612</p>
+          <p class="svc-card__title">DGA analysis of oil (transformers)</p>
+          <p class="svc-card__desc">Analysis of dissolved gases (H₂, CH₄, C₂H₂, CO, CO₂) in transformer oil to detect partial discharges, internal arcs and overheating of insulating paper. Interpretation according to the Duval and Rogers method for precise diagnosis of the type of internal failure.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a magnifying glass"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <p class="svc-card__norm">NET MTS/IEC 62271</p>
+          <p class="svc-card__title">Tests of MV switches and switchgear</p>
+          <p class="svc-card__desc">Measurement of switch opening and closing time, static contact resistance (microohmmeter), trip coil test, spring mechanism verification and insulation test. Compatible with SF₆, vacuum and air switches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMÁFORO TABLE -->
+  <section class="section section--alt" id="criterios" aria-labelledby="critTitle">
+    <div class="container">
+      <span class="sec-label">Evaluation criteria</span>
+      <h2 class="sec-h2" id="critTitle">Condition criteria per test</h2>
+      <p class="sec-lead">We evaluate each asset with quantitative criteria based on NETA, IEEE and manufacturer standards. Each report includes a condition rating that makes it easy to prioritize corrective maintenance.</p>
+      <div class="tabla-scroll"><table class="sem-table" style="min-width:500px">
+        <thead>
+          <tr><th>Test</th><th>Parameter</th><th>Normal</th><th>Review</th><th>Urgent action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Termography IR</td><td>Delta-T vs. environment</td><td><span class="badge-g">0–10°C</span></td><td><span class="badge-y">11–30°C</span></td><td><span class="badge-r">&gt; 30°C</span></td></tr>
+          <tr><td>Insulation resistance</td><td>Polarization Index (PI)</td><td><span class="badge-g">&ge; 2.0</span></td><td><span class="badge-y">1.0&ndash;2.0</span></td><td><span class="badge-r">&lt; 1.0</span></td></tr>
+          <tr><td>VLF Tan-delta</td><td>Loss factor at 0.1 Hz</td><td><span class="badge-g">&lt; 0.5%</span></td><td><span class="badge-y">0.5&ndash;1.0%</span></td><td><span class="badge-r">&gt; 1.0%</span></td></tr>
+          <tr><td>Oil dielectric strength</td><td>KV rupture voltage</td><td><span class="badge-g">&gt; 30 kV</span></td><td><span class="badge-y">20–30 kV</span></td><td><span class="badge-r">&lt; 20 kV</span></td></tr>
+          <tr><td>Contact resistance</td><td>Microohms (MV switch)</td><td><span class="badge-g">&lt; 100 µ&Omega;</span></td><td><span class="badge-y">100&ndash;300 µ&Omega;</span></td><td><span class="badge-r">&gt; 300 µ&Omega;</span></td></tr>
+          <tr><td>Harmonic THDv</td><td>Total voltage distortion</td><td><span class="badge-g">&lt; 3%</span></td><td><span class="badge-y">3&ndash;5%</span></td><td><span class="badge-r">&gt; 5%</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Reference projects</span>
+      <h2 class="sec-h2" id="refTitle">Predictive services performed</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">BALAM Platform — Cotemar</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Comprehensive VLF electrical tests to the primary and secondary circuits of the disconnector, with installation of premolded elbows and T-body for 35 kV, 200 A, 2/0 gauge.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Maritime Services Campeche / Pemex</p>
+          <p class="ref-card__lugar">Campeche</p>
+          <p class="ref-card__desc">Commissioning of 1,500 kVA power transformer with complete battery: insulation resistance (Megger), ohmic resistance to windings, power factor, TTR transformation ratio and performance tests.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">EK-A platform — Cotemar</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Review, inspection, evaluation and diagnosis of the 7,500 kVA transformer.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">MALOOB-D — Ku-Maloob-Zaap Asset, Pemex</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Technical and visual inspection, replacement of components and field testing of the VDF-10-01 variable speed drive, Siemens brand.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Bottling plant</p>
+          <p class="ref-card__lugar">Colima</p>
+          <p class="ref-card__desc">Maintenance of substation, four transformers and low voltage distribution boards, with thermography, megger tests on wiring and operation tests on switches.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Cement plant</p>
+          <p class="ref-card__lugar">Jalisco</p>
+          <p class="ref-card__desc">Major maintenance to 69 kV substation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section section--alt" id="proceso" aria-labelledby="procTitle">
+    <div class="container">
+      <span class="sec-label">Methodology</span>
+      <h2 class="sec-h2" id="procTitle">Predictive diagnosis process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <p class="step__title">1. Asset collection</p>
+          <p class="step__desc">Inventory of equipment to be diagnosed: transformers, panels, MV cables and switches. Review of maintenance history, previous failures and operating conditions (load, temperature, age).</p>
+        </div>
+        <div class="step">
+          <p class="step__title">2. Inspection and testing</p>
+          <p class="step__desc">Execution of thermography under load, VLF tests without interrupting operation (MV cables), and battery of acceptance tests on transformers and switches during scheduled shutdown window.</p>
+        </div>
+        <div class="step">
+          <p class="step__title">3. Analysis and diagnosis</p>
+          <p class="step__desc">Interpretation of results according to NETA MTS, IEEE and manufacturer. Classification of each asset in green/yellow/red traffic light with technical reason and comparison against commissioning reference values.</p>
+        </div>
+        <div class="step">
+          <p class="step__title">4. Report and action plan</p>
+          <p class="step__desc">Delivery of technical report with IR images, measurement graphs, condition table and prioritized action plan. The report can be the basis for the corrective maintenance budget for the following period.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENTLY NEVADA — EQUIPOS DE MONITOREO -->
+  <section class="section" id="tecnologia" aria-labelledby="techTitle">
+    <div class="container">
+      <span class="sec-label">Technology</span>
+      <h2 class="sec-h2" id="techTitle">Machinery monitoring and protection equipment</h2>
+      <p class="sec-intro">VMS Energy supplies, installs and implements continuous monitoring systems <strong>Bently Nevada</strong> (Baker Hughes), the world reference in protection of critical rotating machinery in O&amp;G, generation and petrochemical plants.</p>
+
+      <div class="equip-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px">
+
+        <div class="equip-card" style="background:#fff;border:1.5px solid #dbe6f4;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(15,47,113,.06)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <span style="font-size:2rem"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a pin"><path d="M8 3v6M16 3v6"/><path d="M6 9h12v3a6 6 0 0 1-12 0z"/><path d="M12 18v3"/></svg></span>
+            <div>
+              <p style="font-size:11px;color:#6b7f97;margin:0">Baker Hughes · Bently Nevada</p>
+              <strong style="font-size:1rem;color:#10233d">Protection system 3500</strong>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#425a72;margin:0 0 14px">Modular continuous monitoring platform for critical turbines, compressors and pumps. Measures radial and axial vibration, rotation speed, temperature and axis position. SIL-1 certificate for automatic emergency stops.</p>
+          <ul style="font-size:12px;color:#5b6f86;padding-left:18px;margin:0;line-height:1.8">
+            <li>Configurable channels: displacement, speed, acceleration</li>
+            <li>Modbus, Profibus, FOUNDATION Fieldbus communication</li>
+            <li>Compatible with existing DCS/SCADA</li>
+            <li>Independent triggers and alerts (hardware)</li>
+          </ul>
+          <div style="margin-top:16px;padding-top:12px;border-top:1px solid #dbe6f4">
+            <span style="font-size:11px;font-weight:700;color:var(--concept-primary);background:#eef4ff;border-radius:999px;padding:3px 10px">Critical rotating machinery</span>
+          </div>
+        </div>
+
+        <div class="equip-card" style="background:#fff;border:1.5px solid #dbe6f4;border-radius:16px;padding:24px;box-shadow:0 4px 16px rgba(15,47,113,.06)">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <span style="font-size:2rem"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="bar of a chart"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+            <div>
+              <p style="font-size:11px;color:#6b7f97;margin:0">Baker Hughes · Bently Nevada</p>
+              <strong style="font-size:1rem;color:#10233d">BV7 Portable Vibration Monitor</strong>
+            </div>
+          </div>
+          <p style="font-size:13px;color:#425a72;margin:0 0 14px">Portable analyzer for inspection routes and field diagnosis. Captures FFT spectrum, waveform and vibration trends in motors, pumps, fans and reducers. Integrates with Bently Nevada System 1 software.</p>
+          <ul style="font-size:12px;color:#5b6f86;padding-left:18px;margin:0;line-height:1.8">
+            <li>Simultaneous acceleration and velocity capture</li>
+            <li>FFT analysis in the field without PC</li>
+            <li>Export to System 1/CMMS databases</li>
+            <li>Ideal for condition-based maintenance programs</li>
+          </ul>
+          <div style="margin-top:16px;padding-top:12px;border-top:1px solid #dbe6f4">
+            <span style="font-size:11px;font-weight:700;color:var(--concept-primary);background:#eef4ff;border-radius:999px;padding:3px 10px">En route monitoring/reliability</span>
+          </div>
+        </div>
+
+        <div class="equip-card" style="background:linear-gradient(135deg,#eef4ff 0%,#f0f7ff 100%);border:1.5px solid #c9daf3;border-radius:16px;padding:24px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <span style="font-size:2rem"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a nut wrench"><path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 1 5.4-5.4l-2.5 2.5 2.1 2.1z"/></svg></span>
+            <strong style="font-size:1rem;color:#10233d">VMS supplementary services</strong>
+          </div>
+          <ul style="font-size:13px;color:#425a72;padding-left:18px;margin:0 0 14px;line-height:2">
+            <li>Modernization and installation of vibration analysis systems</li>
+            <li>System 3500 configuration and commissioning</li>
+            <li>Training operators in spectrum interpretation</li>
+            <li>Integration to plant SCADA / DCS</li>
+            <li>Fault diagnosis in rotating machinery on site</li>
+          </ul>
+          <a href="contacto_cta.html?producto=mantenimiento-predictivo#ctaForm" class="btn btn--primary" style="font-size:13px;padding:10px 20px">Request proposal</a>
+        </div>
+
+      </div>
+
+      <div style="margin-top:24px;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 20px;display:flex;gap:12px;align-items:flex-start">
+        <span style="font-size:1.3rem;flex-shrink:0"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="a warning triangle"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span>
+        <p style="font-size:13px;color:#78350f;margin:0"><strong>Why continuous monitoring?</strong> Failures in critical rotating machinery (turbines, compressors) have a development time from start to breakdown of 1 to 6 weeks. The 3500 System detects changes in the vibration signature days before failure, allowing a planned shutdown versus a forced shutdown that can cost 10x more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">Questions about electrical predictive maintenance</h2>
+      <div class="faq-list">
+        <details>
+          <summary>When is it recommended to test a VLF on medium voltage cables?</summary>
+          <p>VLF (Very Low Frequency, 0.1 Hz) testing is recommended every 3–5 years on MV cables in service, after any cable failure or repair, and as an acceptance test in new installations. It is especially critical in XLPE and EPR cables that accumulate waterlogging over time.</p>
+        </details>
+        <details>
+          <summary>What does infrared trimography detect in electrical installations?</summary>
+          <p>IR thermography detects hot spots due to loose connections, deteriorated fuses, load imbalance, overloading of conductors, incipient failures in transformers and motors, and defective insulation in switchboards and substations. A hot spot of more than 30°C above the environment is a sign of urgent corrective action.</p>
+        </details>
+        <details>
+          <summary>What does the full diagnosis of a power transformer include?</summary>
+          <p>Complete diagnosis includes: TTR (turns ratio), cold winding resistance, insulation resistance (megger at 1 kV or 5 kV) and polarization index (PI), dielectric power factor, oil DGA analysis and dielectric strength test. A report is delivered with a condition light and intervention recommendation.</p>
+        </details>
+        <details>
+          <summary>Can you run VLF tests on offshore platforms?</summary>
+          <p>Yes. We have conducted VLF tests on MV 4 160 V cable systems on Pemex/Cotemar platforms in the Gulf of Mexico, under offshore safety protocols and coordinating stop windows with production equipment.</p>
+        </details>
+        <details>
+          <summary>How often should electrical predictive maintenance be performed?</summary>
+          <p>The NETA MTS recommends annual electrical thermography for critical installations and transformer inspections every 1–3 years. In aggressive environments or installations with high criticality, a semiannual frequency is recommended. MV cables under load must undergo VLF every 3 years.</p>
+        </details>
+        <details>
+          <summary>What is DGA analysis and when is it required?</summary>
+          <p>The DGA analyzes the gases dissolved in the transformer oil (H₂, CH₄, C₂H₂, CO, etc.) to detect partial electric discharges, internal arcs and overheating of insulating paper. It is mandatory in transformers greater than 1 MVA and is recommended annually in critical equipment.</p>
+        </details>
+        <details>
+          <summary>What is the difference between isolation resistance (megger) and polarization index (PI)?</summary>
+          <p>Insulation resistance measures the point condition of the insulation at 1 min. The PI is the ratio RI at 10 min / RI at 1 min. A PI ≥ 2.0 indicates insulation in good condition; between 1.0–2.0 is questionable; less than 1.0 indicates humidity or severe contamination. The PI eliminates the influence of temperature on the reading.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">When was the last inspection of your electrical assets?</h2>
+      <p style="color:#bfdbfe;margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto">An unforeseen failure in an MV transformer or cable can cost 10x more than an annual predictive maintenance program. Contact us for a personalized plan.</p>
+      <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-predictivo#ctaForm" style="font-size:1.05rem;padding:.75rem 2rem">Request predictive diagnosis</a>
+    </div>
+  </section>
+
+<!-- cross-link: monitoreo de condición -->
+<div style="margin:24px 0;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+  <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">Engines, pumps or critical compressors?</p>
+  <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">Condition monitoring integrates vibration, temperature and current of rotating equipment into your SCADA, with severity alarms and predictive maintenance.</p>
+  <a href="lp-monitoreo-de-condicion.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">
+    See condition monitoring →
+  </a>
+</div>
+<!-- cross-link: análisis FQ aceite -->
+<div style="margin:24px 0;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0">
+  <p style="margin:0 0 6px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700">Oil transformers on your plant?</p>
+  <p style="margin:0 0 10px;font-size:.95rem;color:#172c51">Physico-chemical analysis and DGA of dielectric oil is the most effective predictive technique for oil-filled transformers. VMS Energy integrates it into your maintenance program.</p>
+  <a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html" style="font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none">
+    See FQ/DGA analysis service →
+  </a>
+</div>
+</main>
+
+<footer class="site-footer site-footer--compact">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

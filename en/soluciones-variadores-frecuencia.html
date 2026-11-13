@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="en" data-concept="equipamiento">
+<head>
+  <meta charset="utf-8"/>
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Frequency Variations, Live Savings and Control, VMS Energy</title>
+  <meta name="description" content="Supply and installation of frequency variable frequency drives (VFD) in Mexico. From 500,000 MLX. Harmonic reduction, energy saving up to 50%. Multi-brand."/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="VMS Energy"/>
+  <meta property="og:title" content="Frequency Variations, VMS Energy"/>
+  <meta property="og:description" content="Supply and installation of industrial VFDs: 2 levels, NPC 3 levels, regenerative AFE. ABB, Siemens, Schneider, Danfoss. Rules applied according to the requirements of the project."/>
+  <meta property="og:url" content="https://vmsenergy.com/en/soluciones-variadores-frecuencia.html"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-variadores-frecuencia.webp"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+<link rel="stylesheet" href="../equipamiento-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Variables de imagen de hero (específicas de esta página) ── */
+    :root {
+      --equip-hero-img: url('../assets/img/hero_variadores_frecuencia.webp');
+    }
+
+    /* ── Topologías ── */
+    .topo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+    .topo-card{background:#fff;border:1px solid var(--border-line);border-radius:16px;padding:22px 18px;box-shadow:0 3px 12px rgba(8,28,54,.06);position:relative;overflow:hidden}
+    .topo-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--concept-primary)}
+    .topo-card.featured::before{background:var(--vms-green-500)}
+    .topo-card__badge{display:inline-block;padding:.15rem .5rem;border-radius:6px;font-size:.72rem;font-weight:800;background:#eff6ff;color:#1d4ed8;margin-bottom:8px}
+    .topo-card.featured .topo-card__badge{background:var(--success-bg);color:var(--vms-green-700)}
+    .topo-card__title{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .topo-card__desc{font-size:.87rem;color:#4b5563;margin:0 0 12px;line-height:1.55}
+    .topo-specs{display:flex;flex-wrap:wrap;gap:6px}
+    .topo-tag{display:inline-block;padding:.14rem .44rem;border-radius:6px;font-size:.72rem;font-weight:700;background:#f1f5f9;color:#334155;border:1px solid rgba(51,65,85,.15)}
+
+    /* ── Ley de Afinidad Strip ── */
+    .afinidad-strip{background:linear-gradient(135deg,#0b2344 0%,#0f3a6b 100%);padding:36px 0;color:#fff}
+    .afinidad-inner{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+    .afinidad-formula{font-size:clamp(18px,3vw,28px);font-weight:800;font-family:monospace;color:#93c5fd;letter-spacing:.04em}
+    .afinidad-formula span{color:#fff;font-size:.7em;font-weight:400;font-family:"Roboto Condensed",sans-serif;display:block;margin-top:6px}
+    .afinidad-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .a-kpi{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:14px;text-align:center}
+    .a-kpi__val{font-size:1.6rem;font-weight:800;color:#93c5fd}
+    .a-kpi__lbl{font-size:.78rem;color:#bfdbfe;margin-top:2px}
+
+    /* ── Armónicas ── */
+    .harm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .harm-card{background:#fff;border:1px solid var(--border-line);border-radius:14px;padding:16px 14px;text-align:center}
+    .harm-card__pct{font-size:1.7rem;font-weight:800;color:var(--text-primary)}
+    .harm-card__pct.good{color:var(--vms-green-700)}
+    .harm-card__pct.warn{color:#d97706}
+    .harm-card__pct.bad{color:#dc2626}
+    .harm-card__label{font-size:.82rem;font-weight:700;color:#374151;margin:4px 0 0}
+    .harm-card__desc{font-size:.78rem;color:#6b7280;margin:6px 0 0;line-height:1.4}
+
+    /* ── Protecciones ── */
+    .prot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .prot-card{background:#fff;border:1px solid var(--border-line);border-radius:14px;padding:16px 14px;display:flex;align-items:flex-start;gap:12px}
+    .prot-card__ansi{font-size:.75rem;font-weight:800;font-family:monospace;background:#eff6ff;color:#1d4ed8;padding:.2rem .5rem;border-radius:6px;flex-shrink:0}
+    .prot-card__body{min-width:0}
+    .prot-card__title{font-size:.9rem;font-weight:800;color:#0f172a;margin:0 0 3px}
+    .prot-card__desc{font-size:.82rem;color:#4b5563;margin:0;line-height:1.4}
+
+    /* ── Comunicaciones ── */
+    .comm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .comm-card{background:#fff;border:1px solid var(--border-line);border-radius:12px;padding:16px;text-align:center}
+    .comm-card__proto{font-size:.98rem;font-weight:800;color:#0f172a;margin:0 0 6px}
+    .comm-card__desc{font-size:.8rem;color:#6b7280;line-height:1.4}
+
+    /* ── Marcas ── */
+
+    /* ── Derating por altitud y temperatura ── */
+    .derate-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+    .derate-card{background:#fff;border:1px solid var(--border-line);border-radius:14px;padding:20px}
+    .derate-card__title{font-size:.95rem;font-weight:800;color:#0f172a;margin:0 0 12px;display:flex;align-items:center;gap:8px}
+    .derate-card__title span{font-size:1.1rem}
+    .derate-table{width:100%;border-collapse:collapse;font-size:.85rem}
+    .derate-table th{background:#f1f5f9;color:#374151;padding:7px 10px;text-align:left;font-size:.75rem;font-weight:800;text-transform:uppercase}
+    .derate-table td{padding:7px 10px;border-bottom:1px solid var(--border-line);color:#374151}
+    .derate-table tr:last-child td{border-bottom:none}
+
+    /* ── Responsive (componentes específicos de página) ── */
+    @media(max-width:980px){
+      .topo-grid{grid-template-columns:1fr}
+      .harm-grid{grid-template-columns:repeat(2,1fr)}
+      .prot-grid{grid-template-columns:1fr 1fr}
+      .comm-grid{grid-template-columns:repeat(2,1fr)}
+      .derate-grid{grid-template-columns:1fr}
+      .afinidad-inner{grid-template-columns:1fr}
+      .afinidad-kpis{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:700px){
+      .comm-grid{grid-template-columns:1fr 1fr}
+      .harm-grid{grid-template-columns:1fr 1fr}
+      .afinidad-kpis{grid-template-columns:1fr 1fr}
+      .prot-grid{grid-template-columns:1fr}
+    }
+
+    /* VMShop callout */
+    .vmshop-callout{background:linear-gradient(135deg,#f0f6ff 0%,#e8f2ff 100%);border:1px solid rgba(15,76,129,.18);border-radius:18px;padding:24px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+    .vmshop-callout__icon{width:52px;height:52px;border-radius:12px;background:var(--concept-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .vmshop-callout__icon svg{width:28px;height:28px;fill:#fff}
+    .vmshop-callout__body{flex:1;min-width:200px}
+    .vmshop-callout__tag{display:inline-flex;background:#e7f0ff;color:var(--concept-primary);border:1px solid #c9daf3;border-radius:999px;padding:.18rem .65rem;font-size:11px;font-weight:700;letter-spacing:.03em;margin-bottom:6px}
+    .vmshop-callout__title{margin:0 0 4px;font-size:17px;color:#0f2747}
+    .vmshop-callout__sub{margin:0;font-size:13.5px;color:#35516f;line-height:1.45}
+    .vmshop-callout__cta{flex-shrink:0}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Service", "name": "Frequency Variations", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "areaServed": "MX", "description": "Supply, installation and commissioning of industrial frequency variable frequency drives under IEC 61800-3 and IEC 61800-5 in Mexico.", "serviceType": "EPC engineering of frequency converters", "url": "https://vmsenergy.com/en/soluciones-variadores-frecuencia.html", "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Types of changers", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VFD 2 VSI levels (bet up to 690 V)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "VFD 3 NPC levels (MV up to 6.6 kV)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AFE Active Front End (regenerative)"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Multi-drive / Common DC Bus"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Pump and fan variations"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "variable frequency drives for compressors and conveyor belts"}}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much energy savings does a frequency changer generate?", "acceptedAnswer": {"@type": "Answer", "text": "Thanks to the affinity law (P ∝ n³), reducing the speed of an engine to 80% reduces consumption to 51%. In pumps and fans that operate partially loaded, the typical savings is 20 to 50% compared to valve or damper control."}}, {"@type": "Question", "name": "What rules govern the electromagnetic compatibility of VFDs?", "acceptedAnswer": {"@type": "Answer", "text": "IEC 61800-3 defines the EMC requirements for variable speed drives. Establishes C1–C4 categories according to the environment (residential vs. industrial) and the limits of conducted and radiated emissions. Complements IEC 61000-3-12 for network harmonics."}}, {"@type": "Question", "name": "What is an AFE-type VFD and when should it be used?", "acceptedAnswer": {"@type": "Answer", "text": "An Active Front End (AFE) uses an active rectifier bridge instead of diodes, achieving THDi < 3% in the network and recovering energy to the network during regenerative braking. It is suitable for applications with frequent braking (grips, elevators, presses) or where energy quality is critical (Shifts, data centers)."}}, {"@type": "Question", "name": "How does altitude affect the performance of a variator?", "acceptedAnswer": {"@type": "Answer", "text": "Above 1 000 m s. n. m., less dense air reduces the cooling of the drive. The standard rule is to apply a derating of approximately -1% of the rated current for every additional 100 m. At 2,500 m (altitude of Mexico City) the derating is ~15%. Some manufacturers offer special models up to 4,000 m without derating."}}, {"@type": "Question", "name": "Does VMS Energy install variable frequency drives of any brand?", "acceptedAnswer": {"@type": "Answer", "text": "Yeah. VMS Energy supplies and installs multi-brand variable frequency drives (ABB ACS580/ACS880, Siemens SINAMICS G120/S120, Schneider Altivar Process, Danfoss FC302, Triol) according to process requirements, required communication protocol and system voltage level."}}]}]}</script>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Critical Equipment", "item": "https://vmsenergy.com/en/soluciones.html#equipamiento"}, {"@type": "ListItem", "position": 3, "name": "Frequency, Live Savings and Control Variables", "item": "https://vmsenergy.com/en/soluciones-variadores-frecuencia.html"}]}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/soluciones-variadores-frecuencia.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-variadores-frecuencia.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/soluciones-variadores-frecuencia.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-variadores-frecuencia.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy · Electrical Equipment</div>
+      <h1 id="heroTitle">Frequency Variations<br><em>Energy Savings and Process Control</em></h1>
+      <p>Multi-brand supply, installation, commissioning and maintenance of industrial VFDs for the industry in Mexico. Regulations applied according to the requirements of the project.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=variadores#ctaForm">Request a quote</a>
+        <a class="btn btn--ghost" href="#topologias">See topologies</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">Savings 20–50% kWh</span>
+        <span class="hero-stat">LV 220–690 V / MV up to 6.6 kV</span>
+        <span class="hero-stat">Regenerative AFE THD&lt;3%</span>
+        <span class="hero-stat">National and international regulations</span>
+        <span class="hero-stat">Multi-brand: ABB · Siemens · Schneider</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEY DE AFINIDAD -->
+  <div class="afinidad-strip" aria-label="Energy savings by affinity law">
+    <div class="container">
+      <div class="afinidad-inner">
+        <div>
+          <p style="margin:0 0 4px;font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#93c5fd">Law of affinity — why VFDs save so much</p>
+          <div class="afinidad-formula">P ∝ n³<span>When speed is reduced to 80%, power drops to 51%</span></div>
+          <p style="margin:16px 0 0;font-size:.88rem;color:#bfdbfe;max-width:420px">A centrifugal pump controlled by variator consumes drastically less than with butterfly valve regulation, where the engine always rotates at nominal speed.</p>
+        </div>
+        <div class="afinidad-kpis">
+          <div class="a-kpi"><div class="a-kpi__val">51%</div><div class="a-kpi__lbl">consumption at 80% speed</div></div>
+          <div class="a-kpi"><div class="a-kpi__val">34%</div><div class="a-kpi__lbl">70% speed consumption</div></div>
+          <div class="a-kpi"><div class="a-kpi__val">20%</div><div class="a-kpi__lbl">consumption at 58% speed</div></div>
+          <div class="a-kpi"><div class="a-kpi__val">20&ndash;50%</div><div class="a-kpi__lbl">typical savings on pumps/ventilators</div></div>
+          <div class="a-kpi"><div class="a-kpi__val">&lt;2 years</div><div class="a-kpi__lbl">usual return on investment</div></div>
+          <div class="a-kpi"><div class="a-kpi__val">0.90+</div><div class="a-kpi__lbl">Power factor with AFE</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPOLOGIAS -->
+  <section class="section" id="topologias" aria-labelledby="topoTitle">
+    <div class="container">
+      <span class="sec-label">Supply Portfolio</span>
+      <h2 class="sec-h2" id="topoTitle">Topologies of variable frequency drives that we supply and install</h2>
+      <p class="sec-lead">Selection depends on voltage level, power, EMC requirements, regenerative capacity and process communication protocol.</p>
+      <div class="topo-grid">
+        <div class="topo-card">
+          <span class="topo-card__badge">LV standard</span>
+          <p class="topo-card__title">VFD 2 levels — VSI (Voltage Source Inverter)</p>
+          <p class="topo-card__desc">More widespread topology. Rect. diodes + DC bus + IGBT bridge. Range 0.37–2 500 kW, voltages 220–690 V AC. THDi without filter 35–45%; with 20–25% line reactor; with LCL filter &lt;5%. Suitable for most pumps, fans, compressors and belts.</p>
+          <div class="topo-specs">
+            <span class="topo-tag">220–690V</span><span class="topo-tag">Up to 2 500 kW</span><span class="topo-tag">IGBT</span><span class="topo-tag">Line reactor</span><span class="topo-tag">Optional LCL filter</span>
+          </div>
+        </div>
+        <div class="topo-card">
+          <span class="topo-card__badge">Medium Voltage</span>
+          <p class="topo-card__title">VFD 3 levels — NPC (Neutral Point Clamped)</p>
+          <p class="topo-card__desc">For medium voltage motors 2.3–6.6 kV and powers from 315 kW to several MW. The multilevel design reduces dv/dt over the motor winding and improves the waveform (THDv &lt;5% without extra filter). Requires input isolation transformer.</p>
+          <div class="topo-specs">
+            <span class="topo-tag">2.3–6.6 kV</span><span class="topo-tag">315 kW–several MW</span><span class="topo-tag">IGBT/IGCT</span><span class="topo-tag">THDv &lt;5%</span><span class="topo-tag">Xfmr input</span>
+          </div>
+        </div>
+        <div class="topo-card featured">
+          <span class="topo-card__badge">Regenerative</span>
+          <p class="topo-card__title">AFE — Active Front End (active rectification)</p>
+          <p class="topo-card__desc">Replaces the diode bridge with an active IGBT bridge. Key advantages: THDi &lt;3% (IEEE 519), unity power factor (0.99) and energy recovery to the grid in regenerative mode. Ideal for cranes, elevators, presses, drilling machines and applications with frequent or continuous braking.</p>
+          <div class="topo-specs">
+            <span class="topo-tag">THDi &lt;3%</span><span class="topo-tag">FP = 0.99</span><span class="topo-tag">Regenerative</span><span class="topo-tag">IEEE 519</span><span class="topo-tag">4 quadrants</span>
+          </div>
+        </div>
+        <div class="topo-card">
+          <span class="topo-card__badge">Advanced settings</span>
+          <p class="topo-card__title">Multi-drive / Common DC Bus</p>
+          <p class="topo-card__desc">Several inverters share a common DC bus powered by a centralized rectifier or shared AFE. The braking energy of one axle is reused on another motor axis. It is borderlined the number of rectifiers, improves overall THD and is optimal in machines with multiple coordinated axes (production lines, winders, looms).</p>
+          <div class="topo-specs">
+            <span class="topo-tag">Shared DC Bus</span><span class="topo-tag">Multiple investors</span><span class="topo-tag">Internal recovery</span><span class="topo-tag">Coordinated axes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARMONICAS -->
+  <section class="section section--alt" id="armonicas" aria-labelledby="harmTitle">
+    <div class="container">
+      <span class="sec-label">Power quality</span>
+      <h2 class="sec-h2" id="harmTitle">Harmonic management according to IEC 61000-3-12 / IEEE 519</h2>
+      <p class="sec-lead">The THDi level determines whether a line reactor, passive LCL filter, or an active front-end is required. VMS Energy designs the solution according to the network capacity and the requirements of the applicable standard.</p>
+      <div class="harm-grid">
+        <div class="harm-card">
+          <div class="harm-card__pct bad">35&ndash;45%</div>
+          <p class="harm-card__label">Standard VFD without filter</p>
+          <p class="harm-card__desc">Rect. 6-pulse diode without mitigation. Exceeds IEEE 519 limits (&lt;5% in industrial PCC)</p>
+        </div>
+        <div class="harm-card">
+          <div class="harm-card__pct warn">20&ndash;25%</div>
+          <p class="harm-card__label">With 3%Uk line reactor</p>
+          <p class="harm-card__desc">Economic solution.Current current peaks and improves displacement power factor</p>
+        </div>
+        <div class="harm-card">
+          <div class="harm-card__pct good">&lt;5%</div>
+          <p class="harm-card__label">With passive LCL filter</p>
+          <p class="harm-card__desc">Complies with IEC 61000-3-12 and IEEE 519 in industrial environments. Recommended when THD affects other equipment</p>
+        </div>
+        <div class="harm-card">
+          <div class="harm-card__pct good">&lt;3%</div>
+          <p class="harm-card__label">VFD with AFE (active rectif)</p>
+          <p class="harm-card__desc">Best possible performance. Complies even on sensitive networks (hospitals, data centers, platforms)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARAMETROS DE SELECCION -->
+  <section class="section" id="seleccion" aria-labelledby="selTitle">
+    <div class="container">
+      <span class="sec-label">Selection engineering</span>
+      <h2 class="sec-h2" id="selTitle">Key parameters for specifying a drive</h2>
+      <p class="sec-lead">A complete data sheet allows you to select the right family and size, avoiding oversize or premature failure due to thermal overload.</p>
+      <div class="tabla-scroll"><table class="param-table" aria-label="Drive selection parameters" style="min-width:480px">
+        <thead><tr><th>Parameter</th><th>Detail / Typical ranges</th><th>Impact on selection</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Motor power (kW / HP)</strong></td><td>0.37 kW – several MW</td><td>Determines the product family and chassis size</td></tr>
+          <tr><td><strong>Network voltage</strong></td><td>220 V / 380–480 V / 525–690 V / MV 2.3–6.6 kV</td><td>Define LV vs. MV; may require xfmr isolation</td></tr>
+          <tr><td><strong>Load type</strong></td><td>Variable torque (pumps/fans) vs. constant torque (compressors, belts, extruders)</td><td>Variable torque allows derating; constant torque requires nominal gauge</td></tr>
+          <tr><td><strong>Load Cycle Profile</strong></td><td>% permissible overload (110% / 150% for 60 s)</td><td>Determine if the next size is required</td></tr>
+          <tr><td><strong>Topology required</strong></td><td>VSI 2L, NPC 3L, AFE, Multi-D</td><td>Defines THD level, regeneration and cost</td></tr>
+          <tr><td><strong>Installation altitude</strong></td><td>AMSL (m n.m.)</td><td>Derating −1%/100 m over 1 000 m</td></tr>
+          <tr><td><strong>Ambient temperature</strong></td><td>Max. 40°C standard; derating −1.5%/°C over 40°C</td><td>May require larger chassis or additional forced ventilation</td></tr>
+          <tr><td><strong>Communication protocol</strong></td><td>Modbus RTU/TCP, Profibus DP, EtherNet/IP, PROFINET, DeviceNet</td><td>Defines compatibility with existing PLC/SCADA</td></tr>
+          <tr><td><strong>Degree of protection</strong></td><td>IP20 (electrical room) / IP54–IP66 (field, ATEX zone)</td><td>Impact on thermal dissipation and cabinet size</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- DERATING -->
+  <section class="section section--alt" id="derating" aria-labelledby="derateTitle">
+    <div class="container">
+      <span class="sec-label">Site conditions</span>
+      <h2 class="sec-h2" id="derateTitle">Derating by altitude and temperature</h2>
+      <p class="sec-lead">Mexico has altitudes that significantly impact the current capacity of a drive. Applying the correct factors from the design avoids overtemperature and premature breakdowns.</p>
+      <div class="derate-grid">
+        <div class="derate-card">
+          <p class="derate-card__title"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 19.5h19L14 5.8l-3.6 6.4L8.2 9 2.5 19.5Z"/></svg></span> Derating by altitude</p>
+          <p style="font-size:.84rem;color:#4b5563;margin:0 0 12px">Above 1 000 m a.s.l., apply −1% of rated current for every additional 100 m.</p>
+          <div class="tabla-scroll"><table class="derate-table" aria-label="Derating by altitude">
+            <thead><tr><th>Altitude (m a.s.l.)</th><th>Factor</th><th>Reference city</th></tr></thead>
+            <tbody>
+              <tr><td>0&ndash;1&thinsp;000</td><td>1.00 (no derating)</td><td>Veracruz, Tampico</td></tr>
+              <tr><td>1&thinsp;500</td><td>0.95</td><td>Guadalajara</td></tr>
+              <tr><td>2&thinsp;240</td><td>0.88</td><td>Mexico City</td></tr>
+              <tr><td>2&thinsp;500</td><td>0.85</td><td>Toluca</td></tr>
+              <tr><td>3&thinsp;000</td><td>0.80</td><td>Puebla alta / mines</td></tr>
+              <tr><td>4&thinsp;000</td><td>0.70</td><td>High altitude mines</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="derate-card">
+          <p class="derate-card__title"><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 14.6V4.4a2 2 0 1 0-4 0v10.2a4 4 0 1 0 4 0Z"/><path d="M12 8.6v6.6"/></svg></span> Derating by temperature</p>
+          <p style="font-size:.84rem;color:#4b5563;margin:0 0 12px">Base 40°C. Above, apply −1.5% of rated current for each additional degree.</p>
+          <div class="tabla-scroll"><table class="derate-table" aria-label="Derating by temperature">
+            <thead><tr><th>Ambient temperature (°C)</th><th>Factor</th><th>Context</th></tr></thead>
+            <tbody>
+              <tr><td>&le; 40</td><td>1.00 (nominal)</td><td>Electrical heated room</td></tr>
+              <tr><td>45</td><td>0.925</td><td>Technical room without A/C</td></tr>
+              <tr><td>50</td><td>0.85</td><td>Outdoor with direct sun</td></tr>
+              <tr><td>55</td><td>0.775</td><td>Non-ventilated cabinet</td></tr>
+              <tr><td>60</td><td>0.70</td><td>Hot process, oven</td></tr>
+            </tbody>
+          </table></div>
+          <p style="font-size:.8rem;color:#6b7280;margin:10px 0 0">Apply both factors multiplicatively when altitude and temperature exceed their limits simultaneously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROTECCIONES -->
+  <section class="section" id="protecciones" aria-labelledby="protTitle">
+    <div class="container">
+      <span class="sec-label">Protection functions</span>
+      <h2 class="sec-h2" id="protTitle">Integrated Protections (ANSI Designation)</h2>
+      <p class="sec-lead">Modern drives incorporate electronic protections that complement or replace external protection relays, reducing costs and response times.</p>
+      <div class="prot-grid">
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 49</span>
+          <div class="prot-card__body"><p class="prot-card__title">Overtemperature (thermal)</p><p class="prot-card__desc">I²t thermal model of the motor and NTC/PTC sensor in the IGBT. Trip with adjustable pre-alarm.</p></div>
+        </div>
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 51</span>
+          <div class="prot-card__body"><p class="prot-card__title">Outflow overcurrent</p><p class="prot-card__desc">Instantaneous and delayed electronic limitation to protect motor windings and IGBTs.</p></div>
+        </div>
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 46</span>
+          <div class="prot-card__body"><p class="prot-card__title">Phase imbalance</p><p class="prot-card__desc">Detects output current asymmetry greater than the configured threshold; protects against winding failure.</p></div>
+        </div>
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 27</span>
+          <div class="prot-card__body"><p class="prot-card__title">Network underlay</p><p class="prot-card__desc">Trip with hysteresis when Vred falls below the threshold. Automatic reset configurable after replacement.</p></div>
+        </div>
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 59</span>
+          <div class="prot-card__body"><p class="prot-card__title">Overvoltage of DC network / bus</p><p class="prot-card__desc">DC bus monitoring; Activates braking resistor or regenerative mode before overvoltage trip.</p></div>
+        </div>
+        <div class="prot-card">
+          <span class="prot-card__ansi">ANSI 48</span>
+          <div class="prot-card__body"><p class="prot-card__title">Incomplete start / rotor lock</p><p class="prot-card__desc">Detects blocked motor or excessive load during starting; maximum force ramp with time limit.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMUNICACIONES -->
+  <section class="section section--alt" id="comunicaciones" aria-labelledby="commTitle">
+    <div class="container">
+      <span class="sec-label">Industrial integration</span>
+      <h2 class="sec-h2" id="commTitle">Supported communication protocols</h2>
+      <p class="sec-lead">Integration with PLC, DCS and SCADA is critical for process automation. We select drives with the native protocol of the existing control system.</p>
+      <div class="comm-grid">
+        <div class="comm-card">
+          <p class="comm-card__proto">Modbus RTU/TCP</p>
+          <p class="comm-card__desc">Universal RS-485 or Ethernet standard. Compatible with all PLCs on the market. Up to 247 RTU nodes.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">Profibus DP</p>
+          <p class="comm-card__desc">Siemens protocol with wide penetration in the process industry. Up to 12 Mbps, cycle det. &lt;1ms.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">PROFINET</p>
+          <p class="comm-card__desc">Siemens Industrial Ethernet. Real time IRT (&lt;1 ms), ideal for motion axes and CNC machines.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">EtherNet/IP</p>
+          <p class="comm-card__desc">Allen-Bradley/Rockwell protocol. TCP/IP + CIP. Compatible with FactoryTalk and Studio 5000.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">DeviceNet</p>
+          <p class="comm-card__desc">CAN network for compact Rockwell PLCs. Trunk/branch topology, up to 64 nodes.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">BACnet/LON</p>
+          <p class="comm-card__desc">For HVAC systems and building management. Integration with BMS and energy monitoring systems.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">CANopen/DriveProfile</p>
+          <p class="comm-card__desc">Motion applications and process machinery. Axis synchronization with DSP402 profile.</p>
+        </div>
+        <div class="comm-card">
+          <p class="comm-card__proto">OPC-UA/IIoT</p>
+          <p class="comm-card__desc">Direct connectivity to IIoT platforms (Azure IoT Hub, AWS IoT, MindSphere) for process analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARCAS -->
+  <section class="section" id="marcas" aria-labelledby="marcasTitle">
+    <div class="container">
+      <span class="sec-label">Multi-brand supply</span>
+      <h2 class="sec-h2" id="marcasTitle">Manufacturers we work with</h2>
+      <p class="sec-lead">We select the brand based on the process requirements, communication protocol, voltage level and project budget.</p>
+      <div class="marcas-grid">
+        <div class="marca-card">
+          <p class="marca-card__name">ABB</p>
+          <ul class="marca-card__series"><li>ACS180/ACS580</li><li>ACS880 (AFE)</li><li>ACS6000 (MV)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Medium voltage</span><span class="marca-tag">Regenerative</span></div>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">SIEMENS</p>
+          <ul class="marca-card__series"><li>SINAMICS G120 / G130</li><li>SINAMICS S120 (servo)</li><li>SINAMICS GM150 (MV)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Medium voltage</span><span class="marca-tag">Servo</span></div>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Schneider</p>
+          <ul class="marca-card__series"><li>Altivar ATV320</li><li>Altivar Process ATV630</li><li>Altivar 6000 (MV)</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Medium voltage</span><span class="marca-tag">Process</span></div>
+        </div>
+        <div class="marca-card">
+          <p class="marca-card__name">Triol</p>
+          <ul class="marca-card__series"><li>AT24 (LV)</li><li>AT27 (MV Oil&amp;Gas)</li><li>Sensorless vector control</li></ul>
+          <div class="marca-card__tags"><span class="marca-tag">Low voltage</span><span class="marca-tag">Medium voltage</span><span class="marca-tag">Oil &amp; Gas</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORMAS -->
+  <section class="section section--alt" id="normas" aria-labelledby="normasTitle">
+    <div class="container">
+      <span class="sec-label">Regulatory framework</span>
+      <h2 class="sec-h2" id="normasTitle">Reference regulatory framework</h2>
+      <p class="sec-lead">The standards presented are of a <strong>information</strong> The rules applicable to each project — including national standards, requirements of the client or competent authority — are determined and agreed at the basic engineering stage in accordance with the specific requirements of the scope contracted.</p>
+      <div class="normas-grid">
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61800-3</span>
+          <p class="norma-card__text"><strong>EMC for drives.</strong> Defines C1–C4 categories, conducted/radiated emissions limits and immunity requirements. Mandatory for CE Marking.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61800-5</span>
+          <p class="norma-card__text"><strong>Electrical and thermal safety.</strong> Insulation, protections, surface temperature and protective earth requirements.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61800-7</span>
+          <p class="norma-card__text"><strong>Communication profile.</strong> Generic interface for industrial networks (PROFIdrive, CiA402). Facilitates multi-brand integration with PLCs.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEC 61000-3-12</span>
+          <p class="norma-card__text"><strong>Harmonics in MV/LV network &gt;16 A.</strong> Establishes limits of THDi and individual harmonic currents at the point of common connection (PCC).</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">IEEE 519-2022</span>
+          <p class="norma-card__text"><strong>ANSI/IEEE harmonics standard.</strong> Reference in projects for North America. Sets THDv ≤5% and THDi according to short circuit ratio in the PCC.</p>
+        </div>
+        <div class="norma-card">
+          <span class="norma-card__code">UL 508C</span>
+          <p class="norma-card__text"><strong>Power Conversion Equipment.</strong> Required when the project follows NEC (NFPA 70) or the customer requires UL listing for equipment installed in the US or with NFPA code.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">Common doubts about frequency converters</h2>
+      <div class="faq-list">
+        <details class="faq">
+          <summary>How much energy savings does a frequency changer generate?</summary>
+          <div class="faq-body">Thanks to the <strong>law of affinity</strong> (P ∝ n³), reducing the speed of a motor to 80% reduces consumption to 51%. For pumps and fans operating partially loaded, typical savings are <strong>20 to 50%</strong> Regarding valve control or Munner. With a power price of 2.50–3.00 €2.50 – €30.00 €20.00 €50–500 kW engines, the return on investment is usually less than 2 years.</div>
+        </details>
+        <details class="faq">
+          <summary>What rules govern the electromagnetic compatibility of VFDs?</summary>
+          <div class="faq-body"><strong>IEC 61800-3</strong> defines EMC requirements for variable speed drives. It sets categories C1–C4 according to the environment (residential vs. industrial) and the emission limits driven and radiated. For current harmonics, it applies <strong>IEC 61000-3-12</strong> (equipment &gt;16 A) e <strong>IEEE 519-2022</strong> when the project follows NFPA/Aussi codes.</div>
+        </details>
+        <details class="faq">
+          <summary>What is an AFE-type VFD and when should it be used?</summary>
+          <div class="faq-body">A <strong>Active Front End (AFE)</strong> uses an active rectifier bridge (IGBT) instead of diodes, achieving <strong>THDi &lt;3%</strong> It is suitable for applications with frequent braking (grills, elevators, presses) or where the quality of energy is critical. It has a cost 30–50% higher than a standard VFD, but it is amortized with the energy savings in braking and the elimination of dissipation resistances.</div>
+        </details>
+        <details class="faq">
+          <summary>How does altitude affect the performance of a variator?</summary>
+          <div class="faq-body">Above 1,000 m a.s.l., less dense air reduces the cooling of the drive. The standard rule is to apply a <strong>derating of −1% of the nominal current per 100 m additional</strong>. In Mexico City (2 240 m) the derating is ~12–15%. Some manufacturers offer special models up to 4,000 m without derating through reinforced ventilation design or overcalibrated cabinets. VMS Energy calculates the combined altitude + temperature factor for each project.</div>
+        </details>
+        <details class="faq">
+          <summary>Does VMS Energy install variable frequency drives of any brand?</summary>
+          <div class="faq-body">Yes. VMS Energy supplies and installs variable frequency drives <strong>Multi-brand</strong> (ABB ACS, Siemens SINAMICS, Schneider Altivar, Danfoss FC, Triol HV) depending on the process requirements, the required communication protocol and the system voltage level. We also carry out commissioning, PID parameter adjustment and training for the client&#x27;s maintenance personnel.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- cross-link: Triol VMShop -->
+  <section class="section" aria-label="Triol supply in VMShop">
+    <div class="container">
+      <div class="vmshop-callout">
+        <div class="vmshop-callout__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6" stroke="#fff" stroke-width="2" fill="none"/><path d="M16 10a4 4 0 0 1-8 0" stroke="#fff" stroke-width="2" fill="none"/></svg>
+        </div>
+        <div class="vmshop-callout__body">
+          <span class="vmshop-callout__tag">VMShop</span>
+          <p class="vmshop-callout__title">Triol AT24 variants available with direct quote</p>
+          <p class="vmshop-callout__sub">If your project requires a Triol variator, you can apply for a quote directly from VMShop — without bidding, with technical validation included and response within 24 hours.</p>
+        </div>
+        <div class="vmshop-callout__cta">
+          <a class="btn btn--primary" href="lp-triol-variadores.html">View catalogue Triol</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROYECTOS DE REFERENCIA -->
+  <section class="section section--alt" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Reference projects</span>
+      <h2 class="sec-h2" id="refTitle">Installed and commissioned variances</h2>
+      <p class="sec-lead">More than 60 variable frequency drives inspected, rehabilitated or commissioned on offshore platforms, food industry, mining, infrastructure and oil extraction.</p>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">KU-H, AYATSIL and MALOOB-D platforms — Pemex</p>
+          <p class="ref-card__lugar">Active Kumaza, Campeche</p>
+          <p class="ref-card__desc">Commissioning of a 900 hp Robicon Perfect Harmony drive on 4 160 V; technical and visual inspection in the field of 900 and 800 HP Siemens drives; review, evaluation and correction of VDF-08-02; and inspection, component replacement and field testing of the VDF-10-01.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Baker Hughes</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Service, supply, installation and commissioning of fourteen E-Cabinet frequency changers for intemperie.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">AMOCA and MIZTON — Pemex</p>
+          <p class="ref-card__lugar">Tabasco</p>
+          <p class="ref-card__desc">Service, supply, installation and commissioning of eight E-Cabinet frequency changers for intemperie in AMOCA and six in MIZTON.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">SLB</p>
+          <p class="ref-card__lugar">Tabasco and the Caribbean</p>
+          <p class="ref-card__desc">Engineering, supply, installation and commissioning of two Triol brand 1,000 HP medium voltage drives in a NEMA 4X cabinet, and a 75 HP self-supporting drive for oil extraction on land.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Pemex</p>
+          <p class="ref-card__lugar">Tabasco (Outward)</p>
+          <p class="ref-card__desc">Performance evaluation service to six variable frequency drives in application of electro-centrifugal pumping on marine platform.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Cotemar</p>
+          <p class="ref-card__lugar">City of Carmen and Veracruz</p>
+          <p class="ref-card__desc">Supply of six 50, 75 and 200 HP ABB frequency changers for marine platform; installation, interconnection and configuration of three others; and engineering, supply and commissioning of a 300 HP ranger for ground-based oil extraction.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Soft Drinks Bottling Company, Colima</p>
+          <p class="ref-card__lugar">Colima</p>
+          <p class="ref-card__desc">Engineering, supply, installation and commissioning of a 200 HP Triol brand variable speed drive.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Tamazula Sugar Mill</p>
+          <p class="ref-card__lugar">Jalisco</p>
+          <p class="ref-card__desc">Engineering, supply, installation and commissioning of a 300 HP regenerative drive from Schneider Electric; and technical training on ABB ACS880/ACQ580 drives and Rockwell RSLogix 5000/500 controllers.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Mining operation</p>
+          <p class="ref-card__lugar">Durango</p>
+          <p class="ref-card__desc">Supply and commissioning of a Schneider Electric Altivar 980 700 HP variator to move a 900 m water column.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Infrastructure project</p>
+          <p class="ref-card__lugar">State of Mexico</p>
+          <p class="ref-card__desc">Integration and commissioning of twelve NEMA 12 cabinets with Siemens drives and Profinet control via SCADA, for ventilation and extraction jetfans within a tunnel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band" aria-label="Call to action">
+    <div class="container">
+      <h2>Reduce your power consumption with the correct variator!</h2>
+      <p>Share with us the engine data, load profile and site altitude. Our engineers calculate derating, topology and ROI. We will contact you in less than 24 business hours; The study time depends on the scope.</p>
+      <div class="cta-band-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=variadores#ctaForm">Request a quote</a>
+        <a class="btn btn--ghost" href="especialidades.html#inicio">Learn about engineering services</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- STICKY -->
+<div class="sticky-wa" aria-label="WhatsApp">
+  <a href="https://wa.me/523332582234?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20variadores%20de%20frecuencia" aria-label="Contact by WhatsApp" rel="noopener noreferrer" target="_blank">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+<div class="sticky-cta" aria-label="Quote variator">
+  <a href="contacto_cta.html?producto=variadores#ctaForm">Quote variator</a>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Project Catalog | VMS Energy — +220 EPC projects in Mexico and Latam</title>
+  <meta name="description" content="Explore VMS Energy&#x27;s +220 EPC projects in Oil &amp; Gas, automation, energy and more. Filter by sector, technology or location and find a case similar to yours."/>
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style id="nav-submenu-styles-vms">
+  nav{position:relative}
+  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+  nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+  .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+  .nav-item--has-submenu{position:relative}
+  .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+  .submenu{margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+  .nav-item--has-submenu:hover .submenu,
+  .nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+  .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+  .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;text-decoration:none}
+  .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+</style>
+  <style>
+    /* ═══════════════════════════════════════════════════
+       CATÁLOGO DE PROYECTOS — Estilos específicos
+    ═══════════════════════════════════════════════════ */
+    :root {
+
+      --cp-cobalt: var(--concept-primary);
+      --cp-sky:    #0EA5E9;
+
+
+      --cp-text:   #344B63;
+      --shadow-sm: 0 2px 8px rgba(15,47,113,.07);
+      --shadow-md: 0 8px 24px rgba(15,47,113,.11);
+      --shadow-lg: 0 20px 48px rgba(15,47,113,.17);
+    }
+
+    /* ── HERO ── */
+    .cp-hero{
+      background:linear-gradient(135deg,rgba(6,21,43,.88) 0%,rgba(15,39,71,.80) 55%,rgba(13,58,110,.72) 100%),
+                 url('../assets/img/hero_catalogo_proyectos.webp') center/cover no-repeat;
+      position:relative;overflow:hidden;padding:56px 0 52px;
+    }
+    .cp-hero__grid{
+      background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);
+      background-size:32px 32px;position:absolute;inset:0;pointer-events:none;
+    }
+    .cp-hero__eyebrow{
+      display:inline-flex;align-items:center;gap:6px;background:rgba(14,165,233,.15);
+      border:1px solid rgba(14,165,233,.35);border-radius:999px;
+      padding:.3rem .9rem;font-size:.75rem;font-weight:700;
+      color:#7dd3fc;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;
+    }
+    .cp-hero h1{
+      font-size:clamp(26px,3.5vw,42px);font-weight:900;color:#fff;
+      line-height:1.1;letter-spacing:-0.3px;margin:0 0 16px;
+      max-width:640px;
+    }
+    .cp-hero h1 span{color:#38bdf8}
+    .cp-hero__lead{
+      font-size:clamp(15px,2vw,18px);color:#93C5E8;line-height:1.65;
+      max-width:600px;margin:0 0 32px;
+    }
+    .cp-hero__ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .cp-hero__cta--primary{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--concept-primary);color:#fff;font-weight:800;font-size:.95rem;
+      padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;
+      border:2px solid rgba(255,255,255,.2);
+      transition:background .2s,transform .2s,box-shadow .2s;
+    }
+    .cp-hero__cta--primary:hover{background:#1a4f8a;transform:translateY(-2px);box-shadow:0 10px 28px rgba(29,95,164,.4)}
+    .cp-hero__cta--secondary{
+      display:inline-flex;align-items:center;gap:6px;
+      color:#7dd3fc;font-weight:700;font-size:.9rem;
+      padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;
+      border:1.5px solid rgba(125,211,252,.3);
+      transition:border-color .2s,color .2s,background .2s;
+    }
+    .cp-hero__cta--secondary:hover{border-color:#7dd3fc;background:rgba(125,211,252,.08);color:#fff}
+    .cp-hero__stats{
+      display:flex;gap:32px;flex-wrap:wrap;margin-top:52px;
+      padding-top:32px;border-top:1px solid rgba(255,255,255,.1);
+    }
+    .cp-hero__stat-num{font-size:clamp(28px,4vw,42px);font-weight:900;color:#38bdf8;line-height:1}
+    .cp-hero__stat-lbl{font-size:12px;color:#93C5E8;text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+
+    /* ── TRUST BAR ── */
+    .cp-trust{background:#fff;border-bottom:2px solid var(--cp-line);padding:0}
+    .cp-trust__inner{
+      display:grid;grid-template-columns:repeat(4,1fr);
+    }
+    .cp-trust__item{
+      padding:24px 20px;text-align:center;border-right:1px solid var(--cp-line);
+      transition:background .2s;
+    }
+    .cp-trust__item:last-child{border-right:none}
+    .cp-trust__item:hover{background:var(--cp-surface)}
+    .cp-trust__num{
+      font-size:clamp(28px,3.5vw,40px);font-weight:900;color:var(--cp-cobalt);
+      line-height:1;display:block;
+    }
+    .cp-trust__lbl{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-top:4px;display:block}
+
+
+    /* ── BREADCRUMB ── */
+    .cp-breadcrumb{margin-bottom:20px}
+    .cp-breadcrumb ol{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600}
+    .cp-breadcrumb li{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.65)}
+    .cp-breadcrumb li:not(:last-child)::after{content:"/";opacity:.5}
+    .cp-breadcrumb a{color:rgba(255,255,255,.85);text-decoration:none}
+    .cp-breadcrumb a:hover{color:#fff}
+    .cp-breadcrumb [aria-current]{color:#fff}
+    /* ── FEATURED ── */
+    .cp-featured{padding:72px 0 60px;background:var(--cp-surface)}
+    .cp-section-label{
+      display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--cp-cobalt);margin-bottom:12px;
+    }
+    .cp-section-title{font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--cp-navy);margin:0 0 8px}
+    .cp-section-lead{font-size:15px;color:var(--text-muted);margin:0 0 40px;max-width:560px}
+    .cp-featured__grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    }
+    .cp-feat-card{
+      background:#fff;border-radius:16px;overflow:hidden;
+      border:1px solid var(--cp-line);box-shadow:var(--shadow-sm);
+      display:flex;flex-direction:column;
+      transition:box-shadow .22s,transform .22s;
+      border-top:4px solid var(--accent-color,#636A71);
+    }
+    .cp-feat-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+    .cp-feat-card__icon{
+      height:140px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,var(--icon-bg-a,#DBEAFE),var(--icon-bg-b,#EFF6FF));
+      font-size:52px;
+    }
+    .cp-feat-card__body{padding:20px 22px 16px;flex:1;display:flex;flex-direction:column}
+    .cp-feat-card__type{
+      display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.07em;
+      text-transform:uppercase;border-radius:999px;padding:.2rem .7rem;
+      margin-bottom:12px;
+    }
+    .cp-feat-card__title{font-size:1rem;font-weight:800;color:var(--cp-navy);margin:0 0 10px;line-height:1.35}
+    .cp-feat-story{margin:0 0 16px}
+    .cp-feat-story__block{margin-bottom:10px}
+    .cp-feat-story__tag{
+      display:inline-block;font-size:.68rem;font-weight:700;
+      border-radius:4px;padding:.1rem .45rem;margin-bottom:4px;
+    }
+    .cp-feat-story__tag--reto{background:#FEE2E2;color:#B91C1C}
+    .cp-feat-story__tag--sol{background:#DBEAFE;color:#1E40AF}
+    .cp-feat-story__tag--res{background:var(--success-bg);color:var(--vms-green-700)}
+    .cp-feat-story__text{font-size:.82rem;color:#475569;line-height:1.55;margin:0}
+    .cp-feat-card__footer{
+      padding:14px 22px;border-top:1px solid var(--cp-line);
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .cp-feat-card__meta{font-size:.75rem;color:var(--text-muted);display:flex;align-items:center;gap:5px}
+    .cp-feat-card__link{
+      font-size:.78rem;font-weight:700;color:var(--cp-cobalt);
+      text-decoration:none;display:flex;align-items:center;gap:4px;
+      transition:gap .18s;
+    }
+    .cp-feat-card__link:hover{gap:8px}
+    .cp-feat-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px}
+    .cp-tech-tag{
+      font-size:.68rem;font-weight:700;color:#374151;
+      background:#F3F4F6;border-radius:4px;padding:.15rem .45rem;
+    }
+
+    /* ── STICKY FILTER BAR ── */
+    .cp-filterbar{
+      position:sticky;top:0;z-index:30;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--cp-line);
+      box-shadow:0 4px 16px rgba(15,47,113,.08);
+      padding:14px 0;
+    }
+    .cp-filterbar__inner{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .cp-filterbar__search{
+      position:relative;flex:1;min-width:200px;
+    }
+    .cp-filterbar__search svg{
+      position:absolute;left:12px;top:50%;transform:translateY(-50%);
+      width:15px;height:15px;color:var(--text-muted);pointer-events:none;
+    }
+    .cp-filterbar__input{
+      width:100%;padding:9px 14px 9px 36px;
+      border:1.5px solid var(--cp-line);border-radius:10px;
+      font-size:13.5px;color:#10233d;background:var(--cp-surface);
+      outline:none;box-sizing:border-box;
+      transition:border-color .18s,box-shadow .18s;
+    }
+    .cp-filterbar__input:focus{border-color:var(--cp-cobalt);box-shadow:0 0 0 3px rgba(29,95,164,.1)}
+    .cp-filter-group{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+    .cp-filter-btn{
+      padding:7px 13px;border-radius:999px;border:1.5px solid var(--cp-line);
+      background:#fff;font-size:.8rem;font-weight:700;color:#475569;cursor:pointer;
+      transition:all .15s;white-space:nowrap;
+    }
+    .cp-filter-btn:hover{border-color:var(--cp-cobalt);color:var(--cp-cobalt)}
+    .cp-filter-btn.is-active{
+      background:var(--cp-cobalt);color:#fff;border-color:var(--cp-cobalt);
+    }
+    .cp-filter-divider{width:1px;height:28px;background:var(--cp-line);flex-shrink:0}
+    .cp-view-toggle{display:flex;gap:2px;background:var(--cp-surface);border-radius:8px;padding:3px}
+    .cp-view-btn{
+      width:32px;height:32px;border-radius:6px;border:none;background:transparent;
+      cursor:pointer;display:flex;align-items:center;justify-content:center;
+      color:var(--text-muted);transition:background .15s,color .15s;
+    }
+    .cp-view-btn.is-active{background:#fff;color:var(--cp-cobalt);box-shadow:0 1px 4px rgba(15,47,113,.1)}
+    .cp-count-badge{
+      font-size:.75rem;font-weight:700;color:var(--cp-cobalt);
+      background:#EEF4FF;border:1px solid #C9DAF3;
+      border-radius:999px;padding:.2rem .7rem;white-space:nowrap;
+    }
+
+    /* ── FILTER CHIPS ── */
+    .cp-chips{
+      display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+      padding:10px 0 0;
+    }
+    .cp-chips:empty{display:none}
+    .cp-chip{
+      display:inline-flex;align-items:center;gap:5px;
+      background:#EEF4FF;border:1px solid #C9DAF3;border-radius:999px;
+      padding:.22rem .65rem;font-size:.75rem;font-weight:700;color:var(--cp-cobalt);
+    }
+    .cp-chip__x{
+      cursor:pointer;font-size:11px;opacity:.7;line-height:1;
+      transition:opacity .15s;
+    }
+    .cp-chip__x:hover{opacity:1}
+    .cp-chips__clear{
+      font-size:.75rem;color:var(--text-muted);cursor:pointer;text-decoration:underline;
+      transition:color .15s;
+    }
+    .cp-chips__clear:hover{color:var(--cp-navy)}
+
+    /* ── CATALOG SECTION ── */
+    .cp-catalog{padding:48px 0 64px;background:#fff}
+    /* GRID VIEW */
+    .cp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .cp-card{
+      background:#fff;border-radius:14px;border:1px solid var(--cp-line);
+      box-shadow:var(--shadow-sm);
+      display:flex;flex-direction:column;
+      border-left:4px solid var(--card-accent,var(--cp-cobalt));
+      transition:box-shadow .2s,transform .2s;
+      position:relative;overflow:hidden;
+    }
+    .cp-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+    .cp-card__body{padding:16px 18px 12px;flex:1}
+    .cp-card__type{
+      display:inline-block;font-size:.68rem;font-weight:800;
+      border-radius:999px;padding:.18rem .6rem;margin-bottom:10px;
+    }
+    .cp-card__title{
+      font-size:.875rem;font-weight:700;color:#0F2747;
+      margin:0 0 8px;line-height:1.4;
+      display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+    }
+    .cp-card__footer{
+      padding:10px 18px 14px;
+      display:flex;align-items:center;justify-content:space-between;gap:8px;
+    }
+    .cp-card__meta{font-size:.72rem;color:var(--text-muted);display:flex;align-items:center;gap:4px}
+    .cp-card__meta svg{width:11px;height:11px;flex-shrink:0}
+    .cp-card__client{font-size:.72rem;color:#344B63;font-weight:600;text-align:right;max-width:140px;line-height:1.3}
+    /* LIST VIEW */
+    .cp-list{display:none;border-radius:12px;border:1px solid var(--cp-line);overflow:hidden}
+    .cp-list-row{
+      display:grid;grid-template-columns:1fr 130px 110px 160px;
+      padding:12px 16px;border-bottom:1px solid var(--cp-line);
+      align-items:center;gap:12px;transition:background .12s;
+    }
+    .cp-list-row:last-child{border-bottom:none}
+    .cp-list-row:nth-child(even){background:#F9FBFF}
+    .cp-list-row:hover{background:#EEF4FF}
+    .cp-list-head{
+      background:#F0F6FF;border-bottom:2px solid #C9DAF3;
+      font-size:.72rem;font-weight:800;color:#0F2747;
+      text-transform:uppercase;letter-spacing:.06em;
+    }
+    .cp-list-row__trab{font-size:.8rem;color:#10233d;font-weight:600;line-height:1.35}
+    /* Load more */
+    .cp-load-more{
+      text-align:center;margin-top:40px;
+    }
+    .cp-load-btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:.8rem 2rem;border-radius:999px;
+      border:2px solid var(--cp-line);background:#fff;
+      font-size:.9rem;font-weight:700;color:var(--cp-navy);
+      cursor:pointer;transition:all .2s;
+    }
+    .cp-load-btn:hover{border-color:var(--cp-cobalt);color:var(--cp-cobalt);background:#EEF4FF}
+    .cp-load-btn:disabled{opacity:.4;cursor:not-allowed}
+    .cp-empty{
+      grid-column:1/-1;text-align:center;padding:56px 24px;color:var(--text-muted);
+    }
+    .cp-empty svg{width:48px;height:48px;opacity:.4;margin:0 auto 12px;display:block}
+
+    /* ── CTA CONVERSION ── */
+    .cp-cta{
+      background:linear-gradient(135deg,#0f2747 0%,#1a3f72 100%);
+      padding:72px 0;position:relative;overflow:hidden;
+    }
+    .cp-cta::before{
+      content:"";position:absolute;inset:0;
+      background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,.05)'/%3E%3C/svg%3E") repeat;
+    }
+    .cp-cta__inner{
+      display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;
+    }
+    .cp-cta__copy h2{font-size:clamp(24px,3.5vw,38px);font-weight:900;color:#fff;margin:0 0 14px;line-height:1.15}
+    .cp-cta__copy p{color:#93C5E8;font-size:15px;line-height:1.65;margin:0 0 28px}
+    .cp-cta__proof{display:flex;flex-direction:column;gap:10px}
+    .cp-cta__proof-item{display:flex;align-items:center;gap:10px;color:#CBD5E1;font-size:.85rem}
+    .cp-cta__proof-icon{
+      width:32px;height:32px;border-radius:50%;background:rgba(56,189,248,.15);
+      border:1px solid rgba(56,189,248,.3);display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+    }
+    .cp-form{
+      background:#fff;border-radius:20px;padding:32px;
+      box-shadow:0 24px 60px rgba(0,0,0,.25);
+    }
+    .cp-form h3{font-size:1.1rem;font-weight:800;color:var(--cp-navy);margin:0 0 4px}
+    .cp-form__sub{font-size:.82rem;color:var(--text-muted);margin:0 0 22px}
+    .cp-form__field{margin-bottom:14px}
+    .cp-form__label{display:block;font-size:.78rem;font-weight:700;color:#374151;margin-bottom:5px}
+    .cp-form__input{
+      width:100%;padding:10px 14px;border:1.5px solid #DBE6F4;border-radius:10px;
+      font-size:14px;color:#0F2747;background:#F7FBFF;outline:none;box-sizing:border-box;
+      transition:border-color .18s;
+    }
+    .cp-form__input:focus{border-color:var(--cp-cobalt);background:#fff}
+    .cp-form__input--ta{resize:vertical;min-height:90px}
+    .cp-form__submit{
+      width:100%;padding:12px;border-radius:999px;border:none;
+      background:linear-gradient(135deg,var(--cp-cobalt),#1a4f8a);
+      color:#fff;font-size:.95rem;font-weight:800;cursor:pointer;
+      transition:filter .2s,transform .2s;margin-top:4px;
+    }
+    .cp-form__submit:hover{filter:brightness(1.08);transform:translateY(-1px)}
+    .cp-form__note{font-size:.7rem;color:#9CA3AF;text-align:center;margin-top:8px}
+
+    /* ── CLIENT LOGOS ── */
+    .cp-clients{padding:52px 0;background:var(--cp-surface)}
+    .cp-clients__title{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);text-align:center;margin-bottom:28px}
+    .cp-clients__track{
+      display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;
+    }
+    .cp-logo-pill{
+      padding:8px 20px;border-radius:999px;
+      border:1.5px solid var(--cp-line);background:#fff;
+      font-size:.78rem;font-weight:800;color:#475569;
+      letter-spacing:.03em;transition:border-color .2s,color .2s,box-shadow .2s;
+    }
+    .cp-logo-pill:hover{border-color:var(--cp-cobalt);color:var(--cp-cobalt);box-shadow:var(--shadow-sm)}
+
+    /* ── BADGE COLORS ── */
+    .badge-epc    {background:#E8F3FF;color:#005190;border:1px solid #BBDBFD}
+    .badge-auto   {background:#F7F2DD;color:#5F4F00;border:1px solid #E3D8AD}
+    .badge-svc    {background:var(--vms-green-100);color:var(--vms-green-700);border:1px solid var(--vms-green-200)}
+    .badge-proj   {background:#F4EFFF;color:#5D3A8A;border:1px solid #DECFF8}
+    .badge-sum    {background:#FFEEE6;color:#853300;border:1px solid #FACCB9}
+    .badge-cap    {background:#DDF8F9;color:#005C5F;border:1px solid #ABE4E6}
+    .badge-cont   {background:#EBF3FB;color:#4A5157;border:1px solid #D1D8E1}
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:1024px){
+      .cp-featured__grid,.cp-grid{grid-template-columns:repeat(2,1fr)}
+      .cp-cta__inner{grid-template-columns:1fr;gap:36px}
+      .cp-trust__inner{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:680px){
+      .cp-featured__grid,.cp-grid{grid-template-columns:1fr}
+      .cp-list-row{grid-template-columns:1fr 100px}
+      .cp-list-row > *:nth-child(3),
+      .cp-list-row > *:nth-child(4){display:none}
+      .cp-trust__inner{grid-template-columns:repeat(2,1fr)}
+      .cp-hero{padding:52px 0 48px}
+      .cp-filterbar__inner{gap:8px}
+      .cp-filter-group{display:none}
+      .cp-filter-mobile-btn{display:flex!important}
+    }
+
+    /* Footer */
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg{fill:var(--concept-primary)}
+    .foot-note{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:12px 0;color:#94a3b8;font-size:13px}
+    @media(max-width:980px){#footer .container{grid-template-columns:1fr 1fr}}
+    @media(max-width:700px){#footer .container{grid-template-columns:1fr}}
+  </style>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://vmsenergy.com/en/proyectos-vms.html"}, {"@type": "ListItem", "position": 3, "name": "Project Catalog", "item": "https://vmsenergy.com/en/catalogo-proyectos.html"}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Project Catalog — VMS Energy", "url": "https://vmsenergy.com/en/catalogo-proyectos.html", "isPartOf": {"@id": "https://vmsenergy.com/en/index.html"}, "description": "Explore VMS Energy's +220 EPC projects in Oil & Gas, automation, energy and more. Filter by sector, technology or location and find a case similar to yours."}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/catalogo-proyectos.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/catalogo-proyectos.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/catalogo-proyectos.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/catalogo-proyectos.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ══════════════════════════════════════════════════
+     A. HERO
+══════════════════════════════════════════════════ -->
+<section class="cp-hero" aria-labelledby="cpHeroTitle">
+  <div class="cp-hero__grid" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+
+    <!-- Breadcrumb -->
+    <nav class="cp-breadcrumb" aria-label="Navigation route">
+      <ol>
+        <li><a href="proyectos-vms.html">Projects</a></li>
+        <li aria-current="page">Catalog</li>
+      </ol>
+    </nav>
+
+    <h1 id="cpHeroTitle">EPC project catalog</h1>
+    <p class="cp-hero__lead">
+      +220 projects in Oil &amp; Gas, automation, renewable energy and electrical infrastructure. Filter by type of service or sector and find the case most similar to your challenge.
+    </p>
+    <div class="cp-hero__ctas">
+      <a href="#catalogo" class="cp-hero__cta--primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Explore projects
+      </a>
+      <a href="#solicitar" class="cp-hero__cta--secondary">
+        Project similar to yours?
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="cp-hero__stats">
+      <div>
+        <span class="cp-hero__stat-num" data-count="220" data-suffix="+">0+</span>
+        <div class="cp-hero__stat-lbl">Projects executed</div>
+      </div>
+      <div>
+        <span class="cp-hero__stat-num" data-count="18">0</span>
+        <div class="cp-hero__stat-lbl">Years of operation</div>
+      </div>
+      <div>
+        <span class="cp-hero__stat-num" data-count="6">0</span>
+        <div class="cp-hero__stat-lbl">Industrial sectors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     B. TRUST BAR
+══════════════════════════════════════════════════ -->
+<div class="cp-trust" aria-label="Trajectory metrics">
+  <div class="container cp-trust__inner">
+    <div class="cp-trust__item">
+      <span class="cp-trust__num">Pemex</span>
+      <span class="cp-trust__lbl">Main client Oil &amp; Gas</span>
+    </div>
+    <div class="cp-trust__item">
+      <span class="cp-trust__num">CFE</span>
+      <span class="cp-trust__lbl">Electrical generation projects</span>
+    </div>
+    <div class="cp-trust__item">
+      <span class="cp-trust__num">ISO</span>
+      <span class="cp-trust__lbl">9001 · 14001 · 45001 · 37001 · 50001</span>
+    </div>
+    <div class="cp-trust__item">
+      <span class="cp-trust__num">92</span>
+      <span class="cp-trust__lbl">Projects in Campeche offshore</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     C. CASOS DESTACADOS
+══════════════════════════════════════════════════ -->
+<section class="cp-featured" aria-labelledby="featuredTitle">
+  <div class="container">
+    <div class="cp-section-label">Reference cases</div>
+    <h2 class="cp-section-title" id="featuredTitle">Projects that define our capacity</h2>
+    <p class="cp-section-lead">Three cases representing the technical depth and operational scope of VMS Energy.</p>
+    <div class="cp-featured__grid">
+
+      <!-- Card 1: Geotérmica Nayarit -->
+      <article class="cp-feat-card" style="--accent-color:#126BB5;--icon-bg-a:#D4E9FF;--icon-bg-b:#EDF6FF">
+        <div class="cp-feat-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--concept-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="cp-feat-card__body">
+          <span class="cp-feat-card__type badge-epc">EPC Service</span>
+          <h3 class="cp-feat-card__title">Generation control in geothermal plant — Nayarit</h3>
+          <div class="cp-feat-story">
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--reto">The challenge</span>
+              <p class="cp-feat-story__text">Geothermal plant with obsolete controls from the 90s, risk of unscheduled shutdown in continuous operation for CFE.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--sol">The solution</span>
+              <p class="cp-feat-story__text">Complete speed control system with Woodward 505, DSCL-II, Siemens S7 PLC, HMI and Bently Nevada 3500 vibration monitoring.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--res">The result</span>
+              <p class="cp-feat-story__text">Stable synchronization with the CFE grid, new switchboards and a complete installation. Zero unplanned shutdowns in the first year.</p>
+            </div>
+          </div>
+          <div class="cp-feat-tags">
+            <span class="cp-tech-tag">Woodward 505</span>
+            <span class="cp-tech-tag">Siemens S7 PLC</span>
+            <span class="cp-tech-tag">Bently Nevada</span>
+            <span class="cp-tech-tag">DECS-250 Basler</span>
+          </div>
+        </div>
+        <div class="cp-feat-card__footer">
+          <div class="cp-feat-card__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Nayarit — Dragon Group
+          </div>
+          <a href="contacto.html#inicio" class="cp-feat-card__link">
+            Similar project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: BALAM-A Pemex -->
+      <article class="cp-feat-card" style="--accent-color:var(--vms-green-700);--icon-bg-a:var(--success-bg);--icon-bg-b:var(--vms-green-100)">
+        <div class="cp-feat-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0F5E2D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="cp-feat-card__body">
+          <span class="cp-feat-card__type badge-svc">Service</span>
+          <h3 class="cp-feat-card__title">Comprehensive rehabilitation of 14 transformers — BALAM-A Platform</h3>
+          <div class="cp-feat-story">
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--reto">The challenge</span>
+              <p class="cp-feat-story__text">Pemex offshore platform with 14 degraded transformers, without the possibility of stopping production for replacement.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--sol">The solution</span>
+              <p class="cp-feat-story__text">In-situ rehabilitation: inspection, primary electrical tests (Megger, TTR, Power Factor), commissioning and start-up.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--res">The result</span>
+              <p class="cp-feat-story__text">Guaranteed operational continuity. All transformers comply with Lloyd&#x27;s standard for electrical installations on board.</p>
+            </div>
+          </div>
+          <div class="cp-feat-tags">
+            <span class="cp-tech-tag">VLF tests</span>
+            <span class="cp-tech-tag">High voltage 34.5 kV</span>
+            <span class="cp-tech-tag">Norma Lloyd&#x27;s</span>
+            <span class="cp-tech-tag">Offshore</span>
+          </div>
+        </div>
+        <div class="cp-feat-card__footer">
+          <div class="cp-feat-card__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Campeche — Pemex / Cotemar
+          </div>
+          <a href="contacto.html#inicio" class="cp-feat-card__link">
+            Similar project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: CFE Hidroeléctrica -->
+      <article class="cp-feat-card" style="--accent-color:#7852AB;--icon-bg-a:#EBE0FF;--icon-bg-b:#F6F2FF">
+        <div class="cp-feat-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7852AB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="cp-feat-card__body">
+          <span class="cp-feat-card__type badge-proj">Project</span>
+          <h3 class="cp-feat-card__title">Cecilio del Valle Central Hydroelectric Modernization — CFE Chiapas</h3>
+          <div class="cp-feat-story">
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--reto">The challenge</span>
+              <p class="cp-feat-story__text">CFE hydroelectric plant with speed control and obsolete hydraulic system, impacting frequency regulation in the network.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--sol">The solution</span>
+              <p class="cp-feat-story__text">Complete modernization of the Woodward governor + rehabilitation of the intake valve control hydraulic system.</p>
+            </div>
+            <div class="cp-feat-story__block">
+              <span class="cp-feat-story__tag cp-feat-story__tag--res">The result</span>
+              <p class="cp-feat-story__text">Digital speed control and stable dispatch for the CFE network. Project replicated at the Tamazulapan power plant, Oaxaca.</p>
+            </div>
+          </div>
+          <div class="cp-feat-tags">
+            <span class="cp-tech-tag">Woodward</span>
+            <span class="cp-tech-tag">Hydraulic system</span>
+            <span class="cp-tech-tag">CFE</span>
+            <span class="cp-tech-tag">Hydroelectric</span>
+          </div>
+        </div>
+        <div class="cp-feat-card__footer">
+          <div class="cp-feat-card__meta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Chiapas — CFE
+          </div>
+          <a href="contacto.html#inicio" class="cp-feat-card__link">
+            Similar project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     D. STICKY FILTER BAR + E. CATÁLOGO
+══════════════════════════════════════════════════ -->
+<div class="cp-filterbar" id="filterBar" aria-label="Catalog filters">
+  <div class="container">
+    <div class="cp-filterbar__inner">
+      <!-- Search -->
+      <div class="cp-filterbar__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="cp-filterbar__input" type="search" id="cpSearch" placeholder="Search by job, technology or client…" aria-label="Search in catalog"/>
+      </div>
+      <div class="cp-filter-divider" aria-hidden="true"></div>
+      <!-- Tipo filters -->
+      <div class="cp-filter-group" id="tipoFilters" role="group" aria-label="Filter by type">
+        <button class="cp-filter-btn is-active" data-filter-tipo="all">All</button>
+        <button class="cp-filter-btn" data-filter-tipo="Servicio EPC">EPC</button>
+        <button class="cp-filter-btn" data-filter-tipo="Automatización">Automation</button>
+        <button class="cp-filter-btn" data-filter-tipo="Proyecto">Project</button>
+        <button class="cp-filter-btn" data-filter-tipo="Servicio">Service</button>
+        <button class="cp-filter-btn" data-filter-tipo="Suministro">SUPPLY</button>
+      </div>
+      <div class="cp-filter-divider" aria-hidden="true"></div>
+      <!-- Sector filters -->
+      <div class="cp-filter-group" id="sectorFilters" role="group" aria-label="Filter by sector">
+        <button class="cp-filter-btn" data-filter-sector="oil">Oil &amp; Gas</button>
+        <button class="cp-filter-btn" data-filter-sector="cfe">CFE · Energy</button>
+        <button class="cp-filter-btn" data-filter-sector="agro">Agribusiness</button>
+        <button class="cp-filter-btn" data-filter-sector="ind">Industrial</button>
+      </div>
+      <div class="cp-filter-divider" aria-hidden="true"></div>
+      <!-- View toggle -->
+      <div class="cp-view-toggle" role="group" aria-label="View">
+        <button class="cp-view-btn is-active" id="btnGrid" title="Grid View" aria-pressed="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </button>
+        <button class="cp-view-btn" id="btnList" title="List view" aria-pressed="false">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        </button>
+      </div>
+      <!-- Count -->
+      <span class="cp-count-badge" id="cpCount" aria-live="polite">220 projects</span>
+    </div>
+    <!-- Active chips -->
+    <div class="cp-chips" id="cpChips" aria-label="Active filters" role="status"></div>
+  </div>
+</div>
+
+<section class="cp-catalog" id="catalogo" aria-label="Project catalog">
+  <div class="container">
+    <!-- Grid View -->
+    <div class="cp-grid" id="cpGrid" aria-label="Grid projects"></div>
+    <!-- List View -->
+    <div class="cp-list" id="cpList" aria-label="Projects in list">
+      <div class="cp-list-row cp-list-head">
+        <div>Work done</div>
+        <div>Type</div>
+        <div>Location</div>
+        <div>Client</div>
+      </div>
+      <div id="cpListBody"></div>
+    </div>
+    <!-- Load more -->
+    <div class="cp-load-more">
+      <button class="cp-load-btn" id="cpLoadMore">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        Load more projects
+      </button>
+      <div style="font-size:.75rem;color:var(--text-muted);margin-top:8px" id="cpProgress"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     G. CTA CONVERSIÓN
+══════════════════════════════════════════════════ -->
+<section class="cp-cta" id="solicitar" aria-labelledby="ctaTitle">
+  <div class="container cp-cta__inner">
+    <div class="cp-cta__copy">
+      <div class="cp-section-label" style="color:#38BDF8">Conversation without commitment</div>
+      <h2 id="ctaTitle">Your energy challenge?<br>Does it look like any of these?</h2>
+      <p>Tell us briefly what you need. Our technical team identifies if we have relevant experience and proposes a first approach in less than 24 hours.</p>
+      <div class="cp-cta__proof">
+        <div class="cp-cta__proof-item">
+          <div class="cp-cta__proof-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Response in less than 24 business hours
+        </div>
+        <div class="cp-cta__proof-item">
+          <div class="cp-cta__proof-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Specialized engineers, without generic vendors
+        </div>
+        <div class="cp-cta__proof-item">
+          <div class="cp-cta__proof-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          18 years of experience in Mexico, USA and Central America
+        </div>
+      </div>
+    </div>
+    <div class="cp-form" role="form" aria-label="Contact form">
+      <h3>Similar project?</h3>
+      <p class="cp-form__sub">No compromise · Response in &lt;24 h</p>
+      <form action="contacto.html" method="get" novalidate>
+        <div class="cp-form__field">
+          <label class="cp-form__label" for="cf_nombre">Full name *</label>
+          <input class="cp-form__input" type="text" id="cf_nombre" name="nombre" placeholder="Eng. Juan Hernández" required/>
+        </div>
+        <div class="cp-form__field">
+          <label class="cp-form__label" for="cf_empresa">Company</label>
+          <input class="cp-form__input" type="text" id="cf_empresa" name="empresa" placeholder="Pemex, CFE, private company…"/>
+        </div>
+        <div class="cp-form__field">
+          <label class="cp-form__label" for="cf_email">Email *</label>
+          <input class="cp-form__input" type="email" id="cf_email" name="email" placeholder="juan@empresa.com" required/>
+        </div>
+        <div class="cp-form__field">
+          <label class="cp-form__label" for="cf_reto">Describe your challenge briefly *</label>
+          <textarea class="cp-form__input cp-form__input--ta" id="cf_reto" name="mensaje" placeholder="Ex: We need to modernize the speed control system of 3 turbogenerators on the platform…" required></textarea>
+        </div>
+                  <div class="form-consent">
+            <input type="checkbox" id="privacidad-1" name="privacidad" required>
+            <label for="privacidad-1">I have read and accept the <a href="aviso-privacidad.html#sitio-web" target="_blank" rel="noopener">Privacy Notice</a>.</label>
+          </div>
+          <button type="submit" class="cp-form__submit">
+          Request first conversation →
+        </button>
+        <p class="cp-form__note">Your information is confidential.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════
+     H. LOGOS CLIENTES
+══════════════════════════════════════════════════ -->
+<section class="cp-clients" aria-labelledby="clientsTitle">
+  <div class="container">
+    <div class="cp-clients__title" id="clientsTitle">Companies that trust VMS Energy</div>
+    <div class="cp-clients__track">
+      <span class="cp-logo-pill">PEMEX</span>
+      <span class="cp-logo-pill">CFE</span>
+      <span class="cp-logo-pill">COTEMAR</span>
+      <span class="cp-logo-pill">BAKER HUGHES</span>
+      <span class="cp-logo-pill">SLB</span>
+      <span class="cp-logo-pill">IENOVA</span>
+      <span class="cp-logo-pill">PIASA</span>
+      <span class="cp-logo-pill">ERA MINERALS</span>
+      <span class="cp-logo-pill">DRAGON GROUP</span>
+      <span class="cp-logo-pill">COCA-COLA COLIMA</span>
+      <span class="cp-logo-pill">SAIPEM</span>
+      <span class="cp-logo-pill">DIAVAZ</span>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt,#1a4fa0);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Do you have a project similar to the one you are looking for?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">VMS Energy has implemented more than 800 industrial electrical projects in Mexico and Latin America. Tell us about yours.</p>
+      <div class="cta-band__actions on-dark">
+        <a class="btn btn--primary" href="contacto.html#ctaForm">Request proposal</a>
+        <a class="btn btn--ghost" href="proyectos-vms.html">View all projects</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+(function(){
+  'use strict';
+  var PROJECTS_DATA = [{"trab":"Trabajo en turbogenerador 1, se comisiono 1 gobernador 2301D-ST con actuador Valtek 50.","clasi":"Servicio EPC","lugar":"Morelos","cli":"Ingenio Emiliano Zapata"},{"trab":"Trabajo en turbogenerador 3, se comisiono gobernador 2301D-ST con actuador CPC-1.","clasi":"Servicio EPC","lugar":"San Luis Potosí","cli":"Ingenio Plan de Ayala"},{"trab":"Trabajo en turbogenerador 1, cambio de 2301D-ST por un gobernador Woodward 505 Enhanced.","clasi":"Servicio EPC","lugar":"Oaxaca","cli":"Ingenio Adolfo López Mateos"},{"trab":"Desarrollo de la aplicación de monitoreo y control para la medición de los patones de gas húmedo amargo.","clasi":"Automatización","lugar":"Tabasco","cli":"Pemex G.T.D.H"},{"trab":"Elaboración de estudio eléctrico para la ampliación de tres a seis bancos de baterías, con sus respectivos cargadores, bajo las reglas y/o regulaciones de la Casa Clasificadora Lloyd’s para instalaciones eléctricas a bordo.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche / Pemex"},{"trab":"Mantenimiento preventivo y correctivo del sistema de filtrado.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Pride / Pemex"},{"trab":"Levantamientos al sistema de paro por emergencia marca TRICONIX en el complejo Nohoch Alfa y elaboración de propuesta de actualización.","clasi":"Automatización","lugar":"Campeche","cli":"DEMAR"},{"trab":"Levantamientos y respaldos a la instrumentación integrados al sistema de control y monitoreo en la plataforma AK-C1 para el desmantelamiento.","clasi":"Automatización","lugar":"Campeche","cli":"Cotemar"},{"trab":"Nuevo sistema de energía continuo y sistema de sincronización.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Mantenimiento Marino de México/ Pemex"},{"trab":"Instalación y puesta en marcha de sistema fotovoltaico.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Cotemar / Pemex"},{"trab":"Protección por sobre velocidad Turbogenerado.","clasi":"Proyecto","lugar":"Jalisco","cli":"T/G DRESSER - CELANESE"},{"trab":"Inspección técnica y visual en campo al variador de velocidad, marca Siemens, 600 HP.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TB-ACTIVO CANTARELL"},{"trab":"Inspección técnica y visual en campo al variador de velocidad, marca Siemens, 900 HP.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-B, ACTIVO"},{"trab":"Levantamiento en campo, a bordo, con personal técnico especializado, para revisión, inspección, evaluación y diagnóstico de tablero de alumbrado marca Square D.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Levantamiento en campo, a bordo, con personal técnico especializado, para revisión, inspección, evaluación y diagnóstico de variadores de frecuencia de 325 KVA.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Pruebas eléctricas primarias a 6 transformadores defasadores enfriados por aceite y aire. Pruebas eléctricas primarias a 6 transformadores elevadores enfriados por aceite y aire.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Servicio de Sintonización de AVR DECS BASLER.","clasi":"Servicio","lugar":"Jalisco","cli":"Ingenio José Maía Morelos"},{"trab":"Servicio de sintonización de control de válvula de admisión de turbina con CPC.","clasi":"Servicio","lugar":"El Salvador","cli":"Ingenio Central Izalco"},{"trab":"Ingenierías, eléctricas para MT y MT para conexión de subestación a tableros y CCM’s entre otros para Ingenios de grupo Piasa (Tres Valles, Adolfo Lopez Mateos).","clasi":"Servicio","lugar":"Veracruz","cli":"PIASA"},{"trab":"Inspección técnica y visual en campo al variador de velocidad (VDF-01), marca Siemens.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-D, ACTIVO KUMAZA-Pemex"},{"trab":"Inspección técnica y visual en campo al variador de velocidad (VDF-08-03), marca Siemens.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-D, ACTIVO KUMAZA-Pemex"},{"trab":"Inspección técnica y visual en campo al variador de velocidad, marca Siemens, 800HP.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-C, ACTIVO KUMAZA-Pemex"},{"trab":"Inspección técnica, visual, reemplazo de componentes y prueba en campo al variador de velocidad (VDF-10-01), marca Siemens.","clasi":"Servicio","lugar":"Campeche","cli":"MALOOB-D, ACTIVO KUMAZA-Pemex"},{"trab":"Pruebas eléctricas primarias a transformadores principales de distribución de 34.5 kv.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Revisión general del variador de velocidad Robicon Perfect Harmony, marca Siemens.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma Pemex"},{"trab":"Revisión, inspección, evaluación y diagnóstico del transformador de 1500 kva.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TB COTEMAR"},{"trab":"Ajuste, verificación y coordinación de protecciones eléctricas al relevador de media tensión.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM TB COTEMAR"},{"trab":"Depuración en sistema SDMC con RC500- EPLCG, gráficos dinámicos y optimización de la lógica, equipos, licenciamiento y herramientas.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma AKAL-B- COTEMAR"},{"trab":"Pruebas eléctricas integrales (VLF) a los circuitos primarios y secundarios en seccionador; Instalación de codos y cuerpo en T premoldeados para 35kv 200 amp calibre 2/0 al seccionador.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM- COTEMAR"},{"trab":"Pruebas eléctricas integrales (VLF) a los circuitos primarios y secundarios en seccionador; Instalación de codos, interconexión de empalmes, y cuerpo en T premoldeados para 35kv 200 amp calibre 2/0 al seccionador.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM TE- COTEMAR"},{"trab":"Revisión, inspección, evaluación y diagnóstico del transformador de 7,500 kva.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma EK-A-COTEMAR"},{"trab":"Revisión, inspección, evaluación y diagnostico para garantizar el correcto funcionamiento de variador de frecuencia de 829 kva. (3 Servicios)","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM- COTEMAR"},{"trab":"Servicio de mantenimiento especializado a 4 Generadores electricos. Marca: Leroy Somer de 590 Kw, 200 A, 440 v, 1800 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Olimpo"},{"trab":"Servicio de mantenimiento especializado a 4 Generadores eléctricos. Marca: Leroy Somer de 590 Kw, 200 A, 440 v, 1800 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Atlas"},{"trab":"Interconexión, pruebas de funcionamiento,","clasi":"Servicio","lugar":"Campeche","cli":"BALAM-TB - COTEMAR"},{"trab":"Servicio de aseguramiento de flujo con sistema artificial BEC para los pozos de la subdirección de producción de bloques aguas someras.","clasi":"Servicio","lugar":"Campeche","cli":"ZAAP-E -PEMEX"},{"trab":"Servicio de mantenimiento especializado a 2 generadores principales de cola (Generador Síncrono Auto-excitado (brushless)) No.1 y 2 Marca: Standford de 1280 Kw, 2000 A, 440 v, 1800 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Saturno"},{"trab":"Servicio evaluación de desempeño a 6 variadores en aplicación de bombeo electro centrifugo en plataforma marina.","clasi":"Proyecto","lugar":"Tabasco","cli":"PEMEX"},{"trab":"Servicio de mantenimiento especializado a motor eléctrico BOW THUSTER 3. Marca: HYUNDAI de 1050 kW, 690 VCA, 883 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Hercules"},{"trab":"Servicio de mantenimiento especializado a 2 Motores Eléctricos de Bow Thruster No.1 y 2 Marca: HYUNDAI de 1050 kW, 690 VCA, 883 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Atlas"},{"trab":"Servicio de mantenimiento especializado a 2 motores eléctricos de Bow Thruster No.1 y 2 Marca: HYUNDAI de 1050 kW, 690 VCA, 883 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Olimpo"},{"trab":"Servicio de mantenimiento especializado a 4 generadores principales (Generador Síncrono Auto-excitado (brushless)) No.1, 2, 3, y 4 de 590 Kw, 2000 A, 440 v, 1800 RPM.","clasi":"Servicio","lugar":"Veracruz","cli":"Cotemar Embarcación Olimpo"},{"trab":"Suministro de servicios especializados en ingeniería para la implementación del sistema de segregación de cargas a implementarse en el centro de proceso Akal J, especificaciones en las","clasi":"Automatización","lugar":"Campeche","cli":"Diavaz"},{"trab":"Configuración, puesta en servicio del sistema de control basado en PLC Allen Bradley de Rockwell para el control de bomba tipo tornillo TAB1290B.","clasi":"Automatización","lugar":"Campeche","cli":"Pemex"},{"trab":"Suministro de sistema de excitación con equipo DEC25O de Basler Electric.","clasi":"Servicio","lugar":"","cli":"LUFUSSA"},{"trab":"Suministro de un sistema de actuación para turbina de vapor.","clasi":"Proyecto menor","lugar":"Veracruz","cli":"Ingenio Constancia"},{"trab":"Suministro y puesta en marcha de materiales para Incremento de capacidad operativa en subestación eléctrica no. 2 con pruebas eléctricas.","clasi":"Servicio EPC","lugar":"Veracruz","cli":"Ingenio Tres Valles"},{"trab":"Suministro de materiales y mano de obra para la modificación de Electrobus BUS \"C\". Con pruebas eléctricas.","clasi":"Servicio EPC","lugar":"Veracruz","cli":"Ingenio Tres Valles"},{"trab":"Suministro y Pruebas FAT de un CCM.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaCampecheBALAM-A -Pemex"},{"trab":"Suministro y pruebas FAT de transformador capacidad 7.5 MVA","clasi":"Suministro","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Suministro y Pruebas FAT de variadores de frecuencia de 325 kva motores del sistema BEC.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Suministro y pruebas FAT seccionador de 34.5 kv (SECC-01) auto soportado, de nueve (9) vías, doble bus (lazo), con interruptores en vacío de tecnología de dieléctrico sólido.","clasi":"Suministro","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Comisionamiento del variador de velocidad Robicon Perfect Harmony 900hp, 4160v.","clasi":"Servicio","lugar":"Campeche","cli":"KU-H, ACTIVO KUMAZA-Pemex"},{"trab":"Protección de los Arrancadores del CCM1.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-A y EK-A Pemex"},{"trab":"Suministro de paquete acondicionamiento de gas combustible.","clasi":"Proyecto","lugar":"Campeche","cli":"Plataforma NOHOCH-COTEMAR"},{"trab":"Suministro calendator de gas.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma REBOMBEO- PEMEX"},{"trab":"Suministro de 6 variadores de frecuencia de 50, 75, 200 HP, Marca ABB para plataforma marina.","clasi":"Proyecto","lugar":"Campeche","cli":"Cotemar"},{"trab":"Suministro de equipos de control (PLCS, tableros) y elementos hidráulicos (válvulas, bombas, acumuladores) para manto mayor de campo eólico.","clasi":"Proyecto","lugar":"Ciudad de México","cli":"IENOVA"},{"trab":"Suministro de Instalación y pruebas de conos de alivio de 4.16kV.","clasi":"Proyecto","lugar":"Tabasco","cli":"Saipem"},{"trab":"Suministro de paneles solares para sistema de gas y fuego.","clasi":"Proyecto","lugar":"Campeche","cli":"Cotemar"},{"trab":"Suministro de Variadores de Velocidad 200 HP Y 300 HP, 50HZ, 380 VOLTS Schneider Electric para embarcación configuración asiatiatica.","clasi":"Proyecto","lugar":"Campeche","cli":"GS Distribuciones"},{"trab":"Transformador de potencia servicio intemperie, de 03 fases, capacidad 7.5 MVA.","clasi":"Suministro","lugar":"Campeche","cli":"EK-A - COTEMAR"},{"trab":"Adquisición del sistema de calentamiento para la optimización del proceso de deshidratación y desalado en el centro de proceso Akal-J.","clasi":"Proyecto","lugar":"Campeche","cli":"AKAL-J - PEMEX"},{"trab":"Suministro de equipos (HVAC) tipo paquete integral horizontal de 5 T.R. para ambientes específicos de plataformas marinas.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-C7- PEMEX"},{"trab":"Suministro de 4 seccionadadores en sólido dielectrico, 35 kV, 600A.","clasi":"Proyecto","lugar":"","cli":"PEMEX"},{"trab":"Suministro de 4 Transformadores Tipo Seco Encapsulado, 1000kVA 4,16/0,48 kV Gabinete IP66.","clasi":"Proyecto","lugar":"","cli":"PEMEX"},{"trab":"Suministro de E-Cabinet Triol 1000 KVA IP66.","clasi":"Proyecto","lugar":"","cli":"PEMEX"},{"trab":"Suministro de resistencia de puesta a tierra (RPT) 2,400V L/N, 400A, NEMA 3R","clasi":"Proyecto","lugar":"","cli":"PEMEX"},{"trab":"Trabajo en Turbina de vapor de Juego de cuchillas 1, instalación de 2301D-ST (antes TG1). Suministro y comisionamiento con tablero de control y actuador VALTEK 25","clasi":"Servicio EPC","lugar":"Oaxaca","cli":"Ingenio Adolfo López Mateos"},{"trab":"Trabajo en turbogenerador 2, comisionamiento de un gobernador Woodward 505 y se suministró e instaló un actuador VALTEK 50.","clasi":"Servicio EPC","lugar":"Tabasco","cli":"Ingenio Santa Rosalía"},{"trab":"Elaboración de conos de alivio y prueba de cables de potencia en 4.16 kv. Elaboración de terminales / Mangas o conos de alivio, conexionado y torque, resistencia de aislamiento y prueba de alto potencial.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche/ Pemex"},{"trab":"Trabajo en PLANTA DE FUERZA, se repararon 2 gobernadores mecánico PGPL y se comisiono 1 en turbogenerador TG1 de 5MW.","clasi":"Servicio","lugar":"Estado de México","cli":"Papeles Ultra"},{"trab":"Construcción del tablero de control para la medición de los patines de gas húmedo amargo.","clasi":"Automatización","lugar":"Tabasco","cli":"Pemex G.T.D.H"},{"trab":"Integración de señales al sistema de monitoreo y control de Praxis.","clasi":"Automatización","lugar":"Campeche","cli":"Cotemar"},{"trab":"Servicio mecánico a turbina, balanceo dinámico y pruebas alavés y flecha.","clasi":"Servicio","lugar":"Jalisco","cli":"Ingenio Tamazula"},{"trab":"Instalación y prueba; Pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a tableros de distribución Metal Encloused y centro de control de motores, Schneider Electric.","clasi":"Proyecto","lugar":"Campeche","cli":"Plataforma MALOOB A - Pemex"},{"trab":"Migración de equipos Woodward de sincronía (MSCLC2 con DECS20).","clasi":"Servicio","lugar":"Guatemala","cli":"Ingenio Santa Ana"},{"trab":"Construcción de Subestación Eléctrica.","clasi":"Servicio","lugar":"San Luis Potosí","cli":"PIASA"},{"trab":"Elaboración, instalación e interconexión de terminales en media tensión para los circuitos de fuerza del sistema de generación.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Instalación, interconexión, configuración, pruebas de funcionamiento, puesta en operación y pruebas de desempeño de variador de frecuencia VDF-01, 4160volts.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TB COTEMAR"},{"trab":"Revisión, evaluación, diagnóstico y corrección del variador de velocidad VDF-08-02.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-A ACTIVO KUMAZA -Pemex"},{"trab":"Servicio de mantenimiento especializado a motor tipo jaula de ardilla marca: HYUNDAI 2560 HP.","clasi":"Proyecto","lugar":"Jalisco","cli":"Planta de Nitrógeno Cantarell (LINDE) Villahermosa"},{"trab":"Servicio de mantenimiento especializado a motor tipo jaula de ardilla marca: HYUNDAI 600 HP.","clasi":"Proyecto","lugar":"Jalisco","cli":"Planta de Nitrógeno Cantarell (LINDE) Villahermosa"},{"trab":"Suministro, instalación, de refacciones para la rehabilitación de sección con interruptor ALS 5315 int de enlace de tablero metal-clad.","clasi":"Proyecto","lugar":"Jalisco","cli":"CFE Transmisión"},{"trab":"Suministro, instalación, de refacciones para la rehabilitación de sección con interruptor ALS 56-235 int de enlace de tablero metal-clad.","clasi":"Proyecto","lugar":"Jalisco","cli":"CFE Transmisión"},{"trab":"Trabajos de preparativos, instalación, pruebas hipot e interconexión de terminales termo contráctiles de conos de alivio para 5kv.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Ajuste y configuración de 4 arrancadores suaves marca ABB 100 HP.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM A y TD COTEMAR"},{"trab":"Habilitar la señal eléctrica de disparo en interruptor de seccionador.","clasi":"Servicio","lugar":"Campeche","cli":"EK-A- COTEMAR"},{"trab":"Instalación e interconexión con personal técnico especializado de arreglo para suministro eléctrico de fuente de alimentación conmutada 24 vcd y módulo de redundancia para el energizado de las solenoides y transmisor de posición para la válvula pv-3038 ubicada en la plataforma Akal-C2.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma AKAL-C2 PERFORACION COTEMAR"},{"trab":"Instalación, interconexión y configuración de 03 variadores de frecuencia.","clasi":"Servicio","lugar":"Campeche","cli":"COTEMAR"},{"trab":"Interconexión, configuración, integración, pruebas preoperacionales sistema SDMC marca honeywell con desplegados gráficos.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-B- COTEMAR"},{"trab":"Instalación y configuración de lámparas de señalización en el centro de proceso.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-J - PEMEX"},{"trab":"Instalación, interconexión, configuración, pruebas de funcionamiento, puesta en operación y pruebas de desempeño del sistema de fuerza interrumpible.","clasi":"Servicio","lugar":"Campeche","cli":"EK-A - COTEMAR"},{"trab":"Servicio de canalización de cableado de MT desde variador a tablero de distribución en plataforma marina.","clasi":"Proyecto","lugar":"Tabasco","cli":"Pemex"},{"trab":"Servicio de canalización y cableado para una bomba electro centrifuga en plataforma marina.","clasi":"Proyecto","lugar":"Tabasco","cli":"Pemex"},{"trab":"Trabajos de adecuación, instalación, además de la conexión de señales de control y medición de los relevadores de protecciones de generador para los turbogeneradores TG-01 y TG-02.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-J3 - PEMEX"},{"trab":"Servicio de inspección y mantenimiento General de grúa AMCLYDE 5500.","clasi":"Servicio","lugar":"Campeche","cli":"ZAAP-C PEMEX"},{"trab":"Suministro e instalación de 1250 kva de bombeo para Oil & Gas.","clasi":"Proyecto","lugar":"Guatemala","cli":"Baker Hughes"},{"trab":"Contrato de Rehabilitación integral de transformadores de potencia y distribución. Numero de contrato: 648814801","clasi":"Contrato","lugar":"","cli":"PEMEX"},{"trab":"Asesoría, suministro, comisionamiento de tablero de distribución de carga eléctrica para la nueva planta eléctrica, incluyendo sincronización con CFE, importación y exportación.","clasi":"Servicio EPC","lugar":"Veracruz","cli":"Eurocontrol Electric Ingenio San Nicolás"},{"trab":"Fabricación, Suministro, Pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a un tablero de transferencia eléctrica automática formada por 11 interruptores de 3200 Amperes. Fabricación, Suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a un CCM montaje removible de bus principal de 600 Ampbus derivado de 30 Amperes, en 480 Volts, UL con comunicación Profibus, una pantalla de visualización de estado de las combinaciones de arrancadores, de los interruptores en módulos removibles","clasi":"Servicio EPC","lugar":"Campeche","cli":"Servicios Marítimos de Campeche / Pemex"},{"trab":"Trabajo en turbogenerador NEB TG1, suministro, instalación y comisionamiento de un gobernador Woodward 505 y se adaptó un nuevo actuador UG40.","clasi":"Servicio EPC","lugar":"Michoacán","cli":"Ingenio Santa Clara"},{"trab":"Actualización del Sistema de bomba de condensado / CFE Mérida II.","clasi":"Servicio EPC","lugar":"Yucatán","cli":"CFE"},{"trab":"Comisionamiento de transformador de potencia de 1500 kva. Prueba de resistencia de aislamiento (Megger). Prueba de resistencia óhmica a devanados. Prueba de Factor de potencia. Prueba de relación de transformación TTR. Pruebas en marcha y pruebas de desempeño.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche/ Pemex"},{"trab":"Fabricación, suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas a tablero para acoplar a un sistema existente, con transferencia automática por 9 interruptores 2000 Amperes UL, tiene integrado un sistema de monitoreo de puntos calientes visualizados mediante una pantalla. Sistema Profibus vinculado con SCADA de control.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Servicios Marítimos de Campeche/ Pemex"},{"trab":"Fabricación, suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a Seccionador de 5 interruptores de 600 Amperes en 34.5kV y relevadores SEL 751, UL.. Fabricación, suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a 2 transformadores de 3500 KVA en 34.5kV. Fabricación, suministro, pruebas eléctrica preoperatorias, puesta en marcha y pruebas de desempeño a dos resistencias de puesta a tierra para transformador de 3500 KVA en 34.5 kV.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Servicios Marítimos de Campeche/ Pemex"},{"trab":"Modernización del control de velocidad de turbina y planta de generación.","clasi":"Servicio EPC","lugar":"Michoacán","cli":"Ingenio Santa Clara"},{"trab":"Actualización del sistema de filtrado y centrifugado.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Dragados / Pemex"},{"trab":"Actualización del Sistema eléctrico de distribución.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Cotemar /Pemex"},{"trab":"Configuración, puesta en servicio del sistema de control basado en PLC Allen Bradley de Rockwell para el control de la Bomba tipo tornillo TAB1290A.","clasi":"Automatización","lugar":"Campeche","cli":"Pemex"},{"trab":"Desarrollo del nuevo sistema de control de generación en planta geotérmica, sincronización con CFE, importación y exportación, Sistema de Vibraciones, incluyendo ingeniería, suministro, instalación y puesta en marcha con los siguientes equipos 505, DSLC, MSCL, PROTECH de Woodward, PLC S7 Y HMI Siemens, 3500 de Bently Nevada, DECS 250 de Basler Electric, adicional se entregaron tableros de control y se rehabilitaron tableros eléctricos y se hicieron servicios de cableado y pruebas eléctricas a instalación y transformador de potencia.","clasi":"Servicio EPC","lugar":"Nayarit","cli":"Grupo Dragón"},{"trab":"Fabricación, suministro, pruebas eléctricas preoperatorias, de un sistema fotovoltaico, incorporado por: arreglo fotovoltaico, unidad de control de carga, inversor de corriente, banco de bateras, tablero de distribución.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche / Pemex"},{"trab":"Modernización de control de velocidad de una turbina de un molino con PEAK 150.","clasi":"Servicio EPC","lugar":"Morelos","cli":"Ingenio La Abeja"},{"trab":"Suministro, instalación, configuración y puesta en marcha de equipo DSCL- 2 para sistema de generación con 5 máquinas Wartsilla 3000 Kw.","clasi":"Proyecto","lugar":"Campeche","cli":"PSS. CHEMUL"},{"trab":"Suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a un UPS 10 KVA y transformador acondicionador de línea con Banco de baterías de 295 Ah.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche / Pemex"},{"trab":"Actualización del sistema de control de 2 turbinas de gas.","clasi":"Servicio EPC","lugar":"Campeche","cli":"Pemex"},{"trab":"Modernización del control de velocidad para turbina de vapor en ingenio con Peak 150 y actuador PG - PL de Woodward.","clasi":"Proyecto","lugar":"Morelos","cli":"Ingenio Casasano"},{"trab":"Modernización del sistema de transferencia eléctrica de planta de emergencia.","clasi":"Proyecto","lugar":"Ciudad de México","cli":"Aeropuerto y servicios auxiliares"},{"trab":"Pruebas y calibración de relevadores de potencia en planta eléctrica.","clasi":"Servicio","lugar":"Jalisco","cli":"Biopapel Atenquique"},{"trab":"Suministro, calibración y puesta en marcha de gobernadores electrónicos de velocidad 2301 y 505 Woodwar.","clasi":"Servicio","lugar":"Campeche","cli":"Ingenio La Joya"},{"trab":"Suministro, pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a un UPS 10 KVA y transformador acondicionador de línea con Banco de baterías de 295 Ah.","clasi":"Servicio","lugar":"Campeche","cli":"Servicios Marítimos de Campeche / Pemex"},{"trab":"Ingeniera, instalación y puesta en marcha de equipos DSCL II Y MSCL marca Woodward para sincronización de 4 turbogeneradores, así como un sistema de monitoreo de vibración.","clasi":"Proyecto","lugar":"Guatemala","cli":"Ingenio Santa Ana"},{"trab":"Ingeniería, suministro y puesta en marcha de celda de sincronía del sistema de cogeneración. Con los equipos MSCL II, MSCLII y DECS250 en tablero de control.","clasi":"Proyecto","lugar":"Oaxaca","cli":"Ingenio Adolfo López Mateos"},{"trab":"Modernización del sistema de control de velocidad con gobernador electrónico 505 de Woodward.","clasi":"Servicio","lugar":"Morelos","cli":"Ingenio Emiliano Zapata"},{"trab":"Modernización del sistema de excitación con DECS250 para Motor Wärtsilä 38.","clasi":"Proyecto","lugar":"","cli":"Lufussa -Pavana"},{"trab":"Pruebas eléctricas, puesta en marcha a subestación eléctrica integrada por tableros de distribución Metal Clad Schneider Electric en MT. UPS 10KVA y cargador de baterías de 100 Amp. Instalación, pruebas y puesta en marcha a transformador de 1500 KVA.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma MALOOB D AAP C – ZAAP B - Pemex"},{"trab":"Pruebas eléctricas, puesta en marcha a subestación eléctrica integrada por tableros de distribución Metal Clad, transformador de 1500 KVA y UPS.","clasi":"Servicio","lugar":"Campeche","cli":"MALOOB D Pemex"},{"trab":"Pruebas eléctricas, puesta en marcha y a subestación eléctrica integrada por tableros de distribución Metal Clad, transformador de 1000 KVA y UPS.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma ZAAP E - Pemex"},{"trab":"Suministro y puesta en marcha de materiales para incremento de capacidad operativa en subestación eléctrica no. 5, 4160 Volts. Con pruebas eléctricas.","clasi":"Servicio EPC","lugar":"Veracruz","cli":"Ingenio Tres Valles"},{"trab":"Suministro, instalación y pruebas de: Interruptor principal 800 Amperes en 4160 Volts tipo Metal Clad, Mc. Siemens que alimenta un transformador en resina epóxica 1500 KVA en 4160 /480 Volts, y su resistencia de puesta a tierra, para proyecto de enlace eléctrico en media tensión y baja tensión en centro de proceso Marino; Pruebas eléctricas preoperatorias, puesta en marcha y pruebas de desempeño a subestación eléctrica, integrada por tableros de distribución Metal Clad 4160 V.","clasi":"Servicio","lugar":"Campeche","cli":"Campeche Litoral-A. -Pemex"},{"trab":"Instalación, interconexión, pruebas de funcionamiento, puesta en operación y pruebas de desempeño de transformador capacidad 7.5 MVA.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Modernización del sistema de control de velocidad con 505 de Woodward.","clasi":"Servicio","lugar":"Morelos","cli":"IMasegosa / Ingenio Emiliano Zapata"},{"trab":"Suministro, instalación, pruebas y puesta en operación de un seccionador tripolar de cinco vías/cinco interruptores en SF6 para uso en intemperie, 34.5 KV.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TD- Pemex"},{"trab":"Suministro, Instalación, Pruebas y Puesta en Operación de Un Variador de Frecuencia, de 624 KVA, NEMA 4.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TD- Pemex"},{"trab":"Suministro, instalación, pruebas y puesta en operación de una unidad ininterrumpible de energía (UPS) 10 KVA.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-TD- Pemex"},{"trab":"Adecuación de ingeniería, instalación, interconexión, pruebas y puesta en operación de arreglo en el CCM-02.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Diseño, suministro, construcción, instalación y puesta en marcha de un tablero tipo CCM (BT) para industria Minera.","clasi":"Proyecto","lugar":"Jalisco","cli":"Era Minerals"},{"trab":"Fabricación de bases para gobernador de velocidad, mantenimiento y puesta en operación.","clasi":"Proyecto","lugar":"Jalisco","cli":"Ingenio de Autlán"},{"trab":"Inspección técnica, visual, reemplazo de componentes y prueba en campo al variador de velocidad (VDF-10-01), marca Siemens.","clasi":"Servicio","lugar":"Campeche","cli":"MALOOB-D, ACTIVO KUMAZA-Pemex"},{"trab":"Instalación, interconexión, configuración, pruebas de funcionamiento, puesta en operación y pruebas de desempeño a seccionador de 34.5kv de 9 vías.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Pruebas de funcionamiento, puesta en operación y pruebas de desempeño de transformador, de 03 fases, capacidad 1500 kva.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma EK-A- Pemex"},{"trab":"Rehabilitación con personal técnico especializado de 2 variadores de frecuencia, ide 325 kva.","clasi":"Servicio","lugar":"Campeche","cli":"PlataformaBALAM-A -Pemex"},{"trab":"Rehabilitación de 14 transformadores, en la plataforma BALAM-A.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM-A-Pemex"},{"trab":"Rehabilitación y puesta en operación de cuarto de control BEC para 10 variadores.","clasi":"Servicio","lugar":"Campeche","cli":"AYATSIL-C, ACTIVO KUMAZA- PEMEX"},{"trab":"Servicio de mantenimiento, instalación y puesta en marcha de gobernadores de velocidad en ingenio.","clasi":"Proyecto","lugar":"Jalisco","cli":"Tamazula"},{"trab":"Comisionamiento, interconexión, integración, configuración, pruebas de funcionamiento y puesta en operación de válvula de control pv-3038 de 10\" diam. clase 600 libras y de transmisor indicador de presión pv-3038b.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma AKAL-C2- COTEMAR"},{"trab":"Ingeniería, suministro, instalación y Canalización de Cable Media Tensión 4.1 kV de tablero de distribución al generador.","clasi":"Proyecto","lugar":"Jalisco","cli":"Grupo Sáenz (Tamazula)"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de CCMS (CA|CD) para la central Chankanaab - Cozumel.","clasi":"Proyecto","lugar":"Quintana Roo","cli":"CFE"},{"trab":"Instalación, interconexión configuración, pruebas de funcionamiento, pruebas de desempeño y puesta en operación de variador de frecuencia.","clasi":"Servicio","lugar":"Campeche","cli":"Plataforma BALAM TA y TB COTEMAR"},{"trab":"Modernización de control de velocidad Woodward y sistema hidráulico de la central Cecilio del Valle.","clasi":"Proyecto","lugar":"Chiapas","cli":"CFE"},{"trab":"Modernización de control de velocidad Woodward y sistema hidráulico de la central Tamazulapan.","clasi":"Proyecto","lugar":"Oaxaca","cli":"CFE"},{"trab":"Suministro, instalación, pruebas y puesta en servicio de HVX Schnedier electric para sección de metal clad.","clasi":"Proyecto","lugar":"Jalisco","cli":"CFE"},{"trab":"Actualización de estudios eléctricos para flujos de carga, coordinación de protecciones y cortocircuito, con ajustes y pruebas de disparo de las protecciones eléctricas.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-B1 - COTEMAR"},{"trab":"Asistencia técnica para la instalación, interconexión, pruebas de funcionamiento y puesta en operación de interruptor marca Eaton.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-G - COTEMAR"},{"trab":"Instalación y puesta en operación de la IHM en VDF.","clasi":"Servicio","lugar":"Campeche","cli":"BALAM-TB - COTEMAR"},{"trab":"Rehabilitación de transformador defasador, 500 KVA y transformador elevador 500 KVA.","clasi":"Servicio","lugar":"Campeche","cli":"BALAM-TB - COTEMAR"},{"trab":"Actualización de estudio eléctrico de coordinación de protecciones y corto circuito del sistema de generación y distribución eléctrica.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-B- COTEMAR"},{"trab":"Actualización de estudio eléctrico de coordinación de protecciones y corto circuito del sistema de generación y distribución eléctrica.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-G- COTEMAR"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de 2 VFD media tension 1000HP, marca TRIOL, Nema 4X.","clasi":"Proyecto","lugar":"Tabasco","cli":"Slb"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de UPS de 5KVA trifásico para proyecto plataforma marina.","clasi":"Proyecto","lugar":"Campeche","cli":"Cotemar"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de Variador auto soportado de 75 HP para extracción de petróleo en tierra.","clasi":"Proyecto","lugar":"","cli":"Slb"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de Variador de velocidad de 200 HP TRIOL","clasi":"Proyecto","lugar":"Colima","cli":"Coca-Cola, Embotelladora de Colima"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha tableros de distribución media tensión 4.1 kV.","clasi":"Proyecto","lugar":"Tabasco","cli":"Slb"},{"trab":"Ingeniería, suministro, instalación y puesta enmarcha de Variador de 300 HP para extracción de petróleo en campo en tierra.","clasi":"Proyecto","lugar":"Veracruz","cli":"COTEMAR"},{"trab":"Instalación, interconexión, configuración, pruebas de funcionamiento, puesta en operación y pruebas de desempeño de variadores de frecuencia.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-B Y G - COTEMAR"},{"trab":"Interconexión, integración, configuración, pruebas de funcionamiento y puesta deseñales de proceso y señales de comunicación modbus en el sistema de control distribuido SDMC tps Honeywell","clasi":"Suministro","lugar":"Campeche","cli":"AKAL-G- PERFORACION- COTEMAR"},{"trab":"Servicio de mantenimiento, instalación y puesta en marcha de gobernadores de velocidad PGD Woodward en embarcación.","clasi":"Proyecto","lugar":"Veracruz","cli":"Embarcación China"},{"trab":"Servicio de inspección, modernización y mantenimiento mayor a 4 grúas tipo puente con capacidad de 250 toneladas.","clasi":"Servicio","lugar":"Chiapas","cli":"CH Angostura"},{"trab":"Servicio, suministro e instalación y puesta en marcha de 14 variadores de frecuencia E-Cabinet para interperie.","clasi":"Servicio","lugar":"Campeche","cli":"Baker Hughes"},{"trab":"Servicio, suministro e instalación y puesta en marcha de 6 variadores de frecuencia E-Cabinet para interperie.","clasi":"Servicio","lugar":"Tabasco","cli":"MIZTON Pemex"},{"trab":"Servicio, suministro e instalación y puesta en marcha de 8 variadores de frecuencia E-Cabinet para interperie.","clasi":"Servicio","lugar":"Tabasco","cli":"AMOCA Pemex"},{"trab":"Sustitución de los circuitos de fuerza del Módulo1, incluyendo el desmantelamiento de los circuitos eléctricos de fuerza; Así como el suministro e instalación de cable, incluyendo cajas de conexiones y accesorios eléctricos para interconexiones.","clasi":"Servicio","lugar":"Campeche","cli":"AKAL-C7- PEMEX"},{"trab":"Ingeniería, suministro, instalación y puesta en marcha de Variador regenerativo 300 HP SCHNEIDER ELECTRIC.","clasi":"Proyecto","lugar":"Jalisco","cli":"Ingenio Tamazula"},{"trab":"Capacitación Gobernadores 505 y 2301 de Woodward.","clasi":"Capacitación Interna","lugar":"Jalisco","cli":"VMS ENERGY"},{"trab":"Capacitación DSCL-MSCL–II, EGCP-3 de Woodward y DECS 250 Basler Electric.","clasi":"Capacitación","lugar":"Nayarit","cli":"Grupo Dragón"},{"trab":"Capacitación en UPS y cargadores.","clasi":"Capacitación","lugar":"Campeche","cli":"Pemex"},{"trab":"Capacitación en 505 / 505-XT y DSCL-II y MSCL–II.","clasi":"Capacitación Interna","lugar":"Jalisco","cli":"VMS ENERGY"},{"trab":"Capacitación de Variadores ABB ACS880/ACQ580 y PLCS Rockwell RS LOGIX 5000/500.","clasi":"Capacitación","lugar":"Jalisco","cli":"Ingenio de Tamazula"},{"trab":"Diagnóstico, reparación, mantenimiento, sustitución e instalación de componentes y puesta en operación de 7 elevadores de pasajeros (OTIS, KONE Sabiem y Alamex) en hospitales y oficinas centrales.","clasi":"Servicio","lugar":"Durango","cli":"Servicios de Salud del Estado de Durango"}];
+  var PAGE_SIZE = 24;
+  var currentPage = 1;
+  var activeFilters = { tipo: 'all', sector: null, q: '' };
+  var isListView = false;
+
+  // Badge helpers
+  function clasiClass(c) {
+    c = (c||'').toLowerCase();
+    if(c.indexOf('epc')>-1) return 'badge-epc';
+    if(c.indexOf('automatiz')>-1) return 'badge-auto';
+    if(c.indexOf('contrato')>-1) return 'badge-cont';
+    if(c.indexOf('capacit')>-1) return 'badge-cap';
+    if(c.indexOf('suministro')>-1) return 'badge-sum';
+    if(c.indexOf('proyecto')>-1) return 'badge-proj';
+    if(c.indexOf('servicio')>-1) return 'badge-svc';
+    return 'badge-cont';
+  }
+  function accentColor(c) {
+      c = (c || '').toLowerCase();
+      if (c.indexOf('epc') > -1) return '#126BB5';
+      if (c.indexOf('automatiz') > -1) return '#7C6800';
+      if (c.indexOf('contrato') > -1) return '#636A71';
+      if (c.indexOf('capacit') > -1) return '#00787C';
+      if (c.indexOf('suministro') > -1) return '#A84813';
+      if (c.indexOf('proyecto') > -1) return '#7852AB';
+      if (c.indexOf('servicio') > -1) return '#0F5E2D';
+      return '#636A71';
+    }
+  function isSector(r, sector) {
+    var cli = (r.cli||'').toLowerCase(), trab = (r.trab||'').toLowerCase(), lugar = (r.lugar||'').toLowerCase();
+    if(sector === 'oil') return cli.indexOf('pemex')>-1 || cli.indexOf('cotemar')>-1 || cli.indexOf('baker')>-1 || cli.indexOf('demar')>-1 || cli.indexOf('pride')>-1 || cli.indexOf('saipem')>-1 || cli.indexOf('diavaz')>-1 || cli.indexOf('slb')>-1 || trab.indexOf('plataforma')>-1 || trab.indexOf('marina')>-1;
+    if(sector === 'cfe') return cli.indexOf('cfe')>-1 || cli.indexOf('dragón')>-1 || cli.indexOf('dragon')>-1 || cli.indexOf('lufussa')>-1 || trab.indexOf('geotérmica')>-1 || trab.indexOf('hidroeléctrica')>-1 || trab.indexOf('central ')>-1;
+    if(sector === 'agro') return cli.indexOf('ingenio')>-1 || cli.indexOf('piasa')>-1 || cli.indexOf('tamazula')>-1 || cli.indexOf('autlán')>-1 || cli.indexOf('autlan')>-1 || cli.indexOf('ultra')>-1;
+    if(sector === 'ind') return cli.indexOf('coca')>-1 || cli.indexOf('era mineral')>-1 || cli.indexOf('aeropuerto')>-1 || cli.indexOf('ienova')>-1 || cli.indexOf('biopapel')>-1 || cli.indexOf('celanese')>-1;
+    return false;
+  }
+  var PIN = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+  function getFiltered() {
+    return PROJECTS_DATA.filter(function(r) {
+      if(!r.trab) return false;
+      if(activeFilters.tipo !== 'all' && r.clasi !== activeFilters.tipo) return false;
+      if(activeFilters.sector && !isSector(r, activeFilters.sector)) return false;
+      if(activeFilters.q) {
+        var h = (r.trab+' '+r.cli+' '+r.lugar+' '+r.clasi).toLowerCase();
+        if(h.indexOf(activeFilters.q)<0) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderCard(r) {
+    var accent = accentColor(r.clasi);
+    var loc = r.lugar ? PIN + ' ' + r.lugar : '—';
+    return '<article class="cp-card" style="--card-accent:'+accent+'">'
+      + '<div class="cp-card__body">'
+      + '<span class="cp-card__type '+clasiClass(r.clasi)+'">'+r.clasi+'</span>'
+      + '<p class="cp-card__title">'+r.trab+'</p>'
+      + '</div>'
+      + '<div class="cp-card__footer">'
+      + '<div class="cp-card__meta">'+loc+'</div>'
+      + '<div class="cp-card__client">'+( r.cli||'—' )+'</div>'
+      + '</div>'
+      + '</article>';
+  }
+  function renderListRow(r) {
+    return '<div class="cp-list-row">'
+      + '<div class="cp-list-row__trab">'+r.trab+'</div>'
+      + '<div><span class="cp-card__type '+clasiClass(r.clasi)+'" style="font-size:.67rem">'+r.clasi+'</span></div>'
+      + '<div style="font-size:.78rem;color:var(--text-muted)">'+( r.lugar||'—' )+'</div>'
+      + '<div style="font-size:.78rem;color:#344B63;font-weight:600">'+( r.cli||'—' )+'</div>'
+      + '</div>';
+  }
+
+  function render() {
+    var filtered = getFiltered();
+    var total = filtered.length;
+    var slice  = filtered.slice(0, currentPage * PAGE_SIZE);
+    var grid   = document.getElementById('cpGrid');
+    var list   = document.getElementById('cpListBody');
+    var count  = document.getElementById('cpCount');
+    var progress = document.getElementById('cpProgress');
+    var loadBtn  = document.getElementById('cpLoadMore');
+    if(!grid) return;
+
+    // Grid
+    if(slice.length === 0) {
+      grid.innerHTML = '<div class="cp-empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><p>Sin proyectos que coincidan con los filtros seleccionados.</p><button onclick="clearAllFilters()" style="margin-top:8px;padding:8px 20px;border-radius:999px;border:1px solid #dbe6f4;background:#fff;cursor:pointer;font-weight:700;color:var(--concept-primary)">Limpiar filtros</button></div>';
+    } else {
+      grid.innerHTML = slice.map(renderCard).join('');
+    }
+
+    // List
+    if(list) list.innerHTML = slice.map(renderListRow).join('');
+
+    // Count
+    count.textContent = total + (total===1?' proyecto':' proyectos');
+
+    // Load more
+    var shown = Math.min(slice.length, total);
+    progress.textContent = 'Mostrando '+shown+' de '+total;
+    if(loadBtn) {
+      loadBtn.disabled = shown >= total;
+      loadBtn.style.display = total <= PAGE_SIZE ? 'none' : '';
+    }
+
+    renderChips();
+  }
+
+  function renderChips() {
+    var chips = document.getElementById('cpChips');
+    if(!chips) return;
+    var h = '';
+    if(activeFilters.tipo !== 'all') h += '<span class="cp-chip">Tipo: '+activeFilters.tipo+'<span class="cp-chip__x" data-clear="tipo" title="Quitar filtro" role="button" aria-label="Quitar filtro de tipo"> ×</span></span>';
+    var sectorLabel = {oil:'Oil & Gas',cfe:'CFE · Energía',agro:'Agroindustria',ind:'Industrial'};
+    if(activeFilters.sector) h += '<span class="cp-chip">Sector: '+sectorLabel[activeFilters.sector]+'<span class="cp-chip__x" data-clear="sector" title="Quitar filtro" role="button" aria-label="Quitar filtro de sector"> ×</span></span>';
+    if(activeFilters.q) h += '<span class="cp-chip">Búsqueda: &ldquo;'+activeFilters.q+'&rdquo;<span class="cp-chip__x" data-clear="q" title="Quitar búsqueda" role="button" aria-label="Quitar búsqueda"> ×</span></span>';
+    if(h && (activeFilters.tipo !== 'all' || activeFilters.sector || activeFilters.q)) h += '<span class="cp-chips__clear" onclick="clearAllFilters()">Limpiar todo</span>';
+    chips.innerHTML = h;
+    chips.querySelectorAll('.cp-chip__x').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var key = el.getAttribute('data-clear');
+        if(key === 'tipo') { activeFilters.tipo = 'all'; document.querySelectorAll('[data-filter-tipo]').forEach(function(b){b.classList.toggle('is-active',b.dataset.filterTipo==='all')});}
+        if(key === 'sector') { activeFilters.sector = null; document.querySelectorAll('[data-filter-sector]').forEach(function(b){b.classList.remove('is-active')});}
+        if(key === 'q') { activeFilters.q = ''; var inp = document.getElementById('cpSearch'); if(inp) inp.value='';}
+        currentPage = 1; render();
+      });
+    });
+  }
+
+  window.clearAllFilters = function() {
+    activeFilters = { tipo:'all', sector:null, q:'' };
+    document.querySelectorAll('[data-filter-tipo]').forEach(function(b){b.classList.toggle('is-active',b.dataset.filterTipo==='all')});
+    document.querySelectorAll('[data-filter-sector]').forEach(function(b){b.classList.remove('is-active')});
+    var inp = document.getElementById('cpSearch'); if(inp) inp.value='';
+    currentPage = 1; render();
+  };
+
+  // Tipo filter buttons
+  document.querySelectorAll('[data-filter-tipo]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      activeFilters.tipo = btn.dataset.filterTipo;
+      document.querySelectorAll('[data-filter-tipo]').forEach(function(b){b.classList.remove('is-active')});
+      btn.classList.add('is-active');
+      currentPage = 1; render();
+    });
+  });
+
+  // Sector filter buttons
+  document.querySelectorAll('[data-filter-sector]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var sector = btn.dataset.filterSector;
+      if(activeFilters.sector === sector) { activeFilters.sector = null; btn.classList.remove('is-active'); }
+      else {
+        document.querySelectorAll('[data-filter-sector]').forEach(function(b){b.classList.remove('is-active')});
+        activeFilters.sector = sector; btn.classList.add('is-active');
+      }
+      currentPage = 1; render();
+    });
+  });
+
+  // Search
+  var searchInp = document.getElementById('cpSearch');
+  if(searchInp) {
+    var debounce;
+    searchInp.addEventListener('input', function() {
+      clearTimeout(debounce);
+      debounce = setTimeout(function() {
+        activeFilters.q = searchInp.value.toLowerCase().trim();
+        currentPage = 1; render();
+      }, 260);
+    });
+  }
+
+  // Load more
+  var loadMoreBtn = document.getElementById('cpLoadMore');
+  if(loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function() {
+      currentPage++; render();
+      loadMoreBtn.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  }
+
+  // View toggle
+  var btnGrid = document.getElementById('btnGrid');
+  var btnList = document.getElementById('btnList');
+  var gridEl  = document.getElementById('cpGrid');
+  var listEl  = document.getElementById('cpList');
+  if(btnGrid && btnList) {
+    btnGrid.addEventListener('click', function() {
+      isListView = false;
+      gridEl.style.display=''; listEl.style.display='none';
+      btnGrid.classList.add('is-active'); btnList.classList.remove('is-active');
+      btnGrid.setAttribute('aria-pressed','true'); btnList.setAttribute('aria-pressed','false');
+    });
+    btnList.addEventListener('click', function() {
+      isListView = true;
+      gridEl.style.display='none'; listEl.style.display='block';
+      btnList.classList.add('is-active'); btnGrid.classList.remove('is-active');
+      btnList.setAttribute('aria-pressed','true'); btnGrid.setAttribute('aria-pressed','false');
+      render();
+    });
+  }
+
+  // Counter animation (hero stats)
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-count'),10);
+    var suffix = el.getAttribute('data-suffix')||'';
+    var start = 0, duration = 1400, startTime = null;
+    function step(ts) {
+      if(!startTime) startTime = ts;
+      var progress = Math.min((ts-startTime)/duration,1);
+      var eased = 1 - Math.pow(1-progress, 3);
+      el.textContent = Math.floor(eased*target) + suffix;
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target + suffix;
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if(e.isIntersecting) { animateCounter(e.target); io.unobserve(e.target); } });
+    }, {threshold:.5});
+    counters.forEach(function(c){io.observe(c)});
+  } else {
+    counters.forEach(animateCounter);
+  }
+
+  // Initial render
+  render();
+})();
+</script>
+
+</body>
+</html>

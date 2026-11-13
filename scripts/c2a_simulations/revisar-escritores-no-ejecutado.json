@@ -1,0 +1,19 @@
+{
+  "actualWritersKnown": false,
+  "applyBlocked": true,
+  "categories": {
+    "AccessPoints": "NOT_QUERIED",
+    "BucketPolicy": "NOT_QUERIED",
+    "ExternalAccounts": "NOT_QUERIED",
+    "GitHubActions": "NOT_QUERIED",
+    "ManualOperators": "NOT_QUERIED",
+    "OIDCTrust": "NOT_QUERIED",
+    "PermissionBoundaries": "NOT_QUERIED",
+    "SCP": "NOT_QUERIED",
+    "SSORoles": "NOT_QUERIED"
+  },
+  "kind": "c2a-access-review",
+  "message": "Sin consultas AWS reales; no se determinaron permisos efectivos.",
+  "performed": false,
+  "schemaVersion": 1
+}

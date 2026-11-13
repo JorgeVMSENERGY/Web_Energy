@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decision table — VMS Energy design ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#172C51;
+      --cobalt:#0F4C81;
+      --font:"Roboto Condensed",system-ui,Arial,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font);color:#0F172A;background:#F5F8FC;padding:32px 20px}
+    .page{max-width:1060px;margin:0 auto}
+
+    /* Header */
+    .doc-header{background:#172C51;color:#fff;border-radius:16px;padding:32px 36px;margin-bottom:28px}
+    .doc-header h1{font-size:1.8rem;font-weight:700;margin-bottom:6px}
+    .doc-header p{color:#93C5FD;font-size:.95rem;max-width:680px;line-height:1.6}
+    .doc-header .meta{margin-top:14px;font-size:.8rem;color:#64748B;background:rgba(255,255,255,.07);display:inline-block;padding:.3rem .8rem;border-radius:6px}
+
+    /* Instrucción */
+    .tip{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:12px 16px;margin-bottom:24px;font-size:.88rem;color:#1E3A5F;line-height:1.55}
+    .tip code{background:#DBEAFE;padding:1px 6px;border-radius:4px;font-family:monospace;font-size:.85em}
+
+    /* Tabla */
+    .tbl-wrap{background:#fff;border-radius:16px;border:1px solid rgba(23,44,81,.1);overflow:hidden;margin-bottom:28px}
+    table{width:100%;border-collapse:collapse}
+    th{background:#172C51;color:#CBD5E1;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:12px 16px;text-align:left}
+    td{padding:13px 16px;font-size:.9rem;border-bottom:1px solid rgba(23,44,81,.06);vertical-align:top}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:#F8FAFC}
+
+    /* Badges de concepto */
+    .badge{display:inline-block;font-size:.75rem;font-weight:700;padding:.2rem .7rem;border-radius:999px;white-space:nowrap}
+    .badge--corp{background:#DBEAFE;color:#1E3A5F}
+    .badge--sect{background:#DCFCE7;color:#14532D}
+    .badge--equip{background:#E2E8F0;color:#1E293B}
+    .badge--se{background:#EEF2FF;color:#3730A3}
+    .badge--shop{background:#FFF7ED;color:#9A3412}
+
+    /* Color swatches */
+    .swatch-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px}
+    .swatch{width:20px;height:20px;border-radius:4px;border:1px solid rgba(0,0,0,.1);flex-shrink:0}
+    .swatch-label{font-size:.8rem;color:#475569;font-family:monospace}
+
+    /* Concepto cards */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:28px}
+    .card{border-radius:14px;padding:18px 16px;border:1px solid transparent}
+    .card__num{font-size:1.6rem;font-weight:700;line-height:1}
+    .card__name{font-size:.85rem;font-weight:700;margin:6px 0 4px}
+    .card__pages{font-size:.78rem;opacity:.75}
+
+    .card--corp{background:#EFF6FF;border-color:#BFDBFE;color:#1E3A5F}
+    .card--corp .card__num{color:#0F4C81}
+    .card--sect{background:#F0FDF4;border-color:#BBF7D0;color:#14532D}
+    .card--sect .card__num{color:#16A34A}
+    .card--equip{background:#F8FAFC;border-color:#CBD5E1;color:#1E293B}
+    .card--equip .card__num{color:#334155}
+    .card--se{background:#EEF2FF;border-color:#C7D2FE;color:#3730A3}
+    .card--se .card__num{color:#4F46E5}
+    .card--shop{background:#FFF7ED;border-color:#FED7AA;color:#9A3412}
+    .card--shop .card__num{color:#F97316}
+
+    /* Árbol de decisión */
+    .decision-tree{background:#fff;border:1px solid rgba(23,44,81,.1);border-radius:16px;padding:24px;margin-bottom:28px}
+    .decision-tree h2{font-size:1rem;font-weight:700;color:#172C51;margin-bottom:16px}
+    .q{background:#F0F6FF;border-left:3px solid #0F4C81;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:8px;font-size:.88rem;font-weight:700;color:#172C51}
+    .q-yes{display:inline-block;color:#16A34A;font-weight:700;margin-right:4px;font-size:.82rem}
+    .q-no{display:inline-block;color:#94A3B8;font-weight:700;margin-right:4px;font-size:.82rem}
+    .q-result{display:inline-flex;align-items:center;gap:6px}
+    .q-indent{margin-left:20px;margin-bottom:4px}
+    .q-arrow{color:#94A3B8;font-size:.8rem;margin-right:4px}
+
+    /* Reglas de uso */
+    .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:28px}
+    .rule-card{border-radius:12px;padding:16px;border:1px solid}
+    .rule-card h3{font-size:.88rem;font-weight:700;margin-bottom:8px}
+    .rule-card ul{padding-left:16px;display:grid;gap:4px}
+    .rule-card li{font-size:.83rem;line-height:1.5}
+
+    .rule--corp{background:#EFF6FF;border-color:#BFDBFE;color:#1E3A5F}
+    .rule--sect{background:#F0FDF4;border-color:#BBF7D0;color:#14532D}
+    .rule--equip{background:#F8FAFC;border-color:#CBD5E1;color:#1E293B}
+    .rule--se{background:#EEF2FF;border-color:#C7D2FE;color:#3730A3}
+    .rule--shop{background:#FFF7ED;border-color:#FED7AA;color:#9A3412}
+
+    /* Footer */
+    .doc-footer{text-align:center;font-size:.8rem;color:#94A3B8;padding:16px 0}
+    .code-block{background:#1E293B;color:#E2E8F0;border-radius:10px;padding:14px 18px;font-family:monospace;font-size:.82rem;line-height:1.7;overflow-x:auto;margin-top:8px}
+    .code-comment{color:#64748B}
+    .code-attr{color:#93C5FD}
+    .code-val{color:#86EFAC}
+    h2.section-h{font-size:1rem;font-weight:700;color:#172C51;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid rgba(23,44,81,.1)}
+  </style>
+  <link rel="stylesheet" href="../sectorial-base.css">
+
+  <link rel="canonical" href="https://vmsenergy.com/en/tabla-decision-conceptos.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/tabla-decision-conceptos.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/tabla-decision-conceptos.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/tabla-decision-conceptos.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div class="page">
+
+  <div class="doc-header">
+    <h1>Decision table — VMS Energy design ecosystem</h1>
+    <p>Canonical guide to deciding which design concept to apply to each new or migrated page. Update this document before creating any new templates.</p>
+    <span class="meta">v1.0 · May 2026 · Slope of the year of the year</span>
+  </div>
+
+  <!-- Instrucción de uso -->
+  <div class="tip">
+    <strong>How to apply:</strong> Add the attribute <code>data-concept</code> directly on the label <code>&lt;html&gt;</code> for sector pages, also adds <code>data-sector</code>. Then link <code>tokens.css</code> before any other cscs.<br>
+    Example: <code>&lt;html lang="es-MX" data-concept="sectorial" data-sector="mineria"&gt;</code>
+  </div>
+
+  <!-- Resumen en cards -->
+  <h2 class="section-h">The 5 concepts of the ecosystem</h2>
+  <div class="cards">
+    <div class="card card--corp">
+      <div class="card__num">1</div>
+      <div class="card__name">Corporate</div>
+      <div class="card__pages">~8 pages<br>Navy · Cobalt</div>
+    </div>
+    <div class="card card--sect">
+      <div class="card__num">2</div>
+      <div class="card__name">Sectoral</div>
+      <div class="card__pages">3 pages<br>Green · Amber · Blue night</div>
+    </div>
+    <div class="card card--equip">
+      <div class="card__num">3</div>
+      <div class="card__name">Equipment</div>
+      <div class="card__pages">~10 pages<br>Technical SLA · Copper-Sex</div>
+    </div>
+    <div class="card card--se">
+      <div class="card__num">4</div>
+      <div class="card__name">Services Esp.</div>
+      <div class="card__pages">4 landing pages<br>Indigo · Emergency</div>
+    </div>
+    <div class="card card--shop">
+      <div class="card__num">5</div>
+      <div class="card__name">E-shop</div>
+      <div class="card__pages">~4 pages<br>SLA · Nar Jay commercial</div>
+    </div>
+  </div>
+
+  <!-- Tabla maestra -->
+  <h2 class="section-h">Allocation of pages by concept</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Page / File</th>
+          <th>Concept</th>
+          <th>data-concept</th>
+          <th>data-sector</th>
+          <th>Primary color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- CORPORATIVO -->
+        <tr>
+          <td><strong>index.html</strong> — Home</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>nosotros.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>servicios-epc.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>entrega-proyectos.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>capacitacion.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>suministro-tecnico.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>carreras.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+        <tr>
+          <td>contactar.html</td>
+          <td><span class="badge badge--corp">Corporate</span></td>
+          <td><code>Corporate</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0F4C81"></div><span class="swatch-label">#0F4C81</span></div></td>
+        </tr>
+
+        <!-- SECTORIAL -->
+        <tr>
+          <td><strong>soluciones_mineria.html</strong></td>
+          <td><span class="badge badge--sect">Sectoral</span></td>
+          <td><code>Sectoral</code></td>
+          <td><code>mineria</code></td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#0b1220"></div><div class="swatch" style="background:#1A6FA3"></div><span class="swatch-label">#0b1220 · #1A6FA3</span></div></td>
+        </tr>
+        <tr>
+          <td>soluciones_agroindustria.html</td>
+          <td><span class="badge badge--sect">Sectoral</span></td>
+          <td><code>Sectoral</code></td>
+          <td><code>Agribusiness</code></td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#14532D"></div><div class="swatch" style="background:#16A34A"></div><span class="swatch-label">#14532D · #16A34A</span></div></td>
+        </tr>
+        <tr>
+          <td>soluciones_alimentos_bebidas.html</td>
+          <td><span class="badge badge--sect">Sectoral</span></td>
+          <td><code>Sectoral</code></td>
+          <td><code>food-drinks</code></td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#78350F"></div><div class="swatch" style="background:#B45309"></div><span class="swatch-label">#78350F · #B45309</span></div></td>
+        </tr>
+
+        <!-- EQUIPAMIENTO -->
+        <tr>
+          <td>equipamiento-variadores-frecuencia.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+        <tr>
+          <td>equipamiento-subestaciones.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+        <tr>
+          <td>equipamiento-tableros-mcc.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+        <tr>
+          <td>equipamiento-transformadores.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+        <tr>
+          <td>equipamiento-ups-respaldo.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+        <tr>
+          <td>lp-subestaciones-electricas.html</td>
+          <td><span class="badge badge--equip">Equipment</span></td>
+          <td><code>Equipment</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#334155"></div><span class="swatch-label">#334155</span></div></td>
+        </tr>
+
+        <!-- SERVICIOS ESPECIALIZADOS -->
+        <tr>
+          <td><strong>lp-turbogeneradores-woodward.html</strong></td>
+          <td><span class="badge badge--se">Services Esp.</span></td>
+          <td><code>specialist services</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#4F46E5"></div><span class="swatch-label">#4F46E5</span></div></td>
+        </tr>
+        <tr>
+          <td>lp-mantenimiento-predictivo.html</td>
+          <td><span class="badge badge--se">Services Esp.</span></td>
+          <td><code>specialist services</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#4F46E5"></div><span class="swatch-label">#4F46E5</span></div></td>
+        </tr>
+        <tr>
+          <td>lp-mantenimiento-oil-gas.html</td>
+          <td><span class="badge badge--se">Services Esp.</span></td>
+          <td><code>specialist services</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#4F46E5"></div><span class="swatch-label">#4F46E5</span></div></td>
+        </tr>
+        <tr>
+          <td>lp-deteccion-control-supresion-fuego.html</td>
+          <td><span class="badge badge--se">Services Esp.</span></td>
+          <td><code>specialist services</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#4F46E5"></div><span class="swatch-label">#4F46E5</span></div></td>
+        </tr>
+
+        <!-- E-SHOP -->
+        <tr>
+          <td>vmshop.html (y subpáginas)</td>
+          <td><span class="badge badge--shop">E-shop</span></td>
+          <td><code>eshop</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#F97316"></div><span class="swatch-label">#F97316</span></div></td>
+        </tr>
+        <tr>
+          <td>triol-variador-detalle.html</td>
+          <td><span class="badge badge--shop">E-shop</span></td>
+          <td><code>eshop</code></td>
+          <td>—</td>
+          <td><div class="swatch-row"><div class="swatch" style="background:#F97316"></div><span class="swatch-label">#F97316</span></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Árbol de decisión -->
+  <h2 class="section-h">Decision Tree — What Concept to Use on a New Page?</h2>
+  <div class="decision-tree">
+    <div class="q">Does the page sell or present a physical product (variator, board, equipment) to quote?</div>
+    <div class="q-indent">
+      <div><span class="q-yes">YES →</span> <span class="q-result">Is this a product page with pricing/a datasheet? → <span class="badge badge--shop">E-shop</span> · If it is direct sale LP → <span class="badge badge--equip">Equipment</span></span></div>
+      <div><span class="q-no">NO ↓</span></div>
+    </div>
+
+    <div class="q">Does the page describe a highly specialized technical service (turbogenerators, maintenance, oil &amp; gas, suppression systems)?</div>
+    <div class="q-indent">
+      <div><span class="q-yes">YES →</span> <span class="badge badge--se">Specialized Services</span> <span style="color:#475569;font-size:.82rem">· Indigo · Hives</span></div>
+      <div><span class="q-no">NO ↓</span></div>
+    </div>
+
+    <div class="q">Is the page geared towards a specific industrial sector (mining, agro-industry, food)?</div>
+    <div class="q-indent">
+      <div><span class="q-yes">YES →</span> <span class="badge badge--sect">Sectoral</span> + corresponding sector: <code>mineria</code> / <code>Agribusiness</code> / <code>food-drinks</code></div>
+      <div><span class="q-no">NO ↓</span></div>
+    </div>
+
+    <div class="q">Does the page present company capabilities, equipment, processes or is it a point of contact?</div>
+    <div class="q-indent">
+      <div><span class="q-yes">YES →</span> <span class="badge badge--corp">Corporate</span> <span style="color:#475569;font-size:.82rem">· RX/cobalt · applies to ≥8 pages</span></div>
+      <div><span class="q-no">NO → Consult with the team before creating a new concept</span></div>
+    </div>
+  </div>
+
+  <!-- Reglas de uso -->
+  <h2 class="section-h">Rules of use by concept</h2>
+  <div class="rules">
+    <div class="rule-card rule--corp">
+      <h3>Corporate — navy &amp; cobalt</h3>
+      <ul>
+        <li>Use in institutional pages without sectoral guidance</li>
+        <li>Never use sector colors (green, amber, night) on these pages</li>
+        <li>Hero gradient: dark to navy to cobalt</li>
+        <li>Type: Roboto Condensed 400/700 — No exceptions</li>
+        <li>Main CTA: <code>#0F4C81</code></li>
+      </ul>
+    </div>
+    <div class="rule-card rule--sect">
+      <h3>Sectoral — variable color by sector</h3>
+      <ul>
+        <li>The concept color changes depending on the sector with <code>data-sector</code></li>
+        <li>The HTML structure is identical between the 3 sectors</li>
+        <li>Always include: KPI strip, 6 service cards, timeline, standards, ref-grid, 7 FAQs</li>
+        <li>JSON-LD required: Service + FAQPage</li>
+        <li>Nav marker ✓ active in the corresponding sector</li>
+      </ul>
+    </div>
+    <div class="rule-card rule--equip">
+      <h3>Equipment — technical slate</h3>
+      <ul>
+        <li>Always include technical specifications table</li>
+        <li>Use <code>.norm-badge</code> for IEC/IEEE/NOM standards</li>
+        <li>Copper accent <code>#D97706</code> only for outstanding values of the SM</li>
+        <li>JSON-LD: Product + FAQPage</li>
+        <li>More sober Hero: no radial glow, preferred technical image</li>
+      </ul>
+    </div>
+    <div class="rule-card rule--se">
+      <h3>Specialised Services — Indigo</h3>
+      <ul>
+        <li>Include urgency/24/7 availability badge</li>
+        <li>Benefits checklist before the contact form</li>
+        <li>Floating CTA on mobile (sticky bottom position)</li>
+        <li>JSON-LD: Service + FAQPage</li>
+        <li>Roboto Condensed — never Segoe UI on these pages</li>
+      </ul>
+    </div>
+    <div class="rule-card rule--shop">
+      <h3>E-shop — slate + orange</h3>
+      <ul>
+        <li>Orange <code>#F97316</code> only for CTA purchase/quota and prices</li>
+        <li>Maintain VMS identity in logo and nav (navy)</li>
+        <li>JSON-LD: Product (with offers and price)</li>
+        <li>Include downloadable technical sheet (PDF link)</li>
+        <li>Do not mix with tokens of other concepts</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Snippet de implementación -->
+  <h2 class="section-h">Snippet implementation</h2>
+  <div class="tbl-wrap" style="padding:20px 24px">
+    <p style="font-size:.88rem;color:#475569;margin-bottom:10px">Copy to <code>&lt;head&gt;</code> of each page, adjusting the attributes of <code>&lt;html&gt;</code>:</p>
+    <div class="code-block"><span class="code-comment">&lt;!-- 1. Attributes in the html tag --&gt;</span>
+&lt;html lang="es-MX" <span class="code-attr">data-concept</span>="<span class="code-val">Sectoral</span>" <span class="code-attr">data-sector</span>="<span class="code-val">mineria</span>"&gt;
+
+<span class="code-comment">&lt;!-- 2. Link tokens.css FIRST in the &lt;head&gt; --&gt;</span>
+&lt;link rel="stylesheet" href="<span class="code-val">tokens.css</span>" /&gt;
+
+<span class="code-comment">&lt;!-- 3. Then Google Fonts and the local &lt;style&gt; --&gt;</span>
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" /&gt;
+&lt;style&gt;
+  <span class="code-comment">/* Use var(--concept-primary), var(--concept-hero-gradient), etc. */</span>
+  .hero { background: <span class="code-val">var(--concept-hero-gradient)</span>; } .kpi-strip { background: <span class="code-val">var(--concept-kpi-bg)</span>; } .kpi__val { color: <span class="code-val">var(--concept-kpi-val)</span>; } .btn--primary { background: <span class="code-val">var(--concept-btn-primary)</span>; } &lt;/style&gt;</div>
+  </div>
+
+  <div class="doc-footer">
+    VMS Energy · Design system v1.0 · This document and the first of the first of its kind are the source of truth for the visual ecosystem
+  </div>
+
+</div>
+</body>
+</html>

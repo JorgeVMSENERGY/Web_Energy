@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Installation and Commissioning of Transformers in EPC Projects | VMS Energy</title>
+  <meta name="description" content="Technical guide for the installation and commissioning of industrial transformers in EPC projects: reception on site, lifting, HV/LV connection, oil filling, first energization and start-up protocol under load." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="Installation and Commissioning of EPC Transformers | VMS Energy" />
+  <meta property="og:description" content="Complete transformer installation and commissioning protocol: reception, lifting, connection, SAT tests, first energization and start-up under load in industrial EPC projects." />
+  <meta property="og:url" content="https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp" />
+  <meta property="article:published_time" content="2026-05-22" />
+  <meta property="article:modified_time" content="2026-05-22" />
+  <meta property="article:section" content="Ingenier&iacute;a el&eacute;ctrica" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Installation and Commissioning of EPC Transformers | VMS Energy" />
+  <meta name="twitter:description" content="From reception to the first kilowatt: complete protocol for the installation and commissioning of industrial transformers." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp" />
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('../assets/img/Especialidades_servicios.webp');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:680px){}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-callout--danger{border-left-color:#dc2626;background:linear-gradient(135deg,rgba(220,38,38,.08),rgba(248,113,113,.05));color:#7f1d1d}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:500px}
+    .article-table th,.article-table td{padding:13px 15px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.93rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .formula-box{margin:22px 0;padding:20px 22px;border-radius:16px;background:#eef5ff;border:1px solid rgba(15,76,129,.2);font-family:monospace}
+    .formula-box p{margin:0 0 8px;color:var(--concept-primary);font-size:1.02rem}
+    .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
+
+    /* Flujo de pasos numerados */
+    .step-flow{margin:24px 0;display:grid;gap:0}
+    .step{display:grid;grid-template-columns:52px 1fr;gap:0;align-items:start}
+    .step + .step{margin-top:0}
+    .step__num{display:flex;flex-direction:column;align-items:center;padding-top:2px}
+    .step__circle{width:36px;height:36px;border-radius:50%;background:var(--concept-primary);color:#fff;font-weight:800;font-size:1rem;display:grid;place-items:center;flex-shrink:0}
+    .step__line{width:2px;background:rgba(15,76,129,.18);flex:1;min-height:24px;margin-top:4px}
+    .step:last-child .step__line{display:none}
+    .step__body{padding:0 0 24px 14px}
+    .step__body h3{margin:4px 0 8px;color:#12365f;font-size:1.1rem}
+    .step__body p{margin:0 0 10px;color:#314a67}
+    .step__body ul{margin:0 0 10px 18px;color:#314a67}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding-block: 74px 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}.step{grid-template-columns:42px 1fr}}
+
+    /* Desbordamiento en movil: `.blog-layout` ya baja a una columna en 980 px,
+       pero `1fr` es `minmax(auto,1fr)` y el minimo automatico del articulo es
+       su ancho de contenido minimo. Sin esto, el indice o una tabla ensanchan
+       la pista y la pagina se arrastra de lado. Medido: hasta 781 px en una
+       ventana de 390. */
+    .blog-article{min-width:0}
+    @media (max-width:980px){.blog-layout{grid-template-columns:minmax(0,1fr)}}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vmsenergy.com/en/blog.html"}, {"@type": "ListItem", "position": 3, "name": "Installation and commissioning of EPC transformers", "item": "https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html"}]}, {"@type": "BlogPosting", "headline": "Installation and commissioning of transformers in EPC projects", "description": "Complete protocol for the installation and commissioning of industrial transformers: reception, lifting, HV/LV connection, oil filling, SAT tests, first energization and start-up under load.", "image": "https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-05-22", "dateModified": "2026-05-22", "mainEntityOfPage": "https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html", "articleSection": "Electrical engineering", "keywords": "transformer commissioning, transformer installation, first energized, EPC electric, transformer reception, transformer leaving, ATAB connection, pre-energy testing, filling transformer oil, start under load, electrical substation Mexico"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does the commissioning of a distribution transformer take?", "acceptedAnswer": {"@type": "Answer", "text": "Commissioning of a distribution transformer (up to 5 MVA) under normal conditions takes between 3 and 7 business days of on-site work, depending on the voltage level, the type of oil (new charge vs. filling on site) and the scope of the SAT required. This includes: reception and inspection (0.5 days), positioning and final civil works (1–2 days), connection and accessories (1 day), SAT tests (1 day), and first energization protocol (0.5 days). In power transformers (> 5 MVA) with on-site oil filling and drying, the process can extend to 2–4 weeks."}}, {"@type": "Question", "name": "What risk does energize without full SAT involve?", "acceptedAnswer": {"@type": "Answer", "text": "Energizing without SAT is a mistake that can have serious and irreversible consequences. The main risks are: (1) Hidden transportation damage: A blow that damaged internal connections may not be visible externally but causes catastrophic failure within minutes of first energization. (2) Incorrect vector group polarity: Connecting a Dyn11 transformer as if it were Yyn0 in an existing network generates circulating currents that can destroy the equipment or the parallel transformer. (3) Oil contaminated with moisture: The first energization under high voltage may trigger internal discharge in an oil with insufficient dielectric strength. The SAT is the last barrier before putting equipment, personnel and the continuity of the process at risk."}}, {"@type": "Question", "name": "Why is it necessary to wait 24 hours before the first energyization in some transformers?", "acceptedAnswer": {"@type": "Answer", "text": "When an oil-filled transformer arrives with an empty conservator (transported under nitrogen pressure) and is filled with oil on site, a rest period of at least 12–24 hours is necessary before energizing. During this time, the oil completely permeates the insulation system (paper and cardboard), trapped air bubbles migrate to the surface, and the oil stabilizes its temperature. Energizing before this process is complete risks partial discharge in the remaining bubbles, which can progressively damage the insulation or cause immediate catastrophic failure."}}, {"@type": "Question", "name": "How is the vector group verified before energizing?", "acceptedAnswer": {"@type": "Answer", "text": "Verification of the vector group (polarity test) is performed with the TTR instrument in vector group test mode, or manually by injecting a low magnitude voltage into the primary and measuring the voltages between terminals of the secondary in different combinations. For a Dyn11, the voltage ratio between AN, BN and CN of the secondary should show the expected 30° phase shift from the primary. This is especially critical when the new transformer will be connected in parallel with an existing one: both must have the same vector group; any difference produces destructive circulation currents at the time of synchronization."}}, {"@type": "Question", "name": "What documents should the EPC contractor deliver at the end of the commission?", "acceptedAnswer": {"@type": "Answer", "text": "The commissioning dossier that VMS Energy delivers to the client includes: (1) On-site reception report with photographic record and status of the impact accelerometer. (2) Complete SAT protocol with signed results of TTR, winding resistance, Megger + IP, dielectric strength and oil analysis. (3) Certificate of first energization with date, time and network conditions. (4) Record of measurements under load at 24 and 72 hours. (5) DGA report post-first energization. (6) Updated as-built plans with real connections. (7) List of resolved deviations or punch lists."}}, {"@type": "Question", "name": "Is it necessary to install protections before the first energyization?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, absolutely. No first energized must be performed without the protection system being operational and coordinated. At the very least, before the first energize must be in service: the main OT switch with over-intensity protection and ground failure, the Buchholz reliever (in oil transformers), oil and devanados temperature protections, and the differential protection if the project contemplates it. To enumerate without Buchholz active in an oil transformer is particularly risky: the first internal defect will produce a failure of greater magnitude before any other protection is good."}}, {"@type": "Question", "name": "What's the difference between cold and hot commissioning?", "acceptedAnswer": {"@type": "Answer", "text": "Cold commissioning verifies all functions of the transformer and its auxiliary system without energizing the high voltage part: SAT tests, verification of protection and alarm wiring, operation of the tap changer, operation of fans and oil pumps, and functional testing of the Buchholz relay. Hot commissioning is the sequence of first energization and progressive charging. Both stages are mandatory; Cold commissioning cannot replace SAT, and hot commissioning cannot be carried out without having completed the cold commissioning."}}]}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Installation and Commissioning of Transformers in EPC Projects | VMS Energy", "description": "Technical guide for the installation and commissioning of industrial transformers in EPC projects: reception on site, lifting, HV/LV connection, oil filling, first energization and start-up protocol under load.", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-03-01", "dateModified": "2026-03-01", "image": ["https://vmsenergy.com/assets/img/blog/comisionamiento-transformadores/og-comisionamiento-epc.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html"}, "url": "https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html"}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/blog-instalacion-comisionamiento-transformadores-epc.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-instalacion-comisionamiento-transformadores-epc.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+  <main id="contenido">
+
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" style="--article-image:url('../assets/img/Especialidades_servicios.webp')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy · Blog · EPC Projects</span>
+        <h1 id="hero-title">Installation and commissioning of transformers in EPC projects: from transportation to the first kilowatt</h1>
+        <p>The complete protocol — from site receipt to operational delivery — to ensure that no transformer is energized before it is ready.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" href="#articulo">Read article</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=comisionamiento-transformadores">Request commissioning</a>
+        </div>
+        <div class="hero__meta">
+          <span>May 22, 2026</span>
+          <span>13 min read</span>
+          <span>IEC 60076 · NOM-001-SEDE · NMX-J-116-ANCE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENIDO ═══════════════ -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── ARTÍCULO ── -->
+        <article class="blog-article" aria-label="Article: Installation and commissioning of EPC transformers">
+
+          <!-- Tabla de contenidos -->
+          <nav class="article-toc" aria-label="Table of Contents">
+            <h3>Article content</h3>
+            <ol>
+              <li><a href="#recepcion">Reception on site and transportation verification</a></li>
+              <li><a href="#obra-civil">Preparation of the area and civil works</a></li>
+              <li><a href="#izaje">Positioning and lifting</a></li>
+              <li><a href="#aceite">Oil filling and accessory connection</a></li>
+              <li><a href="#conexionado">HV and LV connection — sequence and verifications</a></li>
+              <li><a href="#pre-energizacion">Pre-energization tests (cold commissioning)</a></li>
+              <li><a href="#primera-energia">First energization — step-by-step protocol</a></li>
+              <li><a href="#carga">Commissioning under load — first 72 hours</a></li>
+              <li><a href="#documentacion">Documentation and delivery to the client</a></li>
+              <li><a href="#caso">Case study: 5 MVA substation, Guanajuato automotive plant</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </nav>
+
+          <!-- Intro -->
+          <p class="article-lead">In an EPC project, the installation and commissioning of an industrial transformer is not simply about downloading the equipment and connecting it. It is a sequence of interdependent technical steps where an error at any stage can mean anything from a costly delay to an irreversible catastrophic failure. Each step has a specific purpose and each verification exists because someone, on some project, did not do it and paid the consequences.</p>
+
+          <p>This article documents the protocol that VMS Energy executes in each transformer commissioning—from the coordination call before dispatch to the delivery of the commissioning dossier to the customer—, with the level of detail that a field engineer needs to execute or supervise it.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. Recepción -->
+          <h2 id="recepcion">1. Reception on site and transportation verification</h2>
+
+          <p>Reception does not begin when the truck arrives at the site: it begins with logistical planning. For transformers of more than 5 MVA or with dimensions that exceed the free passage on restricted routes, permits for the transportation of oversized cargo must be processed in advance. The commissioning engineer must know the weight, dimensions and discharge point prior to arrival.</p>
+
+          <h3>Critical checks at the time of download</h3>
+          <ul>
+            <li><strong>Shock accelerometer (shock indicator):</strong> The manufacturer installs an impact tag on the tank. If the indicator shows activation (color change), the device received a shock above the programmed threshold (typically 2–3 g). <strong>Do not move equipment to the installation site without documenting and notifying the manufacturer and insurance.</strong></li>
+            <li><strong>Positive nitrogen pressure:</strong> Oil-filled transformers are shipped with the tank filled with slightly positive pressure nitrogen (0.3–0.5 psi). The pressure is checked with the conservator&#x27;s manometer. Negative pressure indicates that air (and possibly moisture) entered the tank during transportation.</li>
+            <li><strong>Exterior visual inspection:</strong> Look for tank deformations, leaks in seals and flanges, bent bushings, damage to radiators or terminal boxes. Photograph any anomalies before moving it.</li>
+            <li><strong>Plate documentation:</strong> Verify that the unit received corresponds exactly to the order: power, voltage ratio, vector group, Zcc, and FIND code. A transformer exchanged in factory or logistics is more common than it seems.</li>
+          </ul>
+
+          <div class="article-callout--warning article-callout">
+            <strong>If accelerometer is enabled:</strong> Do not energize under any circumstances until a complete diagnosis is carried out (TTR, winding resistance, tangent delta, DGA). Repair of a transformer that failed due to undetected shipping damage is the responsibility of the customer and contractor, not the manufacturer.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 2. Obra civil -->
+          <h2 id="obra-civil">2. Preparation of the area and civil works</h2>
+
+          <p>The transformer cannot be installed on any surface. The civil works of the substation must be completed and validated before positioning the equipment. The minimum elements are:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Foundation and base</span>
+              <h3>Level and load</h3>
+              <p>The concrete base must be flat (maximum deviation: 3 mm in 3 m), with a load capacity greater than the total weight of the transformer with oil. The positioning brackets or rails must be anchored according to civil plans.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Containment bucket</span>
+              <h3>Environmental protection</h3>
+              <p>Mandatory for oil transformers. The bucket must contain 110% of the total volume of transformer oil. Without a finished and approved cube, the transformer is not installed. NOM-138-SEMARNAT applies.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Land system</span>
+              <h3>Equipotential mesh</h3>
+              <p>The transformer tank ground point must be connected to the substation ground grid before any other connection. Check mesh resistance according to NOM-001-SEDE-2012.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Access and barriers</span>
+              <h3>Perimeter security</h3>
+              <p>The area must be fenced, marked with high voltage warnings and with controlled access before any wiring is started. Verify that civil works personnel have evacuated the area.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Izaje -->
+          <h2 id="izaje">3. Positioning and lifting</h2>
+
+          <p>The lifting of an industrial transformer is a critical operation that requires specific planning, certified equipment and competent personnel. It is not improvised in the field.</p>
+
+          <h3>Lifting plan requirements</h3>
+          <ul>
+            <li><strong>Lifting points:</strong> Use only the hoist hooks or hoists marked on the tank by the manufacturer. Never hold from pistes, radiators or accessories.</li>
+            <li><strong>Crane capacity:</strong> The crane must have a minimum capacity of 125% of the weight to be lifted, considering the actual angle of the cables and the operating radius.</li>
+            <li><strong>Maximum inclination:</strong> During lifting and unloading, the transformer should not be inclined more than 15° from the horizontal plane (or as indicated by the manufacturer in the manual). Excessive tilt on an oil-filled transformer can displace the oil and uncover parts of the core, causing local oxidation.</li>
+            <li><strong>Final positioning:</strong> The wheel axle must be aligned with the base guides according to the plan; oil drain plugs must be left accessible for future maintenance; the radiators oriented towards where they allow natural convinction if it is ONAN.</li>
+          </ul>
+
+          <div class="article-callout">
+            <strong>EPC Note:</strong> In projects where the transformer will be installed in a closed area (transformer room), the lifting and introduction sequence must be coordinated with the civil works schedule. Once the structure is closed, moving equipment may be impossible without demolishing parts of the building.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Aceite -->
+          <h2 id="aceite">4. Oil filling and accessories connection</h2>
+
+          <p>Distribution transformers smaller than 1 MVA usually arrive filled with oil from the factory. Those with greater power frequently arrive without oil (or with partial oil) to reduce weight in transportation. On-site filling is a delicate operation that, if done incorrectly, can contaminate the oil with moisture.</p>
+
+          <h3>On-site filling procedure</h3>
+          <ol>
+            <li><strong>Verify that the new oil has quality sheet:</strong> Dielectric strength ≥ 60 kV/mm, humidity &lt; 10 ppm, acidity &lt; 0.05 mgKOH/g before filling.</li>
+            <li><strong>Empty the nitrogen from the tank slowly</strong> by the designated valve, through a deacasting filter to prevent wet air from entering.</li>
+            <li><strong>Vacuum filling:</strong> The preferred method is to fill the transformer under vacuum (&lt; 1 mbar) to ensure that no air bubbles remain trapped. The oil enters through the bottom; The vacuum is applied from the top.</li>
+            <li><strong>Mandatory rest:</strong> Once filled, wait at least 12 hours (24 hours for HV) before the first energize to allow the oil to completely impregnate the paper and the residual bubbles escape.</li>
+            <li><strong>Check oil final level</strong> in the indicator of the conservative at reference temperature (25°C). Adjust if necessary.</li>
+          </ol>
+
+          <h3>Accessory connection</h3>
+          <p>Before electrical connection, check and connect all transformer accessories:</p>
+          <ul>
+            <li>Buchholz relay (in line between tank and conservator) — verify correct orientation of the flow arrow</li>
+            <li>Oil thermometer and devanate temperature transducer (OTI/WTI)</li>
+            <li>Oil level indicator</li>
+            <li>Oil sampling valves (HV and LV if applicable)</li>
+            <li>Manual or motorized tap changer (check initial position)</li>
+            <li>Oil fans and pumps if the Fever code is ONAF or OFAF</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Conexionado -->
+          <h2 id="conexionado">5. HV and LV connection — sequence and verifications</h2>
+
+          <p>The electrical connection of the transformer is the step with the greatest risk for personnel if the correct verifications are not carried out. The correct sequence minimizes the risk of accident and polarity errors.</p>
+
+          <h3>Recommended connection sequence</h3>
+
+          <div class="step-flow">
+            <div class="step">
+              <div class="step__num"><div class="step__circle">1</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Tank ground connection</h3>
+                <p>First connection made, last connection removed. The transformer tank must be equipotentially connected to the substation ground grid before touching any terminal. Check connection resistance with a micro-ohmmeter (&lt; 1 Ω).</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">2</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Connection of the LV neutral to ground</h3>
+                <p>In Dyn11 configuration, the secondary neutral is connected solidly to ground (TN system) or through neutral resistance (IT or TT system) according to the coordination study. Never leave the neutral without a defined connection.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">3</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>LV cable connection</h3>
+                <p>Connect the secondary (LV) cables to the transformer terminal blocks, verifying the phase sequence according to the single-wire plane: A-B-C in the correct order for the downstream distribution board. Retighten to the manufacturer&#x27;s specified torque.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">4</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>HV cable connection</h3>
+                <p>The high voltage cables are connected last, with the HV switch in the open and locked position. Verify minimum insulation distances in air according to NOM-001-SEDE-2012 and approved plans. The torque of the HV connectors follows the bushing manufacturer&#x27;s specifications.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">5</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Protection and alarm wiring</h3>
+                <p>Control wiring connection: Buchholz relay contacts (alarm and trip), OTI and WTI overtemperature contacts, oil level indicator, and OLTC alarms if applicable. Check continuity and polarity of each control circuit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-callout--danger article-callout">
+            <strong>Absolute rule:</strong> No worker should be in physical contact with transformer terminals or conductors while there is a possibility that the HV switch can be operated—even if it is supposedly open. Apply certified LOTO (Lockout-Tagout) on the HV switch throughout the connection process.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Pre-energización -->
+          <h2 id="pre-energizacion">6. Pre-energization tests (cold commissioning)</h2>
+
+          <p>Cold commissioning verifies that the transformer and its auxiliary system are ready to be energized. It is carried out with the HV switch open and the transformer without voltage in any part of the equipment.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table" aria-label="Cold commissioning tests">
+              <thead>
+                <tr><th>Test</th><th>Method</th><th>Acceptance criteria</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transformation Ratio (TTR)</td>
+                  <td>TTR instrument on all taps</td>
+                  <td>Deviation ≤ 0.5% from nominal</td>
+                </tr>
+                <tr>
+                  <td>Vector group verification</td>
+                  <td>TTR vector group mode or manual test</td>
+                  <td>Plate conformal vector group (e.g. Dyn11)</td>
+                </tr>
+                <tr>
+                  <td>Winding resistance</td>
+                  <td>Micro-ohmmeter, DC current</td>
+                  <td>Imbalance &lt; 2%; variation vs. FAT &lt; 5%</td>
+                </tr>
+                <tr>
+                  <td>Insulation resistance (Megger)</td>
+                  <td>Depending on voltage level (500–5,000 V DC)</td>
+                  <td>PI &gt; 2.0; RA &gt; 1,000 MΩ at test temperature</td>
+                </tr>
+                <tr>
+                  <td>Oil analysis (stiffness and humidity)</td>
+                  <td>Cup test IEC 60156; Karl Fischer</td>
+                  <td>BDV ≥ 40 kV/mm (MV); H₂O &lt; 20 ppm</td>
+                </tr>
+                <tr>
+                  <td>Protection and alarm verification</td>
+                  <td>Functional test of Buchholz contacts, OTI, WTI</td>
+                  <td>All operational and verified contacts</td>
+                </tr>
+                <tr>
+                  <td>LOTO test and barriers</td>
+                  <td>Visual verification and temporary landing continuity test</td>
+                  <td>All temporary landings withdrawn; LOT removed only by authorized responsible</td>
+                </tr>
+                <tr>
+                  <td>Taps changer check</td>
+                  <td>Manual or motorized operation on all taps</td>
+                  <td>Smooth operation; nominal tap position for first energization</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p><strong>All tests should be documented with numerical results before proceeding.</strong> The signature of the responsible engineer in the SAT protocol is the guarantee that the equipment is ready for the first energization.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Primera energización -->
+          <h2 id="primera-energia">7. First energization — step-by-step protocol</h2>
+
+          <p>The first energization is the moment of greatest uncertainty in commissioning. All possible cold checks have been completed, but the actual behavior of the equipment under voltage is only observable at this moment. The protocol must guarantee that if something fails, the consequences are as minimal as possible.</p>
+
+          <div class="step-flow">
+            <div class="step">
+              <div class="step__num"><div class="step__circle">1</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Coordination with the network operator</h3>
+                <p>Notify the HV network operator (CFE or private operator) of the intention to energize. Confirm the current voltage and frequency at the connection point. Obtain formal authorization if the project requires it.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">2</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Personnel-free zone verification</h3>
+                <p>Confirm that no worker is within the danger area of the transformer and the HV switchgear. Verify that all switchgear doors are closed. The commissioner must be in a position with direct line of sight to the control panel and the transformer.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">3</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Energization of the HV switchgear without load in the secondary</h3>
+                <p>The LV switch or the main switch on the downstream switchboard must be in the OPEN position. Close the HV switch. The transformer remains energized in vacuum. <strong>Immediately check for the absence of abnormal noises, vibrations, sparks or any alarm indication.</strong> If something is abnormal: open the HV switch immediately.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">4</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>No-load voltage measurement</h3>
+                <p>With the transformer energized in vacuum, measure the voltages at the secondary (LV) terminals: phase voltages, neutral-to-ground voltage, and verify the phase sequence with a sequencemeter. The values ​​must correspond to the nominal secondary voltage ± the selected tap setting.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">5</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Load connection — progressive load</h3>
+                <p>Once the voltages are confirmed, connect the main switch to the board. If the system allows, charge progressively (25% → 50% → 75% → 100%) monitoring phase currents, voltage, temperature and any alarm indication.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step__num"><div class="step__circle">6</div><div class="step__line"></div></div>
+              <div class="step__body">
+                <h3>Recording of measurements under initial load</h3>
+                <p>At the first stable load: record currents of each phase (HV and LV), line and phase voltages, power factor, oil temperature and ambient temperature. This record is the baseline of the equipment in operation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. Carga 72h -->
+          <h2 id="carga">8. Commissioning under load — first 72 hours</h2>
+
+          <p>The first 72 hours of operation are the period of greatest surveillance. Most post-energization faults that are not detectable when cold manifest themselves in this interval.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr><th>Time</th><th>Verification</th><th>Action if there is anomaly</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>0–1 hour</strong></td>
+                  <td>Complete visual inspection: oil level, noise, vibration, odor. Measurement of phase currents.</td>
+                  <td>Any anomaly: de-energize and evaluate</td>
+                </tr>
+                <tr>
+                  <td><strong>4 hours</strong></td>
+                  <td>Oil temperature (OTI) in correct trend. Verify that ONAF fans start at the programmed threshold.</td>
+                  <td>Higher than expected temperature for loading: check radiator obstruction</td>
+                </tr>
+                <tr>
+                  <td><strong>24 hours</strong></td>
+                  <td>Complete measurement: voltages, currents, oil and winding temperature, FP. <strong>DGA sample #1</strong> (first post-energization sample).</td>
+                  <td>Acetylene in DGA: de-energize immediately</td>
+                </tr>
+                <tr>
+                  <td><strong>48 hours</strong></td>
+                  <td>Visual inspection of terminal blocks with portable IR camera (with charge). Check adjustment of covers and flanges.</td>
+                  <td>Hot spot ΔT &gt; 15°C: retighten or investigate</td>
+                </tr>
+                <tr>
+                  <td><strong>72 hours</strong></td>
+                  <td>Final record of measurements under static load. <strong>DGA sample #2</strong> and comparison with sample #1.</td>
+                  <td>Explosive increase in any gas: report and evaluate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Early release criteria (early release):</strong> If the 24-hour DGA does not show acetylene and all gases are below the Condition 1 thresholds (IEEE C57.104), and all electrical measurements are normal, the transformer can be delivered to the customer with the DGA at 72 hours as confirmation. In critical projects, VMS Energy recommends a third DGA at 30 days as the closing of the commissioning.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Documentación -->
+          <h2 id="documentacion">9. Documentation and delivery to the client</h2>
+
+          <p>The commissioning dossier is the final deliverable of this phase of the EPC project. It is not an administrative procedure: it is the legal and technical record that defines the reference status of the equipment, protects the contractor in case of disputes and is the starting point of the maintenance program.</p>
+
+          <h3>Contents of the VMS Energy commissioning dossier</h3>
+          <ul>
+            <li>Reception report with photographs and accelerometer status</li>
+            <li>Complete SAT protocol: TTR, winding resistance, Megger + PI, vector group</li>
+            <li>Pre-energization oil analysis (stiffness, humidity, basal DGA)</li>
+            <li>First energization record: date, time, network conditions, personnel present</li>
+            <li>No-load measurement recording: phase voltages, phase sequence</li>
+            <li>Record of measurements under load at 4 hours, 24 hours, 48 hours and 72 hours</li>
+            <li>DGA at 24 hours and 72 hours (for oil-filled transformers)</li>
+            <li>Termography IR deneeras HV and LV at 48 h</li>
+            <li>Punch list (list of minor deviations and their resolution)</li>
+            <li>As-built drawings of the final connection</li>
+            <li>Transformer Manufacturer&#x27;s Manual and Data Sheet</li>
+            <li>Recommendations for the initial predictive maintenance program</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 10. Caso de estudio -->
+          <h2 id="caso">10. Case study: 5 MVA substation, Guanajuato automotive plant</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">EPC Case — Automotive Plant, Silao, Guanajuato</span>
+              <h3>Power transformer 5 MVA, 34.5 kV / 13.8 kV / 480 V, Din11–Dyn11, ONAF — Triff transformer of two secondary windings</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Context:</strong> EPC project for new assembly line. 5 MVA power transformer with two independent secondaries: one of 13.8 kV for internal distribution to MV panels, and one of 480 V for the assembly line. The team arrived with the tank pressurized with nitrogen, without oil, to be filled on site. Empty weight: 14,200 kg; total weight with oil: 21,800 kg. The commissioning was coordinated with the plant production stoppage: 6-day window.</p>
+
+              <p><strong>Schedule executed:</strong></p>
+              <ul>
+                <li><strong>Day 1:</strong> Reception. Accelerometer: not activated. N₂ pressure: 0.42 psi — correct. Visual inspection without anomalies. The 35-ton crane performed the positioning in 4 hours without incident.</li>
+                <li><strong>Days 1–2:</strong> Vacuum oil filling (7,600 liters of new oil, BDV = 68 kV/mm, 6 ppm H₂O). Rest period of 24 hours.</li>
+                <li><strong>Day 3:</strong> HV connection (34.5 kV), MV and LV secondaries, neutrals and ground. Complete protective wiring.</li>
+                <li><strong>Day 4:</strong> Cold commissioning (SAT). TTR on all three windings: max deviation 0.09%. Dyn11–Dyn11 vector group confirmed. Megger: PI HV = 3.8, PI BT¹ = 3.2, PI BT² = 3.5. Post-filling stiffness: 61 kV/mm. Basal DGA: all &lt; 3 ppm, acetylene: ND. Everything agrees.</li>
+                <li><strong>Day 5:</strong> First energization at 07:30 hrs. Vacuum energization: no abnormal noises. Voltages in 480 V LV winding: 481–480–481 V (within ±0.5% of nominal tap). MV charging connection first to 30%, then to 100% in 2 hours. Measurements at the time: balanced currents, oil temperature 28°C above ambient, ONAF fans started at 58°C according to setpoint. DGA at 24 hours: without acetylene, TDCG = 45 ppm — Condition 1.</li>
+                <li><strong>Day 6:</strong> Thermography with 85% load: ΔT maximum enbreaders = 4°C, within the normal range. DGA at 72 h: TDCG = 52 ppm, without significant variation. Plant in production starter. Delivery of commissioning wire to the customer.</li>
+              </ul>
+
+              <p><strong>Result:</strong> Commissioning completed in 6 days (within shutdown window). Equipment delivered with all metrics within criteria. DGA follow-up scheduled at 30 days and 6 months.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Frequently asked questions about installation and commissioning</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>How long does the commissioning of a distribution transformer take?</summary>
+              <p>Between 3 and 7 business days for transformers up to 5 MVA, including reception, positioning, connection, SAT and first energization. In power transformers with in-situ oil filling and vacuum drying, the process can be extended to 2–4 weeks. The commissioning window must be defined in the EPC schedule from the engineering phase.</p>
+            </details>
+
+            <details>
+              <summary>What risk does energize without full SAT involve?</summary>
+              <p>Serious and irreversible risks: hidden transport damage manifesting as catastrophic failure in the first minutes; incorrect vector group polarity destroying parallel equipment; or oil with insufficient rigidity that causes internal discharge when voltage is applied. The SAT is the last barrier before exposing the equipment, personnel and process to unacceptable risks.</p>
+            </details>
+
+            <details>
+              <summary>Why is it necessary to wait before the first energyization when filling with oil in place?</summary>
+              <p>The oil needs at least 12–24 hours to completely impregnate the insulation paper and for trapped air bubbles to escape to the surface. Energizing before this process is complete involves the risk of partial discharge in the bubbles, which can progressively damage the insulation or cause immediate failure.</p>
+            </details>
+
+            <details>
+              <summary>How is the vector group verified before energizing?</summary>
+              <p>With TTR instrument in vector group mode, or manually injecting low magnitude voltage into the primary and measuring voltages between combinations of secondary terminals. It is critical when the transformer will be connected in parallel with another existing one: both must have the same vector group or the circulating currents when synchronizing will destroy both equipment.</p>
+            </details>
+
+            <details>
+              <summary>What documents does the EPC contractor deliver at the end?</summary>
+              <p>The commissioning dossier includes: reception report, complete SAT protocol, pre-energization oil analysis, first energization record, record of measurements under load (4h, 24h, 48h, 72h), DGA at 24h and 72h, IR thermography, resolved punch list, as-built drawings and predictive maintenance recommendations.</p>
+            </details>
+
+            <details>
+              <summary>Is it necessary to install protections before the first energyization?</summary>
+              <p>Yes, absolutely. At the very least they must be active: the HV switch with over-intensity protection, the Buchholz reliever (in oil transformers), the OTI and WTI temperature protections, and the differential protection if the project contemplates it. To enumerate without BuchholZ active is especially risky: the first internal defect produces a failure of greater magnitude before any other protection of the environment.</p>
+            </details>
+
+            <details>
+              <summary>What&#x27;s the difference between cold and hot commissioning?</summary>
+              <p>Cold commissioning verifies the equipment without energizing the HV part: SAT, protection wiring verification, functional test of the Buchholz and the OLTC. Hot commissioning is the sequence of first energization and progressive charging. Both stages are mandatory; The cold does not replace the SAT, and the hot cannot be done without having completed the cold.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>Do you need an EPC contractor for the installation and commissioning of your substation?</h3>
+            <p>VMS Energy runs the entire cycle: from the reception of the transformer on site to the delivery of the commissioning panel with the operating team and the first post-energy DGA. Experienced in distribution and power transformers up to 115 kV.</p>
+            <div class="article-actions on-dark">
+              <a class="btn btn--primary" href="contacto_cta.html?producto=comisionamiento-epc">Request EPC proposal</a>
+              <a class="btn btn--secondary" href="lp-pruebas-comisionamiento-puesta-en-servicio.html">See commissioning services</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="blog-sidebar" aria-label="Related resources">
+
+          <!-- CTA accent -->
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>Turnkey EPC commissioning</h3>
+            <p>We sent our commissioning team with all the necessary instruments: TTR, Megger, micro-ohmmeter, IR camera and oil sampling kit.</p>
+            <a class="btn" href="contacto_cta.html?producto=comisionamiento-epc">Schedule visit</a>
+          </div>
+
+          <!-- Checklist comisionamiento -->
+          <div class="sidebar-card">
+            <h3>Go/no-go checklist</h3>
+            <ul>
+              <li>✓ Not activated Acelerometer</li>
+              <li>✓ Positive N2 pressure at reception</li>
+              <li>✓ Civil works and completed {Dunito}</li>
+              <li>✓ Ground mesh installed and tested</li>
+              <li>✓ Oil with BDH ≥ 40 kV/mm</li>
+              <li>✓ Minimum rest 24 h post-fill</li>
+              <li>✓ TTR and vector group correct</li>
+              <li>✓ Megger PI &gt; 2.0</li>
+              <li>✓ Buchholz and active protections</li>
+              <li>✓ LOTO removed and area cleared</li>
+              <li>✓ Baseline DGA (pre-energy)</li>
+            </ul>
+          </div>
+
+          <!-- Artículos de la serie -->
+          <div class="sidebar-card">
+            <h3>Series: Industrial Transformers</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">→ #1 Selection</a></li>
+              <li><a class="sidebar-link" href="blog-pruebas-aceptacion-transformadores.html">→ #2 Tests FAT and SAT</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-transformadores-operacion.html">→ #3 Predictive maintenance</a></li>
+              <li><a class="sidebar-link" href="blog-instalacion-comisionamiento-transformadores-epc.html"><strong>→ #4 EPC installation (this article)</strong></a></li>
+            </ul>
+          </div>
+
+          <!-- Servicios vinculados -->
+          <div class="sidebar-card">
+            <h3>Related services</h3>
+            <a class="sidebar-link" href="lp-pruebas-comisionamiento-puesta-en-servicio.html">→ Installation and commissioning →</a><br><br>
+            <a class="sidebar-link" href="especialidad_ingenieria.html#inicio">→ Substation engineering</a><br><br>
+            <a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">→ Post-commissioning maintenance</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">→ Supply of transformers</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Technical contact</h3>
+            <p>Speak to an EPC electrical commissioning engineer.</p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3h4l2 5-2.6 1.6a12.5 12.5 0 0 0 6.5 6.5L16 13.5l5 2v4a1.5 1.5 0 0 1-1.7 1.5A17.5 17.5 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3Z"/></svg></strong> <a href="tel:+523338130739">+52 33 3813 0739</a></p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></strong> <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
+          </div>
+
+        </aside><!-- /blog-sidebar -->
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+    </main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+  <div class="mobile-phone-sticky">
+    <a href="tel:+523338130739" aria-label="Call VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+
+
+</body>
+</html>

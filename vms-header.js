@@ -22,6 +22,13 @@
 (function () {
   'use strict';
 
+  // Also enable language navigation on pages managed through the staging workflow.
+  if (!document.querySelector('script[src$="vms-language.js"]')) {
+    var languageScript = document.createElement('script');
+    languageScript.src = new URL('vms-language.js', document.currentScript.src).href;
+    document.head.appendChild(languageScript);
+  }
+
   var header = document.querySelector('.site-header');
   if (!header) return;
 
@@ -45,6 +52,7 @@
   var here = currentSlug(window.location.href);
 
   header.querySelectorAll('a[href]').forEach(function (a) {
+    if (a.classList.contains('lang-switch')) return;
     var href = a.getAttribute('href');
     if (!href || href.charAt(0) === '#') return;
     if (currentSlug(href) !== here) return;

@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en" data-concept="corporativo">
+<head>
+  <meta charset="utf-8" />
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAT and SAT Tests of Transformers: IEC 60076 Technical Guide | VMS Energy</title>
+  <meta name="description" content="Complete technical guide to FAT and SAT testing for industrial transformers: transformation ratio, winding resistance, Zcc, losses, insulation power factor and DGA analysis in accordance with IEC 60076." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="VMS Energy" />
+  <meta property="og:title" content="FAT and SAT Tests of Transformers: IEC 60076 Technical Guide | VMS Energy" />
+  <meta property="og:description" content="Factory Acceptance Test (FAT) and Site Acceptance Test (SAT) protocols for transformers: TTR, winding resistance, Zcc, no-load and load losses, tan delta, dielectric tests and DGA." />
+  <meta property="og:url" content="https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp" />
+  <meta property="article:published_time" content="2026-05-08" />
+  <meta property="article:modified_time" content="2026-05-08" />
+  <meta property="article:section" content="Ingenier&iacute;a el&eacute;ctrica" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FAT and SAT Tests of Transformers: IEC 60076 Technical Guide | VMS Energy" />
+  <meta name="twitter:description" content="Complete transformer acceptance protocols: TTR, Zcc, losses, insulation power factor and DGA in accordance with IEC 60076." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp" />
+<link rel="stylesheet" href="../corporativo-base.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue-3:#3A6FA5;--gray:#F2F4F7;--text:#0F172A;--corp-hero-img: url('../assets/img/Especialidades_servicios.webp');
+    }
+    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid rgba(23,44,81,.08);backdrop-filter:saturate(180%) blur(8px)}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:0}
+    .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
+    .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:20px;align-items:center}
+    nav a{color:var(--navy);text-decoration:none;font-weight:700;letter-spacing:.2px}
+    .cta-header{padding:.6rem 1rem;background:var(--cobalt);color:#fff;border-radius:999px}
+    .nav-item--has-submenu{position:relative}
+    .nav-item--has-submenu::after{content:"";position:absolute;left:0;right:0;top:100%;height:12px}
+    .submenu{list-style:none;margin:0;padding:10px 12px;position:absolute;top:100%;left:0;min-width:320px;background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:12px;box-shadow:0 14px 30px rgba(8,28,54,.12);display:none;z-index:60}
+    .nav-item--has-submenu:hover .submenu,.nav-item--has-submenu:has(:focus-visible) .submenu{display:block}
+    .submenu__group + .submenu__group{margin-top:10px;padding-top:10px;border-top:1px solid rgba(23,44,81,.1)}
+    .submenu__title{display:block;color:var(--concept-primary);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px}
+    .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
+    #footer .foot-link{color:#cbd5e1;text-decoration:none}
+    #footer .foot-link:hover,#footer .foot-link:focus-visible{color:#fff}
+    .foot-social__link{display:inline-flex;width:26px;height:26px}
+    .foot-social__link svg{fill:#fff;transition:fill .3s ease}
+    .foot-social__link:hover svg,.foot-social__link:focus-visible svg{fill:var(--concept-primary)}
+    @media (max-width:1300px){#footer .container{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important;padding:34px 0 !important}}
+    @media (max-width:980px){#footer .container{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
+    @media (max-width:700px){#footer .container{grid-template-columns:1fr !important;gap:16px !important;padding:24px 0 !important}#footer ul{line-height:1.6}}
+    .foot a{color:#cbd5e1}
+    .foot-social__link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:999px;border:1px solid rgba(203,213,225,.35);color:#cbd5e1}
+    .foot-social__link svg{width:18px;height:18px;fill:currentColor}
+    @media (max-width:680px){}
+    .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+
+    .blog-wrap{padding:56px 0;background:linear-gradient(180deg,#f7fbff,#fff)}
+    .blog-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.75fr);gap:22px;align-items:start}
+    .blog-article{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:22px;padding:28px;box-shadow:0 14px 34px rgba(9,32,58,.08)}
+    .blog-article h2{margin:34px 0 14px;font-size:clamp(24px,2.5vw,34px);line-height:1.15;color:#12365f;scroll-margin-top:90px}
+    .blog-article h2:first-of-type{margin-top:0}
+    .blog-article h3{margin:24px 0 10px;font-size:clamp(19px,2vw,24px);line-height:1.25;color:var(--concept-primary)}
+    .blog-article p{margin:0 0 16px;color:#314a67;font-size:1.04rem}
+    .blog-article ul,.blog-article ol{margin:0 0 18px 20px;padding:0;color:#314a67}
+    .blog-article li{margin:0 0 10px}
+    .blog-article strong{color:#16395d}
+    .article-lead{font-size:1.14rem;color:#213b59}
+    .article-divider{height:1px;background:linear-gradient(90deg,rgba(15,76,129,.2),rgba(15,76,129,0));margin:24px 0}
+    .article-callout{margin:22px 0;padding:18px 18px 18px 20px;border-left:4px solid var(--concept-primary);border-radius:16px;background:linear-gradient(135deg,rgba(15,76,129,.08),rgba(74,163,255,.08));color:#15385d}
+    .article-callout--warning{border-left-color:#b45309;background:linear-gradient(135deg,rgba(180,83,9,.07),rgba(251,191,36,.07));color:#7c3604}
+    .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0}
+    .article-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .article-mini-card{padding:16px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f9fbfe}
+    .article-mini-card h3{margin:0 0 8px;font-size:1.05rem;color:#12365f}
+    .article-mini-card p{margin:0;color:#46607e;font-size:.98rem}
+    .article-mini-card .tag{display:inline-block;font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .article-table-wrap{margin:22px 0;overflow-x:auto;border:1px solid rgba(23,44,81,.12);border-radius:18px}
+    .article-table{width:100%;border-collapse:collapse;background:#fff;min-width:560px}
+    .article-table th,.article-table td{padding:14px 16px;text-align:left;border-bottom:1px solid rgba(23,44,81,.08);vertical-align:top}
+    .article-table th{background:#12365f;color:#fff;font-size:.94rem;letter-spacing:.02em}
+    .article-table td{color:#314a67}
+    .article-table tr:last-child td{border-bottom:0}
+    .article-table td.pass{color:var(--vms-green-700);font-weight:700}
+    .article-table td.fail{color:#991b1b;font-weight:700}
+    .article-table td.caution{color:#92400e;font-weight:700}
+    .article-toc{margin:22px 0;padding:18px 20px;border:1px solid rgba(23,44,81,.12);border-radius:16px;background:#f5f9ff}
+    .article-toc h3{margin:0 0 10px;font-size:1.02rem;color:#12365f;text-transform:uppercase;letter-spacing:.04em}
+    .article-toc ol{margin:0;padding-left:22px;color:var(--concept-primary)}
+    .article-toc li{margin:0 0 6px}
+    .article-toc a{color:var(--concept-primary);text-decoration:none;font-weight:700}
+    .article-toc a:hover{text-decoration:underline}
+    .article-faq{margin-top:28px}
+    .article-faq details{border:1px solid rgba(23,44,81,.12);border-radius:14px;padding:14px 16px;background:#fff}
+    .article-faq details + details{margin-top:12px}
+    .article-faq summary{cursor:pointer;font-weight:700;color:#12365f}
+    .article-faq p{margin:12px 0 0}
+    .article-cta{margin-top:28px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#12365f,var(--concept-primary) 56%,#3a6fa5);color:#fff}
+    .article-cta h3{margin:0 0 10px;color:#fff}
+    .article-cta p{margin:0 0 16px;color:#e2ecf9}
+    .article-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .case-card{margin:22px 0;border:1px solid rgba(15,76,129,.18);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 12px 28px rgba(9,32,58,.1)}
+    .case-card__head{padding:16px 18px;background:linear-gradient(120deg,rgba(15,76,129,.06),rgba(58,111,165,.04));border-bottom:1px solid rgba(23,44,81,.08)}
+    .case-card__tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;color:var(--concept-primary);text-transform:uppercase;margin-bottom:6px}
+    .case-card__head h3{margin:0;color:#12365f}
+    .case-card__body{padding:18px}
+    .case-card__body p{margin:0 0 12px}
+    .case-card__body ul{margin:0 0 12px 20px}
+    .formula-box{margin:22px 0;padding:20px 22px;border-radius:16px;background:#eef5ff;border:1px solid rgba(15,76,129,.2);font-family:monospace}
+    .formula-box p{margin:0 0 8px;color:var(--concept-primary);font-size:1.02rem}
+    .formula-box .formula-result{margin-top:12px;font-weight:700;color:#12365f;font-size:1.06rem;border-top:1px solid rgba(15,76,129,.2);padding-top:10px}
+    .test-badge{display:inline-block;padding:.18rem .52rem;border-radius:999px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+    .test-badge--fat{background:rgba(15,76,129,.12);color:var(--concept-primary)}
+    .test-badge--sat{background:rgba(15,94,45,.12);color:var(--vms-green-700)}
+    .test-badge--both{background:rgba(109,40,217,.12);color:#6d28d9}
+
+    .blog-sidebar{display:grid;gap:16px;position:sticky;top:80px}
+    .sidebar-card{background:#fff;border:1px solid rgba(23,44,81,.12);border-radius:18px;padding:18px;box-shadow:0 10px 26px rgba(9,32,58,.06)}
+    .sidebar-card h3{margin:0 0 10px;font-size:1.05rem;color:#12365f}
+    .sidebar-card p{margin:0 0 12px;color:#4a5f79}
+    .sidebar-card ul{margin:0;padding-left:18px;color:#314a67}
+    .sidebar-card li + li{margin-top:8px}
+    .sidebar-card--accent{background:linear-gradient(135deg,#12365f,var(--concept-primary));color:#fff;border-color:transparent}
+    .sidebar-card--accent h3,.sidebar-card--accent p{color:#fff}
+    .sidebar-card--accent .btn{background:#fff;color:var(--concept-primary);width:100%;justify-content:center}
+    .sidebar-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--concept-primary);text-decoration:none}
+    .sidebar-link:hover{text-decoration:underline}
+
+    .mobile-phone-sticky{position:fixed;bottom:14px;right:14px;z-index:80;display:none}
+    .mobile-phone-sticky a{display:inline-flex;align-items:center;gap:8px;background:var(--concept-primary);color:#fff;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:700;box-shadow:0 12px 28px rgba(8,28,54,.45)}
+    .mobile-phone-sticky a:hover{background:#12365f}
+    @media (max-width:680px){.mobile-phone-sticky{display:flex}}
+
+    @media (max-width:980px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{grid-template-columns:repeat(2,minmax(0,1fr));position:static}}
+    @media (max-width:680px){.hero{min-height:440px}.hero__content{padding-block: 74px 62px}.blog-article{padding:20px}.article-grid,.article-grid--3,.blog-sidebar{grid-template-columns:1fr}.article-table{min-width:0}}
+
+    /* Desbordamiento en movil: `.blog-layout` ya baja a una columna en 980 px,
+       pero `1fr` es `minmax(auto,1fr)` y el minimo automatico del articulo es
+       su ancho de contenido minimo. Sin esto, el indice o una tabla ensanchan
+       la pista y la pagina se arrastra de lado. Medido: hasta 781 px en una
+       ventana de 390. */
+    .blog-article{min-width:0}
+    @media (max-width:980px){.blog-layout{grid-template-columns:minmax(0,1fr)}}
+  </style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://vmsenergy.com/en/blog.html"}, {"@type": "ListItem", "position": 3, "name": "FAT and SAT tests of transformers", "item": "https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html"}]}, {"@type": "BlogPosting", "headline": "FAT and SAT testing of transformers: technical guide IEC 60076", "description": "Factory Acceptance Test (FAT) and Site Acceptance Test (SAT) protocols for industrial transformers: TTR, winding resistance, Zcc, no-load and load losses, tan delta, dielectric tests and DGA analysis according to IEC 60076.", "image": "https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-05-08", "dateModified": "2026-05-08", "mainEntityOfPage": "https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html", "articleSection": "Electrical engineering", "keywords": "Transformer tests, transformers, IEC 60076, transformation ratio, devanated resistance, short circuit impedance, vacuum losses, tangent delta, DGA transformers, dielectric tests, transformer acceptance"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What's the difference between FAT and SAT in transformers?", "acceptedAnswer": {"@type": "Answer", "text": "The FAT (Factory Acceptance Test) is the set of tests that are carried out at the manufacturer's facilities before the equipment leaves the factory. Verify that the transformer was manufactured according to the order specifications. The SAT (Site Acceptance Test) is carried out at the installation site, after transportation and assembly, before the first commercial energization. Your goal is to confirm that the equipment arrived without damage and that the installation is correct. Some tests are repeated in both stages; others are exclusive to each one."}}, {"@type": "Question", "name": "What tolerance does IEC 60076 accept in the transformation ratio?", "acceptedAnswer": {"@type": "Answer", "text": "In accordance with IEC 60076-1, the maximum acceptable deviation in the turns ratio (TTR) is ±0.5% from the value declared on the data plate, when measured at the nominal shunt. For other tap taps, the tolerance is calculated based on the full range of the changer. Larger deviations indicate a short circuit between turns or an incorrect internal connection and are cause for immediate rejection."}}, {"@type": "Question", "name": "When is the DGA analysis performed and what gases are the most critical?", "acceptedAnswer": {"@type": "Answer", "text": "Dissolved Gas Analysis (DGA) applies only to oil-filled transformers. In FAT it is optionally carried out as a basal reference (almost zero gases in new equipment). In SAT, a sample is taken before the first energization to confirm that the oil filling was correct, and another 24-72 hours after the first energization to detect any abnormal generation. The most critical gases are: hydrogen (H2) and ethylene (C2H4) indicate oil failures; Acetylene (C2H2) is an unequivocal sign of arc discharge; Carbon monoxide (CO) and carbon dioxide (CO2) indicate degradation of the insulating paper."}}, {"@type": "Question", "name": "What is the delta tangent test and when does it worry?", "acceptedAnswer": {"@type": "Answer", "text": "Tang delta (tan δ) or insulation power factor measures the dielectric losses in the transformer insulation system. An insulation in perfect condition has δ very close to zero. High values ​​indicate the presence of humidity, contamination or insulation degradation. In new transformers, typical values ​​are less than 0.5% (0.005) at 20°C. A value greater than 1.0% in new equipment is cause for rejection or investigation by the manufacturer. In the field, values ​​that triple the factory reading indicated in the FAT protocol suggest moisture contamination during transportation or storage."}}, {"@type": "Question", "name": "How is the resistance of devanados measured and what does it indicate?", "acceptedAnswer": {"@type": "Answer", "text": "Winding resistance is measured with a high-resolution micro-ohmmeter or Kelvin bridge, injecting a stabilized DC current. The values ​​are corrected to the reference temperature of 75°C according to IEC 60076-1. The test detects loose connections, incorrect splices, windings with shorted turns or poor soldering. The imbalance between phases of the same winding must not exceed 2% in three-phase transformers. A larger imbalance or a reading that does not match the FAT protocol indicates an internal problem that should be investigated before energizing."}}, {"@type": "Question", "name": "What dielectric tests are mandatory in FAT?", "acceptedAnswer": {"@type": "Answer", "text": "According to IEC 60076-3, the mandatory routine dielectric tests in FAT are: applied voltage test (ACWV), which applies an AC voltage at twice the rated voltage for 60 seconds to each winding against ground and the other windings; and induced voltage test (ACPD or IVPD), which induces a high voltage between terminals of the same winding to test the insulation between turns, between layers and between windings. In addition, for high voltage transformers (>72.5 kV) lightning impulse (LI) and switching impulse (SI) tests are carried out as type tests."}}, {"@type": "Question", "name": "Does the result of the FAT guarantee that the transformer will get to the site well?", "acceptedAnswer": {"@type": "Answer", "text": "No, the FAT guarantees that the transformer left the factory in accordance with the specification. Transporting large power transformers involves real risks: shocks, vibrations, excessive inclination, moisture ingress due to failure of the nitrogen seal or pressurization. That is why the SAT is mandatory and independent of the FAT. The minimum SAT protocol should always include: complete physical inspection, measurement of winding resistance, TTR, insulation power factor (tan delta) and — in oil-filled transformers — dielectric oil analysis (stiffness, humidity, DGA) before first energization."}}]}]}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "FAT and SAT Tests of Transformers: IEC 60076 Technical Guide | VMS Energy", "description": "Complete technical guide to FAT and SAT testing for industrial transformers: transformation ratio, winding resistance, Zcc, losses, insulation power factor and DGA analysis in accordance with IEC 60076.", "author": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html"}, "publisher": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/en/index.html", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}}, "datePublished": "2026-02-28", "dateModified": "2026-02-28", "image": ["https://vmsenergy.com/assets/img/blog/pruebas-transformadores/og-pruebas-fat-sat.webp"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html"}, "url": "https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html"}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/blog-pruebas-aceptacion-transformadores.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/blog-pruebas-aceptacion-transformadores.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+  <main id="contenido">
+
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" style="--article-image:url('../assets/img/Especialidades_servicios.webp')" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <span class="eyebrow">VMS Energy · Blog · Electrical engineering</span>
+        <h1 id="hero-title">FAT and SAT testing of industrial transformers: technical guide IEC 60076</h1>
+        <p>Factory and on-site acceptance protocols: what is measured, how it is interpreted, and when to reject equipment.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" href="#articulo">Read article</a>
+          <a class="btn btn--secondary" href="contacto_cta.html?producto=pruebas-fat-sat-transformadores">Request protocol for FAT/SAT</a>
+        </div>
+        <div class="hero__meta">
+          <span>May 8, 2026</span>
+          <span>12 min read</span>
+          <span>IEC 60076 · IEEE C57</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTENIDO ═══════════════ -->
+  <section class="blog-wrap" id="articulo">
+    <div class="container">
+      <div class="blog-layout">
+
+        <!-- ── ARTÍCULO ── -->
+        <article class="blog-article" aria-label="Article: FAT and SAT tests of transformers">
+
+          <!-- Tabla de contenidos -->
+          <nav class="article-toc" aria-label="Table of Contents">
+            <h3>Article content</h3>
+            <ol>
+              <li><a href="#fat-vs-sat">FAT vs SAT — differences and objectives</a></li>
+              <li><a href="#ttr">Transformation Ratio (TTR)</a></li>
+              <li><a href="#resistencia">Winding resistance</a></li>
+              <li><a href="#zcc">Short circuit impedance (Zcc) and load losses</a></li>
+              <li><a href="#vacio">No-load losses and excitation current</a></li>
+              <li><a href="#dielectrico">Insulation power factor (tan delta)</a></li>
+              <li><a href="#pruebas-hv">High voltage dielectric tests</a></li>
+              <li><a href="#dga">Dissolved Gas Analysis (DGA)</a></li>
+              <li><a href="#criterios">Acceptance criteria and red flags</a></li>
+              <li><a href="#caso">Case study: 2,500 kVA transformer SAT</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </nav>
+
+          <!-- Intro -->
+          <p class="article-lead">A transformer can come out of perfect factory and get damaged to the site. Or it can meet all the parameters on paper and fail in service because no one verified the isolation after transportation. The acceptance tests —FAT in factory, SAT in field — are the last line of defense before energize a team that can cost hundreds of thousands of dollars and whose failure can stop a Full floor.</p>
+
+          <p>This guide documents the technical protocols that VMS Energy applies in EPC projects: what tests are performed, at what stage, how the results are interpreted and what are the rejection criteria according to the IEC 60076 series and IEEE C57 standards.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 1. FAT vs SAT -->
+          <h2 id="fat-vs-sat">1. FAT vs SAT — differences and objectives</h2>
+
+          <p>Both testing stages have different and complementary objectives. Confusing them—or substituting one for the other—is a mistake that can leave undetected vulnerabilities in the system.</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table" aria-label="FAT vs SAT comparison">
+              <thead>
+                <tr>
+                  <th>Criterion</th>
+                  <th>FAT — Factory</th>
+                  <th>SAT — Site</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>When</strong></td>
+                  <td>Before dispatch, with the finished equipment</td>
+                  <td>After assembly, before first power-up</td>
+                </tr>
+                <tr>
+                  <td><strong>Where</strong></td>
+                  <td>Manufacturer facilities</td>
+                  <td>Final operating site</td>
+                </tr>
+                <tr>
+                  <td><strong>Objective</strong></td>
+                  <td>Check compliance with order data sheet</td>
+                  <td>Confirm integrity after transportation and installation</td>
+                </tr>
+                <tr>
+                  <td><strong>Base regulations</strong></td>
+                  <td>IEC 60076-1, IEC 60076-3, IEC 60076-2</td>
+                  <td>IEC 60076-1, IEEE C57.12.91, project criteria</td>
+                </tr>
+                <tr>
+                  <td><strong>Who testifies</strong></td>
+                  <td>Customer Engineer / EPC Supervisor</td>
+                  <td>EPC + Commissioner</td>
+                </tr>
+                <tr>
+                  <td><strong>If it fails</strong></td>
+                  <td>The manufacturer repairs before shipping</td>
+                  <td>Equipment is not energized; cause is investigated</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-callout">
+            <strong>Fundamental principle:</strong> The FAT certifies what left the factory. The SAT certifies what will be installed in service. Neither replaces the other. In EPC projects, both protocols must be defined in the contract with the manufacturer from the specification phase.
+          </div>
+
+          <!-- 2. TTR -->
+          <h2 id="ttr">2. Transformation Ratio (TTR)</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>The Turns Ratio Test (TTR) verifies that the relationship between the primary and secondary voltages of each tap changer matches what is declared on the data plate. It is the most fundamental test—if the transformation ratio is not correct, the transformer will not work for the application for which it was specified.</p>
+
+          <h3>How to do it</h3>
+          <p>A TTR (transformation ratio bridge) device is used that injects a low magnitude AC voltage to the primary and measures the voltage induced in the secondary, automatically calculating the ratio. The test is performed in all positions of the tap changer: nominal position, upper and lower limit, and at least one intermediate position.</p>
+
+          <div class="formula-box">
+            <p>Measured vs declared transformation ratio:</p>
+            <p>a = V<sub>1</sub> /V<sub>2</sub></p>
+            <p>Deviation (%) = |a<sub>measure</sub> − a<sub>nominal</sub>, / a<sub>nominal</sub> &times; 100</p>
+            <p class="formula-result">IEC 60076-1 tolerance: ≤ ± 0.5 % in nominal position</p>
+          </div>
+
+          <h3>Interpretation of results</h3>
+          <ul>
+            <li><strong>Deviation &lt; 0.5%:</strong> Compliant result. Register in protocol.</li>
+            <li><strong>Deviation 0.5%–1.0%:</strong> Alert zone. Repeat test, check TTR equipment connections. If it persists, investigate with the manufacturer.</li>
+            <li><strong>Deviation &gt; 1.0%:</strong> Cause for rejection. It may indicate shorted turns, incorrect connection of the tap changer or error on the data plate.</li>
+            <li><strong>Imbalance between phases in the same tap:</strong> Deviation greater than 0.3% between phases suggests an internal problem in one of the core columns.</li>
+          </ul>
+
+          <div class="article-divider"></div>
+
+          <!-- 3. Resistencia de devanados -->
+          <h2 id="resistencia">3. Winding resistance</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>The winding resistance measurement (DC Winding Resistance) detects problems in the internal electrical circuit of the transformer: loose connections, poor soldering, short-circuited turns or problems in the tap changer contacts.</p>
+
+          <h3>Procedure</h3>
+          <p>A stabilized direct current (typically 10–25 A) is injected into each winding and the resulting voltage drop is measured with a high-precision micro-ohmmeter (minimum resolution of 1 µΩ). <strong>The winding must be completely demagnetized</strong> before the test; otherwise, the variations of the cola will induce significant errors. The measurement is repeated in each tap of the changer.</p>
+
+          <p>All values are corrected at the reference temperature of 75°C according to the formula of IEC 60076-1:</p>
+
+          <div class="formula-box">
+            <p>R<sub>75</sub> = R<sub>T</sub> &times; (235 + 75) / (235 + T)</p>
+            <p>Where: R<sub>T</sub> = resistencia medida a temperatura T (&deg;C)</p>
+            <p>235 = constant for copper (use 225 for aluminum)</p>
+            <p class="formula-result">Winding temperature should be measured at the time of testing and recorded in the protocol</p>
+          </div>
+
+          <h3>Acceptance criteria</h3>
+          <ul>
+            <li><strong>Imbalance between phases:</strong> maximum 2% for trifa devanates (IEC 60076-1)</li>
+            <li><strong>Comparison with factory values (in SAT):</strong> the variation should not exceed 5% with respect to the corrected FAT protocol at the same temperature</li>
+            <li><strong>Difference between taps:</strong> values should vary monotonically according to the changer; irregular jumps indicate poor contacts</li>
+          </ul>
+
+          <div class="article-callout--warning article-callout">
+            <strong>Safety warning:</strong> HV windings store significant inductive energy. At the end of the test, <strong>never disconnect the cables before deactivating and downloading the measuring equipment</strong>. The sudden discharge can generate an arc and damage the insulation or cause accidents to personnel.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 4. Zcc -->
+          <h2 id="zcc">4. Short circuit impedance (Zcc) and load losses</h2>
+
+          <span class="test-badge test-badge--fat">Just a little bit of a fat.</span>
+
+          <p>The short circuit impedance test (or short circuit voltage, Ucc) measures the internal impedance of the transformer expressed as a percentage of the rated voltage. This value determines the maximum short circuit current that can circulate in the secondary, which is critical for the sizing of protective equipment.</p>
+
+          <h3>Procedure</h3>
+          <p>With the secondary short-circuited, the primary voltage increases until the nominal current circulates in both windings. The voltage at that point, expressed as a percentage of the nominal voltage, is the <em>Ucc short circuit voltage (%)</em>. The power consumed in that state is the <strong>Loss on load</strong> or loss in copper (P<sub>CC</sub>), which includes ohmic losses in the windings and additional losses due to eddy currents.</p>
+
+          <div class="formula-box">
+            <p>Zcc (%) = U<sub>CC</sub> /U<sub>N</sub> &times; 100</p>
+            <p>I<sub>DC(HV)</sub> = S<sub>N</sub> / (&radic;3 &times; U<sub>N(HV)</sub>) / Zcc</p>
+            <p class="formula-result">IEC 60076-1 tolerance: ±7.5% of the declared plate value for distribution transformers</p>
+          </div>
+
+          <h3>Practical implications of Zcc value</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Zcc (%)</th>
+                  <th>Short circuit current</th>
+                  <th>Voltage regulation</th>
+                  <th>Typical application</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3.5 &ndash; 4.0</td>
+                  <td class="fail">High (25–29× I<sub>N</sub>)</td>
+                  <td class="pass">Excellent (&lt;3%)</td>
+                  <td>High breaking capacity, sensitive variable loads</td>
+                </tr>
+                <tr>
+                  <td>4.5 &ndash; 5.75</td>
+                  <td>Average (17–22× I<sub>N</sub>)</td>
+                  <td>Good (3–5%)</td>
+                  <td>Standard industrial distribution, most EPC projects</td>
+                </tr>
+                <tr>
+                  <td>6.0 &ndash; 7.5</td>
+                  <td class="pass">Low (13–17× I<sub>N</sub>)</td>
+                  <td class="fail">Moderate (5–7%)</td>
+                  <td>High power, lower breaking capacity switches, powering heavy loads</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 5. Pérdidas en vacío -->
+          <h2 id="vacio">5. No-load losses and excitation current</h2>
+
+          <span class="test-badge test-badge--fat">Just a little bit of a fat.</span>
+
+          <p>The vacuum test (no-load test) is carried out with the secondary open, applying the nominal voltage to the primary. It measures two parameters that characterize the magnetic core of the transformer:</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">No-load losses (P’0)</span>
+              <h3>Iron losses</h3>
+              <p>Power consumed by hysteresis and eddy currents in the core. They are present <strong>provided the transformer is energized</strong>, regardless of the load. Its value should not exceed 5% of the guaranteed value.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">No-load current (I’0 %)</span>
+              <h3>Excitation current</h3>
+              <p>Percentage of the nominal current necessary to magnetize the core. Typically 0.2–2% in modern transformers. High values ​​may indicate damaged core sheets or incorrect stacking pressure.</p>
+            </div>
+          </div>
+
+          <h3>Importance in the life cycle</h3>
+          <p>No-load losses represent the permanent energy cost of the transformer. In projects with Total Cost of Ownership (TCO) evaluation, a transformer with 20% higher no-load losses can cost several thousand additional dollars in energy over its useful life. That is why demanding EPC specifications establish guaranteed maximum values ​​of P&#x27;0, not just tolerances with respect to the declared value.</p>
+
+          <div class="article-divider"></div>
+
+          <!-- 6. Tangente delta -->
+          <h2 id="dielectrico">6. Insulation power factor (tan delta)</h2>
+
+          <span class="test-badge test-badge--both">FAT + SAT</span>
+
+          <p>The insulation power factor—known as tangent delta (tan δ) or dissipation factor (DF)—is the most sensitive measure of the condition of the transformer insulation system. It quantifies the dielectric losses of solid (paper) and liquid (oil or resin) insulation expressed as a quotient between the resistive current (real losses) and the total capacitive current.</p>
+
+          <div class="formula-box">
+            <p>tan &delta; = I<sub>R</sub> / I<sub>C</sub> = P / (U &times; I<sub>Total</sub>)</p>
+            <p>An ideal isolation would be purely capacitive: so </p>
+            <p class="formula-result">In new transformers: tan δ &lt; 0.005 (0.5%) at 20°C — IEC 60250</p>
+          </div>
+
+          <h3>Measurement Settings</h3>
+          <p>The test is performed with the transformer de-energized, using a Schering bridge or equivalent equipment. Three classic configurations are measured:</p>
+          <ul>
+            <li><strong>CH (HT winding to ground, LV winding shorted to ground):</strong> Measures the insulation of the high voltage winding towards ground and towards the LV winding.</li>
+            <li><strong>CL (LV winding, HV shorted to ground):</strong> Measures the insulation of the low voltage winding.</li>
+            <li><strong>CHL (HV to LV, both floating):</strong> Measures the insulation between windings, particularly sensitive to the condition of the paper between layers.</li>
+          </ul>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>so</th>
+                  <th>Interpretation</th>
+                  <th>Recommended action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="pass">&lt; 0.5</td>
+                  <td>Excellent — sound insulation</td>
+                  <td>Register as base. Energize.</td>
+                </tr>
+                <tr>
+                  <td>0.5 &ndash; 1.0</td>
+                  <td>Good — acceptable on new equipment</td>
+                  <td>Register. Compare with FAT values.</td>
+                </tr>
+                <tr>
+                  <td class="caution">1.0 &ndash; 2.0</td>
+                  <td>Precautionary area</td>
+                  <td>Investigate if the FAT value was lower. Review storage and transportation conditions. Consider drying.</td>
+                </tr>
+                <tr>
+                  <td class="fail">&gt; 2.0 (new equipment)</td>
+                  <td>Unacceptable</td>
+                  <td>Do not energize. Report to the manufacturer. Possible insulation damage or contamination.</td>
+                </tr>
+                <tr>
+                  <td class="fail">&gt; 3&times; valor FAT (SAT)</td>
+                  <td>Transport damage or moisture</td>
+                  <td>Do not energize. Drying process or return to factory.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 7. Pruebas dieléctricas -->
+          <h2 id="pruebas-hv">7. High voltage dielectric tests</h2>
+
+          <span class="test-badge test-badge--fat">Only FAT (routine)</span>
+
+          <p>Dielectric tests verify that the transformer insulation can withstand the surges to which it will be subjected in service. IEC 60076-3 establishes two routine tests and additional type tests for high voltage levels.</p>
+
+          <div class="article-grid">
+            <div class="article-mini-card">
+              <span class="tag">Applied voltage test (ACWV)</span>
+              <h3>Applied Voltage Withstand</h3>
+              <p>A separate AC voltage is applied to each winding during <strong>60 seconds</strong>. The test voltage is a function of the winding insulation level (NBI). Test the insulation between windings and between each winding and ground.</p>
+            </div>
+            <div class="article-mini-card">
+              <span class="tag">Induced voltage (A/C/IVPD)</span>
+              <h3>Induced Voltage</h3>
+              <p>A voltage is induced between terminals of the same winding at a high frequency (100–400 Hz) to avoid saturation. Tests the insulation between turns, between layers and between windings under operating conditions.</p>
+            </div>
+          </div>
+
+          <h3>Type tests — lightning impulse (LI) and switching impulse (SI)</h3>
+          <p>For transformers with rated voltage ≥ 72.5 kV, lightning impulse test (LI) is mandatory as a type test. A 1.2/50 µs pulse is applied with an amplitude defined by the Basic Impulse Level (NBI) of the device. The wave must be recorded on a high-speed digital oscilloscope and compared with the reference wave. Any wave deformation is evidence of internal failure.</p>
+
+          <div class="article-callout">
+            <strong>EPC Note:</strong> Type tests (LI, SI, heating) are usually performed only once per manufacturer design, not on each unit. In critical projects, the customer may require proof of LI per unit; This must be negotiated in the technical and commercial specification before ordering, as it involves additional cost and time.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 8. DGA -->
+          <h2 id="dga">8. Dissolved Gas Analysis (DGA)</h2>
+
+          <span class="test-badge test-badge--sat">Priority in SAT</span>
+
+          <p>Dissolved Gas Analysis is the most informative diagnostic tool available for oil transformers. The different types of electrical or thermal failure generate characteristic gases that remain dissolved in the oil and can be identified by gas chromatography (GC).</p>
+
+          <h3>Key gases and their meaning</h3>
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Gas</th>
+                  <th>Symbol</th>
+                  <th>Probable origin</th>
+                  <th>Alert level (new equipment)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hydrogen</td>
+                  <td>H₂</td>
+                  <td>Partial oil discharge, slight overheating</td>
+                  <td class="caution">&gt; 100ppm</td>
+                </tr>
+                <tr>
+                  <td>Methane</td>
+                  <td>CH₄</td>
+                  <td>Oil overheating (&lt;300°C)</td>
+                  <td class="caution">&gt; 120ppm</td>
+                </tr>
+                <tr>
+                  <td>Ethylene</td>
+                  <td>C₂H₄</td>
+                  <td>Severe oil overheating (&gt;500°C)</td>
+                  <td class="caution">&gt; 50 ppm</td>
+                </tr>
+                <tr>
+                  <td>Ethane</td>
+                  <td>C₂H₆</td>
+                  <td>Moderate oil overheating</td>
+                  <td>&gt; 65 ppm</td>
+                </tr>
+                <tr>
+                  <td>Acetylene</td>
+                  <td>C₂H₂</td>
+                  <td><strong>Electric arc in oil</strong></td>
+                  <td class="fail">&gt; 1 ppm (any level is alarm)</td>
+                </tr>
+                <tr>
+                  <td>Carbon monoxide</td>
+                  <td>CO</td>
+                  <td>Thermal degradation of insulating paper (&lt;300°C)</td>
+                  <td class="caution">&gt; 350 ppm</td>
+                </tr>
+                <tr>
+                  <td>Carbon dioxide</td>
+                  <td>CO₂</td>
+                  <td>Paper degradation (&gt;300°C) or normal aging</td>
+                  <td>&gt; 2,500 ppm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Method of interpretation: Rogers relationship and IEC 60599 codes</h3>
+          <p>Gases are not interpreted in isolation but through relationships between them. The method of <strong>IEC 60599 codes</strong> (revised from Rogers) classifies probable failure by calculating three ratios: CH₄/H₂, C₂H₂/C₂H₄ and C₂H₄/C₂H₆. Duval&#x27;s method offers a graphic triangle that allows identifying the type of failure with greater robustness when any of the quotients are undefined by zero values.</p>
+
+          <div class="article-callout">
+            <strong>SAT protocol for oil transformers:</strong> Take sample before first energization to confirm that the filling was correct and set baseline. Repeat 24 hours after first energy and compare. An explosive increase of any gas between both samples is a sign of active failure.
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 9. Criterios de aceptación -->
+          <h2 id="criterios">9. Acceptance criteria and red flags</h2>
+
+          <p>The acceptance protocol must document the pass/fail criteria before starting the tests, not during their analysis. Below is a consolidated summary of the most relevant rejection thresholds:</p>
+
+          <div class="article-table-wrap">
+            <table class="article-table">
+              <thead>
+                <tr>
+                  <th>Test</th>
+                  <th>Stage</th>
+                  <th>Rejection criterion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transformation ratio</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">Deviation &gt; 0.5% in nominal tap; imbalance between phases &gt; 0.3%</td>
+                </tr>
+                <tr>
+                  <td>Winding resistance</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">Phase imbalance &gt; 2%; variation vs FAT &gt; 5%</td>
+                </tr>
+                <tr>
+                  <td>Zcc Impedance (%)</td>
+                  <td>FAT</td>
+                  <td class="fail">Deviation &gt; 7.5% of the guaranteed value (IEC 60076-1)</td>
+                </tr>
+                <tr>
+                  <td>Load losses (Pcc)</td>
+                  <td>FAT</td>
+                  <td class="fail">Exceeds guaranteed value by more than 10% (IEC 60076-1)</td>
+                </tr>
+                <tr>
+                  <td>No-load losses (P’0)</td>
+                  <td>FAT</td>
+                  <td class="fail">Exceeds guaranteed value by more than 10%</td>
+                </tr>
+                <tr>
+                  <td>Tangent delta (tan</td>
+                  <td>FAT + SAT</td>
+                  <td class="fail">&gt; 2.0% in new equipment; &gt; 3× FAT value in SAT</td>
+                </tr>
+                <tr>
+                  <td>Dielectric test (ACWV)</td>
+                  <td>FAT</td>
+                  <td class="fail">Any failure (disruptive or flash) during the test</td>
+                </tr>
+                <tr>
+                  <td>Acetylene (DGA)</td>
+                  <td>SAT</td>
+                  <td class="fail">Any concentration &gt; 1 ppm or increase between samples</td>
+                </tr>
+                <tr>
+                  <td>H₂ or CO (DGA)</td>
+                  <td>SAT</td>
+                  <td class="caution">Overcome IEC 60599 alert levels before first load</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- 10. Caso de estudio -->
+          <h2 id="caso">10. Case study: 2,500 kVA transformer SAT, Dyn11</h2>
+
+          <div class="case-card">
+            <div class="case-card__head">
+              <span class="case-card__tag">SAT Case — Processing plant, Sonora</span>
+              <h3>DEEMSA 2,500 kVA transformer, 34.5 kV / 480 V, Dyn11, ONAN, Zcc 5.75%</h3>
+            </div>
+            <div class="case-card__body">
+              <p><strong>Context:</strong> EPC project for mineral processing plant in Sonora, 1,500 meters above sea level. Transformer transported by flatbed truck from Monterrey (560 km). The unit arrived without apparent incident according to the impact accelerometer, but the full SAT protocol was executed per project specification.</p>
+              <p><strong>SAT results:</strong></p>
+              <ul>
+                <li><strong>Physical inspection:</strong> No visible mechanical damage. Nitrogen pressure (sealed preservative): 2.1 psi positive — correct, indicates intact seal.</li>
+                <li><strong>TTR (transformation relationship):</strong> Phases A: 71.87 (nominal: 71.88), B: 71.89, C: 71.87. Max deviation 0.013% — <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>Winding resistance (HV at 23°C):</strong> A: 14.82 Ω, B: 14.85 Ω, C: 14.83 Ω. Imbalance: 0.20% — <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>Delta tangent (CH):</strong> 0.38% — Registered FAT: 0.31%. Variation: +22.6%, within 3× tolerance. <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>Dielectric strength of oil (before energizing):</strong> 52 kV/mm — minimum limit 30 kV/mm (IEC 60156) — <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>Moisture in oil:</strong> 8.2 ppm — 35 ppm limit for 34.5 kV (IEC 60422) — <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>DGA before energizing:</strong> All gases &lt; 5 ppm. acetylene: not detected — <span style="color:var(--vms-green-700);font-weight:700">COMPLIANT</span></li>
+                <li><strong>DGA at 24 hours of operation:</strong> H₂: 12 ppm, CH₄: 8 ppm, all other gases &lt; 5 ppm, acetylene: not detected — <span style="color:var(--vms-green-700);font-weight:700">NORMAL</span></li>
+              </ul>
+              <p><strong>Conclusion:</strong> Transformer approved for commercial operation. Baseline DGA is documented as a reference for the 6 month predictive maintenance program.</p>
+            </div>
+          </div>
+
+          <div class="article-divider"></div>
+
+          <!-- FAQ -->
+          <h2 id="faq">Frequently asked questions about FAT and SAT tests</h2>
+
+          <div class="article-faq">
+
+            <details open>
+              <summary>What&#x27;s the difference between FAT and SAT in transformers?</summary>
+              <p>The FAT (Factory Acceptance Test) is performed at the manufacturer&#x27;s facilities, before the equipment is shipped. Verify that the transformer was built according to the order data sheet. The SAT (Site Acceptance Test) is executed at the installation site, after transportation and assembly, confirming that the equipment arrived without damage and that the installation is correct before the first commercial energization. Some parameters are measured in both stages; others are exclusive to each one.</p>
+            </details>
+
+            <details>
+              <summary>What tolerance does IEC 60076 accept in the transformation ratio?</summary>
+              <p>In accordance with IEC 60076-1, the maximum acceptable deviation in the transformation ratio (TTR) is ±0.5% from the declared value, when measured at the nominal bypass. Larger deviations indicate short circuit between turns or incorrect internal connection and are cause for rejection.</p>
+            </details>
+
+            <details>
+              <summary>When is the DGA done and what gases are the most critical?</summary>
+              <p>The DGA applies only to oil-filled transformers. In FAT, it can optionally be taken as a basal value. In SAT, it is mandatory before the first energization and is repeated 24–72 hours later. The most critical gas is <strong>acetylene (C2H2)</strong>: any concentration—even 1 ppm—is an unequivocal sign of an electric arc and immediate cause for investigation. Hydrogen (&gt;100 ppm), ethylene (&gt;50 ppm) and CO (&gt;350 ppm) are next in priority.</p>
+            </details>
+
+            <details>
+              <summary>What is tangent delta and when does it worry?</summary>
+              <p>Tangent delta (tan δ) measures the dielectric losses of the insulation. A perfect isolation would have tan δ = 0; humidity, pollution and aging raise it. In new transformers, the value must be less than 0.5% (0.005) at 20°C. A value greater than 2.0% in new equipment is cause for rejection. In SAT, a value greater than three times that recorded in the FAT indicates possible moisture ingress during transportation or storage and requires investigation before energizing.</p>
+            </details>
+
+            <details>
+              <summary>How is the resistance of devanados measured and what does it detect?</summary>
+              <p>A micro-ohmmeter is used that injects stabilized DC current and measures the voltage drop. The values ​​are corrected to 75°C (IEC 60076-1). The test detects loose connections, poor soldering, shorted turns and faulty contacts in the tap changer. The imbalance between phases must not exceed 2%. In SAT, the variation with respect to the FAT protocol should not be greater than 5%.</p>
+            </details>
+
+            <details>
+              <summary>Does the result of the FAT guarantee that the transformer will get to the site well?</summary>
+              <p>No. The FAT guarantees that it left the factory according to specification. Transportation may cause shock, vibration, humidity due to failure of the positive pressure seal, or incorrect oil filling in the field. That is why the SAT is mandatory and independent of the FAT. At a minimum, the SAT should include TTR, winding resistance, tan delta, and—in oil-filled transformers—dielectric oil analysis (stiffness, moisture, DGA) prior to first energization.</p>
+            </details>
+
+            <details>
+              <summary>What dielectric tests are mandatory in FAT?</summary>
+              <p>According to IEC 60076-3, the mandatory routine dielectric tests in FAT are: <strong>applied voltage (ACWV)</strong>, which subjects each winding to a separate AC voltage for 60 seconds; and proof of <strong>induced voltage (A/PDIV/PDV)</strong>, which induces high voltage between terminals of the same winding at high frequency to test the insulation between turns. For HV transformers (≥ 72.5 kV), lightning impulse (LI) and switching impulse (SI) tests are added as type tests.</p>
+            </details>
+
+          </div>
+
+          <!-- CTA final -->
+          <div class="article-cta">
+            <h3>Do you need a FAT/SAT protocol for your project?</h3>
+            <p>VMS Energy designs, monitors and executes acceptance test protocols according to IEC 60076 and IEEE C57 for distribution and power transformers in EPC projects. From technical specification to commissioning and first energyization.</p>
+            <div class="article-actions on-dark">
+              <a class="btn btn--primary" href="contacto_cta.html?producto=pruebas-fat-sat-transformadores">Request protocol for FAT/SAT</a>
+              <a class="btn btn--secondary" href="lp-pruebas-comisionamiento-puesta-en-servicio.html">See commissioning services</a>
+            </div>
+          </div>
+
+        </article><!-- /blog-article -->
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="blog-sidebar" aria-label="Related resources">
+
+          <!-- CTA accent -->
+          <div class="sidebar-card sidebar-card--accent">
+            <h3>The factory supervision of the FAT</h3>
+            <p>Our engineers assist as customer technical representatives during FAT testing to ensure that no results are left undocumented or unvalidated.</p>
+            <a class="btn" href="contacto_cta.html?producto=supervision-fat">Schedule supervision</a>
+          </div>
+
+          <!-- Checklist SAT -->
+          <div class="sidebar-card">
+            <h3>Minimum SAT Checklist</h3>
+            <ul>
+              <li>✓ Physical inspection and pressurisation (N2)</li>
+              <li>✓ Transformation Ratio (TTR)</li>
+              <li>✓ Winding resistance</li>
+              <li>✓ Tangent delta / power factor of insulation</li>
+              <li>✓ Dielectric strength of oil</li>
+              <li>✓ Oil humidity (ppm H2O)</li>
+              <li>✓ DGA before energizing:</li>
+              <li>✓ Vector group verification</li>
+              <li>✓ Continuity and isolation test for women</li>
+              <li>✓ DGA at 24 h after first energyisation</li>
+            </ul>
+          </div>
+
+          <!-- Normas aplicables -->
+          <div class="sidebar-card">
+            <h3>Reference standards</h3>
+            <ul>
+              <li><strong>IEC 60076-1</strong> — General requirements</li>
+              <li><strong>IEC 60076-2</strong> — Heating and cooling</li>
+              <li><strong>IEC 60076-3</strong> — Insulation levels and dielectric tests</li>
+              <li><strong>IEC 60599</strong> — Interpretation by DGA</li>
+              <li><strong>IEC 60156</strong> — Dielectric hardness of oil</li>
+              <li><strong>IEC 60422</strong> — Oil maintenance guide</li>
+              <li><strong>IEEE C57.12.91</strong> — Testing of distribution transformers</li>
+              <li><strong>IEEE C57.104</strong> — DGA in transformers</li>
+            </ul>
+          </div>
+
+          <!-- Artículos relacionados -->
+          <div class="sidebar-card">
+            <h3>Related articles</h3>
+            <ul>
+              <li><a class="sidebar-link" href="blog-seleccion-transformadores-industriales.html">→ Selection of industrial transformers</a></li>
+              <li><a class="sidebar-link" href="blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html">→ Maintenance of HV/MV/LV substations</a></li>
+            </ul>
+          </div>
+
+          <!-- Servicios vinculados -->
+          <div class="sidebar-card">
+            <h3>Related services</h3>
+            <p>Testing and commissioning of transformers as part of the EPC cycle.</p>
+            <a class="sidebar-link" href="lp-pruebas-comisionamiento-puesta-en-servicio.html">→ Installation and commissioning →</a><br><br>
+            <a class="sidebar-link" href="especialidad_mantenimiento.html#inicio">→ Diagnosis and maintenance</a><br><br>
+            <a class="sidebar-link" href="procura.html#inicio">→ Technical supply of transformers</a>
+          </div>
+
+          <!-- Contacto -->
+          <div class="sidebar-card">
+            <h3>Technical contact</h3>
+            <p>Talk to a transformer and substation engineer.</p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 3h4l2 5-2.6 1.6a12.5 12.5 0 0 0 6.5 6.5L16 13.5l5 2v4a1.5 1.5 0 0 1-1.7 1.5A17.5 17.5 0 0 1 3 4.7 1.5 1.5 0 0 1 4.5 3Z"/></svg></strong> <a href="tel:+523338130739">+52 33 3813 0739</a></p>
+            <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></strong> <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a></p>
+          </div>
+
+        </aside><!-- /blog-sidebar -->
+
+      </div><!-- /blog-layout -->
+    </div><!-- /container -->
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+    </main>
+
+  <footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- Botón flotante móvil -->
+  <div class="mobile-phone-sticky">
+    <a href="tel:+523338130739" aria-label="Call VMS Energy">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.86-1.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call
+    </a>
+  </div>
+
+
+</body>
+</html>

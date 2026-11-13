@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en" data-concept="sectorial" data-sector="agroindustria">
+<head>
+<meta charset="UTF-8">
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Electrical Solutions for Agroindustry and Sugar Engineers, VMS Energy Mexico</title>
+<meta name="description" content="Electrical EPC for agroindustry and sugar mills in Mexico. Projects from $1,000,000 MXN. Woodward turbogenerators, MV/HV substations and automation. 12+ mills served.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Electrical Solutions for Agroindustry and Sugar Engineers", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com"}, "areaServed": {"@type": "Country", "name": "Mexico"}, "description": "EPC electrical engineering, turbogenerators, MV/HV substations, process automation and predictive maintenance for the sugar and agroindustrial industry in Mexico.", "serviceType": "Agroindustry Electrical Engineering"}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does an unprogrammed stoppage of the Turbogenerator cost during the harvest?", "acceptedAnswer": {"@type": "Answer", "text": "The cost of an unscheduled stoppage at a sugar mill during the harvest varies between $50,000 and $500,000 MXN per hour, depending on the size of the mill and the price of sugar. This includes loss of ground cane, startup costs, possible damage to process equipment and contractual penalties with cane suppliers. A predictive maintenance program during repair has an ROI of months, not years."}}, {"@type": "Question", "name": "How often should the electrical system of an ingenuity be given greater maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "Major maintenance should be performed during the annual repair (May-October). This includes: substation review and testing (TTR, VLF, megger on MV cables), transformer maintenance, protection adjustment, MCC and panel review, and complete service of Woodward governors and turbogenerators. During the harvest, predictive monitoring (thermography, vibration analysis) is carried out but no major maintenance."}}, {"@type": "Question", "name": "Can they execute electrical EPC projects during repair without affecting the start of harvest?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, it is our specialty. We work with schedules adjusted to the repair window (usually June-October). We coordinate engineering, equipment supply and construction to ensure that the power plant is ready before pre-safra start in November. The key is to start detailed engineering at least 3 months before the start of repair to ensure delivery of import equipment."}}, {"@type": "Question", "name": "What is the difference between Governors Woodward 505 and 2301D and when should it be updated?", "acceptedAnswer": {"@type": "Answer", "text": "The Woodward 505 is a digital speed controller for steam turbines with advanced extraction, backpressure and grid synchronization control capabilities. The 2301D is more compact and economical, ideal for turbines up to ~5 MW in isochronous or droop mode. It is advisable to update when the mechanical governor no longer obtains spare parts, when there is instability in speed (hunting), or when integration with SCADA is required. Upgrading to digital typically improves speed stability from ±3% to ±0.5%."}}, {"@type": "Question", "name": "What electrical regulations specifically apply to sugar mills in Mexico?", "acceptedAnswer": {"@type": "Answer", "text": "The mills must comply with NOM-001-SEDE (electrical installations in general), NOM-029-STPS (maintenance of electrical installations), IEEE C37 (protection in generation systems), IEEE C57 (power transformers), and the requirements of the CFE for interconnection of own generation with the grid (Regulation of the Electrical Industry and its interconnection contracts). SAGARPA/SADER may also require technical documentation of electrical installations in mill certification audits."}}, {"@type": "Question", "name": "How does VMS Energy reduce electricity consumption in a sugar mill?", "acceptedAnswer": {"@type": "Answer", "text": "Through three main levers: (1) replacement of mechanical starters with variable frequency drives in pumps and process fans (typical savings 15-30% in consumption of these equipment), (2) power factor correction with APFC banks to eliminate CFE penalties and reduce losses in cables (return of investment 12-24 months), and (3) MCC update with consumption monitoring per circuit to identify equipment with low efficiency or oversized."}}]}</script>
+
+
+<link rel="stylesheet" href="../sectorial-base.css" />
+<style>
+  /* ─── Timeline dots — agroindustria ─── */
+  .tl-dot--green { background:var(--vms-green-500); box-shadow:0 0 0 4px var(--success-bg) }
+  .tl-dot--amber { background:#d97706; box-shadow:0 0 0 4px #fef3c7 }
+  .tl-dot--blue  { background:var(--vms-blue-600); box-shadow:0 0 0 4px #dbeafe }
+  .tl-dot--gray  { background:#64748b; box-shadow:0 0 0 4px #f1f5f9 }
+  /* ─── Normatividad table ─── */
+  .norm-table { width:100%;border-collapse:collapse;margin-top:20px;font-size:.88rem }
+  .norm-table th { background:var(--concept-dark);color:#fff;padding:10px 14px;text-align:left;font-weight:700 }
+  .norm-table td { padding:9px 14px;border-bottom:1px solid var(--border-line);color:#374151 }
+  .norm-table tr:last-child td { border-bottom:none }
+  .norm-table tr:nth-child(even) td { background:var(--concept-section-alt) }
+
+  /* ─── Retos del sector ─── */
+  .challenge-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px }
+  .challenge-card { background:#fff;border:1px solid var(--border-line);border-radius:16px;padding:28px 24px;position:relative;overflow:hidden }
+  .challenge-card::before { content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--concept-primary) }
+  .challenge-card__num { font-size:2.6rem;font-weight:900;color:var(--concept-light);line-height:1;margin-bottom:12px }
+  .challenge-card__title { font-size:1.08rem;font-weight:800;color:var(--concept-dark);margin:0 0 10px }
+  .challenge-card__desc { font-size:.9rem;color:#4b5563;line-height:1.65;margin:0 }
+  @media (max-width:860px){.challenge-grid{grid-template-columns:1fr}}
+  /* ─── FAQ accordion ─── */
+  .faq-list { max-width:820px }
+  .faq-item { border-bottom:1px solid var(--border-line) }
+  .faq-q { width:100%;background:none;border:none;text-align:left;padding:18px 0;font-family:inherit;font-size:1rem;font-weight:700;color:var(--concept-dark);cursor:pointer;display:flex;justify-content:space-between;gap:12px }
+  .faq-q::after { content:"＋";font-size:1.2rem;color:var(--concept-primary);flex-shrink:0 }
+  .faq-q[aria-expanded="true"]::after { content:"－" }
+  .faq-a { display:none;padding:0 0 18px;color:#374151;font-size:.95rem;line-height:1.65 }
+  .faq-a.is-open { display:block }
+</style>
+
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://vmsenergy.com/en/soluciones.html"}, {"@type": "ListItem", "position": 3, "name": "Electrical Solutions for Agroindustry and Sugar Engineers...", "item": "https://vmsenergy.com/en/soluciones_agroindustria.html"}]}</script>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/soluciones_agroindustria.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_agroindustria.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/soluciones_agroindustria.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_agroindustria.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- HERO -->
+  <!-- Hero fotografico: la imagen la fija la pagina, el velo y el alto
+     salen de tokens.css (--hero-overlay .72, --hero-min-h 620px).
+     Ver tokens.css seccion 10 para por que la ruta no vive en el sistema. -->
+<section class="hero hero--photo" style="--hero-image:url('../assets/img/services/agroindustria.webp')" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">EPC Agroindustry · Projects from $1,000,000 MXN</div>
+      <h1 id="heroTitle">Electrical Engineering for Agribusiness<br><em>Sugar Mills · Power Plant · Zafra</em></h1>
+      <p>Specialists in electrical solutions for the sugar industry in Mexico: Woodward turbogenerators, MV/HT substations, process automation and predictive maintenance during the harvest and repair.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=sector-agroindustria#ctaForm">Request Project Evaluation</a>
+        <a class="btn btn--ghost" href="#soluciones">View Solutions</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">12+ mills served</span>
+        <span class="hero-stat">Governors Woodward 505/2301</span>
+        <span class="hero-stat">Substations 13.8–69 kV</span>
+        <span class="hero-stat">Process automation</span>
+        <span class="hero-stat">Jalisco, Morelos, Veracruz, Oaxaca…</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <div class="kpi-strip">
+    <div class="container">
+      <div class="kpi"><div class="kpi__val">12+</div><div class="kpi__lbl">sugar mills</div></div>
+      <div class="kpi"><div class="kpi__val">10</div><div class="kpi__lbl">states of the Republic</div></div>
+      <div class="kpi"><div class="kpi__val">18</div><div class="kpi__lbl">years in the sector</div></div>
+      <div class="kpi"><div class="kpi__val">24 hours</div><div class="kpi__lbl">zaffra response</div></div>
+      <div class="kpi"><div class="kpi__val">EPC</div><div class="kpi__lbl">design-construction</div></div>
+    </div>
+  </div>
+
+
+  <!-- RETOS DEL SECTOR -->
+  <section class="section section--alt" aria-labelledby="retosTitle">
+    <div class="container">
+      <span class="sec-label">Challenges in the sector</span>
+      <h2 class="sec-h2" id="retosTitle">The electrical pressure that every director of a sugar mill faces</h2>
+      <p class="sec-lead">The sugar industry operates under conditions that have no equivalent in other sectors: rigid seasonality, short maintenance windows and a cost of unemployment during the harvest that can exceed $500,000 MXN per hour.</p>
+      <div class="challenge-grid">
+
+        <div class="challenge-card">
+          <div class="challenge-card__num">01</div>
+          <h3 class="challenge-card__title">Electrical seasonality without margin of error</h3>
+          <p class="challenge-card__desc">During the harvest (November–May), the power plant operates at 100% capacity, 24 hours a day, for six continuous months. A failure in the turbogenerator, substation or Woodward governor can cost between $50,000 and $500,000 MXN per hour of lost production. There is no second chance: the cut cane deteriorates in hours and the grinding schedule cannot be recovered.</p>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-card__num">02</div>
+          <h3 class="challenge-card__title">Massive starts in pre-harvest</h3>
+          <p class="challenge-card__desc">At the beginning of the season, the mill starts dozens of high-torque motors—mills, diffusers, steam pumps, evaporators—in a few hours. Poor coordination of protections, a poorly configured drive or a faulty synchronization switchgear can generate chain trips that stop the entire factory right on start-up day. The pre-harvest is the time of greatest electrical risk of the year.</p>
+        </div>
+
+        <div class="challenge-card">
+          <div class="challenge-card__num">03</div>
+          <h3 class="challenge-card__title">Short window for projects and investment</h3>
+          <p class="challenge-card__desc">Repair (May–October) is the only window to execute important electrical projects: substation rehabilitation, updating of governors, installation of new CCMs or cables. If imported materials are delayed or engineering is not ready, the harvest starts with substandard equipment — and the next repair cycle is six months away.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUCIONES -->
+  <section class="section" id="soluciones" aria-labelledby="svcTitle">
+    <div class="container">
+      <span class="sec-label">Our solutions</span>
+      <h2 class="sec-h2" id="svcTitle">Electrical services for sugar mills</h2>
+      <p class="sec-lead">The sugar industry has critical electrical requirements: own generation with turbosteam, interconnection substations with CFE and intensive maintenance during repair. VMS Energy covers the entire spectrum.</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.4v3M12 18.6v3M3.7 7.2l2.6 1.5M17.7 15.3l2.6 1.5M3.7 16.8l2.6-1.5M17.7 8.7l2.6-1.5"/><circle cx="12" cy="12" r="8.4"/></svg></div>
+          <p class="svc-card__title">Steam Turbogenerators — Woodward</p>
+          <p class="svc-card__desc">Programming and commissioning of Woodward 505, 505-XT and 2301D governors for counterpressure and extraction-condensation turbines. PID loop adjustment, overspeed test and synchronization with CFE network. Experience in more than 12 mills throughout Mexico.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13 2.5 4.5 13.5H10l-1 8 8.5-11H12l1-8Z"/></svg></div>
+          <p class="svc-card__title">MV/HV power substations</p>
+          <p class="svc-card__desc">Design, construction and rehabilitation of 13.8–69 kV substations for sugar mills. Acceptance tests (TTR, VLF, contact resistance), synchronization switchgear for parallelism with CFE and major maintenance of transformers and switches.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+          <p class="svc-card__title">Power plant automation</p>
+          <p class="svc-card__desc">SCADA integration of the mill&#x27;s power plant: monitoring of generation, distribution and consumption. Automation of process equipment: mills, diffusers, evaporators and centrifuges. Updating obsolete boards to modern PLCs with industrial Ethernet communication.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.5c1.2 3.2-1.8 4.4-1.8 7.2a1.8 1.8 0 0 0 3.6 0c0-.9.1-1.6.5-2.2 1.7 1.8 2.7 3.8 2.7 6a5 5 0 0 1-10 0c0-4.2 3-6.2 5-11Z"/></svg></div>
+          <p class="svc-card__title">Predictive maintenance in repair</p>
+          <p class="svc-card__desc">Electrical Thermography of Boards, MCC and Substation. Transformer Diagnostics (TTR, megger, DGA) during the annual repair stop. VLF test on MV cables to evaluate insulation status before the next harvest.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4.4" y="2.8" width="15.2" height="18.4" rx="2"/><path d="M8 7h8M8 11h8M8 15h4.4"/><circle cx="16.4" cy="15.4" r="1.1"/></svg></div>
+          <p class="svc-card__title">MCC and force distribution</p>
+          <p class="svc-card__desc">Supply and installation of IEC 61439 Motor Control Centers (MCC) for factory, batey and cogeneration areas. Updating of mechanical starters to frequency variable frequency drives for energy saving in pumps and fans.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.2 12c2-5.6 4-5.6 6 0s4 5.6 6 0 4-5.6 6 0"/></svg></div>
+          <p class="svc-card__title">Power factor correction</p>
+          <p class="svc-card__desc">Study of measurement, design and installation of APFC banks to correct the power factor before CFE and avoid penalties. Mills with high motor and furnace loads can reach FPs of 0.75–0.82, generating significant additional charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAFRA TIMELINE -->
+  <section class="section section--alt" id="zafra" aria-labelledby="zafraTitle">
+    <div class="container">
+      <span class="sec-label">Seasonality of the sector</span>
+      <h2 class="sec-h2" id="zafraTitle">Electric cycle of the sugar mill</h2>
+      <p class="sec-lead">The sugar industry operates in defined annual cycles. VMS Energy accompanies the mill at each stage with the appropriate electrical services to maximize availability during the harvest.</p>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot tl-dot--green"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 21.6h2l-.6-8.4h-.8L11 21.6Z"/><circle cx="12" cy="12.2" r="1.4"/><path d="M12 10.8V3.4M13.4 13 20 16.6M10.6 13 4 16.6"/></svg></div>
+          <p class="tl-label">Repair (May–Oct)</p>
+          <p class="tl-desc">Major maintenance of turbines, governors and substation. Thermography, VLF, transformer diagnosis. Updating boards and MCC. Ideal time for EPC projects.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot--amber"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.4v3M12 18.6v3M3.7 7.2l2.6 1.5M17.7 15.3l2.6 1.5M3.7 16.8l2.6-1.5M17.7 8.7l2.6-1.5"/><circle cx="12" cy="12" r="8.4"/></svg></div>
+          <p class="tl-label">Pre-harvest (Oct–Nov)</p>
+          <p class="tl-desc">Commissioning of Woodward turbogenerators and governors. Switch and switchgear testing. Adjustment of electrical protections. SCADA verification and control systems.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot--green"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21.4V8.6"/><path d="M12 14.4c-3.2 0-5.2-2-5.2-5.2 3.2 0 5.2 2 5.2 5.2Z"/><path d="M12 14.4c3.2 0 5.2-2 5.2-5.2-3.2 0-5.2 2-5.2 5.2Z"/><path d="M12 9c-2.6 0-4.2-1.6-4.2-4.2C10.4 4.8 12 6.4 12 9Z"/><path d="M12 9c2.6 0 4.2-1.6 4.2-4.2C13.6 4.8 12 6.4 12 9Z"/></svg></div>
+          <p class="tl-label">Zafra (Nov-May)</p>
+          <p class="tl-desc">Emergency technical support, 2007. Response in less than 24 hours to failures in governors or electrical systems. Unscheduled stoppage costs between 50,000 and 500,000 BDN per hour.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot--blue"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18"/><path d="M6.6 18v-7.2M12 18V6.6M17.4 18v-4.4"/></svg></div>
+          <p class="tl-label">Closing of the harvest (Apr–May)</p>
+          <p class="tl-desc">Analysis of electrical performance of the harvest. Identification of improvements for the next season. Investment planning and repair projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Ingenuities served</span>
+      <h2 class="sec-h2" id="refTitle">Our history in the sugar industry</h2>
+      <p class="sec-lead">Presence in sugar mills in the main sugar producing states of Mexico: Veracruz, Morelos, Oaxaca, Jalisco, Michoacán, Tabasco, Campeche and San Luis Potosí.</p>
+      <div class="ref-grid">
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenio San Nicolás</p>
+            <p class="ref-card__lugar">Veracruz</p>
+            <p class="ref-card__desc">Advice, supply and commissioning of the electrical load distribution panel of the new plant, including synchronization with CFE with import and export.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenuity Emiliano Zapata</p>
+            <p class="ref-card__lugar">Morelos</p>
+            <p class="ref-card__desc">Commissioning of a 2301D-ST governor with Valtek 50 actuator in turbogenerator 1, and subsequent modernization of the speed control with Woodward 505 electronic governor.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenio Adolfo López Mateos</p>
+            <p class="ref-card__lugar">Oaxaca</p>
+            <p class="ref-card__desc">Change of the 2301D-ST for a Woodward 505 Enhanced governor in turbogenerator 1, and start-up of the cogeneration system synchronization switchgear with MSCL II and DECS 250 on the control panel.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Santa Rosalía Sugar Mill</p>
+            <p class="ref-card__lugar">Tabasco</p>
+            <p class="ref-card__desc">Commissioning of a Woodward 505 governor on turbogenerator 2, with supply and installation of a Valtek 50 actuator.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Santa Clara Sugar Mill</p>
+            <p class="ref-card__lugar">Michoacan</p>
+            <p class="ref-card__desc">Supply, installation and commissioning of a Governor Woodward 505 at the NEB TG1 Turbogenerator, with adaptation of a new UG40 actuator; then modernization of turbine speed control and generation plant.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Three Valleys Mill</p>
+            <p class="ref-card__lugar">Veracruz</p>
+            <p class="ref-card__desc">Increase in operational capacity in electrical substations no. 2 and no. 5, the latter in 4 160 V, and modification of the Electrobús BUS &quot;C&quot;, all with electrical tests.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Tamazula Sugar Mill</p>
+            <p class="ref-card__lugar">Jalisco</p>
+            <p class="ref-card__desc">Mechanical turbine service with dynamic balancing and blade and arrow testing; maintenance, installation and commissioning of speed governors; and a regenerative variator of 300 HP from Schneider Electric.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenio Casasano</p>
+            <p class="ref-card__lugar">Morelos</p>
+            <p class="ref-card__desc">Modernization of speed control for steam turbine with Peak 150 and Woodward PG-PL actuator.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenuity of Autlán</p>
+            <p class="ref-card__lugar">Jalisco</p>
+            <p class="ref-card__desc">Manufacture of bases for the speed governor, maintenance and commissioning.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenio La Joya</p>
+            <p class="ref-card__lugar">Campeche</p>
+            <p class="ref-card__desc">Supply, calibration and commissioning of Woodward&#x27;s 2301 and 505 electronic speed governors, and supply of the Basler Electric DECS 250 excitation system.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenuity The Bee</p>
+            <p class="ref-card__lugar">Morelos</p>
+            <p class="ref-card__desc">Modernization of the speed control of a mill turbine with Peak 150.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ayala Plan Ingenuity</p>
+            <p class="ref-card__lugar">San Luis Potosi</p>
+            <p class="ref-card__desc">Commissioning of a 2301D-ST governor with CPC-1 actuator in turbogenerator 3.</p>
+          </div>
+          <div class="ref-card">
+            <p class="ref-card__cliente">Ingenio José María Morelos</p>
+            <p class="ref-card__lugar">Jalisco</p>
+            <p class="ref-card__desc">Service tuning the automatic voltage regulator DECS from Basler Electric.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ VMS -->
+  <section class="section section--dark" id="porque" aria-labelledby="whyTitle">
+    <div class="container">
+      <span class="sec-label sec-label--light">Why VMS Energy?</span>
+      <h2 class="sec-h2 sec-h2--white" id="whyTitle">Advantages of working with VMS in the sugar sector</h2>
+      <p class="sec-lead sec-lead--light">We understand the pressures of ingenuity: the harvest does not wait, unscheduled stoppages are devastating and engineering must be precise from the first attempt.</p>
+      <!-- La rejilla era `1fr 1fr 1fr` en línea y sin consulta de medios: a 390 px de
+     ancho seguía en tres columnas y la página desbordaba a 542 px. `auto-fit` con
+     un mínimo la baja a una columna sola en móvil. -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:8px">
+        <div style="background:rgba(255,255,255,.07);border-radius:14px;padding:24px">
+          <p style="font-size:2rem;margin-bottom:10px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="13.4" r="7.8"/><path d="M12 9.4v4.2l2.6 1.8"/><path d="M9.4 2.4h5.2"/><path d="m19.2 6.2 1.6-1.6"/></svg></p>
+          <p style="font-weight:800;color:#fff;margin-bottom:8px">Response within 24 hours</p>
+          <p style="font-size:.88rem;color:#94a3b8">During the harvest, we have an engineer available to travel to any point in the republic in less than 24 hours. Every hour of unemployment costs.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border-radius:14px;padding:24px">
+          <p style="font-size:2rem;margin-bottom:10px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4.6A2.6 2.6 0 0 1 6.6 2H20v15.6H6.6A2.6 2.6 0 0 0 4 20.2Z"/><path d="M4 20.2A2.6 2.6 0 0 1 6.6 17.6H20V22H6.6A2.6 2.6 0 0 1 4 20.2Z"/></svg></p>
+          <p style="font-weight:800;color:#fff;margin-bottom:8px">In-depth knowledge of the process</p>
+          <p style="font-size:.88rem;color:#94a3b8">We understand the relationship between process steam generation and electricity generation. Our engineers have worked in more than 12 different mills.</p>
+        </div>
+        <div style="background:rgba(255,255,255,.07);border-radius:14px;padding:24px">
+          <p style="font-size:2rem;margin-bottom:10px"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.4 4.6a5.4 5.4 0 0 1-7.2 7.2L4.6 20.4 2.9 18.7l8.6-8.6a5.4 5.4 0 0 1 7.2-7.2l-3 3 .5 2.5 2.5.5 2.7-3.3Z"/></svg></p>
+          <p style="font-weight:800;color:#fff;margin-bottom:8px">EPC comprehensive service</p>
+          <p style="font-size:.88rem;color:#94a3b8">From substation design to governor commissioning, we offer a single point of contact for all mill electrical engineering.</p>
+        </div>
+      </div>
+      <div class="chip-grid" style="margin-top:28px">
+        <span class="chip chip--green">Woodward 505 / 2301D</span>
+        <span class="chip chip--green">Substations 13.8–69 kV</span>
+        <span class="chip chip--green">NETA MTS Thermography</span>
+        <span class="chip chip--green">VLF cables MV</span>
+        <span class="chip chip--green">SCADA Automation</span>
+        <span class="chip chip--green">MCC IEC 61439</span>
+        <span class="chip chip--green">FP Correction</span>
+        <span class="chip chip--green">NOM-001-HEADQUARTERS</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">What the technical directors of sugar mills ask</h2>
+      <div class="faq-list" id="faqList">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How much does an unprogrammed stoppage of the Turbogenerator cost during the harvest?</button>
+          <div class="faq-a">The cost of an unscheduled stoppage varies between $50,000 and $500,000 MXN per hour, depending on the size of the mill and the price of sugar. It includes loss of ground cane, start-up costs, possible damage to process equipment and penalties with cane suppliers. A predictive maintenance program during repair has an ROI of months, not years.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How often should the electrical system of an ingenuity be given greater maintenance?</button>
+          <div class="faq-a">Major maintenance must be performed during the annual repair (May–October): substation tests (TTR, VLF, megger on MV cables), transformer maintenance, protection adjustment, MCC and panel review, and complete servicing of Woodward governors and turbogenerators. During the harvest, predictive monitoring (thermography, vibration analysis) is carried out without major intervention.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Can they execute electrical EPC projects during repair without affecting the start of harvest?</button>
+          <div class="faq-a">Yes, it is our specialty. We work with schedules adjusted to the repair window (usually June–October). We coordinate engineering, supply and construction to ensure that the power plant is ready before pre-safra start in November. The key is to start engineering detail at least 3 months before the start of repair to ensure delivery of the equipment. import equipment.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What is the difference between Governors Woodward 505 and 2301D and when should it be updated?</button>
+          <div class="faq-a">The Woodward 505 is an advanced digital controller for steam turbines with extraction, backpressure and synchronization control with CFE network. The 2301D is more compact, ideal for turbines up to ~5 MW in isochronous or droop mode. It is advisable to update when the mechanical governor no longer has spare parts, when there is speed instability (hunting) or when integration with SCADA is required. Upgrading to digital improves speed stability from ±3% to ±0.5%.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">What electrical regulations specifically apply to sugar mills in Mexico?</button>
+          <div class="faq-a">The mills must comply with NOM-001-SEDE (electrical installations), NOM-029-STPS (facility maintenance), IEEE C37 (protection in generation systems), IEEE C57 (power transformers) and the CFE requirements for interconnection of own generation according to the Electrical Industry Regulations. SADER may require technical documentation of electrical installations in mill certification audits.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">How does VMS Energy reduce electricity consumption in a sugar mill?</button>
+          <div class="faq-a">Through three levers: (1) replacement of mechanical starters with variable frequency drives in pumps and process fans (typical savings 15–30%), (2) power factor correction with APFC banks to eliminate CFE penalties and reduce cable losses (ROI 12–24 months), and (3) MCC upgrade with per-circuit consumption monitoring to identify oversized equipment.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--vms-green-600);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Are you planning electrical projects for the next repair?</h2>
+      <p style="color:var(--success-bg);margin-bottom:28px;max-width:600px;margin-left:auto;margin-right:auto">The best time to plan is now. Contact us for an evaluation of your electrical plant and a quote for repair services and the next harvest.</p>
+      <a href="contacto_cta.html?producto=sector-agroindustria#ctaForm" style="display:inline-block;background:#fff;color:var(--vms-green-600);padding:.75rem 2rem;border-radius:7px;font-weight:900;font-size:1.05rem;text-decoration:none">Request plant evaluation</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<div class="sticky-wa"><a href="https://wa.me/523332582234?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20servicios%20el%C3%A9ctricos%20para%20ingenios%20azucareros" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a></div>
+<div class="sticky-cta"><a href="contacto_cta.html?producto=sector-agroindustria#ctaForm">Contact specialist</a></div>
+
+
+<script>
+(function(){
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => { b.setAttribute('aria-expanded','false'); b.nextElementSibling.classList.remove('is-open'); });
+      if(!expanded){ btn.setAttribute('aria-expanded','true'); btn.nextElementSibling.classList.add('is-open'); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

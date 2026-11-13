@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en" data-concept="servicios-especializados">
+<head>
+<meta charset="UTF-8">
+<!-- VMS-GTM:INICIO -->
+<script src="vms-medicion.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDZFQ3CJ');</script>
+<!-- VMS-GTM:FIN -->
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../assets/brand/icon-512.png">
+<!-- VMS-NUCLEO:INICIO -->
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="../vms-core.css">
+  <link rel="stylesheet" href="../vms-header.css">
+  <script src="vms-header.js" defer></script>
+<!-- VMS-NUCLEO:FIN -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rotating Equipment Condition Monitoring | Vibrations · SCADA · O&amp;M | VMS Energy</title>
+<meta name="description" content="Condition monitoring for engines, pumps, compressors and turbines in Mexico. Vibration, temperature and current sensors integrated into SCADA, ISO 20816 alarms and predictive maintenance.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rotating equipment condition monitoring | VMS Energy">
+<meta property="og:description" content="Detect failure before it becomes a shutdown: vibrations, SCADA and predictive maintenance.">
+<meta property="og:url" content="https://vmsenergy.com/en/lp-monitoreo-de-condicion.html">
+<meta property="og:image" content="https://vmsenergy.com/assets/img/hero_motores_electricos.webp">
+<link rel="stylesheet" href="../servicios-base.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Rotating equipment condition monitoring", "provider": {"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com"}, "areaServed": {"@type": "Country", "name": "Mexico"}, "serviceType": "Condition Monitoring", "description": "Integration of vibration, temperature, current and process sensors to PLC, SCADA or DCS, severity alarms according to ISO 20816 and predictive maintenance of motors, pumps, fans, reducers, compressors and turbines."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is condition monitoring different from preventive maintenance?", "acceptedAnswer": {"@type": "Answer", "text": "The preventive intervenes by calendar or hours of operation, whether or not the equipment is damaged. Condition monitoring measures the actual condition of the equipment and schedules intervention when data warrants it. Reduces both unexpected downtime and unnecessary maintenance."}}, {"@type": "Question", "name": "Do I need online monitoring or are regular routes enough?", "acceptedAnswer": {"@type": "Answer", "text": "Depends on criticality. Equipment without backup, with costly downtime or difficult to access (offshore, remote) justify online monitoring. Equipment with redundancy or less impact is usually well covered with monthly or quarterly routes. The criticality diagnosis defines the appropriate mixture."}}, {"@type": "Question", "name": "Can you integrate into the SCADA or DCS I already have?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Current sensors and #Turns communicate through industrial protocols such as Modbus TCP/RTU, Profinet, EtherNet/IP or OPC UA. We integrate signals and alarms into your existing system so that operation sees the condition of the equipment along with the process."}}, {"@type": "Question", "name": "What failures does vibration analysis detect?", "acceptedAnswer": {"@type": "Answer", "text": "Imbalance, misalignment, mechanical looseness, wear of bearings and gears, cavitation in pumps and structural resonances, among others. Combined with temperature and current, it also helps distinguish electrical problems with the motor from mechanical problems with the driven equipment."}}, {"@type": "Question", "name": "What standard defines acceptable vibration levels?", "acceptedAnswer": {"@type": "Answer", "text": "The reference for industrial machines is the ISO 20816 series (formerly ISO 10816), which classifies severity into zones A, B, C and D according to machine size and type of base. For critical process machinery, API 670 defines protection systems. Thresholds are adjusted with each team's baseline."}}, {"@type": "Question", "name": "Does it work on frequency-variator equipment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, provided that speed is recorded along with vibration, this compares readings at different speeds and correctly identifies the frequencies of failure in the spectrum."}}, {"@type": "Question", "name": "Where should we start?", "acceptedAnswer": {"@type": "Answer", "text": "For a criticality diagnosis and a driver in the teams that cost the most when they stop. With measurable results in those teams, it is decided whether to expand the scope."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VMS Energy", "item": "https://vmsenergy.com/en/index.html"}, {"@type": "ListItem", "position": 2, "name": "Specialized Services", "item": "https://vmsenergy.com/en/especialidades.html"}, {"@type": "ListItem", "position": 3, "name": "Rotating equipment condition monitoring", "item": "https://vmsenergy.com/en/lp-monitoreo-de-condicion.html"}]}</script>
+<style>
+  /* ── MONITOREO DE CONDICIÓN — CSS de página ───────────────── */
+  .sem-table{width:100%;border-collapse:collapse;font-size:.88rem}
+  .sem-table th{background:var(--concept-darker);color:#fff;padding:10px 14px;text-align:left;font-weight:700}
+  .sem-table td{padding:9px 14px;border-bottom:1px solid rgba(23,44,81,.14);color:#334155;vertical-align:top}
+  .sem-table tr:nth-child(even) td{background:var(--concept-accent-light)}
+  .badge-g,.badge-b,.badge-y,.badge-r{border-radius:999px;padding:.15rem .55rem;font-size:.78rem;font-weight:700;white-space:nowrap}
+  .badge-g{background:var(--success-bg);color:var(--vms-green-700)}
+  .badge-b{background:#fff;color:var(--vms-blue-800);border:1px solid var(--vms-blue-300)}
+  .badge-y{background:#fef9c3;color:#b45309}
+  .badge-r{background:#fee2e2;color:#b91c1c}
+  .pf-fig{margin:28px 0 0;background:#fff;border:1.5px solid #dbe6f4;border-radius:16px;padding:20px}
+  .pf-fig svg{width:100%;height:auto;display:block}
+  .pf-fig figcaption{font-size:.9rem;color:#475569;margin-top:10px}
+  .cm-steps{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.cm-grid4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .cm-note{margin-top:16px;font-size:.92rem;color:#334155;background:var(--vms-blue-50);border-left:4px solid var(--vms-blue-600);padding:12px 16px;border-radius:0 10px 10px 0}
+  .svc-card__title a{color:inherit;text-decoration:none;border-bottom:2px solid var(--vms-blue-100)}
+  .cm-cross{margin:28px 0;padding:18px 22px;background:#f0f6ff;border-left:4px solid #0f4c81;border-radius:0 12px 12px 0;color:#172c51}
+  .cm-cross p{margin:0 0 10px;font-size:.95rem}
+  .cm-cross .cm-cross__k{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#0f4c81;font-weight:700;margin-bottom:6px}
+  .cm-cross a{font-size:.9rem;font-weight:600;color:#0f4c81;text-decoration:none}
+  @media (max-width:640px){.pf-fig{padding:10px}}
+</style>
+
+  <link rel="canonical" href="https://vmsenergy.com/en/lp-monitoreo-de-condicion.html" />
+  <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-monitoreo-de-condicion.html" />
+  <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/lp-monitoreo-de-condicion.html" />
+  <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-monitoreo-de-condicion.html" />
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="../vms-language.js" defer></script>
+</head>
+<body>
+<!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a class="skip-link" href="#inicio">Skip to content</a>
+
+<header class="site-header" aria-label="Site Header">
+  <div class="site-header__inner">
+
+    <a class="brand" href="index.html" aria-label="VMS Energy — start">
+      <img src="../assets/brand/vms_logo_blue.png" alt="VMS Energy"
+           width="140" height="46" loading="eager" decoding="async">
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button"
+            aria-expanded="false" aria-controls="menuList">
+      <span class="menu-toggle__bars" aria-hidden="true"></span>
+      <span class="menu-toggle__label">Menu</span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="site-nav__list" id="menuList">
+
+        <!-- 1 · SOLUCIONES — Eje A del Cat&aacute;logo Maestro: verticales de industria -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html" aria-haspopup="true" aria-expanded="false">Solutions</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Solutions by industry">
+            <div class="submenu__col">
+              <p class="submenu__title">Industry and process</p>
+              <ul class="submenu__list">
+                <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+                <li><a href="soluciones_mineria.html">Mining</a></li>
+                <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+                <li><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></li>
+                <li><a href="soluciones_agroindustria.html">Agribusiness</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Energy</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+                <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+                <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+                <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+                <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+                <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+                <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+                <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Facilities</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+                <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+                <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+                <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 2 · EQUIPAMIENTO — Eje C: familias t&eacute;cnicas de producto -->
+        <li class="nav-item nav-item--mega">
+          <a href="soluciones.html#equipamiento" aria-haspopup="true" aria-expanded="false">Equipment</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Equipment per family">
+            <div class="submenu__col">
+              <p class="submenu__title">Power and distribution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-subestaciones-electricas.html">MV/HV power stations</a></li>
+                <li><a href="lp-celdas-media-tension.html">Medium-Voltage Switchgear</a></li>
+                <li><a href="soluciones-transformadores-industriales.html">Transformers</a></li>
+                <li><a href="soluciones-ccm-industrial.html">MCC Industrial</a></li>
+                <li><a href="soluciones-correccion-factor-potencia.html">Power Factor Correction</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Motor control</p>
+              <ul class="submenu__list">
+                <li><a href="soluciones-variadores-frecuencia.html">Frequency Variations</a></li>
+                <li><a href="lp-motores-electricos-industriales.html">Electric Motors</a></li>
+                <li><a href="lp-turbogeneradores-woodward.html">Turbogenerator Control</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Reference</p>
+              <ul class="submenu__list">
+                <li><a href="checklist-anual-subestaciones-at-mt-bt.html">Annual Substation Checklist</a></li>
+                <li><a href="calculadora-ahorro-bess-gdmth.html">BESS Savings Calculator</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3 · SERVICIOS — Eje B: fases del ciclo de vida.
+             Absorbe "Entrega de Proyectos", "Capacitaci&oacute;n" y
+             "Suministro t&eacute;cnico", que antes eran men&uacute;s de primer nivel. -->
+        <li class="nav-item nav-item--mega">
+          <a href="especialidades.html" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="submenu submenu--mega" role="group" aria-label="Phase services">
+            <div class="submenu__col">
+              <p class="submenu__title">Engineering</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+                <li><a href="lp-estudios-electricos-industriales.html">Electrical Studies</a></li>
+                <li><a href="servicios-infraestructura-acondicionamiento.html">Infrastructure and Conditioning</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Procurement and supply</p>
+              <ul class="submenu__list">
+                <li><a href="procura.html">Technical Supply</a></li>
+                <li><a href="procura.html#representaciones">Representations and brands</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Execution</p>
+              <ul class="submenu__list">
+                <li><a href="lp-pruebas-comisionamiento-puesta-en-servicio.html">Commissioning and Start-up</a></li>
+                <li><a href="lp-tendido-cableado-electrico-industrial.html">Tended and Wired</a></li>
+                <li><a href="lp-retrofit-subestaciones.html">Electrical Retrofit</a></li>
+                <li><a href="lp-deteccion-control-supresion-fuego.html">Fire Detection and Suppression</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Operation and maintenance</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+                <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+                <li><a href="lp-mantenimiento-predictivo.html">Predictive Maintenance</a></li>
+                <li><a href="lp-calidad-de-energia-industrial.html">Power Quality</a></li>
+                <li><a href="lp-pruebas-fisicoquimicas-aceite-dielectrico.html">Dielectric Oil Analysis</a></li>
+                <li><a href="lp-transporte-vertical-elevadores.html">Vertical transport (lifts)</a></li>
+              </ul>
+            </div>
+            <div class="submenu__col">
+              <p class="submenu__title">Transfer</p>
+              <ul class="submenu__list">
+                <li><a href="especialidad_capacitacion.html">Training</a></li>
+                <li><a href="lp-industria-40.html">Industry 4.0 / IIoT</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4 · PROYECTOS — sale de "Nosotros" a primer nivel.
+             Es la prueba de capacidad t&eacute;cnica: el activo comercial
+             m&aacute;s fuerte de VMS y estaba enterrado en un submen&uacute;. -->
+        <li class="nav-item">
+          <a href="proyectos-vms.html" aria-haspopup="true" aria-expanded="false">Projects</a>
+          <div class="submenu" role="group" aria-label="Projects">
+            <ul class="submenu__list">
+              <li><a href="proyectos-vms.html">Projects executed</a></li>
+              <li><a href="catalogo-proyectos.html">Project catalog</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 5 · VMSHOP -->
+        <li class="nav-item">
+          <a href="VMShop.html" aria-haspopup="true" aria-expanded="false">VMShop</a>
+          <div class="submenu" role="group" aria-label="VMShop">
+            <ul class="submenu__list">
+              <li><a href="lp-cable-de-potencia-kei.html">MV/HV power cable</a></li>
+
+              <li><a href="lp-cables-extra-alta-tension.html">Extra high voltage cables</a></li>
+              <li><a href="lp-cables-fotovoltaicos.html">Photovoltaic cables</a></li>
+              <li><a href="lp-cables-especiales.html">ESP Cables</a></li>
+              <li><a href="lp-triol-variadores.html">Triol variants</a></li>
+              <li><a href="glosario-cable-electrico.html">Cable technical glossary</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- 6 · NOSOTROS — absorbe Carreras -->
+        <li class="nav-item">
+          <a href="nosotros.html" aria-haspopup="true" aria-expanded="false">About us</a>
+          <div class="submenu" role="group" aria-label="About us">
+            <ul class="submenu__list">
+              <li><a href="nosotros.html">About VMS Energy</a></li>
+              <li><a href="certificaciones.html">Certifications</a></li>
+              <li><a href="sostenibilidad.html">Sustainability</a></li>
+              <li><a href="carreras.html">Careers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <!-- "Ecosistema VMS" retirado (Direcci&oacute;n, ago 2026): la p&aacute;gina
+                   nunca existi&oacute;. Era un 404 servido desde el men&uacute; en 84
+                   p&aacute;ginas. No volver a agregarlo sin la p&aacute;gina publicada. -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a class="btn btn--concept site-header__cta" href="contacto.html">Contact</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('../assets/img/hero_motores_electricos.webp');--hero-overlay:.84" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">VMS Energy · Operation and Maintenance · Condition Monitoring</div>
+      <h1 id="heroTitle">Condition monitoring for rotating equipment</h1>
+      <p class="hero__sub">Vibration · SCADA · Predictive maintenance</p>
+      <p>Detect the fault before it becomes a shutdown. We integrate vibration, temperature, current and process sensors into your PLC and SCADA, we configure alarms by severity and carry out the maintenance that the diagnosis indicates, with the support of specialized technological allies.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=monitoreo-de-condicion&categoria=Servicio%20O%26M&src=lp-monitoreo-de-condicion#ctaForm">Request criticality diagnosis</a>
+        <a class="btn btn--ghost" href="#arquitectura">How it works</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">Engines · Pumps · Compressors · Turbines</span>
+        <span class="hero-stat">ISO 20816 Criterion</span>
+        <span class="hero-stat">PLC · SCADA · DCS integration</span>
+        <span class="hero-stat">Offshore experience</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="kpi-strip">
+    <div class="container">
+      <div class="kpi"><div class="kpi__val">5</div><div class="kpi__lbl">variables per asset</div></div>
+      <div class="kpi"><div class="kpi__val">ISO 20816</div><div class="kpi__lbl">severity criterion</div></div>
+      <div class="kpi"><div class="kpi__val">Modbus · Profinet</div><div class="kpi__lbl">integration into control</div></div>
+      <div class="kpi"><div class="kpi__val">Offshore</div><div class="kpi__lbl">Gulf of Mexico</div></div>
+      <div class="kpi"><div class="kpi__val">Multi-brand</div><div class="kpi__lbl">sensors and platforms</div></div>
+    </div>
+  </div>
+
+  <!-- PROBLEMA / CURVA P-F -->
+  <section class="section" id="problema" aria-labelledby="pfTitle">
+    <div class="container">
+      <span class="sec-label">Why monitor</span>
+      <h2 class="sec-h2" id="pfTitle">Failure rarely begins with unemployment</h2>
+      <p class="sec-lead">First the condition of the equipment changes: the vibration increases, a bearing heats up, the current becomes unbalanced. Monitoring detects that signal and maintenance takes action before major damage occurs. The value is in seeing the failure in time to plan the intervention, not in reacting to the strike.</p>
+      <figure class="pf-fig">
+        <svg viewBox="0 0 860 300" role="img" aria-labelledby="pfSvgT pfSvgD">
+          <title id="pfSvgT">Evolution of a failure in rotating equipment</title>
+          <desc id="pfSvgD">Condition curve descending with time: normal operation, early anomaly detectable by monitoring, degradation, alarm and functional failure. Planned intervention occurs between detection and failure.</desc>
+          <line x1="70" y1="250" x2="830" y2="250" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="70" y1="30" x2="70" y2="250" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="830" y="272" text-anchor="end" font-size="13" fill="#475569">Operating time</text>
+          <text x="22" y="140" font-size="13" fill="#475569" transform="rotate(-90 22 140)" text-anchor="middle">Equipment condition</text>
+          <rect x="250" y="34" width="420" height="216" fill="#DBEAFE" opacity=".55"/>
+          <text x="460" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="#0F4C81">Window to intervene in a planned way</text>
+          <path d="M70 60 C 230 60, 250 62, 280 68 S 470 100, 560 150 S 700 230, 760 246" fill="none" stroke="#0F4C81" stroke-width="3.5"/>
+          <g font-size="12.5" fill="#0F172A">
+            <circle cx="160" cy="60" r="8" fill="#1BA64F"/><text x="160" y="92" text-anchor="middle">Normal operation</text>
+            <circle cx="280" cy="68" r="8" fill="#EAB308"/><text x="280" y="100" text-anchor="middle" font-weight="700">Early anomaly</text>
+            <text x="280" y="116" text-anchor="middle" fill="#475569">(monitoring detects it)</text>
+            <circle cx="440" cy="110" r="8" fill="#F97316"/><text x="440" y="142" text-anchor="middle">Degradation</text>
+            <circle cx="580" cy="160" r="8" fill="#DC2626"/><text x="580" y="192" text-anchor="middle">Alarm</text>
+            <circle cx="760" cy="246" r="8" fill="#7F1D1D"/><text x="760" y="226" text-anchor="middle" font-weight="700">Failure/stop</text>
+          </g>
+        </svg>
+        <figcaption>Between the first signal and the failure there is an interval. Condition monitoring exists to take advantage of it: schedule the shutdown, have the spare part and avoid cascading damage.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ARQUITECTURA -->
+  <section class="section section--alt" id="arquitectura" aria-labelledby="archTitle">
+    <div class="container">
+      <span class="sec-label">From data to decision</span>
+      <h2 class="sec-h2" id="archTitle">Architecture of a condition monitoring system</h2>
+      <p class="sec-lead">We design, supply and integrate each layer. If your plant already has PLC, SCADA or DCS, we take advantage of it: monitoring adds to the existing infrastructure instead of creating an island of data.</p>
+      <div class="process-steps cm-steps">
+        <div class="step"><p class="step__title">Critical equipment</p><p class="step__desc">Motors, pumps, fans, compressors, reducers and turbines selected by criticality, not by inertia.</p></div>
+        <div class="step"><p class="step__title">Sensors</p><p class="step__desc">Accelerometers, RTDs, current transformers, tachometers and process variables, wired or wireless.</p></div>
+        <div class="step"><p class="step__title">Acquisition</p><p class="step__desc">PLC, gateway or edge equipment that digitizes, filters and sends information with industrial protocols.</p></div>
+        <div class="step"><p class="step__title">SCADA / Historian</p><p class="step__desc">Operational and historical context: vibration is interpreted together with load, speed and process.</p></div>
+        <div class="step"><p class="step__title">Analysis</p><p class="step__desc">Trends, FFT spectrum and severity alarms, with base line specific to each team.</p></div>
+        <div class="step"><p class="step__title">Predictive maintenance</p><p class="step__desc">Work order with probable cause and priority. It intervenes before the stoppage and is verified afterwards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VARIABLES -->
+  <section class="section" id="variables" aria-labelledby="varTitle">
+    <div class="container">
+      <span class="sec-label">What we monitor</span>
+      <h2 class="sec-h2" id="varTitle">Variables that reveal the real condition of the equipment</h2>
+      <p class="sec-lead">No variable tells the whole story. The correct combination depends on the type of equipment and its most likely failure modes.</p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h3l2-6 3 12 3-9 2 5 2-2h5"/></svg></div>
+          <p class="svc-card__norm">ISO 20816 / ISO 13373</p>
+          <p class="svc-card__title">Vibration</p>
+          <p class="svc-card__desc">RMS speed for global severity; acceleration and envelope for bearings and gears. Detecta desEygo, misalignment, mechanical slack, bearing wear and resonance.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/></svg></div>
+          <p class="svc-card__norm">Pt100 RTD/thermocouple</p>
+          <p class="svc-card__title">Temperature</p>
+          <p class="svc-card__desc">Bearings, pillow blocks, windings and casing. A sustained increase confirms what the vibration anticipates: poor lubrication, overload or cooling problems.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+          <p class="svc-card__norm">Measurement in MCC / drive</p>
+          <p class="svc-card__title">Current and electrical variables</p>
+          <p class="svc-card__desc">Consumption, imbalance between phases and load trend. Reveals engine and driven equipment problems that are not always seen in vibration.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 13l4-4"/></svg></div>
+          <p class="svc-card__norm">Tacometer / phase reference</p>
+          <p class="svc-card__title">Speed (RPM)</p>
+          <p class="svc-card__desc">Essential in equipment with a drive: it allows you to compare readings at different speeds and identify which frequencies of the spectrum correspond to each fault.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 0 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 0 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 0 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 0 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></div>
+          <p class="svc-card__norm">Pressure · flow · level</p>
+          <p class="svc-card__title">Process</p>
+          <p class="svc-card__desc">The operating context that avoids false alarms: a pump outside its operating point vibrates differently than one with damaged bearings.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg></div>
+          <p class="svc-card__norm">API 670 (critical machinery)</p>
+          <p class="svc-card__title">Machinery protection</p>
+          <p class="svc-card__desc">In critical turbines and compressors, monitoring also protects: shaft displacement, axial position and automatic tripping against dangerous vibration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVOS -->
+  <section class="section section--alt" id="activos" aria-labelledby="actTitle">
+    <div class="container">
+      <span class="sec-label">Applications on critical assets</span>
+      <h2 class="sec-h2" id="actTitle">What we detect in each type of equipment</h2>
+      <div class="tabla-scroll"><table class="sem-table" style="min-width:560px">
+        <thead><tr><th>Team</th><th>Failure modes that monitoring anticipates</th><th>Key variables</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Electric motors</strong></td><td>Rolling-out, desalination, misalignment, rotor problems, overheating of devanates</td><td>Vibration, temperature, current</td></tr>
+          <tr><td><strong>Bombs</strong></td><td>Cavitation, misalignment, bearing and seal wear, off-design point operation</td><td>Vibration, pressure, flow</td></tr>
+          <tr><td><strong>Fans</strong></td><td>Imbalance due to material accumulation, structural looseness, resonance</td><td>Vibration, speed</td></tr>
+          <tr><td><strong>Reducers</strong></td><td>Wear of gears, bearings, poor lubrication</td><td>Vibration (alarm), temperature</td></tr>
+          <tr><td><strong>Compressors</strong></td><td>Bearings, misalignment, valve problems, operating instability</td><td>Vibration, temperature, process</td></tr>
+          <tr><td><strong>Turbines and generators</strong></td><td>Shaft displacement, bearing wear, thermal imbalance</td><td>Proximity, vibration, temperature</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- SEVERIDAD -->
+  <section class="section" id="criterios" aria-labelledby="sevTitle">
+    <div class="container">
+      <span class="sec-label">Severity criteria</span>
+      <h2 class="sec-h2" id="sevTitle">Reference vibration levels (ISO 20816-3)</h2>
+      <p class="sec-lead">RMS speed in mm/s, measured in the housing of industrial machines greater than 15 kW. They are the starting point: the end alarm thresholds are adjusted with the baseline of each equipment and the manufacturer&#x27;s recommendation.</p>
+      <div class="tabla-scroll"><table class="sem-table" style="min-width:620px">
+        <thead><tr><th>Machine class</th><th>Base</th><th>Zone A · new</th><th>Zone B · acceptable</th><th>Zone C · alert</th><th>Zone D · risk of damage</th></tr></thead>
+        <tbody>
+          <tr><td>Group 2 · 15–300 kW</td><td>Rigid</td><td><span class="badge-g">&le; 1.4</span></td><td><span class="badge-b">1.4&ndash;2.8</span></td><td><span class="badge-y">2.8&ndash;4.5</span></td><td><span class="badge-r">&gt; 4.5</span></td></tr>
+          <tr><td>Group 2 · 15–300 kW</td><td>Flexible</td><td><span class="badge-g">&le; 2.3</span></td><td><span class="badge-b">2.3&ndash;4.5</span></td><td><span class="badge-y">4.5&ndash;7.1</span></td><td><span class="badge-r">&gt; 7.1</span></td></tr>
+          <tr><td>Group 1 · 300 kW–50 MW</td><td>Rigid</td><td><span class="badge-g">&le; 2.3</span></td><td><span class="badge-b">2.3&ndash;4.5</span></td><td><span class="badge-y">4.5&ndash;7.1</span></td><td><span class="badge-r">&gt; 7.1</span></td></tr>
+          <tr><td>Group 1 · 300 kW–50 MW</td><td>Flexible</td><td><span class="badge-g">&le; 3.5</span></td><td><span class="badge-b">3.5&ndash;7.1</span></td><td><span class="badge-y">7.1&ndash;11.0</span></td><td><span class="badge-r">&gt; 11.0</span></td></tr>
+        </tbody>
+      </table></div>
+      <p class="cm-note">More important than the absolute value is the trend: a device that goes from 1.5 to 2.5 mm/s in a few weeks deserves attention even if it is still in zone B.</p>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section class="section section--alt" id="modalidades" aria-labelledby="modTitle">
+    <div class="container">
+      <span class="sec-label">Service modalities</span>
+      <h2 class="sec-h2" id="modTitle">Start where your plant is today</h2>
+      <p class="sec-lead">Not all equipment needs online monitoring. Criticality, redundancy, cost of downtime and access to equipment define the correct technique for each.</p>
+      <div class="svc-grid cm-grid4">
+        <div class="svc-card">
+          <p class="svc-card__norm">Starting point</p>
+          <p class="svc-card__title">Criticality diagnosis</p>
+          <p class="svc-card__desc">Inventory of rotating assets, failure history and criticality matrix. Result: which equipment to monitor, with what variables and with what frequency, and a scope estimate.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__norm">Medium criticality equipment</p>
+          <p class="svc-card__title">Route monitoring</p>
+          <p class="svc-card__desc">Periodic readings with portable equipment, with trends and condition report per equipment. Executed with specialist allies and coordinated by VMS.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__norm">Critical or difficult to access equipment</p>
+          <p class="svc-card__title">Online monitoring</p>
+          <p class="svc-card__desc">Permanent sensors, gateway and link to the plant SCADA or DCS, with severity alarms. Ideal for teams without redundancy, remote or offshore.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__norm">Closing of the cycle</p>
+          <p class="svc-card__title">O&amp;M and response</p>
+          <p class="svc-card__desc">Maintenance of motors and rotating equipment, replacement of bearings, alignment, adjustment of protections and post-intervention verification.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉN HACE QUÉ -->
+  <section class="section" id="alcance" aria-labelledby="alcTitle">
+    <div class="container">
+      <span class="sec-label">Scope</span>
+      <h2 class="sec-h2" id="alcTitle">One responsible, with specialists where they are needed</h2>
+      <p class="sec-lead">VMS integrates and responds to the entire system. For specialized analysis and monitoring platforms we work with technological allies, without binding us to a single brand.</p>
+      <div class="tabla-scroll"><table class="sem-table">
+        <thead><tr><th>Activity</th><th>Who executes it</th></tr></thead>
+        <tbody>
+          <tr><td>Monitoring architecture engineering</td><td>VMS Energy</td></tr>
+          <tr><td>Supply of sensors, #Turns and boards (multimark)</td><td>VMS Energy</td></tr>
+          <tr><td>Installation, wiring and commissioning</td><td>VMS Energy</td></tr>
+          <tr><td>Integration to PLC, SCADA or DCS and alarm configuration</td><td>VMS Energy</td></tr>
+          <tr><td>Advanced spectral analysis and specialized diagnosis</td><td>Specialist allies, coordinated by VMS</td></tr>
+          <tr><td>Monitoring software platform</td><td>Allied manufacturer, implemented by VMS</td></tr>
+          <tr><td>Predictive and corrective maintenance of rotating equipment</td><td>VMS Energy</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section section--alt" id="proyectos" aria-labelledby="refTitle">
+    <div class="container">
+      <span class="sec-label">Experience</span>
+      <h2 class="sec-h2" id="refTitle">Projects in vibrations, control and rotating equipment</h2>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="ref-card__cliente">Dragon Group — geothermal plant</p>
+          <p class="ref-card__lugar">Nayarit</p>
+          <p class="ref-card__desc">Generation control system with CFE synchronization and vibration system with PLC S7, HMI and machinery protection monitoring Bently Nevada 3500.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Pemex — KU-H Platform</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Configuration and commissioning of the PLC-based control system for the TAB1290A and TAB1290B screw type pumps.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Cotemar — Abkatún-A Platform</p>
+          <p class="ref-card__lugar">Campeche (offshore)</p>
+          <p class="ref-card__desc">Integration of signals to the platform monitoring and control system.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Cotemar — Hercules Ship</p>
+          <p class="ref-card__lugar">Veracruz</p>
+          <p class="ref-card__desc">Major maintenance on 1,050 kW, 690 V Bow Thruster motor: review of windings, bearings and mechanical alignment.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">LINDE — Cantarell Nitrogen Plant</p>
+          <p class="ref-card__lugar">Cantarell Operations</p>
+          <p class="ref-card__desc">Maintenance of a 2,560 HP squirrel cage engine and a 600 HP engine in the nitrogen generation plant.</p>
+        </div>
+        <div class="ref-card">
+          <p class="ref-card__cliente">Road infrastructure</p>
+          <p class="ref-card__lugar">State of Mexico</p>
+          <p class="ref-card__desc">Integration and commissioning of 12 cabinets with drives and Profinet control via SCADA for the extraction fans of a tunnel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTORES -->
+  <section class="section" id="sectores" aria-labelledby="secTitle">
+    <div class="container">
+      <span class="sec-label">Sectors</span>
+      <h2 class="sec-h2" id="secTitle">Where an unscheduled stoppage costs more</h2>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <p class="svc-card__title"><a href="oil-gas-solutions.html">Oil &amp; Gas</a></p>
+          <p class="svc-card__desc">Pumping, compression and generation on platforms and vessels, where each visit costs logistics and remote monitoring reduces personnel exposure.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__title"><a href="soluciones_mineria.html">Mining</a></p>
+          <p class="svc-card__desc">Drain pumping, ventilation, grinding and transportation: equipment in aggressive environments and continuous operation.</p>
+        </div>
+        <div class="svc-card">
+          <p class="svc-card__title"><a href="soluciones_alimentos_bebidas.html">Food &amp; Drinks</a></p>
+          <p class="svc-card__desc">Refrigeration compressors, process pumps and fans where a stoppage compromises product and cold chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--alt" id="faq" aria-labelledby="faqTitle">
+    <div class="container">
+      <span class="sec-label">Frequently asked questions</span>
+      <h2 class="sec-h2" id="faqTitle">Questions about condition monitoring</h2>
+      <div class="faq-list">
+        <details><summary>How is condition monitoring different from preventive maintenance?</summary><p>The preventive intervenes by calendar or hours of operation, whether or not the equipment is damaged. Condition monitoring measures the actual condition of the equipment and schedules intervention when data warrants it. Reduces both unexpected downtime and unnecessary maintenance.</p></details>
+        <details><summary>Do I need online monitoring or are regular routes enough?</summary><p>Depends on criticality. Equipment without backup, with costly downtime or difficult to access (offshore, remote) justify online monitoring. Equipment with redundancy or less impact is usually well covered with monthly or quarterly routes. The criticality diagnosis defines the appropriate mixture.</p></details>
+        <details><summary>Can you integrate into the SCADA or DCS I already have?</summary><p>Yes. Current sensors and #Turns communicate through industrial protocols such as Modbus TCP/RTU, Profinet, EtherNet/IP or OPC UA. We integrate signals and alarms into your existing system so that operation sees the condition of the equipment along with the process.</p></details>
+        <details><summary>What failures does vibration analysis detect?</summary><p>Imbalance, misalignment, mechanical looseness, wear of bearings and gears, cavitation in pumps and structural resonances, among others. Combined with temperature and current, it also helps distinguish electrical problems with the motor from mechanical problems with the driven equipment.</p></details>
+        <details><summary>What standard defines acceptable vibration levels?</summary><p>The reference for industrial machines is the ISO 20816 series (formerly ISO 10816), which classifies severity into zones A, B, C and D according to machine size and type of base. For critical process machinery, API 670 defines protection systems. Thresholds are adjusted with each team&#x27;s baseline.</p></details>
+        <details><summary>Does it work on frequency-variator equipment?</summary><p>Yes, provided that speed is recorded along with vibration, this compares readings at different speeds and correctly identifies the frequencies of failure in the spectrum.</p></details>
+        <details><summary>Where should we start?</summary><p>For a criticality diagnosis and a driver in the teams that cost the most when they stop. With measurable results in those teams, it is decided whether to expand the scope.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:var(--cobalt);padding:56px 0;text-align:center">
+    <div class="container">
+      <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">What equipment from your plant can&#x27;t fail?</h2>
+      <p style="color:#bfdbfe;margin-bottom:28px;max-width:620px;margin-left:auto;margin-right:auto">Let&#x27;s start with a criticality diagnosis: we identify the equipment that costs the most when it stops and we define what to monitor, how and how often.</p>
+      <div class="hero-btns on-dark" style="justify-content:center">
+        <a class="btn btn--primary" href="contacto_cta.html?producto=monitoreo-de-condicion&categoria=Servicio%20O%26M&src=lp-monitoreo-de-condicion#ctaForm">Request criticality diagnosis</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="cm-cross">
+      <p class="cm-cross__k">Do you also need electrical predictive?</p>
+      <p>Infrared thermography, VLF tests on medium voltage cables and transformer diagnostics complement the monitoring of rotating equipment.</p>
+      <a href="lp-mantenimiento-predictivo.html">See electrical predictive maintenance →</a>
+      &nbsp;&middot;&nbsp;
+      <a href="lp-industria-40.html">See Industry 4.0 / IIoT →</a>
+    </div>
+  </div>
+</main>
+
+
+<footer class="site-footer site-footer--compact">
+  <div class="container">
+
+    <!-- Se oculta entero en la variante --minimal -->
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <img src="../assets/brand/vms_logo_white.png" alt="VMS Energy"
+             width="150" height="44" loading="lazy" decoding="async">
+        <p class="muted">Electrical engineering, procurement and construction for industry in Mexico and America.</p>
+
+        <div class="site-footer__contact">
+          <a href="mailto:contacto@vmsenergy.com">contacto@vmsenergy.com</a>
+          <a href="tel:+529383814824">+52 938 381 4824</a>
+          <a href="tel:+523338130739">+52 33 3813 0739</a>
+        </div>
+
+        <div class="foot-social">
+          <a href="https://www.linkedin.com/company/vms-energy" rel="noopener" aria-label="VMS Energy on LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H16.7V3.6c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.17V9.9H7.5V13h2.72v8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/vmsenergy" rel="noopener" aria-label="VMS Energy on Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.05a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5zm0 11.14a4.39 4.39 0 1 1 0-8.78 4.39 4.39 0 0 1 0 8.78zm8.6-11.4a1.58 1.58 0 1 1-3.15 0 1.58 1.58 0 0 1 3.15 0z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="oil-gas-solutions.html">Oil &amp; Gas</a></li>
+          <li><a href="soluciones_mineria.html">Mining</a></li>
+          <li><a href="soluciones_siderurgia.html">Steel and metal mechanics</a></li>
+          <li><a href="soluciones_automatizacion_control.html">Automation and Control</a></li>
+          <li><a href="soluciones_electromecanicas.html">Electromechanical solutions</a></li>
+          <li><a href="soluciones_solar_industrial.html">Industrial Solar Energy</a></li>
+          <li><a href="soluciones_verde_no_solar.html">Non-Solar Green Generation</a></li>
+          <li><a href="generacion-en-sitio-cogeneracion.html">Cogeneration and On-Site Generation</a></li>
+          <li><a href="lp-plantas-de-emergencia-industriales.html">Emergency Plants</a></li>
+          <li><a href="soluciones_hvac_industrial.html">Industrial HVAC</a></li>
+          <li><a href="soluciones_iluminacion_industrial.html">Industrial Lighting</a></li>
+          <li><a href="soluciones_infraestructura_energetica.html">Energy Infrastructure</a></li>
+          <li><a href="confiabilidad-electrica-industrial.html">Electrical Reliability (UPS/BESS)</a></li>
+          <li><a href="arquitectura-disponibilidad-electrica.html">Availability Architecture</a></li>
+          <li><a href="lp-microrredes-sitios-remotos.html">Microgrids for Remote Sites</a></li>
+          <li><a href="soluciones.html">All solutions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="especialidades.html">Project Delivery</a></li>
+          <li><a href="especialidad_ingenieria.html">Engineering</a></li>
+          <li><a href="especialidad_mantenimiento.html">Maintenance</a></li>
+          <li><a href="especialidad_capacitacion.html">Training</a></li>
+          <li><a href="procura.html">Technical Supply</a></li>
+          <li><a href="oil-gas-maintenance.html">Oil &amp; Gas Maintenance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="nosotros.html">About us</a></li>
+          <li><a href="certificaciones.html">Certifications</a></li>
+          <li><a href="sostenibilidad.html">Sustainability</a></li>
+          <li><a href="proyectos-vms.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="VMShop.html">VMShop</a></li>
+          <li><a href="carreras.html">Careers</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--
+      RANURA DE CTA POR P&Aacute;GINA.
+      Cinco landings de cable llevaban en su pie un enlace propio de
+      conversi&oacute;n (contacto_cta.html?producto=kei-power, ?producto=esp-cables…).
+      Es maquinaria comercial, no navegaci&oacute;n, y no puede vivir en un pie
+      compartido. El migrador la reinyecta aqu&iacute; leyendo el pie original.
+      Si la p&aacute;gina no tra&iacute;a CTA, esta ranura queda vac&iacute;a y no se ve nada.
+    -->
+    <!-- VMS-CTA-PAGINA -->
+
+    <!--
+      BLOQUE LEGAL — presente e id&eacute;ntico en las tres variantes.
+      No se recorta nunca: es la base de cumplimiento del sitio.
+    -->
+    <div class="site-footer__legal">
+      <nav aria-label="Legal notices">
+        <a href="aviso-privacidad.html">Privacy Notice</a>
+        <a href="codigo-conducta.html">Code of Ethics and Conduct</a>
+        <a href="politica-antisoborno.html">Anti-Bribery Policy</a>
+        <a href="politica-interna_antilavado.html">Internal Anti-Money Laundering Policy</a>
+        <a href="buzon-sugerencias.html">Suggestion box</a>
+        <a href="directorio.html">Directory</a>
+        <a href="contacto.html">Contact</a>
+      </nav>
+      <span class="site-footer__copy">© 2026 VMS Energy</span>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>

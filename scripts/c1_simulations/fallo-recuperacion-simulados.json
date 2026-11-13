@@ -1,0 +1,1860 @@
+{
+  "applyBlocked": true,
+  "interrupted": {
+    "applyBlocked": true,
+    "cacheStep": "pending",
+    "kind": "c1-local-simulation-journal",
+    "plan": {
+      "account": "787140332697",
+      "applyBlocked": true,
+      "authorization": {
+        "granted": false,
+        "mechanism": "not-implemented"
+      },
+      "baselineFingerprint": "a8208d4e391d76c3084e55b7fbb3ea20a483cc9066cc9400b42ea485669069f3",
+      "blockers": [],
+      "bucket": "vmsenergy-web-prod-787140332697",
+      "cacheKeyPolicyVerified": false,
+      "classifications": {
+        "assets/app.css": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "protectedStaging": false
+        },
+        "doc.pdf": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "protectedStaging": false
+        },
+        "index.html": {
+          "classification": "UNCHANGED",
+          "desired": {
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "protectedStaging": false
+        }
+      },
+      "commit": "72ad37efaf16c796649c458c273e70984061fdb5",
+      "counts": {
+        "CREATE": 0,
+        "DELETE": 0,
+        "DRIFT": 0,
+        "UNCHANGED": 1,
+        "UPDATE": 2
+      },
+      "deletes": [],
+      "deletionGate": "requires dependency review, old-client/cache grace and separate approval before deletion",
+      "distributionId": "E3FWVCRXQ69DI6",
+      "evidenceUsage": "historical-offline-replay-not-current-proof",
+      "freshEvidenceRequiredBeforeAnyFutureApply": true,
+      "invalidations": [
+        "/assets/app.css",
+        "/doc.pdf"
+      ],
+      "kind": "c1-offline-plan",
+      "observationFingerprint": "4344d9ad9a030ba5dbbc5f4855d465c689baf75a9948163b3cff4e07e1ea2247",
+      "operations": [
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        }
+      ],
+      "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+      "recovery": {
+        "cloudFront": [
+          "/assets/app.css",
+          "/doc.pdf"
+        ],
+        "s3": [
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "doc.pdf",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          },
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "assets/app.css",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        ]
+      },
+      "region": "us-east-1",
+      "sameSourceEvidence": true,
+      "schemaVersion": 1,
+      "status": "PROPOSED",
+      "uploads": [
+        "assets/app.css",
+        "doc.pdf"
+      ],
+      "writerExclusionRequired": true
+    },
+    "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+    "recovery": {
+      "cloudFront": [],
+      "s3": [],
+      "state": "not-started"
+    },
+    "schemaVersion": 1,
+    "simulatedCheckpoints": {
+      "deletionGraceAssumed": false
+    },
+    "simulatedInvalidations": {},
+    "simulatedRemote": {
+      "assets/app.css": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+        "size": 3,
+        "versionId": "sim-6b6640e870c7a64b5f9b5b7b"
+      },
+      "doc.pdf": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+        "size": 3,
+        "versionId": "v-doc.pdf"
+      },
+      "index.html": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+        "size": 3,
+        "versionId": "v-index.html"
+      }
+    },
+    "state": "in-progress",
+    "steps": [
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": "effect-6b6640e870c7a64b5f9b5b7b",
+        "state": "intent"
+      },
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": null,
+        "state": "pending"
+      }
+    ]
+  },
+  "recovery": {
+    "applyBlocked": true,
+    "cacheStep": "pending",
+    "kind": "c1-local-simulation-journal",
+    "plan": {
+      "account": "787140332697",
+      "applyBlocked": true,
+      "authorization": {
+        "granted": false,
+        "mechanism": "not-implemented"
+      },
+      "baselineFingerprint": "a8208d4e391d76c3084e55b7fbb3ea20a483cc9066cc9400b42ea485669069f3",
+      "blockers": [],
+      "bucket": "vmsenergy-web-prod-787140332697",
+      "cacheKeyPolicyVerified": false,
+      "classifications": {
+        "assets/app.css": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "protectedStaging": false
+        },
+        "doc.pdf": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "protectedStaging": false
+        },
+        "index.html": {
+          "classification": "UNCHANGED",
+          "desired": {
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "protectedStaging": false
+        }
+      },
+      "commit": "72ad37efaf16c796649c458c273e70984061fdb5",
+      "counts": {
+        "CREATE": 0,
+        "DELETE": 0,
+        "DRIFT": 0,
+        "UNCHANGED": 1,
+        "UPDATE": 2
+      },
+      "deletes": [],
+      "deletionGate": "requires dependency review, old-client/cache grace and separate approval before deletion",
+      "distributionId": "E3FWVCRXQ69DI6",
+      "evidenceUsage": "historical-offline-replay-not-current-proof",
+      "freshEvidenceRequiredBeforeAnyFutureApply": true,
+      "invalidations": [
+        "/assets/app.css",
+        "/doc.pdf"
+      ],
+      "kind": "c1-offline-plan",
+      "observationFingerprint": "4344d9ad9a030ba5dbbc5f4855d465c689baf75a9948163b3cff4e07e1ea2247",
+      "operations": [
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        }
+      ],
+      "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+      "recovery": {
+        "cloudFront": [
+          "/assets/app.css",
+          "/doc.pdf"
+        ],
+        "s3": [
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "doc.pdf",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          },
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "assets/app.css",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        ]
+      },
+      "region": "us-east-1",
+      "sameSourceEvidence": true,
+      "schemaVersion": 1,
+      "status": "PROPOSED",
+      "uploads": [
+        "assets/app.css",
+        "doc.pdf"
+      ],
+      "writerExclusionRequired": true
+    },
+    "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+    "recovery": {
+      "cloudFront": [
+        "/assets/app.css"
+      ],
+      "s3": [
+        {
+          "action": "RESTORE_PREVIOUS_VERSION",
+          "index": 0,
+          "key": "assets/app.css",
+          "previousVersionId": "v-assets/app.css",
+          "requiresFreshVersionCheck": true
+        }
+      ],
+      "state": "complete"
+    },
+    "schemaVersion": 1,
+    "simulatedCheckpoints": {
+      "deletionGraceAssumed": false
+    },
+    "simulatedInvalidations": {
+      "c1-sim-rollback-6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7": [
+        "/assets/app.css"
+      ]
+    },
+    "simulatedRemote": {
+      "assets/app.css": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+        "size": 3,
+        "versionId": "sim-restore-6b6640e870c7a64b"
+      },
+      "doc.pdf": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+        "size": 3,
+        "versionId": "v-doc.pdf"
+      },
+      "index.html": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+        "size": 3,
+        "versionId": "v-index.html"
+      }
+    },
+    "state": "simulated-recovered",
+    "steps": [
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": "effect-6b6640e870c7a64b5f9b5b7b",
+        "state": "intent"
+      },
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": null,
+        "state": "pending"
+      }
+    ]
+  },
+  "retry": {
+    "applyBlocked": true,
+    "cacheStep": "done",
+    "kind": "c1-local-simulation-journal",
+    "plan": {
+      "account": "787140332697",
+      "applyBlocked": true,
+      "authorization": {
+        "granted": false,
+        "mechanism": "not-implemented"
+      },
+      "baselineFingerprint": "a8208d4e391d76c3084e55b7fbb3ea20a483cc9066cc9400b42ea485669069f3",
+      "blockers": [],
+      "bucket": "vmsenergy-web-prod-787140332697",
+      "cacheKeyPolicyVerified": false,
+      "classifications": {
+        "assets/app.css": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "protectedStaging": false
+        },
+        "doc.pdf": {
+          "classification": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "protectedStaging": false
+        },
+        "index.html": {
+          "classification": "UNCHANGED",
+          "desired": {
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3
+          },
+          "observed": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "previous": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-index.html"
+          },
+          "protectedStaging": false
+        }
+      },
+      "commit": "72ad37efaf16c796649c458c273e70984061fdb5",
+      "counts": {
+        "CREATE": 0,
+        "DELETE": 0,
+        "DRIFT": 0,
+        "UNCHANGED": 1,
+        "UPDATE": 2
+      },
+      "deletes": [],
+      "deletionGate": "requires dependency review, old-client/cache grace and separate approval before deletion",
+      "distributionId": "E3FWVCRXQ69DI6",
+      "evidenceUsage": "historical-offline-replay-not-current-proof",
+      "freshEvidenceRequiredBeforeAnyFutureApply": true,
+      "invalidations": [
+        "/assets/app.css",
+        "/doc.pdf"
+      ],
+      "kind": "c1-offline-plan",
+      "observationFingerprint": "4344d9ad9a030ba5dbbc5f4855d465c689baf75a9948163b3cff4e07e1ea2247",
+      "operations": [
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        }
+      ],
+      "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+      "recovery": {
+        "cloudFront": [
+          "/assets/app.css",
+          "/doc.pdf"
+        ],
+        "s3": [
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "doc.pdf",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          },
+          {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "key": "assets/app.css",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        ]
+      },
+      "region": "us-east-1",
+      "sameSourceEvidence": true,
+      "schemaVersion": 1,
+      "status": "PROPOSED",
+      "uploads": [
+        "assets/app.css",
+        "doc.pdf"
+      ],
+      "writerExclusionRequired": true
+    },
+    "planId": "6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7",
+    "recovery": {
+      "cloudFront": [],
+      "s3": [],
+      "state": "not-started"
+    },
+    "schemaVersion": 1,
+    "simulatedCheckpoints": {
+      "deletionGraceAssumed": false
+    },
+    "simulatedInvalidations": {
+      "c1-sim-6e2f9e21baaf033d0589229baeac5cd185b466ddeac32563fa5f4be164cb95e7": [
+        "/assets/app.css",
+        "/doc.pdf"
+      ]
+    },
+    "simulatedRemote": {
+      "assets/app.css": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+        "size": 3,
+        "versionId": "sim-6b6640e870c7a64b5f9b5b7b"
+      },
+      "doc.pdf": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+        "size": 3,
+        "versionId": "sim-89fd19a4dc68ef7239f8ca0a"
+      },
+      "index.html": {
+        "metadata": {
+          "complete": true,
+          "values": {
+            "ACL": {
+              "mode": "bucket-owner-enforced"
+            },
+            "CacheControl": "public,max-age=300,must-revalidate",
+            "ContentDisposition": null,
+            "ContentEncoding": null,
+            "ContentLanguage": null,
+            "ContentType": "application/octet-stream",
+            "Expires": null,
+            "Metadata": {},
+            "ObjectLock": null,
+            "SSEKMSKeyId": null,
+            "ServerSideEncryption": "AES256",
+            "StorageClass": "STANDARD",
+            "Tags": {},
+            "WebsiteRedirectLocation": null
+          }
+        },
+        "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+        "size": 3,
+        "versionId": "v-index.html"
+      }
+    },
+    "state": "simulated-complete",
+    "steps": [
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+            "size": 3,
+            "versionId": "v-assets/app.css"
+          },
+          "invalidationPaths": [
+            "/assets/app.css"
+          ],
+          "key": "assets/app.css",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-assets/app.css",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-assets/app.css",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": "effect-6b6640e870c7a64b5f9b5b7b",
+        "state": "done"
+      },
+      {
+        "operation": {
+          "action": "UPDATE",
+          "desired": {
+            "sha256": "a253ff09c5a8678e1fd1962b2c329245e139e45f9cc6ced4e5d7ad42c4108fc0",
+            "size": 3
+          },
+          "expectedCurrent": {
+            "metadata": {
+              "complete": true,
+              "values": {
+                "ACL": {
+                  "mode": "bucket-owner-enforced"
+                },
+                "CacheControl": "public,max-age=300,must-revalidate",
+                "ContentDisposition": null,
+                "ContentEncoding": null,
+                "ContentLanguage": null,
+                "ContentType": "application/octet-stream",
+                "Expires": null,
+                "Metadata": {},
+                "ObjectLock": null,
+                "SSEKMSKeyId": null,
+                "ServerSideEncryption": "AES256",
+                "StorageClass": "STANDARD",
+                "Tags": {},
+                "WebsiteRedirectLocation": null
+              }
+            },
+            "sha256": "cba06b5736faf67e54b07b561eae94395e774c517a7d910a54369e1263ccfbd4",
+            "size": 3,
+            "versionId": "v-doc.pdf"
+          },
+          "invalidationPaths": [
+            "/doc.pdf"
+          ],
+          "key": "doc.pdf",
+          "metadataToPreserveOrSet": {
+            "complete": true,
+            "values": {
+              "ACL": {
+                "mode": "bucket-owner-enforced"
+              },
+              "CacheControl": "public,max-age=300,must-revalidate",
+              "ContentDisposition": null,
+              "ContentEncoding": null,
+              "ContentLanguage": null,
+              "ContentType": "application/octet-stream",
+              "Expires": null,
+              "Metadata": {},
+              "ObjectLock": null,
+              "SSEKMSKeyId": null,
+              "ServerSideEncryption": "AES256",
+              "StorageClass": "STANDARD",
+              "Tags": {},
+              "WebsiteRedirectLocation": null
+            }
+          },
+          "phase": "ASSETS_FIRST",
+          "previousVersionId": "v-doc.pdf",
+          "recovery": {
+            "action": "RESTORE_PREVIOUS_VERSION",
+            "previousVersionId": "v-doc.pdf",
+            "requiresFreshVersionCheck": true
+          }
+        },
+        "simulatedEffectId": "effect-89fd19a4dc68ef7239f8ca0a",
+        "state": "done"
+      }
+    ]
+  },
+  "schemaVersion": 1,
+  "warning": "Estado remoto e invalidaciones simulados; no se ejecutaron en AWS."
+}

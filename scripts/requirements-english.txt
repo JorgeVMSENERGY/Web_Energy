@@ -1,0 +1,2 @@
+# Build-time JavaScript parser only; the published website has no Python dependency.
+esprima==4.0.1
