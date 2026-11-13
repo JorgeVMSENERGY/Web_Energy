@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/","logo":"https://vmsenergy.com/assets/logo.png","description":"VMS Energy — EPC contractor in Electrical Infrastructure, Automation and Control, Oil & Gas, Industrial Solar, Non-Solar Green Generation, Industrial Lighting, and Electromechanical Solutions.","award":["ISO 9001 GSC9KMX505","ISO 14001 GSC14KMX277","ISO 45001 GSC45KMX182","ISO 37001 GSC37KMX131","ISO 50001 GSC50KMX101"],"inLanguage":"en"},{"@type":"Service","name":"Electrical EPC","provider":{"@type":"Organization","name":"VMS Energy"},"areaServed":["MX","Latin America and the Caribbean"],"serviceType":"Design, technical supply, and construction in generation, transmission, and distribution","inLanguage":"en"},{"@type":"Service","name":"Oil & Gas EPC and Maintenance","provider":{"@type":"Organization","name":"VMS Energy"},"areaServed":["North America","Central America","Caribbean","Venezuela"],"serviceType":"Engineering, integration, and maintenance for oil & gas critical assets","inLanguage":"en"},{"@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Do you offer multi-brand integration?","acceptedAnswer":{"@type":"Answer","text":"Yes, integrations with ABB, Siemens, Schneider, Woodward, KEI Cables, and others."}},{"@type":"Question","name":"Are you ISO certified?","acceptedAnswer":{"@type":"Answer","text":"Yes: ISO 9001, 14001, 45001, 37001, and 50001, with public registry numbers."}}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"], "description": "VMS Energy — EPC contractor in Electrical Infrastructure, Automation and Control, Oil & Gas, Industrial Solar, Non-Solar Green Generation, Industrial Lighting, and Electromechanical Solutions."}, {"@type": "Service", "name": "Electrical EPC", "provider": {"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "url": "https://vmsenergy.com/"}, "areaServed": ["MX", "Latin America and the Caribbean"], "serviceType": "Design, technical supply, and construction in generation, transmission, and distribution", "inLanguage": "en"}, {"@type": "Service", "name": "Oil & Gas EPC and Maintenance", "provider": {"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "url": "https://vmsenergy.com/"}, "areaServed": ["North America", "Central America", "Caribbean", "Venezuela"], "serviceType": "Engineering, integration, and maintenance for oil & gas critical assets", "inLanguage": "en"}, {"@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Do you offer multi-brand integration?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, integrations with ABB, Siemens, Schneider, Woodward, KEI Cables, and others."}}, {"@type": "Question", "name": "Are you ISO certified?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: ISO 9001, 14001, 45001, 37001, and 50001, with public registry numbers."}}]}]}</script>
   <style>
     :root{
       --navy:#172C51;
@@ -472,6 +472,30 @@
       </div>
     </section>
 
+
+  <section class="vfaq" id="faq" aria-labelledby="faqTitle">
+  <style>
+.vfaq{padding:56px 0;background:#f6f8fb}
+.vfaq .vfaq-wrap{max-width:880px;margin:0 auto;padding:0 20px}
+.vfaq h2{margin:0 0 20px;color:#172C51;font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+.vfaq details.vfaq-item{border:1px solid rgba(23,44,81,.14);border-radius:12px;background:#fff;margin:0 0 10px;padding:0;overflow:hidden}
+.vfaq details.vfaq-item[open]{border-color:rgba(15,76,129,.3);background:#fff}
+.vfaq details.vfaq-item summary{list-style:none;cursor:pointer;padding:14px 18px;font-weight:700;color:#172C51;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.97rem}
+.vfaq details.vfaq-item summary::-webkit-details-marker{display:none}
+.vfaq details.vfaq-item summary::after{content:"+";font-weight:400;font-size:1.3rem;color:#1a4fa0;flex-shrink:0}
+.vfaq details.vfaq-item[open] summary::after{content:"\2212"}
+.vfaq .vfaq-a{padding:0 18px 16px;color:#374151;font-size:.93rem;line-height:1.6;margin:0}
+</style>
+    <div class="vfaq-wrap">
+      <h2 id="faqTitle">Frequently asked questions</h2>
+      <details class="vfaq-item"><summary>Do you offer multi-brand integration?</summary>
+        <p class="vfaq-a">Yes, integrations with ABB, Siemens, Schneider, Woodward, KEI Cables, and others.</p>
+      </details>
+      <details class="vfaq-item"><summary>Are you ISO certified?</summary>
+        <p class="vfaq-a">Yes: ISO 9001, 14001, 45001, 37001, and 50001, with public registry numbers.</p>
+      </details>
+    </div>
+  </section>
     <section class="cta-final" aria-labelledby="ctaFinalTitle">
       <div class="container">
         <div class="box">

@@ -261,68 +261,134 @@
     main > section:not(.hero){padding-block:var(--section-pad-y)}
   </style>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Service",
-        "name":"Cables Fotovoltaicos para Infraestructura Solar",
-        "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-        "areaServed":"M\u00e9xico",
-        "serviceType":"Suministro e ingenier\u00eda de cable fotovoltaico PV1-F para parques solares industriales",
-        "description":"Suministro de cable fotovoltaico PV1-F KEI para strings DC, troncales y cableado de infraestructura solar. Incluyendo dimensionamiento el\u00e9ctrico, especificaci\u00f3n y suministro integrado dentro de proyectos EPC solar llave en mano.",
-        "hasOfferCatalog":{
-          "@type":"OfferCatalog",
-          "name":"Cat\u00e1logo de Cables Fotovoltaicos VMS Energy",
-          "itemListElement":[
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 4 mm\u00b2 — string DC est\u00e1ndar"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 6 mm\u00b2 — string DC alta corriente"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 10 mm\u00b2 — string largo o alta corriente"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 16 mm\u00b2 — troncal DC"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable PV1-F KEI 25\u201350 mm\u00b2 — troncal DC de gran secci\u00f3n"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cable de potencia MT para interconexi\u00f3n inversor-transformador"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ingenier\u00eda de dimensionamiento de cable fotovoltaico"}}
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Cables Fotovoltaicos para Infraestructura Solar",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
+      "areaServed": "México",
+      "serviceType": "Suministro e ingeniería de cable fotovoltaico PV1-F para parques solares industriales",
+      "description": "Suministro de cable fotovoltaico PV1-F KEI para strings DC, troncales y cableado de infraestructura solar. Incluyendo dimensionamiento eléctrico, especificación y suministro integrado dentro de proyectos EPC solar llave en mano.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de Cables Fotovoltaicos VMS Energy",
+        "itemListElement": [
           {
-            "@type":"Question",
-            "name":"\u00bfQu\u00e9 secci\u00f3n de cable debo usar en mi parque solar?",
-            "acceptedAnswer":{"@type":"Answer","text":"Depende de la longitud del string, la corriente de cortocircuito del m\u00f3dulo (Isc) y los l\u00edmites de ca\u00edda de tensi\u00f3n del proyecto. Para strings est\u00e1ndar: 4\u20136 mm\u00b2. Para strings largos o alta corriente: 10\u201316 mm\u00b2. Para troncales DC: 25\u201350 mm\u00b2. VMS hace el dimensionamiento si compartes el dise\u00f1o el\u00e9ctrico."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable PV1-F KEI 4 mm² — string DC estándar"
+            }
           },
           {
-            "@type":"Question",
-            "name":"\u00bfEl cable PV1-F sirve para instalaci\u00f3n enterrada?",
-            "acceptedAnswer":{"@type":"Answer","text":"El PV1-F est\u00e1ndar no est\u00e1 dise\u00f1ado para instalaci\u00f3n directamente enterrada. Para tramos subterr\u00e1neos en un parque solar, se requiere cable con cubierta adicional (doble aislamiento o tuber\u00eda de protecci\u00f3n). VMS puede especificar la soluci\u00f3n correcta para cada tramo."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable PV1-F KEI 6 mm² — string DC alta corriente"
+            }
           },
           {
-            "@type":"Question",
-            "name":"\u00bfCu\u00e1nto tiempo duran los cables fotovoltaicos KEI?",
-            "acceptedAnswer":{"@type":"Answer","text":"El cable PV1-F KEI tiene vida \u00fatil estimada de 30 a\u00f1os bajo condiciones de operaci\u00f3n est\u00e1ndar, con resistencia a rayos UV, ozono y ciclos t\u00e9rmicos. Es compatible con la vida \u00fatil t\u00edpica de un parque solar industrial."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable PV1-F KEI 10 mm² — string largo o alta corriente"
+            }
           },
           {
-            "@type":"Question",
-            "name":"\u00bfPueden suministrar el cable junto con el EPC solar?",
-            "acceptedAnswer":{"@type":"Answer","text":"S\u00ed. VMS Energy ejecuta proyectos EPC solar llave en mano. El suministro de cable fotovoltaico forma parte del alcance EPC: lo especificamos, lo procuramos y lo instalamos. No necesitas coordinar con un proveedor separado."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable PV1-F KEI 16 mm² — troncal DC"
+            }
           },
           {
-            "@type":"Question",
-            "name":"\u00bfManejan cable de CA (AC) para la salida del inversor?",
-            "acceptedAnswer":{"@type":"Answer","text":"S\u00ed. Adem\u00e1s del cable DC fotovoltaico, suministramos cable de potencia MT para la interconexi\u00f3n del inversor/transformador elevador con la subestaci\u00f3n de interconexi\u00f3n. Toda la infraestructura de cable del parque puede gestionarse con VMS."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable PV1-F KEI 25–50 mm² — troncal DC de gran sección"
+            }
           },
           {
-            "@type":"Question",
-            "name":"\u00bfQu\u00e9 norma requiere CFE para interconexi\u00f3n de parques solares?",
-            "acceptedAnswer":{"@type":"Answer","text":"CFE revisa el dise\u00f1o el\u00e9ctrico a trav\u00e9s del dictamen de interconexi\u00f3n (CENACE/CFE). Los cables en el lado AC deben cumplir especificaciones LAPEM para el nivel de tensi\u00f3n de interconexi\u00f3n. VMS acompa\u00f1a el proceso desde la ingenier\u00eda b\u00e1sica hasta la aprobaci\u00f3n del dictamen."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable de potencia MT para interconexión inversor-transformador"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ingeniería de dimensionamiento de cable fotovoltaico"
+            }
           }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué sección de cable debo usar en mi parque solar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la longitud del string, la corriente de cortocircuito del módulo (Isc) y los límites de caída de tensión del proyecto. Para strings estándar: 4–6 mm². Para strings largos o alta corriente: 10–16 mm². Para troncales DC: 25–50 mm². VMS hace el dimensionamiento si compartes el diseño eléctrico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El cable PV1-F sirve para instalación enterrada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El PV1-F estándar no está diseñado para instalación directamente enterrada. Para tramos subterráneos en un parque solar, se requiere cable con cubierta adicional (doble aislamiento o tubería de protección). VMS puede especificar la solución correcta para cada tramo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo duran estos cables?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El cable PV1-F KEI tiene vida útil estimada de 30 años bajo condiciones de operación estándar, con resistencia a rayos UV, ozono y ciclos térmicos. Es compatible con la vida útil típica de un parque solar industrial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden suministrar el cable junto con el EPC solar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. VMS Energy ejecuta proyectos EPC solar llave en mano. El suministro de cable fotovoltaico forma parte del alcance EPC: lo especificamos, lo procuramos y lo instalamos. No necesitas coordinar con un proveedor separado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Manejan cable de CA (AC) para la salida del inversor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Además del cable DC fotovoltaico, suministramos cable de potencia MT para la interconexión del inversor/transformador elevador con la subestación de interconexión. Toda la infraestructura de cable del parque puede gestionarse con VMS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué norma requiere CFE para interconexión de parques solares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFE revisa el diseño eléctrico a través del dictamen de interconexión (CENACE/CFE). Los cables en el lado AC deben cumplir especificaciones LAPEM para el nivel de tensión de interconexión. VMS acompaña el proceso desde la ingeniería básica hasta la aprobación del dictamen."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

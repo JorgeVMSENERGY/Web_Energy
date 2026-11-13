@@ -18,14 +18,14 @@
 
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cómo Seleccionar Cable Eléctrico para Proyectos Industriales: Ampacidad, XLPE vs EPR, IEC 60502 y NMX-J | VMS Energy</title>
-  <meta name="description" content="Guía técnica completa para seleccionar cable eléctrico en proyectos industriales: cálculo de ampacidad (IEC 60287), caída de tensión (NOM-001-SEDE), corriente de cortocircuito (IEC 60949), diferencias XLPE vs EPR y caso real de subestación 13.8 kV en Jalisco." />
+  <title>Cómo seleccionar cable eléctrico industrial | VMS Energy</title>
+  <meta name="description" content="Cómo seleccionar cable eléctrico industrial: ampacidad (IEC 60287), caída de tensión (NOM-001-SEDE), cortocircuito, XLPE vs. EPR y caso real en 13.8 kV." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html" />
   <meta property="og:type" content="article" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
-  <meta property="og:title" content="Selección de Cable Eléctrico Industrial: Ampacidad, XLPE vs EPR y Normas IEC 60502 | VMS Energy" />
+  <meta property="og:title" content="Cómo seleccionar cable eléctrico industrial | VMS Energy" />
   <meta property="og:description" content="Del cálculo de ampacidad a la verificación de caída de tensión y cortocircuito: metodología completa para seleccionar cable eléctrico en proyectos EPC industriales en México." />
   <meta property="og:url" content="https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html" />
   <meta property="og:image" content="https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp" />
@@ -33,7 +33,7 @@
   <meta property="article:modified_time" content="2026-08-07" />
   <meta property="article:section" content="Suministro Técnico EPC" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Selección de Cable Eléctrico Industrial: Ampacidad, XLPE vs EPR e IEC 60502 | VMS Energy" />
+  <meta name="twitter:title" content="Cómo seleccionar cable eléctrico industrial | VMS Energy" />
   <meta name="twitter:description" content="Guía técnica: ampacidad IEC 60287, caída de tensión NOM-001, cortocircuito IEC 60949, XLPE vs EPR y caso real 13.8 kV Jalisco." />
   <meta name="twitter:image" content="https://vmsenergy.com/assets/img/blog/cable-electrico/og-seleccion-cable-industrial.webp" />
 <link rel="stylesheet" href="corporativo-base.css">
@@ -179,12 +179,15 @@
       "dateModified": "2026-08-07",
       "author": {
         "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
         "name": "VMS Energy",
         "url": "https://vmsenergy.com/"
       },
       "publisher": {
         "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
         "name": "VMS Energy",
+        "url": "https://vmsenergy.com/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
@@ -201,15 +204,15 @@
           "name": "¿Cuáles son los tres criterios para seleccionar un cable eléctrico industrial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Todo cable industrial debe verificarse contra tres criterios simultáneos: (1) Ampacidad — la corriente de operación no debe superar la capacidad térmica del cable (IEC 60287); (2) Caída de tensión — el ΔV en el extremo receptor no debe superar el 3% en alimentadores ni el 5% total según NOM-001-SEDE-2012; (3) Corriente de cortocircuito — la sección debe soportar la energía térmica del cortocircuito sin daño (IEC 60949). El criterio más restrictivo define la sección final."
+            "text": "Todo cable industrial debe verificarse contra tres criterios simultáneos: (1) Ampacidad — la corriente de operación no debe superar la capacidad térmica corregida del cable (IEC 60287); (2) Caída de tensión — el ΔV en el extremo receptor no debe superar el 3% en alimentadores ni el 5% total (NOM-001-SEDE-2012); (3) Corriente de cortocircuito — la sección debe soportar la energía térmica del cortocircuito sin daño (IEC 60949). El criterio más restrictivo determina la sección final."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué diferencia hay entre aislamiento XLPE y EPR en cables de media tensión?",
+          "name": "¿Qué diferencia hay entre aislamiento XLPE y EPR en media tensión?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "XLPE (polietileno reticulado) ofrece menor factor de disipación dieléctrica (tan δ < 0.0004), menor capacitancia y mejor comportamiento en líneas largas de media tensión. Es el estándar para subestaciones e instalaciones fijas. EPR (etileno-propileno) es superior en flexibilidad mecánica, resistencia al agua treeing y ambientes con humedad extrema — idóneo para trailing cables en minería y equipos móviles. Ambos soportan 90°C en operación y 250°C en cortocircuito."
+            "text": "XLPE ofrece menor factor de disipación dieléctrica (tan δ < 0.0004), menor capacitancia y mejor comportamiento en líneas largas. Es el estándar para subestaciones e instalaciones fijas. EPR es superior en flexibilidad mecánica, resistencia al water treeing y ambientes con humedad extrema — idóneo para trailing cables en minería y equipos móviles. Ambos soportan 90°C en operación y 250°C en cortocircuito."
           }
         },
         {
@@ -217,7 +220,7 @@
           "name": "¿Cómo se calcula la ampacidad de un cable enterrado según IEC 60287?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Según IEC 60287, la ampacidad de un cable enterrado se calcula partiendo de la capacidad nominal del fabricante y aplicando factores de corrección: temperatura del suelo (referencia 20°C), resistividad térmica del suelo ρ_T (típico 1.0–2.5 K·m/W en México), profundidad de instalación y número de circuitos agrupados. A mayor temperatura del suelo o mayor resistividad, menor ampacidad. VMS Energy elabora la memoria de cálculo de ampacidad como entregable de ingeniería básica."
+            "text": "Se parte de la ampacidad nominal del fabricante y se aplican tres factores de corrección: k_T (temperatura ambiente del suelo), k_A (agrupamiento de circuitos) y k_ρ (resistividad térmica del suelo). En México, las condiciones en zonas calurosas o con suelo arenoso seco pueden reducir la ampacidad hasta un 35% respecto al valor de tabla. VMS Energy elabora la memoria de cálculo de ampacidad como entregable de ingeniería básica."
           }
         },
         {
@@ -225,7 +228,7 @@
           "name": "¿Cuál es el límite de caída de tensión según NOM-001-SEDE-2012?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NOM-001-SEDE-2012 establece un máximo de 3% de caída de tensión en alimentadores y 3% en circuitos derivados, con un total acumulado no mayor al 5% desde el tablero principal hasta el punto de utilización más alejado. Para cargas sensibles como variadores de frecuencia o PLC, se recomienda no superar el 2% en el alimentador."
+            "text": "NOM-001-SEDE-2012 establece un máximo de 3% de caída de tensión en alimentadores y 3% en circuitos derivados, con un total acumulado no mayor al 5% desde el tablero principal hasta el punto de utilización más alejado. Para cargas sensibles como variadores de frecuencia, PLC o instrumentación analítica, VMS Energy recomienda no superar el 2% en el alimentador."
           }
         },
         {
@@ -233,7 +236,7 @@
           "name": "¿Cuándo se usa conductor de aluminio en lugar de cobre en proyectos industriales?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El aluminio se usa cuando el costo del conductor es factor decisivo y hay espacio disponible en bandejas y ductos para la mayor sección requerida (aproximadamente 1.5 veces la sección de cobre para igual ampacidad). Es frecuente en alimentadores principales de larga distancia y acometidas de alta potencia. Para control, instrumentación y circuitos de pequeño calibre se mantiene el cobre."
+            "text": "El aluminio se usa cuando el costo del conductor es factor decisivo y hay espacio disponible en bandejas y ductos para la mayor sección requerida (aproximadamente 1.5 veces la sección de cobre para igual ampacidad, según IEC 60228). Es frecuente en alimentadores principales de larga distancia y acometidas de alta potencia. Para control, instrumentación y circuitos de pequeño calibre se mantiene siempre el cobre."
           }
         },
         {
@@ -241,15 +244,15 @@
           "name": "¿Qué norma aplica para cables de potencia en proyectos con especificación CFE?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Para proyectos con interconexión o especificación CFE se aplica IEC 60502-2 (cables de 6 kV a 30 kV) e IEC 62067 (cables EHV superiores a 30 kV), junto con los requisitos de documentación CFE-LAPEM: certificado de pruebas tipo e individual, ficha técnica aprobada y procedimiento de instalación. En proyectos de distribución interna sin requisito CFE, NMX-J-ANCE y NOM-001-SEDE son suficientes para baja tensión."
+            "text": "Para proyectos con interconexión o especificación CFE se aplica IEC 60502-2 (cables de 6 kV a 30 kV) e IEC 62067 (cables EHV superiores a 30 kV), junto con los requisitos de documentación CFE-LAPEM: certificado de pruebas tipo e individual, ficha técnica aprobada y procedimiento de instalación validado. En proyectos de distribución interna sin requisito CFE, NMX-J y NOM-001-SEDE son suficientes para baja tensión."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué documentación debe entregar el fabricante de cable con cada bobina?",
+          "name": "¿Qué documentación debe entregar el fabricante con cada bobina de cable?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El paquete documental estándar por bobina incluye: certificado de pruebas de tipo (ensayos en muestra por lote), certificado de pruebas de rutina individuales (resistencia DC del conductor, prueba de tensión), hoja de datos del cable (construcción, materiales, parámetros eléctricos), reporte de longitud medida por bobina y etiqueta de trazabilidad. Para proyectos EPC con cliente PEMEX, CFE o con auditoría ISO, VMS Energy gestiona la documentación adicional requerida."
+            "text": "El paquete documental estándar incluye: certificado de pruebas de tipo (ensayos en muestra por lote: tensión soportada, descargas parciales, doblado), certificado de pruebas de rutina individuales (resistencia DC del conductor, prueba de tensión aplicada), hoja de datos del cable (construcción, materiales, parámetros eléctricos), reporte de longitud medida por bobina y etiqueta de trazabilidad. Para proyectos EPC con PEMEX, CFE o auditoría ISO, VMS Energy gestiona la documentación adicional requerida."
           }
         }
       ]
@@ -262,6 +265,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://vmsenergy.com/blog.html"},{"@type":"ListItem","position":3,"name":"Cómo Seleccionar Cable Eléctrico para Proyectos Industria…","item":"https://vmsenergy.com/blog-seleccion-cable-electrico-industrial.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

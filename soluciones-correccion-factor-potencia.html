@@ -89,30 +89,125 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"Service","name":"Corrección de Factor de Potencia","provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"areaServed":"MX","description":"Suministro e instalación de bancos de capacitores fijos, automáticos, desintonizados y filtros activos para corrección de factor de potencia bajo IEC 60831 e IEC 61921 en México.","serviceType":"Ingeniería EPC de corrección de factor de potencia","url":"https://vmsenergy.com/soluciones-correccion-factor-potencia.html",
-    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Soluciones de FP","itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banco de capacitores fijo"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banco de capacitores automático (APFC)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banco desintonizado con reactores"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Filtro activo de armónicas (APF)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Sistema híbrido APFC + filtro activo"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Estudio y medición de factor de potencia"}}
-    ]}},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"¿Cuándo aplica la penalización de CFE por factor de potencia?","acceptedAnswer":{"@type":"Answer","text":"CFE aplica una penalización cuando el factor de potencia promedio mensual cae por debajo de 0.90 en las tarifas de media tensión (HM, HS, H-SL). El cargo adicional puede llegar al 3% por cada punto porcentual por debajo de 0.90. Por ejemplo, un FP de 0.80 puede generar un recargo de hasta 30% sobre la demanda facturable."}},
-      {"@type":"Question","name":"¿Cuál es la diferencia entre un banco fijo y uno automático?","acceptedAnswer":{"@type":"Answer","text":"Un banco fijo inyecta una cantidad constante de MVAR a la red. Es adecuado cuando la carga reactiva es estable. Un banco automático (APFC) usa un controlador que mide el FP en tiempo real y conecta o desconecta pasos de capacitores para mantener el FP objetivo (típicamente 0.95–0.98 inductivo), incluso cuando la carga varía durante el día."}},
-      {"@type":"Question","name":"¿Por qué es necesario el banco desintonizado en redes con armónicas?","acceptedAnswer":{"@type":"Answer","text":"En redes con variadores de frecuencia, UPS o fuentes conmutadas, las armónicas de corriente pueden crear resonancia con los capacitores estándar, amplificando las tensiones armónicas y destruyendo los condensadores. El banco desintonizado incorpora reactores en serie calibrados para desplazar la frecuencia de resonancia por debajo de la 5ª armónica (250 Hz en sistema de 50 Hz; 300 Hz en 60 Hz), evitando la resonancia."}},
-      {"@type":"Question","name":"¿Qué ventaja tiene un filtro activo de armónicas sobre un banco de capacitores?","acceptedAnswer":{"@type":"Answer","text":"Un filtro activo (APF) inyecta corrientes de compensación en tiempo real para cancelar las armónicas generadas por las cargas no lineales, logrando THDi < 5% o incluso < 3%. Además, puede corregir el factor de potencia simultáneamente. La desventaja es su costo mayor. Es la solución preferida cuando el THDi supera el 20% o cuando la norma IEEE 519 exige un THDi muy bajo en el punto de conexión."}},
-      {"@type":"Question","name":"¿VMS Energy realiza el estudio de factor de potencia antes de dimensionar la solución?","acceptedAnswer":{"@type":"Answer","text":"Sí. VMS Energy realiza una medición de calidad de energía (analizador de red) por 7 días para registrar FP, THDi, THDv, demanda máxima y perfil de carga. Con estos datos dimensionamos el banco o filtro óptimo, calculamos el ahorro en la factura CFE y presentamos el retorno de inversión esperado."}}
-    ]}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Corrección de Factor de Potencia",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "areaServed": "MX",
+      "description": "Suministro e instalación de bancos de capacitores fijos, automáticos, desintonizados y filtros activos para corrección de factor de potencia bajo IEC 60831 e IEC 61921 en México.",
+      "serviceType": "Ingeniería EPC de corrección de factor de potencia",
+      "url": "https://vmsenergy.com/soluciones-correccion-factor-potencia.html",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Soluciones de FP",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Banco de capacitores fijo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Banco de capacitores automático (APFC)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Banco desintonizado con reactores"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Filtro activo de armónicas (APF)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sistema híbrido APFC + filtro activo"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Estudio y medición de factor de potencia"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuándo aplica la penalización de CFE por factor de potencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFE aplica una penalización cuando el factor de potencia promedio mensual cae por debajo de 0.90 en las tarifas de media tensión (HM, HS, H-SL). El cargo adicional puede llegar al 3% por cada punto porcentual por debajo de 0.90. Por ejemplo, un FP de 0.80 puede generar un recargo de hasta 30% sobre la demanda facturable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre un banco fijo y uno automático?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un banco fijo inyecta una cantidad constante de MVAR a la red. Es adecuado cuando la carga reactiva es estable. Un banco automático (APFC) usa un controlador que mide el FP en tiempo real y conecta o desconecta pasos de capacitores para mantener el FP objetivo (típicamente 0.95–0.98 inductivo), incluso cuando la carga varía durante el día."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué es necesario el banco desintonizado en redes con armónicas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En redes con variadores de frecuencia, UPS o fuentes conmutadas, las armónicas de corriente pueden crear resonancia con los capacitores estándar, amplificando las tensiones armónicas y destruyendo los condensadores. El banco desintonizado incorpora reactores en serie calibrados para desplazar la frecuencia de resonancia por debajo de la 5ª armónica (250 Hz en sistema de 50 Hz; 300 Hz en 60 Hz), evitando la resonancia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué ventaja tiene un filtro activo de armónicas sobre un banco de capacitores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un filtro activo (APF) inyecta corrientes de compensación en tiempo real para cancelar las armónicas generadas por las cargas no lineales, logrando THDi < 5% o incluso < 3%. Además, puede corregir el factor de potencia simultáneamente. La desventaja es su costo mayor. Es la solución preferida cuando el THDi supera el 20% o cuando la norma IEEE 519 exige un THDi muy bajo en el punto de conexión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿VMS Energy realiza el estudio de factor de potencia antes de dimensionar la solución?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. VMS Energy realiza una medición de calidad de energía (analizador de red) por 7 días para registrar FP, THDi, THDv, demanda máxima y perfil de carga. Con estos datos dimensionamos el banco o filtro óptimo, calculamos el ahorro en la factura CFE y presentamos el retorno de inversión esperado."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Corrección de Factor de Potencia | Bancos de Capacitores","item":"https://vmsenergy.com/soluciones-correccion-factor-potencia.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

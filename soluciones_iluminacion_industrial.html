@@ -327,15 +327,20 @@
   .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Service",
-      "name":"Iluminación Industrial",
-      "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-      "areaServed":"México",
-      "serviceType":"EPC de iluminación industrial"
-    }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Iluminación Industrial",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://vmsenergy.com/#organization",
+    "name": "VMS Energy",
+    "url": "https://vmsenergy.com/"
+  },
+  "areaServed": "México",
+  "serviceType": "EPC de iluminación industrial"
+}
+</script>
 <style id="sticky-actions-global">
   .sticky-actions{
     position:fixed;
@@ -495,23 +500,90 @@
   @media(max-width:860px){.challenge-grid{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-          {"@type":"Question","name":"¿Realizan el estudio fotométrico según NOM-025-STPS?","acceptedAnswer":{"@type":"Answer","text":"Sí. Entregamos el estudio con valores de lux medidos por zona de trabajo, plano reflactométrico modelado en DIALux o Relux, y programa de mantenimiento según la norma."}},
-          {"@type":"Question","name":"¿Pueden instalar luminarias certificadas Ex para zonas clasificadas?","acceptedAnswer":{"@type":"Answer","text":"Sí. Suministramos e instalamos luminarias Ex-d y Ex-e certificadas IEC 60598 y NEC para Zonas 1, 2 y Divisiones I y II en áreas con gases, vapores o polvos inflamables."}},
-          {"@type":"Question","name":"¿Qué marcas de luminarias LED industriales manejan?","acceptedAnswer":{"@type":"Answer","text":"Cree, Philips Lighting, Osram, Holophane y distribuidores con certificación NOM-064-SCFI. Seleccionamos según IP requerido, resistencia a impacto mecánico IK, temperatura de trabajo y vida útil mínima de 50,000 horas."}},
-          {"@type":"Question","name":"¿Incluyen sistema de control, atenuación o sensores de presencia?","acceptedAnswer":{"@type":"Answer","text":"Sí. Integramos sensores de presencia, daylight harvesting y control DALI o 0-10V para reducir el consumo real hasta un 40% adicional sobre el ahorro base del retrofit LED."}},
-          {"@type":"Question","name":"¿Cuál es el retorno de inversión típico de un retrofit LED industrial?","acceptedAnswer":{"@type":"Answer","text":"Entre 18 y 30 meses para plantas industriales medianas, considerando ahorro en energía, reducción de mantenimiento correctivo y vida útil mayor a 50,000 horas de las luminarias LED."}},
-          {"@type":"Question","name":"¿Realizan el proyecto llave en mano incluyendo demolición de luminarias existentes?","acceptedAnswer":{"@type":"Answer","text":"Sí. El alcance puede incluir desmontaje y disposición de luminarias con mercurio (conforme NOM-052-SEMARNAT), suministro, instalación, cableado y comisionamiento del nuevo sistema."}}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye una solución de iluminación industrial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluye ingeniería luminotécnica, suministro técnico, instalación, pruebas y comisionamiento en sitio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden trabajar por etapas sin detener operación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Planeamos ventanas de intervención y fases de ejecución para minimizar impactos en continuidad operativa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Realizan el estudio fotométrico según NOM-025-STPS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Entregamos el estudio con valores de lux medidos por zona de trabajo, plano reflactométrico modelado en DIALux o Relux, y programa de mantenimiento según la norma."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden instalar luminarias certificadas Ex para zonas clasificadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Suministramos e instalamos luminarias Ex-d y Ex-e certificadas IEC 60598 y NEC para Zonas 1, 2 y Divisiones I y II en áreas con gases, vapores o polvos inflamables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué marcas de luminarias LED industriales manejan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cree, Philips Lighting, Osram, Holophane y distribuidores con certificación NOM-064-SCFI. Seleccionamos según IP requerido, resistencia a impacto mecánico IK, temperatura de trabajo y vida útil mínima de 50,000 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Incluyen sistema de control, atenuación o sensores de presencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Integramos sensores de presencia, daylight harvesting y control DALI o 0-10V para reducir el consumo real hasta un 40% adicional sobre el ahorro base del retrofit LED."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el retorno de inversión típico de un retrofit LED industrial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 18 y 30 meses para plantas industriales medianas, considerando ahorro en energía, reducción de mantenimiento correctivo y vida útil mayor a 50,000 horas de las luminarias LED."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Realizan el proyecto llave en mano incluyendo demolición de luminarias existentes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El alcance puede incluir desmontaje y disposición de luminarias con mercurio (conforme NOM-052-SEMARNAT), suministro, instalación, cableado y comisionamiento del nuevo sistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo iniciamos un proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comparte tu requerimiento en el formulario de contacto y definimos alcance, tiempos y propuesta técnica."
+      }
+    }
+  ]
+}
 </script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Soluciones","item":"https://vmsenergy.com/soluciones.html"},{"@type":"ListItem","position":3,"name":"Iluminación Industrial LED México","item":"https://vmsenergy.com/soluciones_iluminacion_industrial.html"}]}
   </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -919,6 +991,30 @@
         <details>
           <summary>&iquest;Pueden trabajar por etapas sin detener operaci&oacute;n?</summary>
           <p>S&iacute;. Planeamos ventanas de intervenci&oacute;n y fases de ejecuci&oacute;n para minimizar impactos en continuidad operativa.</p>
+        </details>
+        <details>
+          <summary>¿Realizan el estudio fotométrico según NOM-025-STPS?</summary>
+          <p>Sí. Entregamos el estudio con valores de lux medidos por zona de trabajo, plano reflactométrico modelado en DIALux o Relux, y programa de mantenimiento según la norma.</p>
+        </details>
+        <details>
+          <summary>¿Pueden instalar luminarias certificadas Ex para zonas clasificadas?</summary>
+          <p>Sí. Suministramos e instalamos luminarias Ex-d y Ex-e certificadas IEC 60598 y NEC para Zonas 1, 2 y Divisiones I y II en áreas con gases, vapores o polvos inflamables.</p>
+        </details>
+        <details>
+          <summary>¿Qué marcas de luminarias LED industriales manejan?</summary>
+          <p>Cree, Philips Lighting, Osram, Holophane y distribuidores con certificación NOM-064-SCFI. Seleccionamos según IP requerido, resistencia a impacto mecánico IK, temperatura de trabajo y vida útil mínima de 50,000 horas.</p>
+        </details>
+        <details>
+          <summary>¿Incluyen sistema de control, atenuación o sensores de presencia?</summary>
+          <p>Sí. Integramos sensores de presencia, daylight harvesting y control DALI o 0-10V para reducir el consumo real hasta un 40% adicional sobre el ahorro base del retrofit LED.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el retorno de inversión típico de un retrofit LED industrial?</summary>
+          <p>Entre 18 y 30 meses para plantas industriales medianas, considerando ahorro en energía, reducción de mantenimiento correctivo y vida útil mayor a 50,000 horas de las luminarias LED.</p>
+        </details>
+        <details>
+          <summary>¿Realizan el proyecto llave en mano incluyendo demolición de luminarias existentes?</summary>
+          <p>Sí. El alcance puede incluir desmontaje y disposición de luminarias con mercurio (conforme NOM-052-SEMARNAT), suministro, instalación, cableado y comisionamiento del nuevo sistema.</p>
         </details>
         <details>
           <summary>&iquest;C&oacute;mo iniciamos un proyecto?</summary>

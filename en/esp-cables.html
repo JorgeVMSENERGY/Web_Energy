@@ -669,123 +669,100 @@
   </style>
   <script type="application/ld+json">
 {
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "Service",
-   "name": "ESP Cable Supply for Electrical Submersible Pumping",
-   "provider": {
-    "@type": "Organization",
-    "name": "VMS Energy",
-    "url": "https://vmsenergy.com/en/"
-   },
-   "areaServed": "Mexico",
-   "serviceType": "Technical supply of ESP (Electrical Submersible Pump) cable for oil wells",
-   "description": "Supply of Arteria family ESP cable (180°F, 205°F, 290°F, 400°F, 450°F) for electrical submersible pumping systems in oil and gas wells in Mexico. Flat and Round formats, stock available for 180°F and 205°F families, coordinated from Ciudad del Carmen.",
-   "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "VMS Energy ESP cable catalog",
-    "itemListElement": [
-     {
-      "@type": "Offer",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "Arteria 180°F — conventional wells, EPDM insulation"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "ESP Cable Supply for Electrical Submersible Pumping",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "areaServed": "Mexico",
+      "serviceType": "Technical supply of ESP (Electrical Submersible Pump) cable for oil wells",
+      "description": "Supply of Arteria family ESP cable (180°F, 205°F, 290°F, 400°F, 450°F) for electrical submersible pumping systems in oil and gas wells in Mexico. Flat and Round formats, stock available for 180°F and 205°F families, coordinated from Ciudad del Carmen.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "VMS Energy ESP cable catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 180°F — conventional wells, EPDM insulation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 205°F — moderate-to-high temperature wells"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 290°F / 400°F — high-temperature wells"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 450°F KEFLG — H₂S and corrosive fluid environments"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Flat and Round formats according to well geometry"
+            }
+          }
+        ]
       }
-     },
-     {
-      "@type": "Offer",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "Arteria 205°F — moderate-to-high temperature wells"
-      }
-     },
-     {
-      "@type": "Offer",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "Arteria 290°F / 400°F — high-temperature wells"
-      }
-     },
-     {
-      "@type": "Offer",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "Arteria 450°F KEFLG — H₂S and corrosive fluid environments"
-      }
-     },
-     {
-      "@type": "Offer",
-      "itemOffered": {
-       "@type": "Service",
-       "name": "Flat and Round formats according to well geometry"
-      }
-     }
-    ]
-   }
-  },
-  {
-   "@type": "FAQPage",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "How do I select the right Arteria family for my well?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The main criterion is bottom-hole temperature (BHT). Arteria 180°F for normal conditions, 205°F for hotter wells, 290–400°F for high-temperature wells. For H₂S or corrosive fluids, the KEFLG variant with a Kapton (polyimide) jacket is specified. VMS helps with selection using the well temperature profile."
-     }
     },
     {
-     "@type": "Question",
-     "name": "When should you use Flat vs. Round ESP cable?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Round is more flexible and recommended for deviated, short-radius, or direction-changing wells. Flat takes less annular space and can be more economical in vertical wells with enough room. The decision also depends on the available casing diameter."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Do you have ESP cable available immediately in Mexico?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. Some SKUs in the 180°F and 205°F families are in stock in Mexico, with 24–72 h delivery from Ciudad del Carmen. Higher-temperature families (290°F, 400°F, and 450°F) are generally made to order, with manufacturing lead times of 8 to 16 weeks."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Is ESP cable protected against H₂S?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Arteria 400°F and 450°F families with EPDM insulation and a Kapton (polyimide) jacket offer superior resistance to H₂S and corrosive fluids. For high H₂S concentrations, the KEFLG or KEFLEG variant is specified. VMS Energy verifies compatibility with the well fluid analysis."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How is ESP cable size selected for a submersible motor?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The size is calculated from motor power (kW), surface supply voltage, well depth (voltage drop), fluid temperature (ampacity correction), and whether a VSD (variable speed drive) is used. VMS Energy can perform the electrical sizing as part of its technical support."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Does VMS Energy have a presence in the Gulf of Mexico oil regions?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. VMS Energy has an operations office in Ciudad del Carmen, Campeche, with fast response for supplies to the Cantarell and KMZ assets, Litoral de Tabasco, and offshore platforms. This proximity allows 24–72 h deliveries in operational emergencies."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What technical documentation does VMS provide with the ESP cable?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Cable technical datasheet (temperature, construction, insulation), certificate of origin, measured length report per reel and, when the operator requires it, traceability documentation for PEMEX or IOC audits. Documentation is delivered with the reel for field validation."
-     }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I select the right Arteria family for my well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The main criterion is bottom-hole temperature (BHT). Arteria 180 °F for normal conditions, 205 °F for hotter wells, and 290–450 °F for high-temperature wells and corrosive environments. VMS can help you select if you share the well’s temperature profile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Flat or Round for my installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Round is more flexible and recommended for deviated, short-radius, or direction-changing wells. Flat takes less annular space and can be more economical in vertical wells with enough room. The decision also depends on the casing diameter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have field stock or only made to order?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some SKUs in the 180 °F and 205 °F families are in stock in Mexico. Higher-temperature families (400 °F and 450 °F) are generally made to order, with lead times of 8 to 16 weeks. Check availability when you request a quote for a specific SKU."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the cable protected against H₂S?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arteria 400 and 450 families with EPDM insulation and a Kapton (polyimide) jacket offer superior resistance to H₂S and corrosive fluids. For high H₂S concentrations, specify the KEFLG or KEFLEG variant. Consult VMS with the well fluid analysis."
+          }
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
 </script>
 
@@ -817,6 +794,7 @@
 </script>
 
 <!-- Se retira un segundo Service duplicado: repetia el titulo anterior y contradecia al @graph de arriba, que ya declara el servicio, el FAQ y el catalogo. -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -327,71 +327,127 @@
   .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Service",
-        "name":"HVAC Industrial",
-        "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-        "areaServed":"México",
-        "serviceType":"EPC de HVAC industrial",
-        "description":"Ingeniería, suministro e instalación de sistemas HVAC para plantas industriales. Cálculo de carga térmica ASHRAE, selección de equipo, integración BMS y puesta en marcha.",
-        "hasOfferCatalog":{
-          "@type":"OfferCatalog",
-          "name":"Servicios HVAC Industrial VMS Energy",
-          "itemListElement":[
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ingeniería de carga térmica ASHRAE"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Selección y suministro de equipos HVAC industriales"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Instalación y comisionamiento HVAC"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Integración BMS / BACnet"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dictamen técnico y mantenimiento preventivo"}}
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "HVAC Industrial",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
+      "areaServed": "México",
+      "serviceType": "EPC de HVAC industrial",
+      "description": "Ingeniería, suministro e instalación de sistemas HVAC para plantas industriales. Cálculo de carga térmica ASHRAE, selección de equipo, integración BMS y puesta en marcha.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios HVAC Industrial VMS Energy",
+        "itemListElement": [
           {
-            "@type":"Question",
-            "name":"¿Cómo se calcula la carga térmica en un proyecto HVAC industrial?",
-            "acceptedAnswer":{"@type":"Answer","text":"Se aplica el método CLTD/CLF de ASHRAE: se suman las ganancias de calor por transmisión de envolvente (U×A×CLTD), radiación solar en ventanas (SC×A×SHGF×CLF), iluminación, ocupantes (≈70 W sensible + 45 W latente por persona), equipos de proceso (P×FUM×FLM) y ventilación/infiltración. El resultado en BTU/h se convierte a toneladas de refrigeración (1 TR = 12 000 BTU/h = 3.517 kW). VMS Energy utiliza condiciones de diseño ASHRAE 0.4% para cada ciudad: Guadalajara 33 °C, Monterrey 40 °C, CDMX 27 °C, Ciudad del Carmen 35 °C."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ingeniería de carga térmica ASHRAE"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿En qué se diferencia el HVAC industrial del HVAC comercial?",
-            "acceptedAnswer":{"@type":"Answer","text":"El HVAC industrial maneja cargas internas mucho mayores (maquinaria, procesos exotérmicos, vapores corrosivos) y debe cumplir requisitos de calidad de aire de proceso — limpieza, humedad relativa, presurización de salas — que no existen en edificios comerciales. Los equipos son de categoría heavy-duty: chillers de tornillo o centrífugos, manejadoras de alta presión estática, ductos de acero galvanizado o FRP. Además se integran con el sistema de control de planta (BMS, SCADA) bajo protocolos como BACnet (ASHRAE 135) o Modbus TCP."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Selección y suministro de equipos HVAC industriales"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Qué refrigerantes usan y cómo afecta la normativa Kigali?",
-            "acceptedAnswer":{"@type":"Answer","text":"Los proyectos actuales de VMS Energy especifican principalmente R-410A (GWP 2 088) y R-134a. El R-22 (HCFC) está siendo eliminado conforme al Protocolo de Montreal. La Enmienda de Kigali (2022 en México) establece una reducción escalonada de HFCs de alto GWP, lo que impulsa la adopción de R-32 (GWP 675), R-454B (GWP 466, alternativa de bajo GWP a R-410A) y amoniaco (NH₃) en refrigeración industrial de gran escala. VMS Energy evalúa el refrigerante óptimo según capacidad del equipo, disponibilidad de técnicos certificados y horizonte de vida útil del proyecto."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Instalación y comisionamiento HVAC"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Cómo afecta la altitud al desempeño de los equipos HVAC?",
-            "acceptedAnswer":{"@type":"Answer","text":"A mayor altitud, la densidad del aire disminuye y los equipos entregan menos capacidad. La regla general es un derating de aproximadamente 1% por cada 300 m sobre el nivel del mar. En Ciudad de México (2 240 m) un chiller nominado a 100 TR a nivel del mar entrega cerca de 92.5 TR. VMS Energy aplica los factores de corrección de altitud del fabricante y de las tablas ASHRAE para garantizar que el equipo seleccionado cumpla la carga calculada en el sitio real del proyecto."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Integración BMS / BACnet"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Qué es el dictamen técnico HVAC y cuándo se requiere?",
-            "acceptedAnswer":{"@type":"Answer","text":"El dictamen técnico es un documento formal que evalúa el estado actual del sistema HVAC: capacidad real vs. carga demandada, condición de compresores, serpentines y torres de enfriamiento, calidad del agua de circuito cerrado, cumplimiento de NOM-023-ENER-2010 (eficiencia energética) y NOM-031-STPS (condiciones de confort en el trabajo). Se requiere antes de ampliaciones o modernizaciones, para obtener certificaciones ISO 50001, o cuando se detectan problemas de temperatura, humedad o consumo energético anómalo. Sirve como base para el alcance de cualquier proyecto de mejora."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Cómo integran los sistemas HVAC con BMS o SCADA de planta?",
-            "acceptedAnswer":{"@type":"Answer","text":"VMS Energy implementa la integración mediante protocolos estándar de automatización: BACnet IP / BACnet MS/TP (ASHRAE 135) para controladores modernos, Modbus RTU o TCP para equipos legacy, y en algunos proyectos LonWorks. Los puntos de monitoreo típicos incluyen temperatura de suministro/retorno, presión diferencial, estado de compresor, alarmas de alta presión y consumo kWh. La integración permite control centralizado, tendencias históricas, alarmas tempranas y estrategias de ahorro energético como reset de temperatura de agua helada según carga parcial (PLR)."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Cómo iniciamos un proyecto HVAC industrial con VMS Energy?",
-            "acceptedAnswer":{"@type":"Answer","text":"El proceso comienza con un levantamiento en campo (o revisión de planos si el proyecto está en etapa EPC) para recopilar: área y uso de los espacios, cargas de proceso, datos meteorológicos del sitio, restricciones arquitectónicas y requisitos de calidad de aire. Con esa información VMS Energy elabora la memoria de cálculo de carga térmica ASHRAE, la ingeniería conceptual y la propuesta técnico-económica. El tiempo típico para una propuesta en firme es de 5 a 10 días hábiles dependiendo de la complejidad. Comparte tu requerimiento en el formulario de contacto para agendar el levantamiento."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dictamen técnico y mantenimiento preventivo"
+            }
           }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula la carga térmica en un proyecto HVAC industrial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se aplica el método CLTD/CLF de ASHRAE: se suman ganancias de calor por transmisión de envolvente (U×A×CLTD), radiación solar (SC×A×SHGF×CLF), iluminación, ocupantes (≈70 W sensible + 45 W latente/persona), equipos de proceso y ventilación. El resultado en BTU/h se convierte a toneladas de refrigeración (1 TR = 12 000 BTU/h = 3.517 kW). Utilizamos condiciones de diseño ASHRAE 0.4%: Guadalajara 33 °C, Monterrey 40 °C, CDMX 27 °C, Ciudad del Carmen 35 °C."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia el HVAC industrial del HVAC comercial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El HVAC industrial maneja cargas internas mucho mayores —maquinaria, procesos exotérmicos, vapores corrosivos— y debe cumplir requisitos de calidad de aire de proceso: limpieza, humedad relativa controlada y presurización diferencial de salas. Los equipos son heavy-duty (chillers de tornillo o centrífugos, manejadoras de alta presión estática) y se integran con el BMS/SCADA de planta mediante protocolos como BACnet (ASHRAE 135) o Modbus TCP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué refrigerantes utilizan y cómo impacta la Enmienda de Kigali?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los proyectos actuales especifican principalmente R-410A (GWP 2 088) y R-134a. El R-22 está siendo eliminado conforme al Protocolo de Montreal. La Enmienda de Kigali (en vigor en México desde 2022) impulsa la transición hacia R-32 (GWP 675), R-454B (GWP 466) y amoniaco (NH₃) en refrigeración industrial de gran escala. Evaluamos el refrigerante óptimo según capacidad, disponibilidad de técnicos certificados y horizonte de vida útil del proyecto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo afecta la altitud al desempeño del equipo HVAC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La menor densidad del aire a mayor altitud reduce la capacidad del equipo aproximadamente 1% por cada 300 m sobre el nivel del mar. En Ciudad de México (2 240 m) un chiller de 100 TR nominales entrega cerca de 92.5 TR reales. VMS Energy aplica los factores de corrección del fabricante y las tablas ASHRAE para garantizar que el equipo seleccionado cubra la carga calculada en el sitio real."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el dictamen técnico HVAC y cuándo se requiere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un documento formal que evalúa el estado actual del sistema: capacidad real vs. carga demandada, condición de compresores, serpentines y torres de enfriamiento, calidad del agua de circuito cerrado, y cumplimiento de NOM-023-ENER-2010 y NOM-031-STPS. Se requiere antes de ampliaciones o modernizaciones, para certificaciones ISO 50001 o cuando se detectan problemas de temperatura, humedad o consumo energético anómalo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo integran el HVAC con el BMS o SCADA de la planta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Implementamos integración mediante BACnet IP / MS/TP (ASHRAE 135) para controladores modernos, Modbus RTU/TCP para equipos legacy y LonWorks según requerimiento. Los puntos típicos incluyen temperatura de suministro/retorno, presión diferencial, estado de compresor y consumo kWh. La integración permite control centralizado, historización de tendencias, alarmas tempranas y estrategias de ahorro como reset de temperatura de agua helada según carga parcial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo iniciamos un proyecto HVAC industrial con VMS Energy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El proceso comienza con un levantamiento en campo —o revisión de planos en etapa EPC— para definir áreas y usos, cargas de proceso, datos meteorológicos del sitio y requisitos de calidad de aire. Con esa información elaboramos la memoria de cálculo ASHRAE, la ingeniería conceptual y la propuesta técnico-económica. El tiempo típico para una propuesta en firme es de 5 a 10 días hábiles. Comparte tu requerimiento en el formulario de contacto para agendar el levantamiento."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style id="sticky-actions-global">
   .sticky-actions{
     position:fixed;
@@ -554,6 +610,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Soluciones","item":"https://vmsenergy.com/soluciones.html"},{"@type":"ListItem","position":3,"name":"HVAC Industrial México","item":"https://vmsenergy.com/soluciones_hvac_industrial.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
