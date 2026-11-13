@@ -20,7 +20,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Confiabilidad El&eacute;ctrica Industrial &mdash; UPS y BESS &middot; VMS Energy</title>
-  <meta name="description" content="VMS Energy dise&ntilde;a e instala sistemas UPS industriales Borri y BESS Sigenergy para instalaciones cr&iacute;ticas en M&eacute;xico. Peak shaving GDMTH, almacenamiento de energ&iacute;a industrial, regulaci&oacute;n BESS M&eacute;xico (SENER/CNE/CFE/CENACE), proyectos EPC llave en mano." />
+  <meta name="description" content="UPS industriales Borri y BESS Sigenergy para instalaciones críticas en México: respaldo, peak shaving GDMTH y proyectos EPC llave en mano." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/confiabilidad-electrica-industrial.html" />
   <meta property="og:type" content="website" />
@@ -241,87 +241,158 @@
   .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Service",
-        "name":"Confiabilidad Eléctrica Industrial — UPS y BESS",
-        "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-        "areaServed":"México",
-        "serviceType":"Ingeniería, suministro, comisionamiento y mantenimiento de UPS industriales y BESS",
-        "description":"Sistemas de respaldo y almacenamiento de energía para instalaciones industriales críticas: Oil & Gas, minería, manufactura crítica y generación de energía. Marcas Borri, Sigenergy y WEG.",
-        "hasOfferCatalog":{
-          "@type":"OfferCatalog",
-          "name":"Soluciones UPS y BESS VMS Energy",
-          "itemListElement":[
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"UPS Industrial Borri — doble conversión online 5–600 kVA"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"BESS modular Sigenergy SigenStack — almacenamiento industrial escalable"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Convertidor estático de frecuencia Borri Ingenio SFC 100–2 000 kVA"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Integración solar + BESS con inversores híbridos"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ingeniería de dimensionamiento y selección de banco de baterías"}},
-            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Comisionamiento, pruebas y mantenimiento preventivo UPS/BESS"}}
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Confiabilidad Eléctrica Industrial — UPS y BESS",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
+      "areaServed": "México",
+      "serviceType": "Ingeniería, suministro, comisionamiento y mantenimiento de UPS industriales y BESS",
+      "description": "Sistemas de respaldo y almacenamiento de energía para instalaciones industriales críticas: Oil & Gas, minería, manufactura crítica y generación de energía. Marcas Borri, Sigenergy y WEG.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Soluciones UPS y BESS VMS Energy",
+        "itemListElement": [
           {
-            "@type":"Question",
-            "name":"¿Qué topología de UPS es mejor para una instalación industrial crítica?",
-            "acceptedAnswer":{"@type":"Answer","text":"La norma IEC 62040-3 clasifica los UPS en tres topologías: VFI (Voltage and Frequency Independent) — también llamado doble conversión online — es la única que proporciona aislamiento galvánico total y cero tiempo de transferencia; es el estándar para Oil & Gas, minería y salas de control crítico. VI (Voltage Independent) — o interactivo — regula la tensión pero pasa por el bypass durante los microcortes; adecuado para cargas menos críticas. VFD (Voltage and Frequency Dependent) — o standby — solo actúa cuando la red falla; para aplicaciones de respaldo básico en oficinas. Para plantas industriales con procesos continuos, VMS Energy especifica exclusivamente UPS VFI (Borri E3001/E2001) porque garantizan que la carga nunca ve la red de manera directa."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "UPS Industrial Borri — doble conversión online 5–600 kVA"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Cómo se calcula el tiempo de autonomía de un UPS industrial?",
-            "acceptedAnswer":{"@type":"Answer","text":"El tiempo de autonomía depende de tres variables: la potencia real de la carga (en kW, no en kVA — hay que corregir por factor de potencia cosφ), la capacidad del banco de baterías (en kWh), y la eficiencia del inversor (típicamente 92–96% en UPS VFI modernos). Fórmula simplificada: t_autonomía (h) = C_banco (kWh) × η_inversor / P_carga (kW). Para una sala de control de 30 kW con cosφ = 0.9 y un UPS de 40 kVA (36 kW), un banco de 72 kWh con η = 0.95 entrega: 72 × 0.95 / 30 = 2.28 horas de autonomía. VMS Energy dimensiona el banco según el tiempo de respaldo requerido por el plan de continuidad operativa del cliente."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "BESS modular Sigenergy SigenStack — almacenamiento industrial escalable"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Cuál es la diferencia entre baterías LFP y VRLA/AGM para un BESS industrial?",
-            "acceptedAnswer":{"@type":"Answer","text":"Las baterías VRLA/AGM (plomo-ácido selladas) son la tecnología tradicional de respaldo: bajo costo inicial, fácil disponibilidad local, pero con vida útil de 3–5 años en ciclos frecuentes, sensibles a la temperatura (pierden hasta 50% de capacidad a 0 °C) y con densidad energética baja (~30–50 Wh/kg). Las LFP (litio ferrofosfato, LiFePO4) son el estándar moderno para BESS industriales: ≥8 000 ciclos de vida útil (vs 500–1 000 de VRLA), densidad energética de 90–160 Wh/kg, operación en rango de temperatura -20 °C a +60 °C, sin efecto memoria y sin mantenimiento de agua. Nuestra plataforma de referencia, Sigenergy SigenStack, usa módulos LFP de 12 kWh con gestión de seguridad a nivel de pack; sus ensayos UL 9540A e IEC 62619 están documentados con Intertek. NFPA 855 se cumple en el diseño de la instalación."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Convertidor estático de frecuencia Borri Ingenio SFC 100–2 000 kVA"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Qué es el peak shaving y cuánto puede ahorrar en la tarifa eléctrica?",
-            "acceptedAnswer":{"@type":"Answer","text":"El peak shaving descarga el BESS durante los picos para reducir la demanda que CFE factura. En la tarifa GDMTH los cargos por demanda (capacidad y distribución) representan una parte importante del recibo, y el cargo de distribución varía mucho entre divisiones: en septiembre de 2026 iba de alrededor de 58 a 221 MXN/kW. Un BESS bien dimensionado puede reducir la demanda facturada entre 20 % y 40 %. Con perfiles favorables, el retorno se ubica típicamente por debajo de 4 años. Lo calculamos con su recibo y su curva de carga medida."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Integración solar + BESS con inversores híbridos"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿Cuándo conviene combinar BESS con generación solar y cuándo instalarlo standalone?",
-            "acceptedAnswer":{"@type":"Answer","text":"El BESS standalone (sin solar) aplica cuando el objetivo principal es peak shaving, respaldo ante interrupciones de CFE o regulación de frecuencia. El BESS + solar es la arquitectura óptima cuando la planta ya tiene o planea instalar paneles fotovoltaicos: el BESS almacena el excedente solar de mediodía para usarlo en la tarde-noche, elimina la curtailment de energía solar y convierte la planta en una microrred semi-autónoma. Con almacenamiento bien dimensionado, el autoconsumo de la energía solar aumenta de forma significativa; lo modelamos con la curva de carga de la planta antes de proponer capacidad. La regla general: si hay solar existente o proyectada, siempre conviene la arquitectura híbrida; si no hay solar en el horizonte, el BESS standalone se justifica exclusivamente por los ahorros en demanda y/o la criticidad del proceso."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Ingeniería de dimensionamiento y selección de banco de baterías"
+            }
           },
           {
-            "@type":"Question",
-            "name":"¿En qué se diferencia un UPS para data center de uno para uso industrial pesado?",
-            "acceptedAnswer":{"@type":"Answer","text":"Los UPS para data center están diseñados para entornos con temperatura controlada (18–24 °C), cargas electrónicas relativamente estables y sin armónicos severos. Los UPS industriales como los Borri E3001 están diseñados para condiciones ambientales extremas: temperatura ambiente de -10 °C a +50 °C, humedad relativa hasta 95%, presencia de gases corrosivos y polvo, variaciones bruscas de carga (arranque de motores) y niveles de armónicos altos (THDi) generados por variadores de frecuencia. Incluyen transformadores de aislamiento galvánico integrados, grado de protección hasta IP54 y construcción robusta para montaje en zonas clasificadas. Usar un UPS de data center en una planta industrial es el origen de fallos prematuros por condensación, corrosión o sobretensiones no atenuadas."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Cómo iniciamos un proyecto de UPS o BESS industrial con VMS Energy?",
-            "acceptedAnswer":{"@type":"Answer","text":"El proceso comienza con un levantamiento eléctrico de la instalación: medición de la carga real (kW y cosφ), registro de la curva de demanda en 15 minutos durante al menos una semana, inventario de cargas críticas vs no críticas, revisión del historial de interrupciones y eventos de calidad de energía. Con esa información VMS Energy elabora la ingeniería de dimensionamiento, selecciona el equipo óptimo (marca, modelo, capacidad, autonomía) y presenta la propuesta técnico-económica con análisis de retorno. El tiempo típico para una propuesta en firme es de 5 a 10 días hábiles. Contáctenos para agendar la evaluación energética sin costo."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Cuánto puede ahorrar un BESS en tarifa GDMTH de CFE?",
-            "acceptedAnswer":{"@type":"Answer","text":"La tarifa GDMTH (media tensión, 100 kW o más, con medición horaria) incluye cargos por demanda de capacidad y distribución. Un BESS bien dimensionado se carga en horas de bajo costo y descarga durante los picos, reduciendo la demanda facturada. El ahorro depende de la división tarifaria, de la duración de los picos y de si ocurren en horario punta, porque el cargo de capacidad no es lineal. Con perfiles favorables, el retorno se ubica típicamente por debajo de 4 años. VMS Energy lo calcula con el recibo y la curva de carga de cada instalación durante la evaluación energética gratuita."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Qué componentes incluye el Balance of System (BOS) en un proyecto BESS?",
-            "acceptedAnswer":{"@type":"Answer","text":"El Balance of System (BOS) comprende todos los componentes externos al sistema de baterías y PCS, y representa entre el 30 % y 40 % del costo total de un proyecto BESS. Los componentes principales son: (1) Distribución eléctrica — tableros, barras y seccionadores; (2) Protecciones y coordinación — interruptores termomagnéticos, fusibles de alta ruptura y dispositivos de protección contra sobretensiones (SPDs); (3) Conductores y canalizaciones — cables de media tensión certificados bajo NOM-001-SEDE; (4) Obra civil — cimentación, bases de concreto, drenaje pluvial y adecuaciones de recinto; (5) Instalación y maniobras — descarga con grúa, integración mecánica y eléctrica; (6) Sistema de puesta a tierra conforme a IEEE 80 / IEC 60364. VMS Energy ejecuta el BOS completo como parte del contrato EPC, garantizando un único responsable para todo el proyecto."}
-          },
-          {
-            "@type":"Question",
-            "name":"¿Se necesitan permisos de CFE o CENACE para instalar un BESS en México?",
-            "acceptedAnswer":{"@type":"Answer","text":"Bajo la Ley del Sector Eléctrico (2025), un BESS detrás del medidor forma parte del centro de carga del usuario y no requiere permiso de almacenamiento de la Comisión Nacional de Energía (CNE). El permiso de almacenamiento aplica a sistemas de 0.7 MW o más no asociados a una central eléctrica o a un centro de carga. Siempre aplican las normas técnicas de instalación: NOM-001-SEDE, NOM-029-STPS y NOM-002-STPS. Si el BESS se integra con generación propia, aplica el contrato de interconexión (menos de 0.7 MW) o el permiso de generación de la CNE (0.7 MW o más). VMS Energy identifica y gestiona la documentación como parte del alcance EPC."}
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Comisionamiento, pruebas y mantenimiento preventivo UPS/BESS"
+            }
           }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué topología de UPS es mejor para una instalación industrial crítica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La norma IEC 62040-3 clasifica los UPS en tres topologías. VFI (doble conversión online) es la única que proporciona aislamiento galvánico total y tiempo de transferencia cero — es el estándar para Oil & Gas, minería y salas de control crítico. VI (interactivo) regula la tensión pero pasa por bypass durante microcortes; adecuado para cargas menos críticas. VFD (standby) solo actúa cuando la red falla; válido para respaldo básico en oficinas. Para plantas industriales con procesos continuos, VMS Energy especifica exclusivamente UPS VFI Borri E3001/E2001 porque la carga nunca ve la red de manera directa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se calcula el tiempo de autonomía de un UPS industrial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La autonomía depende de la potencia real de la carga (kW, no kVA — hay que aplicar cosφ), la capacidad del banco de baterías (kWh) y la eficiencia del inversor (92–96% en UPS VFI modernos). t (h) = C_banco (kWh) × η_inversor / P_carga (kW) Ejemplo: sala de control 30 kW, banco 72 kWh, η = 0.95 → autonomía = 72 × 0.95 / 30 = 2.28 horas VMS Energy dimensiona el banco según el tiempo de respaldo requerido por el plan de continuidad operativa del cliente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre baterías LFP y VRLA/AGM para un BESS industrial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VRLA/AGM (plomo-ácido selladas): bajo costo inicial, fácil disponibilidad, pero vida útil de 3–5 años en ciclos frecuentes, sensibles a temperatura y densidad energética baja (~30–50 Wh/kg). LFP (litio ferrofosfato, LiFePO₄): ≥8 000 ciclos de vida útil, densidad 90–160 Wh/kg, operación de -20 °C a +60 °C, sin efecto memoria, sin mantenimiento. Nuestra plataforma de referencia, Sigenergy SigenStack , usa módulos LFP de 12 kWh con gestión de seguridad a nivel de pack; sus ensayos UL 9540A e IEC 62619 están documentados con Intertek. NFPA 855 se cumple en el diseño de la instalación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el peak shaving y cuánto puede ahorrar en la tarifa eléctrica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El peak shaving consiste en descargar el BESS durante los picos de demanda para reducir el máximo registrado en el medidor CFE. En la tarifa GDMTH los cargos por demanda (capacidad y distribución) representan una parte importante del recibo, y el cargo de distribución varía mucho entre divisiones: en septiembre de 2026 iba de alrededor de 58 a 221 MXN/kW. Un BESS bien dimensionado puede reducir la demanda facturada entre 20 % y 40 % . Con perfiles favorables, el retorno se ubica típicamente por debajo de 4 años . Lo calculamos con su recibo y su curva de carga medida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo conviene combinar BESS con generación solar y cuándo instalarlo standalone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BESS standalone : cuando el objetivo es peak shaving, respaldo ante interrupciones de CFE o regulación de frecuencia. BESS + solar : arquitectura óptima cuando la planta tiene o planea paneles fotovoltaicos — el BESS almacena el excedente solar del mediodía para usarlo en tarde-noche, elimina el curtailment y convierte la instalación en una microrred semi-autónoma. Con almacenamiento bien dimensionado, el autoconsumo de la energía solar aumenta de forma significativa; lo modelamos con su curva de carga antes de proponer capacidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿En qué se diferencia un UPS para data center de uno para uso industrial pesado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los UPS de data center están diseñados para entornos controlados (18–24 °C) con cargas electrónicas estables. Los UPS industriales Borri E3001 operan en condiciones extremas: -10 °C a +50 °C, HR hasta 95%, gases corrosivos, polvo, arranques de motores y THDi elevado por variadores. Incluyen aislamiento galvánico por transformador integrado, protección hasta IP54 y construcción certificada para zonas clasificadas. Usar un UPS de data center en planta industrial es el origen más frecuente de fallos prematuros por condensación, corrosión y sobretensiones no atenuadas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo iniciamos un proyecto de UPS o BESS industrial con VMS Energy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El proceso inicia con un levantamiento eléctrico: medición de carga real (kW y cosφ), registro de curva de demanda en ventanas de 15 minutos durante al menos una semana, inventario de cargas críticas vs no críticas y revisión del historial de interrupciones. Con esa información elaboramos la ingeniería de dimensionamiento y presentamos la propuesta técnico-económica con análisis de retorno. Tiempo típico para propuesta en firme: 5 a 10 días hábiles . Contáctenos para agendar la evaluación energética sin costo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto puede ahorrar una planta con tarifa GDMTH usando peak shaving con BESS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La tarifa GDMTH (Gran Demanda en Media Tensión Horaria, aplicable a instalaciones con 100 kW o más) incluye cargos por demanda máxima registrada en ventanas de 15 minutos. Con un BESS correctamente dimensionado para peak shaving, la planta descarga el sistema durante los horarios de mayor consumo, reduciendo el pico de demanda facturado por CFE. Ejemplo ilustrativo: una planta con demanda máxima de 500 kW y base de 320 kW puede recortar su pico con un BESS de 180 kW. El ahorro depende de su división tarifaria, de cuántas horas dura el pico y de si ocurre en horario punta, porque el cargo de capacidad no es lineal. Por eso lo calculamos con su recibo y no con un promedio. El retorno típico para perfiles de este tipo se ubica por debajo de 4 años ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el BOS (Balance of System) de un proyecto BESS y quién lo ejecuta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El BOS (Balance of System) comprende todos los componentes externos al equipo BESS propiamente dicho que son necesarios para que el sistema opere de forma segura, eficiente y conectada. No incluye las baterías, el PCS ni el BMS — incluye todo lo que permite que esos equipos funcionen correctamente en sitio. El BOS de un proyecto BESS industrial incluye: distribución eléctrica (celdas MT/BT, interruptores de potencia), sistemas de protección (coordinación de protecciones, pararrayos SPD), conductores eléctricos (cableado de fuerza, bandejas, ductos), obra civil (cimentación, cuarto eléctrico o plataforma), maniobras e instalación (izajes, conexionado, pruebas), y sistema de puesta a tierra (mallado de tierra IEEE 80/IEC 60364). VMS Energy ejecuta el BOS completo como parte del alcance EPC — el cliente recibe el sistema listo para operar, no piezas sueltas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué permisos o regulaciones aplican para instalar un BESS en México?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El sistema eléctrico mexicano opera a través de cuatro capas regulatorias que interactúan entre sí y que afectan la instalación de un BESS industrial: Planeación y política pública (SENER): define las prioridades del sistema eléctrico nacional y los lineamientos de almacenamiento. Regulación técnica y administrativa (CNE + CFE): establece los requisitos para conectar, operar y mantener instalaciones eléctricas con generación o almacenamiento. Operación del sistema (CENACE): asegura el balance entre generación y demanda en tiempo real — relevante para sistemas BESS conectados a la red en esquemas de participación en mercado. Cumplimiento técnico en sitio (NOM-001-SEDE, NOM-029-STPS): instalaciones eléctricas, seguridad y protección contra incendios en el sitio. Un BESS industrial behind-the-meter (detrás del medidor) forma parte de su centro de carga: bajo la Ley del Sector Eléctrico no requiere permiso de almacenamiento de la CNE. Sí aplican las normas técnicas de instalación (NOM-001-SEDE, NOM-029-STPS, NOM-002-STPS) y, si se integra con generación propia, el contrato de interconexión o el permiso que corresponda según la capacidad. VMS Energy gestiona la documentación técnica y regulatoria como parte del alcance EPC."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style id="sticky-actions-global">
   .sticky-actions{position:fixed;left:0;right:0;bottom:14px;z-index:9999;display:block !important;visibility:visible !important;opacity:1 !important;pointer-events:none}
   .sticky-actions__btn{position:absolute;bottom:0;pointer-events:auto;display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 24px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.2)}
@@ -359,6 +430,7 @@
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Confiabilidad Eléctrica Industrial — UPS y BESS · VMS Energy","item":"https://vmsenergy.com/confiabilidad-electrica-industrial.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

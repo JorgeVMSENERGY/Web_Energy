@@ -20,7 +20,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EPC Solar Industrial M&eacute;xico | VMS Energy</title>
-  <meta name="description" content="EPC solar industrial llave en mano en M&eacute;xico: dise&ntilde;o, interconexi&oacute;n CFE, puesta en marcha y monitoreo O&amp;M. Proyectos desde $1,000,000 MXN. ISO 9001, 14001, 45001, 37001 y 50001. Cotiza tu proyecto solar industrial." />
+  <meta name="description" content="EPC solar industrial llave en mano desde $1,000,000 MXN: diseño, interconexión con CFE, puesta en marcha y monitoreo O&amp;M. Cinco certificaciones ISO." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/soluciones_solar_industrial.html" />
   <meta property="og:type" content="website" />
@@ -29,11 +29,11 @@
   <meta property="og:title" content="EPC Solar Industrial M&eacute;xico | VMS Energy" />
   <meta property="og:description" content="EPC solar industrial llave en mano en M&eacute;xico: dise&ntilde;o, interconexi&oacute;n CFE, puesta en marcha y monitoreo O&amp;M. Proyectos desde $1,000,000 MXN. ISO 9001, 14001, 45001, 37001 y 50001." />
   <meta property="og:url" content="https://vmsenergy.com/soluciones_solar_industrial.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/energia_solar_industrial.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_solar_industrial.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="EPC Solar Industrial M&eacute;xico | VMS Energy" />
   <meta name="twitter:description" content="EPC solar industrial llave en mano en M&eacute;xico. Proyectos desde $1,000,000 MXN. ISO 9001, 14001, 45001, 37001 y 50001." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/energia_solar_industrial.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_solar_industrial.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_solar_industrial.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_solar_industrial.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,9 +73,9 @@
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
 
 
-    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.74) 82%,rgba(8,35,70,.34)),url('assets/img/services/energia_solar_industrial.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding-block: 80px 64px}
+    .hero{position:relative;isolation:isolate;min-height:clamp(440px,70vh,560px);padding:0;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero__content{padding-block: 64px 56px}
+    .hero__content > *{max-width:680px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
@@ -305,7 +305,7 @@
       .process-carousel{max-width:100%}
       .process-nav{max-width:100%}
       .process-slide{min-height:390px}
-      .hero__content{padding-block: 72px 58px}
+      .hero__content{padding-block: 56px 48px}
       .svc-grid{grid-template-columns:1fr}
     }
     @media (max-width:680px){
@@ -327,15 +327,20 @@
   .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Service",
-      "name":"Energía Solar Industrial",
-      "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-      "areaServed":"México",
-      "serviceType":"Ingeniería e integración de energía solar industrial"
-    }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Energía Solar Industrial",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://vmsenergy.com/#organization",
+    "name": "VMS Energy",
+    "url": "https://vmsenergy.com/"
+  },
+  "areaServed": "México",
+  "serviceType": "Ingeniería e integración de energía solar industrial"
+}
+</script>
 <style id="sticky-actions-global">
   .sticky-actions{
     position:fixed;
@@ -495,23 +500,90 @@
   @media(max-width:860px){.challenge-grid{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-          {"@type":"Question","name":"¿Gestionan el trámite de interconexión ante CFE?","acceptedAnswer":{"@type":"Answer","text":"Sí. Preparamos el estudio de impacto de red, la documentación técnica completa y acompañamos el proceso de dictamen hasta la firma del contrato de interconexión en MT o BT."}},
-          {"@type":"Question","name":"¿Qué tecnologías de inversor utilizan?","acceptedAnswer":{"@type":"Answer","text":"Seleccionamos según potencia, redundancia y protocolo SCADA requerido: SMA, Sungrow, ABB, Fronius. Entregamos monitoreo por string con dashboard en tiempo real y reporte mensual."}},
-          {"@type":"Question","name":"¿Pueden integrar almacenamiento BESS al sistema solar?","acceptedAnswer":{"@type":"Answer","text":"Sí. Diseñamos sistemas híbridos solar+BESS con algoritmos de despacho, peak shaving y operación en isla para plantas con restricciones de demanda máxima."}},
-          {"@type":"Question","name":"¿Qué monitoreo incluye el proyecto?","acceptedAnswer":{"@type":"Answer","text":"Dashboard en tiempo real con rendimiento vs PVsyst, alertas por string, temperatura de módulo e inversor, y reporte mensual de energía generada con disponibilidad del sistema."}},
-          {"@type":"Question","name":"¿Cuánto dura un proyecto solar industrial desde la ingeniería hasta la puesta en marcha?","acceptedAnswer":{"@type":"Answer","text":"Ingeniería y gestión de dictamen CFE: 8-14 semanas. Suministro de equipos: 6-12 semanas. Instalación y comisionamiento: 4-8 semanas según potencia y acceso al sitio."}},
-          {"@type":"Question","name":"¿Qué garantías ofrecen en el suministro de paneles e inversores?","acceptedAnswer":{"@type":"Answer","text":"Módulos fotovoltaicos con garantía de producto 12 años y de rendimiento lineal a 25 años (>80%). Inversores con garantía de fábrica 5-10 años según fabricante, ampliable con contrato de mantenimiento."}}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye una solución de energía solar industrial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluye ingeniería, suministro técnico, montaje, pruebas, interconexión y comisionamiento del sistema solar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden trabajar por etapas sin detener operación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Planeamos ventanas de intervención y fases de ejecución para minimizar impactos en continuidad operativa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Gestionan el trámite de interconexión ante CFE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Preparamos el estudio de impacto de red, la documentación técnica completa y acompañamos el proceso de dictamen hasta la firma del contrato de interconexión en MT o BT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tecnologías de inversor utilizan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seleccionamos según potencia, redundancia y protocolo SCADA requerido: SMA, Sungrow, ABB, Fronius. Entregamos monitoreo por string con dashboard en tiempo real y reporte mensual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden integrar almacenamiento BESS al sistema solar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Diseñamos sistemas híbridos solar+BESS con algoritmos de despacho, peak shaving y operación en isla para plantas con restricciones de demanda máxima."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué monitoreo incluye el proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dashboard en tiempo real con rendimiento vs PVsyst, alertas por string, temperatura de módulo e inversor, y reporte mensual de energía generada con disponibilidad del sistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura un proyecto solar industrial desde la ingeniería hasta la puesta en marcha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ingeniería y gestión de dictamen CFE: 8-14 semanas. Suministro de equipos: 6-12 semanas. Instalación y comisionamiento: 4-8 semanas según potencia y acceso al sitio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué garantías ofrecen en el suministro de paneles e inversores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Módulos fotovoltaicos con garantía de producto 12 años y de rendimiento lineal a 25 años (>80%). Inversores con garantía de fábrica 5-10 años según fabricante, ampliable con contrato de mantenimiento."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo iniciamos un proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comparte tu requerimiento en el formulario de contacto y definimos alcance, tiempos y propuesta técnica."
+      }
+    }
+  ]
+}
 </script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Soluciones","item":"https://vmsenergy.com/soluciones.html"},{"@type":"ListItem","position":3,"name":"EPC Solar Industrial México","item":"https://vmsenergy.com/soluciones_solar_industrial.html"}]}
   </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -722,11 +794,11 @@
 
 
   <main id="contenido">
-    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_solar_industrial.webp');--hero-image-m:url('assets/img/services/hero_solar_industrial_m.webp')" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">EPC Solar Industrial &middot; Proyectos desde $1,000,000 MXN</span>
-        <h1 id="heroTitle">EPC Solar Industrial llave en mano: dise&ntilde;o, interconexi&oacute;n CFE, puesta en marcha y monitoreo.</h1>
-        <p>Proyectos solares industriales desde 500 kWp. Ingenier&iacute;a, procura y construcci&oacute;n bajo un solo contrato. ISO 9001, 14001, 45001, 37001 y 50001.</p>
+        <h1 id="heroTitle">EPC Solar Industrial llave en mano</h1>
+        <p>Dise&ntilde;o, construcci&oacute;n, interconexi&oacute;n CFE, puesta en marcha y monitoreo de proyectos fotovoltaicos desde 500 kWp, bajo un solo contrato.</p>
         <div class="hero__actions on-dark">
           <a class="btn btn--primary" href="contacto_cta.html?producto=sector-solar#ctaForm" data-cta="hero-cotizar">Cotizar Proyecto Solar Industrial</a>
           <a class="btn btn--secondary" href="tel:+523338130739" data-cta="hero-llamar">Llamar ahora</a>
@@ -966,6 +1038,30 @@
         <details>
           <summary>&iquest;Pueden trabajar por etapas sin detener operaci&oacute;n?</summary>
           <p>S&iacute;. Planeamos ventanas de intervenci&oacute;n y fases de ejecuci&oacute;n para minimizar impactos en continuidad operativa.</p>
+        </details>
+        <details>
+          <summary>¿Gestionan el trámite de interconexión ante CFE?</summary>
+          <p>Sí. Preparamos el estudio de impacto de red, la documentación técnica completa y acompañamos el proceso de dictamen hasta la firma del contrato de interconexión en MT o BT.</p>
+        </details>
+        <details>
+          <summary>¿Qué tecnologías de inversor utilizan?</summary>
+          <p>Seleccionamos según potencia, redundancia y protocolo SCADA requerido: SMA, Sungrow, ABB, Fronius. Entregamos monitoreo por string con dashboard en tiempo real y reporte mensual.</p>
+        </details>
+        <details>
+          <summary>¿Pueden integrar almacenamiento BESS al sistema solar?</summary>
+          <p>Sí. Diseñamos sistemas híbridos solar+BESS con algoritmos de despacho, peak shaving y operación en isla para plantas con restricciones de demanda máxima.</p>
+        </details>
+        <details>
+          <summary>¿Qué monitoreo incluye el proyecto?</summary>
+          <p>Dashboard en tiempo real con rendimiento vs PVsyst, alertas por string, temperatura de módulo e inversor, y reporte mensual de energía generada con disponibilidad del sistema.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto dura un proyecto solar industrial desde la ingeniería hasta la puesta en marcha?</summary>
+          <p>Ingeniería y gestión de dictamen CFE: 8-14 semanas. Suministro de equipos: 6-12 semanas. Instalación y comisionamiento: 4-8 semanas según potencia y acceso al sitio.</p>
+        </details>
+        <details>
+          <summary>¿Qué garantías ofrecen en el suministro de paneles e inversores?</summary>
+          <p>Módulos fotovoltaicos con garantía de producto 12 años y de rendimiento lineal a 25 años (&gt;80%). Inversores con garantía de fábrica 5-10 años según fabricante, ampliable con contrato de mantenimiento.</p>
         </details>
         <details>
           <summary>&iquest;C&oacute;mo iniciamos un proyecto?</summary>

@@ -128,30 +128,125 @@
     .vmshop-callout__cta{flex-shrink:0}
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"Service","name":"Variadores de Frecuencia","provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"areaServed":"MX","description":"Suministro, instalación y comisionamiento de variadores de frecuencia industriales bajo IEC 61800-3 e IEC 61800-5 en México.","serviceType":"Ingeniería EPC de variadores de frecuencia","url":"https://vmsenergy.com/soluciones-variadores-frecuencia.html",
-    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Tipos de variadores","itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"VFD 2 niveles VSI (BT hasta 690 V)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"VFD 3 niveles NPC (MT hasta 6.6 kV)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"AFE Active Front End (regenerativo)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Multi-drive / Common DC Bus"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Variadores para bombas y ventiladores"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Variadores para compresores y bandas transportadoras"}}
-    ]}},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"¿Cuánto ahorro energético genera un variador de frecuencia?","acceptedAnswer":{"@type":"Answer","text":"Gracias a la ley de afinidad (P ∝ n³), reducir la velocidad de un motor al 80% disminuye el consumo al 51%. En bombas y ventiladores que operan parcialmente cargados, el ahorro típico es del 20 al 50% respecto a control por válvula o damper."}},
-      {"@type":"Question","name":"¿Qué norma regula la compatibilidad electromagnética de los VFD?","acceptedAnswer":{"@type":"Answer","text":"IEC 61800-3 define los requisitos EMC para accionamientos de velocidad variable. Establece categorías C1–C4 según el entorno (residencial vs. industrial) y los límites de emisiones conducidas y radiadas. Complementa con IEC 61000-3-12 para armónicas en red."}},
-      {"@type":"Question","name":"¿Qué es un VFD tipo AFE y cuándo conviene usarlo?","acceptedAnswer":{"@type":"Answer","text":"Un Active Front End (AFE) usa un puente rectificador activo en lugar de diodos, logrando THDi < 3% en la red y recuperando energía a la red durante frenado regenerativo. Conviene en aplicaciones con frenado frecuente (grúas, elevadores, prensas) o donde la calidad de energía es crítica (hospitales, centros de datos)."}},
-      {"@type":"Question","name":"¿Cómo afecta la altitud al rendimiento de un variador?","acceptedAnswer":{"@type":"Answer","text":"Por encima de 1 000 m s. n. m., el aire menos denso reduce la refrigeración del variador. La regla estándar es aplicar un derating de aproximadamente -1% de la corriente nominal por cada 100 m adicionales. A 2 500 m (altitud de Ciudad de México) el derating es de ~15%. Algunos fabricantes ofrecen modelos especiales hasta 4 000 m sin derating."}},
-      {"@type":"Question","name":"¿VMS Energy instala variadores de cualquier marca?","acceptedAnswer":{"@type":"Answer","text":"Sí. VMS Energy suministra e instala variadores multimarca (ABB ACS580/ACS880, Siemens SINAMICS G120/S120, Schneider Altivar Process, Danfoss FC302, Triol) según los requerimientos del proceso, el protocolo de comunicación requerido y el nivel de tensión del sistema."}}
-    ]}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Variadores de Frecuencia",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "areaServed": "MX",
+      "description": "Suministro, instalación y comisionamiento de variadores de frecuencia industriales bajo IEC 61800-3 e IEC 61800-5 en México.",
+      "serviceType": "Ingeniería EPC de variadores de frecuencia",
+      "url": "https://vmsenergy.com/soluciones-variadores-frecuencia.html",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tipos de variadores",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "VFD 2 niveles VSI (BT hasta 690 V)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "VFD 3 niveles NPC (MT hasta 6.6 kV)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AFE Active Front End (regenerativo)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-drive / Common DC Bus"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Variadores para bombas y ventiladores"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Variadores para compresores y bandas transportadoras"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cuánto ahorro energético genera un variador de frecuencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gracias a la ley de afinidad (P ∝ n³), reducir la velocidad de un motor al 80% disminuye el consumo al 51%. En bombas y ventiladores que operan parcialmente cargados, el ahorro típico es del 20 al 50% respecto a control por válvula o damper."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué norma regula la compatibilidad electromagnética de los VFD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IEC 61800-3 define los requisitos EMC para accionamientos de velocidad variable. Establece categorías C1–C4 según el entorno (residencial vs. industrial) y los límites de emisiones conducidas y radiadas. Complementa con IEC 61000-3-12 para armónicas en red."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un VFD tipo AFE y cuándo conviene usarlo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un Active Front End (AFE) usa un puente rectificador activo en lugar de diodos, logrando THDi < 3% en la red y recuperando energía a la red durante frenado regenerativo. Conviene en aplicaciones con frenado frecuente (grúas, elevadores, prensas) o donde la calidad de energía es crítica (hospitales, centros de datos)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo afecta la altitud al rendimiento de un variador?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Por encima de 1 000 m s. n. m., el aire menos denso reduce la refrigeración del variador. La regla estándar es aplicar un derating de aproximadamente -1% de la corriente nominal por cada 100 m adicionales. A 2 500 m (altitud de Ciudad de México) el derating es de ~15%. Algunos fabricantes ofrecen modelos especiales hasta 4 000 m sin derating."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿VMS Energy instala variadores de cualquier marca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. VMS Energy suministra e instala variadores multimarca (ABB ACS580/ACS880, Siemens SINAMICS G120/S120, Schneider Altivar Process, Danfoss FC302, Triol) según los requerimientos del proceso, el protocolo de comunicación requerido y el nivel de tensión del sistema."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Variadores de Frecuencia | Ahorro Energético y Control","item":"https://vmsenergy.com/soluciones-variadores-frecuencia.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -175,9 +175,80 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://vmsenergy.com/#organization",
       "name": "VMS Energy",
+      "legalName": "VMS Energy de México, S. de R.L. de C.V.",
+      "alternateName": "VMS Energy de México",
       "url": "https://vmsenergy.com/",
-      "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
+      },
+      "foundingDate": "2008",
+      "email": "contacto@vmsenergy.com",
+      "telephone": "+52-33-3813-0739",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano",
+          "addressLocality": "Zapopan",
+          "addressRegion": "Jalisco",
+          "postalCode": "45070",
+          "addressCountry": "MX"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Camarón 25, Justo Sierra",
+          "addressLocality": "Ciudad del Carmen",
+          "addressRegion": "Campeche",
+          "postalCode": "24114",
+          "addressCountry": "MX"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "name": "Oficina Guadalajara (Zapopan)",
+          "telephone": "+52-33-3813-0739",
+          "email": "contacto@vmsenergy.com",
+          "contactType": "sales",
+          "areaServed": "MX",
+          "availableLanguage": [
+            "es",
+            "en"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "Oficina Ciudad del Carmen",
+          "telephone": "+52-938-381-4824",
+          "email": "contacto@vmsenergy.com",
+          "contactType": "sales",
+          "areaServed": "MX",
+          "availableLanguage": [
+            "es",
+            "en"
+          ]
+        }
+      ],
+      "areaServed": [
+        "México",
+        "Estados Unidos",
+        "Centroamérica",
+        "Caribe"
+      ],
+      "award": [
+        "ISO 9001 GSC9KMX505",
+        "ISO 14001 GSC14KMX277",
+        "ISO 45001 GSC45KMX182",
+        "ISO 37001 GSC37KMX131",
+        "ISO 50001 GSC50KMX101"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/vmsenergy/",
+        "https://www.instagram.com/vmsenergy",
+        "https://www.facebook.com/profile.php?id=61576615590335"
+      ]
     },
     {
       "@type": "Article",
@@ -186,11 +257,15 @@
       "image": "https://vmsenergy.com/assets/img/portada.webp",
       "author": {
         "@type": "Organization",
-        "name": "VMS Energy"
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
       "publisher": {
         "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
         "name": "VMS Energy",
+        "url": "https://vmsenergy.com/",
         "logo": {
           "@type": "ImageObject",
           "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
@@ -206,10 +281,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué hace un tablero de distribución eléctrica?",
+          "name": "¿Qué hace exactamente un tablero de distribución eléctrica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Recibe, protege y distribuye la energía eléctrica hacia diferentes circuitos, equipos y sistemas dentro de una instalación."
+            "text": "Recibe, protege y distribuye la energía eléctrica hacia diferentes circuitos, equipos y sistemas dentro de una instalación, permitiendo una operación ordenada y segura."
           }
         },
         {
@@ -217,15 +292,15 @@
           "name": "¿Por qué son importantes en una planta industrial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Porque mejoran la seguridad, facilitan el mantenimiento, ayudan a aislar fallas y aportan continuidad operativa en procesos críticos."
+            "text": "Porque ayudan a mantener la continuidad operativa, mejoran la seguridad, facilitan el mantenimiento y reducen el impacto de fallas eléctricas en procesos críticos."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Qué se debe considerar al seleccionar uno?",
+          "name": "¿Qué se debe revisar antes de seleccionar uno?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nivel de tensión, corriente nominal, capacidad de cortocircuito, tipo de carga, ambiente de operación, normas aplicables y expansión futura."
+            "text": "El nivel de tensión, la corriente nominal, la capacidad de cortocircuito, el tipo de carga, el ambiente de operación, la normatividad aplicable y la posibilidad de crecimiento futuro."
           }
         }
       ]

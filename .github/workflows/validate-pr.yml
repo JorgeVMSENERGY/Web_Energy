@@ -1,0 +1,72 @@
+name: Validate pull request
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-pr:
+    name: PR offline validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout PR merge
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify runner and PR history
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python --version
+          git --version
+          docker version
+          test "$(uname -m)" = x86_64
+          test "$(git rev-parse --is-shallow-repository)" = false
+          git cat-file -e "${BASE_SHA}^{commit}"
+          git cat-file -e "${HEAD_SHA}^{commit}"
+          git merge-base "$BASE_SHA" "$HEAD_SHA"
+
+      - name: Diagnose PR diff
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Prefer the validator already reviewed on the base branch.
+          if git cat-file -e "$BASE_SHA:scripts/validate_pr_diff.py"; then
+            git show "$BASE_SHA:scripts/validate_pr_diff.py" > "$RUNNER_TEMP/validate_pr_diff.py"
+            python "$RUNNER_TEMP/validate_pr_diff.py"
+          else
+            echo '::warning::Bootstrap validation: no trusted validator on base. Independent review required.'
+            python scripts/validate_pr_diff.py
+          fi
+
+      - name: Prepare isolated test image
+        run: |
+          docker build -t pr-offline - <<'DOCKERFILE'
+          FROM python:3.12-slim
+          RUN apt-get update && apt-get install -y --no-install-recommends git curl unzip && rm -rf /var/lib/apt/lists/*
+          RUN curl --fail --silent --show-error --location https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.36.42.zip -o /tmp/aws.zip && unzip -q /tmp/aws.zip -d /tmp && /tmp/aws/install && rm -rf /tmp/aws /tmp/aws.zip
+          RUN pip install --no-cache-dir boto3==1.37.38 PyYAML==6.0.3
+          ENV AWS_EC2_METADATA_DISABLED=true PYTHONDONTWRITEBYTECODE=1
+          WORKDIR /repo
+          DOCKERFILE
+
+      - name: Run scripts and forms without external network
+        run: |
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+            --mount type=bind,src="$GITHUB_WORKSPACE",dst=/repo,readonly \
+            --env PR_OFFLINE_STRICT=1 pr-offline sh -ec '
+              python --version
+              git --version
+              aws --version
+              python -m pip check
+              python -m pip show boto3 botocore PyYAML
+              exec python scripts/run_pr_offline.py
+            '

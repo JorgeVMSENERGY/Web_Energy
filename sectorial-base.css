@@ -387,3 +387,4 @@ nav a { color: var(--navy); text-decoration: none; font-weight: 700; letter-spac
 .cable-tabla-grid{grid-template-columns:1.4fr 1fr}
 .cable-tabla-grid > *{min-width:0}
 @media (max-width:760px){.cable-tabla-grid{grid-template-columns:1fr}}
+/* VMS incremental smoke test 2026-11-12: no style changes. */

@@ -667,77 +667,110 @@
     main > section:not(.hero){padding-block:var(--section-pad-y)}
   </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Suministro de Cable ESP para Bombeo Electrosumergible",
-        "provider": { "@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/" },
-        "areaServed": "México",
-        "serviceType": "Suministro técnico de cable ESP (Electrical Submersible Pump) para pozos petroleros",
-        "description": "Suministro de cable ESP familia Arteria (180°F, 205°F, 290°F, 400°F, 450°F) para sistemas de bombeo electrosumergible en pozos de petróleo y gas en México. Formatos Flat y Round, disponibilidad en stock para familias 180°F y 205°F, coordinación desde Ciudad del Carmen.",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Catálogo cable ESP VMS Energy",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 180°F — pozos convencionales, aislamiento EPDM" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 205°F — pozos con temperatura moderada-alta" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 290°F / 400°F — pozos de alta temperatura" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Arteria 450°F KEFLG — ambientes con H₂S y fluidos corrosivos" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formatos Flat y Round según geometría del pozo" } }
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Suministro de Cable ESP para Bombeo Electrosumergible",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
+      "areaServed": "México",
+      "serviceType": "Suministro técnico de cable ESP (Electrical Submersible Pump) para pozos petroleros",
+      "description": "Suministro de cable ESP familia Arteria (180°F, 205°F, 290°F, 400°F, 450°F) para sistemas de bombeo electrosumergible en pozos de petróleo y gas en México. Formatos Flat y Round, disponibilidad en stock para familias 180°F y 205°F, coordinación desde Ciudad del Carmen.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo cable ESP VMS Energy",
+        "itemListElement": [
           {
-            "@type": "Question",
-            "name": "¿Cómo selecciono la familia Arteria correcta para mi pozo?",
-            "acceptedAnswer": { "@type": "Answer", "text": "El criterio principal es la temperatura de fondo de pozo (BHT, Bottom Hole Temperature). Arteria 180°F para condiciones normales, 205°F para pozos más calientes, 290–400°F para pozos de alta temperatura. Para ambientes con H₂S o fluidos corrosivos se especifica la variante KEFLG con cubierta de Kapton (Poliimida). VMS ayuda en la selección con el perfil de temperatura del pozo." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 180°F — pozos convencionales, aislamiento EPDM"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Cuándo usar cable ESP Flat y cuándo Round?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Round es más flexible y recomendado para pozos desviados, de radio corto o con cambios de dirección. Flat ocupa menos espacio en el anular del pozo y puede ser más económico en pozos verticales con espacio suficiente. La decisión también depende del diámetro del casing disponible." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 205°F — pozos con temperatura moderada-alta"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Manejan disponibilidad inmediata de cable ESP en México?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Algunos SKUs de familias 180°F y 205°F están en stock en México con entrega en 24–72 h desde Ciudad del Carmen. Las familias de mayor temperatura (290°F, 400°F y 450°F) son generalmente bajo pedido con tiempos de fabricación de 8 a 16 semanas." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 290°F / 400°F — pozos de alta temperatura"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿El cable ESP incluye protección contra H₂S?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Las familias Arteria 400°F y 450°F con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H₂S y fluidos corrosivos. Para ambientes con alta concentración de H₂S, se especifica la variante KEFLG o KEFLEG. VMS Energy verifica la compatibilidad con el análisis de fluido del pozo." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Arteria 450°F KEFLG — ambientes con H₂S y fluidos corrosivos"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Cómo se dimensiona la sección del cable ESP para un motor sumergible?",
-            "acceptedAnswer": { "@type": "Answer", "text": "La sección se calcula con: potencia del motor (kW), voltaje de alimentación en superficie, profundidad del pozo (caída de tensión), temperatura del fluido (corrección de ampacidad) y presencia de VSD (variador de velocidad). VMS Energy puede hacer el dimensionamiento eléctrico como parte del soporte técnico." }
-          },
-          {
-            "@type": "Question",
-            "name": "¿VMS Energy tiene presencia en zonas petroleras del Golfo de México?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. VMS Energy tiene oficina operativa en Ciudad del Carmen, Campeche, con capacidad de respuesta rápida para suministros en el Activo Cantarell, KMZ, Litoral de Tabasco y plataformas marinas. Esta proximidad permite entregas en 24–72 h en situaciones de emergencia operativa." }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué documentación técnica entrega VMS con el cable ESP?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Hoja de datos técnica del cable (temperatura, construcción, aislamiento), certificado de origen, reporte de longitud medida por bobina y, cuando el operador lo requiere, documentación de trazabilidad para auditoría PEMEX o IOC. La documentación se entrega junto con la bobina para validación en campo." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Formatos Flat y Round según geometría del pozo"
+            }
           }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo selecciono la familia Arteria correcta para mi pozo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El criterio principal es la temperatura de fondo de pozo (BHT, Bottom Hole Temperature). Arteria 180 °F para condiciones normales, 205 °F para pozos más calientes, 290–450 °F para pozos de alta temperatura y ambientes corrosivos. VMS puede ayudarte a seleccionar si compartes el perfil de temperatura del pozo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Flat o Round para mi instalación?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Round es más flexible y recomendado para pozos desviados, de radio corto o con cambios de dirección. Flat ocupa menos espacio en el anular del pozo y puede ser más económico en pozos verticales con espacio suficiente. La decisión también depende del diámetro del casing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Manejan disponibilidad en campo o solo bajo pedido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Algunos SKUs de familias 180 °F y 205 °F están disponibles en stock en México. Las familias de mayor temperatura (400 °F y 450 °F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulta disponibilidad al cotizar con SKU específico."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El cable incluye protección contra H₂S?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H₂S y fluidos corrosivos. Para ambientes con alta concentración de H₂S, especificar la variante KEFLG o KEFLEG. Consulta a VMS con el análisis de fluido del pozo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"VMShop","item":"https://vmsenergy.com/VMShop.html"},{"@type":"ListItem","position":3,"name":"Cables ESP para bomba electrosumergible","item":"https://vmsenergy.com/lp-cables-especiales.html"}]}
   </script>
 
 <!-- Se retira un segundo Service duplicado: repetia el titulo anterior y contradecia al @graph de arriba, que ya declara el servicio, el FAQ y el catalogo. -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

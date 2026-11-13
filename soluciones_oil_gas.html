@@ -20,20 +20,20 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Soluciones EPC Oil &amp; Gas M&eacute;xico | VMS Energy</title>
-  <meta name="description" content="EPC el&eacute;ctrico y de control para Oil &amp; Gas en M&eacute;xico. Plataformas offshore y plantas onshore, con cinco certificaciones ISO. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
+  <meta name="description" content="EPC eléctrico y de control para Oil &amp; Gas en México: plataformas offshore y plantas onshore. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://vmsenergy.com/soluciones_oil_gas.html" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="VMS Energy" />
   <meta property="og:title" content="Soluciones EPC Oil &amp; Gas M&eacute;xico | VMS Energy" />
-  <meta property="og:description" content="EPC el&eacute;ctrico y de control para Oil &amp; Gas en M&eacute;xico. Plataformas offshore y plantas onshore, con cinco certificaciones ISO. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
+  <meta property="og:description" content="EPC eléctrico y de control para Oil &amp; Gas en México: plataformas offshore y plantas onshore. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
   <meta property="og:url" content="https://vmsenergy.com/soluciones_oil_gas.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/oil_gas.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_oil_gas_offshore.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Soluciones EPC Oil &amp; Gas M&eacute;xico | VMS Energy" />
-  <meta name="twitter:description" content="EPC el&eacute;ctrico y de control para Oil &amp; Gas en M&eacute;xico. Plataformas offshore y plantas onshore, con cinco certificaciones ISO. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/oil_gas.webp" />
+  <meta name="twitter:description" content="EPC eléctrico y de control para Oil &amp; Gas en México: plataformas offshore y plantas onshore. Clientes: Pemex, Cotemar, Baker Hughes y SLB." />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_oil_gas_offshore.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones_oil_gas.html" />
   <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/oil-gas-solutions.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones_oil_gas.html" />
@@ -74,9 +74,9 @@
     .btn{display:inline-flex;align-items:center;gap:8px;border-radius:14px;padding:12px 18px;font-weight:700;text-decoration:none;border:1px solid transparent;cursor:pointer;min-height:44px}
 
 
-    .hero{position:relative;isolation:isolate;min-height:520px;display:grid;align-items:center;color:#fff;overflow:hidden}
-    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,20,40,.88),rgba(7,25,49,.58) 78%,rgba(8,35,70,.34)),url('assets/img/hero_oil_gas.webp') center/cover no-repeat;z-index:-1}
-    .hero__content{max-width:760px;padding-block: 80px 64px}
+    .hero{position:relative;isolation:isolate;min-height:clamp(440px,70vh,560px);padding:0;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero__content{padding-block: 64px 56px}
+    .hero__content > *{max-width:680px}
     .eyebrow{display:inline-block;padding:.24rem .62rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;letter-spacing:.3px;margin-bottom:12px}
     .hero h1{font-size:clamp(30px,4.8vw,52px);line-height:1.03;margin:0 0 12px}
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
@@ -306,7 +306,7 @@
       .process-carousel{max-width:100%}
       .process-nav{max-width:100%}
       .process-slide{min-height:390px}
-      .hero__content{padding-block: 72px 58px}
+      .hero__content{padding-block: 56px 48px}
       .svc-grid{grid-template-columns:1fr}
     }
     @media (max-width:680px){
@@ -317,6 +317,7 @@
       .hero{min-height:420px}
       .hero__content{padding-block: 62px 52px}
       .hero__actions .btn{width:100%;justify-content:center}
+      .hero__actions [data-cta="hero-mantenimiento"]{display:none}
       .kpis,.case-grid{grid-template-columns:1fr}
       .process-slide{min-height:300px}
       .process-slide__body{padding:14px}
@@ -328,15 +329,20 @@
   .submenu--mega{min-width:500px;gap:0}.submenu--mega .submenu__group{flex:1;min-width:0}.submenu--mega .submenu__group+.submenu__group{margin-top:0;padding-top:0;border-top:none;padding-left:14px;border-left:1px solid rgba(23,44,81,.1)}
   </style>
   <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Service",
-      "name":"Oil & Gas",
-      "provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},
-      "areaServed":"México",
-      "serviceType":"Proceso e integración de soluciones Oil & Gas"
-    }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Oil & Gas",
+  "provider": {
+    "@type": "Organization",
+    "@id": "https://vmsenergy.com/#organization",
+    "name": "VMS Energy",
+    "url": "https://vmsenergy.com/"
+  },
+  "areaServed": "México",
+  "serviceType": "Proceso e integración de soluciones Oil & Gas"
+}
+</script>
 <style id="sticky-actions-global">
   .sticky-actions{
     position:fixed;
@@ -496,23 +502,90 @@
   @media(max-width:860px){.challenge-grid{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-          {"@type":"Question","name":"¿Qué estándares manejan en zonas clasificadas ATEX/NEC?","acceptedAnswer":{"@type":"Answer","text":"Trabajamos bajo IEC 60079, NEC Art. 500-506 y NOM-ASEA. Suministramos e instalamos equipos certificados Ex-d, Ex-e y Ex-n según la clasificación de zona dictaminada."}},
-          {"@type":"Question","name":"¿Tienen experiencia con sistemas SIS y detección de gas (F&G)?","acceptedAnswer":{"@type":"Answer","text":"Sí. Integramos sistemas SIL-2 y SIL-3 con plataformas Triconex, ABB Safety y Yokogawa, incluyendo HAZOP documentado y validación de lazo de seguridad."}},
-          {"@type":"Question","name":"¿Pueden ejecutar proyectos en instalaciones offshore o remotas?","acceptedAnswer":{"@type":"Answer","text":"Tenemos experiencia en instalaciones marinas con materiales de protección a corrosión marina y certificación de vibración. Coordinamos logística y personal en sitios remotos."}},
-          {"@type":"Question","name":"¿Qué incluye el comisionamiento de un proyecto Oil & Gas?","acceptedAnswer":{"@type":"Answer","text":"Pruebas funcionales FAT en planta, SAT en sitio, validación de interlocks de seguridad de proceso y entrega con dossier técnico completo según IEC 61511."}},
-          {"@type":"Question","name":"¿Cómo gestionan los cambios MOC en proceso en operación?","acceptedAnswer":{"@type":"Answer","text":"Aplicamos gestión de cambio documentada (MOC) integrada al CMMS del cliente. Planeamos ventanas de intervención y validamos cada cambio con protocolo de FAT/SAT antes del pase a producción."}},
-          {"@type":"Question","name":"¿Cuál es el tiempo típico para un proyecto de integración de control en Oil & Gas?","acceptedAnswer":{"@type":"Answer","text":"Dependiendo del alcance: ingeniería de detalle 6-10 semanas, suministro de tableros certificados 10-16 semanas, comisionamiento en sitio 2-6 semanas. Entregamos programa de proyecto en la propuesta."}}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye una solución Oil & Gas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Incluye ingeniería, suministro técnico, integración de sistemas críticos, pruebas y comisionamiento en sitio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden trabajar por etapas sin detener operación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Planeamos ventanas de intervención y fases de ejecución para minimizar impactos en continuidad operativa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué estándares manejan en zonas clasificadas ATEX/NEC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajamos bajo IEC 60079, NEC Art. 500-506 y NOM-ASEA. Suministramos e instalamos equipos certificados Ex-d, Ex-e y Ex-n según la clasificación de zona dictaminada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen experiencia con sistemas SIS y detección de gas (F&G)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Integramos sistemas SIL-2 y SIL-3 con plataformas Triconex, ABB Safety y Yokogawa, incluyendo HAZOP documentado y validación de lazo de seguridad."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pueden ejecutar proyectos en instalaciones offshore o remotas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tenemos experiencia en instalaciones marinas con materiales de protección a corrosión marina y certificación de vibración. Coordinamos logística y personal en sitios remotos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el comisionamiento de un proyecto Oil & Gas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pruebas funcionales FAT en planta, SAT en sitio, validación de interlocks de seguridad de proceso y entrega con dossier técnico completo según IEC 61511."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo gestionan los cambios MOC en proceso en operación?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aplicamos gestión de cambio documentada (MOC) integrada al CMMS del cliente. Planeamos ventanas de intervención y validamos cada cambio con protocolo de FAT/SAT antes del pase a producción."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el tiempo típico para un proyecto de integración de control en Oil & Gas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dependiendo del alcance: ingeniería de detalle 6-10 semanas, suministro de tableros certificados 10-16 semanas, comisionamiento en sitio 2-6 semanas. Entregamos programa de proyecto en la propuesta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo iniciamos un proyecto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Comparte tu requerimiento en el formulario de contacto y definimos alcance, tiempos y propuesta técnica."
+      }
+    }
+  ]
+}
 </script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Soluciones","item":"https://vmsenergy.com/soluciones.html"},{"@type":"ListItem","position":3,"name":"Soluciones EPC Oil \u0026 Gas México","item":"https://vmsenergy.com/soluciones_oil_gas.html"}]}
   </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -723,11 +796,11 @@
 
 
   <main id="contenido">
-    <section id="inicio" class="hero" aria-labelledby="heroTitle">
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_oil_gas_offshore.webp');--hero-image-m:url('assets/img/services/hero_oil_gas_offshore_m.webp')" aria-labelledby="heroTitle">
       <div class="container hero__content">
         <span class="eyebrow">EPC Oil &amp; Gas &middot; Proyectos desde $1,000,000 MXN</span>
-        <h1 id="heroTitle">Ingenier&iacute;a EPC el&eacute;ctrica y de control para Oil &amp; Gas en M&eacute;xico.</h1>
-        <p>EPC con certificaci&oacute;n ISO 9001, 14001, 45001, 37001 y 50001. Subestaciones, automatizaci&oacute;n y sistemas de control para operaci&oacute;n cr&iacute;tica offshore y onshore. Clientes: Pemex, Cotemar, Baker Hughes y SLB.</p>
+        <h1 id="heroTitle">EPC el&eacute;ctrico y de control para Oil &amp; Gas</h1>
+        <p>Subestaciones, automatizaci&oacute;n y sistemas de control para operaci&oacute;n cr&iacute;tica offshore y onshore en M&eacute;xico. Clientes: Pemex, Cotemar, Baker Hughes y SLB.</p>
         <div class="hero__actions on-dark">
           <a class="btn btn--primary" href="contacto_cta.html?producto=sector-oil-gas#ctaForm" data-cta="hero-cotizar">Solicitar Evaluaci&oacute;n de Proyecto Oil &amp; Gas</a>
           <a class="btn btn--secondary" href="lp-mantenimiento-oil-gas.html" data-cta="hero-mantenimiento">Mantenimiento Oil &amp; Gas</a>
@@ -921,6 +994,30 @@
         <details>
           <summary>&iquest;Pueden trabajar por etapas sin detener operaci&oacute;n?</summary>
           <p>S&iacute;. Planeamos ventanas de intervenci&oacute;n y fases de ejecuci&oacute;n para minimizar impactos en continuidad operativa.</p>
+        </details>
+        <details>
+          <summary>¿Qué estándares manejan en zonas clasificadas ATEX/NEC?</summary>
+          <p>Trabajamos bajo IEC 60079, NEC Art. 500-506 y NOM-ASEA. Suministramos e instalamos equipos certificados Ex-d, Ex-e y Ex-n según la clasificación de zona dictaminada.</p>
+        </details>
+        <details>
+          <summary>¿Tienen experiencia con sistemas SIS y detección de gas (F&amp;G)?</summary>
+          <p>Sí. Integramos sistemas SIL-2 y SIL-3 con plataformas Triconex, ABB Safety y Yokogawa, incluyendo HAZOP documentado y validación de lazo de seguridad.</p>
+        </details>
+        <details>
+          <summary>¿Pueden ejecutar proyectos en instalaciones offshore o remotas?</summary>
+          <p>Tenemos experiencia en instalaciones marinas con materiales de protección a corrosión marina y certificación de vibración. Coordinamos logística y personal en sitios remotos.</p>
+        </details>
+        <details>
+          <summary>¿Qué incluye el comisionamiento de un proyecto Oil &amp; Gas?</summary>
+          <p>Pruebas funcionales FAT en planta, SAT en sitio, validación de interlocks de seguridad de proceso y entrega con dossier técnico completo según IEC 61511.</p>
+        </details>
+        <details>
+          <summary>¿Cómo gestionan los cambios MOC en proceso en operación?</summary>
+          <p>Aplicamos gestión de cambio documentada (MOC) integrada al CMMS del cliente. Planeamos ventanas de intervención y validamos cada cambio con protocolo de FAT/SAT antes del pase a producción.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el tiempo típico para un proyecto de integración de control en Oil &amp; Gas?</summary>
+          <p>Dependiendo del alcance: ingeniería de detalle 6-10 semanas, suministro de tableros certificados 10-16 semanas, comisionamiento en sitio 2-6 semanas. Entregamos programa de proyecto en la propuesta.</p>
         </details>
         <details>
           <summary>&iquest;C&oacute;mo iniciamos un proyecto?</summary>
