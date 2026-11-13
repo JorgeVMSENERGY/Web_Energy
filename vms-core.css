@@ -407,6 +407,73 @@ p:last-child { margin-bottom: 0; }
     var(--hero-image, none) center / cover no-repeat;
 }
 
+/* ------------------------------------------------------------
+   `.hero--fade-left` — heros renovados (nov 2026)
+   ------------------------------------------------------------
+   Para las imagenes de la serie nov-2026, que ya traen un fundido
+   azul oscuro en el tercio izquierdo. El velo solo refuerza esa zona
+   y se abre hacia la derecha para dejar ver el equipo.
+   Criterio: H1 de 2 lineas max., texto alineado al contenedor,
+   velo que desaparece al ~60 % en escritorio, uniforme en tablet y
+   vertical en movil. Encuadre ajustable por pagina con
+   --hero-pos / --hero-pos-md / --hero-pos-sm y version ligera
+   para movil con --hero-image-m.
+   Uso: class="hero hero--photo hero--fade-left"
+        style="--hero-image:url(...);--hero-image-m:url(..._m.webp)"
+   ------------------------------------------------------------ */
+.hero--photo.hero--fade-left::before {
+  background:
+    linear-gradient(90deg,
+      rgba(6, 20, 40, .86) 0%,
+      rgba(7, 25, 49, .7) 40%,
+      rgba(8, 35, 70, .22) 62%,
+      rgba(8, 35, 70, 0) 80%),
+    var(--hero-image, none) var(--hero-pos, right center) / cover no-repeat;
+}
+/* Botones secundarios: sobre la parte clara de la foto el borde al 42 %
+   casi desaparece. Fondo oscuro translucido y borde mas visible. */
+.hero--fade-left .on-dark .btn.btn--ghost,
+.hero--fade-left .on-dark .btn.btn--secondary {
+  background: rgba(6, 20, 40, .45);
+  border-color: rgba(255, 255, 255, .6);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.hero--fade-left .on-dark .btn.btn--ghost:hover,
+.hero--fade-left .on-dark .btn.btn--ghost:focus-visible,
+.hero--fade-left .on-dark .btn.btn--secondary:hover,
+.hero--fade-left .on-dark .btn.btn--secondary:focus-visible {
+  background: rgba(6, 20, 40, .6);
+  border-color: rgba(255, 255, 255, .85);
+}
+/* H1 en 2 lineas y bloque de texto dentro de la zona oscura */
+.hero--fade-left h1 { max-width: 22ch; }
+.hero--fade-left .container > p,
+.hero--fade-left .hero__lede { max-width: 600px; }
+@media (max-width: 980px) {
+  .hero--photo.hero--fade-left::before {
+    background:
+      linear-gradient(90deg,
+        rgba(6, 20, 40, .86) 0%,
+        rgba(7, 25, 49, .68) 50%,
+        rgba(8, 35, 70, .32) 100%),
+      var(--hero-image, none) var(--hero-pos-md, 72% center) / cover no-repeat;
+  }
+}
+@media (max-width: 680px) {
+  .hero--photo.hero--fade-left::before {
+    background:
+      linear-gradient(180deg,
+        rgba(6, 20, 40, .8) 0%,
+        rgba(7, 25, 49, .7) 55%,
+        rgba(7, 25, 49, .46) 100%),
+      var(--hero-image-m, var(--hero-image, none)) var(--hero-pos-sm, 62% center) / cover no-repeat;
+  }
+  /* En movil las etiquetas repiten lo que ya dice la seccion siguiente
+     y alargan el hero ~150 px: se ocultan. */
+  .hero--fade-left .hero-stats { display: none; }
+}
+
 
 /* ============================================================
    6 · KPI Y DATOS

@@ -71,30 +71,125 @@
     }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[
-    {"@type":"Service","name":"Transformadores Industriales","provider":{"@type":"Organization","name":"VMS Energy","url":"https://vmsenergy.com/"},"areaServed":"MX","description":"Suministro, instalación y comisionamiento de transformadores de distribución y potencia bajo IEC 60076 en México.","serviceType":"Ingeniería EPC de transformadores industriales","url":"https://vmsenergy.com/soluciones-transformadores-industriales.html",
-    "hasOfferCatalog":{"@type":"OfferCatalog","name":"Tipos de transformadores","itemListElement":[
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador de distribución (< 2500 kVA)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador de potencia (> 2500 kVA)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador seco (resina epoxi)"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformador en aceite ONAN/ONAF/OFAF"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Autotransformador"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transformadores especiales (rectificador, horno, tierra)"}}
-    ]}},
-    {"@type":"FAQPage","mainEntity":[
-      {"@type":"Question","name":"¿Qué norma rige los transformadores industriales?","acceptedAnswer":{"@type":"Answer","text":"La serie IEC 60076 es la norma principal: IEC 60076-1 (requisitos generales), IEC 60076-2 (temperatura), IEC 60076-3 (niveles de aislamiento), IEC 60076-5 (resistencia al cortocircuito). En México aplica también NOM-003-ENER para eficiencia."}},
-      {"@type":"Question","name":"¿Qué significa Dyn11 en un transformador?","acceptedAnswer":{"@type":"Answer","text":"Dyn11 es el grupo vectorial: D = devanado primario en triángulo (delta), y = devanado secundario en estrella (wye), n = neutro accesible, 11 = desfase de 330° (equivalente a -30°) entre tensiones de fase primaria y secundaria. Es el grupo estándar para transformadores de distribución MT/BT."}},
-      {"@type":"Question","name":"¿Cuál es la diferencia entre transformador seco y en aceite?","acceptedAnswer":{"@type":"Answer","text":"El transformador seco usa resina epoxi como aislante; es apto para interiores, áreas con restricciones de incendio y altitudes altas. El transformador en aceite usa aceite mineral dieléctrico; ofrece mayor capacidad de refrigeración (ONAN, ONAF, OFAF), mayor rango de potencia y menor costo por kVA, pero requiere cubeto de contención."}},
-      {"@type":"Question","name":"¿Qué pruebas de aceptación se realizan a un transformador?","acceptedAnswer":{"@type":"Answer","text":"Según IEC 60076-1: (1) relación de transformación, (2) resistencia de devanados, (3) impedancia de cortocircuito y pérdidas en carga, (4) pérdidas en vacío y corriente de vacío, (5) ensayo dieléctrico de tensión aplicada, (6) ensayo de tensión inducida. Opcionales: ensayo de impulso (BIL), temperatura, ruido."}},
-      {"@type":"Question","name":"¿VMS Energy instala transformadores de cualquier marca?","acceptedAnswer":{"@type":"Answer","text":"Sí. VMS Energy tiene alianza comercial estratégica con Deemsa (fabricante mexicano) y suministra además WEG, HPS, ABB, Siemens, Schneider Electric, Prolec-GE y CELSA según los requisitos del proyecto. También realiza instalación, pruebas de aceptación, comisionamiento y mantenimiento de transformadores de cualquier fabricante."}}
-    ]}
-  ]}
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Transformadores Industriales",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "areaServed": "MX",
+      "description": "Suministro, instalación y comisionamiento de transformadores de distribución y potencia bajo IEC 60076 en México.",
+      "serviceType": "Ingeniería EPC de transformadores industriales",
+      "url": "https://vmsenergy.com/soluciones-transformadores-industriales.html",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tipos de transformadores",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformador de distribución (< 2500 kVA)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformador de potencia (> 2500 kVA)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformador seco (resina epoxi)"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformador en aceite ONAN/ONAF/OFAF"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Autotransformador"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transformadores especiales (rectificador, horno, tierra)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué norma rige los transformadores industriales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La serie IEC 60076 es la norma internacional principal: IEC 60076-1 (requisitos generales), 60076-2 (temperatura), 60076-3 (aislamiento y pruebas dieléctricas), 60076-5 (resistencia al cortocircuito) e IEC 60076-11 para transformadores secos. En México se complementa con NOM-003-ENER (eficiencia) y CFE L0000-06 para proyectos de CFE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué significa el grupo vectorial Dyn11?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "D = devanado primario en triángulo (Delta), y = devanado secundario en estrella (wye), n = neutro accesible en el secundario, 11 = desfase de 330° (equivalente a −30°) entre tensiones de fase. El Dyn11 es el grupo estándar para transformadores de distribución MT/BT porque el neutro accesible permite la distribución monofásica y la conexión de puesta a tierra del sistema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre transformador seco y en aceite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El transformador seco usa resina epoxi como aislante: apto para interiores, zonas de riesgo de incendio y altitudes elevadas; no requiere cubeto de contención. El transformador en aceite usa aceite mineral dieléctrico: mayor eficiencia de refrigeración, mayor rango de potencia (hasta 100 MVA+) y menor costo por kVA, pero requiere cubeto y mayor espacio. Para altitudes > 4 000 m recomendamos seco con derating o consulta al fabricante."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pruebas de aceptación se realizan según IEC 60076-1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las pruebas de rutina obligatorias son: (1) relación de transformación, (2) resistencia de devanados, (3) impedancia de cortocircuito y pérdidas en carga, (4) pérdidas en vacío y corriente de vacío, (5) ensayo dieléctrico de tensión aplicada. Pruebas de tipo opcionales: impulso BIL, ensayo de temperatura y ruido. VMS Energy acompaña al cliente en el FAT de fábrica y ejecuta las pruebas SAT de sitio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el BIL y cómo se selecciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El BIL (Basic Impulse Insulation Level) es la máxima tensión de impulso que soporta el transformador expresada en kV cresta. Se selecciona según la tensión nominal del sistema y la zona de actividad tormentosa: a mayor keraunic level (días de tormenta al año), mayor BIL y más importante la coordinación con pararrayos ZnO. Para 34.5 kV el BIL estándar es 200 kV; para 115 kV es 550 kV."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Equipamiento Crítico","item":"https://vmsenergy.com/soluciones.html#equipamiento"},{"@type":"ListItem","position":3,"name":"Transformadores Industriales | Suministro e Instalación","item":"https://vmsenergy.com/soluciones-transformadores-industriales.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

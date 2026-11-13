@@ -18,8 +18,8 @@
 <!-- VMS-NUCLEO:FIN -->
 
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Calidad de Energía Industrial: Caída y Huecos de Tensión, Armónicos | VMS Energy</title>
-  <meta name="description" content="Diagnóstico de calidad de tensión con analizador de calidad de energía clase A: caída de tensión, huecos (voltage sags), armónicos y flicker. Mitigación con DVR, UPS, BESS y variadores."/>
+  <title>Calidad de energía industrial: huecos y armónicos | VMS Energy</title>
+  <meta name="description" content="Diagnóstico de calidad de energía con analizador clase A: huecos de tensión, armónicos y flicker. Mitigación con DVR, UPS, BESS y variadores."/>
   <meta name="robots" content="index,follow"/>
   <link rel="canonical" href="https://vmsenergy.com/lp-calidad-de-energia-industrial.html"/>
 <link rel="stylesheet" href="servicios-base.css">
@@ -184,150 +184,153 @@
     }
   </style>
   <script type="application/ld+json">
-  {
-   "@context": "https://schema.org",
-   "@graph": [
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-     "@type": "Service",
-     "name": "Calidad de Energía Eléctrica Industrial",
-     "provider": {
-      "@type": "Organization",
-      "name": "VMS Energy",
-      "url": "https://vmsenergy.com"
-     },
-     "description": "Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: caída de tensión, huecos de tensión (voltage sags), armónicos THD, flicker y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000.",
-     "areaServed": {
-      "@type": "Country",
-      "name": "México"
-     },
-     "serviceType": "Power Quality Analysis & Correction"
+      "@type": "Service",
+      "name": "Calidad de Energía Eléctrica Industrial",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "description": "Diagnóstico, análisis y corrección de calidad de energía eléctrica industrial: caída de tensión, huecos de tensión (voltage sags), armónicos THD, flicker y factor de potencia. Cumplimiento IEEE 519-2022 e IEC 61000.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      },
+      "serviceType": "Power Quality Analysis & Correction"
     },
     {
-     "@type": "Service",
-     "name": "Diagnóstico de calidad de tensión",
-     "serviceType": "Power quality and voltage sag assessment",
-     "provider": {
-      "@type": "Organization",
-      "name": "VMS Energy",
-      "url": "https://vmsenergy.com"
-     },
-     "areaServed": {
-      "@type": "Country",
-      "name": "México"
-     },
-     "description": "Medición con analizador de calidad de energía clase A (IEC 61000-4-30) durante 7 días continuos o más, registro de caídas de tensión, huecos, interrupciones y transitorios, cruce con la bitácora de paros e informe con causas y recomendaciones de mitigación.",
-     "url": "https://vmsenergy.com/lp-calidad-de-energia-industrial.html#diagnostico"
+      "@type": "Service",
+      "name": "Diagnóstico de calidad de tensión",
+      "serviceType": "Power quality and voltage sag assessment",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      },
+      "description": "Medición con analizador de calidad de energía clase A (IEC 61000-4-30) durante 7 días continuos o más, registro de caídas de tensión, huecos, interrupciones y transitorios, cruce con la bitácora de paros e informe con causas y recomendaciones de mitigación.",
+      "url": "https://vmsenergy.com/lp-calidad-de-energia-industrial.html#diagnostico"
     },
     {
-     "@type": "FAQPage",
-     "mainEntity": [
-      {
-       "@type": "Question",
-       "name": "¿Qué es una caída de tensión y cuánta es aceptable?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La caída de tensión es la diferencia entre la tensión en el origen del circuito y la que llega a la carga, por la impedancia de conductores y transformadores. Es sostenida: dura mientras la carga está conectada. La NOM-001-SEDE-2012 recomienda no superar 3 % en circuitos derivados ni 5 % en el total del alimentador más el derivado. Por encima de eso los motores pierden par (al 90 % de tensión, cerca del 81 % del par), arrancan con dificultad y se calientan."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Qué es un hueco de tensión (voltage sag) y en qué se diferencia de una caída de tensión?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Un hueco de tensión (voltage sag o voltage dip) es una reducción breve de la tensión, típicamente entre 10 % y 90 % del valor nominal, que dura de medio ciclo a un minuto (IEEE 1159). La caída de tensión es permanente mientras opera la carga; el hueco es un evento. Los huecos suelen venir de fallas en la red de CFE o de arranques de motores grandes dentro de la planta, y solo se detectan con un analizador que registre de forma continua."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Por qué se disparan los variadores de frecuencia sin falla aparente?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La causa más común es un hueco de tensión: el bus de CD del variador baja, el equipo se protege por baja tensión y se detiene, aunque la red se recupere en milisegundos. Otras causas son transitorios por maniobra de capacitores y armónicos que calientan el rectificador. Un diagnóstico con analizador de calidad de energía permite ligar cada disparo con su evento y decidir si basta un ajuste de ride-through o se necesita un UPS, DVR o BESS."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Qué es un analizador de calidad de energía y qué registra?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Es un equipo de medición que se instala en el tablero, sin interrumpir la operación, y registra de forma continua la tensión y la corriente. Los analizadores clase A (IEC 61000-4-30) capturan caídas y huecos de tensión, interrupciones, sobretensiones, transitorios, armónicos, flicker y factor de potencia, con la hora exacta y la forma de onda de cada evento. Esos registros son la base del diagnóstico de calidad de tensión."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Qué conviene para los huecos de tensión: UPS, DVR o BESS?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la profundidad y duración de los huecos y de cuánta carga hay que proteger. Para PLC, control e instrumentación suele bastar un UPS. Para una línea de proceso completa con huecos de fracciones de segundo, un DVR inyecta la tensión faltante sin cargar baterías de gran tamaño. Si además hay interrupciones de segundos a minutos o un caso económico por demanda, un BESS cubre ambos. Cuando el hueco lo provoca un arranque interno, un variador o arrancador suave lo elimina en el origen."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Qué miden en un diagnóstico de calidad de energía?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Medimos caída de tensión e interrupciones, huecos de tensión (voltage sags o dips), THDi y THDv (distorsión armónica de corriente y tensión), factor de potencia real y de desplazamiento, flicker (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Qué norma aplica para armónicos en México?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La norma de referencia internacional más usada en proyectos industriales en México es IEEE 519-2022, que fija límites de THDi y THDv según el nivel de cortocircuito en el punto de acoplamiento común (PCC). También aplican IEC 61000-3-2 e IEC 61000-3-12 según la potencia del equipo generador, y la NMX-J-098-ANCE para instalaciones en México. Para parques solares conectados a la red CFE aplica adicionalmente el Código de Red de CENACE."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Cuánto tiempo dura la campaña de medición?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La medición mínima recomendada es de 7 días continuos para capturar variaciones de carga entre turnos y días laborables vs. fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción estacional) recomendamos 14 o 28 días de medición para que el perfil sea representativo del peor caso operativo."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Los variadores de frecuencia son los únicos generadores de armónicos?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Los principales generadores de armónicos en una planta industrial son: variadores de frecuencia (VFDs) con rectificadores de 6 y 12 pulsos, UPS de doble conversión, rectificadores de carga de baterías, hornos de arco, fuentes de alimentación conmutadas en equipos de automatización, inversores fotovoltaicos y soldadoras de frecuencia variable. La identificación de la fuente dominante es la base para dimensionar correctamente la solución."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿La corrección de armónicos mejora el factor de potencia?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Depende de la solución. Los filtros activos (APF) corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los filtros pasivos corrigen armónicos específicos pero no compensan reactiva fundamental. Los bancos de condensadores sin filtrado pueden empeorar el problema armónico si no se diseñan con reactancia de desintonización correcta."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿El diagnóstico requiere detener la producción?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. La instalación de los analizadores de calidad de energía se realiza sobre los conductores en operación mediante pinzas de corriente de efecto Hall sin contacto directo con conductores energizados. El diagnóstico no interrumpe la operación de la planta. La instalación de la solución de corrección (filtros, bancos o APF) sí puede requerir una ventana de paro breve para la conexión al tablero principal."
-       }
-      },
-      {
-       "@type": "Question",
-       "name": "¿Cuánto tiempo tarda en ver resultados después de instalar los filtros?",
-       "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Los resultados son inmediatos tras la puesta en servicio. Un filtro activo (APF) entra en compensación en microsegundos; la reducción del THDi es medible en el primer ciclo de red. La validación final se hace con una segunda campaña de medición post-instalación de 7 días para confirmar el cumplimiento de los límites de IEEE 519 y la eliminación de penalizaciones de CFE."
-       }
-      }
-     ]
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es una caída de tensión y cuánta es aceptable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La caída de tensión es la diferencia entre la tensión en el origen del circuito y la que llega a la carga, por la impedancia de conductores y transformadores. Es sostenida: dura mientras la carga está conectada. La NOM-001-SEDE-2012 recomienda no superar 3 % en circuitos derivados ni 5 % en el total del alimentador más el derivado. Por encima de eso los motores pierden par (al 90 % de tensión, cerca del 81 % del par), arrancan con dificultad y se calientan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un hueco de tensión (voltage sag) y en qué se diferencia de una caída de tensión?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un hueco de tensión (voltage sag o voltage dip) es una reducción breve de la tensión, típicamente entre 10 % y 90 % del valor nominal, que dura de medio ciclo a un minuto (IEEE 1159). La caída de tensión es permanente mientras opera la carga; el hueco es un evento. Los huecos suelen venir de fallas en la red de CFE o de arranques de motores grandes dentro de la planta, y solo se detectan con un analizador que registre de forma continua."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué se disparan los variadores de frecuencia sin falla aparente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La causa más común es un hueco de tensión: el bus de CD del variador baja, el equipo se protege por baja tensión y se detiene, aunque la red se recupere en milisegundos. Otras causas son transitorios por maniobra de capacitores y armónicos que calientan el rectificador. Un diagnóstico con analizador de calidad de energía permite ligar cada disparo con su evento y decidir si basta un ajuste de ride-through o se necesita un UPS, DVR o BESS."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un analizador de calidad de energía y qué registra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es un equipo de medición que se instala en el tablero, sin interrumpir la operación, y registra de forma continua la tensión y la corriente. Los analizadores clase A (IEC 61000-4-30) capturan caídas y huecos de tensión, interrupciones, sobretensiones, transitorios, armónicos, flicker y factor de potencia, con la hora exacta y la forma de onda de cada evento. Esos registros son la base del diagnóstico de calidad de tensión."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué conviene para los huecos de tensión: UPS, DVR o BESS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la profundidad y duración de los huecos y de cuánta carga hay que proteger. Para PLC, control e instrumentación suele bastar un UPS. Para una línea de proceso completa con huecos de fracciones de segundo, un DVR inyecta la tensión faltante sin cargar baterías de gran tamaño. Si además hay interrupciones de segundos a minutos o un caso económico por demanda, un BESS cubre ambos. Cuando el hueco lo provoca un arranque interno, un variador o arrancador suave lo elimina en el origen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué miden en un diagnóstico de calidad de energía?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medimos caída de tensión e interrupciones, huecos de tensión (voltage sags o dips), THDi y THDv (distorsión armónica de corriente y tensión), factor de potencia real y de desplazamiento, flicker (Pst y Plt según IEC 61000-4-15), desequilibrio de tensión, transitorios y variaciones de frecuencia. La medición se realiza en los puntos críticos del sistema durante un mínimo de 7 días continuos con analizadores clase A."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué norma aplica para armónicos en México?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La norma de referencia internacional más usada en proyectos industriales en México es IEEE 519-2022, que fija límites de THDi y THDv según el nivel de cortocircuito en el punto de acoplamiento común (PCC). También aplican IEC 61000-3-2 e IEC 61000-3-12 según la potencia del equipo generador, y la NMX-J-098-ANCE para instalaciones en México. Para parques solares conectados a la red CFE aplica adicionalmente el Código de Red de CENACE."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo dura la campaña de medición?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La medición mínima recomendada es de 7 días continuos para capturar variaciones de carga entre turnos y días laborables vs. fin de semana. Para plantas con procesos altamente variables (zafra, batch farmacéutico, campañas de producción estacional) recomendamos 14 o 28 días de medición para que el perfil sea representativo del peor caso operativo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los variadores de frecuencia son los únicos generadores de armónicos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Los principales generadores de armónicos en una planta industrial son: variadores de frecuencia (VFDs) con rectificadores de 6 y 12 pulsos, UPS de doble conversión, rectificadores de carga de baterías, hornos de arco, fuentes de alimentación conmutadas en equipos de automatización, inversores fotovoltaicos y soldadoras de frecuencia variable. La identificación de la fuente dominante es la base para dimensionar correctamente la solución."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La corrección de armónicos mejora el factor de potencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la solución. Los filtros activos (APF) corrigen armónicos y pueden compensar potencia reactiva simultáneamente, mejorando tanto THDi como el factor de potencia total (PF, no solo cos φ). Los filtros pasivos corrigen armónicos específicos pero no compensan reactiva fundamental. Los bancos de condensadores sin filtrado pueden empeorar el problema armónico si no se diseñan con reactancia de desintonización correcta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El diagnóstico requiere detener la producción?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La instalación de los analizadores de calidad de energía se realiza sobre los conductores en operación mediante pinzas de corriente de efecto Hall sin contacto directo con conductores energizados. El diagnóstico no interrumpe la operación de la planta. La instalación de la solución de corrección (filtros, bancos o APF) sí puede requerir una ventana de paro breve para la conexión al tablero principal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo tarda en ver resultados después de instalar los filtros?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los resultados son inmediatos tras la puesta en servicio. Un filtro activo (APF) entra en compensación en microsegundos; la reducción del THDi es medible en el primer ciclo de red. La validación final se hace con una segunda campaña de medición post-instalación de 7 días para confirmar el cumplimiento de los límites de IEEE 519 y la eliminación de penalizaciones de CFE."
+          }
+        }
+      ]
     }
-   ]
-  }
-  </script>
+  ]
+}
+</script>
   <nav aria-label="Barra de navegación" style="display:none" id="breadcrumb-ld">
   </nav>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"Servicios Especializados","item":"https://vmsenergy.com/especialidades.html"},{"@type":"ListItem","position":3,"name":"Calidad de Energía Eléctrica Industrial | THD · Armónicos…","item":"https://vmsenergy.com/lp-calidad-de-energia-industrial.html"}]}
   </script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

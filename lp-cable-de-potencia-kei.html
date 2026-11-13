@@ -247,76 +247,125 @@
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-cable-de-potencia-kei.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-cable-de-potencia-kei.html" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Service",
-        "name": "Suministro de Cable de Potencia MT/AT",
-        "provider": { "@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/" },
-        "areaServed": "México",
-        "serviceType": "Suministro técnico y EPC de cable de potencia media y alta tensión",
-        "description": "Suministro de cable de potencia XLPE y EPR para media y alta tensión en proyectos EPC industriales en México. Marcas KEI, Südkabel, Condumex y Viakon. Documentación técnica, trazabilidad por bobina y entrega por hitos de obra.",
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Catálogo de cable de potencia VMS Energy",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable XLPE MT 6/10 kV a 12/20 kV" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable EPR para equipos móviles y minería" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable AT 36/66 kV XLPE con armadura" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suministro con documentación CFE/PEMEX/ISO" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "EPC integral: suministro + instalación + pruebas" } }
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Suministro de Cable de Potencia MT/AT",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://vmsenergy.com/#organization",
+        "name": "VMS Energy",
+        "url": "https://vmsenergy.com/"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
+      "areaServed": "México",
+      "serviceType": "Suministro técnico y EPC de cable de potencia media y alta tensión",
+      "description": "Suministro de cable de potencia XLPE y EPR para media y alta tensión en proyectos EPC industriales en México. Marcas KEI, Südkabel, Condumex y Viakon. Documentación técnica, trazabilidad por bobina y entrega por hitos de obra.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de cable de potencia VMS Energy",
+        "itemListElement": [
           {
-            "@type": "Question",
-            "name": "¿Qué información necesito para cotizar cable de potencia MT/AT?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Voltaje de operación (U0/U en kV), longitud total por circuito, tipo de instalación (bandeja, ducto, enterrado), temperatura ambiente del sitio, norma requerida (IEC 60502, NMX-J, CFE) y cronograma de entrega. Con estos datos VMS Energy da respuesta técnica en 24–48 h hábiles." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable XLPE MT 6/10 kV a 12/20 kV"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Qué diferencia hay entre aislamiento XLPE y EPR para media tensión?",
-            "acceptedAnswer": { "@type": "Answer", "text": "XLPE (polietileno reticulado) es ideal para instalaciones fijas, subestaciones y alimentadores principales: ofrece menor capacitancia, mejor comportamiento dieléctrico y menor costo por metro. EPR (etileno-propileno) es superior en equipos móviles (trailing cables en minería), ambientes con alta humedad y aplicaciones que requieren mayor flexibilidad mecánica." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable EPR para equipos móviles y minería"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Manejan cable de fabricación nacional para proyectos con componente local?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Condumex y Viakon (fabricación nacional bajo NMX-J) están disponibles para baja tensión y control cuando el proyecto requiere componente nacional, tiempos de entrega cortos o cumplimiento NOM-001-SEDE. Para media y alta tensión, KEI y Südkabel son los fabricantes de referencia." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cable AT 36/66 kV XLPE con armadura"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Pueden coordinar entregas por fases de obra en proyectos EPC?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Sí. La entrega por hitos de obra es el estándar de VMS Energy en proyectos EPC. Coordinamos cronograma de suministro, trazabilidad por bobina, documentación técnica por lote y verificación de longitudes antes de instalación." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Suministro con documentación CFE/PEMEX/ISO"
+            }
           },
           {
-            "@type": "Question",
-            "name": "¿Qué documentación incluye el suministro de cable?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Certificado de pruebas de fábrica (ensayos individuales y tipo por bobina), hoja de datos del cable, reporte de longitudes, etiquetado de trazabilidad y, si el proyecto lo requiere, documentación específica para CFE, PEMEX o auditorías ISO." }
-          },
-          {
-            "@type": "Question",
-            "name": "¿VMS Energy también instala el cable o solo lo suministra?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Las dos opciones están disponibles. Como contratista EPC, VMS Energy integra suministro, instalación, pruebas y commissioning bajo un solo contrato. Si el proyecto ya tiene contratista de instalación, podemos actuar solo como proveedor técnico con la misma rigurosidad documental." }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo se calcula la ampacidad de un cable de potencia en instalación enterrada?",
-            "acceptedAnswer": { "@type": "Answer", "text": "La ampacidad se calcula según IEC 60287 considerando: sección del conductor (mm²), resistividad térmica del suelo (típico 1.0–2.5 K·m/W), temperatura del suelo (15–35°C según región), profundidad de instalación y número de circuitos en paralelo. VMS Energy realiza la memoria de cálculo de ampacidad como parte de la ingeniería de detalle EPC." }
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EPC integral: suministro + instalación + pruebas"
+            }
           }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué información necesito para cotizar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Voltaje de operación (U0/U en kV), longitud total por circuito, tipo de instalación (bandeja, ducto, enterrado), temperatura ambiente del sitio, norma requerida (IEC, NMX-J, CFE) y cronograma de entrega. Con estos datos te contactamos en menos de 24 h hábiles; el tiempo de la cotización depende del alcance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿XLPE o EPR para mi proyecto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de la aplicación. XLPE es ideal para instalaciones fijas, subestaciones y alimentadores principales. EPR es superior en equipos móviles (trailing cables en minería), ambientes con alta humedad y aplicaciones que requieren mayor flexibilidad. Consulta la guía de selección de esta página o pídenos asesoría técnica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Manejan cable de fabricación nacional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Condumex y Viakon (fabricación nacional bajo NMX-J) están disponibles para baja tensión y control cuando el proyecto requiere componente nacional, tiempos de entrega cortos o cumplimiento NOM-001-SEDE. Para media y alta tensión, KEI y Südkabel son los fabricantes de referencia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Pueden coordinar entregas por fases de obra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. La entrega por hitos de obra es nuestro estándar en proyectos EPC. Coordinamos cronograma de suministro, trazabilidad por bobina, documentación técnica por lote y verificación de longitudes antes de instalación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué documentación incluye el suministro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certificado de pruebas de fábrica (ensayos individuales y tipo), hoja de datos del cable, reporte de longitudes por bobina, etiquetado de trazabilidad y, si el proyecto lo requiere, documentación específica para CFE, PEMEX, auditorías ISO o auditoría sanitaria en industria alimentaria."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿VMS también instala o solo suministra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Las dos opciones están disponibles. Como contratista EPC, integramos suministro, instalación, pruebas y commissioning bajo un solo contrato. Si el proyecto ya tiene contratista de instalación, podemos actuar solo como proveedor técnico con la misma rigurosidad."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"VMS Energy","item":"https://vmsenergy.com/"},{"@type":"ListItem","position":2,"name":"VMShop","item":"https://vmsenergy.com/VMShop.html"},{"@type":"ListItem","position":3,"name":"Cable de potencia MT/AT","item":"https://vmsenergy.com/lp-cable-de-potencia-kei.html"}]}
   </script>
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"]}</script>
 </head>
 <body>
 <!-- VMS-GTM:NOSCRIPT --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDZFQ3CJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -246,46 +246,172 @@
     @media (max-width:560px){.obj-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "name":"VMS Energy",
-        "url":"https://vmsenergy.com/",
-        "logo":"https://vmsenergy.com/assets/brand/vms_logo_blue.png",
-        "award":["ISO 9001 GSC9KMX505","ISO 14001 GSC14KMX277","ISO 45001 GSC45KMX182","ISO 37001 GSC37KMX131","ISO 50001 GSC50KMX101"],
-        "description":"VMS Energy — EPC de infraestructura eléctrica, automatización, energía solar e industrial en México con 5 certificaciones ISO vigentes.",
-        "sameAs":["https://www.linkedin.com/company/vmsenergy/","https://www.instagram.com/vmsenergy"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vmsenergy.com/#organization",
+      "name": "VMS Energy",
+      "legalName": "VMS Energy de México, S. de R.L. de C.V.",
+      "alternateName": "VMS Energy de México",
+      "url": "https://vmsenergy.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"
       },
-      {
-        "@type":"WebPage",
-        "name":"Sostenibilidad y Compromiso ESG | VMS Energy",
-        "url":"https://vmsenergy.com/sostenibilidad.html",
-        "description":"Programa ESG de VMS Energy: gestión ambiental ISO 14001, eficiencia energética ISO 50001, seguridad ISO 45001 e informe de sostenibilidad 2025.",
-        "breadcrumb":{
-          "@type":"BreadcrumbList",
-          "itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Inicio","item":"https://vmsenergy.com/"},
-            {"@type":"ListItem","position":2,"name":"Nosotros","item":"https://vmsenergy.com/nosotros.html"},
-            {"@type":"ListItem","position":3,"name":"Sostenibilidad","item":"https://vmsenergy.com/sostenibilidad.html"}
+      "foundingDate": "2008",
+      "email": "contacto@vmsenergy.com",
+      "telephone": "+52-33-3813-0739",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano",
+          "addressLocality": "Zapopan",
+          "addressRegion": "Jalisco",
+          "postalCode": "45070",
+          "addressCountry": "MX"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Camarón 25, Justo Sierra",
+          "addressLocality": "Ciudad del Carmen",
+          "addressRegion": "Campeche",
+          "postalCode": "24114",
+          "addressCountry": "MX"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "name": "Oficina Guadalajara (Zapopan)",
+          "telephone": "+52-33-3813-0739",
+          "email": "contacto@vmsenergy.com",
+          "contactType": "sales",
+          "areaServed": "MX",
+          "availableLanguage": [
+            "es",
+            "en"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "name": "Oficina Ciudad del Carmen",
+          "telephone": "+52-938-381-4824",
+          "email": "contacto@vmsenergy.com",
+          "contactType": "sales",
+          "areaServed": "MX",
+          "availableLanguage": [
+            "es",
+            "en"
           ]
         }
-      },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {"@type":"Question","name":"¿Qué certificaciones ambientales tiene VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"VMS Energy cuenta con ISO 14001 (Gestión Ambiental, GSC14KMX277) e ISO 50001 (Gestión de Energía, GSC50KMX101), complementadas con ISO 45001 (Salud y Seguridad), ISO 37001 (Antisoborno) e ISO 9001 (Calidad)."}},
-          {"@type":"Question","name":"¿Dónde puedo descargar el informe de sostenibilidad?","acceptedAnswer":{"@type":"Answer","text":"El Informe de Sostenibilidad 2025 de VMS Energy está disponible en formato PDF en esta página. Haz clic en el botón 'Descargar informe completo' para obtenerlo sin costo."}},
-          {"@type":"Question","name":"¿Qué proyectos de energía limpia ha realizado VMS Energy?","acceptedAnswer":{"@type":"Answer","text":"VMS Energy ejecuta proyectos de energía solar industrial, generación verde no solar (eólica, hidráulica) y soluciones de eficiencia energética bajo el estándar ISO 50001 para industrias en México."}},
-          {"@type":"Question","name":"¿Cómo gestiona VMS Energy su huella de carbono?","acceptedAnswer":{"@type":"Answer","text":"A través de nuestro Sistema de Gestión Ambiental ISO 14001, identificamos y controlamos aspectos ambientales significativos en cada proyecto, incluyendo medición de emisiones, gestión de residuos y eficiencia energética."}},
-          {"@type":"Question","name":"¿VMS Energy tiene compromisos ESG formales?","acceptedAnswer":{"@type":"Answer","text":"Sí. VMS Energy integra los tres pilares ESG: Ambiental (ISO 14001, ISO 50001, proyectos de energía limpia), Social (ISO 45001, capacitación continua, bienestar laboral) y Gobernanza (ISO 37001, código de ética, buzón de sugerencias)."}},
-          {"@type":"Question","name":"¿Cómo puedo solicitar una auditoría o consultoría de eficiencia energética?","acceptedAnswer":{"@type":"Answer","text":"Contáctanos a través del formulario en contacto.html o al correo contacto@vmsenergy.com. Nuestro equipo de ingeniería evaluará tu planta bajo el marco ISO 50001."}}
+      ],
+      "areaServed": [
+        "México",
+        "Estados Unidos",
+        "Centroamérica",
+        "Caribe"
+      ],
+      "award": [
+        "ISO 9001 GSC9KMX505",
+        "ISO 14001 GSC14KMX277",
+        "ISO 45001 GSC45KMX182",
+        "ISO 37001 GSC37KMX131",
+        "ISO 50001 GSC50KMX101"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/vmsenergy/",
+        "https://www.instagram.com/vmsenergy",
+        "https://www.facebook.com/profile.php?id=61576615590335"
+      ],
+      "description": "VMS Energy — EPC de infraestructura eléctrica, automatización, energía solar e industrial en México con 5 certificaciones ISO vigentes."
+    },
+    {
+      "@type": "WebPage",
+      "name": "Sostenibilidad y Compromiso ESG | VMS Energy",
+      "url": "https://vmsenergy.com/sostenibilidad.html",
+      "description": "Programa ESG de VMS Energy: gestión ambiental ISO 14001, eficiencia energética ISO 50001, seguridad ISO 45001 e informe de sostenibilidad 2025.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://vmsenergy.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Nosotros",
+            "item": "https://vmsenergy.com/nosotros.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sostenibilidad",
+            "item": "https://vmsenergy.com/sostenibilidad.html"
+          }
         ]
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué certificaciones ambientales tiene VMS Energy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "VMS Energy cuenta con ISO 14001:2015 (Sistema de Gestión Ambiental, registro GSC14KMX277) e ISO 50001:2018 (Gestión de Energía, registro GSC50KMX101), complementadas con ISO 45001 (seguridad), ISO 37001 (antisoborno) e ISO 9001 (calidad). Las 5 certificaciones son auditadas anualmente por un organismo externo acreditado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde descargo el informe de sostenibilidad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Informe de Sostenibilidad 2025 está disponible gratuitamente en formato PDF en esta misma página. Haz clic en el botón \"Descargar informe completo\" de la sección anterior. El documento incluye métricas ambientales, sociales y de gobernanza del ciclo anual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo gestiona VMS Energy su huella de carbono?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A través del Sistema de Gestión Ambiental ISO 14001 , identificamos aspectos e impactos ambientales significativos en cada proyecto. Esto incluye medición de emisiones directas e indirectas, reducción de residuos, eficiencia en transporte y consumo energético. Adicionalmente, nuestros proyectos de energía solar y generación verde contribuyen a la reducción de emisiones en las instalaciones de nuestros clientes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué proyectos de energía limpia realiza VMS Energy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ejecutamos tres líneas principales: (1) Energía Solar Industrial — sistemas fotovoltaicos a gran escala con integración a red y monitoreo remoto. (2) Generación Verde No Solar — eólica, microcentrales hidráulicas y otras fuentes renovables. (3) Eficiencia Energética ISO 50001 — auditorías energéticas, VFDs, sistemas UPS/BESS y optimización de distribución eléctrica para reducir consumo y emisiones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿VMS Energy tiene política antisoborno certificada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Contamos con ISO 37001:2025 (registro GSC37KMX131) que establece un Sistema de Gestión Antisoborno. Esto se complementa con un Código de Ética y Conducta de aplicación obligatoria, una Política Interna Antilavado y un buzón de sugerencias/denuncias con canal de atención confidencial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo solicitar una auditoría de eficiencia energética?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco ISO 50001 . El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctanos a través de contacto@vmsenergy.com o llámanos al +52 33 3813 0739."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
