@@ -28,11 +28,11 @@
   <meta property="og:title" content="Sostenibilidad y Compromiso ESG | VMS Energy" />
   <meta property="og:description" content="5 certificaciones ISO activas, informe ESG 2025 y proyectos de energía limpia en México. Descarga nuestro informe de sostenibilidad." />
   <meta property="og:url" content="https://vmsenergy.com/sostenibilidad.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/energia_verdes_hero.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_sostenibilidad_renovables.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sostenibilidad y Compromiso ESG | VMS Energy" />
   <meta name="twitter:description" content="5 certificaciones ISO activas, informe ESG 2025 y proyectos de energía limpia en México." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/energia_verdes_hero.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_sostenibilidad_renovables.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/sostenibilidad.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/sostenibilidad.html" />
 <link rel="stylesheet" href="corporativo-base.css">
@@ -61,7 +61,12 @@
 
     /* ===== HERO ===== */
     .sust-hero{position:relative;isolation:isolate;color:#fff;overflow:hidden;min-height:480px;display:flex;align-items:center}
-    .sust-hero::before{content:"";position:absolute;inset:0;background:var(--esg-hero-veil),url('assets/img/energia_verdes_hero.webp') center/cover no-repeat;z-index:-1}
+    .sust-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,40,48,.88) 0%,rgba(2,40,48,.7) 40%,rgba(2,40,48,.25) 60%,rgba(2,40,48,0) 78%),url('assets/img/services/hero_sostenibilidad_renovables.webp') right center/cover no-repeat,#022e33}
+    .sust-hero{min-height:clamp(440px,70vh,560px)}
+    .sust-hero .container{width:100%}
+    .sust-hero .container > *{max-width:620px}
+    @media (max-width:980px){.sust-hero::before{background:linear-gradient(90deg,rgba(2,40,48,.88) 0%,rgba(2,40,48,.72) 55%,rgba(2,40,48,.4) 100%),url('assets/img/services/hero_sostenibilidad_renovables.webp') 72% center/cover no-repeat,#022e33}}
+    @media (max-width:680px){.sust-hero::before{background:linear-gradient(180deg,rgba(2,40,48,.82) 0%,rgba(2,40,48,.72) 55%,rgba(2,40,48,.5) 100%),url('assets/img/services/hero_sostenibilidad_renovables_m.webp') 75% center/cover no-repeat,#022e33}}
     .sust-hero .container{padding:88px 20px 80px}
     .eyebrow-pill{display:inline-flex;align-items:center;gap:7px;padding:.28rem .72rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem;letter-spacing:.04em;margin:0 0 16px}
     .eyebrow-pill .dot{width:7px;height:7px;border-radius:50%;background:var(--vms-green-500);flex-shrink:0;animation:pulse 2s infinite}
@@ -404,7 +409,7 @@
           "name": "¿Puedo solicitar una auditoría de eficiencia energética?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco ISO 50001 . El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctanos a través de contacto@vmsenergy.com o llámanos al +52 33 3813 0739."
+            "text": "Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco ISO 50001 . El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctenos a través de contacto@vmsenergy.com o llámenos al +52 33 3813 0739."
           }
         }
       ]
@@ -672,13 +677,6 @@
           Descargar informe 2025
         </a>
         <a class="btn btn--outline-w" href="certificaciones.html#inicio">Ver certificaciones</a>
-      </div>
-      <div class="hero-badges">
-        <span class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/></svg>ISO 14001 · Gestión Ambiental</span>
-        <span class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/></svg>ISO 50001 · Eficiencia Energética</span>
-        <span class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/></svg>ISO 45001 · Seguridad Laboral</span>
-        <span class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/></svg>ISO 37001 · Antisoborno</span>
-        <span class="hero-badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9zM4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z"/></svg>ISO 9001 · Calidad</span>
       </div>
     </div>
   </section>
@@ -1081,7 +1079,7 @@
           </div>
         </div>
       </div>
-      <p class="lead" style="margin-top:22px">¿Quieres crecer con nosotros? Consulta nuestra <a href="carreras.html">bolsa de trabajo</a>.</p>
+      <p class="lead" style="margin-top:22px">¿Quieres crecer con nosotros? Consulte nuestra <a href="carreras.html">bolsa de trabajo</a>.</p>
     </div>
   </section>
 
@@ -1232,7 +1230,7 @@
         </details>
         <details class="faq-item">
           <summary>¿Puedo solicitar una auditoría de eficiencia energética?</summary>
-          <div class="faq-body">Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco <strong>ISO 50001</strong>. El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctanos a través de <a href="contacto.html#inicio" style="color:var(--vms-green-500);font-weight:700">contacto@vmsenergy.com</a> o llámanos al +52 33 3813 0739.</div>
+          <div class="faq-body">Sí. Nuestro equipo de ingeniería realiza auditorías energéticas industriales bajo el marco <strong>ISO 50001</strong>. El servicio incluye levantamiento de línea base energética, identificación de oportunidades de mejora, cálculo de ROI y propuesta de implementación. Contáctenos a través de <a href="contacto.html#inicio" style="color:var(--vms-green-500);font-weight:700">contacto@vmsenergy.com</a> o llámenos al +52 33 3813 0739.</div>
         </details>
       </div>
     </div>
@@ -1242,7 +1240,7 @@
   <section class="cta-section" aria-labelledby="ctaTitle">
     <div class="container">
       <span class="section-label">¿Listo para avanzar?</span>
-      <h2 id="ctaTitle">Hablemos de sostenibilidad para tu industria</h2>
+      <h2 id="ctaTitle">Hablemos de sostenibilidad para su industria</h2>
       <p>Nuestro equipo puede asesorarte en certificaciones ISO ambientales, proyectos de energía limpia y programas de eficiencia energética.</p>
       <div class="cta-btns">
         <a class="btn btn--green" href="contacto.html#inicio">Solicitar consultoría</a>

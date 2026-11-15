@@ -28,8 +28,9 @@
   <meta property="og:title" content="Transformadores Industriales | VMS Energy"/>
   <meta property="og:description" content="Suministro, instalaci&oacute;n y comisionamiento de transformadores de distribuci&oacute;n y potencia. Pruebas de aceptaci&oacute;n FAT/SAT, selecci&oacute;n multimarca. Normativa aplicada seg&uacute;n los requisitos del proyecto en M&eacute;xico."/>
   <meta property="og:url" content="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-transformadores-industriales.webp"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_transformadores_potencia.webp"/>
   <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_transformadores_potencia.webp"/>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-transformadores-industriales.html"/>
 <link rel="stylesheet" href="equipamiento-base.css">
@@ -38,10 +39,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* ── Hero image (específico de esta página) ── */
-    :root { --equip-hero-img: url('assets/img/hero_transformadores_industriales.webp');
-      /* Velo plano: el cuerpo claro del transformador ocupa la mitad derecha,
-         donde el degradado por defecto abre hasta .72 y el texto baja a 4.37 a 900px. */
-      --equip-hero-overlay: linear-gradient(100deg, rgba(8,20,40,.94) 0%, rgba(11,26,48,.90) 55%, rgba(15,40,72,.86) 100%); }
+    @media (min-width:981px){
+      .hero.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.8) 40%,rgba(8,35,70,.42) 58%,rgba(8,35,70,.08) 80%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}
+    }
 
     /* ── Tipos de transformador ── */
     .tipos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
@@ -393,20 +393,18 @@
 
 <main id="inicio">
   <!-- HERO -->
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_transformadores_potencia.webp');--hero-image-m:url('assets/img/services/hero_transformadores_potencia_m.webp')" aria-labelledby="heroTitle">
     <div class="container">
       <div class="hero-eyebrow">VMS Energy &middot; Equipamiento El&eacute;ctrico</div>
-      <h1 id="heroTitle">Transformadores Industriales<br><em>De la selecci&oacute;n al comisionamiento</em></h1>
-      <p>Suministro multimarca, instalaci&oacute;n, pruebas de aceptaci&oacute;n y puesta en servicio de transformadores de distribuci&oacute;n y potencia para la industria en M&eacute;xico.</p>
+      <h1 id="heroTitle">Transformadores industriales</h1>
+      <p>De la selecci&oacute;n al comisionamiento: suministro multimarca, instalaci&oacute;n, pruebas de aceptaci&oacute;n y puesta en servicio de transformadores de distribuci&oacute;n y potencia para la industria en M&eacute;xico.</p>
       <div class="hero-btns on-dark">
         <a class="btn btn--primary" href="contacto_cta.html?producto=transformadores#ctaForm">Solicitar cotizaci&oacute;n</a>
         <a class="btn btn--ghost" href="#tipos">Ver tipos de transformadores</a>
       </div>
       <div class="hero-stats">
-        <span class="hero-stat">Hasta 100 MVA</span>
-        <span class="hero-stat">BT / MT / AT hasta 400 kV</span>
-        <span class="hero-stat">Seco y en aceite</span>
-        <span class="hero-stat">Normativa nacional e internacional</span>
+        <span class="hero-stat">Distribuci&oacute;n y potencia</span>
+        <span class="hero-stat">BT / MT / AT</span>
         <span class="hero-stat">Pruebas FAT y SAT incluidas</span>
       </div>
     </div>
@@ -671,8 +669,8 @@
   <!-- CTA -->
   <div class="cta-band" aria-labelledby="ctaTitle">
     <div class="container">
-      <h2 id="ctaTitle">Solicita tu especificaci&oacute;n de transformador</h2>
-      <p>Comparte los datos de tu proceso y nuestro equipo prepara una propuesta t&eacute;cnica con selecci&oacute;n multimarca y an&aacute;lisis de costo-ciclo de vida.</p>
+      <h2 id="ctaTitle">Solicite su especificaci&oacute;n de transformador</h2>
+      <p>Comparta los datos de su proceso y nuestro equipo prepara una propuesta t&eacute;cnica con selecci&oacute;n multimarca y an&aacute;lisis de costo-ciclo de vida.</p>
       <div class="cta-band-btns">
         <a class="btn" style="background:#fff;color:#0f4c81" href="contacto_cta.html?producto=transformadores#ctaForm">Solicitar cotizaci&oacute;n</a>
         <a class="btn" style="background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff" href="blog-seleccion-transformadores-industriales.html">Leer gu&iacute;a de selecci&oacute;n</a>

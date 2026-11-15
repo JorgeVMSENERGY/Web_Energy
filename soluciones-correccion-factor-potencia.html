@@ -28,8 +28,9 @@
   <meta property="og:title" content="Correcci&oacute;n de Factor de Potencia | VMS Energy"/>
   <meta property="og:description" content="Bancos de capacitores fijos, autom&aacute;ticos, desintonizados y filtros activos. Elimina penalizaciones CFE por cos&phi;&nbsp;&lt;&nbsp;0.90. Normativa aplicada seg&uacute;n los requisitos del proyecto. M&eacute;xico."/>
   <meta property="og:url" content="https://vmsenergy.com/soluciones-correccion-factor-potencia.html"/>
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-correccion-factor-potencia.webp"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_factor_potencia_banco.webp"/>
   <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_factor_potencia_banco.webp"/>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-correccion-factor-potencia.html"/>
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-correccion-factor-potencia.html"/>
 <link rel="stylesheet" href="equipamiento-base.css">
@@ -38,7 +39,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     /* ── Hero image ── */
-    :root { --equip-hero-img: url('assets/img/hero_factor_potencia.webp'); }
+    @media (min-width:981px){
+      .hero.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}
+    }
 
     /* ── Strip de penalización por bajo FP ── */
     .pen-strip{background:linear-gradient(135deg,#7f1d1d 0%,#dc2626 100%);padding:36px 0;color:#fff}
@@ -411,21 +414,19 @@
 
 <main id="inicio">
   <!-- HERO -->
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_factor_potencia_banco.webp');--hero-image-m:url('assets/img/services/hero_factor_potencia_banco_m.webp')" aria-labelledby="heroTitle">
     <div class="container">
       <div class="hero-eyebrow">VMS Energy &middot; Equipamiento El&eacute;ctrico</div>
-      <h1 id="heroTitle">Correcci&oacute;n de Factor de Potencia<br><em>Elimine penalizaciones CFE y reduzca su factura</em></h1>
-      <p>Bancos de capacitores fijos, autom&aacute;ticos, desintonizados y filtros activos de arm&oacute;nicas. Estudio, suministro e instalaci&oacute;n en M&eacute;xico. Normativa aplicada seg&uacute;n los requisitos del proyecto.</p>
+      <h1 id="heroTitle">Correcci&oacute;n de factor de potencia</h1>
+      <p>Elimine penalizaciones de CFE y reduzca su factura con bancos de capacitores fijos, autom&aacute;ticos y desintonizados, y filtros activos de arm&oacute;nicas. Estudio, suministro e instalaci&oacute;n en M&eacute;xico.</p>
       <div class="hero-btns on-dark">
         <a class="btn btn--primary" href="contacto_cta.html?producto=factor-potencia#ctaForm">Solicitar estudio de FP</a>
         <a class="btn btn--ghost" href="#soluciones">Ver soluciones</a>
       </div>
       <div class="hero-stats">
         <span class="hero-stat">cos&phi; objetivo 0.95&ndash;0.98</span>
-        <span class="hero-stat">Normativa nacional e internacional</span>
-        <span class="hero-stat">Bancos hasta 5&thinsp;000 kVAr</span>
         <span class="hero-stat">Filtros activos THDi &lt;5%</span>
-        <span class="hero-stat">ROI &lt;18 meses</span>
+        <span class="hero-stat">Estudio de retorno de inversi&oacute;n</span>
       </div>
     </div>
   </section>
@@ -813,7 +814,7 @@
   </a>
 </div>
 <div class="sticky-cta" aria-label="Estudio de FP">
-  <a href="contacto_cta.html?producto=factor-potencia#ctaForm">Agenda tu levantamiento</a>
+  <a href="contacto_cta.html?producto=factor-potencia#ctaForm">Agendar levantamiento</a>
 </div>
 
 

@@ -129,7 +129,7 @@
     todas: 'Accept all', solo: 'Necessary only', config: 'Customize', guardar: 'Save selection', link: 'Cookie preferences'
   } : {
     aria: 'Preferencias de cookies', titulo: 'Cookies en vmsenergy.com',
-    texto: 'Usamos cookies de analítica para entender cómo se usa el sitio y, si lo aceptas, cookies de mercadotecnia ' +
+    texto: 'Usamos cookies de analítica para entender cómo se usa el sitio y, si lo acepta, cookies de mercadotecnia ' +
       '(Google Ads, Meta y LinkedIn) para medir nuestras campañas. Más información en el <a href="' + AVISO_URL + '">aviso de privacidad</a>.',
     nec: 'Necesarias (siempre activas)', ana: 'Analítica (Google Analytics)', mkt: 'Mercadotecnia (Google Ads, Meta, LinkedIn)',
     todas: 'Aceptar todas', solo: 'Solo necesarias', config: 'Configurar', guardar: 'Guardar selección', link: 'Preferencias de cookies'

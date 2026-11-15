@@ -26,7 +26,7 @@
         function fail() {
           w.clearTimeout(timer);
           script.remove();
-          reject(new Error('Verificacion no disponible. Intenta nuevamente.'));
+          reject(new Error('Verificacion no disponible. Intente nuevamente.'));
         }
         var timer = w.setTimeout(fail, 15000);
         w.vmsTurnstileReady = function () { w.clearTimeout(timer); resolve(); };
@@ -54,7 +54,7 @@
         var timer = w.setTimeout(fail, 120000);
         function fail() {
           w.clearTimeout(timer);
-          reject(new Error('No fue posible verificar la solicitud. Intenta nuevamente.'));
+          reject(new Error('No fue posible verificar la solicitud. Intente nuevamente.'));
         }
         try {
           widget = w.turnstile.render(container, {
@@ -89,17 +89,17 @@
   // Mensajes en inglés para páginas con <html lang="en"> (/en/). Se traducen al mostrarse,
   // así los textos en español del resto del archivo quedan como están.
   var MESSAGES_EN = {
-    'Verificacion no disponible. Intenta nuevamente.': 'Verification unavailable. Please try again.',
-    'No fue posible verificar la solicitud. Intenta nuevamente.': 'We could not verify your request. Please try again.',
-    'Completa correctamente los campos obligatorios.': 'Please complete all required fields.',
-    'Selecciona una modalidad del proyecto.': 'Please select a project type.',
+    'Verificacion no disponible. Intente nuevamente.': 'Verification unavailable. Please try again.',
+    'No fue posible verificar la solicitud. Intente nuevamente.': 'We could not verify your request. Please try again.',
+    'Complete correctamente los campos obligatorios.': 'Please complete all required fields.',
+    'Seleccione una modalidad del proyecto.': 'Please select a project type.',
     'Solo se permiten hasta 3 archivos.': 'You can attach up to 3 files.',
     'Cada archivo debe pesar como máximo 5 MiB.': 'Each file must be 5 MiB or smaller.',
     'Los archivos no pueden superar 10 MiB en total.': 'Attachments cannot exceed 10 MiB in total.',
     'No fue posible enviar el formulario.': 'We could not send the form. Please try again or email contacto@vmsenergy.com.',
     'El servidor no generó una sesión válida para los archivos.': 'The server could not prepare the file upload. Please try again.',
     'El servidor no preparó todos los archivos seleccionados.': 'The server could not prepare all selected files. Please try again.',
-    'Recibimos correctamente tu información. Te contactaremos pronto.': 'We received your information. We will contact you soon.',
+    'Recibimos correctamente su información. Lo contactaremos pronto.': 'We received your information. We will contact you soon.',
     'El formulario solo está disponible desde el sitio oficial de VMS Energy.': 'This form only works on the official VMS Energy website.',
     'El servidor no confirmó la recepción del formulario.': 'The server did not confirm receipt of the form. Please try again.',
     'Enviando…': 'Sending…'
@@ -139,7 +139,7 @@
   function validateForm(form) {
     if (!form.checkValidity()) {
       form.reportValidity();
-      throw new Error('Completa correctamente los campos obligatorios.');
+      throw new Error('Complete correctamente los campos obligatorios.');
     }
 
     var checkboxName = form.getAttribute('data-vms-required-checkbox');
@@ -150,7 +150,7 @@
         function (input) { return input.checked; }
       );
       if (!checked) {
-        throw new Error('Selecciona una modalidad del proyecto.');
+        throw new Error('Seleccione una modalidad del proyecto.');
       }
     }
   }
@@ -299,7 +299,7 @@
     showFeedback(
       form,
       form.getAttribute('data-vms-success-message') ||
-        'Recibimos correctamente tu información. Te contactaremos pronto.',
+        'Recibimos correctamente su información. Lo contactaremos pronto.',
       false
     );
   }
