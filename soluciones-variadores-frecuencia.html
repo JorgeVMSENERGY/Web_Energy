@@ -28,8 +28,9 @@
   <meta property="og:title" content="Variadores de Frecuencia | VMS Energy"/>
   <meta property="og:description" content="Suministro e instalaci&oacute;n de VFD industriales: 2 niveles, NPC 3 niveles, AFE regenerativo. ABB, Siemens, Schneider, Danfoss. Normativa aplicada seg&uacute;n los requisitos del proyecto."/>
   <meta property="og:url" content="https://vmsenergy.com/soluciones-variadores-frecuencia.html"/>
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/og-variadores-frecuencia.webp"/>
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_variadores_vfd_bomba.webp"/>
   <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_variadores_vfd_bomba.webp"/>
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/soluciones-variadores-frecuencia.html"/>
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/soluciones-variadores-frecuencia.html"/>
 <link rel="stylesheet" href="equipamiento-base.css">
@@ -37,9 +38,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* ── Variables de imagen de hero (específicas de esta página) ── */
-    :root {
-      --equip-hero-img: url('assets/img/hero_variadores_frecuencia.webp');
+    @media (min-width:981px){
+      .hero.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}
     }
 
     /* ── Topologías ── */
@@ -450,20 +450,18 @@
 
 <main id="inicio">
   <!-- HERO -->
-  <section class="hero" aria-labelledby="heroTitle">
+  <section class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_variadores_vfd_bomba.webp');--hero-image-m:url('assets/img/services/hero_variadores_vfd_bomba_m.webp')" aria-labelledby="heroTitle">
     <div class="container">
       <div class="hero-eyebrow">VMS Energy &middot; Equipamiento El&eacute;ctrico</div>
-      <h1 id="heroTitle">Variadores de Frecuencia<br><em>Ahorro Energ&eacute;tico y Control de Procesos</em></h1>
-      <p>Suministro multimarca, instalaci&oacute;n, puesta en marcha y mantenimiento de VFD industriales para la industria en M&eacute;xico. Normativa aplicada seg&uacute;n los requisitos del proyecto.</p>
+      <h1 id="heroTitle">Variadores de frecuencia</h1>
+      <p>Ahorro energ&eacute;tico y control de procesos: suministro multimarca, instalaci&oacute;n, puesta en marcha y mantenimiento de VFD industriales para la industria en M&eacute;xico.</p>
       <div class="hero-btns on-dark">
         <a class="btn btn--primary" href="contacto_cta.html?producto=variadores#ctaForm">Solicitar cotizaci&oacute;n</a>
         <a class="btn btn--ghost" href="#topologias">Ver topolog&iacute;as</a>
       </div>
       <div class="hero-stats">
-        <span class="hero-stat">Ahorro 20&ndash;50% kWh</span>
-        <span class="hero-stat">BT 220&ndash;690 V / MT hasta 6.6 kV</span>
+        <span class="hero-stat">BT 220&ndash;690 V / MT</span>
         <span class="hero-stat">AFE regenerativo THD&lt;3%</span>
-        <span class="hero-stat">Normativa nacional e internacional</span>
         <span class="hero-stat">Multimarca: ABB · Siemens · Schneider</span>
       </div>
     </div>
@@ -813,7 +811,7 @@
         <div class="vmshop-callout__body">
           <span class="vmshop-callout__tag">VMShop</span>
           <p class="vmshop-callout__title">Variadores Triol AT24 disponibles con cotizaci&oacute;n directa</p>
-          <p class="vmshop-callout__sub">Si tu proyecto requiere un variador Triol, puedes solicitar cotizaci&oacute;n directamente en VMShop — sin licitaci&oacute;n, con validaci&oacute;n t&eacute;cnica incluida y respuesta en menos de 24&nbsp;h.</p>
+          <p class="vmshop-callout__sub">Si su proyecto requiere un variador Triol, puede solicitar cotizaci&oacute;n directamente en VMShop — sin licitaci&oacute;n, con validaci&oacute;n t&eacute;cnica incluida y respuesta en menos de 24&nbsp;h.</p>
         </div>
         <div class="vmshop-callout__cta">
           <a class="btn btn--primary" href="lp-triol-variadores.html">Ver cat&aacute;logo Triol</a>
@@ -888,7 +886,7 @@
   <div class="cta-band" aria-label="Llamada a la acci&oacute;n">
     <div class="container">
       <h2>&#161;Reduzca su consumo el&eacute;ctrico con el variador correcto!</h2>
-      <p>Compartanos los datos del motor, el perfil de carga y la altitud del sitio. Nuestros ingenieros calculan el derating, la topolog&iacute;a y el ROI. Te contactamos en menos de 24&nbsp;horas h&aacute;biles; el tiempo del estudio depende del alcance.</p>
+      <p>Compartanos los datos del motor, el perfil de carga y la altitud del sitio. Nuestros ingenieros calculan el derating, la topolog&iacute;a y el ROI. Lo contactamos en menos de 24&nbsp;horas h&aacute;biles; el tiempo del estudio depende del alcance.</p>
       <div class="cta-band-btns on-dark">
         <a class="btn btn--primary" href="contacto_cta.html?producto=variadores#ctaForm">Solicitar cotizaci&oacute;n</a>
         <a class="btn btn--ghost" href="especialidades.html#inicio">Conocer servicios de ingenier&iacute;a</a>

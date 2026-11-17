@@ -28,11 +28,11 @@
   <meta property="og:title" content="Proyectos EPC Industriales Realizados | VMS Energy" />
   <meta property="og:description" content="Portafolio de proyectos EPC el&eacute;ctricos en Oil &amp; Gas, Solar, Miner&iacute;a y Alimentos &amp; Bebidas. Casos de &eacute;xito con clientes Tier 1 en M&eacute;xico y Am&eacute;rica." />
   <meta property="og:url" content="https://vmsenergy.com/proyectos-vms.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_proyectos_planta_atardecer.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Proyectos EPC Industriales Realizados | VMS Energy" />
   <meta name="twitter:description" content="Portafolio de proyectos EPC el&eacute;ctricos en Oil &amp; Gas, Solar, Miner&iacute;a y Alimentos &amp; Bebidas. Casos de &eacute;xito con clientes Tier 1 en M&eacute;xico y Am&eacute;rica." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_que_hacemos_VMS_Energy.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_proyectos_planta_atardecer.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/proyectos-vms.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/proyectos-vms.html" />
 <link rel="stylesheet" href="corporativo-base.css">
@@ -106,7 +106,6 @@
 
 
     /* ===== Hero ===== */
-    .hero:before{content:none}
     .hero-slide{display:none;animation:heroFade .45s ease;position:relative}
     .hero-slide.is-active{display:block}
     .hero-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,22,43,.9) 0%,rgba(10,22,43,.76) 45%,rgba(10,22,43,.45) 100%),var(--hero-image) center/cover no-repeat;z-index:0}
@@ -1937,8 +1936,12 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
       
       
     }
-    .hero{padding:26px 0}
-    .hero__box{background:linear-gradient(115deg,rgba(8,18,34,.86),rgba(15,76,129,.62)),url("assets/img/landings/common/hero-suministro-vms-energy.webp") center/cover no-repeat;border-radius:18px;padding:34px;color:#fff}
+    .hero{min-height:clamp(440px,70vh,560px);padding:0}
+    .hero__content{max-width:1200px;padding-block:64px 56px}
+    .hero__content > *{max-width:680px}
+    @media (max-width:980px){.hero__content{padding-block:56px 48px}}
+    @media (min-width:981px){#inicio.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}}
+    @media (max-width:680px){.hero{min-height:420px}.hero__actions .btn{width:100%;justify-content:center;text-align:center}}
     .kicker{display:inline-flex;background:rgba(255,255,255,.14);padding:.22rem .6rem;border-radius:999px;border:1px solid rgba(255,255,255,.22);font-weight:700}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     
@@ -2147,7 +2150,7 @@ body.logos-off .logo-ph.has-logo .logo-ph__hint{
 
 </style>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "name": "VMS Energy", "url": "https://vmsenergy.com/", "logo": "https://vmsenergy.com/assets/brand/vms_logo_blue.png", "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Generación Verde No Solar y servicios en Centrales Hidroeléctricas de CFE, Iluminación Industrial y Soluciones Electromecánicas.", "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"]}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Ingeniería, suministro técnico y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "name": "VMS Energy"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Ofrecen integración multimarcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, integraciones ABB, Siemens, Schneider, Woodward, KEI Cables, entre otras."}}, {"@type": "Question", "name": "¿Cuentan con certificaciones ISO?", "acceptedAnswer": {"@type": "Answer", "text": "Sí: 9001, 14001, 45001, 37001 y 50001, con números de registro públicos."}}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "legalName": "VMS Energy de México, S. de R.L. de C.V.", "alternateName": "VMS Energy de México", "url": "https://vmsenergy.com/", "logo": {"@type": "ImageObject", "url": "https://vmsenergy.com/assets/brand/vms_logo_blue.png"}, "foundingDate": "2008", "email": "contacto@vmsenergy.com", "telephone": "+52-33-3813-0739", "address": [{"@type": "PostalAddress", "streetAddress": "C. Volcán Paricutín 1275, Colli Urbano", "addressLocality": "Zapopan", "addressRegion": "Jalisco", "postalCode": "45070", "addressCountry": "MX"}, {"@type": "PostalAddress", "streetAddress": "Av. Camarón 25, Justo Sierra", "addressLocality": "Ciudad del Carmen", "addressRegion": "Campeche", "postalCode": "24114", "addressCountry": "MX"}], "contactPoint": [{"@type": "ContactPoint", "name": "Oficina Guadalajara (Zapopan)", "telephone": "+52-33-3813-0739", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}, {"@type": "ContactPoint", "name": "Oficina Ciudad del Carmen", "telephone": "+52-938-381-4824", "email": "contacto@vmsenergy.com", "contactType": "sales", "areaServed": "MX", "availableLanguage": ["es", "en"]}], "areaServed": ["México", "Estados Unidos", "Centroamérica", "Caribe"], "award": ["ISO 9001 GSC9KMX505", "ISO 14001 GSC14KMX277", "ISO 45001 GSC45KMX182", "ISO 37001 GSC37KMX131", "ISO 50001 GSC50KMX101"], "sameAs": ["https://www.linkedin.com/company/vmsenergy/", "https://www.instagram.com/vmsenergy", "https://www.facebook.com/profile.php?id=61576615590335"], "description": "VMS Energy — EPC de Infraestructura Eléctrica, Automatización y Control, oil & Gas, Energía Solar Industrial, Generación Verde No Solar y servicios en Centrales Hidroeléctricas de CFE, Iluminación Industrial y Soluciones Electromecánicas."}, {"@type": "Service", "name": "EPC eléctrico", "provider": {"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "url": "https://vmsenergy.com/"}, "areaServed": "MX", "serviceType": "Ingeniería, suministro técnico y construcción en generación, transmisión y distribución"}, {"@type": "Service", "name": "EPC de Iluminación Industrial", "provider": {"@type": "Organization", "@id": "https://vmsenergy.com/#organization", "name": "VMS Energy", "url": "https://vmsenergy.com/"}, "areaServed": "MX", "serviceType": "Diseño luminotécnico, selección multimarcas, instalación y comisionamiento"}]}</script>
 
 <!-- v9.23f STYLE PATCH: consolidated visual fixes, accessibility, and responsive polish -->
 <style id="v923f-style-patch">
@@ -2915,6 +2918,7 @@ label{font-size:14px}
     </nav>
 
     <div class="site-header__actions">
+      <a class="lang-switch" href="en/index.html" hreflang="en" lang="en" title="English" aria-label="English site">EN</a>
       <a class="btn btn--concept site-header__cta" href="contacto.html">Contacto</a>
     </div>
 
@@ -2922,17 +2926,15 @@ label{font-size:14px}
 </header>
 
   <main id="contenido">
-    <section class="hero" style="--corp-hero-img:url('assets/img/hero_proyectos_vms.webp')">
-      <div class="container">
-        <article class="hero__box">
-          <span class="kicker">18 a&ntilde;os de trayectoria comprobada</span>
-          <h1>+220 proyectos EPC en sectores cr&iacute;ticos</h1>
-          <p>Oil &amp; Gas, generaci&oacute;n hidroel&eacute;ctrica, agroindustria, miner&iacute;a y m&aacute;s &mdash; con clientes como <strong>PEMEX, CFE, Baker Hughes y SLB</strong> en M&eacute;xico, Guatemala, El Salvador y el Caribe.</p>
-          <div class="cta on-dark">
-            <a class="btn btn--primary" href="#timeline">Ver trayectoria</a>
-            <a class="btn btn--ghost" href="assets/descargas/CV_VMS_ENERGY_26_comprimido.pdf" download>Descargar CV empresarial</a>
-          </div>
-        </article>
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_proyectos_planta_atardecer.webp');--hero-image-m:url('assets/img/services/hero_proyectos_planta_atardecer_m.webp')" aria-labelledby="heroTitle">
+      <div class="container hero__content">
+        <span class="eyebrow">Proyectos &middot; 18 a&ntilde;os de trayectoria comprobada</span>
+        <h1 id="heroTitle">+220 proyectos EPC en sectores cr&iacute;ticos</h1>
+        <p>Oil &amp; Gas, generaci&oacute;n hidroel&eacute;ctrica, agroindustria, miner&iacute;a y m&aacute;s, con clientes como <strong>PEMEX, CFE, Baker Hughes y SLB</strong> en M&eacute;xico, Guatemala, El Salvador y el Caribe.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" href="#timeline">Ver trayectoria</a>
+          <a class="btn btn--ghost" href="assets/descargas/CV_VMS_ENERGY_26_comprimido.pdf" download>Descargar CV empresarial</a>
+        </div>
       </div>
     </section>
 
@@ -3117,7 +3119,7 @@ label{font-size:14px}
           <div class="tl-header">
             <span class="tl-kicker">Trayectoria 2008 &mdash; 2025</span>
             <h2 class="tl-title" id="tlTitle">18 a&ntilde;os de proyectos que definen nuestra trayectoria</h2>
-            <p class="tl-lead">Trayectoria documentada en +220 proyectos EPC en México, Guatemala, El Salvador y el Caribe. Selecciona cada hito para explorar alcance, sector y resultado.</p>
+            <p class="tl-lead">Trayectoria documentada en +220 proyectos EPC en México, Guatemala, El Salvador y el Caribe. Seleccione cada hito para explorar alcance, sector y resultado.</p>
           </div>
           <div class="htl-hint" aria-hidden="true"><span>&#8592;&nbsp;&nbsp;Desplaza para explorar la trayectoria&nbsp;&nbsp;&#8594;</span></div>
           <div class="htl-outer" id="htlOuter" role="region" aria-label="Cronolog&iacute;a horizontal de proyectos VMS Energy">
@@ -3330,8 +3332,8 @@ label{font-size:14px}
                 <!-- CTA POST-TIMELINE -->
         <div class="tl-cta" role="complementary" aria-label="Contacto de proyectos">
           <div class="tl-cta__body">
-            <span class="tl-cta__kicker">¿Tienes un proyecto de esta envergadura?</span>
-            <h2 class="tl-cta__title">Hablemos de tu pr&oacute;ximo proyecto</h2>
+            <span class="tl-cta__kicker">¿Tiene un proyecto de esta envergadura?</span>
+            <h2 class="tl-cta__title">Hablemos de su pr&oacute;ximo proyecto</h2>
             <p class="tl-cta__sub">Ingenieros especializados disponibles para Oil &amp; Gas, hidroel&eacute;ctrica, miner&iacute;a y agroindustria.</p>
           </div>
           <div class="tl-cta__actions">
@@ -3402,7 +3404,7 @@ label{font-size:14px}
               <p class="coverage__panel-title">Detalle del punto</p>
               <div class="coverage__panel-row">
                 <span class="coverage__panel-label">Estado</span>
-                <span class="coverage__panel-value" data-field="name">Selecciona un punto</span>
+                <span class="coverage__panel-value" data-field="name">Seleccione un punto</span>
               </div>
               <div class="coverage__panel-row">
                 <span class="coverage__panel-label">Proyectos</span>
@@ -3418,24 +3420,24 @@ label{font-size:14px}
           </div>
           <div class="coverage__legend"></div>
           <div class="coverage__regions" role="list">
-            <div class="cov-region" role="listitem" data-filter="occ" title="Nayarit, Jalisco, Colima, Durango y más">
+            <div class="cov-region" role="listitem" data-filter="occ" title="Nayarit, Jalisco, Colima, Durango y San Luis Potosí">
               <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.5 19.5h19L14 5.8l-3.6 6.4L8.2 9 2.5 19.5Z"/></svg></span>
-              <span class="cov-region__count" data-count="32">32</span>
+              <span class="cov-region__count" data-count="108">108</span>
               <span class="cov-region__label">Norte &amp; Occidente</span>
             </div>
-            <div class="cov-region" role="listitem" data-filter="centro" title="Estado de México, Morelos, Michoacán">
+            <div class="cov-region" role="listitem" data-filter="centro" title="Estado de México, Ciudad de México, Morelos, Michoacán">
               <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21V9.4l5-3v14.6"/><path d="M8 21V3.6l7 3V21"/><path d="M15 21v-9.2l6 3V21"/><path d="M2 21h20"/></svg></span>
-              <span class="cov-region__count" data-count="7">7</span>
+              <span class="cov-region__count" data-count="10">10</span>
               <span class="cov-region__label">Centro</span>
             </div>
-            <div class="cov-region" role="listitem" data-filter="sur" title="Veracruz, Tabasco, Oaxaca, Chiapas, Quintana Roo">
+            <div class="cov-region" role="listitem" data-filter="sur" title="Veracruz, Tabasco, Oaxaca, Chiapas, Quintana Roo, Yucatán">
               <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 3.2C9.5 3.8 4 9.4 4 16.4c0 2.1.8 4 .8 4"/><path d="M20.5 3.2c1.2 9.4-4.2 15.4-10.8 15.4-1.6 0-3-.3-4.2-.9"/><path d="M9.5 15.5c2.2-4.4 5.6-7 9.5-8.6"/></svg></span>
-              <span class="cov-region__count" data-count="38">38</span>
+              <span class="cov-region__count" data-count="34">34</span>
               <span class="cov-region__label">Sur &amp; Golfo</span>
             </div>
             <div class="cov-region" role="listitem" data-filter="offshore" title="Campeche offshore, Caribe, Guatemala, El Salvador">
               <span class="cov-region__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="6.6" ry="2.4"/><path d="M5.4 5v14c0 1.3 3 2.4 6.6 2.4s6.6-1.1 6.6-2.4V5"/><path d="M5.4 12c0 1.3 3 2.4 6.6 2.4s6.6-1.1 6.6-2.4"/></svg></span>
-              <span class="cov-region__count" data-count="143">143</span>
+              <span class="cov-region__count" data-count="106">106</span>
               <span class="cov-region__label">Offshore &amp; Int'l</span>
             </div>
           </div>
@@ -3701,7 +3703,7 @@ label{font-size:14px}
   <script>
   (function(){
     // Datos incrustados: sin fetch, compatible con file://
-    var PLACES_DATA   = [{"name":"Campeche","type":"estado","count":92,"classes":["Automatización","Servicio","Servicio EPC"],"x":287.7,"y":167.5,"offshore":true},{"name":"Chiapas","type":"estado","count":2,"classes":[],"x":278,"y":228.3},{"name":"Colima","type":"estado","count":4,"classes":[],"x":144.1,"y":191.9},{"name":"Durango","type":"estado","count":1,"classes":[],"x":141.5,"y":127.2},{"name":"Estado de México","type":"estado","count":2,"classes":[],"x":192.2,"y":179.6},{"name":"Jalisco","type":"estado","count":18,"classes":["Capacitación","Servicio"],"x":152,"y":172.6},{"name":"Michoacán","type":"estado","count":0,"classes":[],"x":165.9,"y":194.5},{"name":"Morelos","type":"estado","count":5,"classes":["Automatización","Capacitación","Servicio","Servicio EPC"],"x":206.7,"y":191.2},{"name":"Nayarit","type":"estado","count":2,"classes":[],"x":134.6,"y":157.1},{"name":"Oaxaca","type":"estado","count":4,"classes":["Capacitación","Servicio"],"x":234.4,"y":217.4},{"name":"Quintana Roo","type":"estado","count":1,"classes":[],"x":329.6,"y":157.1},{"name":"Tabasco","type":"estado","count":11,"classes":[],"x":264.5,"y":195.4},{"name":"Veracruz","type":"estado","count":14,"classes":["Automatización","Capacitación","Servicio","Servicio EPC"],"x":234,"y":173.5},{"name":"Guatemala","type":"pais","count":3,"classes":["Servicio EPC","Servicio"],"x":307.2,"y":229.9},{"name":"El Salvador","type":"pais","count":1,"classes":["Servicio"],"x":328.2,"y":249.2},{"name":"Caribe","type":"region","count":1,"classes":["Servicio"],"x":428.6,"y":174.3,"offshore":true}];
+    var PLACES_DATA   = [{"name":"Campeche","type":"estado","count":101,"classes":["Automatización","Capacitación","Servicio","Servicio EPC"],"x":287.7,"y":167.5,"offshore":true},{"name":"Chiapas","type":"estado","count":2,"classes":["Servicio"],"x":278,"y":228.3},{"name":"Ciudad de México","type":"estado","count":2,"classes":[],"x":200.5,"y":183.5},{"name":"Colima","type":"estado","count":1,"classes":[],"x":144.1,"y":191.9},{"name":"Durango","type":"estado","count":7,"classes":["Servicio"],"x":141.5,"y":127.2},{"name":"Estado de México","type":"estado","count":1,"classes":["Servicio"],"x":192.2,"y":179.6},{"name":"Jalisco","type":"estado","count":17,"classes":["Capacitación","Servicio"],"x":152,"y":172.6},{"name":"Michoacán","type":"estado","count":2,"classes":["Servicio EPC"],"x":165.9,"y":194.5},{"name":"Morelos","type":"estado","count":5,"classes":["Servicio","Servicio EPC"],"x":206.7,"y":191.2},{"name":"Nayarit","type":"estado","count":2,"classes":["Capacitación","Servicio EPC"],"x":134.6,"y":157.1},{"name":"Oaxaca","type":"estado","count":4,"classes":["Servicio EPC"],"x":234.4,"y":217.4},{"name":"Quintana Roo","type":"estado","count":1,"classes":[],"x":329.6,"y":157.1},{"name":"San Luis Potosí","type":"estado","count":2,"classes":["Servicio","Servicio EPC"],"x":187.5,"y":146.1},{"name":"Tabasco","type":"estado","count":11,"classes":["Automatización","Servicio","Servicio EPC"],"x":264.5,"y":195.4},{"name":"Veracruz","type":"estado","count":15,"classes":["Servicio","Servicio EPC"],"x":234,"y":173.5},{"name":"Yucatán","type":"estado","count":1,"classes":["Servicio EPC"],"x":317.5,"y":147.1},{"name":"Guatemala","type":"pais","count":5,"classes":["Servicio"],"x":307.2,"y":229.9},{"name":"El Salvador","type":"pais","count":1,"classes":["Servicio"],"x":328.2,"y":249.2},{"name":"Caribe","type":"region","count":1,"classes":[],"x":428.6,"y":174.3,"offshore":true}];
 
     // Mapa de cobertura ─ v2 con 9 mejoras
     var svg        = document.getElementById("projectsMapSvg");
@@ -3730,7 +3732,7 @@ label{font-size:14px}
       function updatePanel(data){
         if(!panelName||!panelCount) return;
         if(!data){
-          panelName.textContent="Selecciona un punto"; panelCount.textContent="—";
+          panelName.textContent="Seleccione un punto"; panelCount.textContent="—";
           if(panelBadges) panelBadges.innerHTML="";
           if(panelHint)   panelHint.style.display="";
           if(panelLink)   panelLink.style.display="none";
@@ -3844,9 +3846,9 @@ label{font-size:14px}
 
       /* ── Filters ── */
       var REGION_MAP={
-        occ:    ["Nayarit","Jalisco","Colima","Durango"],
-        centro: ["Estado de México","Morelos","Michoacán"],
-        sur:    ["Veracruz","Tabasco","Oaxaca","Chiapas","Quintana Roo"]
+        occ:    ["Nayarit","Jalisco","Colima","Durango","San Luis Potosí"],
+        centro: ["Estado de México","Ciudad de México","Morelos","Michoacán"],
+        sur:    ["Veracruz","Tabasco","Oaxaca","Chiapas","Quintana Roo","Yucatán"]
       };
       function applyFilter(f){
         markerNodes.forEach(function(node){

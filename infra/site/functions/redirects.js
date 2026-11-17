@@ -2,7 +2,7 @@
 // Fuente: auditoría redirecciones-301.xlsx (Search Console + GA4, 2026-07-01 a 2026-09-29)
 // + exports de Search Console del 2 oct 2026 (cobertura 403/404)
 // Incluye filas "Directa", "Sugerida" y "Decidir", todas resueltas por Marketing
-// el 1 oct 2026. Sigue fuera a propósito: todo /en/ (pendiente de decidir).
+// el 1 oct 2026. /en/ se resolvió el 11 nov 2026 (ver bloque "Sitio en inglés").
 // Las claves van sin diagonal final y en minúsculas; la función normaliza la URI.
 
 var CANONICAL_HOST = 'vmsenergy.com';
@@ -53,6 +53,51 @@ var REDIRECTS = {
   '/wp-content/uploads/2025/04/informe-de-sostenibilidad_comprimido.pdf': '/sostenibilidad.html#informe'
 };
 
+// Sitio en inglés (11 nov 2026). Páginas que existen en /en/:
+var EN_PAGES = {
+  '/en/index.html': 1, '/en/about.html': 1, '/en/contact.html': 1,
+  '/en/oil-gas-solutions.html': 1, '/en/oil-gas-maintenance.html': 1, '/en/testing-commissioning.html': 1,
+  '/en/triol-drives.html': 1, '/en/esp-cables.html': 1, '/en/turbine-generator-controls.html': 1,
+  '/en/electrical-substations.html': 1
+};
+// URLs viejas bajo /en/ que tienen equivalente en inglés (páginas de WordPress y
+// nombres en español que Google rastreó como /en/<página>.html).
+var EN_REDIRECTS = {
+  '/en/nosotros': '/en/about.html',
+  '/en/nosotros.html': '/en/about.html',
+  '/en/about': '/en/about.html',
+  '/en/about-us': '/en/about.html',
+  '/en/contacto': '/en/contact.html',
+  '/en/contacto.html': '/en/contact.html',
+  '/en/contacto_cta.html': '/en/contact.html',
+  '/en/contact': '/en/contact.html',
+  '/en/contact-us': '/en/contact.html',
+  '/en/soluciones_oil_gas.html': '/en/oil-gas-solutions.html',
+  '/en/oil&gas': '/en/oil-gas-solutions.html',
+  '/en/oil%26gas': '/en/oil-gas-solutions.html',
+  '/en/lp-mantenimiento-oil-gas.html': '/en/oil-gas-maintenance.html',
+  '/en/lp-pruebas-comisionamiento-puesta-en-servicio.html': '/en/testing-commissioning.html',
+  '/en/lp-triol-variadores.html': '/en/triol-drives.html',
+  '/en/lp-cables-especiales.html': '/en/esp-cables.html',
+  '/en/lp-turbogeneradores-woodward.html': '/en/turbine-generator-controls.html',
+  '/en/lp-subestaciones-electricas.html': '/en/electrical-substations.html',
+  '/en/home': '/en/'
+};
+
+// Resuelve una URL bajo /en/ que no existe como página en inglés:
+// 1) equivalente en inglés, 2) misma página en español (/en/x.html → /x.html),
+// 3) ruta vieja de WordPress con redirección en español, 4) portada en inglés.
+function enTarget(key, uri) {
+  if (EN_REDIRECTS[key]) return EN_REDIRECTS[key];
+  if (EN_PAGES[key] || key === '/en') return null;
+  var rest = key.slice(3); // quita "/en"
+  // Con la URI original: S3 distingue mayúsculas (VMShop.html).
+  if (/^\/[a-z0-9_\-]+\.html$/.test(rest)) return uri.replace(/\/+$/, '').slice(3);
+  if (REDIRECTS[rest]) return REDIRECTS[rest];
+  if (/\.[a-z0-9]+$/.test(rest)) return null; // imágenes, PDF, etc.: se dejan pasar
+  return '/en/';
+}
+
 // Páginas de autor, etiqueta y categoría de WordPress → blog.html
 var WP_ARCHIVE = /^(\/en)?\/(author|tag|category)(\/|$)/;
 
@@ -89,6 +134,7 @@ function handler(event) {
 
   var target = REDIRECTS[key];
   if (!target && WP_ARCHIVE.test(key)) target = '/blog.html';
+  if (!target && key.indexOf('/en/') === 0) target = enTarget(key, uri);
 
   // Un solo salto: www + URL vieja va directo al destino final sin www.
   if (target) return redirect('https://' + CANONICAL_HOST + target + qs(request.querystring));
