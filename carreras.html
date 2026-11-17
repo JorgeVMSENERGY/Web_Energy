@@ -29,11 +29,11 @@
   <meta property="og:title" content="Carreras y Bolsa de Trabajo | VMS Energy" />
   <meta property="og:description" content="Únete al equipo de VMS Energy. Vacantes activas y por proyecto en ingeniería, mantenimiento, automatización, HSE y más." />
   <meta property="og:url" content="https://vmsenergy.com/carreras.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_carreras_equipo.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Carreras y Bolsa de Trabajo | VMS Energy" />
   <meta name="twitter:description" content="Vacantes activas y por proyecto en VMS Energy. Envíanos tu CV." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_nosotros_VMS_Energy.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_carreras_equipo.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/carreras.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/carreras.html" />
 <link rel="stylesheet" href="corporativo-base.css">
@@ -42,7 +42,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --corp-hero-img: url('assets/img/hero_nosotros_VMS_Energy.webp');
     }
 
     /* Hero */
@@ -99,6 +98,15 @@
     /* Footer */
     #footer ul{line-height:1.6}
 
+      .hero{min-height:clamp(440px,70vh,560px);padding:0}
+    .hero__content{max-width:1200px;padding-block:64px 56px}
+    .hero__content > *{max-width:680px}
+    @media (min-width:981px){#inicio.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}}
+    @media (max-width:980px){.hero__content{padding-block:56px 48px}}
+    @media (max-width:680px){.hero{min-height:420px}.hero__actions .btn{width:100%;justify-content:center;text-align:center}}
+    #inicio .container > p.lead{max-width:560px}
+    @media (min-width:1500px){#inicio .container > p.lead{max-width:500px}}
+    @media (min-width:981px){#inicio.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.92) 0%,rgba(7,25,49,.88) 48%,rgba(8,35,70,.55) 62%,rgba(8,35,70,.08) 80%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}}
   </style>
 
   <script type="application/ld+json">
@@ -321,9 +329,8 @@
 
   <main id="contenido">
     <!-- Hero -->
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="container">
-        <div class="hero__content">
+    <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_carreras_equipo.webp');--hero-image-m:url('assets/img/services/hero_carreras_equipo_m.webp')" aria-labelledby="heroTitle">
+      <div class="container hero__content">
           <span class="eyebrow">Bolsa de trabajo</span>
           <h1 id="heroTitle">Construye tu carrera en VMS Energy</h1>
           <p class="lead">Somos un equipo multidisciplinario que ejecuta proyectos EPC y servicios técnicos para industria crítica en México. Si te apasiona la energía, la ingeniería de campo y el trabajo bien hecho, queremos conocerte.</p>
@@ -331,7 +338,6 @@
             <a class="btn btn--primary" href="#vacantes">Ver vacantes disponibles</a>
             <a class="btn btn--secondary" href="#postulacion">Enviar mi CV</a>
           </div>
-        </div>
       </div>
     </section>
 

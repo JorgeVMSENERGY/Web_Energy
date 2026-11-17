@@ -26,11 +26,11 @@
   <meta property="og:title" content="Mantenimiento Oil &amp; Gas en Am&eacute;rica | VMS Energy" />
   <meta property="og:description" content="Servicio exclusivo de mantenimiento Oil &amp; Gas para continuidad operativa en Am&eacute;rica." />
   <meta property="og:url" content="https://vmsenergy.com/lp-mantenimiento-oil-gas.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/landings/common/hero-suministro-vms-energy.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_mantenimiento_oil_gas_plataforma.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mantenimiento Oil &amp; Gas en Am&eacute;rica | VMS Energy" />
   <meta name="twitter:description" content="Servicio exclusivo de mantenimiento Oil &amp; Gas para continuidad operativa en Am&eacute;rica." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/common/hero-suministro-vms-energy.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_mantenimiento_oil_gas_plataforma.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-mantenimiento-oil-gas.html" />
   <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/oil-gas-maintenance.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-mantenimiento-oil-gas.html" />
@@ -71,21 +71,14 @@
     .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
     .brand__logo img{max-width:94%;max-height:88%;width:auto;height:auto;object-fit:contain;display:block}
     .brand__name{font-weight:700;font-size:18px;color:var(--navy)}
-    .hero{padding:46px 0 32px}
-    .hero__frame{background:linear-gradient(115deg,rgba(7,14,26,.88),rgba(14,58,90,.75)),url("assets/img/landings/common/hero-suministro-vms-energy.webp") center/cover no-repeat;border-radius:24px;overflow:hidden;position:relative}
-    .hero__glow{position:absolute;inset:auto -10% -30% -10%;height:50%;background:radial-gradient(circle at 30% 50%,rgba(110,210,255,.22),transparent 60%)}
-    .hero__grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:24px;padding:38px}
+    .hero{position:relative;isolation:isolate;min-height:clamp(440px,70vh,560px);padding:0;display:grid;align-items:center;color:#fff;overflow:hidden}
+    .hero__content{padding-block: 64px 56px}
+    .hero__content > *{max-width:680px}
     .hero__tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);color:#e8f2ff;padding:.3rem .75rem;border-radius:999px;font-size:.85rem;font-weight:600}
     .hero__title{font-size:clamp(30px,4.5vw,50px);line-height:1.05;color:#fff;margin:14px 0 12px}
-    .hero__lead{color:rgba(237,245,255,.92);font-size:clamp(1rem,2vw,1.2rem);line-height:1.55}
-    .hero__stats{display:grid;gap:10px;margin-top:18px}
-    .stat{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:rgba(12,32,52,.6);border:1px solid rgba(255,255,255,.14);color:#e7f3ff}
-    .stat__dot{width:10px;height:10px;border-radius:999px;background:var(--acento-oscuro);box-shadow:0 0 0 6px rgba(110,210,255,.20)}
-    .panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:18px;color:#f3f7ff;backdrop-filter:blur(6px)}
-    .panel h2{font-size:1.05rem;color:#fff;margin-bottom:10px}
-    .panel__list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-    .panel__list li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;color:#dbe8f7}
-    .panel__icon{width:22px;height:22px;border-radius:8px;background:rgba(110,210,255,.20);display:inline-flex;align-items:center;justify-content:center;color:#bfe9ff;font-weight:700}
+    .hero__lead{color:rgba(237,245,255,.92);font-size:clamp(1rem,2vw,1.2rem);line-height:1.55;margin:0 0 22px}
+    @media(max-width:680px){.hero{min-height:420px}.hero__content{padding-block:56px 48px}.hero__actions .btn{width:100%;justify-content:center;text-align:center}}
+    @media (min-width:981px){#inicio.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}}
     .section__intro{margin-top:8px;color:var(--muted);line-height:1.6}
     .grid{display:grid;gap:16px;margin-top:18px}
     .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -573,44 +566,14 @@
 </header>
 
   <main id="contenido">
-    <section class="hero hero--photo hero--veil-flat" style="--hero-image:url('assets/img/hero_mantenimiento_oil_gas.webp');--hero-overlay:.82">
-      <div class="container">
-        <div class="hero__frame">
-          <div class="hero__glow"></div>
-          <div class="hero__grid">
-            <div>
-              <span class="hero__tag">Servicio dedicado de mantenimiento</span>
-              <h1 class="hero__title">Mantenimiento especializado Oil &amp; Gas.</h1>
-              <p class="hero__lead">Mec&aacute;nico, el&eacute;ctrico e instrumentaci&oacute;n.</p>
-              <div class="hero__actions on-dark">
-                <a class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">Solicitar Evaluaci&oacute;n de Proyecto</a>
-                <a class="btn btn--ghost" href="#alcance">Ver alcance</a>
-              </div>
-              <div class="hero__stats">
-                <div class="stat reveal">
-                  <span class="stat__dot"></span>
-                  <div>Disponibilidad 24/7 con planes de contingencia.</div>
-                </div>
-                <div class="stat reveal delay-1">
-                  <span class="stat__dot"></span>
-                  <div>Coordinaci&oacute;n multisitio y log&iacute;stica offshore.</div>
-                </div>
-                <div class="stat reveal delay-2">
-                  <span class="stat__dot"></span>
-                  <div>Indicadores de confiabilidad y reducci&oacute;n de paros.</div>
-                </div>
-              </div>
-            </div>
-            <div class="panel reveal delay-1">
-              <h2>Servicios prioritarios</h2>
-              <ul class="panel__list">
-                <li><span class="panel__icon">1</span>Inspecci&oacute;n, diagn&oacute;stico y mantenimiento predictivo.</li>
-                <li><span class="panel__icon">2</span>Correcci&oacute;n de fallas en equipos cr&iacute;ticos y tableros.</li>
-                <li><span class="panel__icon">3</span>Disponibilidad de cuadrillas, refacciones y respaldo t&eacute;cnico.</li>
-                <li><span class="panel__icon">4</span>Reportes ejecutivos y planes de confiabilidad.</li>
-              </ul>
-            </div>
-          </div>
+    <section class="hero hero--photo hero--fade-left" id="inicio" style="--hero-image:url('assets/img/services/hero_mantenimiento_oil_gas_plataforma.webp');--hero-image-m:url('assets/img/services/hero_mantenimiento_oil_gas_plataforma_m.webp')" aria-labelledby="heroTitle">
+      <div class="container hero__content">
+        <span class="hero__tag">Mantenimiento Oil &amp; Gas &middot; Proyectos desde $500,000 MXN</span>
+        <h1 class="hero__title" id="heroTitle">Mantenimiento especializado Oil &amp; Gas</h1>
+        <p class="hero__lead">Mec&aacute;nico, el&eacute;ctrico e instrumentaci&oacute;n para plataformas, instalaciones de proceso y activos cr&iacute;ticos, con guardia 24/7, coordinaci&oacute;n multisitio y log&iacute;stica offshore.</p>
+        <div class="hero__actions on-dark">
+          <a class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">Solicitar evaluaci&oacute;n de proyecto</a>
+          <a class="btn btn--ghost" href="#alcance">Ver alcance</a>
         </div>
       </div>
     </section>
@@ -618,7 +581,7 @@
     <section class="section" id="alcance">
       <div class="container">
         <h2 class="sec-h2">Alcance integral para activos oil &amp; gas</h2>
-        <p class="section__intro">Dise&ntilde;amos,ejecutamos y coordinamos programas de mantenimiento con enfoque en seguridad operacional, criticidad de activos y continuidad de producci&oacute;n. Adaptamos el plan a cada regi&oacute;n y marco regulatorio.</p>
+        <p class="section__intro">Dise&ntilde;amos, ejecutamos y coordinamos programas de mantenimiento con enfoque en seguridad operacional, criticidad de activos y continuidad de producci&oacute;n. Adaptamos el plan a cada regi&oacute;n y marco regulatorio.</p>
         <div class="grid grid--3">
           <article class="card reveal">
             <h3>Mantenimiento mec&aacute;nico</h3>
@@ -802,7 +765,7 @@
       <h2 style="color:#fff;font-size:clamp(1.3rem,3vw,1.9rem);font-weight:900;margin-bottom:12px">Mantenimiento eléctrico para Oil &amp; Gas — planifique su próxima parada</h2>
       <p style="color:rgba(255,255,255,.85);font-size:1.05rem;max-width:640px;margin:0 auto 28px">Experiencia en refinería, upstream y midstream. Intervenciones en subestaciones, motores y sistemas de control.</p>
       <div class="cta-band__actions on-dark">
-        <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">Solicitar Evaluaci&oacute;n de Proyecto</a>
+        <a class="btn btn--primary" href="contacto_cta.html?producto=mantenimiento-oil-gas#ctaForm">Solicitar evaluaci&oacute;n de proyecto</a>
         <a class="btn btn--ghost" href="proyectos-vms.html">Ver proyectos</a>
       </div>
     </div>

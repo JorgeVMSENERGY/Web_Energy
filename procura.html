@@ -29,11 +29,11 @@
   <meta property="og:title" content="Procura y Suministro T&eacute;cnico | VMS Energy" />
   <meta property="og:description" content="Suministro de equipos de potencia y confiabilidad el&eacute;ctrica para industria: transformadores, UPS y BESS industriales. VMS Energy." />
   <meta property="og:url" content="https://vmsenergy.com/procura.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/hero_suministro.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_procura_suministro.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Procura y Suministro T&eacute;cnico | VMS Energy" />
   <meta name="twitter:description" content="Suministro de equipos de potencia y confiabilidad el&eacute;ctrica para industria: transformadores, UPS y BESS industriales. VMS Energy." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/hero_suministro.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_procura_suministro.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/procura.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/procura.html" />
 <link rel="stylesheet" href="corporativo-base.css">
@@ -41,8 +41,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{--corp-hero-img: url('assets/img/hero_suministro.webp');
-    }
     header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(180%) blur(8px)}
     .topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
     .brand__logo{width:clamp(168px,18vw,210px);height:clamp(54px,6vw,66px);border-radius:10px;background:#fff;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(23,44,81,.14)}
@@ -60,6 +58,11 @@
     .submenu__list a{display:block;color:#12365f;font-weight:600;font-size:.9rem;line-height:1.25;padding:3px 0}
 
     .hero p{font-size:clamp(16px,2vw,21px);margin:0 0 22px;color:#dbeaff}
+    .hero{min-height:clamp(440px,70vh,560px);padding:0}
+    .hero__content{max-width:1200px;padding-block:64px 56px}
+    .hero__content > *{max-width:680px}
+    @media (max-width:980px){.hero__content{padding-block:56px 48px}}
+    @media (max-width:680px){.hero{min-height:420px}.hero__actions .btn{width:100%;justify-content:center;text-align:center}}
     section{padding:56px 0}
     .section-title{font-size:clamp(26px,3vw,34px);line-height:1.08;margin:0 0 10px;color:#113960}
     .section-lead{margin:0 0 22px;color:var(--muted);font-size:1.08rem}
@@ -550,11 +553,11 @@
 
 
 <main id="contenido">
-  <section id="inicio" class="hero" aria-labelledby="heroTitle">
+  <section id="inicio" class="hero hero--photo hero--fade-left" style="--hero-image:url('assets/img/services/hero_procura_suministro.webp');--hero-image-m:url('assets/img/services/hero_procura_suministro_m.webp')" aria-labelledby="heroTitle">
     <div class="container hero__content">
-      <span class="eyebrow">Suministro t&eacute;cnico especializado</span>
-      <h1 id="heroTitle">Suministro t&eacute;cnico</h1>
-      <p>Suministro t&eacute;cnico multimarcas para proyectos y mantenimiento industrial.</p>
+      <span class="eyebrow">VMS Energy &middot; Procura</span>
+      <h1 id="heroTitle">Suministro t&eacute;cnico multimarca</h1>
+      <p>Procura de equipos de potencia y confiabilidad el&eacute;ctrica, como transformadores, UPS y BESS, para proyectos y mantenimiento industrial.</p>
       <div class="hero__actions on-dark">
         <a class="btn btn--primary" href="#solicitud">Solicitar suministro</a>
         <a class="btn btn--secondary" href="contacto_cta.html#ctaForm">Hablar con un especialista</a>
@@ -565,7 +568,7 @@
   <section id="alcance" >
     <div class="container">
       <h2 id="alcanceTitle" class="section-title">Qu&eacute; cubrimos en suministro t&eacute;cnico</h2>
-      <p class="section-lead">Suministro especializado al&iacute;neado a ingenier&iacute;a, construcci&oacute;n y continuidad operativa.</p>
+      <p class="section-lead">Suministro especializado alineado a ingenier&iacute;a, construcci&oacute;n y continuidad operativa.</p>
       <div class="cards">
         <article class="card">
           <img src="assets/img/suministro_equipos_potencia_control.webp" alt="Equipamiento el&eacute;ctrico para infraestructura" loading="lazy" decoding="async">
@@ -586,37 +589,37 @@
   <section id="solicitud" class="form-wrap" aria-labelledby="solicitudTitle">
     <div class="container">
       <h2 id="solicitudTitle" class="section-title">Suministro de productos</h2>
-      <p class="section-lead">Flujo r&aacute;pido de cotizaci&oacute;n: selecciona tu necesidad, marca y producto.</p>
-      <form id="supplyFormV9_20" class="form-card procura__form" novalidate data-vms-form-type="supplier" data-vms-feedback="#procuraFeedback" data-vms-success-message="Recibimos tu solicitud de suministro. Te contactaremos pronto.">
+      <p class="section-lead">Flujo r&aacute;pido de cotizaci&oacute;n: seleccione su necesidad, marca y producto.</p>
+      <form id="supplyFormV9_20" class="form-card procura__form" novalidate data-vms-form-type="supplier" data-vms-feedback="#procuraFeedback" data-vms-success-message="Recibimos su solicitud de suministro. Te contactaremos pronto.">
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
         <div>
           <label for="supplyType">Suministro</label>
           <select id="supplyType" name="suministro" required>
-            <option value="">Selecciona...</option>
+            <option value="">Seleccione...</option>
             <option value="Cable electrico">Cable el&eacute;ctrico</option>
             <option value="Equipo electrico">Equipo el&eacute;ctrico</option>
           </select>
-          <div class="hint">Selecciona el tipo de suministro.</div>
+          <div class="hint">Seleccione el tipo de suministro.</div>
         </div>
         <div>
           <label for="category">Categor&iacute;a</label>
-          <select id="category" name="categoria" disabled required><option value="">Selecciona...</option></select>
+          <select id="category" name="categoria" disabled required><option value="">Seleccione...</option></select>
         </div>
         <div>
           <label for="brand">Marca</label>
-          <select id="brand" name="marca" disabled required><option value="">Selecciona...</option></select>
+          <select id="brand" name="marca" disabled required><option value="">Seleccione...</option></select>
         </div>
         <div>
           <label for="family">Familia</label>
-          <select id="family" name="familia" disabled required><option value="">Selecciona...</option></select>
+          <select id="family" name="familia" disabled required><option value="">Seleccione...</option></select>
         </div>
         <div>
           <label for="description">Descripci&oacute;n</label>
-          <select id="description" name="descripcion" disabled required><option value="">Selecciona...</option></select>
+          <select id="description" name="descripcion" disabled required><option value="">Seleccione...</option></select>
         </div>
         <div>
           <label for="model">Modelo</label>
-          <select id="model" name="modelo" disabled required><option value="">Selecciona...</option></select>
+          <select id="model" name="modelo" disabled required><option value="">Seleccione...</option></select>
         </div>
         <div>
           <label for="contactName">Nombre</label>
@@ -625,7 +628,7 @@
         <div>
           <label for="countryCode">Clave del pa&iacute;s</label>
           <select id="countryCode" name="clave_pais" required>
-            <option value="">Selecciona...</option>
+            <option value="">Seleccione...</option>
             <option value="+1">Estados Unidos (+1)</option>
             <option value="+52">M&eacute;xico (+52)</option>
             <option value="+501">Belice (+501)</option>
@@ -648,7 +651,7 @@
         <div>
           <label for="workType">Tipo de trabajo</label>
           <select id="workType" name="tipo_trabajo" required>
-            <option value="">Selecciona...</option>
+            <option value="">Seleccione...</option>
             <option value="Suministro inmediato">Suministro inmediato</option>
             <option value="Suministro programado">Suministro programado</option>
             <option value="Suministro + puesta en marcha">Suministro + puesta en marcha</option>
@@ -656,7 +659,7 @@
         </div>
         <div class="full">
           <label for="email">Correo</label>
-          <input class="input" id="email" name="correo" type="email" placeholder="tu@empresa.com" required>
+          <input class="input" id="email" name="correo" type="email" placeholder="nombre@empresa.com" required>
         </div>
         <div class="req-summary">
           <h4>Resumen de solicitud</h4>
@@ -708,7 +711,7 @@
             </a>
             <a class="btn btn--secondary" href="VMShop.html">
               <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9.5 4.5 4h15L21 9.5a2.5 2.5 0 0 1-2.5 2.5 2.47 2.47 0 0 1-2-.97 2.47 2.47 0 0 1-4 0 2.47 2.47 0 0 1-4 0 2.47 2.47 0 0 1-2 .97A2.5 2.5 0 0 1 3 9.5Zm2 4h14v6.5H5V13.5Zm2 2V18h4v-2.5H7Z"/></svg>
-              <span>Visita la tienda</span>
+              <span>Visitar la tienda</span>
             </a>
           </div>
         </article>
@@ -730,7 +733,7 @@
             </a>
             <a class="btn btn--secondary" href="VMShop.html">
               <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9.5 4.5 4h15L21 9.5a2.5 2.5 0 0 1-2.5 2.5 2.47 2.47 0 0 1-2-.97 2.47 2.47 0 0 1-4 0 2.47 2.47 0 0 1-4 0 2.47 2.47 0 0 1-2 .97A2.5 2.5 0 0 1 3 9.5Zm2 4h14v6.5H5V13.5Zm2 2V18h4v-2.5H7Z"/></svg>
-              <span>Visita la tienda</span>
+              <span>Visitar la tienda</span>
             </a>
           </div>
         </article>
@@ -761,7 +764,7 @@
 
   <section class="cta-final" aria-labelledby="ctaFinalTitle">
     <div class="container"><div class="box">
-      <h2 id="ctaFinalTitle">&iquest;Necesitas una propuesta integral EPC + suministro t&eacute;cnico?</h2>
+      <h2 id="ctaFinalTitle">&iquest;Necesita una propuesta integral EPC + suministro t&eacute;cnico?</h2>
       <p>Coordinamos ingenier&iacute;a, suministro y ejecuci&oacute;n para reducir riesgos de integraci&oacute;n.</p>
       <div class="hero__actions"><a class="btn btn--primary" href="contacto_cta.html#ctaForm">Solicitar propuesta t&eacute;cnica</a></div>
     </div></div>
@@ -1058,7 +1061,7 @@
   var email = document.getElementById('email');
 
   function fillSelect(el, list){
-    el.innerHTML = '<option value=\"\">Selecciona...</option>' + (list || []).map(function(v){ return '<option>' + v + '</option>'; }).join('');
+    el.innerHTML = '<option value=\"\">Seleccione...</option>' + (list || []).map(function(v){ return '<option>' + v + '</option>'; }).join('');
     el.disabled = !(list && list.length);
   }
 
@@ -1147,8 +1150,8 @@
   <div class="quicklead-modal__backdrop" data-close-modal="quickLeadModal"></div>
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Cerrar formulario" data-close-modal="quickLeadModal">&times;</button>
-    <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos tu consulta. Un especialista te contactar&aacute; pronto.">
+    <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulte a un especialista</h2>
+    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos su consulta. Un especialista lo contactar&aacute; pronto.">
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
@@ -1185,7 +1188,7 @@
       <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
       <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
     </svg>
-    Contactanos
+    Escr&iacute;banos
   </a>
   <a class="sticky-actions__btn sticky-actions__btn--center" href="VMShop.html?utm_source=procura&utm_medium=sticky&utm_campaign=shop_access" data-cta="sticky-shop">
     <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">

@@ -26,15 +26,27 @@
   <meta property="og:title" content="Cables ESP para bomba electrosumergible | VMS Energy" />
   <meta property="og:description" content="Cables ESP KEI Arteria para bomba electrosumergible: familias 180 a 450 &deg;F, Flat o Round. La familia correcta la define la temperatura de fondo de pozo." />
   <meta property="og:url" content="https://vmsenergy.com/lp-cables-especiales.html" />
-  <meta property="og:image" content="https://vmsenergy.com/assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp" />
+  <meta property="og:image" content="https://vmsenergy.com/assets/img/services/hero_cables_esp_flat.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cables ESP para bomba electrosumergible | VMS Energy" />
   <meta name="twitter:description" content="Cables ESP KEI Arteria para bomba electrosumergible: familias 180 a 450 &deg;F, Flat o Round. La familia correcta la define la temperatura de fondo de pozo." />
-  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/landings/esp/heroes/arteria-180f-cable-esp-hero.webp" />
+  <meta name="twitter:image" content="https://vmsenergy.com/assets/img/services/hero_cables_esp_flat.webp" />
   <link rel="alternate" hreflang="es-MX" href="https://vmsenergy.com/lp-cables-especiales.html" />
   <link rel="alternate" hreflang="en" href="https://vmsenergy.com/en/esp-cables.html" />
   <link rel="alternate" hreflang="x-default" href="https://vmsenergy.com/lp-cables-especiales.html" />
 <link rel="stylesheet" href="equipamiento-base.css">
+<style>
+  @media (min-width:981px){
+    #hero-esp.hero--fade-left::before{background:linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.82) 42%,rgba(8,35,70,.45) 60%,rgba(8,35,70,.08) 82%),var(--hero-image,none) var(--hero-pos,right center)/cover no-repeat}
+  }
+  .esp-formatos{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:4px 0 18px}
+  .esp-formato{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;box-shadow:0 6px 14px rgba(10,31,56,.05)}
+  .esp-formato img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+  .esp-formato__body{padding:14px 16px 16px}
+  .esp-formato h3{margin:0 0 6px;color:#113960;font-size:1.1rem}
+  .esp-formato p{margin:0;color:#3f5874;font-size:.95rem;line-height:1.5}
+  @media (max-width:760px){.esp-formatos{grid-template-columns:1fr}}
+</style>
   <style>
     :root{
       --navy:#172C51;
@@ -64,7 +76,6 @@
 
     .btn--small{padding:9px 11px;border-radius:10px;font-size:.86rem}
 
-    .hero{padding:30px 0 24px}
     .hero__frame{
       border:1px solid rgba(255,255,255,.14);
       border-radius:22px;
@@ -595,7 +606,6 @@
     }
     @media (max-width:760px){
       .top__actions .btn--secondary{display:none}
-      .hero{padding-top:20px}
       .hero__inner{padding:24px 16px}
       .hero__visual{min-height:140px}
       .hero__panel{padding:14px}
@@ -748,7 +758,7 @@
           "name": "¿Manejan disponibilidad en campo o solo bajo pedido?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Algunos SKUs de familias 180 °F y 205 °F están disponibles en stock en México. Las familias de mayor temperatura (400 °F y 450 °F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulta disponibilidad al cotizar con SKU específico."
+            "text": "Algunos SKUs de familias 180 °F y 205 °F están disponibles en stock en México. Las familias de mayor temperatura (400 °F y 450 °F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulte disponibilidad al cotizar con SKU específico."
           }
         },
         {
@@ -756,7 +766,7 @@
           "name": "¿El cable incluye protección contra H₂S?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H₂S y fluidos corrosivos. Para ambientes con alta concentración de H₂S, especificar la variante KEFLG o KEFLEG. Consulta a VMS con el análisis de fluido del pozo."
+            "text": "Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H₂S y fluidos corrosivos. Para ambientes con alta concentración de H₂S, especificar la variante KEFLG o KEFLEG. Consulte a VMS con el análisis de fluido del pozo."
           }
         }
       ]
@@ -990,31 +1000,22 @@
 
 
   <main id="contenido">
-    <section class="hero" style="--equip-hero-img:url('assets/img/hero_cables_potencia.webp')">
-      <div class="container">
-        <article class="hero__frame" id="heroRotator">
-          <div class="hero__inner">
-            <div class="hero__visual" aria-hidden="true"></div>
-            <div class="hero__panel">
-              <span class="hero__kicker" id="heroKicker">KEI Arteria &middot; representaci&oacute;n en M&eacute;xico</span>
-              <h1><span id="heroTitleMain">Cables</span> <span class="hero__accent" id="heroTitleAccent">ESP</span> para bomba electrosumergible</h1>
-              <p class="hero__sub" id="heroSub">Cinco familias, de 180 a 450 &deg;F, en configuraci&oacute;n Flat o Round</p>
-              <p class="hero__lead" id="heroLead">La familia correcta la define la temperatura de fondo de pozo, no el cat&aacute;logo. Especificamos, suministramos e instalamos.</p>
-              <ul class="hero__bullets" id="heroPoints">
-                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>5 familias &middot; 180 a 450 &deg;F</span></li>
-                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>Configuraci&oacute;n Flat o Round</span></li>
-                <li><span class="hero__check" aria-hidden="true">&#10003;</span><span>Selecci&oacute;n por temperatura de fondo de pozo</span></li>
-              </ul>
-              <div class="hero__cta on-dark">
-                <a class="btn btn--secondary" href="#detalleTecnico">Ver especificaciones t&eacute;cnicas</a>
-                <a class="btn btn--ghost" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar propuesta</a>
-              </div>
-              <!-- Se retira #heroDots: el rotador del hero nunca tuvo JavaScript, asi que estos puntos jamas se dibujaron. -->
-            </div>
-          </div>
-        </article>
+  <section class="hero hero--photo hero--fade-left" id="hero-esp" style="--hero-image:url('assets/img/services/hero_cables_esp_flat.webp');--hero-image-m:url('assets/img/services/hero_cables_esp_flat_m.webp')" aria-labelledby="heroTitle">
+    <div class="container">
+      <div class="hero-eyebrow">KEI Arteria &middot; representaci&oacute;n en M&eacute;xico</div>
+      <h1 id="heroTitle">Cables ESP para bomba electrosumergible</h1>
+      <p>Cinco familias de 180 a 450 &deg;F, en configuraci&oacute;n Flat o Round. La familia correcta la define la temperatura de fondo de pozo, no el cat&aacute;logo: especificamos, suministramos e instalamos.</p>
+      <div class="hero-btns on-dark">
+        <a class="btn btn--primary" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Solicitar propuesta</a>
+        <a class="btn btn--ghost" href="#detalleTecnico">Ver especificaciones t&eacute;cnicas</a>
       </div>
-    </section>
+      <div class="hero-stats">
+        <span class="hero-stat">5 familias &middot; 180 a 450 &deg;F</span>
+        <span class="hero-stat">Flat o Round</span>
+        <span class="hero-stat">Selecci&oacute;n por temperatura de fondo</span>
+      </div>
+    </div>
+  </section>
 
     
 <!-- Sube al segundo lugar: explica por que este cable no se elige de catalogo. -->
@@ -1047,8 +1048,25 @@
     <!-- Casos de uso -->
     <section id="catalogo" class="lineup">
       <div class="container">
-        <h2 class="section-title">Elige la presentaci&oacute;n adecuada para tu operaci&oacute;n</h2>
-        <p class="section-copy">Diecis&eacute;is l&iacute;neas comerciales para escenarios diferentes. Selecciona una y cotiza por variante.</p>
+        <h2 class="section-title">Elija la presentaci&oacute;n adecuada para su operaci&oacute;n</h2>
+        <p class="section-copy">Diecis&eacute;is l&iacute;neas comerciales para escenarios diferentes. Seleccione una y cotice por variante.</p>
+
+        <div class="esp-formatos">
+          <article class="esp-formato">
+            <img src="assets/img/landings/esp/esp_formato_flat.webp" alt="Cable ESP en formato Flat con tres conductores en paralelo y armadura met&aacute;lica" loading="lazy" decoding="async" width="720" height="405">
+            <div class="esp-formato__body">
+              <h3>Flat</h3>
+              <p>Ocupa menos espacio en el anular del pozo y puede ser m&aacute;s econ&oacute;mico en pozos verticales con espacio suficiente.</p>
+            </div>
+          </article>
+          <article class="esp-formato">
+            <img src="assets/img/landings/esp/esp_formato_round.webp" alt="Cable ESP en formato Round con tres conductores y armadura met&aacute;lica" loading="lazy" decoding="async" width="720" height="405">
+            <div class="esp-formato__body">
+              <h3>Round</h3>
+              <p>M&aacute;s flexible; recomendado para pozos desviados, de radio corto o con cambios de direcci&oacute;n. La decisi&oacute;n tambi&eacute;n depende del di&aacute;metro del casing.</p>
+            </div>
+          </article>
+        </div>
 
         <div class="line-group">
           <h3 class="group-title" data-line="180">Arteria 180F</h3>
@@ -1442,8 +1460,8 @@
 <!-- Pedir SKU va DESPUES del catalogo y del detalle tecnico: hasta aqui el visitante ya sabe que pedir. -->
 <section class="sku-zone" id="skuCotiza" aria-label="SKUs Cables ESP">
       <div class="container">
-        <h2 class="section-title">Pide propuesta en 1 click</h2>
-        <p class="section-copy">Selecciona familia y variante para enviar tu solicitud con SKU prellenado.</p>
+        <h2 class="section-title">Pedir propuesta en 1 clic</h2>
+        <p class="section-copy">Seleccione familia y variante para enviar su solicitud con SKU prellenado.</p>
         <div class="sku-context" id="skuContext">
           <span class="sku-context__label" id="skuContextLabel">Mostrando: L&iacute;nea 180F</span>
           <a class="sku-context__change" href="#catalogo">Cambiar</a>
@@ -1556,7 +1574,7 @@
             <span class="notes-panel__tag">EPC Integrado</span>
             <h2 class="notes-panel__title">Cuando VMS suministra el cable, ya sabe c&oacute;mo va a instalarse &mdash; porque somos quienes lo instalar&aacute;n.</h2>
           </div>
-          <p class="notes-panel__sub">A trav&eacute;s de VMShop puedes solicitar cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC. Si el suministro forma parte de un proyecto EPC que VMS ingenia y construye, el cable queda integrado al MTO con log&iacute;stica por hitos y responsabilidad &uacute;nica. Si solo necesitas el material, tambi&eacute;n te apoyamos con la misma rigurosidad t&eacute;cnica.</p>
+          <p class="notes-panel__sub">A trav&eacute;s de VMShop puede solicitar cotizaci&oacute;n de cable directamente &mdash; con o sin proyecto EPC. Si el suministro forma parte de un proyecto EPC que VMS ingenia y construye, el cable queda integrado al MTO con log&iacute;stica por hitos y responsabilidad &uacute;nica. Si solo necesita el material, tambi&eacute;n lo apoyamos con la misma rigurosidad t&eacute;cnica.</p>
           <ul class="note-list">
             <li><strong>Ingenier&iacute;a:</strong> Especificamos el cable correcto seg&uacute;n carga, ruta, ambiente y normativa &mdash; no el cable m&aacute;s econ&oacute;mico en cat&aacute;logo.</li>
             <li><strong>MTO coordinado:</strong> El listado de materiales de cable est&aacute; sincronizado con el cronograma de construcci&oacute;n, no con el inventario del proveedor.</li>
@@ -1564,7 +1582,7 @@
             <li><strong>Responsabilidad &uacute;nica:</strong> Una sola empresa responde por especificaci&oacute;n, suministro, instalaci&oacute;n, pruebas y commissioning.</li>
           </ul>
           <p style="margin-top:14px;font-size:.93rem;color:var(--muted,#4E6782)">
-            Si solo necesitas suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarte &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
+            Si solo necesita suministro sin instalaci&oacute;n, tambi&eacute;n podemos apoyarlo &mdash; con la misma rigurosidad t&eacute;cnica y log&iacute;stica que aplicamos en nuestros proyectos EPC.
           </p>
         </div>
       </div>
@@ -1605,7 +1623,7 @@
 <section class="steps">
       <div class="container">
         <div class="steps__intro">
-          <h2 class="steps__title">&iquest;Necesitas apoyo para tu proyecto? Nosotros lo coordinamos.</h2>
+          <h2 class="steps__title">&iquest;Necesita apoyo para su proyecto? Nosotros lo coordinamos.</h2>
           <p class="steps__copy">Integramos selecci&oacute;n t&eacute;cnica, log&iacute;stica de suministro y acompa&ntilde;amiento operativo de punta a punta.</p>
           <div class="steps__cta">
             <a class="btn btn--primary btn--small" data-preserve-query href="contacto_cta.html?producto=esp-cables#ctaForm">Hablar con asesor para mi proyecto</a>
@@ -1615,13 +1633,13 @@
       <div class="container steps__grid">
         <article class="step">
           <div class="step__head"><span class="step__badge">1</span><span class="step__icon">DIAGNÓSTICO</span></div>
-          <h3>Cu&eacute;ntanos tus necesidades</h3>
+          <h3>Cu&eacute;ntenos sus necesidades</h3>
           <p>Entendemos temperatura, esfuerzo mec&aacute;nico y ambiente para configurar la l&iacute;nea correcta.</p>
         </article>
         <article class="step">
           <div class="step__head"><span class="step__badge">2</span><span class="step__icon">SELECCIÓN</span></div>
           <h3>Te proponemos una soluci&oacute;n</h3>
-          <p>Recibes alternativa Flat o Round con dimensi&oacute;n y peso para integraci&oacute;n en proyecto.</p>
+          <p>Recibe alternativa Flat o Round con dimensi&oacute;n y peso para integraci&oacute;n en proyecto.</p>
         </article>
         <article class="step">
           <div class="step__head"><span class="step__badge">3</span><span class="step__icon">SUMINISTRO</span></div>
@@ -1646,11 +1664,11 @@
           </article>
           <article class="card">
             <h3>&iquest;Manejan disponibilidad en campo o solo bajo pedido?</h3>
-            <p>Algunos SKUs de familias 180 &deg;F y 205 &deg;F est&aacute;n disponibles en stock en M&eacute;xico. Las familias de mayor temperatura (400 &deg;F y 450 &deg;F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulta disponibilidad al cotizar con SKU espec&iacute;fico.</p>
+            <p>Algunos SKUs de familias 180 &deg;F y 205 &deg;F est&aacute;n disponibles en stock en M&eacute;xico. Las familias de mayor temperatura (400 &deg;F y 450 &deg;F) son generalmente on-demand con tiempos de entrega de 8 a 16 semanas. Consulte disponibilidad al cotizar con SKU espec&iacute;fico.</p>
           </article>
           <article class="card">
             <h3>&iquest;El cable incluye protecci&oacute;n contra H&#8322;S?</h3>
-            <p>Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H&#8322;S y fluidos corrosivos. Para ambientes con alta concentraci&oacute;n de H&#8322;S, especificar la variante KEFLG o KEFLEG. Consulta a VMS con el an&aacute;lisis de fluido del pozo.</p>
+            <p>Las familias Arteria 400 y 450 con aislamiento EPDM y cubierta de Kapton (Poliimida) ofrecen resistencia superior a H&#8322;S y fluidos corrosivos. Para ambientes con alta concentraci&oacute;n de H&#8322;S, especificar la variante KEFLG o KEFLEG. Consulte a VMS con el an&aacute;lisis de fluido del pozo.</p>
           </article>
         </div>
       </div>
@@ -1679,7 +1697,7 @@
    sincronizadas: se elige una familia y las tres muestran esa.
 
    Antes no existía: las cinco familias se mostraban siempre, de modo que
-   "Pide propuesta en 1 click" eran 63 tarjetas seguidas y el rótulo
+   "Pedir propuesta en 1 clic" eran 63 tarjetas seguidas y el rótulo
    "Mostrando: Línea 180F" y el botón "Ver todas las familias" no hacían nada.
    ───────────────────────────────────────────────────────────────────────── */
 (function () {

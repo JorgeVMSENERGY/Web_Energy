@@ -1309,6 +1309,26 @@ label{font-size:14px}
       linear-gradient(100deg,rgba(6,20,40,.92) 0%,rgba(7,25,49,.78) 45%,rgba(8,35,70,.46) 100%),
       var(--hero-image) center/cover no-repeat;
   }
+  .hero-slide.hero-slide--fade::after{
+    background:
+      linear-gradient(90deg,rgba(6,20,40,.9) 0%,rgba(7,25,49,.78) 40%,rgba(8,35,70,.4) 58%,rgba(8,35,70,.08) 80%),
+      var(--hero-image) right center/cover no-repeat;
+  }
+  @media (max-width:980px){
+    .hero-slide.hero-slide--fade::after{
+      background:
+        linear-gradient(90deg,rgba(6,20,40,.88) 0%,rgba(7,25,49,.72) 55%,rgba(8,35,70,.4) 100%),
+        var(--hero-image) 72% center/cover no-repeat;
+    }
+  }
+  @media (max-width:680px){
+    .hero-slide.hero-slide--fade::after{
+      background:
+        linear-gradient(180deg,rgba(6,20,40,.82) 0%,rgba(7,25,49,.72) 55%,rgba(7,25,49,.5) 100%),
+        var(--hero-image) 62% center/cover no-repeat;
+    }
+  }
+
   .hero .eyebrow{
     border-color:rgba(187,236,255,.38);
     background:rgba(255,255,255,.06);
@@ -2290,7 +2310,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-electromecanicas" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/plano_electromecanicos.webp')">
+        <article id="hero-electromecanicas" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_electromecanica_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2304,7 +2324,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-iluminacion" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/iluminacion.webp')">
+        <article id="hero-iluminacion" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_iluminacion_led_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2317,7 +2337,7 @@ label{font-size:14px}
             </div>
           </div>
         </article>
-        <article id="hero-hvac" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/hvac_image.webp')">
+        <article id="hero-hvac" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_hvac_industrial_planta.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2331,7 +2351,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-infraestructura-electrica" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/infraestructura_electrica.webp')">
+        <article id="hero-infraestructura-electrica" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_infraestructura_electrica.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2345,7 +2365,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-oil-gas" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/oil_gas.webp')">
+        <article id="hero-oil-gas" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_oil_gas_offshore.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2360,7 +2380,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-solar" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/energia_solar_industrial.webp')">
+        <article id="hero-solar" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_solar_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Sector prioritario &middot; Solar Industrial</span>
@@ -2373,7 +2393,7 @@ label{font-size:14px}
             </div>
           </div>
         </article>
-        <article id="hero-no-solar" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/generacion_verde.webp')">
+        <article id="hero-no-solar" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_generacion_verde_biomasa.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2387,7 +2407,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-automatizacion-control" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/services/automatizacion_control.webp')">
+        <article id="hero-automatizacion-control" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_automatizacion_control.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Soluci&oacute;n especializada</span>
@@ -2401,7 +2421,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-mineria" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/mineria_sectorial.webp')">
+        <article id="hero-mineria" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_mineria_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Sector prioritario &middot; Miner&iacute;a</span>
@@ -2415,7 +2435,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-siderurgia" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/hero_siderurgia.webp')">
+        <article id="hero-siderurgia" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_siderurgia_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Sector &middot; Siderurgia y Metalmec&aacute;nica</span>
@@ -2429,7 +2449,7 @@ label{font-size:14px}
           </div>
         </article>
 
-        <article id="hero-alimentos-bebidas" class="hero-slide" data-hero-slide style="--hero-image:url('assets/img/alimentos_bebidas_sectorial.webp')">
+        <article id="hero-alimentos-bebidas" class="hero-slide hero-slide--fade" data-hero-slide style="--hero-image:url('assets/img/services/hero_alimentos_bebidas_industrial.webp')">
           <div class="container hero__wrap">
             <div class="hero__content">
               <span class="eyebrow">Sector prioritario &middot; Alimentos &amp; Bebidas</span>
@@ -2614,7 +2634,7 @@ label{font-size:14px}
     </div>
 
     <div class="clients-hero" id="clientsHero" aria-label="Categor&iacute;as de clientes">
-      <div class="clients-hero__grid" role="tablist" aria-label="Selecciona una categor&iacute;a de clientes">
+      <div class="clients-hero__grid" role="tablist" aria-label="Seleccione una categor&iacute;a de clientes">
         <button type="button" class="clients-hero__tile" role="tab" aria-selected="false" data-clients-category="petroleo-gas" style="--clients-hero-image:url('assets/img/clientes_oil_gas.webp')">
           <span class="clients-hero__tileLabel">Oil &amp; Gas</span>
         </button>
@@ -2628,7 +2648,7 @@ label{font-size:14px}
           <span class="clients-hero__tileLabel">Otras industrias</span>
         </button>
       </div>
-      <p class="clients-hero__hint">Selecciona una categor&iacute;a para ver su lista de clientes.</p>
+      <p class="clients-hero__hint">Seleccione una categor&iacute;a para ver su lista de clientes.</p>
     </div>
 
     <div class="clients__grid" id="clientesGrid">
@@ -2779,7 +2799,7 @@ label{font-size:14px}
 <section class="catalogx" id="catalogo-epc" aria-labelledby="catalogoEpcTitle">
   <div class="container">
     <h3 id="catalogoEpcTitle" class="section-title">Cat&aacute;logo interactivo de servicios EPC</h3>
-    <p class="section-lead">Selecciona una categor&iacute;a y filtra por palabra clave para localizar el alcance adecuado para tu proyecto.</p>
+    <p class="section-lead">Seleccione una categor&iacute;a y filtre por palabra clave para localizar el alcance adecuado para su proyecto.</p>
     <div class="catalogx__controls">
       <div class="catalogx__tabs" id="epcCatalogTabs" role="tablist" aria-label="Categor&iacute;as de servicios EPC">
         <button class="catalogx__tab is-active" type="button" data-cat="all">Todos</button>
@@ -4102,8 +4122,8 @@ label{font-size:14px}
   <div class="quicklead-modal__backdrop" data-close-modal="quickLeadModal"></div>
   <section class="quicklead-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quickLeadTitle">
     <button class="quicklead-modal__close" type="button" aria-label="Cerrar formulario" data-close-modal="quickLeadModal">&times;</button>
-    <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulta a un especialista</h2>
-    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos tu consulta. Un especialista te contactar&aacute; pronto.">
+    <h2 class="quicklead-modal__title" id="quickLeadTitle">Consulte a un especialista</h2>
+    <form class="quicklead-form" id="quickLeadForm" novalidate data-vms-form-type="quick_lead" data-vms-feedback="#quickLeadFeedback" data-vms-success-message="Recibimos su consulta. Un especialista lo contactar&aacute; pronto.">
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input type="text" id="qlName" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
       <input type="email" id="qlEmail" name="email" placeholder="Correo electr&oacute;nico" autocomplete="email" required>
@@ -4140,7 +4160,7 @@ label{font-size:14px}
       <path fill="#fff" d="M19.11 17.35c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.5-.89-.8-1.49-1.79-1.66-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/>
       <path fill="#fff" d="M16.02 3.2C8.95 3.2 3.2 8.95 3.2 16.02c0 2.26.6 4.47 1.73 6.41L3 29l6.76-1.76a12.8 12.8 0 0 0 6.26 1.62h.01c7.07 0 12.82-5.75 12.82-12.82S23.1 3.2 16.02 3.2zm0 23.44h-.01c-1.92 0-3.8-.52-5.43-1.5l-.39-.23-4.01 1.04 1.07-3.91-.25-.4a10.58 10.58 0 0 1-1.62-5.62c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.5 1.11 7.5 3.11 2 2 3.1 4.67 3.1 7.51 0 5.86-4.77 10.63-10.63 10.63z"/>
     </svg>
-    Contactanos
+    Escr&iacute;banos
   </a>
   <a class="sticky-actions__btn sticky-actions__btn--right" href="#quickLeadModal" data-cta="sticky-more-info">
     <svg class="sticky-actions__icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -4157,7 +4177,7 @@ label{font-size:14px}
       <h3 id="moreInfoTitle" class="moreinfo-modal__title">M&aacute;s informaci&oacute;n</h3>
       <button class="moreinfo-modal__close" type="button" aria-label="Cerrar formulario" data-modal-close="true">&times;</button>
     </div>
-    <form id="moreInfoForm" class="moreinfo-form" novalidate data-vms-form-type="more_info" data-vms-feedback="#moreInfoFeedback" data-vms-success-message="Recibimos tu solicitud de informaci&oacute;n. Te contactaremos pronto.">
+    <form id="moreInfoForm" class="moreinfo-form" novalidate data-vms-form-type="more_info" data-vms-feedback="#moreInfoFeedback" data-vms-success-message="Recibimos su solicitud de informaci&oacute;n. Te contactaremos pronto.">
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
       <input class="input" id="miNombre" name="nombre" type="text" placeholder="Nombre" required>
       <input class="input" id="miEmpresa" name="empresa" type="text" placeholder="Empresa" autocomplete="organization" required>
@@ -4449,7 +4469,7 @@ label{font-size:14px}
   const data = [
     {
       name: 'Soluciones Electromec&aacute;nicas',
-      image: 'assets/img/services/plano_electromecanicos_tarjeta.webp',
+      image: 'assets/img/services/hero_electromecanica_industrial_tarjeta.webp',
       link: 'soluciones_electromecanicas.html#inicio',
       bullets: [
         'Ingenier&iacute;a, suministro t&eacute;cnico y construcci&oacute;n',
@@ -4459,7 +4479,7 @@ label{font-size:14px}
     },
     {
       name: 'Automatizaci&oacute;n y Control',
-      image: 'assets/img/services/automatizacion_control_tarjeta.webp',
+      image: 'assets/img/services/hero_automatizacion_control_tarjeta.webp',
       link: 'soluciones_automatizacion_control.html#inicio',
       bullets: [
         'PLC / SCADA / instrumentaci&oacute;n',
@@ -4469,7 +4489,7 @@ label{font-size:14px}
     },
     {
       name: 'Energ&iacute;a Solar Industrial',
-      image: 'assets/img/services/energia_solar_industrial_tarjeta.webp',
+      image: 'assets/img/services/hero_solar_industrial_tarjeta.webp',
       link: 'soluciones_solar_industrial.html#inicio',
       bullets: [
         'Ingenier&iacute;a de detalle, interconexi&oacute;n y EPC',
@@ -4479,7 +4499,7 @@ label{font-size:14px}
     },
     {
       name: 'Generaci&oacute;n Verde No Solar',
-      image: 'assets/img/generacion_verde.webp',
+      image: 'assets/img/services/hero_generacion_verde_biomasa_tarjeta.webp',
       link: 'soluciones_verde_no_solar.html#inicio',
       bullets: [
         'Biog&aacute;s, biomasa y e&oacute;lica distribuida',
@@ -4489,7 +4509,7 @@ label{font-size:14px}
     },
     {
       name: 'Oil & Gas',
-      image: 'assets/img/services/oil_gas_tarjeta.webp',
+      image: 'assets/img/services/hero_oil_gas_offshore_tarjeta.webp',
       link: 'soluciones_oil_gas.html#inicio',
       bullets: [
         'Electrificaci&oacute;n y modernizaciones',
@@ -4499,7 +4519,7 @@ label{font-size:14px}
     },
     {
       name: 'Infraestructura Energ&eacute;tica',
-      image: 'assets/img/services/infraestructura_electrica_tarjeta.webp',
+      image: 'assets/img/services/hero_infraestructura_electrica_tarjeta.webp',
       link: 'soluciones_infraestructura_energetica.html#inicio',
       bullets: [
         'Generaci&oacute;n, transmisi&oacute;n y distribuci&oacute;n',
@@ -4509,7 +4529,7 @@ label{font-size:14px}
     },
     {
       name: 'Iluminaci&oacute;n Industrial',
-      image: 'assets/img/services/iluminacion_tarjeta.webp',
+      image: 'assets/img/services/hero_iluminacion_led_industrial_tarjeta.webp',
       link: 'soluciones_iluminacion_industrial.html#inicio',
       bullets: [
         'Ingenier&iacute;a y EPC de iluminaci&oacute;n industrial',
@@ -4520,7 +4540,7 @@ label{font-size:14px}
     ,
     {
       name: 'HVAC Industrial',
-      image: 'assets/img/hvac_image.webp',
+      image: 'assets/img/services/hero_hvac_industrial_planta_tarjeta.webp',
       link: 'soluciones_hvac_industrial.html#inicio',
       bullets: [
         'Climatizaci&oacute;n y ventilaci&oacute;n industrial',
