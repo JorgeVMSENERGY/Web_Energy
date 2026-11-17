@@ -706,7 +706,12 @@
 
       if(!filtered.length){
         listEl.innerHTML = '';
-        if(emptyEl) emptyEl.hidden = false;
+        if(emptyEl){
+          emptyEl.innerHTML = allVacantes.length
+            ? 'No hay vacantes que coincidan con el filtro seleccionado en este momento. <a href="#postulacion">Envíanos tu CV</a> para nuestra base de talento.'
+            : 'Por ahora no tenemos vacantes abiertas. <a href="#postulacion">Envíanos tu CV</a> para nuestra base de talento y te contactaremos cuando se abra una posición alineada a tu perfil.';
+          emptyEl.hidden = false;
+        }
         return;
       }
       if(emptyEl) emptyEl.hidden = true;
