@@ -92,7 +92,7 @@ function enTarget(key, uri) {
   if (EN_PAGES[key] || key === '/en') return null;
   var rest = key.slice(3); // quita "/en"
   // Con la URI original: S3 distingue mayúsculas (VMShop.html).
-  if (/^\/[a-z0-9_\-]+\.html$/.test(rest)) return uri.replace(/\/+$/, '').slice(3);
+  if (/^\/[a-z0-9_\-]+\.html$/.test(rest)) return null; // translated /en/*.html files pass through; explicit aliases still redirect
   if (REDIRECTS[rest]) return REDIRECTS[rest];
   if (/\.[a-z0-9]+$/.test(rest)) return null; // imágenes, PDF, etc.: se dejan pasar
   return '/en/';
@@ -133,7 +133,7 @@ function handler(event) {
   if (key.length > 1 && key.charAt(key.length - 1) === '/') key = key.slice(0, -1);
 
   var target = REDIRECTS[key];
-  if (!target && WP_ARCHIVE.test(key)) target = '/blog.html';
+  if (!target && WP_ARCHIVE.test(key)) target = key.indexOf('/en/') === 0 ? '/en/blog.html' : '/blog.html';
   if (!target && key.indexOf('/en/') === 0) target = enTarget(key, uri);
 
   // Un solo salto: www + URL vieja va directo al destino final sin www.
