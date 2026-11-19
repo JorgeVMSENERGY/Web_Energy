@@ -1,0 +1,276 @@
+[
+  {
+    "sector": "oilgas",
+    "title": "PEMEX Akal-J Control Eléctrico",
+    "img": "../assets/img/Projects/oil-gas/akal_j_sistema_de_generacion_y_control_electrico.webp",
+    "bullets": [
+      "Sistemas de control",
+      "Protección eléctrica",
+      "Confiabilidad operativa"
+    ],
+    "tags": [
+      "control",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "Baker Hughes Variadores Outdoor E-Cabinet",
+    "img": "../assets/img/Projects/oil-gas/Baker_hughes_control_y_operacion_variadores.webp",
+    "bullets": [
+      "Variadores industriales",
+      "Integración eléctrica",
+      "Operación en campo"
+    ],
+    "tags": [
+      "variadores",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "PEMEX Balam Subestación y Seccionamiento MT 34.5 kV",
+    "img": "../assets/img/Projects/oil-gas/balam_subestacion_y_seccionamiento.webp",
+    "bullets": [
+      "Control y protección",
+      "Arquitectura OT y comunicaciones",
+      "Cumplimiento documental"
+    ],
+    "tags": [
+      "subestaciones",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "Plataforma EK-A Sistema de Energía Ininterrumpida",
+    "img": "../assets/img/Projects/oil-gas/ek_a_sistema_de_energia_ininterrumpida.webp",
+    "bullets": [
+      "Ingeniería, procura y construcción EPC",
+      "Integración eléctrica y de control",
+      "Comisionamiento y puesta en marcha"
+    ],
+    "tags": [
+      "ups",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "PEMEX Ku-Maloob-Zaap Modernización de Turbinas de Gas",
+    "img": "../assets/img/Projects/oil-gas/ku_maloob_zaap_modernizacion_de_turbinas_de-gas.webp",
+    "bullets": [
+      "Modernización de turbinas",
+      "Control y sincronía",
+      "Pruebas de desempeño"
+    ],
+    "tags": [
+      "turbinas",
+      "control",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "PEMEX Nohoch-A2 Sistema Eléctrico y CCM Offshore",
+    "img": "../assets/img/Projects/oil-gas/nohoch_a2_sistema_electrico_y_ccm.webp",
+    "bullets": [
+      "EPC eléctrico e instrumentación",
+      "Integración FAT y SAT",
+      "Puesta en marcha y pruebas"
+    ],
+    "tags": [
+      "ccm",
+      "electromecanica",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "oilgas",
+    "title": "SLB Sistema de Bombeo con Variadores de Media Tensión Triol",
+    "img": "../assets/img/Projects/oil-gas/SLB_control_y_operacion_variadores.webp",
+    "bullets": [
+      "Bombeo profundo",
+      "Variadores de media tensión",
+      "Monitoreo y operación"
+    ],
+    "tags": [
+      "variadores",
+      "bombeo",
+      "oilgas"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "CFE Chankanaab Sistema Eléctrico Integral CA/CD",
+    "img": "../assets/img/Projects/infraestructura_electrica/CFE_Chankanaab_Sistema_Electrico_Integral_CACD.webp",
+    "bullets": [
+      "Infraestructura eléctrica BT/MT/AT",
+      "Pruebas, protección y energización",
+      "Ejecución integral en campo"
+    ],
+    "tags": [
+      "ccm",
+      "infraestructura"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "CFE Tamazulapan Modernización de Control Hidráulico",
+    "img": "../assets/img/Projects/infraestructura_electrica/CFE_Tamazulapan_Modernizacion_de_Control_Hidraulico.webp",
+    "bullets": [
+      "Control hidráulico",
+      "Retrofit de sistemas",
+      "Confiabilidad de planta"
+    ],
+    "tags": [
+      "control",
+      "hidro"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "CH Angostura Infraestructura Eléctrica de Alta Tensión 400 kV",
+    "img": "../assets/img/Projects/infraestructura_electrica/CH_angostura_Infraestructura_Electrica_de_Alta_Tension_400_kV.webp",
+    "bullets": [
+      "Alta tensión 400 kV",
+      "Infraestructura eléctrica",
+      "Entrega en campo"
+    ],
+    "tags": [
+      "subestaciones",
+      "cable",
+      "infraestructura"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "CH Angostura Sistemas de Cable de Potencia 400 kV",
+    "img": "../assets/img/Projects/infraestructura_electrica/CH_Angostura_Sistemas_de_Cable_de_Potencia_400_kV.webp",
+    "bullets": [
+      "Cable de potencia 400 kV",
+      "Turbinas hidroeléctricas",
+      "Pruebas y energización"
+    ],
+    "tags": [
+      "cable",
+      "infraestructura",
+      "hidro"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "Grupo Dragón Planta Geotérmica Sistema de Generación y Sincronía",
+    "img": "../assets/img/Projects/infraestructura_electrica/Grupo_Dragon_Planta_Geotermica_Sistema_de_Generacion_y_Sincronia.webp",
+    "bullets": [
+      "Subestación y protecciones",
+      "Ingeniería, procura y construcción",
+      "Comisionamiento"
+    ],
+    "tags": [
+      "generacion",
+      "control",
+      "verde"
+    ]
+  },
+  {
+    "sector": "energia",
+    "title": "Ingenio Tres Valles Incremento de Capacidad en Subestaciones MT",
+    "img": "../assets/img/Projects/infraestructura_electrica/Ingenio_Tres_Valles_Incremento_de_Capacidad_en_Subestaciones_MT.webp",
+    "bullets": [
+      "Subestaciones MT",
+      "Aumento de capacidad",
+      "Puesta en operación"
+    ],
+    "tags": [
+      "subestaciones",
+      "agroindustria"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Campo Eólico Suministro de Sistemas de Control y Potencia",
+    "img": "../assets/img/Projects/Soluciones_industriales/Campo_Eolico_Suministro_de_Sistemas_de_Control_y_Potencia.webp",
+    "bullets": [
+      "Suministro especializado",
+      "Control y potencia",
+      "Implementación EPC"
+    ],
+    "tags": [
+      "verde",
+      "control"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Embotelladora de Refrescos, Colima — Variador Industrial Triol 200 HP",
+    "img": "../assets/img/Projects/Soluciones_industriales/Embotelladora_Colima_Variador_Industrial_TRIOL_200_HP.webp",
+    "bullets": [
+      "Variador industrial",
+      "Integración en planta",
+      "Arranque y soporte"
+    ],
+    "tags": [
+      "variadores",
+      "alimentos"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Ingenio Adolfo López Mateos Sistema de Sincronía y Cogeneración",
+    "img": "../assets/img/Projects/Soluciones_industriales/Ingenio_Adolfo_Lopez_Mateos_Sistema_de_Sincronia_y_Cogeneracion.webp",
+    "bullets": [
+      "Sincronía y cogeneración",
+      "Integración multimarcas",
+      "Comisionamiento"
+    ],
+    "tags": [
+      "generacion",
+      "agroindustria",
+      "verde"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Ingenio Emiliano Zapata Control de Velocidad y Gobernadores",
+    "img": "../assets/img/Projects/Soluciones_industriales/Ingenio_Emiliano_Zapata_Control_de_Velocidad_y_Gobernadores.webp",
+    "bullets": [
+      "Control de velocidad",
+      "Gobernadores",
+      "Optimización operativa"
+    ],
+    "tags": [
+      "turbinas",
+      "agroindustria"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Ingenio Tamazula Variador Regenerativo 300 HP",
+    "img": "../assets/img/Projects/Soluciones_industriales/Ingenio_Tamazula_Variador_Regenerativo_300_HP.webp",
+    "bullets": [
+      "Variador regenerativo",
+      "Eficiencia energética",
+      "Operación continua"
+    ],
+    "tags": [
+      "variadores",
+      "agroindustria"
+    ]
+  },
+  {
+    "sector": "industrial",
+    "title": "Proyecto Minero VFD Altivar 980 de 700 HP para Bombeo Profundo",
+    "img": "../assets/img/Projects/Soluciones_industriales/Proyecto_Minero_VFD_Altivar_980_700_HP_para_Bombeo_Profundo.webp",
+    "bullets": [
+      "Columna de agua de 900 m",
+      "Variador Altivar 980",
+      "Operación continua 24/7"
+    ],
+    "tags": [
+      "mineria",
+      "variadores",
+      "bombeo"
+    ]
+  }
+]
