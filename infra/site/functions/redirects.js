@@ -84,10 +84,26 @@ var EN_REDIRECTS = {
   '/en/home': '/en/'
 };
 
+// Exact translated pages that overlap historical English aliases.
+// Preserve EN_REDIRECTS; bypass it only for these existing files.
+var EN_TRANSLATED_PAGES = {
+  '/en/contacto.html': 1,
+  '/en/contacto_cta.html': 1,
+  '/en/lp-cables-especiales.html': 1,
+  '/en/lp-mantenimiento-oil-gas.html': 1,
+  '/en/lp-pruebas-comisionamiento-puesta-en-servicio.html': 1,
+  '/en/lp-subestaciones-electricas.html': 1,
+  '/en/lp-triol-variadores.html': 1,
+  '/en/lp-turbogeneradores-woodward.html': 1,
+  '/en/nosotros.html': 1,
+  '/en/soluciones_oil_gas.html': 1
+};
+
 // Resuelve una URL bajo /en/ que no existe como página en inglés:
 // 1) equivalente en inglés, 2) misma página en español (/en/x.html → /x.html),
 // 3) ruta vieja de WordPress con redirección en español, 4) portada en inglés.
 function enTarget(key, uri) {
+  if (EN_TRANSLATED_PAGES[key]) return null; // real English file takes priority
   if (EN_REDIRECTS[key]) return EN_REDIRECTS[key];
   if (EN_PAGES[key] || key === '/en') return null;
   var rest = key.slice(3); // quita "/en"
