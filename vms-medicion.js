@@ -7,7 +7,9 @@
  *              descarga_material, scroll_depth, engaged_30s, postulacion
  * Política de consentimiento (confirmar con Legal):
  *   - Analítica: activa por defecto, el visitante puede rechazarla (opt-out).
- *   - Mercadotecnia (Google Ads, Meta, LinkedIn): desactivada hasta que el visitante acepte (opt-in).
+ *   - Mercadotecnia (Google Ads, Meta, LinkedIn, ChatGPT Ads): desactivada hasta que el visitante acepte (opt-in).
+ * ChatGPT Ads (OpenAI Measurement Pixel): se carga aquí, fuera de GTM, y respeta el mismo consentimiento
+ *   de mercadotecnia vía oaiq("consent"). Eventos: page_viewed, lead_created (form_submit), custom contacto_directo.
  */
 (function (w, d) {
   'use strict';
@@ -15,6 +17,7 @@
   var KEY_CONSENT = 'vms_consent_v1';
   var KEY_UTM = 'vms_utm_first';
   var AVISO_URL = '/aviso-privacidad.html#sitio-web';
+  var OAIQ_PIXEL_ID = 'JdoVvPKgvCVBt4h8cc6C2q';
 
   w.dataLayer = w.dataLayer || [];
   function gtag() { w.dataLayer.push(arguments); }
@@ -43,6 +46,25 @@
     utm = { utm_source: qs.get('utm_source'), utm_medium: qs.get('utm_medium') || '', utm_campaign: qs.get('utm_campaign') || '' };
     guardar(KEY_UTM, utm);
   }
+  /* ---------- 2b. ChatGPT Ads (OpenAI Measurement Pixel) ---------- */
+  var oaiDebug = qs.has('oaiq_debug') || !/(^|\.)vmsenergy\.com$/i.test(w.location.hostname);
+  var oaiVista = false;
+  !function (w2, d2, s, u) {
+    if (w2.oaiq) return;
+    var q = function () { q.q.push(arguments); }; q.q = []; w2.oaiq = q;
+    var j = d2.createElement(s); j.async = 1; j.src = u;
+    var f = d2.getElementsByTagName(s)[0]; f.parentNode.insertBefore(j, f);
+  }(w, d, 'script', 'https://bzrcdn.openai.com/sdk/oaiq.min.js');
+  function oai() { try { w.oaiq.apply(null, arguments); } catch (x) {} }
+  function oaiPagina() {
+    if (oaiVista || mkt !== 'granted') return;
+    oaiVista = true;
+    oai('measure', 'page_viewed', { type: 'contents', contents: [{ id: slug, name: (d.title || slug).slice(0, 200), content_type: 'page' }] });
+  }
+  oai('consent', mkt === 'granted');
+  oai('init', { pixelId: OAIQ_PIXEL_ID, debug: oaiDebug });
+  oaiPagina();
+
   push({
     page_slug: slug,
     page_concept: concept,
@@ -58,6 +80,7 @@
   w.vmsLead = function (metodo) {
     var f = w.__vmsLastForm || {};
     push({ event: 'form_submit', form_id: f.id || '', form_metodo: metodo || 'mailto' });
+    if (mkt === 'granted') oai('measure', 'lead_created', { type: 'customer_action' });
   };
   w.vmsPostulacion = function (formId, metodo) {
     push({ event: 'postulacion', form_id: formId || '', form_metodo: metodo || 'api' });
@@ -72,6 +95,10 @@
     if (el.hasAttribute('data-cta')) {
       push({ event: 'cta_click', cta: el.getAttribute('data-cta'),
              cta_texto: (el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 100), href: href });
+    }
+    var directo = /^(tel:|mailto:)/i.test(href) || /^https?:\/\/(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)\//i.test(href);
+    if (directo && mkt === 'granted') {
+      oai('measure', 'custom', { type: 'custom' }, { custom_event_name: 'contacto_directo' });
     }
     if (/^tel:/i.test(href)) {
       push({ event: 'contacto_telefono', metodo: 'telefono', valor: href.slice(4) });
@@ -107,6 +134,9 @@
     guardar(KEY_CONSENT, { analitica: a, mercadotecnia: m, fecha: new Date().toISOString() });
     var A = a ? 'granted' : 'denied', M = m ? 'granted' : 'denied';
     gtag('consent', 'update', { analytics_storage: A, ad_storage: M, ad_user_data: M, ad_personalization: M });
+    mkt = M; analitica = A;
+    oai('consent', m);
+    oaiPagina();
     push({ event: 'consent_update', consent_analitica: A, consent_mercadotecnia: M });
   }
   var CSS = '.vms-ck{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:720px;margin:0 auto;' +
@@ -124,14 +154,14 @@
   var T = EN ? {
     aria: 'Cookie preferences', titulo: 'Cookies on vmsenergy.com',
     texto: 'We use analytics cookies to understand how the site is used and, if you accept, marketing cookies ' +
-      '(Google Ads, Meta and LinkedIn) to measure our campaigns. Learn more in our <a href="' + AVISO_URL + '">privacy notice</a> (in Spanish).',
-    nec: 'Necessary (always on)', ana: 'Analytics (Google Analytics)', mkt: 'Marketing (Google Ads, Meta, LinkedIn)',
+      '(Google Ads, Meta, LinkedIn and ChatGPT Ads) to measure our campaigns. Learn more in our <a href="' + AVISO_URL + '">privacy notice</a> (in Spanish).',
+    nec: 'Necessary (always on)', ana: 'Analytics (Google Analytics)', mkt: 'Marketing (Google Ads, Meta, LinkedIn, ChatGPT Ads)',
     todas: 'Accept all', solo: 'Necessary only', config: 'Customize', guardar: 'Save selection', link: 'Cookie preferences'
   } : {
     aria: 'Preferencias de cookies', titulo: 'Cookies en vmsenergy.com',
     texto: 'Usamos cookies de analítica para entender cómo se usa el sitio y, si lo acepta, cookies de mercadotecnia ' +
-      '(Google Ads, Meta y LinkedIn) para medir nuestras campañas. Más información en el <a href="' + AVISO_URL + '">aviso de privacidad</a>.',
-    nec: 'Necesarias (siempre activas)', ana: 'Analítica (Google Analytics)', mkt: 'Mercadotecnia (Google Ads, Meta, LinkedIn)',
+      '(Google Ads, Meta, LinkedIn y ChatGPT Ads) para medir nuestras campañas. Más información en el <a href="' + AVISO_URL + '">aviso de privacidad</a>.',
+    nec: 'Necesarias (siempre activas)', ana: 'Analítica (Google Analytics)', mkt: 'Mercadotecnia (Google Ads, Meta, LinkedIn, ChatGPT Ads)',
     todas: 'Aceptar todas', solo: 'Solo necesarias', config: 'Configurar', guardar: 'Guardar selección', link: 'Preferencias de cookies'
   };
   function banner() {
