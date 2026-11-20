@@ -135,6 +135,16 @@ class PrGuards(unittest.TestCase):
                  'scripts/test_c1_plan.py', 'infra/forms/tests/test_turnstile.py']
         self.assertEqual(classify(paths)[1], sorted(paths))
 
+    def test_translation_page_does_not_trigger_validation_control_guard(self):
+        paths = ['en/testing-commissioning.html',
+                 'scripts/test_english.py',
+                 'infra/forms/tests/test_turnstile.py',
+                 'scripts/requirements-english.txt']
+        self.assertEqual(classify(paths)[0], [])
+        self.assertEqual(classify(paths)[1], sorted(paths[1:]))
+        self.assertEqual(classify(['examples/test-workflow.js'])[1],
+                         ['examples/test-workflow.js'])
+
     def test_writes_rejected_before_cli_or_sdk_transport(self):
         writes = [('s3api', 'put-object'), ('s3api', 'delete-object'),
                   ('s3api', 'delete-objects'), ('s3api', 'copy-object'),
