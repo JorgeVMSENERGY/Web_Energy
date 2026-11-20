@@ -33,7 +33,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / 'scripts' / 'english-translations.json'
-TRACKED = set(subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0'))
+TRACKED = set(subprocess.check_output(['git', '-c', f'safe.directory={ROOT}', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0'))
 PAGES = sorted(p for p in ROOT.glob('*.html') if p.name in TRACKED and p.name != 'stand-rim-2026 3.html')
 NAMES = {p.name for p in PAGES}
 ALIASES = {'soluciones_oil_gas.html': 'oil-gas-solutions.html',
