@@ -1,0 +1,74 @@
+name: Attest manually deployed production S3 content (read-only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: vms-energy-web-production
+  cancel-in-progress: false
+
+jobs:
+  attest:
+    name: Attest S3 production content
+    if: github.repository == 'JorgeVMSENERGY/Web_Energy' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    environment:
+      name: production
+      url: https://www.vmsenergy.com/
+    env:
+      ATTESTATION_EVIDENCE: ${{ runner.temp }}/vms-production-attestation.json
+      AWS_DEFAULT_REGION: us-east-1
+    steps:
+      - name: Checkout full Git history (no persisted token)
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Validate manually deployed commit and Git content
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B scripts/attest_production_content.py preflight --repo .
+
+      - name: Configure AWS read-only OIDC credentials
+        uses: aws-actions/configure-aws-credentials@v6.2.4
+        with:
+          role-to-assume: arn:aws:iam::787140332697:role/VMSWebGitHubProductionAudit
+          role-session-name: VMSWebAudit-${{ github.run_id }}
+          role-duration-seconds: 3600
+          aws-region: us-east-1
+          audience: sts.amazonaws.com
+          mask-aws-account-id: true
+
+      - name: Verify read-only AWS account and identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B scripts/attest_production_content.py identity --repo .
+
+      - name: Verify every production S3 object by SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B scripts/attest_production_content.py verify --repo . --evidence "$ATTESTATION_EVIDENCE"
+
+      - name: Recheck S3 inventory and object versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B scripts/attest_production_content.py recheck --repo . --evidence "$ATTESTATION_EVIDENCE"
+
+      - name: Upload attestation evidence artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: vms-production-manual-attestation-${{ github.run_id }}
+          path: ${{ runner.temp }}/vms-production-attestation.json
+          if-no-files-found: error
+          retention-days: 30

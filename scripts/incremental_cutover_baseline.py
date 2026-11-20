@@ -14,7 +14,8 @@ import sys
 REPO = 'JorgeVMSENERGY/Web_Energy'
 LEGACY = 'deploy-production.yml'
 INCREMENTAL = 'deploy-production-incremental.yml'
-WORKFLOWS = (LEGACY, INCREMENTAL)
+ATTESTATION = 'attest-production-manual.yml'
+WORKFLOWS = (LEGACY, INCREMENTAL, ATTESTATION)
 SHA = re.compile(r'^[0-9a-f]{40}$')
 PAGE_SIZE = 100
 MAX_PAGES = 20
@@ -111,6 +112,46 @@ def verified_incremental_jobs(jobs):
             d.get('conclusion') == 'success')
 
 
+# Strictly identify a *content attestation*, never a deployment run.
+# This is a contract with the separately reviewed, manual-only workflow.
+ATTESTATION_JOB = 'Attest S3 production content'
+ATTESTATION_STEPS = (
+    'Validate manually deployed commit and Git content',
+    'Verify read-only AWS account and identity',
+    'Verify every production S3 object by SHA-256',
+    'Recheck S3 inventory and object versions',
+)
+
+
+def verified_manual_content_attestation_jobs(jobs):
+    """Fail closed unless the exact verification job and every evidence step passed.
+
+    A successful attestation asserts equivalent *published content* for the
+    workflow's main-branch SHA; it is NOT a claim that this SHA was deployed
+    by GitHub Actions. The attestation workflow is responsible for checking
+    S3 SHA-256 bytes and the historical manually published commit.
+    """
+    if not isinstance(jobs, list):
+        raise BaselineError('Invalid attestation jobs response')
+    matched = [job for job in jobs if isinstance(job, dict)
+               and job.get('name') == ATTESTATION_JOB]
+    if len(matched) != 1:
+        return False
+    job = matched[0]
+    if job.get('status') != 'completed' or job.get('conclusion') != 'success':
+        return False
+    steps = job.get('steps')
+    if not isinstance(steps, list):
+        return False
+    for required in ATTESTATION_STEPS:
+        found = [step for step in steps if isinstance(step, dict)
+                 and step.get('name') == required]
+        if (len(found) != 1 or found[0].get('status') != 'completed'
+                or found[0].get('conclusion') != 'success'):
+            return False
+    return True
+
+
 def choose_baseline(get_page, get_jobs, ancestor, current_sha, current_run,
                     max_pages=MAX_PAGES):
     if (not isinstance(current_sha, str) or not SHA.fullmatch(current_sha)
@@ -151,6 +192,10 @@ def choose_baseline(get_page, get_jobs, ancestor, current_sha, current_run,
                     continue
                 if workflow == INCREMENTAL and not verified_incremental_jobs(get_jobs(run_id)):
                     continue
+                if workflow == ATTESTATION:
+                    if (row.get('event') != 'workflow_dispatch' or
+                            not verified_manual_content_attestation_jobs(get_jobs(run_id))):
+                        continue
                 candidate = {'sha': commit, 'run_id': run_id, 'workflow': workflow}
                 if best is None or candidate['run_id'] > best['run_id']:
                     best = candidate
@@ -194,6 +239,9 @@ def main():
                                  current, args.current_run_id)
         print('BASELINE_SOURCE=' + result['workflow'] + ' BASELINE_RUN=' +
               str(result['run_id']), file=sys.stderr)
+        provenance = ('manual-content-attestation' if result['workflow'] == ATTESTATION
+                      else 'automated-deployment')
+        print('BASELINE_PROVENANCE=' + provenance, file=sys.stderr)
         print(result['sha'])
         return 0
     except (BaselineError, OSError, UnicodeError, ValueError) as exc:
