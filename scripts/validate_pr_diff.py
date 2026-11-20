@@ -13,10 +13,17 @@ SENSITIVE = {'scripts/deploy-aws-production.ps1', 'scripts/audit_s3.py',
              'scripts/c1_simulator.py', 'infra/forms/lambda/receiver/app.py'}
 
 
+def is_validation_test(path):
+    """Classify test path components, not unrelated words like 'testing'."""
+    return any(component in ('test', 'tests') or
+               component.startswith(('test_', 'test-', 'test.'))
+               for component in path.split('/'))
+
+
 def classify(paths):
     return (sorted(PROTECTED.intersection(paths)),
             sorted(p for p in paths if p.startswith('.github/') or p in SENSITIVE
-                   or '/test' in p or p.startswith('scripts/requirements')))
+                   or is_validation_test(p) or p.startswith('scripts/requirements')))
 
 
 def main():
