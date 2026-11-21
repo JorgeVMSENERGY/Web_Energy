@@ -16,7 +16,7 @@
   var ANALITICA_POR_DEFECTO = 'granted';   // cambiar a 'denied' para opt-in en analítica
   var KEY_CONSENT = 'vms_consent_v1';
   var KEY_UTM = 'vms_utm_first';
-  var AVISO_URL = '/aviso-privacidad.html#sitio-web';
+  var AVISO_URL = /^en\b/i.test(d.documentElement.getAttribute('lang') || '') ? '/en/aviso-privacidad.html#sitio-web' : '/aviso-privacidad.html#sitio-web';
   var OAIQ_PIXEL_ID = 'JdoVvPKgvCVBt4h8cc6C2q';
 
   w.dataLayer = w.dataLayer || [];
@@ -154,7 +154,7 @@
   var T = EN ? {
     aria: 'Cookie preferences', titulo: 'Cookies on vmsenergy.com',
     texto: 'We use analytics cookies to understand how the site is used and, if you accept, marketing cookies ' +
-      '(Google Ads, Meta, LinkedIn and ChatGPT Ads) to measure our campaigns. Learn more in our <a href="' + AVISO_URL + '">privacy notice</a> (in Spanish).',
+      '(Google Ads, Meta, LinkedIn and ChatGPT Ads) to measure our campaigns. Learn more in our <a href="' + AVISO_URL + '">privacy notice</a>.',
     nec: 'Necessary (always on)', ana: 'Analytics (Google Analytics)', mkt: 'Marketing (Google Ads, Meta, LinkedIn, ChatGPT Ads)',
     todas: 'Accept all', solo: 'Necessary only', config: 'Customize', guardar: 'Save selection', link: 'Cookie preferences'
   } : {

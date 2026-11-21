@@ -1,0 +1,4 @@
+{
+  "_instrucciones_para_rrhh": "Edita este archivo para abrir/cerrar vacantes. Cada vacante es un objeto en el array 'vacantes'. Campos: id (texto único, sin espacios), titulo, tipo ('fija' o 'proyecto'), ubicacion, area, modalidad ('Presencial' | 'Híbrido' | 'Remoto'), descripcion, requisitos (array; la tarjeta muestra los primeros 4 y el resto aparece en 'Ver detalle'), responsabilidades (array, opcional, en 'Ver detalle'), competencias (array, opcional, en 'Ver detalle'), duracion (solo proyecto, ej. '6 meses', null si fija), publicada (YYYY-MM-DD). Para retirar una vacante, bórrala del array o agrégale 'activa: false'. Guarda el archivo y refresca carreras.html.",
+  "vacantes": []
+}

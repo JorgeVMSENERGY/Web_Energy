@@ -1,0 +1,4406 @@
+{
+  "fuente": {
+    "fabricante": "KEI Industries Ltd.",
+    "norma": "IS 7098 Parte 2 / 1985",
+    "documentos": [
+      "\"KEI\" Single Core Aluminium & Copper Conductor, XLPE Insulated, Unarmoured & Armoured Cable",
+      "\"KEI\" Single Core Compacted Aluminium & Copper Conductor, XLPE Insulated, Unarmoured & Armoured Cable",
+      "\"KEI\" Three Core Aluminium & Copper Conductor, XLPE Insulated, Armoured Cable"
+    ],
+    "nota": "Pesos y diametros son aproximados de fabricante. Las ampacidades son de referencia: en proyecto se corrigen por agrupamiento, resistividad termica del terreno, profundidad de enterrado y temperatura ambiente real."
+  },
+  "familias": [
+    {
+      "id": "1c-cableado",
+      "nucleos": 1,
+      "conductor": "Cableado clase 2",
+      "nombre": "Unipolar, conductor cableado",
+      "armaduras": [
+        "sinArmadura",
+        "armadoHilo"
+      ],
+      "grupos": [
+        {
+          "u0": 3.8,
+          "u": 6.6,
+          "etiqueta": "3.8/6.6 kV (E)",
+          "medidas": [
+            {
+              "seccion": 25,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 18.0,
+                "pesoAl": 340,
+                "pesoCu": 485
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 22.0,
+                "pesoAl": 560,
+                "pesoCu": 705
+              },
+              "ampacidad": {
+                "alTierra": 97,
+                "alAire": 105,
+                "cuTierra": 125,
+                "cuAire": 140
+              }
+            },
+            {
+              "seccion": 35,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 20.0,
+                "pesoAl": 440,
+                "pesoCu": 645
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 23.5,
+                "pesoAl": 635,
+                "pesoCu": 840
+              },
+              "ampacidad": {
+                "alTierra": 118,
+                "alAire": 130,
+                "cuTierra": 150,
+                "cuAire": 170
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 21.0,
+                "pesoAl": 500,
+                "pesoCu": 780
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 24.5,
+                "pesoAl": 705,
+                "pesoCu": 985
+              },
+              "ampacidad": {
+                "alTierra": 136,
+                "alAire": 155,
+                "cuTierra": 178,
+                "cuAire": 198
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 23.5,
+                "pesoAl": 615,
+                "pesoCu": 1020
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 26.0,
+                "pesoAl": 815,
+                "pesoCu": 1215
+              },
+              "ampacidad": {
+                "alTierra": 166,
+                "alAire": 195,
+                "cuTierra": 218,
+                "cuAire": 258
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.0,
+                "pesoAl": 725,
+                "pesoCu": 1285
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 28.0,
+                "pesoAl": 935,
+                "pesoCu": 1495
+              },
+              "ampacidad": {
+                "alTierra": 198,
+                "alAire": 240,
+                "cuTierra": 258,
+                "cuAire": 318
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 27.5,
+                "pesoAl": 870,
+                "pesoCu": 1575
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 30.0,
+                "pesoAl": 1070,
+                "pesoCu": 1775
+              },
+              "ampacidad": {
+                "alTierra": 225,
+                "alAire": 277,
+                "cuTierra": 298,
+                "cuAire": 368
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 28.5,
+                "pesoAl": 985,
+                "pesoCu": 1855
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 31.0,
+                "pesoAl": 1190,
+                "pesoCu": 2060
+              },
+              "ampacidad": {
+                "alTierra": 253,
+                "alAire": 318,
+                "cuTierra": 332,
+                "cuAire": 422
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 30.5,
+                "pesoAl": 1135,
+                "pesoCu": 2220
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 33.0,
+                "pesoAl": 1355,
+                "pesoCu": 2445
+              },
+              "ampacidad": {
+                "alTierra": 285,
+                "alAire": 370,
+                "cuTierra": 378,
+                "cuAire": 490
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 33.5,
+                "pesoAl": 1380,
+                "pesoCu": 2815
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 36.5,
+                "pesoAl": 1700,
+                "pesoCu": 3135
+              },
+              "ampacidad": {
+                "alTierra": 330,
+                "alAire": 440,
+                "cuTierra": 440,
+                "cuAire": 580
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 3.0,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 36.5,
+                "pesoAl": 1655,
+                "pesoCu": 3450
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 39.0,
+                "pesoAl": 1955,
+                "pesoCu": 3755
+              },
+              "ampacidad": {
+                "alTierra": 373,
+                "alAire": 509,
+                "cuTierra": 495,
+                "cuAire": 665
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 3.3,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 41.0,
+                "pesoAl": 2080,
+                "pesoCu": 4375
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 43.0,
+                "pesoAl": 2370,
+                "pesoCu": 4665
+              },
+              "ampacidad": {
+                "alTierra": 427,
+                "alAire": 600,
+                "cuTierra": 585,
+                "cuAire": 805
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 3.5,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 44.0,
+                "pesoAl": 2490,
+                "pesoCu": 5430
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 47.0,
+                "pesoAl": 2850,
+                "pesoCu": 5795
+              },
+              "ampacidad": {
+                "alTierra": 485,
+                "alAire": 700,
+                "cuTierra": 630,
+                "cuAire": 900
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 3.5,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 48.0,
+                "pesoAl": 2975,
+                "pesoCu": 6785
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 50.5,
+                "pesoAl": 3390,
+                "pesoCu": 7200
+              },
+              "ampacidad": {
+                "alTierra": 551,
+                "alAire": 817,
+                "cuTierra": 705,
+                "cuAire": 1030
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 3.5,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 53.5,
+                "pesoAl": 3620,
+                "pesoCu": 8505
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 56.5,
+                "pesoAl": 4235,
+                "pesoCu": 9120
+              },
+              "ampacidad": {
+                "alTierra": 625,
+                "alAire": 970,
+                "cuTierra": 755,
+                "cuAire": 1060
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 57.5,
+                "pesoAl": 4310,
+                "pesoCu": 10430
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 62.5,
+                "pesoAl": 5120,
+                "pesoCu": 11240
+              },
+              "ampacidad": {
+                "alTierra": 692,
+                "alAire": 1100,
+                "cuTierra": 855,
+                "cuAire": 1225
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 6.35,
+          "u": 11.0,
+          "etiqueta": "6.35/11 kV (E) · 6.6/6.6 kV (UE)",
+          "medidas": [
+            {
+              "seccion": 35,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 21.0,
+                "pesoAl": 455,
+                "pesoCu": 660
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 25.0,
+                "pesoAl": 710,
+                "pesoCu": 915
+              },
+              "ampacidad": {
+                "alTierra": 115,
+                "alAire": 134,
+                "cuTierra": 160,
+                "cuAire": 170
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 22.0,
+                "pesoAl": 515,
+                "pesoCu": 790
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 26.0,
+                "pesoAl": 780,
+                "pesoCu": 1060
+              },
+              "ampacidad": {
+                "alTierra": 135,
+                "alAire": 160,
+                "cuTierra": 185,
+                "cuAire": 215
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 23.5,
+                "pesoAl": 605,
+                "pesoCu": 1010
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 27.5,
+                "pesoAl": 890,
+                "pesoCu": 1295
+              },
+              "ampacidad": {
+                "alTierra": 165,
+                "alAire": 200,
+                "cuTierra": 230,
+                "cuAire": 255
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.0,
+                "pesoAl": 715,
+                "pesoCu": 1275
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 29.5,
+                "pesoAl": 1020,
+                "pesoCu": 1580
+              },
+              "ampacidad": {
+                "alTierra": 197,
+                "alAire": 245,
+                "cuTierra": 270,
+                "cuAire": 305
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 27.5,
+                "pesoAl": 830,
+                "pesoCu": 1535
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 32.0,
+                "pesoAl": 1190,
+                "pesoCu": 1895
+              },
+              "ampacidad": {
+                "alTierra": 224,
+                "alAire": 286,
+                "cuTierra": 300,
+                "cuAire": 350
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 28.0,
+                "pesoAl": 915,
+                "pesoCu": 1785
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 32.5,
+                "pesoAl": 1285,
+                "pesoCu": 2155
+              },
+              "ampacidad": {
+                "alTierra": 251,
+                "alAire": 324,
+                "cuTierra": 345,
+                "cuAire": 395
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 30.5,
+                "pesoAl": 1090,
+                "pesoCu": 2175
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 35.5,
+                "pesoAl": 1560,
+                "pesoCu": 2645
+              },
+              "ampacidad": {
+                "alTierra": 283,
+                "alAire": 373,
+                "cuTierra": 385,
+                "cuAire": 455
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 33.0,
+                "pesoAl": 1300,
+                "pesoCu": 2730
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 38.0,
+                "pesoAl": 1805,
+                "pesoCu": 3240
+              },
+              "ampacidad": {
+                "alTierra": 328,
+                "alAire": 445,
+                "cuTierra": 400,
+                "cuAire": 530
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 35.0,
+                "pesoAl": 1500,
+                "pesoCu": 3300
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 40.0,
+                "pesoAl": 2040,
+                "pesoCu": 3840
+              },
+              "ampacidad": {
+                "alTierra": 371,
+                "alAire": 513,
+                "cuTierra": 435,
+                "cuAire": 605
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 38.0,
+                "pesoAl": 1795,
+                "pesoCu": 4090
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 43.5,
+                "pesoAl": 2420,
+                "pesoCu": 4710
+              },
+              "ampacidad": {
+                "alTierra": 425,
+                "alAire": 603,
+                "cuTierra": 490,
+                "cuAire": 710
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 41.5,
+                "pesoAl": 2195,
+                "pesoCu": 5135
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 47.0,
+                "pesoAl": 2870,
+                "pesoCu": 5810
+              },
+              "ampacidad": {
+                "alTierra": 484,
+                "alAire": 705,
+                "cuTierra": 565,
+                "cuAire": 800
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 45.0,
+                "pesoAl": 2655,
+                "pesoCu": 6465
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 51.0,
+                "pesoAl": 3405,
+                "pesoCu": 7215
+              },
+              "ampacidad": {
+                "alTierra": 550,
+                "alAire": 819,
+                "cuTierra": 620,
+                "cuAire": 880
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 51.0,
+                "pesoAl": 3315,
+                "pesoCu": 8195
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 56.5,
+                "pesoAl": 4250,
+                "pesoCu": 9135
+              },
+              "ampacidad": {
+                "alTierra": 623,
+                "alAire": 965,
+                "cuTierra": 750,
+                "cuAire": 1060
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 3.6,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 55.5,
+                "pesoAl": 4015,
+                "pesoCu": 10135
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 62.5,
+                "pesoAl": 5120,
+                "pesoCu": 11240
+              },
+              "ampacidad": {
+                "alTierra": 690,
+                "alAire": 1092,
+                "cuTierra": 850,
+                "cuAire": 1225
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 11.0,
+          "u": 11.0,
+          "etiqueta": "11/11 kV (UE)",
+          "medidas": [
+            {
+              "seccion": 35,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 24.5,
+                "pesoAl": 605,
+                "pesoCu": 810
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 29.0,
+                "pesoAl": 900,
+                "pesoCu": 1105
+              },
+              "ampacidad": {
+                "alTierra": 115,
+                "alAire": 137,
+                "cuTierra": 165,
+                "cuAire": 175
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.5,
+                "pesoAl": 665,
+                "pesoCu": 945
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 30.5,
+                "pesoAl": 1005,
+                "pesoCu": 1285
+              },
+              "ampacidad": {
+                "alTierra": 136,
+                "alAire": 165,
+                "cuTierra": 190,
+                "cuAire": 220
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 27.5,
+                "pesoAl": 770,
+                "pesoCu": 1170
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 32.0,
+                "pesoAl": 1130,
+                "pesoCu": 1530
+              },
+              "ampacidad": {
+                "alTierra": 166,
+                "alAire": 206,
+                "cuTierra": 235,
+                "cuAire": 260
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 29.0,
+                "pesoAl": 890,
+                "pesoCu": 1445
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 33.5,
+                "pesoAl": 1270,
+                "pesoCu": 1825
+              },
+              "ampacidad": {
+                "alTierra": 198,
+                "alAire": 250,
+                "cuTierra": 275,
+                "cuAire": 310
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 31.5,
+                "pesoAl": 1045,
+                "pesoCu": 1750
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.0,
+                "pesoAl": 1535,
+                "pesoCu": 2240
+              },
+              "ampacidad": {
+                "alTierra": 225,
+                "alAire": 291,
+                "cuTierra": 305,
+                "cuAire": 355
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 32.5,
+                "pesoAl": 1135,
+                "pesoCu": 2010
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.5,
+                "pesoAl": 1640,
+                "pesoCu": 2510
+              },
+              "ampacidad": {
+                "alTierra": 252,
+                "alAire": 330,
+                "cuTierra": 350,
+                "cuAire": 400
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 34.0,
+                "pesoAl": 1290,
+                "pesoCu": 2380
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 39.5,
+                "pesoAl": 1820,
+                "pesoCu": 2910
+              },
+              "ampacidad": {
+                "alTierra": 285,
+                "alAire": 379,
+                "cuTierra": 390,
+                "cuAire": 460
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 36.5,
+                "pesoAl": 1515,
+                "pesoCu": 2945
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 42.5,
+                "pesoAl": 2115,
+                "pesoCu": 3545
+              },
+              "ampacidad": {
+                "alTierra": 330,
+                "alAire": 450,
+                "cuTierra": 405,
+                "cuAire": 535
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 38.5,
+                "pesoAl": 1730,
+                "pesoCu": 3525
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 44.5,
+                "pesoAl": 2360,
+                "pesoCu": 4160
+              },
+              "ampacidad": {
+                "alTierra": 373,
+                "alAire": 518,
+                "cuTierra": 440,
+                "cuAire": 610
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 42.0,
+                "pesoAl": 2080,
+                "pesoCu": 4375
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 48.0,
+                "pesoAl": 2785,
+                "pesoCu": 5080
+              },
+              "ampacidad": {
+                "alTierra": 427,
+                "alAire": 608,
+                "cuTierra": 495,
+                "cuAire": 715
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 45.0,
+                "pesoAl": 2460,
+                "pesoCu": 5400
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 51.0,
+                "pesoAl": 3210,
+                "pesoCu": 6150
+              },
+              "ampacidad": {
+                "alTierra": 486,
+                "alAire": 709,
+                "cuTierra": 570,
+                "cuAire": 805
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 49.0,
+                "pesoAl": 2990,
+                "pesoCu": 6800
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 56.0,
+                "pesoAl": 3955,
+                "pesoCu": 7760
+              },
+              "ampacidad": {
+                "alTierra": 553,
+                "alAire": 822,
+                "cuTierra": 625,
+                "cuAire": 885
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 55.5,
+                "pesoAl": 3690,
+                "pesoCu": 8570
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 61.0,
+                "pesoAl": 4725,
+                "pesoCu": 9610
+              },
+              "ampacidad": {
+                "alTierra": 628,
+                "alAire": 964,
+                "cuTierra": 755,
+                "cuAire": 1065
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 5.5,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 59.0,
+                "pesoAl": 4360,
+                "pesoCu": 10480
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 66.0,
+                "pesoAl": 5535,
+                "pesoCu": 11655
+              },
+              "ampacidad": {
+                "alTierra": 697,
+                "alAire": 1090,
+                "cuTierra": 855,
+                "cuAire": 1230
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 12.7,
+          "u": 22.0,
+          "etiqueta": "12.7/22 kV (E)",
+          "medidas": [
+            {
+              "seccion": 35,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 26.0,
+                "pesoAl": 660,
+                "pesoCu": 870
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 30.0,
+                "pesoAl": 980,
+                "pesoCu": 1185
+              },
+              "ampacidad": {
+                "alTierra": 114,
+                "alAire": 143,
+                "cuTierra": 168,
+                "cuAire": 178
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 27.0,
+                "pesoAl": 730,
+                "pesoCu": 1010
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 31.5,
+                "pesoAl": 1085,
+                "pesoCu": 1360
+              },
+              "ampacidad": {
+                "alTierra": 134,
+                "alAire": 167,
+                "cuTierra": 193,
+                "cuAire": 223
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 28.5,
+                "pesoAl": 835,
+                "pesoCu": 1235
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 33.5,
+                "pesoAl": 1210,
+                "pesoCu": 1610
+              },
+              "ampacidad": {
+                "alTierra": 164,
+                "alAire": 207,
+                "cuTierra": 238,
+                "cuAire": 263
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 31.0,
+                "pesoAl": 985,
+                "pesoCu": 1545
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 36.0,
+                "pesoAl": 1465,
+                "pesoCu": 2025
+              },
+              "ampacidad": {
+                "alTierra": 195,
+                "alAire": 253,
+                "cuTierra": 278,
+                "cuAire": 313
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 33.0,
+                "pesoAl": 1120,
+                "pesoCu": 1825
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 38.5,
+                "pesoAl": 1630,
+                "pesoCu": 2335
+              },
+              "ampacidad": {
+                "alTierra": 221,
+                "alAire": 291,
+                "cuTierra": 308,
+                "cuAire": 358
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 33.5,
+                "pesoAl": 1215,
+                "pesoCu": 2085
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 39.0,
+                "pesoAl": 1735,
+                "pesoCu": 2605
+              },
+              "ampacidad": {
+                "alTierra": 250,
+                "alAire": 333,
+                "cuTierra": 353,
+                "cuAire": 403
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 35.5,
+                "pesoAl": 1370,
+                "pesoCu": 2460
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 41.0,
+                "pesoAl": 1920,
+                "pesoCu": 3010
+              },
+              "ampacidad": {
+                "alTierra": 280,
+                "alAire": 380,
+                "cuTierra": 393,
+                "cuAire": 463
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 38.0,
+                "pesoAl": 1600,
+                "pesoCu": 3030
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 44.0,
+                "pesoAl": 2220,
+                "pesoCu": 3650
+              },
+              "ampacidad": {
+                "alTierra": 326,
+                "alAire": 450,
+                "cuTierra": 408,
+                "cuAire": 538
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 40.0,
+                "pesoAl": 1815,
+                "pesoCu": 3615
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 46.0,
+                "pesoAl": 2520,
+                "pesoCu": 4315
+              },
+              "ampacidad": {
+                "alTierra": 367,
+                "alAire": 521,
+                "cuTierra": 443,
+                "cuAire": 613
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 43.5,
+                "pesoAl": 2180,
+                "pesoCu": 4475
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 49.5,
+                "pesoAl": 2910,
+                "pesoCu": 5200
+              },
+              "ampacidad": {
+                "alTierra": 420,
+                "alAire": 616,
+                "cuTierra": 498,
+                "cuAire": 718
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 47.0,
+                "pesoAl": 2610,
+                "pesoCu": 5555
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 54.0,
+                "pesoAl": 3540,
+                "pesoCu": 6480
+              },
+              "ampacidad": {
+                "alTierra": 478,
+                "alAire": 709,
+                "cuTierra": 573,
+                "cuAire": 808
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 50.5,
+                "pesoAl": 3105,
+                "pesoCu": 6915
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 57.5,
+                "pesoAl": 4100,
+                "pesoCu": 7905
+              },
+              "ampacidad": {
+                "alTierra": 545,
+                "alAire": 828,
+                "cuTierra": 628,
+                "cuAire": 888
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 57.0,
+                "pesoAl": 3815,
+                "pesoCu": 8700
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 62.5,
+                "pesoAl": 4870,
+                "pesoCu": 9750
+              },
+              "ampacidad": {
+                "alTierra": 618,
+                "alAire": 975,
+                "cuTierra": 758,
+                "cuAire": 1068
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 6,
+              "sinArmadura": {
+                "pvc": 3.0,
+                "diametro": 61.0,
+                "pesoAl": 4555,
+                "pesoCu": 10675
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 68.0,
+                "pesoAl": 5765,
+                "pesoCu": 11885
+              },
+              "ampacidad": {
+                "alTierra": 685,
+                "alAire": 1107,
+                "cuTierra": 858,
+                "cuAire": 1233
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 19.0,
+          "u": 33.0,
+          "etiqueta": "19/33 kV (E)",
+          "medidas": [
+            {
+              "seccion": 50,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 34.0,
+                "pesoAl": 1065,
+                "pesoCu": 1345
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 39.0,
+                "pesoAl": 1590,
+                "pesoCu": 1865
+              },
+              "ampacidad": {
+                "alTierra": 135,
+                "alAire": 170,
+                "cuTierra": 180,
+                "cuAire": 205
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 35.5,
+                "pesoAl": 1185,
+                "pesoCu": 1590
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 40.5,
+                "pesoAl": 1730,
+                "pesoCu": 2130
+              },
+              "ampacidad": {
+                "alTierra": 165,
+                "alAire": 212,
+                "cuTierra": 215,
+                "cuAire": 250
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 37.0,
+                "pesoAl": 1325,
+                "pesoCu": 1885
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 43.0,
+                "pesoAl": 1935,
+                "pesoCu": 3495
+              },
+              "ampacidad": {
+                "alTierra": 196,
+                "alAire": 258,
+                "cuTierra": 255,
+                "cuAire": 310
+              },
+              "revisar": {
+                "armadoHilo.pesoCu": {
+                  "valor": 3495,
+                  "esperado": 2435,
+                  "motivo": "La serie va 1865 · 2130 · [3495] · 2830. El salto rompe la monotonia; el sin armadura a 95 mm2 pesa 1885 kg/km y la armadura anade ~550."
+                }
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 39.0,
+                "pesoAl": 1480,
+                "pesoCu": 2185
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 45.0,
+                "pesoAl": 2125,
+                "pesoCu": 2830
+              },
+              "ampacidad": {
+                "alTierra": 223,
+                "alAire": 297,
+                "cuTierra": 290,
+                "cuAire": 350
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 40.0,
+                "pesoAl": 1580,
+                "pesoCu": 2450
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 45.5,
+                "pesoAl": 2235,
+                "pesoCu": 3105
+              },
+              "ampacidad": {
+                "alTierra": 250,
+                "alAire": 339,
+                "cuTierra": 330,
+                "cuAire": 410
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 42.0,
+                "pesoAl": 1800,
+                "pesoCu": 2885
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 48.0,
+                "pesoAl": 2480,
+                "pesoCu": 3570
+              },
+              "ampacidad": {
+                "alTierra": 282,
+                "alAire": 386,
+                "cuTierra": 380,
+                "cuAire": 460
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 44.5,
+                "pesoAl": 2050,
+                "pesoCu": 3485
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 50.5,
+                "pesoAl": 2800,
+                "pesoCu": 4230
+              },
+              "ampacidad": {
+                "alTierra": 326,
+                "alAire": 464,
+                "cuTierra": 435,
+                "cuAire": 545
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 47.0,
+                "pesoAl": 2340,
+                "pesoCu": 4135
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 54.0,
+                "pesoAl": 3270,
+                "pesoCu": 5065
+              },
+              "ampacidad": {
+                "alTierra": 369,
+                "alAire": 526,
+                "cuTierra": 485,
+                "cuAire": 620
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 50.0,
+                "pesoAl": 2690,
+                "pesoCu": 4985
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 57.0,
+                "pesoAl": 3670,
+                "pesoCu": 5965
+              },
+              "ampacidad": {
+                "alTierra": 423,
+                "alAire": 617,
+                "cuTierra": 550,
+                "cuAire": 730
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 53.5,
+                "pesoAl": 3155,
+                "pesoCu": 6100
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 60.5,
+                "pesoAl": 4230,
+                "pesoCu": 7170
+              },
+              "ampacidad": {
+                "alTierra": 481,
+                "alAire": 713,
+                "cuTierra": 620,
+                "cuAire": 830
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 2.8,
+                "diametro": 57.0,
+                "pesoAl": 3690,
+                "pesoCu": 7495
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 64.0,
+                "pesoAl": 4825,
+                "pesoCu": 8635
+              },
+              "ampacidad": {
+                "alTierra": 549,
+                "alAire": 832,
+                "cuTierra": 695,
+                "cuAire": 935
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 3.0,
+                "diametro": 63.5,
+                "pesoAl": 4465,
+                "pesoCu": 9350
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 69.0,
+                "pesoAl": 5625,
+                "pesoCu": 10505
+              },
+              "ampacidad": {
+                "alTierra": 620,
+                "alAire": 978,
+                "cuTierra": 760,
+                "cuAire": 1085
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 8.8,
+              "sinArmadura": {
+                "pvc": 3.2,
+                "diametro": 67.5,
+                "pesoAl": 5255,
+                "pesoCu": 11375
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.52,
+                "diametro": 76.0,
+                "pesoAl": 6850,
+                "pesoCu": 12970
+              },
+              "ampacidad": {
+                "alTierra": 686,
+                "alAire": 1110,
+                "cuTierra": 860,
+                "cuAire": 1235
+              }
+            }
+          ],
+          "clase": "Media tension"
+        }
+      ]
+    },
+    {
+      "id": "1c-compactado",
+      "nucleos": 1,
+      "conductor": "Compactado clase 2 (IS 8130/1984)",
+      "nombre": "Unipolar, conductor compactado",
+      "armaduras": [
+        "sinArmadura",
+        "armadoHilo"
+      ],
+      "grupos": [
+        {
+          "u0": 1.9,
+          "u": 3.3,
+          "etiqueta": "1.9/3.3 kV (E) · 3.3/3.3 kV (UE)",
+          "apantallado": false,
+          "medidas": [
+            {
+              "seccion": 25,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 15.0,
+                "pesoAl": 235,
+                "pesoCu": 385
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.4,
+                "pvc": 1.24,
+                "diametro": 17.5,
+                "pesoAl": 340,
+                "pesoCu": 490
+              },
+              "ampacidad": {
+                "alTierra": 97,
+                "alAire": 104,
+                "cuTierra": 120,
+                "cuAire": 135
+              }
+            },
+            {
+              "seccion": 35,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 16.0,
+                "pesoAl": 275,
+                "pesoCu": 485
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.4,
+                "pvc": 1.24,
+                "diametro": 18.5,
+                "pesoAl": 390,
+                "pesoCu": 595
+              },
+              "ampacidad": {
+                "alTierra": 115,
+                "alAire": 127,
+                "cuTierra": 145,
+                "cuAire": 165
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 17.0,
+                "pesoAl": 325,
+                "pesoCu": 605
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.4,
+                "pvc": 1.4,
+                "diametro": 20.0,
+                "pesoAl": 460,
+                "pesoCu": 740
+              },
+              "ampacidad": {
+                "alTierra": 136,
+                "alAire": 153,
+                "cuTierra": 170,
+                "cuAire": 195
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 18.5,
+                "pesoAl": 405,
+                "pesoCu": 805
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 22.0,
+                "pesoAl": 575,
+                "pesoCu": 975
+              },
+              "ampacidad": {
+                "alTierra": 166,
+                "alAire": 192,
+                "cuTierra": 215,
+                "cuAire": 255
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 20.5,
+                "pesoAl": 515,
+                "pesoCu": 1075
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 23.5,
+                "pesoAl": 680,
+                "pesoCu": 1240
+              },
+              "ampacidad": {
+                "alTierra": 198,
+                "alAire": 237,
+                "cuTierra": 255,
+                "cuAire": 315
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 23.0,
+                "pesoAl": 615,
+                "pesoCu": 1320
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 26.0,
+                "pesoAl": 795,
+                "pesoCu": 1500
+              },
+              "ampacidad": {
+                "alTierra": 225,
+                "alAire": 275,
+                "cuTierra": 295,
+                "cuAire": 365
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 23.5,
+                "pesoAl": 695,
+                "pesoCu": 1565
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 26.5,
+                "pesoAl": 880,
+                "pesoCu": 1750
+              },
+              "ampacidad": {
+                "alTierra": 253,
+                "alAire": 317,
+                "cuTierra": 330,
+                "cuAire": 420
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.5,
+                "pesoAl": 825,
+                "pesoCu": 1910
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 28.5,
+                "pesoAl": 1025,
+                "pesoCu": 2115
+              },
+              "ampacidad": {
+                "alTierra": 285,
+                "alAire": 362,
+                "cuTierra": 375,
+                "cuAire": 485
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 28.0,
+                "pesoAl": 1010,
+                "pesoCu": 2440
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 31.5,
+                "pesoAl": 1255,
+                "pesoCu": 2685
+              },
+              "ampacidad": {
+                "alTierra": 330,
+                "alAire": 433,
+                "cuTierra": 440,
+                "cuAire": 580
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 30.0,
+                "pesoAl": 1195,
+                "pesoCu": 2990
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 33.5,
+                "pesoAl": 1470,
+                "pesoCu": 3265
+              },
+              "ampacidad": {
+                "alTierra": 373,
+                "alAire": 504,
+                "cuTierra": 495,
+                "cuAire": 665
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 33.5,
+                "pesoAl": 1495,
+                "pesoCu": 3785
+              },
+              "armadoHilo": {
+                "xlpe": 2.6,
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.5,
+                "pesoAl": 1845,
+                "pesoCu": 4140
+              },
+              "ampacidad": {
+                "alTierra": 427,
+                "alAire": 598,
+                "cuTierra": 585,
+                "cuAire": 805
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 2.4,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 37.0,
+                "pesoAl": 1850,
+                "pesoCu": 4790
+              },
+              "armadoHilo": {
+                "xlpe": 2.8,
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 40.5,
+                "pesoAl": 2240,
+                "pesoCu": 5180
+              },
+              "ampacidad": {
+                "alTierra": 485,
+                "alAire": 694,
+                "cuTierra": 630,
+                "cuAire": 900
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 2.6,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 41.0,
+                "pesoAl": 2305,
+                "pesoCu": 6115
+              },
+              "armadoHilo": {
+                "xlpe": 3.0,
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 45.5,
+                "pesoAl": 2790,
+                "pesoCu": 6600
+              },
+              "ampacidad": {
+                "alTierra": 551,
+                "alAire": 815,
+                "cuTierra": 705,
+                "cuAire": 1030
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 48.0,
+                "pesoAl": 2940,
+                "pesoCu": 7825
+              },
+              "armadoHilo": {
+                "xlpe": 3.3,
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 50.5,
+                "pesoAl": 3430,
+                "pesoCu": 8315
+              },
+              "ampacidad": {
+                "alTierra": 625,
+                "alAire": 969,
+                "cuTierra": 755,
+                "cuAire": 1060
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 3.0,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 52.5,
+                "pesoAl": 3645,
+                "pesoCu": 9765
+              },
+              "armadoHilo": {
+                "xlpe": 3.5,
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 57.5,
+                "pesoAl": 4405,
+                "pesoCu": 10525
+              },
+              "ampacidad": {
+                "alTierra": 692,
+                "alAire": 1103,
+                "cuTierra": 855,
+                "cuAire": 1225
+              }
+            }
+          ],
+          "clase": "Media tension",
+          "pantalla": "Sin pantalla"
+        },
+        {
+          "u0": 1.9,
+          "u": 3.3,
+          "etiqueta": "1.9/3.3 kV (E) · 3.3/3.3 kV (UE)",
+          "apantallado": true,
+          "medidas": [
+            {
+              "seccion": 25,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 17.0,
+                "pesoAl": 300,
+                "pesoCu": 450
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 21.5,
+                "pesoAl": 520,
+                "pesoCu": 665
+              },
+              "ampacidad": {
+                "alTierra": 97,
+                "alAire": 104,
+                "cuTierra": 120,
+                "cuAire": 135
+              }
+            },
+            {
+              "seccion": 35,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 1.8,
+                "diametro": 18.0,
+                "pesoAl": 345,
+                "pesoCu": 550
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 22.5,
+                "pesoAl": 580,
+                "pesoCu": 785
+              },
+              "ampacidad": {
+                "alTierra": 115,
+                "alAire": 127,
+                "cuTierra": 145,
+                "cuAire": 165
+              }
+            },
+            {
+              "seccion": 50,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 19.5,
+                "pesoAl": 420,
+                "pesoCu": 695
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 23.5,
+                "pesoAl": 645,
+                "pesoCu": 925
+              },
+              "ampacidad": {
+                "alTierra": 136,
+                "alAire": 153,
+                "cuTierra": 170,
+                "cuAire": 195
+              }
+            },
+            {
+              "seccion": 70,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 21.0,
+                "pesoAl": 505,
+                "pesoCu": 905
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 25.0,
+                "pesoAl": 745,
+                "pesoCu": 1150
+              },
+              "ampacidad": {
+                "alTierra": 166,
+                "alAire": 192,
+                "cuTierra": 215,
+                "cuAire": 255
+              }
+            },
+            {
+              "seccion": 95,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 22.5,
+                "pesoAl": 610,
+                "pesoCu": 1165
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 27.0,
+                "pesoAl": 870,
+                "pesoCu": 1430
+              },
+              "ampacidad": {
+                "alTierra": 198,
+                "alAire": 237,
+                "cuTierra": 255,
+                "cuAire": 315
+              }
+            },
+            {
+              "seccion": 120,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.0,
+                "pesoAl": 715,
+                "pesoCu": 1420
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.4,
+                "diametro": 29.0,
+                "pesoAl": 1000,
+                "pesoCu": 1705
+              },
+              "ampacidad": {
+                "alTierra": 225,
+                "alAire": 275,
+                "cuTierra": 295,
+                "cuAire": 365
+              }
+            },
+            {
+              "seccion": 150,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 25.5,
+                "pesoAl": 795,
+                "pesoCu": 1670
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 30.0,
+                "pesoAl": 1115,
+                "pesoCu": 1985
+              },
+              "ampacidad": {
+                "alTierra": 253,
+                "alAire": 317,
+                "cuTierra": 330,
+                "cuAire": 420
+              }
+            },
+            {
+              "seccion": 185,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 27.5,
+                "pesoAl": 930,
+                "pesoCu": 2020
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.3,
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 32.0,
+                "pesoAl": 1270,
+                "pesoCu": 2360
+              },
+              "ampacidad": {
+                "alTierra": 285,
+                "alAire": 362,
+                "cuTierra": 375,
+                "cuAire": 485
+              }
+            },
+            {
+              "seccion": 240,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.0,
+                "diametro": 30.0,
+                "pesoAl": 1130,
+                "pesoCu": 2560
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.4,
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 35.5,
+                "pesoAl": 1575,
+                "pesoCu": 3005
+              },
+              "ampacidad": {
+                "alTierra": 330,
+                "alAire": 433,
+                "cuTierra": 440,
+                "cuAire": 580
+              }
+            },
+            {
+              "seccion": 300,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 32.5,
+                "pesoAl": 1355,
+                "pesoCu": 3150
+              },
+              "armadoHilo": {
+                "xlpe": 2.5,
+                "pvcInterno": 0.4,
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.5,
+                "pesoAl": 1810,
+                "pesoCu": 3605
+              },
+              "ampacidad": {
+                "alTierra": 373,
+                "alAire": 504,
+                "cuTierra": 495,
+                "cuAire": 665
+              }
+            },
+            {
+              "seccion": 400,
+              "xlpe": 2.2,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 35.5,
+                "pesoAl": 1640,
+                "pesoCu": 3930
+              },
+              "armadoHilo": {
+                "xlpe": 2.6,
+                "pvcInterno": 0.4,
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 41.0,
+                "pesoAl": 2175,
+                "pesoCu": 4465
+              },
+              "ampacidad": {
+                "alTierra": 427,
+                "alAire": 598,
+                "cuTierra": 585,
+                "cuAire": 805
+              }
+            },
+            {
+              "seccion": 500,
+              "xlpe": 2.4,
+              "sinArmadura": {
+                "pvc": 2.2,
+                "diametro": 39.0,
+                "pesoAl": 2010,
+                "pesoCu": 4950
+              },
+              "armadoHilo": {
+                "xlpe": 2.8,
+                "pvcInterno": 0.4,
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 44.5,
+                "pesoAl": 2610,
+                "pesoCu": 5550
+              },
+              "ampacidad": {
+                "alTierra": 485,
+                "alAire": 694,
+                "cuTierra": 630,
+                "cuAire": 900
+              }
+            },
+            {
+              "seccion": 630,
+              "xlpe": 2.6,
+              "sinArmadura": {
+                "pvc": 2.4,
+                "diametro": 43.5,
+                "pesoAl": 2525,
+                "pesoCu": 6330
+              },
+              "armadoHilo": {
+                "xlpe": 3.0,
+                "pvcInterno": 0.5,
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 49.0,
+                "pesoAl": 3180,
+                "pesoCu": 6990
+              },
+              "ampacidad": {
+                "alTierra": 551,
+                "alAire": 815,
+                "cuTierra": 705,
+                "cuAire": 1030
+              }
+            },
+            {
+              "seccion": 800,
+              "xlpe": 2.8,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 50.0,
+                "pesoAl": 3195,
+                "pesoCu": 8075
+              },
+              "armadoHilo": {
+                "xlpe": 3.3,
+                "pvcInterno": 0.5,
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 55.5,
+                "pesoAl": 4060,
+                "pesoCu": 8945
+              },
+              "ampacidad": {
+                "alTierra": 625,
+                "alAire": 969,
+                "cuTierra": 755,
+                "cuAire": 1060
+              }
+            },
+            {
+              "seccion": 1000,
+              "xlpe": 3.0,
+              "sinArmadura": {
+                "pvc": 2.6,
+                "diametro": 54.5,
+                "pesoAl": 3865,
+                "pesoCu": 9985
+              },
+              "armadoHilo": {
+                "xlpe": 3.5,
+                "pvcInterno": 0.6,
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 61.5,
+                "pesoAl": 4950,
+                "pesoCu": 11070
+              },
+              "ampacidad": {
+                "alTierra": 692,
+                "alAire": 1103,
+                "cuTierra": 855,
+                "cuAire": 1225
+              }
+            }
+          ],
+          "clase": "Media tension",
+          "pantalla": "Con pantalla metalica"
+        }
+      ]
+    },
+    {
+      "id": "3c-armado",
+      "nucleos": 3,
+      "conductor": "Cableado (IS 8130/1984)",
+      "nombre": "Tripolar armado",
+      "armaduras": [
+        "armadoFleje",
+        "armadoHilo"
+      ],
+      "grupos": [
+        {
+          "u0": 1.9,
+          "u": 3.3,
+          "etiqueta": "1.9/3.3 kV (E) · 3.3/3.3 kV (UE)",
+          "apantallado": false,
+          "medidas": [
+            {
+              "seccion": 25,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.3,
+                "fleje": "4x0.8",
+                "pvc": 1.4,
+                "diametro": 28.0,
+                "pesoAl": 1010,
+                "pesoCu": 1455
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 30.0,
+                "pesoAl": 1330,
+                "pesoCu": 1775
+              },
+              "ampacidad": {
+                "alTierra": 93,
+                "alAire": 97,
+                "cuTierra": 120,
+                "cuAire": 126
+              }
+            },
+            {
+              "seccion": 35,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.3,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 30.0,
+                "pesoAl": 1155,
+                "pesoCu": 1775
+              },
+              "armadoHilo": {
+                "hilo": 1.6,
+                "pvc": 1.56,
+                "diametro": 31.5,
+                "pesoAl": 1460,
+                "pesoCu": 2080
+              },
+              "ampacidad": {
+                "alTierra": 111,
+                "alAire": 119,
+                "cuTierra": 142,
+                "cuAire": 148
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 33.0,
+                "pesoAl": 1360,
+                "pesoCu": 2200
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 35.5,
+                "pesoAl": 1960,
+                "pesoCu": 2795
+              },
+              "ampacidad": {
+                "alTierra": 132,
+                "alAire": 148,
+                "cuTierra": 160,
+                "cuAire": 175
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 35.0,
+                "pesoAl": 1625,
+                "pesoCu": 2835
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.5,
+                "pesoAl": 2245,
+                "pesoCu": 3455
+              },
+              "ampacidad": {
+                "alTierra": 160,
+                "alAire": 179,
+                "cuTierra": 215,
+                "cuAire": 225
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 38.5,
+                "pesoAl": 1965,
+                "pesoCu": 3645
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 40.5,
+                "pesoAl": 2660,
+                "pesoCu": 4340
+              },
+              "ampacidad": {
+                "alTierra": 192,
+                "alAire": 219,
+                "cuTierra": 260,
+                "cuAire": 270
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 40.5,
+                "pesoAl": 2295,
+                "pesoCu": 4415
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 43.5,
+                "pesoAl": 3040,
+                "pesoCu": 5165
+              },
+              "ampacidad": {
+                "alTierra": 218,
+                "alAire": 253,
+                "cuTierra": 290,
+                "cuAire": 310
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 43.5,
+                "pesoAl": 2670,
+                "pesoCu": 5295
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 47.5,
+                "pesoAl": 3885,
+                "pesoCu": 6510
+              },
+              "ampacidad": {
+                "alTierra": 245,
+                "alAire": 290,
+                "cuTierra": 325,
+                "cuAire": 350
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 47.0,
+                "pesoAl": 3170,
+                "pesoCu": 6450
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 50.5,
+                "pesoAl": 4435,
+                "pesoCu": 7710
+              },
+              "ampacidad": {
+                "alTierra": 275,
+                "alAire": 330,
+                "cuTierra": 365,
+                "cuAire": 400
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 50.0,
+                "pesoAl": 3790,
+                "pesoCu": 8105
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 53.5,
+                "pesoAl": 5160,
+                "pesoCu": 9470
+              },
+              "ampacidad": {
+                "alTierra": 318,
+                "alAire": 391,
+                "cuTierra": 425,
+                "cuAire": 475
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 56.0,
+                "pesoAl": 4540,
+                "pesoCu": 9955
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 59.5,
+                "pesoAl": 6115,
+                "pesoCu": 11530
+              },
+              "ampacidad": {
+                "alTierra": 360,
+                "alAire": 453,
+                "cuTierra": 476,
+                "cuAire": 540
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Shaped",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 60.5,
+                "pesoAl": 5530,
+                "pesoCu": 12445
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 65.0,
+                "pesoAl": 7900,
+                "pesoCu": 14810
+              },
+              "ampacidad": {
+                "alTierra": 410,
+                "alAire": 530,
+                "cuTierra": 570,
+                "cuAire": 650
+              }
+            }
+          ],
+          "clase": "Media tension",
+          "pantalla": "Sin pantalla"
+        },
+        {
+          "u0": 1.9,
+          "u": 3.3,
+          "etiqueta": "1.9/3.3 kV (E) · 3.3/3.3 kV (UE)",
+          "apantallado": true,
+          "medidas": [
+            {
+              "seccion": 25,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 34.5,
+                "pesoAl": 1570,
+                "pesoCu": 2020
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.56,
+                "diametro": 37.0,
+                "pesoAl": 2100,
+                "pesoCu": 2545
+              },
+              "ampacidad": {
+                "alTierra": 93,
+                "alAire": 97,
+                "cuTierra": 120,
+                "cuAire": 126
+              }
+            },
+            {
+              "seccion": 35,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 36.5,
+                "pesoAl": 1730,
+                "pesoCu": 2350
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 39.0,
+                "pesoAl": 2330,
+                "pesoCu": 2955
+              },
+              "ampacidad": {
+                "alTierra": 111,
+                "alAire": 119,
+                "cuTierra": 142,
+                "cuAire": 148
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 39.5,
+                "pesoAl": 2040,
+                "pesoCu": 2880
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 42.0,
+                "pesoAl": 2665,
+                "pesoCu": 3500
+              },
+              "ampacidad": {
+                "alTierra": 132,
+                "alAire": 148,
+                "cuTierra": 160,
+                "cuAire": 175
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 43.0,
+                "pesoAl": 2440,
+                "pesoCu": 3650
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 45.5,
+                "pesoAl": 3140,
+                "pesoCu": 4355
+              },
+              "ampacidad": {
+                "alTierra": 160,
+                "alAire": 179,
+                "cuTierra": 215,
+                "cuAire": 225
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 47.0,
+                "pesoAl": 2905,
+                "pesoCu": 4590
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 50.5,
+                "pesoAl": 4080,
+                "pesoCu": 5760
+              },
+              "ampacidad": {
+                "alTierra": 192,
+                "alAire": 219,
+                "cuTierra": 260,
+                "cuAire": 270
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 52.0,
+                "pesoAl": 3475,
+                "pesoCu": 5595
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 55.5,
+                "pesoAl": 4700,
+                "pesoCu": 6820
+              },
+              "ampacidad": {
+                "alTierra": 218,
+                "alAire": 253,
+                "cuTierra": 290,
+                "cuAire": 310
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 53.5,
+                "pesoAl": 3750,
+                "pesoCu": 6375
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 57.0,
+                "pesoAl": 5070,
+                "pesoCu": 7690
+              },
+              "ampacidad": {
+                "alTierra": 245,
+                "alAire": 290,
+                "cuTierra": 325,
+                "cuAire": 350
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 58.0,
+                "pesoAl": 4370,
+                "pesoCu": 7645
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 61.5,
+                "pesoAl": 5810,
+                "pesoCu": 9085
+              },
+              "ampacidad": {
+                "alTierra": 275,
+                "alAire": 330,
+                "cuTierra": 365,
+                "cuAire": 400
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 63.5,
+                "pesoAl": 5195,
+                "pesoCu": 9510
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 67.0,
+                "pesoAl": 6745,
+                "pesoCu": 11055
+              },
+              "ampacidad": {
+                "alTierra": 318,
+                "alAire": 391,
+                "cuTierra": 425,
+                "cuAire": 475
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 68.5,
+                "pesoAl": 6085,
+                "pesoCu": 11500
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 73.5,
+                "pesoAl": 8525,
+                "pesoCu": 13940
+              },
+              "ampacidad": {
+                "alTierra": 360,
+                "alAire": 453,
+                "cuTierra": 476,
+                "cuAire": 540
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 2.2,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 75.0,
+                "pesoAl": 7225,
+                "pesoCu": 14105
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.84,
+                "diametro": 80.0,
+                "pesoAl": 9870,
+                "pesoCu": 16750
+              },
+              "ampacidad": {
+                "alTierra": 410,
+                "alAire": 530,
+                "cuTierra": 570,
+                "cuAire": 650
+              }
+            }
+          ],
+          "clase": "Media tension",
+          "pantalla": "Con pantalla metalica"
+        },
+        {
+          "u0": 3.8,
+          "u": 6.6,
+          "etiqueta": "3.8/6.6 kV (E)",
+          "apantallado": null,
+          "medidas": [
+            {
+              "seccion": 25,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.56,
+                "diametro": 37.0,
+                "pesoAl": 1785,
+                "pesoCu": 2230
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 39.5,
+                "pesoAl": 2390,
+                "pesoCu": 2835
+              },
+              "ampacidad": {
+                "alTierra": 94,
+                "alAire": 100,
+                "cuTierra": 110,
+                "cuAire": 115
+              }
+            },
+            {
+              "seccion": 35,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.4,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 39.5,
+                "pesoAl": 1975,
+                "pesoCu": 2595
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.72,
+                "diametro": 42.0,
+                "pesoAl": 2600,
+                "pesoCu": 3220
+              },
+              "ampacidad": {
+                "alTierra": 111,
+                "alAire": 121,
+                "cuTierra": 135,
+                "cuAire": 140
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 42.0,
+                "pesoAl": 2280,
+                "pesoCu": 3115
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 44.5,
+                "pesoAl": 2980,
+                "pesoCu": 3815
+              },
+              "ampacidad": {
+                "alTierra": 130,
+                "alAire": 145,
+                "cuTierra": 165,
+                "cuAire": 175
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 46.0,
+                "pesoAl": 2650,
+                "pesoCu": 3865
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 48.0,
+                "pesoAl": 3365,
+                "pesoCu": 4580
+              },
+              "ampacidad": {
+                "alTierra": 160,
+                "alAire": 181,
+                "cuTierra": 200,
+                "cuAire": 215
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 49.5,
+                "pesoAl": 3095,
+                "pesoCu": 4780
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 53.0,
+                "pesoAl": 4330,
+                "pesoCu": 6015
+              },
+              "ampacidad": {
+                "alTierra": 191,
+                "alAire": 221,
+                "cuTierra": 235,
+                "cuAire": 255
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 54.5,
+                "pesoAl": 3655,
+                "pesoCu": 5775
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 58.0,
+                "pesoAl": 5005,
+                "pesoCu": 7130
+              },
+              "ampacidad": {
+                "alTierra": 217,
+                "alAire": 254,
+                "cuTierra": 260,
+                "cuAire": 290
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 56.5,
+                "pesoAl": 3995,
+                "pesoCu": 6620
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 59.5,
+                "pesoAl": 5340,
+                "pesoCu": 7965
+              },
+              "ampacidad": {
+                "alTierra": 243,
+                "alAire": 290,
+                "cuTierra": 300,
+                "cuAire": 335
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 60.5,
+                "pesoAl": 4565,
+                "pesoCu": 7840
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 64.0,
+                "pesoAl": 6050,
+                "pesoCu": 9330
+              },
+              "ampacidad": {
+                "alTierra": 274,
+                "alAire": 330,
+                "cuTierra": 330,
+                "cuAire": 370
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 2.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 66.5,
+                "pesoAl": 5570,
+                "pesoCu": 9885
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.52,
+                "diametro": 71.5,
+                "pesoAl": 7935,
+                "pesoCu": 12250
+              },
+              "ampacidad": {
+                "alTierra": 317,
+                "alAire": 390,
+                "cuTierra": 385,
+                "cuAire": 440
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 3.0,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 72.0,
+                "pesoAl": 6520,
+                "pesoCu": 11935
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 77.0,
+                "pesoAl": 9090,
+                "pesoCu": 14505
+              },
+              "ampacidad": {
+                "alTierra": 358,
+                "alAire": 450,
+                "cuTierra": 440,
+                "cuAire": 505
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 3.3,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 80.0,
+                "pesoAl": 7910,
+                "pesoCu": 14790
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 87.0,
+                "pesoAl": 11890,
+                "pesoCu": 18770
+              },
+              "ampacidad": {
+                "alTierra": 408,
+                "alAire": 525,
+                "cuTierra": 515,
+                "cuAire": 600
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 6.35,
+          "u": 11.0,
+          "etiqueta": "6.35/11 kV (E)",
+          "apantallado": null,
+          "medidas": [
+            {
+              "seccion": 35,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.72,
+                "diametro": 43.0,
+                "pesoAl": 2300,
+                "pesoCu": 2920
+              },
+              "armadoHilo": {
+                "hilo": 2.0,
+                "pvc": 1.88,
+                "diametro": 46.0,
+                "pesoAl": 3000,
+                "pesoCu": 3620
+              },
+              "ampacidad": {
+                "alTierra": 113,
+                "alAire": 123,
+                "cuTierra": 137,
+                "cuAire": 142
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 46.0,
+                "pesoAl": 2555,
+                "pesoCu": 3395
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 49.5,
+                "pesoAl": 3690,
+                "pesoCu": 4530
+              },
+              "ampacidad": {
+                "alTierra": 132,
+                "alAire": 147,
+                "cuTierra": 167,
+                "cuAire": 177
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 1.88,
+                "diametro": 49.0,
+                "pesoAl": 2960,
+                "pesoCu": 4175
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 53.0,
+                "pesoAl": 4160,
+                "pesoCu": 5375
+              },
+              "ampacidad": {
+                "alTierra": 162,
+                "alAire": 183,
+                "cuTierra": 202,
+                "cuAire": 217
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 53.5,
+                "pesoAl": 3510,
+                "pesoCu": 5195
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 57.0,
+                "pesoAl": 4830,
+                "pesoCu": 6515
+              },
+              "ampacidad": {
+                "alTierra": 193,
+                "alAire": 223,
+                "cuTierra": 237,
+                "cuAire": 257
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 58.0,
+                "pesoAl": 4080,
+                "pesoCu": 6200
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 61.5,
+                "pesoAl": 5470,
+                "pesoCu": 7590
+              },
+              "ampacidad": {
+                "alTierra": 219,
+                "alAire": 256,
+                "cuTierra": 262,
+                "cuAire": 292
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 59.5,
+                "pesoAl": 4365,
+                "pesoCu": 6990
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 63.5,
+                "pesoAl": 5850,
+                "pesoCu": 8475
+              },
+              "ampacidad": {
+                "alTierra": 245,
+                "alAire": 292,
+                "cuTierra": 302,
+                "cuAire": 337
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 64.5,
+                "pesoAl": 5050,
+                "pesoCu": 8330
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.52,
+                "diametro": 69.5,
+                "pesoAl": 7320,
+                "pesoCu": 10600
+              },
+              "ampacidad": {
+                "alTierra": 276,
+                "alAire": 332,
+                "cuTierra": 332,
+                "cuAire": 372
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 70.0,
+                "pesoAl": 5955,
+                "pesoCu": 10270
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 75.0,
+                "pesoAl": 8425,
+                "pesoCu": 12740
+              },
+              "ampacidad": {
+                "alTierra": 319,
+                "alAire": 392,
+                "cuTierra": 387,
+                "cuAire": 442
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 75.0,
+                "pesoAl": 6835,
+                "pesoCu": 12250
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.84,
+                "diametro": 80.0,
+                "pesoAl": 9470,
+                "pesoCu": 14890
+              },
+              "ampacidad": {
+                "alTierra": 360,
+                "alAire": 452,
+                "cuTierra": 442,
+                "cuAire": 507
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 3.6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 81.5,
+                "pesoAl": 8195,
+                "pesoCu": 15075
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 88.0,
+                "pesoAl": 12240,
+                "pesoCu": 19120
+              },
+              "ampacidad": {
+                "alTierra": 410,
+                "alAire": 527,
+                "cuTierra": 517,
+                "cuAire": 602
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 11.0,
+          "u": 11.0,
+          "etiqueta": "11/11 kV (UE)",
+          "apantallado": null,
+          "medidas": [
+            {
+              "seccion": 35,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.5,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 52.0,
+                "pesoAl": 3115,
+                "pesoCu": 3735
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 1.88,
+                "diametro": 55.5,
+                "pesoAl": 4385,
+                "pesoCu": 5005
+              },
+              "ampacidad": {
+                "alTierra": 116,
+                "alAire": 126,
+                "cuTierra": 140,
+                "cuAire": 145
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 55.0,
+                "pesoAl": 3400,
+                "pesoCu": 4240
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.04,
+                "diametro": 58.0,
+                "pesoAl": 4720,
+                "pesoCu": 5555
+              },
+              "ampacidad": {
+                "alTierra": 135,
+                "alAire": 150,
+                "cuTierra": 170,
+                "cuAire": 180
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 58.0,
+                "pesoAl": 3885,
+                "pesoCu": 5095
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.04,
+                "diametro": 63.5,
+                "pesoAl": 5950,
+                "pesoCu": 7160
+              },
+              "ampacidad": {
+                "alTierra": 165,
+                "alAire": 186,
+                "cuTierra": 205,
+                "cuAire": 220
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 62.5,
+                "pesoAl": 4475,
+                "pesoCu": 6155
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.2,
+                "diametro": 67.5,
+                "pesoAl": 6645,
+                "pesoCu": 8330
+              },
+              "ampacidad": {
+                "alTierra": 196,
+                "alAire": 226,
+                "cuTierra": 240,
+                "cuAire": 260
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 67.0,
+                "pesoAl": 5085,
+                "pesoCu": 7205
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.2,
+                "diametro": 72.0,
+                "pesoAl": 7480,
+                "pesoCu": 9605
+              },
+              "ampacidad": {
+                "alTierra": 222,
+                "alAire": 259,
+                "cuTierra": 265,
+                "cuAire": 295
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 69.0,
+                "pesoAl": 5435,
+                "pesoCu": 8060
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.4,
+                "diametro": 74.0,
+                "pesoAl": 7870,
+                "pesoCu": 10495
+              },
+              "ampacidad": {
+                "alTierra": 248,
+                "alAire": 295,
+                "cuTierra": 305,
+                "cuAire": 340
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 73.0,
+                "pesoAl": 6160,
+                "pesoCu": 9435
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.52,
+                "diametro": 78.0,
+                "pesoAl": 8760,
+                "pesoCu": 12040
+              },
+              "ampacidad": {
+                "alTierra": 289,
+                "alAire": 335,
+                "cuTierra": 335,
+                "cuAire": 375
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 79.0,
+                "pesoAl": 7135,
+                "pesoCu": 11450
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 84.0,
+                "pesoAl": 9940,
+                "pesoCu": 14255
+              },
+              "ampacidad": {
+                "alTierra": 322,
+                "alAire": 395,
+                "cuTierra": 390,
+                "cuAire": 445
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 83.5,
+                "pesoAl": 8080,
+                "pesoCu": 13495
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 2.84,
+                "diametro": 90.0,
+                "pesoAl": 12135,
+                "pesoCu": 17550
+              },
+              "ampacidad": {
+                "alTierra": 363,
+                "alAire": 455,
+                "cuTierra": 445,
+                "cuAire": 510
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 5.5,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 90.0,
+                "pesoAl": 9455,
+                "pesoCu": 16335
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 96.5,
+                "pesoAl": 13885,
+                "pesoCu": 20765
+              },
+              "ampacidad": {
+                "alTierra": 413,
+                "alAire": 530,
+                "cuTierra": 520,
+                "cuAire": 605
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 12.7,
+          "u": 22.0,
+          "etiqueta": "12.7/22 kV (E)",
+          "apantallado": null,
+          "medidas": [
+            {
+              "seccion": 35,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.04,
+                "diametro": 55.0,
+                "pesoAl": 3345,
+                "pesoCu": 3965
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.2,
+                "diametro": 59.0,
+                "pesoAl": 4710,
+                "pesoCu": 5335
+              },
+              "ampacidad": {
+                "alTierra": 120,
+                "alAire": 130,
+                "cuTierra": 144,
+                "cuAire": 149
+              }
+            },
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.2,
+                "diametro": 58.0,
+                "pesoAl": 3730,
+                "pesoCu": 4570
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 61.5,
+                "pesoAl": 5165,
+                "pesoCu": 6005
+              },
+              "ampacidad": {
+                "alTierra": 139,
+                "alAire": 154,
+                "cuTierra": 174,
+                "cuAire": 184
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.6,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 61.5,
+                "pesoAl": 4245,
+                "pesoCu": 5460
+              },
+              "armadoHilo": {
+                "hilo": 2.5,
+                "pvc": 2.36,
+                "diametro": 65.0,
+                "pesoAl": 5700,
+                "pesoCu": 6910
+              },
+              "ampacidad": {
+                "alTierra": 169,
+                "alAire": 190,
+                "cuTierra": 209,
+                "cuAire": 224
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.36,
+                "diametro": 65.5,
+                "pesoAl": 4730,
+                "pesoCu": 6410
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.52,
+                "diametro": 70.5,
+                "pesoAl": 7030,
+                "pesoCu": 8715
+              },
+              "ampacidad": {
+                "alTierra": 200,
+                "alAire": 230,
+                "cuTierra": 244,
+                "cuAire": 264
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 70.5,
+                "pesoAl": 5370,
+                "pesoCu": 7490
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 75.5,
+                "pesoAl": 7840,
+                "pesoCu": 9960
+              },
+              "ampacidad": {
+                "alTierra": 226,
+                "alAire": 263,
+                "cuTierra": 269,
+                "cuAire": 299
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 72.0,
+                "pesoAl": 5845,
+                "pesoCu": 8470
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 77.0,
+                "pesoAl": 8355,
+                "pesoCu": 10980
+              },
+              "ampacidad": {
+                "alTierra": 252,
+                "alAire": 299,
+                "cuTierra": 309,
+                "cuAire": 344
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 76.5,
+                "pesoAl": 6535,
+                "pesoCu": 9810
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.84,
+                "diametro": 81.5,
+                "pesoAl": 9205,
+                "pesoCu": 12485
+              },
+              "ampacidad": {
+                "alTierra": 283,
+                "alAire": 339,
+                "cuTierra": 339,
+                "cuAire": 379
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 82.0,
+                "pesoAl": 7530,
+                "pesoCu": 11840
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 88.5,
+                "pesoAl": 11575,
+                "pesoCu": 15885
+              },
+              "ampacidad": {
+                "alTierra": 326,
+                "alAire": 399,
+                "cuTierra": 394,
+                "cuAire": 449
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 86.5,
+                "pesoAl": 8485,
+                "pesoCu": 13900
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 93.0,
+                "pesoAl": 12680,
+                "pesoCu": 18095
+              },
+              "ampacidad": {
+                "alTierra": 367,
+                "alAire": 459,
+                "cuTierra": 449,
+                "cuAire": 514
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 6,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 93.0,
+                "pesoAl": 9745,
+                "pesoCu": 16625
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 99.5,
+                "pesoAl": 14290,
+                "pesoCu": 21170
+              },
+              "ampacidad": {
+                "alTierra": 417,
+                "alAire": 534,
+                "cuTierra": 524,
+                "cuAire": 609
+              }
+            }
+          ],
+          "clase": "Media tension"
+        },
+        {
+          "u0": 19.0,
+          "u": 33.0,
+          "etiqueta": "19/33 kV (E)",
+          "apantallado": null,
+          "medidas": [
+            {
+              "seccion": 50,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.52,
+                "diametro": 72.0,
+                "pesoAl": 5355,
+                "pesoCu": 6195
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.68,
+                "diametro": 77.0,
+                "pesoAl": 7920,
+                "pesoCu": 8760
+              },
+              "ampacidad": {
+                "alTierra": 130,
+                "alAire": 158,
+                "cuTierra": 165,
+                "cuAire": 170
+              }
+            },
+            {
+              "seccion": 70,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.68,
+                "diametro": 76.0,
+                "pesoAl": 5980,
+                "pesoCu": 7195
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 2.84,
+                "diametro": 81.0,
+                "pesoAl": 8655,
+                "pesoCu": 9865
+              },
+              "ampacidad": {
+                "alTierra": 158,
+                "alAire": 198,
+                "cuTierra": 185,
+                "cuAire": 210
+              }
+            },
+            {
+              "seccion": 95,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 80.0,
+                "pesoAl": 6520,
+                "pesoCu": 8205
+              },
+              "armadoHilo": {
+                "hilo": 3.15,
+                "pvc": 3.0,
+                "diametro": 85.0,
+                "pesoAl": 9325,
+                "pesoCu": 11010
+              },
+              "ampacidad": {
+                "alTierra": 188,
+                "alAire": 270,
+                "cuTierra": 220,
+                "cuAire": 260
+              },
+              "revisar": {
+                "ampacidad.alAire": {
+                  "valor": 270,
+                  "esperado": 230,
+                  "motivo": "La serie va 198 · [270] · 286. A 12.7/22 kV la misma seccion da 230 A, y con 270 el aluminio superaria al cobre (260 A), que es imposible."
+                }
+              }
+            },
+            {
+              "seccion": 120,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 2.84,
+                "diametro": 84.5,
+                "pesoAl": 7230,
+                "pesoCu": 9355
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 91.0,
+                "pesoAl": 11415,
+                "pesoCu": 13540
+              },
+              "ampacidad": {
+                "alTierra": 214,
+                "alAire": 286,
+                "cuTierra": 240,
+                "cuAire": 295
+              }
+            },
+            {
+              "seccion": 150,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 86.0,
+                "pesoAl": 7760,
+                "pesoCu": 10385
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 92.5,
+                "pesoAl": 11960,
+                "pesoCu": 14585
+              },
+              "ampacidad": {
+                "alTierra": 239,
+                "alAire": 293,
+                "cuTierra": 280,
+                "cuAire": 350
+              }
+            },
+            {
+              "seccion": 185,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 90.5,
+                "pesoAl": 8540,
+                "pesoCu": 11815
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 96.5,
+                "pesoAl": 12945,
+                "pesoCu": 16220
+              },
+              "ampacidad": {
+                "alTierra": 270,
+                "alAire": 348,
+                "cuTierra": 325,
+                "cuAire": 385
+              }
+            },
+            {
+              "seccion": 240,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 95.5,
+                "pesoAl": 9555,
+                "pesoCu": 13865
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 102.0,
+                "pesoAl": 14260,
+                "pesoCu": 18575
+              },
+              "ampacidad": {
+                "alTierra": 312,
+                "alAire": 408,
+                "cuTierra": 370,
+                "cuAire": 455
+              }
+            },
+            {
+              "seccion": 300,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 100.0,
+                "pesoAl": 10555,
+                "pesoCu": 15975
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 106.5,
+                "pesoAl": 15450,
+                "pesoCu": 20865
+              },
+              "ampacidad": {
+                "alTierra": 352,
+                "alAire": 449,
+                "cuTierra": 420,
+                "cuAire": 525
+              }
+            },
+            {
+              "seccion": 400,
+              "forma": "Circular",
+              "xlpe": 8.8,
+              "armadoFleje": {
+                "pvcInterno": 0.7,
+                "fleje": "4x0.8",
+                "pvc": 3.0,
+                "diametro": 106.5,
+                "pesoAl": 11905,
+                "pesoCu": 18785
+              },
+              "armadoHilo": {
+                "hilo": 4.0,
+                "pvc": 3.0,
+                "diametro": 113.0,
+                "pesoAl": 17075,
+                "pesoCu": 23955
+              },
+              "ampacidad": {
+                "alTierra": 402,
+                "alAire": 522,
+                "cuTierra": 480,
+                "cuAire": 620
+              }
+            }
+          ],
+          "clase": "Media tension"
+        }
+      ]
+    }
+  ]
+}
