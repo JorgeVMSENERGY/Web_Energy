@@ -59,7 +59,28 @@ resource "aws_cloudfront_distribution" "site" {
 
     function_association {
       event_type   = "viewer-request"
-      function_arn = aws_cloudfront_function.redirects.arn
+      function_arn = var.seo_unified_routing_enabled ? aws_cloudfront_function.unified_viewer_request.arn : local.english_index_rewrite_arn
+    }
+  }
+
+  # Content must be deployed and verified independently before enabling these.
+  dynamic "custom_error_response" {
+    for_each = var.seo_custom_404_enabled ? [404] : []
+    content {
+      error_code            = custom_error_response.value
+      response_code         = 404
+      response_page_path    = "/404.html"
+      error_caching_min_ttl = 10
+    }
+  }
+
+  dynamic "custom_error_response" {
+    for_each = var.seo_map_s3_403_to_404 ? [403] : []
+    content {
+      error_code            = custom_error_response.value
+      response_code         = 404
+      response_page_path    = "/404.html"
+      error_caching_min_ttl = 10
     }
   }
 

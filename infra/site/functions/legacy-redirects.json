@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "provenance": "24 rules supplied by the user and verified in the 2026-11-25 audit. Technical source only; does not replace Marketing editorial Excel.",
+  "redirects": {
+    "/celdas-de-media-tension": "/lp-celdas-media-tension.html",
+    "/nosotros": "/nosotros.html",
+    "/vacantes": "/carreras.html",
+    "/directorio": "/directorio.html",
+    "/servicios": "/especialidades.html",
+    "/componentes-variador-vfd": "/soluciones-variadores-frecuencia.html",
+    "/ingenieria": "/especialidad_ingenieria.html",
+    "/mantenimiento-y-reparacion-de-subestaciones-electricas-at-mt-y-bt-en-mexico": "/blog-mantenimiento-reparacion-subestaciones-at-mt-bt.html",
+    "/productos": "/procura.html",
+    "/soluciones": "/soluciones.html",
+    "/la-importancia-de-los-tableros": "/blog-importancia-tableros-distribucion.html",
+    "/caso-de-exito-ctg-chankanaab": "/blog-caso-exito-ctg-chankanaab.html",
+    "/aviso-privacidad": "/aviso-privacidad.html",
+    "/variadores-en-la-industria-minera": "/blog-variadores-industria-minera.html",
+    "/variadores-industria-minera": "/blog-variadores-industria-minera.html",
+    "/caso-de-exito-embotelladora-coca-cola-de-colima-2022": "/blog-caso-exito-embotelladora-colima-2022.html",
+    "/author/web_vms_energy": "/blog.html",
+    "/variador-regenerativo-ingenio-tamazula": "/blog-variador-regenerativo-ingenio-tamazula.html",
+    "/subestacion-electrica-industrial": "/blog-subestacion-electrica-industrial.html",
+    "/la-importancia-de-los-tableros-de-distribucion-en-los-sistemas-electricos": "/blog-importancia-tableros-distribucion.html",
+    "/blog": "/blog.html",
+    "/codigo-de-etica": "/codigo-conducta.html",
+    "/buzon-de-sugerencias": "/buzon-sugerencias.html",
+    "/bombeo-en-mineria-subterranea-desague-critico-a-900-m-en-durango": "/blog-bombeo-mineria-subterranea-durango.html"
+  }
+}
