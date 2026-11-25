@@ -1,0 +1,97 @@
+name: SEO CI negative contract validation
+'on':
+  push:
+    branches:
+    - audit/ci-seo-promotion-validation
+    paths:
+    - .github/workflows/audit-ci-seo-negative.yml
+permissions:
+  contents: read
+jobs:
+  negative:
+    name: Reject (${{ matrix.scenario }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario:
+        - missing-generator
+        - missing-node-tests
+        - missing-python-contract
+        - removed-established-seo
+        - invalid-base
+        - empty-base
+        - generated-source-drift
+    env:
+      ORIGINAL_BASE: a6545272976e671cf5824a51a3eed2e80c8d3456
+      SEO_SHA: 9fd595155deb9772eda0fcf87c2e8119c9965d6e
+      BASE_SHA: a6545272976e671cf5824a51a3eed2e80c8d3456
+    steps:
+    - name: Checkout PR merge
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: '0'
+        persist-credentials: 'false'
+        ref: 9fd595155deb9772eda0fcf87c2e8119c9965d6e
+    - name: Verify immutable test inputs
+      run: 'set -eu
+
+        test "$(git rev-parse HEAD)" = "9fd595155deb9772eda0fcf87c2e8119c9965d6e"
+
+        git cat-file -e "415e3416622cc678c484fa45cb78b8e71cf2a24c^{commit}"
+
+        git cat-file -e "a6545272976e671cf5824a51a3eed2e80c8d3456^{commit}"
+
+        git show "415e3416622cc678c484fa45cb78b8e71cf2a24c:.github/workflows/validate-pr.yml" > "$RUNNER_TEMP/candidate.yml"'
+    - name: Prepare isolated test image
+      run: 'docker build -t pr-offline - <<''DOCKERFILE''
+
+        FROM python:3.12-slim
+
+        RUN apt-get update && apt-get install -y --no-install-recommends git curl unzip nodejs && rm -rf /var/lib/apt/lists/*
+
+        RUN curl --fail --silent --show-error --location https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.36.42.zip
+        -o /tmp/aws.zip && unzip -q /tmp/aws.zip -d /tmp && /tmp/aws/install && rm -rf /tmp/aws /tmp/aws.zip
+
+        RUN pip install --no-cache-dir boto3==1.37.38 PyYAML==6.0.3 esprima==4.0.1
+
+        ENV AWS_EC2_METADATA_DISABLED=true PYTHONDONTWRITEBYTECODE=1
+
+        WORKDIR /repo
+
+        DOCKERFILE
+
+        '
+    - name: Prepare isolated negative fixture
+      run: "\nset -eu\n\ncase_name=\"${{ matrix.scenario }}\"\n\ncase \"$case_name\" in\n  missing-generator)\n    rm scripts/build_seo_redirects.py\n\
+        \    ;;\n  missing-node-tests)\n    rm scripts/test_seo_routing.cjs\n    ;;\n  missing-python-contract)\n    rm scripts/test_seo_contract.py\n\
+        \    ;;\n  removed-established-seo)\n    rm scripts/build_seo_redirects.py        scripts/test_seo_routing.cjs   \
+        \     scripts/test_seo_contract.py        scripts/seo/unified-viewer-request.js.template        infra/site/functions/legacy-redirects.json\
+        \        infra/site/functions/unified-viewer-request.js\n    ;;\n  invalid-base)\n    ;;\n  empty-base)\n    ;;\n\
+        \  generated-source-drift)\n    printf '\\n// NEGATIVE TEST FIXTURE\\n' >>       infra/site/functions/unified-viewer-request.js\n\
+        \    ;;\n  *)\n    exit 99\n    ;;\nesac\n\necho \"NEGATIVE_FIXTURE=$case_name\"\n"
+    - name: Verify expected rejection
+      run: "\nset -eu\n\ncase_name=\"${{ matrix.scenario }}\"\n\ncase \"$case_name\" in\n  removed-established-seo)\n    export\
+        \ BASE_SHA=\"$SEO_SHA\"\n    ;;\n  invalid-base)\n    export BASE_SHA=0000000000000000000000000000000000000000\n \
+        \   ;;\n  empty-base)\n    export BASE_SHA=\n    ;;\n  *)\n    export BASE_SHA=\"$ORIGINAL_BASE\"\n    ;;\nesac\n\n\
+        log=\"$RUNNER_TEMP/negative-$case_name.log\"\n\n\nset +e\n{\ndocker run --rm --network none --cap-drop ALL --security-opt\
+        \ no-new-privileges \\\n  --mount type=bind,src=\"$GITHUB_WORKSPACE\",dst=/repo,readonly \\\n  --env PR_OFFLINE_STRICT=1\
+        \ --env BASE_SHA pr-offline sh -ec '\n    python --version\n    git --version\n    aws --version\n    python -m pip\
+        \ check\n    python -m pip show boto3 botocore PyYAML esprima\n    node --version\n    seo_present=0\n    seo_required=0\n\
+        \n    for path in \\\n      scripts/build_seo_redirects.py \\\n      scripts/test_seo_routing.cjs \\\n      scripts/test_seo_contract.py\
+        \ \\\n      scripts/seo/unified-viewer-request.js.template \\\n      infra/site/functions/legacy-redirects.json \\\
+        \n      infra/site/functions/unified-viewer-request.js\n    do\n      if [ -f \"$path\" ]; then\n        seo_present=$((seo_present\
+        \ + 1))\n      fi\n    done\n\n    : \"${BASE_SHA:?BASE_SHA_REQUIRED}\"\n    git -c safe.directory=/repo cat-file\
+        \ -e \"$BASE_SHA^{commit}\"\n\n    seo_base_entry=$(git -c safe.directory=/repo ls-tree \"$BASE_SHA\" -- scripts/test_seo_contract.py)\n\
+        \n    if [ -n \"$seo_base_entry\" ]; then\n      seo_required=1\n    fi\n\n    if [ \"$seo_present\" -eq 6 ]; then\n\
+        \      python -B scripts/build_seo_redirects.py --check\n      node scripts/test_seo_routing.cjs\n      echo \"SEO_CI=PASS\"\
+        \n    elif [ \"$seo_present\" -eq 0 ] && [ \"$seo_required\" -eq 0 ]; then\n      echo \"SEO_CI=NOT_INTRODUCED\"\n\
+        \    else\n      echo \"SEO_CI=INCOMPLETE_OR_REMOVED\" >&2\n      exit 1\n    fi\n\n    exec python scripts/run_pr_offline.py\n\
+        \  '\n\n} > \"$log\" 2>&1\nrc=$?\nset -e\n\ncat \"$log\"\necho \"NEGATIVE_EXIT_CODE=$rc\"\n\nif [ \"$rc\" -eq 0 ];\
+        \ then\n  echo \"NEGATIVE_CONTRACT=UNEXPECTED_SUCCESS\" >&2\n  exit 1\nfi\n\ncase \"$case_name\" in\n  missing-generator|missing-node-tests|missing-python-contract|removed-established-seo)\n\
+        \    grep -Fx \"SEO_CI=INCOMPLETE_OR_REMOVED\" \"$log\"\n    ;;\n  invalid-base)\n    grep -Ei 'fatal:|not a valid\
+        \ object|bad object' \"$log\"\n    ;;\n  empty-base)\n    grep -F \"BASE_SHA_REQUIRED\" \"$log\"\n    ;;\n  generated-source-drift)\n\
+        \    if grep -Fx \"SEO_CI=PASS\" \"$log\"; then\n      echo \"SEO guard accepted a modified generated function\" >&2\n\
+        \      exit 1\n    fi\n    ;;\nesac\n\nif grep -Fx \"SEO_CI=PASS\" \"$log\"; then\n  echo \"Unexpected successful\
+        \ SEO validation\" >&2\n  exit 1\nfi\n\necho \"NEGATIVE_CONTRACT=PASS:$case_name\"\n"
