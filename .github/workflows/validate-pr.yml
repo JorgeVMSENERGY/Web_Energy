@@ -62,14 +62,48 @@ jobs:
         run: |
           docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
             --mount type=bind,src="$GITHUB_WORKSPACE",dst=/repo,readonly \
-            --env PR_OFFLINE_STRICT=1 pr-offline sh -ec '
+            --env PR_OFFLINE_STRICT=1 --env BASE_SHA pr-offline sh -ec '
               python --version
               git --version
               aws --version
               python -m pip check
               python -m pip show boto3 botocore PyYAML esprima
               node --version
-              python -B scripts/build_seo_redirects.py --check
-              node scripts/test_seo_routing.cjs
+              seo_present=0
+              seo_required=0
+
+              for path in \
+                scripts/build_seo_redirects.py \
+                scripts/test_seo_routing.cjs \
+                scripts/test_seo_contract.py \
+                scripts/seo/unified-viewer-request.js.template \
+                infra/site/functions/legacy-redirects.json \
+                infra/site/functions/unified-viewer-request.js
+              do
+                if [ -f "$path" ]; then
+                  seo_present=$((seo_present + 1))
+                fi
+              done
+
+              : "${BASE_SHA:?BASE_SHA_REQUIRED}"
+              git -c safe.directory=/repo cat-file -e "$BASE_SHA^{commit}"
+
+              seo_base_entry=$(git -c safe.directory=/repo ls-tree "$BASE_SHA" -- scripts/test_seo_contract.py)
+
+              if [ -n "$seo_base_entry" ]; then
+                seo_required=1
+              fi
+
+              if [ "$seo_present" -eq 6 ]; then
+                python -B scripts/build_seo_redirects.py --check
+                node scripts/test_seo_routing.cjs
+                echo "SEO_CI=PASS"
+              elif [ "$seo_present" -eq 0 ] && [ "$seo_required" -eq 0 ]; then
+                echo "SEO_CI=NOT_INTRODUCED"
+              else
+                echo "SEO_CI=INCOMPLETE_OR_REMOVED" >&2
+                exit 1
+              fi
+
               exec python scripts/run_pr_offline.py
             '
