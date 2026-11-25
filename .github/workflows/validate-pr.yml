@@ -51,9 +51,9 @@ jobs:
         run: |
           docker build -t pr-offline - <<'DOCKERFILE'
           FROM python:3.12-slim
-          RUN apt-get update && apt-get install -y --no-install-recommends git curl unzip && rm -rf /var/lib/apt/lists/*
+          RUN apt-get update && apt-get install -y --no-install-recommends git curl unzip nodejs && rm -rf /var/lib/apt/lists/*
           RUN curl --fail --silent --show-error --location https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.36.42.zip -o /tmp/aws.zip && unzip -q /tmp/aws.zip -d /tmp && /tmp/aws/install && rm -rf /tmp/aws /tmp/aws.zip
-          RUN pip install --no-cache-dir boto3==1.37.38 PyYAML==6.0.3
+          RUN pip install --no-cache-dir boto3==1.37.38 PyYAML==6.0.3 esprima==4.0.1
           ENV AWS_EC2_METADATA_DISABLED=true PYTHONDONTWRITEBYTECODE=1
           WORKDIR /repo
           DOCKERFILE
@@ -67,6 +67,9 @@ jobs:
               git --version
               aws --version
               python -m pip check
-              python -m pip show boto3 botocore PyYAML
+              python -m pip show boto3 botocore PyYAML esprima
+              node --version
+              python -B scripts/build_seo_redirects.py --check
+              node scripts/test_seo_routing.cjs
               exec python scripts/run_pr_offline.py
             '
