@@ -10,6 +10,8 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 !*.tfvars.example
+# Reviewed non-secret SEO release switches; persist across ordinary site applies.
+!infra/site/seo.auto.tfvars
 
 # Archivos locales de sustitución
 override.tf
