@@ -117,17 +117,161 @@ class SeoContractTests(unittest.TestCase):
         self.assertIn('VMSWebEnglishIndexRewrite', routing)
         self.assertNotIn('resource "aws_cloudfront_function" "redirects"', routing)
 
-    def test_persisted_release_switches_are_disabled_nonsecret_and_trackable(self):
-        source = (ROOT / 'infra/site/seo.auto.tfvars').read_text(encoding='utf-8')
-        assignments = dict(re.findall(r'^(seo_\w+)\s*=\s*(\w+)\s*$', source, re.M))
-        self.assertEqual(assignments, {
-            'seo_unified_routing_enabled': 'false',
-            'seo_custom_404_enabled': 'false',
-            'seo_map_s3_403_to_404': 'false',
-        })
-        ignore = git_read('check-ignore', '--no-index', '-v', 'infra/site/seo.auto.tfvars').decode()
+    @staticmethod
+    def parse_release_switches(source):
+        allowed = {
+            'seo_unified_routing_enabled',
+            'seo_custom_404_enabled',
+            'seo_map_s3_403_to_404',
+        }
+
+        assignments = {}
+
+        for number, raw in enumerate(source.splitlines(), 1):
+            line = raw.strip()
+
+            if not line or line.startswith('#'):
+                continue
+
+            match = re.fullmatch(
+                r'([A-Za-z_][A-Za-z0-9_]*)[ \\t]*=[ \\t]*(true|false)',
+                line,
+            )
+
+            if not match:
+                raise ValueError(
+                    f'Invalid release assignment at line {number}'
+                )
+
+            name, value = match.groups()
+
+            if name not in allowed:
+                raise ValueError(f'Unknown release switch: {name}')
+
+            if name in assignments:
+                raise ValueError(f'Duplicate release switch: {name}')
+
+            assignments[name] = value == 'true'
+
+        if set(assignments) != allowed:
+            raise ValueError('Missing required release switches')
+
+        if (
+            assignments['seo_map_s3_403_to_404']
+            and not assignments['seo_custom_404_enabled']
+        ):
+            raise ValueError('403 conversion requires custom 404')
+
+        return assignments
+
+    def test_persisted_release_switches_are_valid_and_trackable(self):
+        source = (ROOT / 'infra/site/seo.auto.tfvars').read_text(
+            encoding='utf-8'
+        )
+        self.parse_release_switches(source)
+
+        ignore = git_read(
+            'check-ignore', '--no-index', '-v',
+            'infra/site/seo.auto.tfvars'
+        ).decode()
+
         self.assertIn('!infra/site/seo.auto.tfvars', ignore)
         self.assertFalse(publishable('infra/site/seo.auto.tfvars'))
+
+    def test_release_switches_accept_all_valid_activation_and_rollback_states(self):
+        from itertools import product
+
+        names = (
+            'seo_unified_routing_enabled',
+            'seo_custom_404_enabled',
+            'seo_map_s3_403_to_404',
+        )
+
+        accepted = 0
+        rejected = 0
+
+        for values in product((False, True), repeat=3):
+            source = '# Approved release configuration\n' + '\n'.join(
+                f'{name} = {str(value).lower()}'
+                for name, value in zip(names, values)
+            )
+
+            with self.subTest(values=values):
+                if values[2] and not values[1]:
+                    with self.assertRaises(ValueError):
+                        self.parse_release_switches(source)
+                    rejected += 1
+                else:
+                    self.assertEqual(
+                        self.parse_release_switches(source),
+                        dict(zip(names, values)),
+                    )
+                    accepted += 1
+
+        self.assertEqual(accepted, 6)
+        self.assertEqual(rejected, 2)
+
+    def test_release_switches_reject_invalid_assignments(self):
+        baseline = (
+            'seo_unified_routing_enabled = false\n'
+            'seo_custom_404_enabled = false\n'
+            'seo_map_s3_403_to_404 = false\n'
+        )
+
+        self.assertEqual(
+            self.parse_release_switches(baseline),
+            {
+                'seo_unified_routing_enabled': False,
+                'seo_custom_404_enabled': False,
+                'seo_map_s3_403_to_404': False,
+            },
+        )
+
+        invalid = {
+            'unknown-seo-variable':
+                baseline + 'seo_extra = true\n',
+            'unknown-non-seo-variable':
+                baseline + 'aws_profile = true\n',
+            'secret-assignment':
+                baseline + 'api_token = "example-only"\n',
+            'duplicate-same-value':
+                baseline + 'seo_unified_routing_enabled = false\n',
+            'duplicate-conflicting-value':
+                baseline + 'seo_unified_routing_enabled = true\n',
+            'missing-switch':
+                baseline.replace('seo_custom_404_enabled = false\n', ''),
+            'quoted-boolean':
+                baseline.replace('false', '"false"', 1),
+            'numeric-value':
+                baseline.replace('false', '0', 1),
+            'uppercase-boolean':
+                baseline.replace('false', 'False', 1),
+            'null-value':
+                baseline.replace('false', 'null', 1),
+            'dynamic-expression':
+                baseline.replace('false', 'var.other', 1),
+            'function-expression':
+                baseline.replace('false', 'tobool("false")', 1),
+            'collection-value':
+                baseline.replace('false', '[false]', 1),
+            'additional-block':
+                baseline + 'unexpected {}\n',
+            'trailing-expression':
+                baseline.replace('false', 'false || true', 1),
+            'multiple-assignments':
+                baseline.replace('\n', ' ', 1),
+            'invalid-error-dependency':
+                baseline.replace(
+                    'seo_map_s3_403_to_404 = false',
+                    'seo_map_s3_403_to_404 = true'
+                ),
+            'empty-source': '',
+        }
+
+        for label, source in invalid.items():
+            with self.subTest(case=label):
+                with self.assertRaises(ValueError):
+                    self.parse_release_switches(source)
 
 
 if __name__ == '__main__':
