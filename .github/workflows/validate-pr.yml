@@ -12,6 +12,9 @@ jobs:
     name: PR offline validation
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
     steps:
       - name: Checkout PR merge
         uses: actions/checkout@v6
@@ -20,9 +23,6 @@ jobs:
           persist-credentials: false
 
       - name: Verify runner and PR history
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           python --version
           git --version
@@ -34,9 +34,6 @@ jobs:
           git merge-base "$BASE_SHA" "$HEAD_SHA"
 
       - name: Diagnose PR diff
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           # Prefer the validator already reviewed on the base branch.
           if git cat-file -e "$BASE_SHA:scripts/validate_pr_diff.py"; then
