@@ -28,7 +28,7 @@
   /* ---------- 1. Consentimiento (antes de GTM) ---------- */
   var elegido = leer(KEY_CONSENT);   // {analitica:bool, mercadotecnia:bool}
   var analitica = elegido ? (elegido.analitica ? 'granted' : 'denied') : ANALITICA_POR_DEFECTO;
-  var mkt = elegido && elegido.mercadotecnia ? 'granted' : 'denied';
+  var mkt = elegido && elegido.mercadotecnia === true ? 'granted' : 'denied';
   gtag('consent', 'default', {
     analytics_storage: analitica,
     ad_storage: mkt, ad_user_data: mkt, ad_personalization: mkt,
@@ -47,22 +47,53 @@
     guardar(KEY_UTM, utm);
   }
   /* ---------- 2b. ChatGPT Ads (OpenAI Measurement Pixel) ---------- */
-  var oaiDebug = qs.has('oaiq_debug') || !/(^|\.)vmsenergy\.com$/i.test(w.location.hostname);
+  // Only load the advertising SDK on HTTPS production
+  // hosts, after explicit marketing consent.
+  var oaiProduccion =
+    w.location.protocol === 'https:' &&
+    /^(vmsenergy\.com|www\.vmsenergy\.com)$/i.test(w.location.hostname);
+  var oaiDebug = qs.has('oaiq_debug');
   var oaiVista = false;
-  !function (w2, d2, s, u) {
-    if (w2.oaiq) return;
-    var q = function () { q.q.push(arguments); }; q.q = []; w2.oaiq = q;
-    var j = d2.createElement(s); j.async = 1; j.src = u;
-    var f = d2.getElementsByTagName(s)[0]; f.parentNode.insertBefore(j, f);
-  }(w, d, 'script', 'https://bzrcdn.openai.com/sdk/oaiq.min.js');
-  function oai() { try { w.oaiq.apply(null, arguments); } catch (x) {} }
+  var oaiIniciado = false;
+
+  function oai() {
+    if (!oaiProduccion || !oaiIniciado) return;
+    try { w.oaiq.apply(null, arguments); } catch (x) {}
+  }
+
+  function oaiActivar() {
+    if (!oaiProduccion || mkt !== 'granted') return;
+
+    if (oaiIniciado) {
+      oai('consent', true);
+      return;
+    }
+
+    !function (w2, d2, s, u) {
+      if (w2.oaiq) return;
+      var q = function () { q.q.push(arguments); };
+      q.q = [];
+      w2.oaiq = q;
+      var j = d2.createElement(s);
+      j.async = 1;
+      j.src = u;
+      var f = d2.getElementsByTagName(s)[0];
+      f.parentNode.insertBefore(j, f);
+    }(w, d, 'script', 'https://bzrcdn.openai.com/sdk/oaiq.min.js');
+
+    oaiIniciado = true;
+    oai('consent', true);
+    oai('init', { pixelId: OAIQ_PIXEL_ID, debug: oaiDebug });
+  }
+
   function oaiPagina() {
-    if (oaiVista || mkt !== 'granted') return;
+    if (!oaiProduccion || !oaiIniciado ||
+        oaiVista || mkt !== 'granted') return;
     oaiVista = true;
     oai('measure', 'page_viewed', { type: 'contents', contents: [{ id: slug, name: (d.title || slug).slice(0, 200), content_type: 'page' }] });
   }
-  oai('consent', mkt === 'granted');
-  oai('init', { pixelId: OAIQ_PIXEL_ID, debug: oaiDebug });
+
+  oaiActivar();
   oaiPagina();
 
   push({
@@ -135,7 +166,11 @@
     var A = a ? 'granted' : 'denied', M = m ? 'granted' : 'denied';
     gtag('consent', 'update', { analytics_storage: A, ad_storage: M, ad_user_data: M, ad_personalization: M });
     mkt = M; analitica = A;
-    oai('consent', m);
+    if (M === 'granted') {
+      oaiActivar();
+    } else if (oaiIniciado) {
+      oai('consent', false);
+    }
     oaiPagina();
     push({ event: 'consent_update', consent_analitica: A, consent_mercadotecnia: M });
   }
