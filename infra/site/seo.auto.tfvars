@@ -3,4 +3,4 @@
 # one-off -var or TF_VAR override. All switches remain disabled in local phases.
 seo_unified_routing_enabled = true
 seo_custom_404_enabled      = true
-seo_map_s3_403_to_404       = false
+seo_map_s3_403_to_404       = true
