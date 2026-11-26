@@ -692,7 +692,12 @@
 
       if(!filtered.length){
         listEl.innerHTML = '';
-        if(emptyEl) emptyEl.hidden = false;
+        if(emptyEl){
+          emptyEl.innerHTML = allVacantes.length
+            ? 'No job openings match the selected filter right now. <a href="#postulacion">Send us your CV</a> to join our talent pool.'
+            : 'There are currently no open positions. <a href="#postulacion">Send us your CV</a> to join our talent pool; we will contact you when a suitable opportunity arises.';
+          emptyEl.hidden = false;
+        }
         return;
       }
       if(emptyEl) emptyEl.hidden = true;
@@ -743,7 +748,7 @@
         }
         if(emptyEl){
           emptyEl.hidden = false;
-          emptyEl.innerHTML = 'No pudimos cargar las vacantes en este momento. <a href="#postulacion">Envíanos tu CV</a> y te consideraremos para futuras aperturas.';
+          emptyEl.innerHTML = 'We could not load the openings right now. <a href="#postulacion">Send us your CV</a> and we will consider you for future opportunities.';
         }
       });
   })();
